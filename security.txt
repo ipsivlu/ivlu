@@ -1,0 +1,7 @@
+# /security.txt
+Contact: mailto:asistentetatianaleal@gmail.com
+Expires: 2024-12-31T23:59:59.000Z
+Preferred-Languages: es, en
+Canonical: https://dratatianaleal.com/security.txt
+Policy: https://dratatianaleal.com/es/informacion-paciente/
+Hiring: https://dratatianaleal.com/es/centro-estetico/

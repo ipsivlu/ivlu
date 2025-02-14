@@ -1,0 +1,5 @@
+{% assign current_lang = page.lang | default: site.default_lang | default: "es" %}
+<div id="search-container" class="section">
+  <input type="text" id="search-input" placeholder="{% if current_lang == 'es' %}Buscar en el blog...{% else %}Search the blog...{% endif %}">
+  <ul id="results-container"></ul>
+</div>

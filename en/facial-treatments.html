@@ -1,0 +1,187 @@
+---
+layout: categoria
+lang: en
+categoria: tratamientos-faciales_es
+ref: tratamientos-faciales
+hero: "img/tratamiento-faciales.avif"
+hero1: "img/tratamiento-profesional-facial.avif"
+alt: "Non-invasive facial treatments by Dr. Tatiana Leal - Natural and safe results"
+title: "Non-invasive facial treatments in Bogota | Natural results | Dr. Tatiana Leal"
+h1: "Non-invasive facial treatments: natural and safe rejuvenation"
+description: "Discover personalized facial treatments in Bogota. Rejuvenation, biostimulation, and more. Natural results guaranteed by Dr. Tatiana Leal."
+bullet-point-1: Affordable luxury
+bullet-point-2: Restore your confidence
+bullet-point-3: No risks or harmful effects
+---
+
+<main>
+  <div class="intro flow padding">
+    <h2>Advanced facial treatments for every skin concern</h2>
+    <p>"Why doesn't my skin reflect how young I feel inside?" This is the question Jennifer, a 43-year-old tech executive from Boston, asked herself every morning while trying to mask the signs of stress and fatigue in her reflection. Like her, many women seek to restore their skin's vitality without resorting to invasive procedures or artificial-looking results.</p>
+  </div>
+  <div class="gallery-container seccion">
+    {% for item in site.tratamientos-faciales_en %}
+    <a href="{{item.url | relative_url}}" class="gallery-item" title="{{item.title}}">
+      <img src="{{ item.hero | relative_url }}" alt="{{ item.alt }}" loading="lazy" width="452" height="604" decoding="async">
+      <h3 class="gallery-item-text">{{ item.h1 }}</h3>
+    </a>
+    {% endfor %}
+  </div>
+</main>
+
+<section class="block_section">
+  <small class="block_section_header">Advanced aesthetic medicine center</small>
+  <h2 class="block_section_title">Transform your skin without surgery</h2>
+  <div class="block_section_content">
+    <p>Imagine waking up every morning to see radiant skin that reflects your true essence. No excessive makeup, no tricks to hide imperfections, just your best natural self. At Dr. Tatiana Leal's clinic, we make this possible by combining advanced science with a deep understanding of natural beauty.</p>
+
+    <p>Every face tells a unique story. Expression lines, changes in texture, loss of radiance... these are chapters we can rewrite without erasing your essence. Our personalized protocols use the most advanced techniques in aesthetic medicine to awaken your skin's natural potential.</p>
+
+    <p>The secret isn't in changing who you are, but in revealing the best version of yourself. No surgeries, no downtime, no artificial results - just science-backed treatments that enhance your natural beauty.</p>
+  </div>
+
+  <div class="block_section_image_left padding flow">
+    <h3>Technology and expertise at your service</h3>
+    <p>With over 15 years dedicated exclusively to facial aesthetic medicine, we've carefully selected the most effective and safe technologies available. Every device is FDA-certified, and our protocols are backed by years of proven results.</p>
+    <p>Your treatment begins with an advanced digital analysis that allows us to see beyond the surface, identifying your skin's unique needs to create a truly personalized protocol.</p>
+  </div>
+
+  <div class="block_section_knowledge flow">
+    <h2>Your path to radiant skin</h2>
+    <ul>
+      <li>Visible results from your first session that naturally enhance over time</li>
+      <li>Non-invasive treatments that respect and enhance your natural features</li>
+      <li>Personalized protocols that adapt to your lifestyle</li>
+      <li>State-of-the-art technology with scientific backing</li>
+      <li>Continuous monitoring to optimize your results</li>
+    </ul>
+  </div>
+  <img class="block_section_image_right" loading="eager" title="Dr. Tatiana performing facial treatment" src="{{'img/limpieza-facial-con-la-doctora-tatiana-leal.avif' | relative_url}}" alt="Personalized facial treatment at Dr. Tatiana Leal's aesthetic center" decoding="async">
+</section>
+
+<section>
+  <div class="padding flow intro">
+    <h2>The revolution in facial treatments</h2>
+    <p>Forget invasive procedures and long recovery times. Our treatments adapt to your life, not the other way around. Perfect for busy professionals and those seeking natural-looking results.</p>
+  </div>
+
+  <div class="two_columns seccion">
+    <div class="flow padding">
+      <h3>Your journey to healthy skin</h3>
+      <p>Everything begins with an advanced digital diagnosis that allows us to see beyond the visible. We analyze your skin quality at a deep level to design a protocol that addresses your specific concerns and awakens your skin's natural potential.</p>
+      <a href="#" class="boton boton_principal" id="lead_whatsapp" rel="nofollow noopener noreferrer" target="_blank">Discover your personalized plan</a>
+    </div>
+    <div class="two_columns-image">
+      <img src="{{ 'img/beneficio-rejuvenecimiento-facial.avif' | relative_url }}" width="520" height="520" alt="Advanced facial diagnosis in Bogota" decoding="async">
+    </div>
+  </div>
+
+  <div class="two_columns two_columns_left">
+    <div class="flow padding">
+      <h3>Natural beauty, real results</h3>
+      <p>We don't promise miracles; we offer science and proven results. Each treatment is designed to work in harmony with your skin's natural processes, stimulating its innate capacity for regeneration and rejuvenation.</p>
+      {% include boton.html %}
+    </div>
+    <div class="two_columns-image">
+      <img src="{{ 'img/biorevitalizacion-facial.avif' | relative_url }}" width="520" height="520" alt="Natural results in facial treatments" decoding="async">
+    </div>
+  </div>
+</section>
+
+<section class="parallax padding parallax_hilos-tensores">
+  <div class="parallax_copy intro flow">
+    <h2>Real transformation stories</h2>
+    <p>"I had invested a fortune in creams and treatments that promised a lot but delivered little. With Dr. Tatiana, I found something different: a personalized approach that really works. My skin doesn't just look better, it feels better. The best part? My friends notice the change but can't pinpoint what I had done - exactly what I was looking for!"</p>
+    <p><strong>- Rachel Thompson, 45, International Patient</strong></p>
+  </div>
+</section>
+
+<section class="section padding">
+  <div class="accordion intro">
+    <h2>Common questions answered</h2>
+    
+    <input type="checkbox" id="acc1" class="accordion-toggle">
+    <label for="acc1" class="accordion-header">How do I choose the right treatment for my skin?</label>
+    <div class="accordion-content">
+      <p>Your skin is unique, and your treatment should be too. We start with a comprehensive evaluation that includes:
+      <ul>
+        <li>Advanced digital skin analysis</li>
+        <li>Assessment of your specific concerns</li>
+        <li>Study of your lifestyle and goals</li>
+        <li>Design of a personalized protocol</li>
+      </ul>
+      This initial consultation is complimentary and without obligation. We can also help coordinate your visit if you're traveling from abroad.</p>
+    </div>
+
+    <input type="checkbox" id="acc2" class="accordion-toggle">
+    <label for="acc2" class="accordion-header">Are the treatments painful? Do I need recovery time?</label>
+    <div class="accordion-content">
+      <p>We've designed each treatment with your comfort in mind:
+      <ul>
+        <li>Non-invasive protocols that minimize any discomfort</li>
+        <li>Advanced technology that prioritizes your comfort</li>
+        <li>No downtime - return to your activities immediately</li>
+        <li>Progressive results that look completely natural</li>
+      </ul>
+      Many patients schedule treatments during their lunch break!</p>
+    </div>
+
+    <input type="checkbox" id="acc3" class="accordion-toggle">
+    <label for="acc3" class="accordion-header">How long do results last?</label>
+    <div class="accordion-content">
+      <p>Results duration varies by treatment and individual characteristics:
+      <ul>
+        <li>Immediate results that improve over time</li>
+        <li>Personalized maintenance protocols</li>
+        <li>Cumulative effects with each session</li>
+        <li>Home care program to optimize results</li>
+      </ul>
+      During your consultation, we'll explain exactly what you can expect from each treatment.</p>
+    </div>
+
+    <input type="checkbox" id="acc4" class="accordion-toggle">
+    <label for="acc4" class="accordion-header">Will the results look natural?</label>
+    <div class="accordion-content">
+      <p>Naturalness is our priority:
+      <ul>
+        <li>Protocols designed to enhance, not transform</li>
+        <li>Progressive and personalized approach</li>
+        <li>Total respect for your features and expressions</li>
+        <li>Results that improve over time</li>
+        <li>Constant monitoring to adjust treatment as needed</li>
+      </ul>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="seccion">
+  <div class="flow intro padding">
+    <h2>Start your transformation today</h2>
+    <p>Your path to radiant skin in 3 steps</p>
+  </div>  
+    <div class="service-cards">
+      <div class="card">
+        <h3>1. Personalized assessment</h3>
+        <p>Complete skin analysis with advanced diagnostic technology. We identify your unique needs and design your ideal plan.</p>
+      </div>
+
+      <div class="card">
+        <h3>2. Customized treatment</h3>
+        <p>Personalized protocols that adapt to your skin, lifestyle, and goals. Predictable and safe results.</p>
+      </div>
+
+      <div class="card">
+        <h3>3. Lasting results</h3>
+        <p>Continuous monitoring and adjustments to ensure your satisfaction. We maintain and optimize your long-term results.</p>
+      </div>
+    </div>
+
+    <div class="intro flow padding">
+      <p>Take the first step towards the best version of yourself</p>
+      <a href="#" class="boton boton_principal" id="lead_whatsapp" rel="nofollow noopener noreferrer" target="_blank">
+        Schedule your assessment
+      </a>
+      <small>* Last 3 spots available this week for complimentary evaluation</small>
+    </div>
+</section>

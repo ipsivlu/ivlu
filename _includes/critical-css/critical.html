@@ -1,0 +1,16 @@
+{% capture critical_css %}
+/* Base styles */
+{% include critical-css/base.css %}
+
+/* Page specific styles */
+{% if page.url == "/es/" or page.url == "/en/" %}
+  {% include critical-css/home.css %}
+{% else %}
+  {% include critical-css/hero.css %}
+{% endif %}
+{% endcapture %}
+
+<style>{{ critical_css }}</style>
+
+<link rel="preload" href="{{ 'css/style.css' | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{{ 'css/style.css' | relative_url }}"></noscript>

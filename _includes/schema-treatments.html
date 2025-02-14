@@ -1,0 +1,75 @@
+{% if page.layout == "servicios" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalProcedure",
+      "name": "{{ page.title }}",
+      "description": "{{ page.description }}",
+      "url": "{{ site.url }}{{ page.url }}",
+      "image": {
+        "@type": "ImageObject",
+        "url": "{{ site.url }}/{{ page.hero }}",
+        "height": "1200",
+        "width": "1200"
+      },
+      "medicineSystem": "Conventional",
+      "howPerformed": "Procedimiento no invasivo realizado en consultorio",
+      "preparation": "Evaluación médica previa. No requiere anestesia general. Procedimiento ambulatorio.",
+      "procedureType": "{{ page.description }}",
+      "followup": "Seguimiento personalizado post-tratamiento",
+      "provider": {
+        "@type": "MedicalOrganization",
+        "@id": "{{ site.url }}/#organization"
+      },
+      "performedBy": {
+        "@type": "Physician",
+        "name": "Dra. Tatiana Leal",
+        "url": "{{ site.url }}/es/doctora-tatiana-leal/"
+      }
+    }
+    {% if page.cases %},
+    {
+      "@type": "Service",
+      "name": "{{ page.title }}",
+      "provider": {
+        "@type": "MedicalOrganization",
+        "@id": "{{ site.url }}/#organization"
+      },
+      "review": [
+        {% for case in page.cases %}
+        {
+          "@type": "Review",
+          "reviewBody": {{ case.description | jsonify }},
+          "itemReviewed": {
+            "@type": "Service",
+            "name": "{{ page.title }}"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Paciente Anónimo"
+          },
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "datePublished": "{{ "now" | date: "%Y-%m-%d" }}"
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "{{ page.cases | size }}",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    }
+    {% endif %}
+  ]
+}
+</script>
+{% endif %}

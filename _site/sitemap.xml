@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>http://localhost:4000/sitemap-main.xml</loc>
+    <lastmod>2025-02-14T08:50:18-05:00</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>http://localhost:4000/sitemap-posts.xml</loc>
+    <lastmod>2025-02-14T08:50:18-05:00</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>http://localhost:4000/sitemap-treatments.xml</loc>
+    <lastmod>2025-02-14T08:50:18-05:00</lastmod>
+  </sitemap>
+</sitemapindex>

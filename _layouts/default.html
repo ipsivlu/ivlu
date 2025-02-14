@@ -1,0 +1,370 @@
+---
+layout: compress
+---
+{% assign current_lang = page.lang | default: site.default_lang | default: "es" %}
+{% if current_lang == "es" %}
+{% assign alt_lang = "en" %}
+{% else %}
+{% assign alt_lang = "es" %}
+{% endif %}
+{% capture home_url %}/{{ current_lang }}/{% endcapture %}
+<!DOCTYPE html>
+<html lang="{{ current_lang }}">
+
+<head>
+  {% include head.html %}
+</head>
+
+<body class="lang-{{ current_lang }}">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M2G8W6JV" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  {% include nav.html %}
+  {% include header.html %}
+  {{ content }}
+  {% include footer.html %}
+  <!-- boton whatssapp -->
+  <a href="#" class="boton-whatsapp" id="lead_whatsapp"
+    title="{% if page.lang == 'es' %}WhatsApp Dra. Tatiana Leal{% else %}WhatsApp Dr. Tatiana Leal{% endif %}"
+    target="_blank" rel="nofollow noopener noreferrer">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="60"
+      viewBox="-2.73 0 1225.016 1225.016">
+      <path fill="#E0E0E0"
+        d="M1041.858 178.02C927.206 63.289 774.753.07 612.325 0 277.617 0 5.232 272.298 5.098 606.991c-.039 106.986 27.915 211.42 81.048 303.476L0 1225.016l321.898-84.406c88.689 48.368 188.547 73.855 290.166 73.896h.261c334.654 0 607.08-272.346 607.222-607.023.056-162.208-63.052-314.724-177.689-429.463zm-429.533 933.963h-.197c-90.578-.048-179.402-24.366-256.878-70.339l-18.438-10.93-191.021 50.083 51-186.176-12.013-19.087c-50.525-80.336-77.198-173.175-77.16-268.504.111-278.186 226.507-504.503 504.898-504.503 134.812.056 261.519 52.604 356.814 147.965 95.289 95.36 147.728 222.128 147.688 356.948-.118 278.195-226.522 504.543-504.693 504.543z" />
+      <linearGradient id="a" x1="609.77" x2="609.77" y1="1190.114" y2="21.084" gradientUnits="userSpaceOnUse">
+        <stop offset="0" stop-color="#20b038" />
+        <stop offset="1" stop-color="#60d66a" />
+      </linearGradient>
+      <path fill="url(#a)"
+        d="m27.875 1190.114 82.211-300.18c-50.719-87.852-77.391-187.523-77.359-289.602.133-319.398 260.078-579.25 579.469-579.25 155.016.07 300.508 60.398 409.898 169.891 109.414 109.492 169.633 255.031 169.57 409.812-.133 319.406-260.094 579.281-579.445 579.281-.023 0 .016 0 0 0h-.258c-96.977-.031-192.266-24.375-276.898-70.5l-307.188 80.548z" />
+      <path fill="#FFF" fill-rule="evenodd"
+        d="M462.273 349.294c-11.234-24.977-23.062-25.477-33.75-25.914-8.742-.375-18.75-.352-28.742-.352-10 0-26.25 3.758-39.992 18.766-13.75 15.008-52.5 51.289-52.5 125.078 0 73.797 53.75 145.102 61.242 155.117 7.5 10 103.758 166.266 256.203 226.383 126.695 49.961 152.477 40.023 179.977 37.523s88.734-36.273 101.234-71.297c12.5-35.016 12.5-65.031 8.75-71.305-3.75-6.25-13.75-10-28.75-17.5s-88.734-43.789-102.484-48.789-23.75-7.5-33.75 7.516c-10 15-38.727 48.773-47.477 58.773-8.75 10.023-17.5 11.273-32.5 3.773-15-7.523-63.305-23.344-120.609-74.438-44.586-39.75-74.688-88.844-83.438-103.859-8.75-15-.938-23.125 6.586-30.602 6.734-6.719 15-17.508 22.5-26.266 7.484-8.758 9.984-15.008 14.984-25.008 5-10.016 2.5-18.773-1.25-26.273s-32.898-81.67-46.234-111.326z"
+        clip-rule="evenodd" />
+      <path fill="#FFF"
+        d="M1036.898 176.091C923.562 62.677 772.859.185 612.297.114 281.43.114 12.172 269.286 12.039 600.137 12 705.896 39.633 809.13 92.156 900.13L7 1211.067l318.203-83.438c87.672 47.812 186.383 73.008 286.836 73.047h.258c330.812 0 600.109-269.219 600.25-600.055.055-160.343-62.328-311.108-175.649-424.53zm-424.601 923.242h-.195c-89.539-.047-177.344-24.086-253.93-69.531l-18.227-10.805-188.828 49.508 50.414-184.039-11.875-18.867c-49.945-79.414-76.312-171.188-76.273-265.422.109-274.992 223.906-498.711 499.102-498.711 133.266.055 258.516 52 352.719 146.266 94.195 94.266 146.031 219.578 145.992 352.852-.118 274.999-223.923 498.749-498.899 498.749z" />
+    </svg>
+  </a>
+  <!-- scroll top -->
+  <a href="#" class="boton-up" id="scrollTop"
+    aria-label="{% if page.lang == 'es' %}Volver arriba{% else %}Back to top{% endif %}">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m18 15-6-6-6 6" />
+    </svg>
+  </a>
+  <script defer src="/js/main.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const scrollBtn = document.getElementById('scrollTop');
+
+      function checkScrollPosition() {
+        if (window.scrollY > 300) {
+          scrollBtn.classList.add('visible');
+        } else {
+          scrollBtn.classList.remove('visible');
+        }
+      }
+
+      checkScrollPosition();
+
+      window.addEventListener('scroll', checkScrollPosition);
+
+      scrollBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    });
+
+  </script>
+  <!-- JavaScript para la rotación de imágenes -->
+  {% if page.layout == "servicios" %}
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const bg1 = document.querySelector(".bg1");
+      const bg2 = document.querySelector(".bg2");
+
+      if (!bg1 || !bg2) {
+        console.warn('Los elementos de fondo no se encontraron');
+        return;
+      }
+
+      let isBg1Visible = true;
+      let intervalId;
+
+      const toggleImages = () => {
+        requestAnimationFrame(() => {
+          bg1.style.opacity = isBg1Visible ? "0" : "1";
+          bg2.style.opacity = isBg1Visible ? "1" : "0";
+          isBg1Visible = !isBg1Visible;
+        });
+      };
+
+      const startInterval = () => {
+        intervalId = setInterval(toggleImages, 5000);
+      };
+
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+          clearInterval(intervalId);
+        } else {
+          startInterval();
+        }
+      });
+
+      bg1.style.opacity = "1";
+      bg2.style.opacity = "0";
+
+      startInterval();
+    });
+  </script>
+  {% endif %}
+  {% if page.cases %}
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const containers = document.querySelectorAll('.before-after-wrapper');
+
+      containers.forEach(container => {
+        let isMoving = false;
+        const beforeContainer = container.querySelector('.before-image-container');
+        const sliderLine = container.querySelector('.slider-line');
+
+        const updateSliderPosition = (clientX) => {
+          if (!isMoving) return;
+
+          const rect = container.getBoundingClientRect();
+          const x = Math.max(rect.left, Math.min(clientX, rect.right));
+          const percent = ((x - rect.left) / rect.width) * 100;
+
+          requestAnimationFrame(() => {
+            beforeContainer.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
+            sliderLine.style.left = `${percent}%`;
+          });
+        };
+
+        const handleStart = (e) => {
+          isMoving = true;
+          updateSliderPosition(e.type.includes('mouse') ? e.clientX : e.touches[0].clientX);
+        };
+
+        const handleMove = (e) => {
+          if (!isMoving) return;
+          e.preventDefault();
+          updateSliderPosition(e.type.includes('mouse') ? e.clientX : e.touches[0].clientX);
+        };
+
+        const handleEnd = () => {
+          isMoving = false;
+        };
+
+        container.addEventListener('mousedown', handleStart);
+        window.addEventListener('mousemove', handleMove);
+        window.addEventListener('mouseup', handleEnd);
+
+        container.addEventListener('touchstart', handleStart);
+        container.addEventListener('touchmove', handleMove);
+        container.addEventListener('touchend', handleEnd);
+      });
+    });
+
+  </script>
+  {% endif %}
+
+  {% if page.url contains "/centro-estetico/" or page.url contains "/aesthetic-center/" %}
+  <script>
+    /*contador*/
+    function animateCounter(id, end) {
+      const obj = document.getElementById(id);
+      const duration = 3000;
+      const frames = 60;
+      let current = 0;
+
+      const step = end / frames;
+      const interval = duration / frames;
+
+      const timer = setInterval(() => {
+        current += step;
+        obj.innerText = Math.round(current).toLocaleString();
+
+        if (current >= end) {
+          obj.innerText = end.toLocaleString();
+          clearInterval(timer);
+        }
+      }, interval);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      animateCounter('patients', 4320);
+      animateCounter('years', 15);
+      animateCounter('professionals', 3);
+      animateCounter('procedures', 12000);
+    });
+  </script>
+  {% endif %}
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const navToggle = document.getElementById('nav-toggle');
+      const dropdowns = document.querySelectorAll('.dropdown');
+      let activeDropdown = null;
+
+      function closeActiveDropdown() {
+        if (activeDropdown) {
+          activeDropdown.classList.remove('active');
+          activeDropdown = null;
+        }
+      }
+
+      dropdowns.forEach(dropdown => {
+        const span = dropdown.querySelector('span');
+
+        span.addEventListener('click', function (e) {
+          if (window.innerWidth <= 1024) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            if (activeDropdown && activeDropdown !== dropdown) {
+              activeDropdown.classList.remove('active');
+            }
+
+            if (dropdown.classList.contains('active')) {
+              dropdown.classList.remove('active');
+              activeDropdown = null;
+            } else {
+              dropdown.classList.add('active');
+              activeDropdown = dropdown;
+            }
+          }
+        });
+      });
+
+      document.addEventListener('click', function (e) {
+        if (window.innerWidth <= 1024) {
+          if (!e.target.closest('.dropdown')) {
+            closeActiveDropdown();
+          }
+        }
+      });
+
+      navToggle.addEventListener('change', function () {
+        if (!this.checked) {
+          closeActiveDropdown();
+        }
+      });
+
+      let resizeTimer;
+      window.addEventListener('resize', function () {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function () {
+          if (window.innerWidth > 1024) {
+            closeActiveDropdown();
+          }
+        }, 250);
+      });
+    });
+  </script>
+
+  {% if page.url == "/en/" or page.url == "/es/" %}
+  <script>
+    document.querySelectorAll('.video-placeholder').forEach(placeholder => {
+      placeholder.addEventListener('click', function () {
+        const videoId = this.dataset.videoId;
+        const iframe = document.createElement('iframe');
+
+        iframe.setAttribute('src', `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&mute=1`);
+        iframe.setAttribute('frameborder', '0');
+        iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+        iframe.setAttribute('allowfullscreen', '');
+        iframe.style.position = 'absolute';
+        iframe.style.top = '0';
+        iframe.style.left = '0';
+        iframe.style.width = '100%';
+        iframe.style.height = '100%';
+
+        this.parentElement.replaceChild(iframe, this);
+      });
+    });
+  </script>
+
+  {% endif %}
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const videoWrappers = document.querySelectorAll('.video-wrapper');
+
+      videoWrappers.forEach(wrapper => {
+        const video = wrapper.querySelector('.gallery-video');
+
+        video.addEventListener('error', function (e) {
+          console.error('Error loading video:', video.src);
+          console.error('Error details:', e);
+          wrapper.classList.add('error');
+        });
+
+        video.addEventListener('loadstart', function () {
+          wrapper.classList.add('loading');
+        });
+
+        video.addEventListener('loadeddata', function () {
+          wrapper.classList.remove('loading');
+          console.log('Video loaded successfully:', video.src);
+        });
+
+        wrapper.addEventListener('click', () => {
+          if (video.paused) {
+            document.querySelectorAll('.gallery-video').forEach(v => {
+              if (v !== video) {
+                v.pause();
+                v.parentElement.classList.remove('playing');
+              }
+            });
+
+            video.play();
+            wrapper.classList.add('playing');
+          } else {
+            video.pause();
+            wrapper.classList.remove('playing');
+          }
+        });
+
+        wrapper.addEventListener('mouseenter', () => {
+          if (!wrapper.classList.contains('playing')) {
+            video.play();
+          }
+        });
+
+        wrapper.addEventListener('mouseleave', () => {
+          if (!wrapper.classList.contains('playing')) {
+            video.pause();
+            video.currentTime = 0;
+          }
+        });
+
+        video.addEventListener('ended', () => {
+          if (!video.loop) {
+            wrapper.classList.remove('playing');
+          }
+        });
+
+        video.addEventListener('stalled', function () {
+          wrapper.classList.add('error');
+        });
+
+        video.addEventListener('waiting', function () {
+          wrapper.classList.add('loading');
+        });
+
+        video.addEventListener('playing', function () {
+          wrapper.classList.remove('loading');
+          wrapper.classList.remove('error');
+        });
+      });
+    });
+  </script>
+
+</body>
+
+</html>

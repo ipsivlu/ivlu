@@ -1,0 +1,75 @@
+---
+layout: null
+sitemap: false
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" 
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:webfeeds="http://webfeeds.org/rss/1.0"
+     xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>{{ site.name }} - Aesthetic Medicine Blog</title>
+    <description>{{ site.description }}</description>
+    <link>{{ site.url }}/en/</link>
+    <atom:link href="{{ site.url }}/feed-en.xml" rel="self" type="application/rss+xml" />
+    <language>en-US</language>
+    <copyright>Copyright {{ 'now' | date: "%Y" }}, {{ site.name }}</copyright>
+    <webfeeds:cover image="{{ site.url }}/img/banner-social.jpg" />
+    <webfeeds:icon>{{ site.url }}/img/favicon/favicon-32x32.png</webfeeds:icon>
+    <webfeeds:logo>{{ site.url }}{{ site.logo }}</webfeeds:logo>
+    <webfeeds:accentColor>0085CA</webfeeds:accentColor>
+    <webfeeds:related layout="card" target="browser"/>
+    
+    <image>
+      <url>{{ site.url }}{{ site.logo }}</url>
+      <title>{{ site.name }}</title>
+      <link>{{ site.url }}/en/</link>
+    </image>
+
+    {% assign posts = site.posts | where:"lang", "en" %}
+    {% for post in posts limit:20 %}
+    <item>
+      <title>{{ post.title | xml_escape }}</title>
+      <description>{{ post.description | xml_escape }}</description>
+      <content:encoded><![CDATA[{{ post.content }}]]></content:encoded>
+      <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+      <link>{{ site.url }}{{ post.url }}</link>
+      <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
+      
+      {% if post.author %}
+      <dc:creator>{{ post.author | xml_escape }}</dc:creator>
+      {% endif %}
+
+      {% if post.category %}
+      <category>{{ post.category | join: ", " | xml_escape }}</category>
+      {% endif %}
+      
+      {% if post.tags %}
+        {% for tag in post.tags %}
+      <category>{{ tag | xml_escape }}</category>
+        {% endfor %}
+      {% endif %}
+      
+      {% if post.excerpt %}
+      <description>{{ post.excerpt | xml_escape }}</description>
+      {% endif %}
+      
+      {% if post.jpg %}
+      <media:content 
+        url="{{ site.url }}/{{ post.jpg }}" 
+        medium="image"
+        type="image/jpeg"
+        width="1200"
+        height="630">
+        <media:title type="plain">{{ post.title | xml_escape }}</media:title>
+        <media:description type="plain">{{ post.description | xml_escape }}</media:description>
+      </media:content>
+      {% endif %}
+
+      <source url="{{ site.url }}/feed-en.xml">{{ site.name }} - Blog EN</source>
+    </item>
+    {% endfor %}
+  </channel>
+</rss>

@@ -1,0 +1,275 @@
+{% if page.layout == "corporate" and page.categoria == "equipo-medico_es" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Physician",
+  "@id": "{{ site.url }}{{ page.url }}#physician",
+  "inLanguage": "{{ page.lang }}",
+  
+  {% assign name_parts = page.title | split: "-" | first | strip | split: " " %}
+  "name": "{{ page.title | split: '-' | first | strip }}",
+  "givenName": "{{ name_parts[1] }}",
+  "familyName": "{{ name_parts[2] }}",
+  "honorificPrefix": "{{ name_parts[0] }}",
+  "gender": "{% if name_parts[0] contains 'Dr.' %}Male{% else %}Female{% endif %}",
+  
+  "headline": "{{ page.h1 }}",
+  "description": {{ page.description | jsonify }},
+  "url": "{{ page.canonical_url }}",
+  
+  "image": [
+    {
+      "@type": "ImageObject",
+      "url": "{{ site.url }}/{{ page.hero }}",
+      "contentUrl": "{{ site.url }}/{{ page.hero }}",
+      "caption": "{{ page.title }}",
+      "height": "800",
+      "width": "800"
+    }{% if page.hero1 %},
+    {
+      "@type": "ImageObject",
+      "url": "{{ site.url }}/{{ page.hero1 }}",
+      "contentUrl": "{{ site.url }}/{{ page.hero1 }}",
+      "caption": "Consultorio de {{ page.title | split: '-' | first | strip }}",
+      "height": "800",
+      "width": "800"
+    }{% endif %}
+  ],
+
+  "medicalSpecialty": [
+    {% if page.ref contains 'tatiana-leal' %}
+    {
+      "@type": "MedicalSpecialty",
+      "name": "Medicina Estética",
+      "description": "Especialista en tratamientos faciales y corporales no invasivos"
+    },
+    {
+      "@type": "MedicalSpecialty",
+      "name": "Medicina Láser",
+      "description": "Experta en tecnología láser para rejuvenecimiento"
+    },
+    {
+      "@type": "MedicalSpecialty",
+      "name": "Medicina Regenerativa",
+      "description": "Especializada en bioestimulación y tratamientos regenerativos"
+    }
+    {% elsif page.ref contains 'marco-bonilla' %}
+    {
+      "@type": "MedicalSpecialty",
+      "name": "Ginecología",
+      "description": "Especialista en salud femenina integral"
+    },
+    {
+      "@type": "MedicalSpecialty",
+      "name": "Obstetricia",
+      "description": "Control prenatal y cuidado obstétrico especializado"
+    },
+    {
+      "@type": "MedicalSpecialty",
+      "name": "Ginecología Estética",
+      "description": "Tratamientos estéticos y funcionales para la zona íntima"
+    }
+    {% endif %}
+  ],
+
+  "hasCredential": [
+    {% if page.ref contains 'tatiana-leal' %}
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "degree",
+      "name": "Especialista en Medicina Estética y Láser",
+      "recognizedBy": {
+        "@type": "CollegeOrUniversity",
+        "name": "Universidad del Rosario"
+      }
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "Maestría en CEFIME",
+      "recognizedBy": {
+        "@type": "Organization",
+        "name": "Centro de Formación en Medicina Estética"
+      }
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "Formación en Face-Up Filament y Bioplastia Facial",
+      "recognizedBy": {
+        "@type": "Organization",
+        "name": "Instituto de Buenos Aires"
+      }
+    }
+    {% elsif page.ref contains 'marco-bonilla' %}
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "degree",
+      "name": "Especialista en Ginecología y Obstetricia",
+      "recognizedBy": {
+        "@type": "CollegeOrUniversity",
+        "name": "Universidad Militar Nueva Granada"
+      }
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "Diplomado en Ecografía Obstétrica",
+      "recognizedBy": {
+        "@type": "Organization",
+        "name": "Fundación Escuela de Medicina 'Juan N. Corpas'"
+      }
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "Especialización en Patología Cervical",
+      "recognizedBy": {
+        "@type": "Organization",
+        "name": "Fundación Universitaria de Ciencias de la Salud"
+      }
+    }
+    {% endif %}
+  ],
+
+  "availableService": [
+    {% if page.ref contains 'tatiana-leal' %}
+    {
+      "@type": "MedicalProcedure",
+      "name": "Rejuvenecimiento Facial",
+      "description": "Rejuvenecimiento con láser, rellenos dérmicos avanzados, bioestimulación colágena"
+    },
+    {
+      "@type": "MedicalProcedure",
+      "name": "Tecnología de Vanguardia",
+      "description": "Ultrasonido focalizado, radiofrecuencia facial, láser fraccionado"
+    },
+    {
+      "@type": "MedicalProcedure",
+      "name": "Medicina Regenerativa",
+      "description": "Plasma rico en plaquetas, bioestimulación tisular, revitalización celular"
+    }
+    {% elsif page.ref contains 'marco-bonilla' %}
+    {
+      "@type": "MedicalProcedure",
+      "name": "Ginecología Estética",
+      "description": "Rejuvenecimiento vaginal láser, tratamiento de incontinencia, mejora de la salud íntima"
+    },
+    {
+      "@type": "MedicalProcedure",
+      "name": "Cuidado Obstétrico",
+      "description": "Control prenatal integral, ecografías especializadas, preparación para el parto"
+    },
+    {
+      "@type": "MedicalProcedure",
+      "name": "Medicina Preventiva",
+      "description": "Chequeos anuales, detección temprana, asesoría en salud femenina"
+    }
+    {% endif %}
+  ],
+
+  "review": [
+    {% if page.ref contains 'tatiana-leal' %}
+    {
+      "@type": "Review",
+      "reviewBody": "La Dra. Leal tiene un ojo excepcional para los detalles. No solo mejoró mi apariencia, sino que me ayudó a recuperar la confianza. Sus tratamientos son tan naturales que nadie puede decir que me he realizado algo, solo notan que me veo más descansada y radiante.",
+      "author": {
+        "@type": "Person",
+        "name": "María González"
+      }
+    }
+    {% elsif page.ref contains 'marco-bonilla' %}
+    {
+      "@type": "Review",
+      "reviewBody": "El Dr. Bonilla es excepcional. Su aproximación integral a la salud femenina marca la diferencia. Me ayudó no solo con mis preocupaciones estéticas, sino que también me dio la confianza para hablar abiertamente sobre temas íntimos que me preocupaban.",
+      "author": {
+        "@type": "Person",
+        "name": "Carolina Ramírez"
+      }
+    }
+    {% endif %}
+  ],
+
+  "memberOf": {
+    "@type": "MedicalOrganization",
+    "@id": "{{ site.url }}/#organization"
+  },
+
+  "workLocation": {
+    "@type": "MedicalClinic",
+    "name": "{{ site.name }}",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. Suba #114 - 59 Piso 6, Cons G14",
+      "addressLocality": "Bogotá",
+      "addressRegion": "DC",
+      "postalCode": "110111",
+      "addressCountry": "CO"
+    }
+  }
+}
+</script>
+
+<!-- Schema para las áreas de especialización -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": [
+    {% if page.ref contains 'tatiana-leal' %}
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "MedicalSpecialty",
+        "name": "Tratamientos Faciales",
+        "description": "Rejuvenecimiento con láser, Rellenos dérmicos avanzados, Bioestimulación colágena"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "MedicalSpecialty",
+        "name": "Tecnología de Vanguardia",
+        "description": "Ultrasonido focalizado, Radiofrecuencia facial, Láser fraccionado"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "MedicalSpecialty",
+        "name": "Medicina Regenerativa",
+        "description": "Plasma rico en plaquetas, Bioestimulación tisular, Revitalización celular"
+      }
+    }
+    {% elsif page.ref contains 'marco-bonilla' %}
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "MedicalSpecialty",
+        "name": "Ginecología Estética",
+        "description": "Rejuvenecimiento vaginal con láser, Tratamientos post-parto, Corrección de flacidez vaginal"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "MedicalSpecialty",
+        "name": "Obstetricia Especializada",
+        "description": "Control prenatal personalizado, Ecografías obstétricas avanzadas, Asesoramiento pre y post parto"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "MedicalSpecialty",
+        "name": "Medicina Preventiva",
+        "description": "Exámenes de rutina especializados, Prevención de patologías femeninas, Asesoramiento en salud"
+      }
+    }
+    {% endif %}
+  ]
+}
+</script>
+{% endif %}

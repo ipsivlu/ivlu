@@ -1,0 +1,41 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: var(--secundario);
+  box-shadow: 0 0 0 100vmax var(--secundario);
+  -webkit-clip-path: inset(0 -100vmax);
+          clip-path: inset(0 -100vmax);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.counter {
+  position: relative;
+  padding: 2rem;
+  height: clamp(100px, 20vw, 200px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.number {
+  font-size: clamp(80px, 10vw, 90px);
+  font-weight: bold;
+  color: #f0f0f0;
+  text-align: center;
+}
+
+.label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(18px, 4vw, 24px);
+  font-weight: bold;
+  color: black;
+  white-space: nowrap;
+}

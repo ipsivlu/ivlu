@@ -1,0 +1,39 @@
+---
+layout: null
+permalink: /sitemap-treatments.xml
+sitemap: false
+---
+{%- if true -%}
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+{%- assign treatments = "" | split: "" -%}
+{%- assign treatments = treatments | concat: site.tratamientos-faciales_es -%}
+{%- assign treatments = treatments | concat: site.tratamientos-faciales_en -%}
+{%- assign treatments = treatments | concat: site.tratamientos-corporales_es -%}
+{%- assign treatments = treatments | concat: site.tratamientos-corporales_en -%}
+{%- assign treatments = treatments | concat: site.tratamientos-intimos_es -%}
+{%- assign treatments = treatments | concat: site.tratamientos-intimos_en -%}
+{%- assign treatments = treatments | concat: site.tecnologia_es -%}
+{%- assign treatments = treatments | concat: site.tecnologia_en -%}
+
+{%- for treatment in treatments -%}
+  <url>
+    <loc>{{ site.url }}{{ treatment.url | xml_escape }}</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    {%- if treatment.hero %}
+    <image:image>
+      <image:loc>{{ site.url }}{{ treatment.hero | xml_escape }}</image:loc>
+      <image:title>{{ treatment.title | xml_escape }}</image:title>
+      {%- if treatment.alt %}
+      <image:caption>{{ treatment.alt | xml_escape }}</image:caption>
+      {%- endif %}
+    </image:image>
+    {%- endif %}
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+{%- endfor -%}
+</urlset>
+{%- endif -%}

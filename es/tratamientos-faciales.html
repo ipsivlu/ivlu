@@ -1,0 +1,188 @@
+---
+layout: categoria
+lang: es
+categoria: tratamientos-faciales_es
+ref: tratamientos-faciales
+hero: "img/tratamiento-faciales.avif"
+hero1: "img/tratamiento-profesional-facial.avif"
+alt: "Tratamientos faciales no invasivos realizados por la Dra. Tatiana Leal - Resultados naturales y seguros"
+title: "Tratamientos faciales no invasivos en Bogotá | Resultados naturales | Dra. Tatiana Leal"
+h1: "Tratamientos faciales no invasivos: rejuvenecimiento natural y seguro"
+description: "Descubre tratamientos faciales personalizados en Bogotá. Rejuvenecimiento, bioestimulación y más. Resultados naturales garantizados por la Dra. Tatiana Leal."
+bullet-point-1: Al alcance de todos
+bullet-point-2: Recupera tu confianza
+bullet-point-3: Sin riesgos ni efectos dañinos
+canonical_url: "https://dratatianaleal.com/es/tratamientos-faciales/"
+---
+
+<main>
+  <div class="intro flow padding">
+    <h2>Tratamientos faciales que despiertan tu belleza natural</h2>
+    <p>"¿Por qué mi piel no refleja cómo me siento por dentro?" Esta es la pregunta que Daniela, una ejecutiva de 43 años, se hacía cada mañana mientras intentaba disimular los signos de cansancio que el espejo le devolvía. Como ella, muchas mujeres buscan recuperar la vitalidad de su piel sin someterse a procedimientos invasivos ni resultados artificiales.</p>
+  </div>
+  <div class="gallery-container seccion">
+    {% for item in site.tratamientos-faciales_es %}
+    <a href="{{item.url | relative_url}}" class="gallery-item" title="{{item.title}}">
+      <img src="{{ item.hero | relative_url }}" alt="{{ item.alt }}" loading="lazy" width="452" height="604" decoding="async">
+      <h3 class="gallery-item-text">{{ item.h1 }}</h3>
+    </a>
+    {% endfor %}
+  </div>
+</main>
+
+<section class="block_section">
+  <small class="block_section_header">Centro médico especializado en medicina estética</small>
+  <h2 class="block_section_title">Transforma tu piel sin cirugía</h2>
+  <div class="block_section_content">
+    <p>Imagina despertar cada mañana y ver en el espejo una piel radiante que refleja tu verdadera esencia. Sin maquillaje excesivo, sin trucos para disimular imperfecciones, solo tu mejor versión natural. En la clínica de la Dra. Tatiana Leal, hacemos esto posible combinando ciencia avanzada con un profundo entendimiento de la belleza natural.</p>
+
+    <p>Cada rostro cuenta una historia única. Las líneas de expresión, los cambios en la textura, la pérdida de luminosidad... son capítulos que podemos reescribir sin borrar tu esencia. Nuestros protocolos personalizados utilizan las técnicas más avanzadas en medicina estética para despertar el potencial natural de tu piel.</p>
+
+    <p>El secreto no está en cambiar quién eres, sino en revelar la mejor versión de ti misma. Sin cirugías, sin tiempos de recuperación, sin resultados artificiales.</p>
+  </div>
+
+  <div class="block_section_image_left padding flow">
+    <h3>Tecnología y experiencia a tu servicio</h3>
+    <p>Con más de 15 años dedicados exclusivamente a la medicina estética facial, hemos seleccionado cuidadosamente las tecnologías más efectivas y seguras del mercado. Cada equipo está certificado por la FDA y el INVIMA, y nuestros protocolos están respaldados por años de resultados comprobados.</p>
+    <p>Tu tratamiento comienza con un análisis digital avanzado que nos permite ver más allá de la superficie, identificando las necesidades únicas de tu piel para crear un protocolo verdaderamente personalizado.</p>
+  </div>
+
+  <div class="block_section_knowledge flow">
+    <h2>El camino hacia una piel radiante</h2>
+    <ul>
+      <li>Resultados visibles desde la primera sesión que mejoran naturalmente con el tiempo</li>
+      <li>Tratamientos no invasivos que respetan y realzan tus rasgos naturales</li>
+      <li>Protocolos personalizados que se adaptan a tu estilo de vida</li>
+      <li>Tecnología de última generación con respaldo científico</li>
+      <li>Seguimiento continuo para optimizar tus resultados</li>
+    </ul>
+  </div>
+  <img class="block_section_image_right" loading="eager" title="Doctora Tatiana realizando tratamiento facial" src="{{'img/limpieza-facial-con-la-doctora-tatiana-leal.avif' | relative_url}}" alt="Tratamiento facial personalizado en el centro de medicina estética de la doctora Tatiana Leal" decoding="async">
+</section>
+
+<section>
+  <div class="padding flow intro">
+    <h2>La revolución en tratamientos faciales</h2>
+    <p>Olvídate de los procedimientos invasivos y los largos tiempos de recuperación. Nuestros tratamientos se adaptan a tu vida, no al revés.</p>
+  </div>
+
+  <div class="two_columns seccion">
+    <div class="flow padding">
+      <h3>Tu viaje hacia una piel saludable</h3>
+      <p>Todo comienza con un diagnóstico digital avanzado que nos permite ver más allá de lo visible. Analizamos la calidad de tu piel a nivel profundo para diseñar un protocolo que aborde tus preocupaciones específicas y despierte el potencial natural de tu piel.</p>
+      <a href="#" class="boton boton_principal" id="lead_whatsapp" rel="nofollow noopener noreferrer" target="_blank">Descubre tu plan personalizado</a>
+    </div>
+    <div class="two_columns-image">
+      <img src="{{ 'img/biorevitalizacion-facial.avif' | relative_url }}" width="520" height="520" alt="Diagnóstico facial avanzado en Bogotá" decoding="async">
+    </div>
+  </div>
+
+  <div class="two_columns two_columns_left">
+    <div class="flow padding">
+      <h3>Belleza natural, resultados reales</h3>
+      <p>No prometemos milagros, ofrecemos ciencia y resultados comprobados. Cada tratamiento está diseñado para trabajar en armonía con los procesos naturales de tu piel, estimulando su capacidad innata de regeneración y rejuvenecimiento.</p>
+      {% include boton.html %}
+    </div>
+    <div class="two_columns-image">
+      <img src="{{ 'img/beneficio-rejuvenecimiento-facial.avif' | relative_url }}" width="520" height="520" alt="Resultados naturales en tratamientos faciales" decoding="async">
+    </div>
+  </div>
+</section>
+
+<section class="parallax padding parallax_hilos-tensores">
+  <div class="parallax_copy intro flow">
+    <h2>Historias reales de transformación</h2>
+    <p>"Había invertido una fortuna en cremas y tratamientos que prometían mucho pero entregaban poco. Con la Dra. Tatiana encontré algo diferente: un enfoque personalizado que realmente funciona. Mi piel no solo se ve mejor, se siente mejor. Lo mejor es que mis amigos notan el cambio pero no pueden identificar qué me hice - ¡exactamente lo que buscaba!"</p>
+    <p><strong>- Mariana Gómez, 45 años</strong></p>
+  </div>
+</section>
+
+<section class="section padding">
+  <div class="accordion intro">
+    <h2>Resolvemos tus dudas</h2>
+    
+    <input type="checkbox" id="acc1" class="accordion-toggle">
+    <label for="acc1" class="accordion-header">¿Cómo elegir el tratamiento adecuado para mi piel?</label>
+    <div class="accordion-content">
+      <p>Tu piel es única, y tu tratamiento también debe serlo. Por eso, comenzamos con una evaluación completa que incluye:
+      <ul>
+        <li>Análisis digital avanzado de tu piel</li>
+        <li>Evaluación de tus preocupaciones específicas</li>
+        <li>Estudio de tu estilo de vida y objetivos</li>
+        <li>Diseño de un protocolo personalizado</li>
+      </ul>
+      Esta consulta inicial es sin compromiso, porque queremos que tengas toda la información necesaria para tomar la mejor decisión.</p>
+    </div>
+
+    <input type="checkbox" id="acc2" class="accordion-toggle">
+    <label for="acc2" class="accordion-header">¿Los tratamientos son dolorosos? ¿Necesito tiempo de recuperación?</label>
+    <div class="accordion-content">
+      <p>Hemos diseñado cada tratamiento pensando en tu comodidad:
+      <ul>
+        <li>Protocolos no invasivos que minimizan cualquier molestia</li>
+        <li>Tecnología avanzada que prioriza tu confort</li>
+        <li>Sin tiempo de recuperación - regresa a tus actividades inmediatamente</li>
+        <li>Resultados progresivos que lucen completamente naturales</li>
+      </ul>
+      </p>
+    </div>
+
+    <input type="checkbox" id="acc3" class="accordion-toggle">
+    <label for="acc3" class="accordion-header">¿Cuánto tiempo duran los resultados?</label>
+    <div class="accordion-content">
+      <p>La duración de los resultados varía según el tratamiento y tus características individuales:
+      <ul>
+        <li>Resultados inmediatos que mejoran con el tiempo</li>
+        <li>Protocolos de mantenimiento personalizados</li>
+        <li>Efectos acumulativos con cada sesión</li>
+        <li>Programa de cuidado en casa para optimizar resultados</li>
+      </ul>
+      Durante tu consulta, te explicaremos exactamente qué puedes esperar de cada tratamiento.</p>
+    </div>
+
+    <input type="checkbox" id="acc4" class="accordion-toggle">
+    <label for="acc4" class="accordion-header">¿Los resultados se verán naturales?</label>
+    <div class="accordion-content">
+      <p>La naturalidad es nuestra prioridad:
+      <ul>
+        <li>Protocolos diseñados para realzar, no transformar</li>
+        <li>Enfoque progresivo y personalizado</li>
+        <li>Respeto total por tus rasgos y expresiones</li>
+        <li>Resultados que mejoran con el tiempo</li>
+        <li>Seguimiento constante para ajustar el tratamiento según necesites</li>
+      </ul>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="seccion">
+  <div class="flow intro padding">
+    <h2>Comienza tu transformación hoy</h2>
+    <p>Tu camino hacia una piel radiante en 3 pasos</p>
+  </div>  
+    <div class="service-cards">
+      <div class="card">
+        <h3>1. Evaluación personalizada</h3>
+        <p>Análisis completo de tu piel con tecnología de diagnóstico avanzado. Identificamos tus necesidades únicas y diseñamos tu plan ideal.</p>
+      </div>
+
+      <div class="card">
+        <h3>2. Tratamiento a tu medida</h3>
+        <p>Protocolos personalizados que se adaptan a tu piel, estilo de vida y objetivos. Resultados predecibles y seguros.</p>
+      </div>
+
+      <div class="card">
+        <h3>3. Resultados duraderos</h3>
+        <p>Seguimiento continuo y ajustes para garantizar tu satisfacción. Mantenemos y optimizamos tus resultados a largo plazo.</p>
+      </div>
+    </div>
+
+    <div class="intro flow padding">
+      <p>Da el primer paso hacia la mejor versión de ti misma</p>
+      <a href="#" class="boton boton_principal" id="lead_whatsapp" rel="nofollow noopener noreferrer" target="_blank">
+        Agenda tu evaluación
+      </a>
+      <small>* Últimos 3 cupos disponibles esta semana para valoración sin costo</small>
+    </div>
+</section>

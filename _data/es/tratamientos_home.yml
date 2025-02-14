@@ -1,0 +1,53 @@
+primera-fila:
+  - img: img/tratamiento-varices-escleroterapia.avif
+    alt: Foto de una mujer después de la escleroterapia para varices
+    title: Tratamiento de várices con escleroterapia
+    url: es/tratamientos-corporales/varices/
+  - img: img/lipolisis-laser-bogota.avif
+    alt: Foto del resultado de una lipolisis laser
+    title: Lipólisis con laser
+    url: es/tratamientos-corporales/lipolisis/
+  - img: img/moldeamiento-corporal.avif
+    alt: Chica que se realizó un moldeamiento corporal en Bogotá
+    title: Moldeamiento corporal
+    url: es/tratamientos-corporales/moldeamiento/
+  - img: img/tratamiento-celulitis-tatiana-leal.avif
+    alt: Foto de tratamiento de celulitis
+    title: Tratamiento celulitis
+    url: es/tratamientos-corporales/celulitis/
+
+segunda-fila:
+  - img: img/tratamiento-facial.avif
+    alt: Tratamiento de rejuvenecimiento facial en Bogotá
+    title: Tratamiento rejuvenecimiento facial
+    url: es/tratamientos-faciales/rejuvenecimiento-laser/
+  - img: img/peeling-facial.avif
+    alt: Mujer que se hizo un peeling químico facial
+    title: Peeling químico facial
+    url: es/tratamientos-faciales/peeling-quimico/
+  - img: img/relleno-aumento-labios.avif
+    alt: Procedimiento de un aumento de labios
+    title: Relleno y aumento de labios
+    url: es/tratamientos-faciales/aumento-labios/
+  - img: img/hilo-tensores-tatiana-leal.avif
+    alt: Tratamiento con hilos tensores de la Dra. Tatiana Leal
+    title: Tratamiento de hilos tensores
+    url: es/tratamientos-faciales/hilos-tensores/
+    
+tercera-fila:
+  - img: img/aclaramiento-genital.avif
+    alt: Mujer después de un aclaramiento genital
+    title: Aclaramiento genital con Tatiana Leal
+    url: es/tratamientos-intimos/aclaramiento-genital/
+  - img: img/rejuvenecimiento-vaginal.avif
+    alt: Mujer después de un rejuvenecimiento vaginal
+    title: Rejuvenecimiento vaginal
+    url: es/tratamientos-intimos/rejuvenecimiento-vaginal/
+  - img: img/ginecologia-estetica.avif
+    alt: Mujer con un aumento de labios mayores
+    title: Aumento de labios mayores
+    url: es/tratamientos-intimos/aumento-labios-mayores/
+  - img: img/centro-estetico-mujer.avif
+    alt: Mujer en el centro estético de Tatiana Leal
+    title: Tratamiento para incontinencia urinaria
+    url: es/tratamientos-intimos/incontinencia-urinaria-esfuerzo/

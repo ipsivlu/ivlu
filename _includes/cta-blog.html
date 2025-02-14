@@ -1,0 +1,18 @@
+<!-- _includes/cta-blog.html -->
+<div class="cta-blog padding flow">
+  <div class="intro flow center">
+      <h3>{% if page.lang == 'es' %}¿Quieres saber más sobre este tratamiento?{% else %}Want to learn more about this treatment?{% endif %}</h3>
+      
+      <p>{% if page.lang == 'es' %}Agenda una consulta gratuita con nuestros especialistas y descubre el tratamiento ideal para ti{% else %}Schedule a free consultation with our specialists and discover the ideal treatment for you{% endif %}</p>
+      
+      {% include boton.html %}
+      
+      <small>
+          {% if page.lang == 'es' %}
+              * Cupos limitados esta semana
+          {% else %}
+              * Limited spots this week
+          {% endif %}
+      </small>
+  </div>
+</div>

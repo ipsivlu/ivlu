@@ -1,0 +1,31 @@
+---
+layout: null
+sitemap: false
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" 
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>{{ site.name }} - Tratamientos</title>
+    <description>Nuevos tratamientos y actualizaciones</description>
+    <link>{{ site.url }}</link>
+    <atom:link href="{{ site.url }}/feed-treatments.xml" rel="self" type="application/rss+xml" />
+    
+    {% assign treatments = site.tratamientos-faciales_es | concat: site.tratamientos-corporales_es | concat: site.tratamientos-intimos_es %}
+    {% for treatment in treatments limit:50 %}
+    <item>
+      <title>{{ treatment.title | xml_escape }}</title>
+      <description>{{ treatment.description | xml_escape }}</description>
+      <content:encoded><![CDATA[{{ treatment.content }}]]></content:encoded>
+      <link>{{ site.url }}{{ treatment.url }}</link>
+      <guid isPermaLink="true">{{ site.url }}{{ treatment.url }}</guid>
+      
+      {% if treatment.hero %}
+      <enclosure url="{{ site.url }}/{{ treatment.hero }}" type="image/jpeg" />
+      {% endif %}
+    </item>
+    {% endfor %}
+  </channel>
+</rss>

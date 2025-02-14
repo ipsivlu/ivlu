@@ -1,0 +1,43 @@
+---
+layout: categoria
+lang: es
+ref: gracias
+title: "¡Gracias por contactarnos! | Dra. Tatiana Leal"
+description: "Hemos recibido tu mensaje. Nuestro equipo se pondrá en contacto contigo pronto para atender tus consultas."
+hero: "img/gracias-contacto.avif"
+alt: "Gracias por contactar con la Dra. Tatiana Leal"
+h1: "¡Gracias por contactarnos!"
+noindex: true
+---
+
+<main class="thanks-page padding">
+  <div class="intro flow">
+    <div class="thanks-icon">
+      <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+    </div>
+    
+    <h2>Tu mensaje ha sido recibido</h2>
+    <p>Nos pondremos en contacto contigo dentro de las próximas 24 horas para resolver todas tus dudas y ayudarte a programar tu consulta.</p>
+    
+    <div class="next-steps">
+      <h3>Mientras tanto, puedes:</h3>
+      <ul>
+        <li>Conoce nuestro <a href="{{ 'es/centro-estetico' | relative_url }}">centro de medicina estética</a></li>
+        <li>Leer los <a href="{{ 'es/informacion-paciente' | relative_url }}">deberes y derechos de nuestros pacientes</a></li>
+        <li>Visitar nuestro <a href="{{ '/blog' | relative_url }}">blog</a> para consejos y novedades</li>
+      </ul>
+    </div>
+
+    <div class="contact-info">
+      <h3>¿Necesitas ayuda inmediata?</h3>
+      <p>Puedes contactarnos directamente:</p>
+      <ul>
+        <li>WhatsApp: <a href="#" id="lead_whatsapp" target="_blank" rel="noopener noreferrer">+57 {{site.telefono}}</a></li>
+        <li>Teléfono: <a href="tel:+57{{site.telefono}}">+57 {{site.telefono}}</a></li>
+        <li>Email: <a href="mailto:{{site.email}}">{{site.email}}</a></li>
+      </ul>
+    </div>
+
+    <a href="{{ '/es/' | relative_url }}" class="boton boton_principal">Volver al inicio</a>
+  </div>
+</main>

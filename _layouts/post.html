@@ -1,0 +1,75 @@
+---
+layout: default
+---
+<div class="content flow">
+  {% include breadcrumbs.html %}
+  {% assign words = content | number_of_words %}
+  {% if words > 180 %}
+    <span>{{ words | minus: 180 | plus: 150 | divided_by: 150 | append: ' minutos para leerlo 🤓' }}</span>
+  {% endif %}
+</div>
+
+<main class="articulo wrapper" role="main">
+  <article class="flow">
+    {{ content }}
+
+    {% include eeat.html %}
+    
+    <div class="share wrapper">
+      {% include share.html %}
+    </div>
+
+    {% if page.referencias %}
+    <div class="referencias" id="fuentes">
+      <h4>{% if page.lang == "es" %}Créditos de las gráficas, referencias y fuentes{% else %}Graphics credits, references and sources{% endif %}</h4>
+      <ul>
+        {% for link_hash in page.referencias %}
+          {% for link in link_hash %}
+          <li>
+            <a href="{{ link[1] }}" rel="nofollow noopener noreferrer" target="_blank" title="{{ link[0] }}">{{ link[0] }}</a>
+          </li>
+          {% endfor %}
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+  </article>
+
+  <aside>
+    <h4>{% if page.lang == "es" %}¿Necesitas hacer una consulta?{% else %}Do you have a question?{% endif %}</h4>
+    {% include boton.html %}
+    
+    <hr>
+    
+    <h4>{% if page.lang == "es" %}Info relacionada{% else %}Related info{% endif %}</h4>
+    
+    {% assign posts_in_lang = site.posts | where: "lang", page.lang %}
+    {% assign related_posts = "" | split: "" %}
+    
+    {% for post in posts_in_lang %}
+      {% if post.url != page.url %}
+        {% assign common_tags = post.tags | intersection: page.tags %}
+        {% if common_tags.size > 0 %}
+          {% assign related_posts = related_posts | push: post %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+    
+    {% for post in related_posts limit:3 %}
+      <div class="relacionados">
+        <a href="/{{ post.lang }}/blog/{{ post.slug }}" title="{{ post.title }}">
+          {% if post.hero %}
+            <img src="{{ post.hero | relative_url }}" 
+                 alt="{{ post.altheader | default: post.title }}" 
+                 title="{{ post.imgtitle-header | default: post.title }}" 
+                 loading="lazy" width="40" height="40"
+                 decoding="async" >
+          {% endif %}
+          <h5>{{ post.title }}</h5>
+        </a>
+      </div>
+    {% endfor %}
+  </aside>
+</main>
+
+<a href="#" class="scroll-top">{% include up.html %}</a>

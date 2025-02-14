@@ -1,0 +1,47 @@
+---
+layout: null
+sitemap: false
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+  {% assign current_time = site.time | date: '%s' | plus: 0 %}
+  {% assign two_days_ago = current_time | minus: 172800 %}
+  {% assign posts = site.posts | where:"lang", "es" %}
+  {% assign has_recent_posts = false %}
+  
+  {% for post in posts limit:50 %}
+    {% assign post_time = post.date | date: '%s' | plus: 0 %}
+    {% if post_time > two_days_ago %}
+      {% assign has_recent_posts = true %}
+      <url>
+        <loc>{{ site.url }}{{ post.url }}</loc>
+        <news:news>
+          <news:publication>
+            <news:name>{{ site.name }}</news:name>
+            <news:language>{{ post.lang }}</news:language>
+          </news:publication>
+          <news:publication_date>{{ post.date | date_to_xmlschema }}</news:publication_date>
+          <news:title>{{ post.title | xml_escape }}</news:title>
+          {% if post.keywords %}
+          <news:keywords>{{ post.keywords | join: ", " | xml_escape }}</news:keywords>
+          {% endif %}
+        </news:news>
+      </url>
+    {% endif %}
+  {% endfor %}
+  
+  {% unless has_recent_posts %}
+    <url>
+      <loc>{{ site.url }}</loc>
+      <news:news>
+        <news:publication>
+          <news:name>{{ site.name }}</news:name>
+          <news:language>es</news:language>
+        </news:publication>
+        <news:publication_date>{{ site.time | date_to_xmlschema }}</news:publication_date>
+        <news:title>{{ site.title | xml_escape }}</news:title>
+      </news:news>
+    </url>
+  {% endunless %}
+</urlset>

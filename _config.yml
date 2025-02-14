@@ -1,0 +1,157 @@
+# Configuración básica del sitio
+baseurl: ''
+url: 'https://dratatianaleal.com'
+name: Tatiana Leal
+email: asistentetatianaleal@gmail.com
+maps: https://maps.app.goo.gl/bvbNFb82J7X3s1q16
+direccion: "Torre Magna PI, Av Suba #114 - 59 Piso 6, Cons G14, Bogotá"
+telefono: 3222010384
+
+# Información del autor y social
+author:
+  name: Tatiana Leal
+  email: asistentetatianaleal@gmail.com
+  instagram: https://www.instagram.com/dratatianaleal/
+  facebook: https://www.facebook.com/Dra.TatianaLealSandoval
+  youtube: https://www.youtube.com/channel/UCxF-X7in4xUFxYYwCMyC5OQ
+  job_title: "Especialista en medicina estética y láser"
+  bio: "La Dra. Tatiana Leal es una destacada especialista en Medicina Estética..."
+
+# SEO Configuration
+title: Doctora Tatiana Leal
+tagline: "Especialista en medicina estética y láser"
+description: "Clínica de Medicina Estética especializada en rejuvenecimiento facial y corporal en Bogotá"
+logo: /img/logo-tatiana-leal.webp
+social:
+  name: Dra. Tatiana Leal
+  links:
+    - https://www.instagram.com/dratatianaleal/
+    - https://www.facebook.com/Dra.TatianaLealSandoval
+    - https://www.youtube.com/channel/UCxF-X7in4xUFxYYwCMyC5OQ
+
+# Publisher
+publisher:
+  name: Tatiana Leal
+  logo: /img/logo-tatiana-leal.webp
+
+markdown: kramdown
+
+# Configuración de URLs y colecciones
+permalink: /:categories/:title/
+
+collections:
+  redirects:
+      output: true
+  tratamientos-faciales_es:
+    output: true
+    permalink: /es/tratamientos-faciales/:title/
+  tratamientos-faciales_en:
+    output: true
+    permalink: /en/facial-treatments/:title/
+  tratamientos-corporales_es:
+    output: true
+    permalink: /es/tratamientos-corporales/:title/
+  tratamientos-corporales_en:
+    output: true
+    permalink: /en/body-treatments/:title/
+  tratamientos-intimos_es:
+    output: true
+    permalink: /es/tratamientos-intimos/:title/
+  tratamientos-intimos_en:
+    output: true
+    permalink: /en/intimate-treatments/:title/
+  tecnologia_es:
+    output: true
+    permalink: /es/tecnologia/:title/
+  tecnologia_en:
+    output: true
+    permalink: /en/technology/:title/
+
+# Valores por defecto
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+  - scope:
+      path: "en"
+    values:
+      lang: "en"
+  - scope:
+      path: "_posts/es"
+    values:
+      lang: "es"
+      permalink: /es/blog/:title/
+  - scope:
+      path: "_posts/en"
+    values:
+      lang: "en"
+      permalink: /en/blog/:title/
+  - scope:
+      path: ""
+      type: "tratamientos-faciales_es"
+    values:
+      layout: "servicios"
+  - scope:
+      path: ""
+      type: "tratamientos-faciales_en"
+    values:
+      layout: "servicios"
+  - scope:
+      path: ""
+      type: "tratamientos-corporales_es"
+    values:
+      layout: "servicios"
+  - scope:
+      path: ""
+      type: "tratamientos-corporales_en"
+    values:
+      layout: "servicios"
+  - scope:
+      path: ""
+      type: "tratamientos-intimos_es"
+    values:
+      layout: "servicios"
+  - scope:
+      path: ""
+      type: "tratamientos-intimos_en"
+    values:
+      layout: "servicios"
+  - scope:
+      path: ""
+      type: "tecnologia_es"
+    values:
+      layout: "servicios"
+  - scope:
+      path: ""
+      type: "tecnologia_en"
+    values:
+      layout: "servicios"
+ 
+keep_files: [/img]
+
+# Optimización HTML
+compress_html:
+  endings: ["li", "dt", "dd", "optgroup", "option", "colgroup", "caption", "thead", "tbody", "tfoot", "tr", "td", "th"]
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  ignore:
+    envs: []
+  blanklines: false
+  profile: false
+  startings: []
+
+include:
+  - videos
+
+plugins:
+  - jekyll-paginate-v2
+
+pagination:
+  enabled: true
+  per_page: 9
+  permalink: '/page/:num/'
+  title: ':title - página :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true

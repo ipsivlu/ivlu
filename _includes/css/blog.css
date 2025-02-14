@@ -1,0 +1,202 @@
+/* BREADCRUMBS */
+
+#breadcrumbs {
+  font-family: var(--fuenteTitulos);  
+  padding: 20px;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+
+#breadcrumbs .small{
+  display: flex;
+  flex-wrap: wrap;
+
+  li{
+    margin: 0;
+    list-style: none;
+    font-size: 16px;
+    
+    &::after{
+      content: '/';
+    }
+    
+    a{
+      color: var(--accion);
+      font-size: 16px;
+    }
+  }
+}
+
+.articulo{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+  }
+
+.articulo article{
+  position: relative;
+  max-width: 100%;
+  flex: 1 0 min(100%, 580px);
+}
+
+.articulo article h2,
+.articulo article h3{
+  margin: 2rem 0;
+}
+
+.articulo article li{
+  margin-bottom: 1.2em;
+}
+
+.articulo img{
+  border-radius: var(--radius);
+  height: auto;
+}
+
+.articulo article a:not(.boton){
+  color: var(--secundario);
+  -webkit-text-decoration: underline 3px;
+          text-decoration: underline 3px;
+  transition: ease-in-out 0.5s;
+  font-weight: 700;
+}
+
+.articulo aside{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 80px;
+  flex: 1;
+  padding: 2em 16px;
+  text-align: center;
+  border: 1.6px solid var(--acento);
+  border-radius: var(--radius);
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  display: grid;
+  gap: 32px;
+  margin-bottom: 2em;
+  background-color: var(--gris1);
+  box-shadow: var(--shadow);
+}
+
+#markdown-toc{
+  padding: 4em 0;
+  background-color: var(--gris1);
+  box-shadow: 0 0 0 100vmax var(--gris1);
+  -webkit-clip-path: inset(0 -100vmax);
+          clip-path: inset(0 -100vmax);
+
+  li a{
+    color: var(--principal);
+    font-size: 16px;
+  } 
+}
+
+.eeat-author {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  background-color: #f8f9fa;
+  margin: 2rem 0;
+}
+
+.eeat-author img {
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.eeat-author-info {
+  flex: 1;
+}
+
+.eeat-author-info h3 {
+  margin: 0 0 0.5rem 0;
+  color: #2d3748;
+}
+
+.eeat-credentials {
+  font-style: italic;
+  color: #4a5568;
+  margin-bottom: 1rem;
+}
+
+.eeat-social {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.social-link {
+  color: #4a5568;
+  transition: color 0.2s;
+}
+
+.social-link:hover {
+  color: #2b6cb0;
+}
+
+.eeat-profile-link {
+  display: inline-block;
+  color: #2b6cb0;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.eeat-profile-link:hover {
+  text-decoration: underline;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 640px) {
+  .eeat-author {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .eeat-social {
+    justify-content: center;
+  }
+}
+
+.cta-blog{
+  background-color: var(--acento);
+  border-radius: var(--radius);
+}
+
+.pagination {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.pagination .boton {
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+}
+
+.pagination .current {
+  background-color: #666;
+  color: white;
+}

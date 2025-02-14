@@ -1,0 +1,5 @@
+.landing img{
+  display: block;
+  margin: 2em auto;
+  box-shadow: var(--shadow);
+}

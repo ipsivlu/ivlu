@@ -1,0 +1,165 @@
+---
+layout: categoria
+lang: en
+ref: tecnologias
+hero: "img/centro-medicina-estetica-gluteos.avif"
+hero1: "img/lipolisis-laser-en-bogota.avif"
+alt: "Advanced aesthetic medical technology at Dr. Tatiana Leal's clinic"
+title: "State-of-the-art Aesthetic Medical Technology in Bogotá | Dr. Tatiana Leal"
+h1: "Medical Aesthetic Technology: innovation and proven results"
+description: "Discover our cutting-edge technology in aesthetic medicine. Internationally certified equipment for safe and effective results. Non-invasive facial and body treatments."
+canonical_url: "https://dratatianaleal.com/en/technologies/"
+---
+
+<main>
+  <div class="intro flow padding">
+    <h2>The Science Behind Your Transformation</h2>
+    <p>"How can I be sure this technology really works?" is a common question among my patients. The answer lies in years of research, international certifications, and thousands of success stories backing each of our devices. Every technology in our center has been carefully selected for its proven results and safety profile.</p>
+  </div>
+
+  <div class="gallery-container seccion">
+    {% for item in site.tecnologia_en %}
+    <a href="{{item.url | relative_url}}" class="gallery-item" title="{{item.title}}">
+      <img src="{{ item.hero | relative_url }}" alt="{{ item.alt }}" loading="lazy" width="452" height="604" decoding="async">
+      <h3 class="gallery-item-text">{{ item.h1 }}</h3>
+    </a>
+    {% endfor %}
+  </div>
+</main>
+<section class="block_section">
+  <small class="block_section_header">Specialized center in advanced aesthetic medicine</small>
+  <h2 class="block_section_title">Cutting-edge Technology for Superior Results</h2>
+  <div class="block_section_content">
+    <p>In the world of aesthetic medicine, technology makes the difference between good results and extraordinary outcomes. In our center, each device represents the latest in medical innovation, backed by clinical studies and international certifications that guarantee its efficacy and safety.</p>
+ 
+    <p>The key isn't just having the best technology, but knowing how to use it. Our medical team receives constant training to master each protocol and customize treatments according to each patient's unique needs.</p>
+ 
+    <p>Our investment in cutting-edge technology reflects our commitment to excellence and superior results.</p>
+  </div>
+ 
+  <div class="block_section_image_left padding flow">
+    <h3>Transformative Innovation</h3>
+    <p>Every technology in our center has been selected for its ability to deliver visible and lasting results. From precise body analysis to state-of-the-art non-invasive treatments, we have the equipment necessary to effectively address every aesthetic concern.</p>
+    <p>The synergy between different technologies allows us to design personalized protocols that maximize the results of each treatment.</p>
+  </div>
+ 
+  <div class="block_section_knowledge flow">
+    <h2>Advanced Technology Benefits</h2>
+    <ul>
+      <li>Equipment certified internationally by FDA and INVIMA</li>
+      <li>More effective treatments with fewer sessions</li>
+      <li>Predictable and measurable results</li>
+      <li>Maximum safety and comfort during procedures</li>
+      <li>Personalized protocols based on scientific evidence</li>
+    </ul>
+  </div>
+  <img class="block_section_image_right" loading="eager" title="Advanced aesthetic medical technology" src="{{'img/tecnologia-medicina-estetica.avif' | relative_url}}" alt="State-of-the-art aesthetic medical equipment at Dr. Tatiana Leal's clinic" decoding="async">
+ </section>
+ 
+ <section>
+  <div class="padding flow intro">
+    <h2>Technology That Makes the Difference</h2>
+    <p>Discover why the right technology, in expert hands, is essential to achieve the results you desire.</p>
+  </div>
+ 
+  <div class="two_columns seccion">
+    <div class="flow padding">
+      <h3>Precision and Results</h3>
+      <p>Each device in our center incorporates the most advanced technology to ensure precise and effective treatments. From initial analysis to results monitoring, we use digital systems that allow us to objectively document and measure your progress.</p>
+      {% include boton.html %}
+    </div>
+    <div class="two_columns-image">
+      <img src="{{ 'img/tecnologia-resultados-medicina-estetica.avif' | relative_url }}" width="520" height="520" alt="State-of-the-art technology in aesthetic medicine" decoding="async">
+    </div>
+  </div>
+  <div class="two_columns two_columns_left">
+    <div class="flow padding">
+      <h3>Safety and Trust</h3>
+      <p>Safety is our priority. All our equipment holds multiple international certifications and undergoes rigorous quality controls. Our medical team receives ongoing training to ensure optimal use of each technology.</p>
+      {% include boton.html %}
+    </div>
+    <div class="two_columns-image">
+      <img src="{{ 'img/seguridad-tecnologia-estetica.avif' | relative_url }}" width="520" height="520" alt="Safety in aesthetic treatments" decoding="async">
+    </div>
+  </div>
+ </section>
+ 
+ <section class="parallax padding parallax_tecnologia">
+  <div class="parallax_copy intro flow">
+    <h2>Our Patients' Experience</h2>
+    <p>"The technology at Dr. Tatiana's clinic is impressive. Not just because of how advanced the equipment is, but how the medical team uses it to personalize each treatment. The results exceeded my expectations, and the best part is that the whole process was comfortable and pain-free."</p>
+    <p><strong>- Caroline Martinez, 42 years old</strong></p>
+  </div>
+ </section>
+ 
+ <section class="section padding">
+  <div class="accordion intro">
+    <h2>Frequently Asked Questions About Our Technology</h2>
+    
+    <input type="checkbox" id="acc1" class="accordion-toggle">
+    <label for="acc1" class="accordion-header">Why invest in treatments with advanced technology?</label>
+    <div class="accordion-content">
+      <p>Advanced technology allows for more precise, predictable, and lasting results. Our equipment combines different action mechanisms that work in synergy to enhance results, reducing the number of sessions needed and ensuring maximum safety during treatments.</p>
+    </div>
+ 
+    <input type="checkbox" id="acc2" class="accordion-toggle">
+    <label for="acc2" class="accordion-header">What certifications does your equipment have?</label>
+    <div class="accordion-content">
+      <p>All our equipment holds international certifications, including FDA (United States) and INVIMA (Colombia). Additionally, they are manufactured by leading companies in medical-aesthetic technology that meet the highest quality and safety standards.</p>
+    </div>
+ 
+    <input type="checkbox" id="acc3" class="accordion-toggle">
+    <label for="acc3" class="accordion-header">How do you choose which technology to use in my case?</label>
+    <div class="accordion-content">
+      <p>Technology selection is based on a comprehensive evaluation of your needs, goals, and particular characteristics. We perform a detailed diagnosis using advanced analysis equipment to determine the most effective protocol for your case. Sometimes, we combine different technologies to maximize results.</p>
+    </div>
+ 
+    <input type="checkbox" id="acc4" class="accordion-toggle">
+    <label for="acc4" class="accordion-header">What maintenance do the results require?</label>
+    <div class="accordion-content">
+      <p>Results obtained with our technology are long-lasting, especially when post-treatment care recommendations are followed. We design personalized maintenance plans that may include spaced sessions to optimize and extend results over the long term.</p>
+    </div>
+  </div>
+ </section>
+ <section class="seccion">
+  <div class="flow intro padding">
+    <h2>Your Transformation Starts Here</h2>
+    <p>Cutting-edge Technology in 3 Steps</p>
+  </div>  
+    <div class="service-cards">
+      <div class="card">
+        <h3>1. Technological Diagnosis</h3>
+        <p>Comprehensive evaluation with advanced analysis equipment to identify the ideal treatment for you. We document your starting point to objectively measure your results.</p>
+      </div>
+ 
+      <div class="card">
+        <h3>2. Personalized Protocol</h3>
+        <p>We design a plan that combines the most effective technologies for your goals. Each treatment is adapted to your specific needs.</p>
+      </div>
+ 
+      <div class="card">
+        <h3>3. Digital Monitoring</h3>
+        <p>We track your progress with advanced measurement technology. We document each step of your transformation to ensure optimal results.</p>
+      </div>
+    </div>
+ 
+    <div class="intro flow padding">
+      <p>Discover the power of advanced medical-aesthetic technology</p>
+      <a href="#" class="boton boton_principal" id="lead_whatsapp" rel="nofollow noopener noreferrer" target="_blank">
+        Schedule your assessment
+      </a>
+      <small>* Last 3 spots available this week for complimentary evaluation</small>
+    </div>
+ </section>
+ 
+ {% if page.cases %}
+ {% include before-after.html %}
+ {% endif %}
+ 
+ <aside class="padding" id="consulta">
+  <div class="intro flow">
+    <h2>Safe and Effective Transformation</h2>
+    <p>The most advanced technology in aesthetic medicine is within your reach. Schedule your assessment today and discover how we can help you achieve your goals safely and effectively.</p>
+    {% include boton.html %}
+  </div>
+ </aside>

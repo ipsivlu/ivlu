@@ -1,0 +1,46 @@
+/* SHARE */
+
+.share{
+  background-color: var(--secundario);
+  padding: 1em;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  color: white;
+}
+
+#share-buttons {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+}
+
+#share-buttons:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+#share-buttons>div {
+  position: relative;
+  text-align: left;
+  height: 40px;
+  width: 40px;
+  float: left;
+  text-align: center;
+}
+
+#share-buttons>div>svg {
+  height: 20px;
+  fill: white;
+  margin-top: 10px;
+  transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#share-buttons>div>svg:hover {
+  fill: var(--principal);
+  transform: scale(1.5);
+}
+
+#share-buttons>div:hover {
+  cursor: pointer;
+}

@@ -1,0 +1,96 @@
+{% assign current_lang = page.lang | default: site.default_lang %}
+
+{% assign pages = site.pages | where_exp: "item", "item.ref != null" | where_exp: "item", "item.ref == page.ref" %}
+{% assign posts = site.posts | where_exp: "item", "item.ref != null" | where_exp: "item", "item.ref == page.ref" %}
+
+{% if site.tratamientos-faciales_es %}
+  {% assign facial_es = site.tratamientos-faciales_es | where_exp: "item", "item.ref == page.ref" %}
+{% else %}
+  {% assign facial_es = "" | split: "," %}
+{% endif %}
+
+{% if site.tratamientos-faciales_en %}
+  {% assign facial_en = site.tratamientos-faciales_en | where_exp: "item", "item.ref == page.ref" %}
+{% else %}
+  {% assign facial_en = "" | split: "," %}
+{% endif %}
+
+{% if site.tratamientos-corporales_es %}
+  {% assign corporal_es = site.tratamientos-corporales_es | where_exp: "item", "item.ref == page.ref" %}
+{% else %}
+  {% assign corporal_es = "" | split: "," %}
+{% endif %}
+
+{% if site.tratamientos-corporales_en %}
+  {% assign corporal_en = site.tratamientos-corporales_en | where_exp: "item", "item.ref == page.ref" %}
+{% else %}
+  {% assign corporal_en = "" | split: "," %}
+{% endif %}
+
+{% if site.tratamientos-intimos_es %}
+  {% assign intimo_es = site.tratamientos-intimos_es | where_exp: "item", "item.ref == page.ref" %}
+{% else %}
+  {% assign intimo_es = "" | split: "," %}
+{% endif %}
+
+{% if site.tratamientos-intimos_en %}
+  {% assign intimo_en = site.tratamientos-intimos_en | where_exp: "item", "item.ref == page.ref" %}
+{% else %}
+  {% assign intimo_en = "" | split: "," %}
+{% endif %}
+
+{% if site.tecnologia_es %}
+  {% assign tecnologia_es = site.tecnologia_es | where_exp: "item", "item.ref == page.ref" %}
+{% else %}
+  {% assign tecnologia_es = "" | split: "," %}
+{% endif %}
+
+{% if site.tecnologia_en %}
+  {% assign tecnologia_en = site.tecnologia_en | where_exp: "item", "item.ref == page.ref" %}
+{% else %}
+  {% assign tecnologia_en = "" | split: "," %}
+{% endif %}
+
+{% assign all_pages = pages %}
+{% if posts.size > 0 %}{% assign all_pages = all_pages | concat: posts %}{% endif %}
+{% if facial_es.size > 0 %}{% assign all_pages = all_pages | concat: facial_es %}{% endif %}
+{% if facial_en.size > 0 %}{% assign all_pages = all_pages | concat: facial_en %}{% endif %}
+{% if corporal_es.size > 0 %}{% assign all_pages = all_pages | concat: corporal_es %}{% endif %}
+{% if corporal_en.size > 0 %}{% assign all_pages = all_pages | concat: corporal_en %}{% endif %}
+{% if intimo_es.size > 0 %}{% assign all_pages = all_pages | concat: intimo_es %}{% endif %}
+{% if intimo_en.size > 0 %}{% assign all_pages = all_pages | concat: intimo_en %}{% endif %}
+{% if tecnologia_es.size > 0 %}{% assign all_pages = all_pages | concat: tecnologia_es %}{% endif %}
+{% if tecnologia_en.size > 0 %}{% assign all_pages = all_pages | concat: tecnologia_en %}{% endif %}
+
+{% assign has_matching_page = false %}
+{% for p in all_pages %}
+  {% if p.lang != current_lang %}
+    {% assign has_matching_page = true %}
+    <a href="{{ p.url | relative_url }}" class="language-switch">
+      {% if p.lang == 'en' %}
+        🇬🇧 English
+      {% else %}
+        🇪🇸 Español
+      {% endif %}
+    </a>
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+{% unless has_matching_page %}
+  {% assign alt_lang = current_lang | replace: 'es','en' | replace: 'en','es' %}
+  {% assign current_path = page.url | split: '/' %}
+  {% assign new_path = current_path | shift %}
+  {% if current_lang == 'es' %}
+    {% assign new_url = '/en/' | append: new_path | join: '/' %}
+  {% else %}
+    {% assign new_url = '/es/' | append: new_path | join: '/' %}
+  {% endif %}
+  <a href="{{ new_url }}" class="language-switch">
+    {% if alt_lang == 'en' %}
+      🇬🇧 English
+    {% else %}
+      🇪🇸 Español
+    {% endif %}
+  </a>
+{% endunless %}

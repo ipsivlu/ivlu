@@ -1,0 +1,55 @@
+{% assign current_lang = page.lang | default: site.default_lang | default: "es" %}
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-logo">
+      <img src="{{ 'img/logo-tatiana-leal-blanco.webp' | relative_url }}" alt="Dra. Tatiana Leal - Medicina Estética" loading="lazy" decoding="async" title="Logo Tatiana Leal" width="232" height="80">
+      <div class="social-icons">
+        <a href="{{site.author.facebook}}" aria-label="Facebook" rel="nofollow noopener noreferrer" target="_blank">
+          <svg class="social-icon" viewBox="0 0 24 24">
+            <path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/>
+          </svg>
+        </a>
+        <a href="{{site.author.instagram}}" aria-label="Instagram" rel="nofollow noopener noreferrer" target="_blank">
+          <svg class="social-icon" viewBox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+        </a>
+        <a href="{{site.author.youtube}}" aria-label="YouTube" rel="nofollow noopener noreferrer" target="_blank">
+          <svg class="social-icon" viewBox="0 0 24 24">
+            <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-section">
+      <h3>{% if current_lang == "es" %}Ubicación{% else %}Location{% endif %}</h3>
+      <p>Av. Suba # 114 - 69 Piso 6 Consultorio G14</p>
+      <p>Torre Magna Pi</p>
+      <p>Bogotá - Colombia</p>
+    </div>
+    <div class="footer-section">
+      <h3>{% if current_lang == "es" %}Contacto{% else %}Contact{% endif %}</h3>
+      <p>601 3472836</p>
+      <p>+57 322 2010384</p>
+      <p>asistentetatianaleal@gmail.com</p>
+    </div>
+    <div class="footer-section">
+      <h3>{% if current_lang == "es" %}Horarios de atención{% else %}Office Hours{% endif %}</h3>
+      <p>{% if current_lang == "es" %}Lunes-Jueves: 8 AM - 7 PM{% else %}Monday-Thursday: 8 AM - 7 PM{% endif %}</p>
+      <p>{% if current_lang == "es" %}Viernes: 7 AM - 8 PM{% else %}Friday: 7 AM - 8 PM{% endif %}</p>
+      <p>{% if current_lang == "es" %}Sábado: 8 AM - 2 PM{% else %}Saturday: 8 AM - 2 PM{% endif %}</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    {% if current_lang == "es" %}
+      <small><a href="{{ 'es/legal/' | relative_url }}">Términos y Condiciones</a></small>
+      <small>© <strong>dratatianaleal.com</strong> {{ "now" | date:"%Y" }} - Todos los derechos reservados</small>
+      <small class="small">- Página web desarrollada por <a href="https://juli.com.co">Juli.Com.Co</a></small>
+    {% else %}
+      <small><a href="{{ 'en/legal/' | relative_url }}">Terms and Conditions</a></small>
+      <small>© <strong>dratatianaleal.com</strong> {{ "now" | date:"%Y" }} - All rights reserved</small>
+      <small class="small">- Website developed by <a href="https://juli.com.co">Juli.Com.Co</a></small>
+    {% endif %}
+  </div>
+</footer>
