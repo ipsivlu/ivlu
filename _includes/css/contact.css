@@ -1,0 +1,20 @@
+.contact-details {
+  margin: 3rem 0;
+  font-weight: bold;
+}
+
+.contact-details {
+  li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 1em;
+
+  }
+}
+
+.icon {
+  margin-right: 12px;
+  width: 40px;
+  height: 40px;
+}

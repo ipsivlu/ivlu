@@ -1,165 +1,137 @@
 ---
-layout: categoria
+layout: default
 lang: en
-ref: tecnologias
-hero: "img/centro-medicina-estetica-gluteos.avif"
-hero1: "img/lipolisis-laser-en-bogota.avif"
-alt: "Advanced aesthetic medical technology at Dr. Tatiana Leal's clinic"
-title: "State-of-the-art Aesthetic Medical Technology in Bogotá | Dr. Tatiana Leal"
-h1: "Medical Aesthetic Technology: innovation and proven results"
-description: "Discover our cutting-edge technology in aesthetic medicine. Internationally certified equipment for safe and effective results. Non-invasive facial and body treatments."
-canonical_url: "https://dratatianaleal.com/en/technologies/"
+ref: tecnologias-avanzadas
+title: "Exclusive Advanced Technologies | IVLU Aesthetic Medicine & Hair Restoration Clinic"
+description: "Discover our cutting-edge aesthetic medicine technologies. Premium equipment and innovative treatments for superior results with maximum safety."
+canonical: "https://ivlu.com.co/en/technologies/"
+image: "/assets/images/tecnologias-exclusivas-ivlu.avif"
+datePublished: "2025-03-14"
+dateModified: "2025-03-14"
 ---
 
-<main>
-  <div class="intro flow padding">
-    <h2>The Science Behind Your Transformation</h2>
-    <p>"How can I be sure this technology really works?" is a common question among my patients. The answer lies in years of research, international certifications, and thousands of success stories backing each of our devices. Every technology in our center has been carefully selected for its proven results and safety profile.</p>
+<header class="heros hero_tecnologias">
+  <div>
+    <p>Premium Medical Equipment</p>
+    <h1>Cutting-Edge Exclusive Technologies</h1>
+    <p>Advanced technological platforms operated by certified specialists for superior outcomes</p>
   </div>
+</header>
 
-  <div class="gallery-container seccion">
-    {% for item in site.tecnologia_en %}
-    <a href="{{item.url | relative_url}}" class="gallery-item" title="{{item.title}}">
-      <img src="{{ item.hero | relative_url }}" alt="{{ item.alt }}" loading="lazy" width="452" height="604" decoding="async">
-      <h3 class="gallery-item-text">{{ item.h1 }}</h3>
-    </a>
-    {% endfor %}
+<section class="wrapper">
+  <div class="text_center">
+    <h2>Next-Generation Aesthetic Medical Equipment</h2>
+    <p>At IVLU, we continuously invest in the most advanced and exclusive technologies available. Our commitment to innovation allows us to provide highly effective treatments using internationally validated protocols, ensuring safety and outstanding results for our patients.</p>
   </div>
-</main>
-<section class="block_section">
-  <small class="block_section_header">Specialized center in advanced aesthetic medicine</small>
-  <h2 class="block_section_title">Cutting-edge Technology for Superior Results</h2>
-  <div class="block_section_content">
-    <p>In the world of aesthetic medicine, technology makes the difference between good results and extraordinary outcomes. In our center, each device represents the latest in medical innovation, backed by clinical studies and international certifications that guarantee its efficacy and safety.</p>
- 
-    <p>The key isn't just having the best technology, but knowing how to use it. Our medical team receives constant training to master each protocol and customize treatments according to each patient's unique needs.</p>
- 
-    <p>Our investment in cutting-edge technology reflects our commitment to excellence and superior results.</p>
-  </div>
- 
-  <div class="block_section_image_left padding flow">
-    <h3>Transformative Innovation</h3>
-    <p>Every technology in our center has been selected for its ability to deliver visible and lasting results. From precise body analysis to state-of-the-art non-invasive treatments, we have the equipment necessary to effectively address every aesthetic concern.</p>
-    <p>The synergy between different technologies allows us to design personalized protocols that maximize the results of each treatment.</p>
-  </div>
- 
-  <div class="block_section_knowledge flow">
-    <h2>Advanced Technology Benefits</h2>
-    <ul>
-      <li>Equipment certified internationally by FDA and INVIMA</li>
-      <li>More effective treatments with fewer sessions</li>
-      <li>Predictable and measurable results</li>
-      <li>Maximum safety and comfort during procedures</li>
-      <li>Personalized protocols based on scientific evidence</li>
-    </ul>
-  </div>
-  <img class="block_section_image_right" loading="eager" title="Advanced aesthetic medical technology" src="{{'img/tecnologia-medicina-estetica.avif' | relative_url}}" alt="State-of-the-art aesthetic medical equipment at Dr. Tatiana Leal's clinic" decoding="async">
- </section>
- 
- <section>
-  <div class="padding flow intro">
-    <h2>Technology That Makes the Difference</h2>
-    <p>Discover why the right technology, in expert hands, is essential to achieve the results you desire.</p>
-  </div>
- 
-  <div class="two_columns seccion">
-    <div class="flow padding">
-      <h3>Precision and Results</h3>
-      <p>Each device in our center incorporates the most advanced technology to ensure precise and effective treatments. From initial analysis to results monitoring, we use digital systems that allow us to objectively document and measure your progress.</p>
-      {% include boton.html %}
-    </div>
-    <div class="two_columns-image">
-      <img src="{{ 'img/tecnologia-resultados-medicina-estetica.avif' | relative_url }}" width="520" height="520" alt="State-of-the-art technology in aesthetic medicine" decoding="async">
-    </div>
-  </div>
-  <div class="two_columns two_columns_left">
-    <div class="flow padding">
-      <h3>Safety and Trust</h3>
-      <p>Safety is our priority. All our equipment holds multiple international certifications and undergoes rigorous quality controls. Our medical team receives ongoing training to ensure optimal use of each technology.</p>
-      {% include boton.html %}
-    </div>
-    <div class="two_columns-image">
-      <img src="{{ 'img/seguridad-tecnologia-estetica.avif' | relative_url }}" width="520" height="520" alt="Safety in aesthetic treatments" decoding="async">
-    </div>
-  </div>
- </section>
- 
- <section class="parallax padding parallax_tecnologia">
-  <div class="parallax_copy intro flow">
-    <h2>Our Patients' Experience</h2>
-    <p>"The technology at Dr. Tatiana's clinic is impressive. Not just because of how advanced the equipment is, but how the medical team uses it to personalize each treatment. The results exceeded my expectations, and the best part is that the whole process was comfortable and pain-free."</p>
-    <p><strong>- Caroline Martinez, 42 years old</strong></p>
-  </div>
- </section>
- 
- <section class="section padding">
-  <div class="accordion intro">
-    <h2>Frequently Asked Questions About Our Technology</h2>
+</section>
+
+<section class="wrapper">
+  <div class="flow">
+    <h2>Exclusive Technologies</h2>
+    <p>Premium technological platforms and exclusive treatments combining advanced science with medical precision for exceptional results.</p>
     
-    <input type="checkbox" id="acc1" class="accordion-toggle">
-    <label for="acc1" class="accordion-header">Why invest in treatments with advanced technology?</label>
-    <div class="accordion-content">
-      <p>Advanced technology allows for more precise, predictable, and lasting results. Our equipment combines different action mechanisms that work in synergy to enhance results, reducing the number of sessions needed and ensuring maximum safety during treatments.</p>
+    <div class="three_columns">
+      <div class="flow treatments">
+        <img src="{{'/assets/images/ultherapy-bogota.avif' | relative_url}}" width="334" height="334" alt="Ultherapy Treatment - IVLU Bogotá" loading="lazy" decoding="async">
+        <h4>Ultherapy®</h4>
+        <p>Focused ultrasound technology that stimulates natural collagen production for non-surgical facial lifting and rejuvenation.</p>
+       <a href="{{'/en/technologies/ultherapy-treatment/' | relative_url}}" title="Ultherapy®: Non-Surgical Face Lift" class="buttons btn-secondary">Learn More</a>
+      </div>
+      
+      <div class="flow treatments">
+        <img src="{{'/assets/images/colormax-manchas-bogota.avif' | relative_url}}" width="334" height="334" alt="Pigmentation Removal with Colormax - IVLU Bogotá" loading="lazy" decoding="async">
+        <h4>Colormax® - Pigmentation</h4>
+        <p>Advanced selective phototherapy system that eliminates age spots and freckles with precision, preserving surrounding healthy skin.</p>
+        <a href="{{'/en/technologies/colormax-spots-freckles/' | relative_url}}" title="Colormax®: Pigmentation Treatment" class="buttons btn-secondary">Learn More</a>
+      </div>
+      
+      <div class="flow treatments">
+        <img src="{{'/assets/images/colormax-tatuajes-bogota.avif' | relative_url}}" width="334" height="334" alt="Tattoo Removal with Colormax - IVLU Bogotá" loading="lazy" decoding="async">
+        <h4>Colormax® - Tattoo Removal</h4>
+        <p>Intense Pulsed Light (IPL) technology for safe and effective tattoo removal.</p>
+        <a href="{{'/en/technologies/colormax-tattoos-removal/' | relative_url}}" title="Tattoo Removal Solutions" class="buttons btn-secondary">Learn More</a>
+      </div>
     </div>
- 
-    <input type="checkbox" id="acc2" class="accordion-toggle">
-    <label for="acc2" class="accordion-header">What certifications does your equipment have?</label>
-    <div class="accordion-content">
-      <p>All our equipment holds international certifications, including FDA (United States) and INVIMA (Colombia). Additionally, they are manufactured by leading companies in medical-aesthetic technology that meet the highest quality and safety standards.</p>
+    
+    <div class="three_columns">
+      <div class="flow treatments">
+        <img src="{{'/assets/images/morpheus8-bogota.avif' | relative_url}}" width="334" height="334" alt="Morpheus8 Treatment - IVLU Bogotá" loading="lazy" decoding="async">
+        <h4>Morpheus8®</h4>
+        <p>Revolutionary fractional radiofrequency with microneedling technology for deep skin remodeling and contouring.</p>
+        <a href="{{'/en/technologies/morpheus-8/' | relative_url}}" title="Morpheus8®: Non-Surgical Rejuvenation" class="buttons btn-secondary">Learn More</a>
+      </div>
+      
+      <div class="flow treatments">
+        <img src="{{'/assets/images/lummeca-rosacea-bogota.avif' | relative_url}}" width="334" height="334" alt="Lummeca Rosacea Treatment - IVLU Bogotá" loading="lazy" decoding="async">
+        <h4>Lummeca® - Rosacea</h4>
+        <p>Innovative system specifically designed for rosacea and facial redness treatment using broad-spectrum light technology.</p>
+        <a href="{{'/en/technologies/lummeca-rosacea/' | relative_url}}" title="Broad Spectrum Light for Rosacea" class="buttons btn-secondary">Learn More</a>
+      </div>
+      
+      <div class="flow treatments">
+        <img src="{{'/assets/images/forma-reafirmacion-bogota.avif' | relative_url}}" width="334" height="334" alt="Forma Skin Tightening Treatment - IVLU Bogotá" loading="lazy" decoding="async">
+        <h4>Forma™</h4>
+        <p>Advanced radiofrequency technology for non-surgical skin tightening and body contouring with zero downtime.</p>
+        <a href="{{'/en/technologies/forma-treatment/' | relative_url}}" title="Forma™: Non-Surgical Skin Tightening" class="buttons btn-secondary">Learn More</a>
+      </div>
     </div>
- 
-    <input type="checkbox" id="acc3" class="accordion-toggle">
-    <label for="acc3" class="accordion-header">How do you choose which technology to use in my case?</label>
-    <div class="accordion-content">
-      <p>Technology selection is based on a comprehensive evaluation of your needs, goals, and particular characteristics. We perform a detailed diagnosis using advanced analysis equipment to determine the most effective protocol for your case. Sometimes, we combine different technologies to maximize results.</p>
-    </div>
- 
-    <input type="checkbox" id="acc4" class="accordion-toggle">
-    <label for="acc4" class="accordion-header">What maintenance do the results require?</label>
-    <div class="accordion-content">
-      <p>Results obtained with our technology are long-lasting, especially when post-treatment care recommendations are followed. We design personalized maintenance plans that may include spaced sessions to optimize and extend results over the long term.</p>
+    
+    <div class="three_columns">
+      <div class="flow treatments">
+        <img src="{{'/assets/images/hydrash-hidratacion-bogota.avif' | relative_url}}" width="334" height="334" alt="Hydrash Deep Hydration Treatment - IVLU Bogotá" loading="lazy" decoding="async">
+        <h4>Hydrash™</h4>
+        <p>Exclusive deep hydration system combining cleansing, exfoliation and personalized serum infusion in one treatment.</p>
+        <a href="{{'/en/technologies/hydrash-treatment/' | relative_url}}" title="Hydrash™: Radiant Skin in One Step" class="buttons btn-secondary">Learn More</a>
+      </div>
     </div>
   </div>
- </section>
- <section class="seccion">
-  <div class="flow intro padding">
-    <h2>Your Transformation Starts Here</h2>
-    <p>Cutting-edge Technology in 3 Steps</p>
-  </div>  
-    <div class="service-cards">
-      <div class="card">
-        <h3>1. Technological Diagnosis</h3>
-        <p>Comprehensive evaluation with advanced analysis equipment to identify the ideal treatment for you. We document your starting point to objectively measure your results.</p>
+</section>
+
+<section class="highlight-quote">
+  <blockquote class="wrapper services_cta">
+    <p><strong>Internationally Certified Premium Technology</strong> operated exclusively by specialist physicians. At IVLU, we combine cutting-edge equipment with medical expertise to ensure superior results with maximum safety.</p>
+    <a href="/en/contact/" class="buttons btn-primary">Discover Your Ideal Treatment</a>
+  </blockquote>
+</section>
+
+<section class="wrapper">
+  <div>
+    <h2>Why Choose Our Exclusive Technologies?</h2>
+    <div class="three_columns beneficios">
+      <div class="flow">
+        <span class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="#fde9c4" viewBox="0 0 48 48"><g data-name="Layer 2"><g fill="none" data-name="invisible box"><path d="M0 0h48v48H0z"/><path d="M0 0h48v48H0z"/></g><g data-name="icons Q2"><path d="M20 39H6V9h34a2 2 0 0 0 0-4H4a2 2 0 0 0-2 2v34a2 2 0 0 0 2 2h16a2 2 0 0 0 0-4Z"/><path d="M46 24a13 13 0 0 0-13-13 12.8 12.8 0 0 0-8.3 3H12a2 2 0 0 0 0 4h9.5a11.1 11.1 0 0 0-1.3 4H12a2 2 0 0 0 0 4h8.2a11.1 11.1 0 0 0 1.3 4H12a2 2 0 0 0 0 4h12.7l1.3.9v9.7a2.3 2.3 0 0 0 2 2.4 1.8 1.8 0 0 0 1.3-.6L33 43l3.7 3.4a1.8 1.8 0 0 0 1.3.6 2.3 2.3 0 0 0 2-2.4V35a13.2 13.2 0 0 0 6-11Zm-10 8.5v7.8l-3-2.8-3 2.8v-7.8a9.1 9.1 0 0 1-6-8.5 9 9 0 0 1 18 0 9.1 9.1 0 0 1-6 8.5Z"/><circle cx="33" cy="24" r="5"/></g></g></svg>
+        </span>
+        <h4>International Certifications</h4>
+        <p>All our technologies carry FDA, CE, and/or INVIMA certifications ensuring safety and effectiveness.</p>
       </div>
- 
-      <div class="card">
-        <h3>2. Personalized Protocol</h3>
-        <p>We design a plan that combines the most effective technologies for your goals. Each treatment is adapted to your specific needs.</p>
+      
+      <div class="flow">
+        <span class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" id="Icons" width="80" height="80" fill="#fde9c4" stroke="#EFBF04" version="1.1" viewBox="0 0 32 32"><g id="SVGRepo_iconCarrier"><style>.st0{fill:none;stroke:#ccaf66;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10}</style><path d="m26 12.8-1.8-7.3c-.1-.3-.3-.5-.5-.7-4.8-2.3-10.4-2.3-15.3 0-.3.1-.5.3-.6.6L6 12.8c0 .2 0 .5.2.7.1.2.4.4.6.4 3.1.7 6.1 1 9.2 1s6.2-.3 9.2-1c.3-.1.5-.2.6-.4.2-.2.2-.5.2-.7zM18 10h-1v1c0 .6-.4 1-1 1s-1-.4-1-1v-1h-1c-.6 0-1-.4-1-1s.4-1 1-1h1V7c0-.6.4-1 1-1s1 .4 1 1v1h1c.6 0 1 .4 1 1s-.4 1-1 1zM26.3 15.7c-.2.1-.4.2-.6.2-3.2.7-6.5 1.1-9.7 1.1s-6.5-.4-9.7-1.1c-.2 0-.4-.1-.6-.2-.8.9-1 2.5-.4 4.2.4 1.3 1.2 2.4 2.2 2.9.2.1.5.2.7.2 1.2 3.6 4.2 6 7.8 6s6.6-2.4 7.8-6c.3 0 .5-.1.8-.2.9-.4 1.8-1.5 2.2-2.9.4-1.7.2-3.3-.5-4.2z"/></g></svg>
+        </span>
+        <h4>Physician-Operated Treatments</h4>
+        <p>All procedures are performed exclusively by certified medical specialists.</p>
       </div>
- 
-      <div class="card">
-        <h3>3. Digital Monitoring</h3>
-        <p>We track your progress with advanced measurement technology. We document each step of your transformation to ensure optimal results.</p>
+      
+      <div class="flow">
+        <span class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="none" viewBox="0 0 24 24"><path fill="#fff" d="M0 0h24v24H0z"/><path fill="#fde9c4" fill-rule="evenodd" d="M5 9.5a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM4.641 15.7c1.233-.536 2.85-.7 4.859-.7 2.011 0 3.63.165 4.862.7 1.343.585 2.16 1.58 2.587 2.984A1.02 1.02 0 0 1 15.974 20H3.028a1.02 1.02 0 0 1-.976-1.319c.428-1.404 1.245-2.398 2.59-2.982ZM21.707 2.293a1 1 0 0 1 0 1.414l-3.5 3.5a1.707 1.707 0 0 1-2.414 0l-1.5-1.5a1 1 0 0 1 1.414-1.414L17 5.586l3.293-3.293a1 1 0 0 1 1.414 0Z" clip-rule="evenodd"/></svg>
+        </span>
+        <h4>Enhanced Results</h4>
+        <p>Custom protocols combining multiple technologies to maximize results for your specific needs.</p>
       </div>
     </div>
- 
-    <div class="intro flow padding">
-      <p>Discover the power of advanced medical-aesthetic technology</p>
-      <a href="#" class="boton boton_principal" id="lead_whatsapp" rel="nofollow noopener noreferrer" target="_blank">
-        Schedule your assessment
-      </a>
-      <small>* Last 3 spots available this week for complimentary evaluation</small>
-    </div>
- </section>
- 
- {% if page.cases %}
- {% include before-after.html %}
- {% endif %}
- 
- <aside class="padding" id="consulta">
-  <div class="intro flow">
-    <h2>Safe and Effective Transformation</h2>
-    <p>The most advanced technology in aesthetic medicine is within your reach. Schedule your assessment today and discover how we can help you achieve your goals safely and effectively.</p>
-    {% include boton.html %}
   </div>
- </aside>
+</section>
+
+<section class="highlight-quote">
+  <div class="two_columns wrapper">
+    <div>
+      <p>Our clinic features the most advanced technologies in modern aesthetic medicine. The combination of premium equipment and medical expertise ensures safe treatments with exceptional outcomes.</p>
+    </div>
+    <div class="category_button center">
+      <a href="/en/contact/" class="buttons btn-primary">Schedule Your Consultation</a>
+    </div>
+  </div>
+</section>

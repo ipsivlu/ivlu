@@ -1,0 +1,126 @@
+/* HERO HOME */
+header.two_columns {
+  padding-top: 12em;
+
+  .flow{
+    display: grid;
+    align-content: center;
+  }
+}
+
+header.hero_home {
+  background-image: url(../images/banner-bg.avif);
+  background-size: cover;
+  background-position: center;
+
+  div.wrapper {
+    padding: 5em 0 0;
+  }
+
+  img {
+    box-shadow: none;
+  }
+}
+
+.banner-content {
+  display: grid;
+  align-content: center;
+  text-shadow: var(--shadow);
+  flex: 1;
+}
+
+.banner-content h1 {
+  font-weight: 400;
+  margin-top: 0.7em;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.banner-image {
+  display: grid;
+  place-items: center;
+}
+
+.banner-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* HERO NOSOTROS */
+.heros {
+  padding: 10em 0;
+
+  div {
+    display: grid;
+    place-items: center;
+    gap: 2em;
+    text-align: center;
+
+    h1 {
+      max-width: 20ch;
+    }
+  }
+}
+
+.hero_nosotros {
+  background-image: url("../images/equipo-de-doctoras-de-ivlu.avif");
+  background-size: cover;
+  background-position: center;
+
+  p,
+  h1 {
+    color: var(--text-light);
+  }
+}
+
+.hero_blog {
+  background-image: url("../images/blog-ivlu.avif");
+  background-size: cover;
+  background-position: center;
+
+  p,
+  h1 {
+    color: var(--text-dark);
+  }
+}
+
+.hero_tecnologias {
+  background-image: url("../images/teconologias-ivlu.avif");
+  background-size: cover;
+  background-position: center;
+
+  p,
+  h1 {
+    color: var(--text-light);
+  }
+}
+
+.hero_servicios {
+  background-image: url("../images/servicios-ivlu.avif");
+  background-size: cover;
+  background-position: center;
+
+  p,
+  h1 {
+    color: var(--text-light);
+  }
+}
+
+/* posts hero */
+
+.posts-hero {
+  display: grid;
+  place-content: center;
+  align-items: center;
+  text-align: center;
+
+  h1 {
+    margin-inline: auto;
+    padding: 2rem 0 2rem;
+  }
+
+  p {
+    margin-inline: auto;
+    padding: 0 2rem;
+  }
+}

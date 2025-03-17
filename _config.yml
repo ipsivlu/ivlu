@@ -1,71 +1,64 @@
 # Configuración básica del sitio
 baseurl: ''
 url: 'https://revisemos.com'
-name: Tatiana Leal
-email: asistentetatianaleal@gmail.com
-maps: https://maps.app.goo.gl/bvbNFb82J7X3s1q16
-direccion: "Torre Magna PI, Av Suba #114 - 59 Piso 6, Cons G14, Bogotá"
-telefono: 3222010384
+name: Ivonne Vanessa Camacho Viancha
+title: "Centro medico IVLU en Bogotá | Dra.Luisa & Dra.Ivonne"
+description: "Rejuvenecimiento facial y restauración capilar en Bogotá. Transforma tu imagen con tecnología de vanguardia y médicos especialistas certificados."
+email: Ipsivlumedicinaestetica@gmail.com
+maps: https://g.co/kgs/Eg89pm4
+direccion: "Calle 127 A #7-19 Consultorio 513, Usaquén, Bogotá"
+telefono: 322 8351465
+instagram: https://www.instagram.com/ivluoficial/
+facebook: https://www.facebook.com/ivluoficial/
+tiktok: https://www.tiktok.com/@ivluoficial
 
 # Información del autor y social
 author:
-  name: Tatiana Leal
-  email: asistentetatianaleal@gmail.com
-  instagram: https://www.instagram.com/dratatianaleal/
-  facebook: https://www.facebook.com/Dra.TatianaLealSandoval
-  youtube: https://www.youtube.com/channel/UCxF-X7in4xUFxYYwCMyC5OQ
+  name: Ivonne Vanessa Camacho Viancha
+  email: ipsivlumedicinaestetica@gmail.com
+  instagram: https://www.instagram.com
+  facebook: https://www.facebook.com
+  youtube: https://www.youtube.com/
   job_title: "Especialista en medicina estética y láser"
-  bio: "La Dra. Tatiana Leal es una destacada especialista en Medicina Estética..."
+  bio: "La Dra. es una destacada especialista en Medicina Estética..."
 
 # SEO Configuration
-title: Doctora Tatiana Leal
-tagline: "Especialista en medicina estética y láser"
-description: "Clínica de Medicina Estética especializada en rejuvenecimiento facial y corporal en Bogotá"
-logo: /img/logo-tatiana-leal.webp
+tagline: "Especialista en medicina estética: Enfoque médico, resultados naturales"
+logo: /assets/images/logo.png
 social:
-  name: Dra. Tatiana Leal
+  name: Dra.Luisa & Dra.Ivonne | Expertas en rejuvenecimiento
   links:
-    - https://www.instagram.com/dratatianaleal/
-    - https://www.facebook.com/Dra.TatianaLealSandoval
-    - https://www.youtube.com/channel/UCxF-X7in4xUFxYYwCMyC5OQ
+    - https://www.instagram.com/
+    - https://www.facebook.com/
+    - https://www.youtube.com/
 
 # Publisher
 publisher:
-  name: Tatiana Leal
-  logo: /img/logo-tatiana-leal.webp
+  name: Ivonne Vanessa Camacho Viancha
+  logo: /assets/images/logo.png
 
 markdown: kramdown
 
 # Configuración de URLs y colecciones
 permalink: /:categories/:title/
 
+default_lang: "es"
+
 collections:
   redirects:
       output: true
-  tratamientos-faciales_es:
+  servicios_es:
     output: true
-    permalink: /es/tratamientos-faciales/:title/
-  tratamientos-faciales_en:
+    permalink: /es/servicios/:title/
+  servicios_en:
     output: true
-    permalink: /en/facial-treatments/:title/
-  tratamientos-corporales_es:
-    output: true
-    permalink: /es/tratamientos-corporales/:title/
-  tratamientos-corporales_en:
-    output: true
-    permalink: /en/body-treatments/:title/
-  tratamientos-intimos_es:
-    output: true
-    permalink: /es/tratamientos-intimos/:title/
-  tratamientos-intimos_en:
-    output: true
-    permalink: /en/intimate-treatments/:title/
+    permalink: /en/services/:title/
   tecnologia_es:
     output: true
-    permalink: /es/tecnologia/:title/
+    permalink: /es/tecnologias/:title/
   tecnologia_en:
     output: true
-    permalink: /en/technology/:title/
+    permalink: /en/technologies/:title/
 
 # Valores por defecto
 defaults:
@@ -89,32 +82,12 @@ defaults:
       permalink: /en/blog/:title/
   - scope:
       path: ""
-      type: "tratamientos-faciales_es"
+      type: "servicios_es"
     values:
       layout: "servicios"
   - scope:
       path: ""
-      type: "tratamientos-faciales_en"
-    values:
-      layout: "servicios"
-  - scope:
-      path: ""
-      type: "tratamientos-corporales_es"
-    values:
-      layout: "servicios"
-  - scope:
-      path: ""
-      type: "tratamientos-corporales_en"
-    values:
-      layout: "servicios"
-  - scope:
-      path: ""
-      type: "tratamientos-intimos_es"
-    values:
-      layout: "servicios"
-  - scope:
-      path: ""
-      type: "tratamientos-intimos_en"
+      type: "servicios_en"
     values:
       layout: "servicios"
   - scope:
@@ -140,18 +113,3 @@ compress_html:
   blanklines: false
   profile: false
   startings: []
-
-include:
-  - videos
-
-plugins:
-  - jekyll-paginate-v2
-
-pagination:
-  enabled: true
-  per_page: 9
-  permalink: '/page/:num/'
-  title: ':title - página :num'
-  limit: 0
-  sort_field: 'date'
-  sort_reverse: true

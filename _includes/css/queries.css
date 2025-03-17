@@ -1,88 +1,17 @@
-@media screen and (width <= 1200px) {
-  .block_section {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto auto;
-    grid-template-areas:
-      "header image-right"
-      "title image-right"
-      "content image-right"
-      "image-left knowledge";
-  }
+@media (max-width: 480px) {
+.bg-section > div {
+  width: 100%;
 }
-
-
-@media (max-width: 992px) {
-  .padding{
-    padding: 6em 20px 4em;
-  }
-  
-  .block_section_header {
-    padding: 8em 20px 0;
-  }
-  
-  .block_section_title {
-    padding: 1.5rem 20px;
-  }
-  
-  .block_section_content {
-    padding: 2rem 20px 6em;
-   }
-
-}
-@media (max-width: 800px) {
-  
-  .block_section {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto auto auto;
-    grid-template-areas:
-      "header image-right"
-      "title image-right"
-      "content image-right"
-      "knowledge knowledge"
-      "image-left image-left";
-  }
 }
 
 @media (max-width: 768px) {
-  .full-width-header {
-    flex-direction: column;
+
+  .post-content{
+    display: grid;
+    place-content: center;
+    place-items: center;
   }
-  
-  .image-container {
-    min-height: 50dvh;
-  }
-
-
-}
-
-@media screen and (width <= 540px) {
-
-  .two_columns_left {
-    flex-direction: row;
-  }
-
-   
-  .block_section {
-    grid-template-columns: auto;
-    grid-template-rows: auto auto auto auto auto;
-    grid-template-areas:
-      "header"
-      "title"
-      "image-right"
-      "content"
-      "knowledge"
-      "image-left";
-  }
-  
-  .block_section_image_left{
-    background-image: url('{{"img/tatiana-leal-medicina-laser-480.avif" | relative_url}}');
-  }
-
-    .block_section_image_right{
-    background-image: url('{{"img/tatiana-leal-doctora-480.avif" | relative_url}}');
-  }
-
-  .cta h2{
-    display: none;
+  .testimonial-slide {
+    padding: 1.5rem;
   }
 }

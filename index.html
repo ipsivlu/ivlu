@@ -1,66 +1,107 @@
+---
+layout: null
+---
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
     <meta charset="utf-8">
-    <title>Dra. Tatiana Leal - Medicina Estética</title>
+    <title>{{ site.title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Meta tags para SEO -->
-    <meta name="description" content="Especialista en medicina estética y láser en Bogotá. Tratamientos faciales, corporales e íntimos.">
-    
-    <!-- Hreflang tags para indicar versiones en diferentes idiomas -->
-    <link rel="alternate" hreflang="es" href="https://dratatianaleal.com/es/" />
-    <link rel="alternate" hreflang="en" href="https://dratatianaleal.com/en/" />
-    <link rel="canonical" href="https://dratatianaleal.com/es/" />
-    
-    <!-- Redirección basada en el idioma del navegador -->
-    <script>
-        // Solo ejecutar si JavaScript está habilitado
-        var userLang = navigator.language || navigator.userLanguage;
-        userLang = userLang.split('-')[0];
-        if (userLang === "en") {
-            window.location.href = "/en/";
-        } else {
-            window.location.href = "/es/";
+    <meta name="description" content="Especialistas en medicina estética y capilar en Bogotá. Tratamientos faciales, corporales y capilares.">
+    <!-- Enlaces hreflang para SEO -->
+    <link rel="alternate" hreflang="es" href="{{ site.url }}/es/" />
+    <link rel="alternate" hreflang="en" href="{{ site.url }}/en/" />
+    <link rel="canonical" href="{{ site.url }}/es/" />
+    <!-- Favicon básico para la página de redirección -->
+    <link rel="shortcut icon" href="{{ site.url }}/assets/images/favicon/favicon.ico" type="image/x-icon">
+    <!-- Estilos inline para evitar parpadeo -->
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            visibility: hidden; /* Ocultar todo el contenido inicialmente */
         }
-    </script>
+        .redirect-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            padding: 0 20px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .language-selector {
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+        }
+        .language-selector a {
+            display: inline-block;
+            padding: 10px 30px;
+            background-color: #1a1a1a;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+        .language-selector a:hover {
+            background-color: #333;
+        }
+        /* Este noscript solo se mostrará si JS está deshabilitado */
+        noscript .redirect-container {
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+    </style>
     
-    <!-- Meta refresh como fallback si JavaScript está deshabilitado -->
-    <meta http-equiv="refresh" content="0;url=/es/">
-
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-M2G8W6JV');</script>
-    <!-- End Google Tag Manager -->
+    <!-- Mecanismo de redirección optimizado -->
+    <script>
+        function redirectToLanguage() {
+            var userLang = navigator.language || navigator.userLanguage;
+            userLang = userLang.split('-')[0].toLowerCase();
+            if (userLang === "en") {
+                window.location.replace("{{ site.url }}/en/");
+            } else {
+                window.location.replace("{{ site.url }}/es/");
+            }
+        }
+        
+        redirectToLanguage();
+        setTimeout(function() {
+            document.getElementById('redirect-container').style.opacity = "1";
+            document.body.style.visibility = "visible";
+        }, 300);
+    </script>
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M2G8W6JV"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <!-- Contenido visible para usuarios y crawlers -->
-    <h1>Dra. Tatiana Leal - Medicina Estética</h1>
+    <!-- Solo se muestra si JavaScript está deshabilitado o la redirección tarda -->
+    <noscript>
+        <style>
+            body { visibility: visible; }
+            .redirect-container { opacity: 1; }
+        </style>
+    </noscript>
     
-    <!-- Enlaces visibles para crawlers y usuarios sin JavaScript -->
-    <ul>
-        <li><a href="/es/">Versión en Español</a></li>
-        <li><a href="/en/">English Version</a></li>
-    </ul>
-    
-    <!-- Mapa del sitio para crawlers -->
-    <div style="display:none">
-        <h2>Sitemap</h2>
-        <ul>
-            <li><a href="/es/tratamientos-faciales/">Tratamientos Faciales</a></li>
-            <li><a href="/es/tratamientos-corporales/">Tratamientos Corporales</a></li>
-            <li><a href="/es/tratamientos-intimos/">Tratamientos Íntimos</a></li>
-            <li><a href="/es/tecnologia/">Tecnología</a></li>
-            <li><a href="/es/blog/">Blog</a></li>
-            <li><a href="/es/contacto/">Contacto</a></li>
-        </ul>
+    <div id="redirect-container" class="redirect-container">
+        <img src="{{ site.url }}/assets/images/logo.avif" alt="Logo IVLU" width="200" height="48">
+        <h1>{{ site.title }}</h1>
+        <p>Seleccione su idioma preferido / Select your preferred language</p>
+        
+        <div class="language-selector">
+            <a href="{{ site.url }}/es/">Español</a>
+            <a href="{{ site.url }}/en/">English</a>
+        </div>
     </div>
+    
+    <!-- Meta refresh muy lento como último recurso -->
+    <noscript>
+        <meta http-equiv="refresh" content="2;url={{ site.url }}/es/">
+    </noscript>
 </body>
 </html>

@@ -1,202 +1,197 @@
-/* BREADCRUMBS */
-
-#breadcrumbs {
-  font-family: var(--fuenteTitulos);  
-  padding: 20px;
-  max-width: -webkit-max-content;
-  max-width: -moz-max-content;
-  max-width: max-content;
-}
-
-#breadcrumbs .small{
-  display: flex;
-  flex-wrap: wrap;
-
-  li{
-    margin: 0;
-    list-style: none;
-    font-size: 16px;
-    
-    &::after{
-      content: '/';
-    }
-    
-    a{
-      color: var(--accion);
-      font-size: 16px;
-    }
-  }
-}
-
-.articulo{
+/* Estilos para posts */
+.post-content {
+  line-height: 1.6;
   position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1em;
-  }
-
-.articulo article{
-  position: relative;
-  max-width: 100%;
-  flex: 1 0 min(100%, 580px);
 }
 
-.articulo article h2,
-.articulo article h3{
-  margin: 2rem 0;
-}
-
-.articulo article li{
-  margin-bottom: 1.2em;
-}
-
-.articulo img{
-  border-radius: var(--radius);
-  height: auto;
-}
-
-.articulo article a:not(.boton){
-  color: var(--secundario);
-  -webkit-text-decoration: underline 3px;
-          text-decoration: underline 3px;
-  transition: ease-in-out 0.5s;
-  font-weight: 700;
-}
-
-.articulo aside{
-  position: -webkit-sticky;
-  position: sticky;
-  top: 80px;
-  flex: 1;
-  padding: 2em 16px;
-  text-align: center;
-  border: 1.6px solid var(--acento);
-  border-radius: var(--radius);
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
-  display: grid;
-  gap: 32px;
-  margin-bottom: 2em;
-  background-color: var(--gris1);
-  box-shadow: var(--shadow);
-}
-
-#markdown-toc{
-  padding: 4em 0;
-  background-color: var(--gris1);
-  box-shadow: 0 0 0 100vmax var(--gris1);
-  -webkit-clip-path: inset(0 -100vmax);
-          clip-path: inset(0 -100vmax);
-
-  li a{
-    color: var(--principal);
-    font-size: 16px;
-  } 
-}
-
-.eeat-author {
-  display: flex;
-  gap: 2rem;
-  padding: 2rem;
-  border-radius: 0.5rem;
-  background-color: #f8f9fa;
-  margin: 2rem 0;
-}
-
-.eeat-author img {
-  border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.eeat-author-info {
-  flex: 1;
-}
-
-.eeat-author-info h3 {
-  margin: 0 0 0.5rem 0;
-  color: #2d3748;
-}
-
-.eeat-credentials {
-  font-style: italic;
-  color: #4a5568;
-  margin-bottom: 1rem;
-}
-
-.eeat-social {
-  display: flex;
-  gap: 1rem;
-  margin: 1rem 0;
-}
-
-.social-link {
-  color: #4a5568;
-  transition: color 0.2s;
-}
-
-.social-link:hover {
-  color: #2b6cb0;
-}
-
-.eeat-profile-link {
-  display: inline-block;
-  color: #2b6cb0;
-  text-decoration: none;
-  font-weight: 500;
-  margin-top: 0.5rem;
-}
-
-.eeat-profile-link:hover {
-  text-decoration: underline;
-}
-
-.sr-only {
+.post-content img {
   position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
+  right: 0;
+  width: min(100%, 450px);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-@media (max-width: 640px) {
-  .eeat-author {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 1rem;
-  }
+.post-content h3,
+.post-content h2,
+.post-content h1,
+.post-content p,
+.post-content li {
+  width: 50%;
+  max-width: 600px;
+}
+
+.post-content h3{
+  color: var(--primary);
   
-  .eeat-social {
-    justify-content: center;
+}
+
+.post-content li::marker {
+  color: var(--primary);
   }
+
+.author-name {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
 }
 
-.cta-blog{
-  background-color: var(--acento);
-  border-radius: var(--radius);
+.author-location {
+  color: #666;
+  font-size: 0.9rem;
 }
 
-.pagination {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  align-items: center;
+/* Estilos para la sección de estadísticas */
+.stats-section {
+  padding: 3rem 0 0;
+  margin: 4rem 0 0;
+}
+
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
   margin-top: 2rem;
 }
 
-.pagination .boton {
-  padding: 0.5rem 1rem;
-  text-decoration: none;
+.stat-box {
+  text-align: center;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
 }
 
-.pagination .current {
-  background-color: #666;
-  color: white;
+.stat-box:hover {
+  transform: translateY(-5px);
+}
+
+.stat-number {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #d7bc73;
+  margin-bottom: 0.5rem;
+}
+
+.stat-text {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* Estilos para la sección de FAQ */
+.faq-section {
+  margin: 4rem 0;
+}
+
+.faq-container {
+  margin-top: 2rem;
+}
+
+.faq-item {
+  margin-bottom: 1rem;
+  border: 1px solid #e5e5e5;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.faq-item summary {
+  padding: 1.5rem;
+  background-color: var(--neutral-gray-dark);
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: '+';
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: #d7bc73;
+  transition: transform 0.3s ease;
+}
+
+.faq-item[open] summary::after {
+  content: '-';
+}
+
+.faq-answer {
+  padding: 1.5rem 1.5rem;
+}
+
+.faq-answer p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Estilos para la sección de blog */
+.blog-section {
+  margin: 4rem 0;
+  
+}
+
+.blog-posts-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.blog-post {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.blog-post:hover {
+  transform: translateY(-5px);
+}
+
+.blog-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.blog-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.blog-post:hover .blog-image img {
+  transform: scale(1.05);
+}
+
+.blog-content {
+  padding: 1.5rem;
+}
+
+.blog-content h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+.blog-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #d7bc73;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.blog-link:hover {
+  color: #b09a5b;
 }

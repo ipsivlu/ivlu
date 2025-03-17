@@ -3,18 +3,13 @@ layout: null
 permalink: /sitemap-treatments.xml
 sitemap: false
 ---
-{%- if true -%}
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 {%- assign treatments = "" | split: "" -%}
-{%- assign treatments = treatments | concat: site.tratamientos-faciales_es -%}
-{%- assign treatments = treatments | concat: site.tratamientos-faciales_en -%}
-{%- assign treatments = treatments | concat: site.tratamientos-corporales_es -%}
-{%- assign treatments = treatments | concat: site.tratamientos-corporales_en -%}
-{%- assign treatments = treatments | concat: site.tratamientos-intimos_es -%}
-{%- assign treatments = treatments | concat: site.tratamientos-intimos_en -%}
+{%- assign treatments = treatments | concat: site.servicios_es -%}
+{%- assign treatments = treatments | concat: site.servicios_en -%}
 {%- assign treatments = treatments | concat: site.tecnologia_es -%}
 {%- assign treatments = treatments | concat: site.tecnologia_en -%}
 
@@ -36,4 +31,3 @@ sitemap: false
   </url>
 {%- endfor -%}
 </urlset>
-{%- endif -%}

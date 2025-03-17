@@ -1,0 +1,27 @@
+cards_1:
+  title: "Mejora tu apariencia hoy con IVLU"
+  cards:
+    - title: "1. Consulta VIP personalizada"
+      image: ""
+      list:
+        - "Análisis facial/capilar computarizado"
+        - "Evaluación de objetivos"
+        - "Diseño de tu plan personalizado"
+    - title: "2. Tu tratamiento premium"
+      image: ""  # Sin imagen, se mostrará solo el contenido textual.
+      list:
+        - "Protocolos exclusivos IVLU"
+        - "Tecnología de última generación"
+        - "Atención personalizada"
+    - title: "3. Resultados Wow"
+      image: ""
+      list:
+        - "Seguimiento detallado"
+        - "Protocolos de mantenimiento"
+        - "Resultados duraderos"
+    - title: "4. Atención diferencial"
+      image: ""
+      list:
+        - "Tecnología de vanguardia exclusiva"
+        - "Protocolos personalizados"
+        - "Resultados naturales y duraderos"

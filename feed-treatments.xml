@@ -13,7 +13,7 @@ sitemap: false
     <link>{{ site.url }}</link>
     <atom:link href="{{ site.url }}/feed-treatments.xml" rel="self" type="application/rss+xml" />
     
-    {% assign treatments = site.tratamientos-faciales_es | concat: site.tratamientos-corporales_es | concat: site.tratamientos-intimos_es %}
+    {% assign treatments = site.servicios_es %}
     {% for treatment in treatments limit:50 %}
     <item>
       <title>{{ treatment.title | xml_escape }}</title>

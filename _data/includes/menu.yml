@@ -1,0 +1,14 @@
+menu:
+  logo: "/assets/images/logo.avif"
+  alt: "logo de la empresa"
+  items:
+    - name: Servicios
+      url: "#"
+    - name: Nosotros
+      url: "#"
+    - name: Contacto
+      url: "#"
+    - name: Blog
+      url: "#"
+    - name: Informacion
+      url: "#"

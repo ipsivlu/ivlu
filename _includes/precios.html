@@ -1,0 +1,23 @@
+<main class="especialidades-cards wrapper">
+  <div class="especialidad-card">
+    <h3>{% if current_lang == 'en' %}Price{% else %}Valor{% endif %}</h3>
+    <div class="card-link">
+      <h4>
+        {{page.precios}}
+      </h4>
+      <a href="{{'/es/servicios/'|relative_url}}" title="Servicios de tratamientos estéticos de IVLU"
+        class="circle-arrow">→</a>
+    </div>
+  </div>
+
+  <div class="especialidad-card">
+    <h3>{% if current_lang == 'en' %}Application time{% else %}Tiempo de aplicación{% endif %}</h3>
+    <div class="card-link">
+      <h4>
+        {{page.tiempo_aplicacion}}
+      </h4>
+      <a href="{{'/es/servicios/'|relative_url}}" title="Servicios de tratamientos estéticos de IVLU"
+        class="circle-arrow">→</a>
+    </div>
+  </div>
+</main>

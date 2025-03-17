@@ -1,75 +1,126 @@
 ---
 layout: default
 ---
-<div class="content flow">
-  {% include breadcrumbs.html %}
-  {% assign words = content | number_of_words %}
-  {% if words > 180 %}
-    <span>{{ words | minus: 180 | plus: 150 | divided_by: 150 | append: ' minutos para leerlo 🤓' }}</span>
-  {% endif %}
-</div>
 
-<main class="articulo wrapper" role="main">
-  <article class="flow">
-    {{ content }}
+<header class="posts-hero wrapper flow">
+  <h1>{{ page.h1 }}</h1>
+  
+  <img src="{{ page.hero | relative_url }}" 
+       alt="{{page.alt}}" 
+       width="1320" 
+       height="560" 
+       loading="lazy" 
+       decoding="async">
+  
+  <div>
+    <p>{{ page.excerpt }}</p>
+  </div>
+</header>
 
-    {% include eeat.html %}
-    
-    <div class="share wrapper">
-      {% include share.html %}
-    </div>
+<article class="post-content wrapper flow">
+  {{ content }}
+</article>
 
-    {% if page.referencias %}
-    <div class="referencias" id="fuentes">
-      <h4>{% if page.lang == "es" %}Créditos de las gráficas, referencias y fuentes{% else %}Graphics credits, references and sources{% endif %}</h4>
-      <ul>
-        {% for link_hash in page.referencias %}
-          {% for link in link_hash %}
-          <li>
-            <a href="{{ link[1] }}" rel="nofollow noopener noreferrer" target="_blank" title="{{ link[0] }}">{{ link[0] }}</a>
-          </li>
-          {% endfor %}
-        {% endfor %}
-      </ul>
-    </div>
-    {% endif %}
-  </article>
-
-  <aside>
-    <h4>{% if page.lang == "es" %}¿Necesitas hacer una consulta?{% else %}Do you have a question?{% endif %}</h4>
-    {% include boton.html %}
+<div class="wrapper">
+  {% assign related_posts = site.posts | where: "lang", page.lang | where_exp: "post", "post.url != page.url" %}
+  
+  {% comment %}Encuentra posts con categorías o tags similares{% endcomment %}
+  {% assign matching_posts = '' | split: '' %}
+  
+  {% for post in related_posts %}
+    {% assign has_common_category = false %}
+    {% assign has_common_tag = false %}
     
-    <hr>
-    
-    <h4>{% if page.lang == "es" %}Info relacionada{% else %}Related info{% endif %}</h4>
-    
-    {% assign posts_in_lang = site.posts | where: "lang", page.lang %}
-    {% assign related_posts = "" | split: "" %}
-    
-    {% for post in posts_in_lang %}
-      {% if post.url != page.url %}
-        {% assign common_tags = post.tags | intersection: page.tags %}
-        {% if common_tags.size > 0 %}
-          {% assign related_posts = related_posts | push: post %}
-        {% endif %}
+    {% for category in page.categories %}
+      {% if post.categories contains category %}
+        {% assign has_common_category = true %}
+        {% break %}
       {% endif %}
     {% endfor %}
     
-    {% for post in related_posts limit:3 %}
-      <div class="relacionados">
-        <a href="/{{ post.lang }}/blog/{{ post.slug }}" title="{{ post.title }}">
-          {% if post.hero %}
-            <img src="{{ post.hero | relative_url }}" 
-                 alt="{{ post.altheader | default: post.title }}" 
-                 title="{{ post.imgtitle-header | default: post.title }}" 
-                 loading="lazy" width="40" height="40"
-                 decoding="async" >
-          {% endif %}
-          <h5>{{ post.title }}</h5>
-        </a>
-      </div>
+    {% for tag in page.tags %}
+      {% if post.tags contains tag %}
+        {% assign has_common_tag = true %}
+        {% break %}
+      {% endif %}
     {% endfor %}
-  </aside>
-</main>
-
-<a href="#" class="scroll-top">{% include up.html %}</a>
+    
+    {% if has_common_category or has_common_tag %}
+      {% assign matching_posts = matching_posts | push: post %}
+    {% endif %}
+  {% endfor %}
+  
+  {% if matching_posts.size > 0 %}
+    <h2 class="related-posts-title">
+      {% if page.lang == 'es' %}
+      Artículos Relacionados
+      {% else %}
+      Related Posts
+      {% endif %}
+    </h2>
+    
+    <div class="blog-posts-container">
+      {% assign sorted_posts = matching_posts | sort: "date" | reverse %}
+      {% for post in sorted_posts limit:3 %}
+        <article class="blog-post">
+          <div class="blog-image">
+            <img src="{{ post.image | relative_url }}"
+                 alt="{{ post.title }}"
+                 loading="lazy"
+                 width="400"
+                 height="250"
+                 decoding="async">
+          </div>
+          <div class="blog-content flow">
+            <h3>{{ post.title }}</h3>
+            <p>{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+            <a href="{{ post.url | relative_url }}" class="blog-link">
+              {% if page.lang == 'es' %}
+              Leer más →
+              {% else %}
+              Read more →
+              {% endif %}
+            </a>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  
+  {% else %}
+    {% comment %}Si no hay posts relacionados, muestra los más recientes{% endcomment %}
+    <h2 class="related-posts-title">
+      {% if page.lang == 'es' %}
+      Últimos Artículos
+      {% else %}
+      Latest Posts
+      {% endif %}
+    </h2>
+    
+    <div class="blog-posts-container">
+      {% assign recent_posts = related_posts | sort: "date" | reverse %}
+      {% for post in recent_posts limit:3 %}
+        <article class="blog-post">
+          <div class="blog-image">
+            <img src="{{ post.image | relative_url }}"
+                 alt="{{ post.title }}"
+                 loading="lazy"
+                 width="400"
+                 height="250"
+                 decoding="async">
+          </div>
+          <div class="blog-content flow">
+            <h3>{{ post.title }}</h3>
+            <p>{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+            <a href="{{ post.url | relative_url }}" class="blog-link">
+              {% if page.lang == 'es' %}
+              Leer más →
+              {% else %}
+              Read more →
+              {% endif %}
+            </a>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>

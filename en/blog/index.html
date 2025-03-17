@@ -1,54 +1,56 @@
 ---
-layout: corporate
+layout: default
 lang: en
 ref: blog
-title: "Aesthetic Medicine Blog in Bogotá - Dr. Tatiana Leal"
-hero: "img/hilos-tensores-bogota-colombia.avif"
-hero1: "img/limpieza-facial-profunda-en-bogota.avif"
-description: "Discover the secrets of aesthetic medicine in Bogotá. Learn beauty, health, and wellness tips from Dr. Tatiana Leal."
-h1: "Welcome to Dr. Tatiana Leal's Blog: Health, Beauty, and Wellness"
-parallax: parallax_gluteos
-alt: "Aesthetic medicine clinic in Bogotá, Dr. Tatiana Leal"
-canonical_url: "https://dratatianaleal.com/en/blog/"
-pagination: 
-  enabled: true
-  collection: posts
-  permalink: /page/:num/
-  per_page: 9
-  sort_field: date
-  sort_reverse: true
-  trail: 
-    before: 2
-    after: 2
+title: "IVLU Insights | Expert Aesthetic Medicine & Hair Restoration Blog | Bogotá"
+description: "Explore premium aesthetic treatments with IVLU's specialists in Bogotá. Discover cutting-edge technologies, expert care, and natural results through our medical blog."
+canonical: "https://ivlu.com.co/en/blog/"
+image: "/assets/images/equipo-ivlu-bogota.avif"
+datePublished: "2023-01-01"
+dateModified: "2025-03-07"
 ---
-
-<section class="center flow padding seccion">
-  <small class="center">Blog</small>
-  <h2 class="center">Secrets of Beauty and Wellness</h2>
-  <p class="center">
-    In this blog, Dr. Tatiana Leal shares her expertise in aesthetic medicine, advanced treatments, 
-    and tips to look and feel your best. Discover how to enhance your quality of life and maximize your natural beauty.
-  </p>
-</section>
-
-{% include pagination.html %}
-
-<section class="two_columns two_columns_left">
-  <div class="flow padding">
-    <h2 class="center">Why Read Our Blog?</h2>
-    <p>
-      This blog is designed for those seeking to feel and look better. With articles based on science, technology, and real experiences, you'll find valuable content to:
-    </p>
-    <ol>
-      <li>Learn about aesthetic treatments like facial rejuvenation, deep cleansing, and more.</li>
-      <li>Discover essential skincare practices for maintaining healthy skin.</li>
-      <li>Understand how our procedures can boost your confidence and well-being.</li>
-    </ol>
-    <p>
-      Ready to unlock your beauty potential? Read our articles and take the first step toward wellness.
-    </p>
-  </div>
+<header class="heros hero_blog">
   <div>
-    <img src="{{'img/experiencia-sueroterapia.avif' | relative_url}}" loading="lazy" alt="">
+    <p>Medical Beauty Insights</p>
+    <h1>The Science of Beauty Explained</h1>
   </div>
+</header>
+
+<section class="wrapper">
+  <div class="two_columns wrapper">
+    <div class="flow">
+      <h2>Latest Innovations in Medical Aesthetics</h2>
+      <p>Discover breakthrough treatments and personalized care strategies</p>
+    </div>
+    <div class="category_button center">
+      <a href="/blog" class="buttons btn-secondary">View All Articles</a>
+    </div>
+  </div>
+
+<div class="blog-posts-container">
+  {% assign posts = site.posts | where: "lang", page.lang | sort: "date" | reverse %}
+  {% for post in posts limit:3 %}
+    <article class="blog-post">
+      <div class="blog-image">
+        <img src="{{ post.image | relative_url }}" 
+             alt="{{ post.title | escape }}" 
+             loading="lazy" 
+             width="400" 
+             height="250" 
+             decoding="async">
+      </div>
+      <div class="blog-content flow">
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+        <a href="{{ post.url | relative_url }}" class="blog-link">
+          {% if page.lang == 'es' %}
+            Leer más →
+          {% else %}
+            Read more →
+          {% endif %}
+        </a>
+      </div>
+    </article>
+  {% endfor %}
+</div>
 </section>

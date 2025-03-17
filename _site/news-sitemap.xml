@@ -19,35 +19,17 @@
     
     
   
-    
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
   
   
     <url>
       <loc>http://localhost:4000</loc>
       <news:news>
         <news:publication>
-          <news:name>Tatiana Leal</news:name>
+          <news:name>Ivonne Vanessa Camacho Viancha</news:name>
           <news:language>es</news:language>
         </news:publication>
-        <news:publication_date>2025-02-14T16:47:46-05:00</news:publication_date>
-        <news:title>Doctora Tatiana Leal</news:title>
+        <news:publication_date>2025-03-17T10:11:31-05:00</news:publication_date>
+        <news:title>Centro medico IVLU en Bogotá | Dra.Luisa &amp; Dra.Ivonne</news:title>
       </news:news>
     </url>
   

@@ -1,0 +1,41 @@
+.highlight-quote {
+  display: grid;
+  align-items: center;
+  background: rgb(163,163,163);
+  background: radial-gradient(circle, rgba(163,163,163,1) 26%, rgba(224,224,223,1) 100%);
+  
+  blockquote,
+  .highlight-quote__cta {
+    padding: 8em 0;
+    align-items: center;
+    justify-content: space-between;
+
+    &> p, cite {
+      font-size: var(--font-size-h3);
+      text-align: center;
+      width: min(100%, 70ch);
+    }
+
+    
+  }
+  .services_cta {
+    font-style: italic;
+    display: grid;
+    place-items: center;
+    gap: 2em;
+  }
+  div{
+
+    p{
+      font-size: var(--font-size-h3);
+      max-width: 40ch;
+      text-align: left;
+    } 
+
+    .buttons{
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+}

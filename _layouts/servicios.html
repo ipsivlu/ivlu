@@ -1,23 +1,5 @@
 ---
 layout: default
 ---
-{% if page.redirect_from %}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "url": "{{ site.url }}{{ page.url }}",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "{{ site.url }}{{ page.url }}"
-  },
-  "relatedLink": [
-    {% for redirect in page.redirect_from %}
-      "{{ site.url }}{{ redirect }}"{% unless forloop.last %},{% endunless %}
-    {% endfor %}
-  ]
-}
-</script>
-{% endif %}
 
 {{ content }}

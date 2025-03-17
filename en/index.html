@@ -1,78 +1,297 @@
 ---
-layout: main
-lang: en
+layout: home
 ref: home
-title: "Aesthetic Medicine Clinic in Bogotá | Dr. Tatiana Leal"
-description: "Aesthetic Medicine Clinic specialized in facial and body rejuvenation in Bogotá. +3,500 successful procedures support our experience."
-h1: "Colombian specialist in aesthetic and laser medicine"
-subtitle: "Dr. Tatiana Leal Sandoval"
-canonical_url: "https://dratatianaleal.com/en/"
+lang: en
+title: "IVLU Aesthetic Clinic Bogotá | Premium Facial Rejuvenation and Hair Restoration"
+description: "Specialists in facial rejuvenation and hair restoration in Bogotá. Exclusive treatments with Ultherapy and Morpheus8. Guaranteed natural results. Schedule your VIP consultation!"
+canonical: "https://ivlu.com.co/"
+image: "/assets/images/banner-img.avif"
+datePublished: "2023-01-15"
+dateModified: "2025-03-05"
 ---
-<section class="block_section">
-  <small class="block_section_header">Our aesthetic medicine center</small>
-  <h2 class="block_section_title">Why choose our aesthetic medicine center?</h2>
-  <p class="block_section_content">
-    At Tatiana Leal Aesthetic and Laser Medicine, we are a group of professionals prepared to offer high-quality standards in both facial and body treatments, to improve the physical appearance and quality of life of our patients. Our main objective: to enhance the beauty of our patients while caring for their health.
-    <a href="#" class="boton boton_auxiliar">Meet our team</a>
-  </p>
-  <img class="block_section_image_left" loading="lazy" title="Doctora Tatiana Leal en su consultorio" src="{{'img/tatiana-leal-medicina-laser-1024.avif' | relative_url}}" alt="Consultorio de la doctora Tatiana Leal en Bogotá" decoding="async" width="656" height="656">
-  <div class="block_section_knowledge flow padding">
-    <h3>Knowledge</h3>
-    <p>Our director, Dr. Tatiana Leal, a specialist in Aesthetic and Laser Medicine from Universidad del Rosario, has the scientific background and has been practicing aesthetic medicine since 2009.</p>
-    <h3>At the forefront</h3>
-    <p>In addition, she is constantly updating her academic knowledge to provide the latest global trends in facial and body treatments.</p>
+<header class="hero_home">
+  <div class="wrapper banner two_columns">
+    <div class="banner-content flow">
+      <p>Transform your image with cutting-edge technology and certified medical specialists</p>
+      <h1>
+        <strong>IVLU Medical Center:</strong><br>
+        Facial Rejuvenation and Hair Restoration in Bogotá
+      </h1>
+      {% include button.html %}
+    </div>
+    <div class="banner-image">
+      <img src="{{'/assets/images/banner-img.avif' | relative_url }}"
+        alt="Facial rejuvenation and hair restoration at IVLU Bogotá" width="616" height="760" loading="lazy" decoding="async">
+    </div>
   </div>
-  <img class="block_section_image_right" loading="eager" title="Doctora Tatiana Leal en su consultorio" src="{{'img/tatiana-leal-doctora-708.avif' | relative_url}}" alt="Consultorio de la doctora Tatiana Leal en Bogotá" decoding="async" width="640" height="1056">
-</section>
-<main class="padding flow">
-  <div class="intro flow">
-    <small>Aesthetic treatments and procedures</small>
-    <h2>Get your professional treatment at Tatiana Leal's aesthetic medicine center</h2>
-    {% include boton.html %}
+</header>
+
+<main class="especialidades-cards wrapper">
+  <div class="especialidad-card">
+    <h3>Facial</h3>
+    <div class="card-link">
+      <p>
+        Premium facial rejuvenation treatments with botulinum toxin, hyaluronic acid, and biostimulators for natural and long-lasting results.
+      </p>
+      <a href="{{'/en/services/'|relative_url}}" title="IVLU aesthetic treatment services" class="circle-arrow">→</a>
+    </div>
   </div>
-  <h3>Corporals treatments</h3>
-  <p>Reducing, toning, vein-reducing body treatments, etc.; They are treatments carried out with the highest technology available in all of Colombia. You find it at the<strong>Dr. Tatiana Leal Aesthetic Medicine Center</strong>.</p>
-  {% include gallery.html data_file="tratamientos_home" row="first-row" %}
-  <h3>Facial treatments</h3>
-  <p>Rejuvenate with our non-invasive facial treatments in Bogotá. Laser rejuvenation, biorevitalization, fillers and more. Natural results guaranteed by Dr. Tatiana Leal's team.</p>
-  {% include gallery.html data_file="tratamientos_home" row="second-row" %}
-  <h3>intimate treatments</h3>
-  <p>Your intimate area also needs treatments for its health and beauty. You can protect and improve your confidence with non-invasive and non-painful procedures, all performed with the <strong>professional team of Dr. Tatiana Leal</strong>.</p>
-  {% include gallery.html data_file="tratamientos_home" row="third-row" %}
+
+  <div class="especialidad-card">
+    <h3>Body</h3>
+    <div class="card-link">
+      <p>
+        Advanced solutions for localized fat reduction, skin laxity treatment, and skin quality improvement with cutting-edge technology.
+      </p>
+      <a href="{{'/en/services/'|relative_url}}" title="IVLU aesthetic treatment services" class="circle-arrow">→</a>
+    </div>
+  </div>
+
+  <div class="especialidad-card">
+    <h3>Hair Care</h3>
+    <div class="card-link">
+      <p>
+        Precision hair restoration with FUE HD micrografting and regenerative therapies to combat hair loss permanently.
+      </p>
+      <a href="{{'/en/services/'|relative_url}}" title="IVLU aesthetic treatment services" class="circle-arrow">→</a>
+    </div>
+  </div>
+
+  <div class="especialidad-card">
+    <h3>Technologies</h3>
+    <div class="card-link">
+      <p>
+        Internationally certified premium equipment including Ultherapy, Morpheus8, and other exclusive technologies for remarkable transformations.
+      </p>
+        <a href="{{'/en/technologies/'|relative_url}}" class="circle-arrow">→</a>
+    </div>
+  </div>
 </main>
-<section class="bloque_doble seccion padding">
-  <div class="cta">
-    <div class="video-container">
-      <div class="video-placeholder" data-video-id="HbCCaNRu1Hk">
-        <img src="https://img.youtube.com/vi/HbCCaNRu1Hk/maxresdefault.jpg" alt="Video thumbnail" class="thumbnail">
-        <button class="play-button">
-          <svg class="play-icon" viewBox="0 0 24 24">
-            <path d="M8 5v14l11-7z"/>
-          </svg>
-        </button>
+
+<section class="home_about wrapper">
+  <div class="two_columns two_columns_left">
+    <div class="flow">
+      <h2 class="content-title">Welcome to our clinic</h2>
+      <p class="subtitle">Discover why we are the leading aesthetic clinic in Bogotá</p>
+      <p>With over 5,000 satisfied patients and a 98% satisfaction rate, at IVLU we don't just perform treatments - we create transformative experiences. Under the leadership of Dr. Luisa and Dr. Ivonne, each procedure is a masterpiece of medical precision and personalization.</p>
+      <a href="#" class="buttons btn-secondary">Get answers to your questions</a>
+    </div>
+      <img src="{{ '/assets/images/team.avif' | relative_url }}" width="598" height="504" alt="IVLU Logo - Leading aesthetic clinic in Bogotá" loading="lazy" decoding="async">
+  </div>
+
+</section>
+
+<section class="wrapper two_columns bg_full">
+  <div class="flow">
+    <h2>Discover some of our featured treatments.</h2>
+    <p>We invest in world-class certified technology to guarantee your results:</p>
+    <blockquote class="highlight-testimonial">
+      <p><i>"At IVLU, we don't follow trends - we create them. Every technology we incorporate is backed by scientific studies and proven results."</i></p>
+      <cite>Dr. Luisa & Dr. Ivonne</cite>
+    </blockquote>
+  </div>
+  <div class="flow">
+    <div class="testimonials-container">
+      <!-- Slider navigation -->
+      <div class="slider-nav">
+        <button class="slider-btn prev-btn">&#8249;</button>
+        <button class="slider-btn next-btn">&#8250;</button>
+      </div>
+    
+      <!-- Ana Maria testimonial - ONLY THE FIRST ONE HAS THE ACTIVE CLASS -->
+      <div class="testimonial-card active">
+        <h2>IVLU</h2>
+        <h3>Cl 127 A #7-19 Office 513, Bogotá</h3>
+        <div class="testimonial-rating">
+          <span class="stars">★★★★★</span>
+          <strong>6 months ago</strong>
+        </div>
+        <p class="testimonial-text">"Dr. Luisa transformed my life. After breast cancer, I regained my hair with incredibly natural results. Her professionalism and sensitivity made all the difference."</p>
+        <div class="two_columns">
+          <div class="testimonial-author">
+            <span>Ana María Restrepo</span>
+            <small>Cali, Colombia</small>
+          </div>
+          <div class="center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="-0.5 0 48 48">
+              <!-- SVG paths -->
+            </svg>
+            <h3>Google Reviews</h3>
+          </div>
+        </div>
+      </div>
+    
+      <!-- SECOND TESTIMONIAL - WITHOUT ACTIVE CLASS -->
+      <div class="testimonial-card">
+        <h2>IVLU</h2>
+        <h3>Cl 127 A #7-19 Office 513, Bogotá</h3>
+        <div class="testimonial-rating">
+          <span class="stars">★★★★★</span>
+          <strong>1 month ago</strong>
+        </div>
+        <p class="testimonial-text">"Excellent clinic, everything is well-organized with a great sense of aesthetics. The service is courteous and friendly, and the alopecia treatment is indeed effective. I've been in treatment with Dr. Vanessa, who is quite direct and honest about the results you'll have. This has been the only place where I've been able to improve my alopecia, which started when I was 25. The results obtained are incredible—I couldn't believe it myself. Plus, you don't have to go elsewhere to get what you need for your treatment. They supply it here and even deliver the products you need to your home."</p>
+        <div class="two_columns">
+          <div class="testimonial-author">
+            <span>Edgar Muñoz</span>
+            <small>Bogotá, Colombia</small>
+          </div>
+          <div class="center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="-0.5 0 48 48">
+              <!-- SVG paths -->
+            </svg>
+            <h3>Google Reviews</h3>
+          </div>
+        </div>
+      </div>
+    
+      <!-- THIRD TESTIMONIAL - WITHOUT ACTIVE CLASS -->
+      <div class="testimonial-card">
+        <h2>IVLU</h2>
+        <h3>Cl 127 A #7-19 Office 513, Bogotá</h3>
+        <div class="testimonial-rating">
+          <span class="stars">★★★★★</span>
+          <strong>5 months ago</strong>
+        </div>
+        <p class="testimonial-text">"The service the doctors have provided me has been very positive. From the first consultation, they have treated me very well. They have listened to my symptoms and have focused on efficiently treating the condition I have on my skin. I recommend them 100%, they are charismatic, respectful, and very professional in their work."</p>
+        <div class="two_columns">
+          <div class="testimonial-author">
+            <span>Paula Gamboa</span>
+            <small>Colombia</small>
+          </div>
+          <div class="center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="-0.5 0 48 48">
+              <!-- SVG paths -->
+            </svg>
+            <h3>Google Reviews</h3>
+          </div>
+        </div>
+      </div>
+    
+      <!-- FOURTH TESTIMONIAL - WITHOUT ACTIVE CLASS -->
+      <div class="testimonial-card">
+        <h2>IVLU</h2>
+        <h3>Cl 127 A #7-19 Office 513, Bogotá</h3>
+        <div class="testimonial-rating">
+          <span class="stars">★★★★★</span>
+          <strong>3 months ago</strong>
+        </div>
+        <p class="testimonial-text">"Since I was very young, I've had complexes about my hair because I've suffered from excessive hair loss and have been diagnosed with alopecia. This has led me to try countless products, visit specialists, and invest time and money in medications, but nothing had been as effective and rewarding as the process I've been able to advance at IVLU. Truly, arriving at this place and having an effective treatment from Dr. Ivonne has been an incredible experience, not only because of the human quality of the doctors but because it has been a journey full of positive changes, very evident progress, and above all, a 100% informed process."</p>
+        <div class="two_columns">
+          <div class="testimonial-author">
+            <span>Nana Merchan</span>
+            <small>Colombia</small>
+          </div>
+          <div class="center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="-0.5 0 48 48">
+              <!-- SVG paths -->
+            </svg>
+            <h3>Google Reviews</h3>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Dot controls for navigation -->
+      <div class="slider-controls">
+        <div class="slider-dots">
+          <span class="dot active" data-slide="0"></span>
+          <span class="dot" data-slide="1"></span>
+          <span class="dot" data-slide="2"></span>
+          <span class="dot" data-slide="3"></span>
+        </div>
       </div>
     </div>
   </div>
-  <div class="intro">
-    <small>Safety and peace of mind for you</small>
-    <h2>Get your treatment at Dr. Tatiana Leal's aesthetic center</h2>
-    <p>All the treatments we perform are under aesthetic medicine standards and are carried out by specialized professionals. The beauty and health of the patient is our main objective.</p>
-    {% include boton.html %}
+  
+  <div>
+
   </div>
 </section>
-<section class="bloque_doble padding">
-  <div class="flow">
-    <small>Contact us</small>
-    <h2>Visit our aesthetic medicine center</h2>
-    <p>We would love to answer your questions and attend to your requests. <strong>Write to us, visit us, or call us. Here is the information for our aesthetic center</strong>:</p>
-    <ul>
-      <li><b>Address:</b> {{site.direccion}}.</li>
-      <li><b>Our email:</b> {{site.email}}</li>
-    </ul>
-    {% include boton.html %}
-    <a href="tel:{{site.telefono}}" class="boton boton_auxiliar" id="lead_whatsapp" target="_blank" title="Tatiana Leal's Phone">Call us: {{site.telefono}}</a>
+
+<section class="three_columns wrapper ">
+  <div class="flow treatments">
+    <img src="{{ '/assets/images/tratamiento-ultheraoy-tratamiento-bogota.avif' | relative_url }}" width="334" height="334" alt="IVLU Logo - Leading aesthetic clinic in Bogotá" loading="lazy" decoding="async">
+    <h4>Ultherapy in Bogotá</h4>
+    <p>Non-invasive ultrasound treatment that lifts and tightens skin.</p>
+
+    {% include button.html %}
   </div>
-  <div>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15905.689668573152!2d-74.0692314!3d4.6964387!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9adb267cf905%3A0x16bf4f9ee9fe9b6f!2sDra.%20Tatiana%20Leal!5e0!3m2!1ses-419!2sco!4v1726440307122!5m2!1ses-419!2sco" width="100%" height="450" style="border:0; border-radius: 20px; box-shadow: var(--shadow);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+  <div class="flow treatments">
+    <img src="{{ '/assets/images/tratamiento-implante-capilar.avif' | relative_url }}" width="334" height="334" alt="IVLU Logo - Leading aesthetic clinic in Bogotá" loading="lazy" decoding="async">
+    <h4>Hair Transplant in Bogotá</h4>
+    <p>Follicle transplantation to restore hair in bald areas.</p>
+
+    {% include button.html %}
+  </div>
+  <div class="flow treatments">
+    <img src="{{ '/assets/images/tratamiento-radiesse-tratamiento.avif' | relative_url }}" width="334" height="334" alt="IVLU Logo - Leading aesthetic clinic in Bogotá" loading="lazy" decoding="async">
+    <h4>Radiesse in Bogotá</h4>
+    <p>Calcium hydroxylapatite dermal filler to restore facial volume.</p>
+
+    {% include button.html %}
+  </div>
+</section>
+
+<!-- Enhanced location section with microformats -->
+<section class="wrapper flow">
+  <h2>Our Clinic in Bogotá</h2>
+  <div class="two_columns">
+    <div class="location-details flow">
+      <p>We are located in an exclusive area in northern Bogotá, with luxury facilities designed for your maximum comfort and privacy.</p>
+      <address class="location-address" itemscope itemtype="https://schema.org/MedicalBusiness">
+        <h3 itemprop="name">IVLU Aesthetic Clinic</h3>
+        <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+          <p>Address: <span itemprop="streetAddress">Calle 127 A #7-19 Office 513</span>, <span
+              itemprop="addressLocality">Usaquén</span>, <span itemprop="addressRegion">Bogotá</span>, <span
+              itemprop="addressCountry">Colombia</span></p>
+          <p><strong>Hours:</strong> <time itemprop="openingHours" datetime="Mo-Fr:00-19:00">Monday to Friday from 8:00 am
+              to 7:00 pm</time> | <time itemprop="openingHours" datetime="Sa 09:00-15:00">Saturdays from 9:00 am to 3:00
+              pm</time></p>
+        </div>
+      </address>
+      <div class="location-map">
+        <!-- Google Maps iframe would go here -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d742.2997655189331!2d-74.0296029772355!3d4.703001716621662!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f91ef6b3e6e8d%3A0x8ede8552141118a9!2sIVLU!5e0!3m2!1ses-419!2sco!4v1741799804544!5m2!1ses-419!2sco"
+          width="600" height="480" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+
+    <div class="contact-content flow">
+      <h3>Have questions? We're here for you</h3>
+      <p>We understand that taking the first step can raise questions. That's why we want you to feel completely confident before beginning your transformation. Are you concerned about pain? Want to know more about the results? Need information about post-treatment care? We're here to guide you every step of the way.
+      </p>
+
+      <ul class="contact-details flow">
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 24 24">
+            <path fill="#d7bc73"
+              d="m16.556 12.906-.455.453s-1.083 1.076-4.038-1.862-1.872-4.014-1.872-4.014l.286-.286c.707-.702.774-1.83.157-2.654L9.374 2.86C8.61 1.84 7.135 1.705 6.26 2.575l-1.57 1.56c-.433.432-.723.99-.688 1.61.09 1.587.808 5 4.812 8.982 4.247 4.222 8.232 4.39 9.861 4.238.516-.048.964-.31 1.325-.67l1.42-1.412c.96-.953.69-2.588-.538-3.255l-1.91-1.039c-.806-.438-1.787-.309-2.417.317Z" />
+          </svg>
+          <a href="tel:+5712345678" itemprop="telephone">Phone: +57 {{site.telefono}}</a>
+        </li>
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#d7bc73" viewBox="0 0 20 20">
+            <path fill="#d7bc73" fill-rule="evenodd"
+              d="M15.821 14.121c-.241.682-1.199 1.247-1.963 1.412-.523.11-1.205.199-3.503-.754C7.774 13.71 4.19 9.901 4.19 7.366c0-1.29.744-2.793 2.045-2.793.626 0 .764.012.97.507.241.582.829 2.016.899 2.163.289.603-.294.956-.717 1.482-.135.158-.288.329-.117.623.17.288.758 1.246 1.622 2.015 1.116.995 2.021 1.312 2.345 1.447.241.1.529.077.705-.111.223-.241.5-.641.782-1.036.199-.282.452-.317.717-.217.179.062 2.454 1.119 2.55 1.288.071.123.071.705-.17 1.387M10.002 0h-.005C4.484 0 0 4.485 0 10c0 2.187.705 4.215 1.904 5.86L.658 19.578l3.843-1.228A9.923 9.923 0 0 0 10.002 20C15.515 20 20 15.515 20 10S15.515 0 10.002 0" />
+          </svg>
+          <a href="#" id="lead_whatsapp" rel="nofollow noopener noreferrer" target="_blank"
+            title="WhatsApp of IVLU medical center in Bogotá">Whatsapp: +57 {{site.telefono}}</a>
+        </li>
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="40" height="40" fill="#d7bc73"
+            viewBox="0 0 24 24">
+            <path
+              d="M21 11c0 6.7-4.3 6.4-4.8 6.4-.6 0-1.1-.1-1.6-.4-.4-.3-.8-.6-1-1.1-.4.5-.8.9-1.3 1.1-.5.3-1 .4-1.6.4-.5 0-1-.1-1.4-.3-.4-.2-.8-.6-1-1-.3-.4-.5-.9-.6-1.5-.1-.6-.1-1.3-.1-2 .1-.9.3-1.7.6-2.5.3-.7.7-1.4 1.1-1.9.4-.5.9-.9 1.5-1.2.6-.3 1.2-.4 1.8-.4 2 0 3.1 1 3.3 1.2l-.5 6.2c0 .4-.2 1.8 1.1 1.8.4 0 2.4-.5 2.4-4.7 0-.1.9-7-6.6-7C6.3 4 5 9.9 5 12c0 8.4 5.3 8 7 8 2 0 3.1-.4 3.3-.5l.4 1.8c-.2.2-1.2.7-3.7.7-3.1 0-9-.1-9-10 0-1.4.8-10 9.5-10 8.3 0 8.5 7.6 8.5 9zm-10.9 1.6c-.1.9 0 1.7.2 2.2.2.5.6.7 1.2.7 1.1 0 1.7-1.4 1.8-1.8l.5-5.1c-.1 0-.7-.1-.9-.1-.8 0-1.5.4-1.9 1.1-.5.6-.8 1.6-.9 3z" />
+            <path d="M0 0h24v24H0z" style="fill:none" />
+          </svg>
+          <a href="mailto:info@ivlu.com.co" itemprop="email">Email: {{site.email}}</a>
+        </li>
+      </ul>
+
+      <a href="#" class="buttons btn-primary">
+        Schedule your VIP consultation
+      </a>
+    </div>
   </div>
 </section>

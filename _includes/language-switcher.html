@@ -3,40 +3,16 @@
 {% assign pages = site.pages | where_exp: "item", "item.ref != null" | where_exp: "item", "item.ref == page.ref" %}
 {% assign posts = site.posts | where_exp: "item", "item.ref != null" | where_exp: "item", "item.ref == page.ref" %}
 
-{% if site.tratamientos-faciales_es %}
-  {% assign facial_es = site.tratamientos-faciales_es | where_exp: "item", "item.ref == page.ref" %}
+{% if site.servicios_es %}
+  {% assign servicio_es = site.servicios_es | where_exp: "item", "item.ref == page.ref" %}
 {% else %}
-  {% assign facial_es = "" | split: "," %}
+  {% assign servicio_es = "" | split: "," %}
 {% endif %}
 
-{% if site.tratamientos-faciales_en %}
-  {% assign facial_en = site.tratamientos-faciales_en | where_exp: "item", "item.ref == page.ref" %}
+{% if site.servicios_en %}
+  {% assign servicio_en = site.servicios_en | where_exp: "item", "item.ref == page.ref" %}
 {% else %}
-  {% assign facial_en = "" | split: "," %}
-{% endif %}
-
-{% if site.tratamientos-corporales_es %}
-  {% assign corporal_es = site.tratamientos-corporales_es | where_exp: "item", "item.ref == page.ref" %}
-{% else %}
-  {% assign corporal_es = "" | split: "," %}
-{% endif %}
-
-{% if site.tratamientos-corporales_en %}
-  {% assign corporal_en = site.tratamientos-corporales_en | where_exp: "item", "item.ref == page.ref" %}
-{% else %}
-  {% assign corporal_en = "" | split: "," %}
-{% endif %}
-
-{% if site.tratamientos-intimos_es %}
-  {% assign intimo_es = site.tratamientos-intimos_es | where_exp: "item", "item.ref == page.ref" %}
-{% else %}
-  {% assign intimo_es = "" | split: "," %}
-{% endif %}
-
-{% if site.tratamientos-intimos_en %}
-  {% assign intimo_en = site.tratamientos-intimos_en | where_exp: "item", "item.ref == page.ref" %}
-{% else %}
-  {% assign intimo_en = "" | split: "," %}
+  {% assign servicio_en = "" | split: "," %}
 {% endif %}
 
 {% if site.tecnologia_es %}
@@ -53,12 +29,8 @@
 
 {% assign all_pages = pages %}
 {% if posts.size > 0 %}{% assign all_pages = all_pages | concat: posts %}{% endif %}
-{% if facial_es.size > 0 %}{% assign all_pages = all_pages | concat: facial_es %}{% endif %}
-{% if facial_en.size > 0 %}{% assign all_pages = all_pages | concat: facial_en %}{% endif %}
-{% if corporal_es.size > 0 %}{% assign all_pages = all_pages | concat: corporal_es %}{% endif %}
-{% if corporal_en.size > 0 %}{% assign all_pages = all_pages | concat: corporal_en %}{% endif %}
-{% if intimo_es.size > 0 %}{% assign all_pages = all_pages | concat: intimo_es %}{% endif %}
-{% if intimo_en.size > 0 %}{% assign all_pages = all_pages | concat: intimo_en %}{% endif %}
+{% if servicio_es.size > 0 %}{% assign all_pages = all_pages | concat: servicio_es %}{% endif %}
+{% if servicio_en.size > 0 %}{% assign all_pages = all_pages | concat: servicio_en %}{% endif %}
 {% if tecnologia_es.size > 0 %}{% assign all_pages = all_pages | concat: tecnologia_es %}{% endif %}
 {% if tecnologia_en.size > 0 %}{% assign all_pages = all_pages | concat: tecnologia_en %}{% endif %}
 

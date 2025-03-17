@@ -1,0 +1,26 @@
+<section class="wrapper flow">
+  <h3 class="cards-title">{{include.data.title}}</h3>
+  <div class="cards-container">
+    {% for card in include.data.cards %}
+    <div class="card">
+      {% if card.image and card.image != "" %}
+      <div class="card-image">
+        <img src="{{ card.image }}" alt="{{ card.title }}" />
+      </div>
+      {% endif %}
+      <div class="flow">
+        <h4>{{ card.title }}</h4>
+        <ul class="card-list">
+          {% for item in card.list %}
+          <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="card-icon">
+        <img class="star-icon" src="/assets/images/stars.avif" alt="star" />
+        <img class="crown-icon" src="/assets/images/crown.avif" alt="crown" />
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>

@@ -1,631 +1,242 @@
-.text-container-center {
+.flex-section {
+  color: var(--dark);
+  gap: clamp(0.5rem, 2.5vw, 1rem);
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: 100%;
-  color: #fff;
-
-  .intro small {
-    font-size: 1rem;
-    color: #fff;
-  }
-
-  .intro h2 {
-    font-size: clamp(2.75rem, 2.3rem + 0.7vw, 3.25rem);
-  }
-}
-
-.text-container-end {
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-}
-
-/* Tarjetas */
-.service-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
-  place-content: center;
-  gap: 1em;
-  padding: 6rem 2rem;
-}
-
-.card {
-  background-color: #fefefe;
-  display: flex;
-  padding: 2rem;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  border-radius: var(--radius-cards);
-  box-shadow: var(--shadow);
-  transition: transform 0.3s ease-in-out;
-  position: relative;
-}
-
-.service-cards .card-image img {
-  width: 100%;
-  height: auto;
-  -o-object-fit: cover;
-  object-fit: cover;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: rgba(184, 150, 99, 0.4) 0px 10px 20px;
-}
-
-.card-icon {
-  width: 100px;
-  height: 100px;
-  background-color: var(--color-accent);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-}
-
-.card h3 {
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-  color: var(--grey-2);
-}
-
-.card ul li {
-  font-size: 1rem;
-  color: var(--grey-1);
-  list-style: none;
-  margin-bottom: 1rem;
-}
-
-/* Acordeon */
-.accordion {
-  display: grid;
-  gap: 1.5rem;
-}
-
-/* Ocultar los checkboxes */
-.accordion-toggle {
-  display: none;
-}
-
-/* Estilo del encabezado */
-.accordion-header {
-  background-color: var(--gris1);
-  color: var(--principal);
-  padding: 1.2rem;
-  border-radius: var(--radius);
-  font-family: var(--fuenteTitulos);
-  font-size: 1.25rem;
-  text-align: left;
-  border: 1px solid var(--gris2);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.accordion-header:hover {
-  background-color: var(--secundario);
-  color: #fff;
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
-}
-
-.accordion-header::after {
-  content: "+";
-  font-size: 1.5rem;
-  transition: transform 0.3s ease;
-}
-
-.accordion-toggle:checked + .accordion-header::after {
-  content: "-";
-  transform: rotate(180deg);
-}
-.accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease, padding 0.3s ease;
-  padding: 0 1.2rem;
-  background-color: #f9f9f9;
-  border-radius: var(--radius);
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.accordion-content p {
-  margin: 1rem 0;
-  color: var(--grisTexto);
-}
-
-/* Mostrar contenido cuando está seleccionado */
-.accordion-toggle:checked + .accordion-header + .accordion-content {
-  max-height: 550px; /* Ajusta según el contenido */
-  padding: 1.2rem;
-}
-
-/* SECCIONES PARALLAX */
-.parallax {
-  min-height: -webkit-min-content;
-  min-height: -moz-min-content;
-  min-height: min-content;
-  display: grid;
-  place-items: center;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-
-  h2 {
-    color: #ffffff;
-  }
-}
-
-.parallax_copy,
-.parallax_copy h2 {
-  color: #ffffff;
-}
-
-.parallax_hilos-tensores {
-  background-image: linear-gradient(rgba(0, 46, 81, 0.6), rgba(0, 46, 81, 0.6)),
-    url('{{"img/tratamiento-hilos-tensores.avif" | relative_url}}');
-}
-
-.parallax_rejuvenecimiento-facial {
-  background-image: linear-gradient(rgba(0, 46, 81, 0.6), rgba(0, 46, 81, 0.6)),
-    url('{{"img/rejuvenecimiento-facial-bogota.avif" | relative_url}}');
-}
-
-.parallax_centro-estetico {
-  background-image: linear-gradient(rgba(0, 46, 81, 0.6), rgba(0, 46, 81, 0.6)),
-    url('{{"img/centro-estetico-bogota-colombia.avif" | relative_url}}');
-}
-
-.parallax_aumento-labios {
-  background-image: linear-gradient(rgba(0, 46, 81, 0.6), rgba(0, 46, 81, 0.6)),
-    url('{{"img/aumento-labios-bogota-colombia.avif" | relative_url}}');
-}
-
-.parallax_biorevitalizacion-facial {
-  background-image: linear-gradient(rgba(0, 46, 81, 0.6), rgba(0, 46, 81, 0.6)),
-    url('{{"img/biorevitalizacion-facial-colombia.avif" | relative_url}}');
-}
-
-.parallax_biorevitalizacion-facial {
-  background-image: linear-gradient(rgba(0, 46, 81, 0.6), rgba(0, 46, 81, 0.6)),
-    url('{{"img/lifting-facial-sin-cirugia.avif" | relative_url}}');
-}
-
-.parallax_peeling-quimico {
-  background-image: linear-gradient(rgba(0, 46, 81, 0.6), rgba(0, 46, 81, 0.6)),
-    url('{{"img/peeling-quimico-facial-dr-tatiana-leal.avif" | relative_url}}');
-}
-
-.parallax_acido-hialuronico {
-  background-image: linear-gradient(rgba(0, 46, 81, 0.6), rgba(0, 46, 81, 0.6)),
-    url('{{"img/tratamiento-acido-hialuronico-bogota.avif" | relative_url}}');
-}
-
-.parallax_caida-cabello {
-  background-image: linear-gradient(rgba(0, 46, 81, 0.6), rgba(0, 46, 81, 0.6)),
-    url('{{"img/tratamiento-capilar-bogota.avif" | relative_url}}');
-}
-
-.parallax_ojeras {
-  background-image: linear-gradient(rgba(0, 46, 81, 0.6), rgba(0, 46, 81, 0.6)),
-    url('{{"img/tratamiento-ojeras-bogota.avif" | relative_url}}');
-}
-
-.parallax_manchas {
-  background-image: linear-gradient(rgba(0, 46, 81, 0.6), rgba(0, 46, 81, 0.6)),
-    url('{{"img/tratamiento-manchas.avif" | relative_url}}');
-}
-
-.parallax_limpieza-facial {
-  background-image: linear-gradient(rgba(0, 46, 81, 0.6), rgba(0, 46, 81, 0.6)),
-    url('{{"img/limpieza-facial-profunda-bogota.avif" | relative_url}}');
-}
-
-.parallax_rejuve {
-  background-image: linear-gradient(rgba(0, 46, 81, 0.6), rgba(0, 46, 81, 0.6)),
-    url('{{"img/centro-estetico-rejuvenecimiento.avif" | relative_url}}');
-}
-
-.parallax_vitamina-c {
-  background-image: linear-gradient(rgba(0, 46, 81, 0.6), rgba(0, 46, 81, 0.6)),
-    url('{{"img/vitamina-c-facial.avif" | relative_url}}');
-}
-
-.parallax_moldeamiento-corporal {
-  background-image: linear-gradient(rgba(0, 46, 81, 0.6), rgba(0, 46, 81, 0.6)),
-    url('{{"img/moldeamiento-corporal-en-bogota.avif" | relative_url}}');
-}
-
-.parallax_celulitis {
-  background-image: linear-gradient(rgba(0, 46, 81, 0.6), rgba(0, 46, 81, 0.6)),
-    url('{{"img/tratamiento-celulitis-en-bogota.avif" | relative_url}}');
-}
-
-.parallax_gluteos {
-  background-image: linear-gradient(rgba(0, 46, 81, 0.6), rgba(0, 46, 81, 0.6)),
-    url('{{"img/levantamiento-gluteos-sin-cirugia.avif" | relative_url}}');
-}
-
-.parallax_detox {
-  background-image: linear-gradient(rgba(0, 46, 81, 0.6), rgba(0, 46, 81, 0.6)),
-    url('{{"img/sueroterapia-detox-en -bogota.avif" | relative_url}}');
-}
-
-.parallax_tonificacion {
-  background-image: linear-gradient(rgba(0, 46, 81, 0.6), rgba(0, 46, 81, 0.6)),
-    url('{{"img/tonificacion-muscular-en-colombia.avif" | relative_url}}');
-}
-
-.parallax_depilacion-laser {
-  background-image: linear-gradient(rgba(0, 46, 81, 0.6), rgba(0, 46, 81, 0.6)),
-    url('{{"img/depilacion-laser-permanente.avif" | relative_url}}');
-}
-
-.parallax_radiofrecuencia {
-  background-image: linear-gradient(rgba(0, 46, 81, 0.6), rgba(0, 46, 81, 0.6)),
-    url('{{"img/radiofrecuencia-corporal-bogota.avif" | relative_url}}');
-}
-
-.parallax_varices {
-  background-image: linear-gradient(rgba(0, 46, 81, 0.6), rgba(0, 46, 81, 0.6)),
-    url('{{"img/tratamiento-varices-en-bogota.avif" | relative_url}}');
-}
-
-.parallax_tatuajes {
-  background-image: linear-gradient(rgba(0, 46, 81, 0.6), rgba(0, 46, 81, 0.6)),
-    url('{{"img/eliminacion-tatuajes-laser-centro-estetico.avif" | relative_url}}');
-}
-
-.parallax_lipolisis {
-  background-image: linear-gradient(rgba(0, 46, 81, 0.6), rgba(0, 46, 81, 0.6)),
-    url('{{"img/lipolisis-laser-centro-estetico.avif" | relative_url}}');
-}
-
-.parallax_aclaramiento {
-  background-image: linear-gradient(rgba(0, 46, 81, 0.6), rgba(0, 46, 81, 0.6)),
-    url('{{"img/aclaramiento-genital-beneficios.avif" | relative_url}}');
-}
-
-.parallax_aumento-labios {
-  background-image: linear-gradient(rgba(0, 46, 81, 0.6), rgba(0, 46, 81, 0.6)),
-    url('{{"img/aumento-labios-mayores-ginecologia-estetica.avif" | relative_url}}');
-}
-
-.parallax_incontinencia {
-  background-image: linear-gradient(rgba(0, 46, 81, 0.6), rgba(0, 46, 81, 0.6)),
-    url('{{"img/incontinencia-urinaria.avif" | relative_url}}');
-}
-
-.parallax_vaginal {
-  background-image: linear-gradient(rgba(0, 46, 81, 0.6), rgba(0, 46, 81, 0.6)),
-    url('{{"img/rejuvenecimiento-vaginal-laser-bogota.avif" | relative_url}}');
-}
-
-.parallax_analisis {
-  background-image: linear-gradient(rgba(0, 46, 81, 0.6), rgba(0, 46, 81, 0.6)),
-    url('{{"img/analisis-facial-janus-bogota.avif" | relative_url}}');
-}
-
-.parallax_inbody {
-  background-image: linear-gradient(rgba(0, 46, 81, 0.6), rgba(0, 46, 81, 0.6)),
-    url('{{"img/radiofrecuencia-corporal-bogota.avif" | relative_url}}');
-}
-
-.parallax_scizer {
-  background-image: linear-gradient(rgba(0, 46, 81, 0.6), rgba(0, 46, 81, 0.6)),
-    url('{{"img/radiofrecuencia-corporal-bogota.avif" | relative_url}}');
-}
-
-.parallax_maximus {
-  background-image: linear-gradient(rgba(0, 46, 81, 0.6), rgba(0, 46, 81, 0.6)),
-    url('{{"img/parallax_maximus.avif" | relative_url}}');
-}
-
-/* overlay */
-.section-overlay {
-  background: var(--principal);
-  color: #fff;
-
-  h2 {
-    color: #fefefe;
-  }
-}
-
-.three_blocks {
-  display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
-}
+  justify-content: space-evenly;
+  padding: 4em 0 4em;
 
-.block {
-  width: min(max(300px, 80vw), 480px);
-  flex: 1 1 300px;
-
-  li {
-    margin: 0;
-    list-style: none;
-
-    &::before {
-      content: "✓";
-      color: var(--accion);
-      padding-right: 4px;
-    }
+  div {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    gap: clamp(0.5rem, 2.5vw, 1rem);
+    width: 160px;
   }
 }
 
-.gallery-video {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  border-radius: var(--radius);
-}
-
-.gallery-video {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  border-radius: var(--radius);
-}
-
-.benefits-option ul li {
-  margin: 0 0 8px;
-  list-style: none;
-
-  &::before {
-    content: "✓";
-    color: var(--accion);
-    padding-right: 4px;
-  }
-}
-
-
-/* Estilos para los videos */
-.video-wrapper {
-  position: relative;
-  width: min(100%, 355px);
-  height: 664px;
-  overflow: hidden;
-  cursor: pointer;
-  border-radius: var(--radius);
-  margin-inline: auto;
-  margin-bottom: 1.5rem;
-  background-color: var(--gris1);
-}
-
-.video-play-button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  opacity: 0.9;
-}
-
-.video-play-button svg {
-  -webkit-filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
-          filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
-}
-
-.video-wrapper:hover .video-play-button {
-  transform: translate(-50%, -50%) scale(1.1);
-}
-
-.video-wrapper.playing .video-play-button {
-  opacity: 0;
-}
-
-.gallery-video {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.video-wrapper:hover .gallery-video {
-  transform: scale(1.05);
-}
-
-/* Loader para los videos */
-.video-wrapper::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 40px;
-  height: 40px;
-  border: 3px solid var(--principal);
-  border-top-color: transparent;
-  border-radius: 50%;
-  -webkit-animation: spin 1s linear infinite;
-          animation: spin 1s linear infinite;
-  opacity: 0;
-}
-
-.video-wrapper.loading::before {
-  opacity: 1;
-}
-
-@-webkit-keyframes spin {
-  to { transform: translate(-50%, -50%) rotate(360deg); }
-}
-
-@keyframes spin {
-  to { transform: translate(-50%, -50%) rotate(360deg); }
-}
-
-
-/* Estilos para destacar el video del medio */
-.video-wrapper-featured {
-  width: min(100%, 400px); /* Un poco más ancho */
-  height: 700px; /* Un poco más alto */
-  border: 2px solid var(--accion); /* Borde especial */
-  box-shadow: 0 8px 32px rgba(207, 186, 163, 0.15); /* Sombra elegante */
-  transform: translateY(-20px); /* Elevación sutil */
-}
-
-/* Efecto hover mejorado para el video destacado */
-.video-wrapper-featured:hover {
-  border-color: var(--principal);
-  box-shadow: 0 12px 48px rgba(207, 186, 163, 0.25);
-}
-
-/* Botón de play más grande para el video destacado */
-.video-wrapper-featured .video-play-button svg {
-  width: 64px;
-  height: 64px;
-  -webkit-filter: drop-shadow(0 4px 8px rgba(0,0,0,0.4));
-          filter: drop-shadow(0 4px 8px rgba(0,0,0,0.4));
-}
-
-/* Overlay especial para el video destacado */
-.video-wrapper-featured::after {
-  content: 'Tecnología Premium';
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: linear-gradient(135deg, var(--principal), var(--complemento));
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: var(--radius);
-  font-size: 0.875rem;
-  font-weight: 500;
-  opacity: 0.9;
-  z-index: 2;
-}
-
-/* Ajuste del contenedor para acomodar el video más grande */
-.block {
+.center {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
-/* Aseguramos que el texto se mantenga alineado */
-.block h3,
-.block p {
+.text_center {
+  display: grid;
+  gap: 1em;
+  place-items: center;
+  width: min(100%, 720px);
+  margin-inline: auto;
   text-align: center;
-  max-width: 90%;
 }
 
-/* Animación suave al cargar */
-.video-wrapper-featured {
-  -webkit-animation: fadeInUp 0.6s ease-out;
-          animation: fadeInUp 0.6s ease-out;
-}
+.bg-inverted {
+  background: rgb(254,254,254);
+  background: linear-gradient(180deg, rgba(254,254,254,1) 6%, rgba(253,233,196,1) 100%);
 
-@-webkit-keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(0);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(-20px);
+  div img{
+    padding: 24px;
+    margin: 32px 24px;
+    background-color: white;
   }
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(0);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(-20px);
+/* PAGINA CONTACTO */
+.nosotros_profesionales{
+  align-self: center;
+  
+  ul li{
+    margin: 0 0 0 2rem;
   }
 }
 
-
-.contacto-grid{
+.nosotros_cards{
   display: grid;
   gap: 2em;
+  align-content: center;
 
-  ul li{
-    list-style: none;
+  h2{
+    text-align: center;
+    max-width: 20ch;
+    margin-inline: auto;
   }
 }
 
-/* boton whatssapp */
-/* WhatsApp Button */
-.boton-whatsapp {
-  position: fixed;
-  bottom: 8rem;
-  right: 12px;
-  z-index: 100;
-  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.5s 6 alternate-reverse both;
-  animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.5s 6 alternate-reverse both;
-  transition: all .2s ease-in-out;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  text-decoration: none;
-}
+/* Estilos existentes para testimonios */
+.testimonials-container {
+  min-height: 400px;
+  position: relative;
+  padding: 20px 0;
+  margin-top: 2rem;
+  overflow: hidden;
 
-.boton-whatsapp:hover {
-  -webkit-filter: drop-shadow(5px 5px 5px rgba(190, 190, 190, .7));
-  filter: drop-shadow(5px 5px 5px rgba(190, 190, 190, .7));
-  transform: scale(1.05);
-}
-
-/* Keyframes for the animation */
-@-webkit-keyframes scale-up-center {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.1);
+  h3 {
+    font-weight: 400;
+    font-size: 1.6rem;
+    max-width: 100%;
+    margin: 1rem 0 1rem;
   }
 }
 
-@keyframes scale-up-center {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.1);
+
+.testimonial-card {
+  display: none;
+  background-color: var(--dark);
+  border-radius: var(--border-radius);
+  padding: 3rem;
+  box-shadow: 0 4px 12px rgba(214, 190, 138, 0.363);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.testimonial-card.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.testimonial-card:hover {
+  box-shadow: 0 6px 16px rgba(207, 186, 147, 0.404);
+}
+
+.testimonial-rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.stars {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+  color: #FFD700;
+}
+
+.testimonial-text {
+  font-style: italic;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+/* Estilo para el texto truncado */
+.testimonial-text.truncated {
+  max-height: 4.8em; /* Aproximadamente 3 líneas (1.6em × 3) */
+}
+
+
+/* Mejorar la visibilidad del botón */
+.read-more-btn {
+  background: none;
+  border: none;
+  color: #d39b0d;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 0;
+  font-size: 14px;
+  text-decoration: underline;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+.read-more-btn:hover {
+  color: #b38309;
+}
+
+.testimonial-author {
+  display: grid;
+  border-top: 1px solid #e5e5e5;
+  padding-top: 1rem;
+
+  span{
+    font-size: 1.9rem;
+    color: #7f6d3f;
   }
 }
 
-/* scroll top */
-.boton-up {
-  position: fixed;
-  right: 15px;
-  bottom: 48px;
-  width: 50px;
-  height: 50px;
+/* Nuevos controles para el slider */
+.slider-controls {
   display: flex;
   justify-content: center;
-  align-items: center;
-  background-color: var(--accion);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  transition: all 300ms ease-in;
-  z-index: 5;
-  opacity: 0;
-  visibility: hidden;
+  margin-top: 2rem;
 }
 
-.boton-up.visible {
-  opacity: 1;
-  visibility: visible;
+.slider-dots {
+  display: flex;
+  gap: 8px;
 }
 
-.boton-up:hover {
-  transform: scale(1.1);
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #e5e5e5;
+  cursor: pointer;
+  transition: background-color var(--transition), transform var(--transition);
 }
 
-/* Asegurarse de que el icono sea blanco */
-.boton-up svg {
+.dot.active {
+  background-color: var(--primary);
+  transform: scale(1.2);
+}
+
+.slider-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.slider-btn {
+  background-color: rgba(204, 175, 102, 0.7);
   color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color var(--transition);
+}
+
+.slider-btn:hover {
+  background-color: var(--primary);
+}
+
+@media (max-width: 768px) {
+  .slider-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+}
+
+.treatments {
+  text-align: start;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  
+  img {
+    height: 334px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  
+  h4{
+    color: var(--accion);
+  }
+}
+
+.treatments:hover {
+  background-color: var(--crystal-clear);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
 }

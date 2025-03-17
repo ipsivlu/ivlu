@@ -1,0 +1,28 @@
+.highlight-list p{
+  position: relative;
+  
+  span{
+    position: absolute;
+    left: -0.5em;
+    top: 0;
+    font-size: 5rem;
+    color: #ccaf6667;
+    font-weight: 700;
+    line-height: 1;
+  } 
+}
+
+
+.highlight-list li{
+  list-style: disc;
+}
+
+.highlight-list li::marker{
+    color: var(--primary);
+    font-size: 2rem;
+}
+
+.highlight-testimonial {
+  border-left: 3px solid var(--primary);
+  padding-left: 10px;
+}
