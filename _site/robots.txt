@@ -81,7 +81,7 @@ Allow: /en/
 Allow: /es/blog/
 Allow: /en/blog/
 Allow: /es/servicios/
-Allow: /en/servicios/
+Allow: /en/services/
 Allow: /es/tecnologias/
 Allow: /en/technologies/
 
