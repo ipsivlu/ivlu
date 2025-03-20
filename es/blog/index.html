@@ -23,7 +23,7 @@ dateModified: "2025-03-07"
       <p>Descubre las últimas tendencias en medicina estética y cuidado personal</p>
     </div>
     <div class="category_button center">
-      <a href="/blog" class="buttons btn-secondary">Ver todos los artículos</a>
+      <a href="/blog/" class="buttons btn-secondary">Ver todos los artículos</a>
   </div>
 </div>
 
@@ -32,7 +32,7 @@ dateModified: "2025-03-07"
   {% for post in posts limit:3 %}
     <article class="blog-post">
       <div class="blog-image">
-        <img src="{{ post.image | relative_url }}" 
+        <img src="{{ post.hero | relative_url }}" 
              alt="{{ post.title }}" 
              loading="lazy" 
              width="400" 

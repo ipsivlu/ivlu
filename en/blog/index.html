@@ -22,7 +22,7 @@ dateModified: "2025-03-07"
       <p>Discover breakthrough treatments and personalized care strategies</p>
     </div>
     <div class="category_button center">
-      <a href="/blog" class="buttons btn-secondary">View All Articles</a>
+      <a href="/blog/" class="buttons btn-secondary">View All Articles</a>
     </div>
   </div>
 
@@ -31,7 +31,7 @@ dateModified: "2025-03-07"
   {% for post in posts limit:3 %}
     <article class="blog-post">
       <div class="blog-image">
-        <img src="{{ post.image | relative_url }}" 
+        <img src="{{ post.hero | relative_url }}" 
              alt="{{ post.title | escape }}" 
              loading="lazy" 
              width="400" 
