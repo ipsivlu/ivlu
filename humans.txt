@@ -1,19 +1,19 @@
 /* TEAM */
 Director Médico: Dra. Tatiana Leal
 Título: Especialista en Medicina Estética y Láser
-Site: https://dratatianaleal.com
+Site: https://ivlumedicinaestetica.com
 Location: Bogotá, Colombia
 
-Especialista: Dr. Marco Bonilla
-Título: Especialista en Ginecología y Obstetricia
+Especialista: Dra. Luisa Antia
+Título: Especialista en Medicina Estética y Restauración Capilar
 Location: Bogotá, Colombia
 
-Especialista: Dra. Andrea Rincón
-Título: Médico Cirujano
+Especialista: Dra. Ivonne Camacho
+Título: Especialista en Medicina Estética y Restauración Capilar
 Location: Bogotá, Colombia
 
 /* SITE */
-Last update: 2024/12/12
+Last update: 2025/03/12
 Standards: HTML5, CSS3, Schema.org
 Components: Jekyll, Liquid, JavaScript
 Software: VSCode, Git, GitHub Pages

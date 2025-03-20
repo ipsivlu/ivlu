@@ -1,4 +1,4 @@
-# robots.txt for Dra Tatiana Leal
+# robots.txt for Clínica de medicina estética IVLU
 # {{ site.url }}{{ site.baseurl }}/
 
 # Allow legitimate search engines
