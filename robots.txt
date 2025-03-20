@@ -1,4 +1,4 @@
-# robots.txt for Clínica de medicina estética IVLU
+# robots.txt for Dra Tatiana Leal
 # {{ site.url }}{{ site.baseurl }}/
 
 # Allow legitimate search engines
@@ -80,8 +80,12 @@ Allow: /es/
 Allow: /en/
 Allow: /es/blog/
 Allow: /en/blog/
-Allow: /es/servicios/
-Allow: /en/services/
+Allow: /es/tratamientos-faciales/
+Allow: /en/facial-treatments/
+Allow: /es/tratamientos-corporales/
+Allow: /en/body-treatments/
+Allow: /es/tratamientos-intimos/
+Allow: /en/intimate-treatments/
 Allow: /es/tecnologias/
 Allow: /en/technologies/
 
@@ -105,19 +109,24 @@ Disallow: /*.json$
 Disallow: /*.xml$
 Disallow: /cgi-bin/
 Disallow: /tmp/
+Disallow: /es_co/
+Disallow: /corporales/
+Disallow: /rejuvenecimiento-facial/
+Disallow: /ginecologia-estetica/
+Disallow: /services/
 
 # Media and resource protection
 Allow: /img/*.avif$ 
 Allow: /img/*.jpg$
 Allow: /img/*.png$
 Allow: /img/*.webp$
-Disallow: /assets/
+Disallow: /css/
+Disallow: /js/
+Disallow: /fonts/
+Disallow: /images/
 
 # Critical files
 Allow: /sitemap.xml
-Allow: /sitemap-main.xml
-Allow: /sitemap-treatments.xml
-Allow: /sitemap-posts.xml
 
 # Rate limiting
 Crawl-delay: 10
