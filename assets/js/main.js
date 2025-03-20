@@ -487,8 +487,8 @@ document.addEventListener("DOMContentLoaded", function () {
     var encodedMessage = encodeURIComponent(message);
 
     /* Enlaces de WhatsApp para móvil y escritorio con el mensaje dinámico*/
-    var mobileLink = "https://wa.me/573222010384?text=" + encodedMessage;
-    var desktopLink = "https://web.whatsapp.com/send?phone=573222010384&text=" + encodedMessage;
+    var mobileLink = "https://wa.me/573228351465?text=" + encodedMessage;
+    var desktopLink = "https://web.whatsapp.com/send?phone=573228351465&text=" + encodedMessage;
 
     /* Asignar el enlace adecuado según el dispositivo*/
     if (isMobile) {
