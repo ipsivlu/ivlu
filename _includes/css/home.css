@@ -63,3 +63,11 @@
   margin-top: 0.5rem;
   font-weight: 700;
 }
+
+/* Seccion con fondo full width */
+.bg_full {
+  background-color: var(--crystal-clear);
+    box-shadow: 0 0 0 100vmax var(--crystal-clear);
+    -webkit-clip-path: inset(0 -100vmax);
+            clip-path: inset(0 -100vmax);
+}

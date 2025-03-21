@@ -1,7 +1,6 @@
 ---
 layout: compress
 ---
-{% include css/nav.css %}
 {% include css/hero.css %}
 {% include css/buttons.css %}
 {% include css/home.css %}
