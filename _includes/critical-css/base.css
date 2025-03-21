@@ -56,215 +56,6 @@ body {
   font-family: var(--font-family);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5{
-  line-height: var(--line-height);
-  text-transform: none;
-  max-width: 26ch;
-}
-
-h1 {
-  font-size: var(--font-size-h1);
-}
-
-h2{
-  color: var(--primary);
-  font-size: var(--font-size-h2);
-}
-
-h3 {
-  font-size: var(--font-size-h3);
-  color: var(--color-gray);
-}
-
-h4 {
-  font-size: var(--font-size-h4);
-}
-
-h5{
-  font-size: var(--font-size-h5);
-}
-
-p{
-  font-size: var(--font-size-p);
-  width: min(100%, 600px);
-  margin-bottom: 1rem;
-}
-
-ul, ol{
-  margin-left: 2em;
-}
-
-li {
-  width: min(100%, 600px);
-}
-
-ol li {
-  margin-left: 3em;
-  list-style: decimal;
-}
-
-::marker {
-  font-size: 2rem;
-  color: var(--background);
-}
-
-a{
-  text-decoration: none;
-  color: var(--accion);
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  font-weight: 700;
-
-  &:hover{
-    text-decoration: underline;
-    text-decoration-thickness: 2.4px;
-    text-underline-offset: 0.4em;
-    color: var(--primary);
-  }
-}
-
-img {
-  border-style: none;
-  width: 100%;
-  height: auto;
-  box-shadow: var(--shadow);
-  border-radius: var(--border-radius-imgs);
-}
-
-/* Responsive Wrapper */
-.wrapper {
-  padding: 8em 0;
-  width: min(calc(100% - 2rem), 1280px);
-  margin-inline: auto;
-}
-
-/* Flow Utility for Spacing */
-.flow > * + * {
-  margin-top: 1.5em;
-}
-
-/* Two Columns Layout */
-.two_columns {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 3em;
-}
-
-.two_columns > div,
-.two_columns figure {
-  flex: 1 0 400px;
-  max-width: 100%;
-}
-/* 
-.two_columns img {
-  height: auto;
-} */
-
-.two_columns-image {
-  line-height: 0;
-}
-
-.two_columns_left {
-  flex-direction: row-reverse;
-}
-
-/* Three Columns Layout */
-.three_columns {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1em;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 8em 0 4em;
-  
-  & > div {
-    position: relative;
-    width: min(100%, 376px);
-    display: grid;
-    place-items: center;
-    overflow: hidden;
-  }
-}
-
-/* WhatsApp Button */
-.boton-whatsapp {
-  position: fixed;
-  bottom: 8rem;
-  right: 12px;
-  z-index: 100;
-  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.5s 6 alternate-reverse both;
-  animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.5s 6 alternate-reverse both;
-  transition: all .2s ease-in-out;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  text-decoration: none;
-}
-
-.boton-whatsapp:hover {
-  -webkit-filter: drop-shadow(5px 5px 5px rgba(190, 190, 190, .7));
-  filter: drop-shadow(5px 5px 5px rgba(190, 190, 190, .7));
-  transform: scale(1.05);
-}
-
-/* Keyframes for the animation */
-@-webkit-keyframes scale-up-center {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.1);
-  }
-}
-
-@keyframes scale-up-center {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.1);
-  }
-}
-
-
-/* scroll top */
-.boton-up {
-  position: fixed;
-  right: 15px;
-  bottom: 48px;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--primary);
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow);
-  transition: all 300ms ease-in;
-  z-index: 5;
-  opacity: 0;
-  visibility: hidden;
-}
-
-.boton-up.visible {
-  opacity: 1;
-  visibility: visible;
-}
-
-.boton-up:hover {
-  transform: scale(1.1);
-}
-
-/* Asegurarse de que el icono sea blanco */
-.boton-up svg {
-  color: white;
-}
-
-
-
 /* ====================================
    HEADER Y NAVEGACIÓN
    ==================================== */
@@ -708,3 +499,217 @@ img {
     gap: 8px;
   }
 }
+
+/*************
+OTROS ESTILOS GENERALES
+**************/
+
+h1,
+h2,
+h3,
+h4,
+h5{
+  line-height: var(--line-height);
+  text-transform: none;
+  max-width: 26ch;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+}
+
+h2{
+  color: var(--primary);
+  font-size: var(--font-size-h2);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+  color: var(--color-gray);
+}
+
+h4 {
+  font-size: var(--font-size-h4);
+}
+
+h5{
+  font-size: var(--font-size-h5);
+}
+
+p{
+  font-size: var(--font-size-p);
+  width: min(100%, 600px);
+  margin-bottom: 1rem;
+}
+
+ul, ol{
+  margin-left: 2em;
+}
+
+li {
+  width: min(100%, 600px);
+}
+
+ol li {
+  margin-left: 3em;
+  list-style: decimal;
+}
+
+::marker {
+  font-size: 2rem;
+  color: var(--background);
+}
+
+a{
+  text-decoration: none;
+  color: var(--accion);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  font-weight: 700;
+
+  &:hover{
+    text-decoration: underline;
+    text-decoration-thickness: 2.4px;
+    text-underline-offset: 0.4em;
+    color: var(--primary);
+  }
+}
+
+img {
+  border-style: none;
+  width: 100%;
+  height: auto;
+  box-shadow: var(--shadow);
+  border-radius: var(--border-radius-imgs);
+}
+
+/* Responsive Wrapper */
+.wrapper {
+  padding: 8em 0;
+  width: min(calc(100% - 2rem), 1280px);
+  margin-inline: auto;
+}
+
+/* Flow Utility for Spacing */
+.flow > * + * {
+  margin-top: 1.5em;
+}
+
+/* Two Columns Layout */
+.two_columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3em;
+}
+
+.two_columns > div,
+.two_columns figure {
+  flex: 1 0 400px;
+  max-width: 100%;
+}
+/* 
+.two_columns img {
+  height: auto;
+} */
+
+.two_columns-image {
+  line-height: 0;
+}
+
+.two_columns_left {
+  flex-direction: row-reverse;
+}
+
+/* Three Columns Layout */
+.three_columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 8em 0 4em;
+  
+  & > div {
+    position: relative;
+    width: min(100%, 376px);
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+  }
+}
+
+/* WhatsApp Button */
+.boton-whatsapp {
+  position: fixed;
+  bottom: 8rem;
+  right: 12px;
+  z-index: 100;
+  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.5s 6 alternate-reverse both;
+  animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.5s 6 alternate-reverse both;
+  transition: all .2s ease-in-out;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  text-decoration: none;
+}
+
+.boton-whatsapp:hover {
+  -webkit-filter: drop-shadow(5px 5px 5px rgba(190, 190, 190, .7));
+  filter: drop-shadow(5px 5px 5px rgba(190, 190, 190, .7));
+  transform: scale(1.05);
+}
+
+/* Keyframes for the animation */
+@-webkit-keyframes scale-up-center {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes scale-up-center {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+
+/* scroll top */
+.boton-up {
+  position: fixed;
+  right: 15px;
+  bottom: 48px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  transition: all 300ms ease-in;
+  z-index: 5;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.boton-up.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.boton-up:hover {
+  transform: scale(1.1);
+}
+
+/* Asegurarse de que el icono sea blanco */
+.boton-up svg {
+  color: white;
+}
+
+
+
