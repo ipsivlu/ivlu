@@ -39,8 +39,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   
-  <!-- Styles con rutas absolutas para evitar problemas en idiomas -->
-  <link rel="preload" href="{{ site.url }}/assets/css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  {% capture critical_css %}
+  {% include critical-css/base.css %}
+  {% endcapture %}
+  <style>{{ critical_css }}</style>
+
+  <link rel="preload" href="{{ '/assets/css/styles.css' | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}"></noscript>
+
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

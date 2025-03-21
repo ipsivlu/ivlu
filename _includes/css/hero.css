@@ -123,4 +123,8 @@ header.hero_home {
     margin-inline: auto;
     padding: 0 2rem;
   }
+
+  img{
+    width: min(100%, 1320px);
+  }
 }

@@ -2,23 +2,14 @@
 .post-content {
   line-height: 1.6;
   position: relative;
-}
 
-.post-content img {
-  position: absolute;
-  right: 0;
-  width: min(100%, 450px);
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
+  p{
+    display: block;
+  }
 
-.post-content h3,
-.post-content h2,
-.post-content h1,
-.post-content p,
-.post-content li {
-  width: 50%;
-  max-width: 600px;
+  img{
+    float: right;
+  }
 }
 
 .post-content h3{
@@ -131,6 +122,7 @@
 .faq-answer p {
   margin: 0;
   line-height: 1.6;
+  width: min(100%, 992px);
 }
 
 /* Estilos para la sección de blog */
@@ -194,4 +186,41 @@
 
 .blog-link:hover {
   color: #b09a5b;
+}
+
+hr {
+  border: none;
+  height: 0.2rem;
+  background-image: linear-gradient(to right, #fff 50%, transparent 50%);
+  background-size: 40px 3px;
+  width: 100%;
+  margin: 2rem auto;
+  opacity: 0.5;
+}
+
+table {
+  width: 100%;
+  margin: 2em 0 4em;
+}
+
+table tr {
+  border-bottom: 2px dotted var(--color-gray-light);
+  display: flex;
+  padding: 24px;
+  flex-wrap: wrap;
+  gap: 12px;
+  width: 100%;
+}
+
+table tr:nth-child(even) {
+  background-color: var(--color-gray-light);
+}
+
+table th {
+  font-weight: 900;
+}
+
+table td,
+table th {
+  flex: 1 0 200px;
 }

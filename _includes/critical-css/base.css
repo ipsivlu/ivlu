@@ -88,15 +88,18 @@ h5{
   font-size: var(--font-size-h5);
 }
 
-p,
-li{
+p{
   font-size: var(--font-size-p);
-  width: min(100%, 70ch);
+  width: min(100%, 600px);
   margin-bottom: 1rem;
 }
 
-li {
+ul, ol{
   margin-left: 2em;
+}
+
+li {
+  width: min(100%, 600px);
 }
 
 ol li {
@@ -125,49 +128,11 @@ a{
 
 img {
   border-style: none;
-  max-width: 100%;
+  width: 100%;
   height: auto;
   box-shadow: var(--shadow);
   border-radius: var(--border-radius-imgs);
 }
-
-hr {
-  border: none;
-  height: 0.2rem;
-  background-image: linear-gradient(to right, #fff 50%, transparent 50%);
-  background-size: 40px 3px;
-  width: 100%;
-  margin: 2rem auto;
-  opacity: 0.5;
-}
-
-table {
-  width: 100%;
-  margin: 2em 0 4em;
-}
-
-table tr {
-  border-bottom: 2px dotted var(--color-gray-light);
-  display: flex;
-  padding: 24px;
-  flex-wrap: wrap;
-  gap: 12px;
-  width: 100%;
-}
-
-table tr:nth-child(even) {
-  background-color: var(--color-gray-light);
-}
-
-table th {
-  font-weight: 900;
-}
-
-table td,
-table th {
-  flex: 1 0 200px;
-}
-
 
 /* Responsive Wrapper */
 .wrapper {
