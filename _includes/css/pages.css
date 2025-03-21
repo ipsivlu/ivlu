@@ -21,6 +21,12 @@
   align-items: center;
 }
 
+.filter {
+  box-shadow: none;
+  -webkit-filter: drop-shadow(3px 3px 8px rgba(0, 0, 0, 0.3));
+          filter: drop-shadow(3px 3px 8px rgba(0, 0, 0, 0.3));
+}
+
 .text_center {
   display: grid;
   gap: 1em;
