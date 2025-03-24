@@ -1,14 +1,10 @@
 /* TEAM */
-Director Médico: Dra. Tatiana Leal
-Título: Especialista en Medicina Estética y Láser
+Director Médico: Dra. Luisa Martínez
+Título: Experta en Medicina Estética y Restauración Capilar
 Site: https://ivlumedicinaestetica.com
 Location: Bogotá, Colombia
 
-Especialista: Dra. Luisa Antia
-Título: Especialista en Medicina Estética y Restauración Capilar
-Location: Bogotá, Colombia
-
-Especialista: Dra. Ivonne Camacho
+Experta: Dra. Ivonne Camacho
 Título: Especialista en Medicina Estética y Restauración Capilar
 Location: Bogotá, Colombia
 
