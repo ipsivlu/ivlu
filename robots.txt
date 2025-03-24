@@ -1,5 +1,5 @@
 # robots.txt for Clínica de medicina estética IVLU
-# {{ site.url }}{{ site.baseurl }}/
+# https://ivlumedicinaestetica.com/
 
 # Allow legitimate search engines
 User-agent: Googlebot
@@ -17,9 +17,10 @@ Allow: /
 User-agent: Applebot
 Allow: /
 
-# Block known malicious bots and crawlers
 User-agent: AhrefsBot
-Disallow: /
+Allow: /
+
+# Block known malicious bots and crawlers
 
 User-agent: SemrushBot
 Disallow: /
@@ -80,12 +81,8 @@ Allow: /es/
 Allow: /en/
 Allow: /es/blog/
 Allow: /en/blog/
-Allow: /es/tratamientos-faciales/
-Allow: /en/facial-treatments/
-Allow: /es/tratamientos-corporales/
-Allow: /en/body-treatments/
-Allow: /es/tratamientos-intimos/
-Allow: /en/intimate-treatments/
+Allow: /es/servicios/
+Allow: /en/services/
 Allow: /es/tecnologias/
 Allow: /en/technologies/
 
@@ -99,7 +96,6 @@ Disallow: /wp-admin/
 Disallow: /wp-includes/
 Disallow: /wp-content/
 Disallow: /search
-Disallow: /feed/
 Disallow: /trackback/
 Disallow: /comments/
 Disallow: /*?
@@ -109,21 +105,16 @@ Disallow: /*.json$
 Disallow: /*.xml$
 Disallow: /cgi-bin/
 Disallow: /tmp/
-Disallow: /es_co/
-Disallow: /corporales/
-Disallow: /rejuvenecimiento-facial/
-Disallow: /ginecologia-estetica/
-Disallow: /services/
 
 # Media and resource protection
-Allow: /img/*.avif$ 
-Allow: /img/*.jpg$
-Allow: /img/*.png$
-Allow: /img/*.webp$
-Disallow: /css/
-Disallow: /js/
-Disallow: /fonts/
-Disallow: /images/
+Allow: /assets/images/*.avif$ 
+Allow: /assets/images/*.jpg$
+Allow: /assets/images/*.png$
+Allow: /assets/images/*.webp$
+Allow: /assets/css/
+Allow: /assets/js/
+Allow: /assets/fonts/
+Allow: /assets/images/
 
 # Critical files
 Allow: /sitemap.xml
@@ -132,10 +123,10 @@ Allow: /sitemap.xml
 Crawl-delay: 10
 
 # Sitemaps
-Sitemap: {{ site.url }}{{ site.baseurl }}/sitemap.xml
+Sitemap: https://ivlumedicinaestetica.com/sitemap.xml
 
 # Define preferred domain
-Host: {{ site.url | replace: 'https://', '' | replace: 'http://', '' }}
+Host: ivlumedicinaestetica.com
 
 # Additional Security Headers (add these to your .htaccess or server config)
 # X-Robots-Tag: noarchive, noimageindex
