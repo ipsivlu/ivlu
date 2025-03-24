@@ -119,14 +119,8 @@ Allow: /assets/images/
 # Critical files
 Allow: /sitemap.xml
 
-# Rate limiting
-Crawl-delay: 10
-
 # Sitemaps
 Sitemap: https://ivlumedicinaestetica.com/sitemap.xml
-
-# Define preferred domain
-Host: ivlumedicinaestetica.com
 
 # Additional Security Headers (add these to your .htaccess or server config)
 # X-Robots-Tag: noarchive, noimageindex
