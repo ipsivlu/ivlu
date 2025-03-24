@@ -147,7 +147,7 @@ Es importante entender que tanto Dutasteride como Finasteride son tratamientos c
 
 Dutasteride y Finasteride representan avances significativos en el tratamiento de la alopecia androgenética, ofreciendo esperanza real para quienes sufren de pérdida de cabello. Sin embargo, la decisión de utilizar estos medicamentos debe tomarse siempre bajo supervisión médica especializada, considerando cuidadosamente los beneficios esperados frente a los posibles riesgos.
 
-En IVLU Bogotá, nuestro equipo de especialistas está preparado para ofrecerte una evaluación personalizada y guiarte en la elección del tratamiento más adecuado para tu caso particular. [Agenda una consulta](/es/contacto) para recibir asesoramiento profesional y comenzar tu camino hacia la recuperación capilar.
+En IVLU Bogotá, nuestro equipo de expertas está preparado para ofrecerte una evaluación personalizada y guiarte en la elección del tratamiento más adecuado para tu caso particular. [Agenda una consulta](/es/contacto) para recibir asesoramiento profesional y comenzar tu camino hacia la recuperación capilar.
 
 ---
 

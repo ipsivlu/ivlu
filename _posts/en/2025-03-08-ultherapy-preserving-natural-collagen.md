@@ -154,7 +154,7 @@ Ultherapy is more than a one-time aesthetic treatment; it’s a scientifically b
 
 At IVLU Bogotá, we integrate Ultherapy into personalized protocols that consider not only the skin’s current condition but also its future needs, creating a long-term plan to maintain healthy, firm, and natural-looking skin over time.  
 
-If you’re interested in learning how Ultherapy can fit into your personal collagen-preservation strategy, [schedule a consultation](/en/contact) with our specialists for a detailed analysis of your specific needs.  
+If you’re interested in learning how Ultherapy can fit into your personal collagen-preservation strategy, [schedule a consultation](/en/contact) with our experts for a detailed analysis of your specific needs.  
 
 ---  
 
