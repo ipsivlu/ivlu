@@ -85,7 +85,7 @@ Lo más destacable es que estos cambios se produjeron de forma gradual y natural
 
 Morpheus 8 representa un punto de inflexión en la medicina estética, combinando lo mejor de varias tecnologías en un solo dispositivo seguro y efectivo. Su capacidad para tratar múltiples preocupaciones estéticas, tanto faciales como corporales, junto con su perfil de seguridad en todos los tipos de piel, lo convierte en una herramienta indispensable en la medicina estética moderna.
 
-En IVLU Bogotá, continuamos a la vanguardia de la innovación estética, ofreciendo a nuestros pacientes los tratamientos más avanzados y efectivos. Si estás interesado en descubrir cómo Morpheus 8 puede transformar tu piel, [agenda una consulta personalizada](/es/contacto) con nuestro equipo de especialistas.
+En IVLU Bogotá, continuamos a la vanguardia de la innovación estética, ofreciendo a nuestros pacientes los tratamientos más avanzados y efectivos. Si estás interesado en descubrir cómo Morpheus 8 puede transformar tu piel, [agenda una consulta personalizada](/es/contacto) con nuestro equipo de expertas.
 
 ---
 

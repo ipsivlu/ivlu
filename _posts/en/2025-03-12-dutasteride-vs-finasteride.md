@@ -147,7 +147,7 @@ It’s important to understand that both Dutasteride and Finasteride are continu
 
 Dutasteride and Finasteride represent significant advances in the treatment of androgenetic alopecia, offering real hope for those suffering from hair loss. However, the decision to use these medications should always be made under specialized medical supervision, carefully weighing the expected benefits against potential risks.  
 
-At IVLU Bogotá, our team of specialists is ready to provide a personalized evaluation and guide you in choosing the most appropriate treatment for your specific case. [Schedule a consultation](/en/contact) to receive professional advice and begin your journey toward hair recovery.  
+At IVLU Bogotá, our team of experts is ready to provide a personalized evaluation and guide you in choosing the most appropriate treatment for your specific case. [Schedule a consultation](/en/contact) to receive professional advice and begin your journey toward hair recovery.  
 
 ---  
 

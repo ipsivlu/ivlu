@@ -85,7 +85,7 @@ Most importantly, these changes occurred gradually and naturally, without the ar
 
 Morpheus 8 represents a turning point in aesthetic medicine, combining the best of multiple technologies into a single safe and effective device. Its ability to address multiple aesthetic concerns, both facial and body-related, along with its safety profile for all skin types, makes it an indispensable tool in modern aesthetic medicine.  
 
-At IVLU Bogotá, we continue to lead the way in aesthetic innovation, offering our patients the most advanced and effective treatments. If you’re interested in discovering how Morpheus 8 can transform your skin, [schedule a personalized consultation](/en/contact) with our team of specialists.  
+At IVLU Bogotá, we continue to lead the way in aesthetic innovation, offering our patients the most advanced and effective treatments. If you’re interested in discovering how Morpheus 8 can transform your skin, [schedule a personalized consultation](/en/contact) with our team of experts.  
 
 ---  
 

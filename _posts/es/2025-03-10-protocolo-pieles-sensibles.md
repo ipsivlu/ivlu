@@ -7,7 +7,7 @@ lang: es
 ref: protocolo-pieles-sensibles
 hero: "/assets/images/tratamiento-pieles-sensibles-protocolo.avif"
 jpg: "/assets/images/tratamiento-pieles-sensibles-protocolo.jpg"
-description: "Descubre el protocolo de 7 pasos desarrollado por especialistas para tratar eficazmente pieles sensibles y reactivas. Basado en evidencia clínica y experiencia dermatológica para resultados duraderos."
+description: "Descubre el protocolo de 7 pasos desarrollado por expertas para tratar eficazmente pieles sensibles y reactivas. Basado en evidencia clínica y experiencia dermatológica para resultados duraderos."
 excerpt: "La piel sensible afecta a casi el 60% de la población y necesita un enfoque especializado. Nuestros expertos comparten un protocolo de 7 pasos basado en evidencia clínica para transformar pieles sensibles y reactivas, devolviendo confort y salud."
 ---
 
@@ -112,7 +112,7 @@ La conexión mente-piel está científicamente demostrada, especialmente en piel
 - La ansiedad puede reducir hasta un 20% la función barrera de la piel
 - El insomnio altera los ciclos de regeneración cutánea nocturna
 
-Por ello, complementamos el protocolo con técnicas de manejo del estrés, higiene del sueño y, en casos necesarios, derivación a especialistas en medicina psicosomática.
+Por ello, complementamos el protocolo con técnicas de manejo del estrés, higiene del sueño y, en casos necesarios, derivación a expertas en medicina psicosomática.
 
 ## Casos clínicos: resultados del protocolo a largo plazo
 

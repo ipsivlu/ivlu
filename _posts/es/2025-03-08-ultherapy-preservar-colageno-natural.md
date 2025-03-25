@@ -118,7 +118,7 @@ Aunque Ultherapy ofrece beneficios significativos para la preservación del col�
 * **Flacidez severa**: Pueden necesitar más de una sesión o combinación con otros tratamientos
 * **Post-lifting quirúrgico**: Excelente para mantener los resultados de cirugía previa
 
-La evaluación previa por un especialista es fundamental para determinar si Ultherapy es la opción más adecuada o si se beneficiaría más de otras alternativas o tratamientos combinados.
+La evaluación previa por un experto es fundamental para determinar si Ultherapy es la opción más adecuada o si se beneficiaría más de otras alternativas o tratamientos combinados.
 
 ## Expectativas realistas: Lo que Ultherapy puede y no puede hacer
 
@@ -163,7 +163,7 @@ Ultherapy representa mucho más que un tratamiento estético puntual; es una est
 
 En IVLU Bogotá, integramos Ultherapy en protocolos personalizados que consideran no solo la condición actual de la piel, sino también sus necesidades futuras, creando un plan a largo plazo para mantener una piel saludable, firme y natural a lo largo del tiempo.
 
-Si estás interesado en conocer cómo Ultherapy puede integrarse en tu estrategia personal de preservación del colágeno, [agenda una consulta de evaluación](/es/contacto) con nuestros especialistas para un análisis detallado de tus necesidades específicas.
+Si estás interesado en conocer cómo Ultherapy puede integrarse en tu estrategia personal de preservación del colágeno, [agenda una consulta de evaluación](/es/contacto) con nuestras expertas para un análisis detallado de tus necesidades específicas.
 
 ---
 
