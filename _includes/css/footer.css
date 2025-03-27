@@ -52,47 +52,6 @@ footer {
   }
 }
 
-.footer_cta {
-  font-weight: 700;
-  color: var(--primary);
-  margin: 3em 0;
-}
-
-/* Contenedor principal del footer */
-.footer-links {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1em;
-  margin-bottom: 4em;
-
-  li {
-    flex: 1 0 200px;
-    list-style: none;
-    margin: 0;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-
-    &:hover {
-      transform: translateY(-2px);
-    }
-  }
-
-  a {
-    text-decoration: underline;
-    text-decoration-thickness: 2.4px;
-    text-underline-offset: 4px;
-    font-weight: 700;
-    color: var(--accion);
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-
-    &:hover {
-      color: var(--primary);
-      text-shadow: 0 0 5px var(--neutral-gray-dark);
-      transform: translateY(-2px);
-    }
-  }
-}
-
 .footer-bottom {
   margin-top: 20px;
   font-size: 0.9rem;

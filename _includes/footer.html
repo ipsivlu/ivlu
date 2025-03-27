@@ -42,19 +42,6 @@
       </div>
     </section>
 
-    <h3 class="footer_cta">{% if current_lang == 'en' %}Transform your beauty with confidence! More resources to achieve it together{% else %}¡Transforma tu belleza con confianza! Más recursos para que lo logremos juntas{% endif %}</h3>
-
-    <nav aria-label="{% if current_lang == 'en' %}Footer navigation{% else %}Navegación del pie de página{% endif %}">
-      <ul class="footer-links">
-        <li><a href="/{{ current_lang }}/{% if current_lang == 'en' %}about/{% else %}sobre-nosotros/{% endif %}">→ {% if current_lang == 'en' %}About Us{% else %}Nosotros{% endif %}</a></li>
-        <li><a href="/{{ current_lang }}/{% if current_lang == 'en' %}dr-ivonne/{% else %}doctora-ivonne/{% endif %}">→ {% if current_lang == 'en' %}Dr. Ivonne{% else %}Doctora Ivonne{% endif %}</a></li>
-        <li><a href="/{{ current_lang }}/{% if current_lang == 'en' %}dr-luisa/{% else %}doctora-luisa/{% endif %}">→ {% if current_lang == 'en' %}Dr. Luisa{% else %}Doctora Luisa{% endif %}</a></li>
-        <li><a href="/{{ current_lang }}/{% if current_lang == 'en' %}technologies/{% else %}tecnologias/{% endif %}">→ {% if current_lang == 'en' %}Technologies{% else %}Tecnologías{% endif %}</a></li>
-        <li><a href="/{{ current_lang }}/{% if current_lang == 'en' %}aesthetic-services/{% else %}servicios/{% endif %}">→ {% if current_lang == 'en' %}Services{% else %}Servicios{% endif %}</a></li>
-        <li><a href="/{{ current_lang }}/{% if current_lang == 'en' %}faqs/{% else %}preguntas-frecuentes/{% endif %}">→ {% if current_lang == 'en' %}FAQs{% else %}FAQ's{% endif %}</a></li>
-      </ul>
-    </nav>
-
     <section class="footer-bottom">
       <p>{% if current_lang == 'en' %}@2025 - IVLU S.A.S. | All rights reserved{% else %}@2025 - IVLU S.A.S. | Todos los derechos reservados{% endif %}</p>
       <small>{% if current_lang == 'en' %}Web design by{% else %}Diseño web de{% endif %} <a href="https://juli.com.co/desarrollo-paginas-web" target="_blank">Juli.Com.Co</a></small>

@@ -5,13 +5,10 @@
     <title>Centro medico IVLU en Bogotá | Dra.Luisa & Dra.Ivonne</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Expertas en medicina estética y capilar en Bogotá. Tratamientos faciales, corporales y capilares.">
-    <!-- Enlaces hreflang para SEO -->
     <link rel="alternate" hreflang="es" href="http://localhost:4000/es/" />
     <link rel="alternate" hreflang="en" href="http://localhost:4000/en/" />
     <link rel="canonical" href="http://localhost:4000/es/" />
-    <!-- Favicon básico para la página de redirección -->
     <link rel="shortcut icon" href="http://localhost:4000/assets/images/favicon/favicon.ico" type="image/x-icon">
-    <!-- Estilos inline para evitar parpadeo -->
     <style>
         body, html {
             margin: 0;
@@ -19,7 +16,7 @@
             height: 100%;
             background-color: #ffffff;
             font-family: 'Montserrat', sans-serif;
-            visibility: hidden; /* Ocultar todo el contenido inicialmente */
+            visibility: hidden;
         }
         .redirect-container {
             display: flex;
@@ -50,13 +47,11 @@
         .language-selector a:hover {
             background-color: #333;
         }
-        /* Este noscript solo se mostrará si JS está deshabilitado */
         noscript .redirect-container {
             visibility: visible !important;
             opacity: 1 !important;
         }
     </style>
-    <!-- Mecanismo de redirección optimizado -->
     <script>
         function redirectToLanguage() {
             var userLang = navigator.language || navigator.userLanguage;
@@ -76,7 +71,6 @@
     </script>
 </head>
 <body>
-    <!-- Solo se muestra si JavaScript está deshabilitado o la redirección tarda -->
     <noscript>
         <style>
             body { visibility: visible; }
@@ -103,9 +97,7 @@
 </html>
 
 <!-- 
-corregir imagen inicio muy grande
 meter más comentarios, variados y quitar el de cancer
-quitar en footer cta y enalces
 en los cta finales de los servicios agregar un video vertical en vez del logo
 NO evaluación sino cita y el botón no está configurado
 Los del hero tampoco están configurados

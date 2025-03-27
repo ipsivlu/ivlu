@@ -1,1 +1,2 @@
-<a href="#" id="lead_whatsapp" rel="nofollow noopener noreferrer" class="buttons btn-primary" title="WhatsApp IVLU Bogotá">Agenda tu consulta VIP</a>
+{% assign current_lang = page.lang | default: site.default_lang | default: "es" %}
+<a href="#" id="lead_whatsapp" rel="nofollow noopener noreferrer" class="buttons btn-primary" title="WhatsApp IVLU Bogotá">{% if current_lang == 'en' %}Book your appointment{% else %}Agenda tu cita{% endif %}</a>
