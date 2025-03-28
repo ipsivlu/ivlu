@@ -62,7 +62,7 @@ layout: default
       {% for post in sorted_posts limit:3 %}
         <article class="blog-post">
           <div class="blog-image">
-            <img src="{{ post.image | relative_url }}"
+            <img src="{{ post.hero | relative_url }}"
                  alt="{{ post.title }}"
                  loading="lazy"
                  width="400"
