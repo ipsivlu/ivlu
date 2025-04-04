@@ -1,6 +1,7 @@
 <section class="wrapper flow">
   <h3 class="cards-title">{{include.data.title}}</h3>
   <div class="cards-container">
+    <!-- Ciclo para maquetar las tarjetas de site-data-cards -->
     {% for card in include.data.cards %}
     <div class="card">
       {% if card.image and card.image != "" %}
