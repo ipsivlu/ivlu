@@ -5,31 +5,30 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
   place-content: center;
+  gap: 2rem;
 
   & .intro {
     width: 100%;
-    -webkit-margin-after: 3rem;
-            margin-block-end: 3rem;
+    margin-block-end: 3rem;
   }
 }
 
 .before-after-case {
-  max-width: min(800px, 90%);
+  width: min(100%, 400px);
   margin-inline: auto;
   margin-block: 2rem;
   text-align: center;
 
   & h3 {
     text-align: center;
-    -webkit-margin-after: 1rem;
-            margin-block-end: 1rem;
+    margin-block-end: 1rem;
   }
 }
 
 .before-after-container {
   position: relative;
   width: 100%;
-  aspect-ratio: 4/3;
+  aspect-ratio: 3/4;
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow);
@@ -41,9 +40,7 @@
   position: absolute;
   inset: 0;
   cursor: col-resize;
-  -moz-user-select: none;
-   -ms-user-select: none;
-       user-select: none;
+  user-select: none;
   -webkit-user-select: none;
 }
 
@@ -59,11 +56,8 @@
   inset: 0;
   width: 100%;
   height: 100%;
-  -webkit-clip-path: inset(0 50% 0 0);
-          clip-path: inset(0 50% 0 0);
-  transition: -webkit-clip-path 0.1s ease-out;
+  clip-path: inset(0 50% 0 0);
   transition: clip-path 0.1s ease-out;
-  transition: clip-path 0.1s ease-out, -webkit-clip-path 0.1s ease-out;
   will-change: clip-path;
 }
 
@@ -73,8 +67,9 @@
   inset: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  /* Cambiado para mejor adaptación a cualquier proporción de imagen */
+  object-fit: cover;
+  object-position: center;
   pointer-events: none;
   -webkit-user-drag: none;
 }
@@ -152,8 +147,7 @@
 
 .case-description {
   text-align: center;
-  -webkit-margin-before: 1rem;
-          margin-block-start: 1rem;
+  margin-block-start: 1rem;
   font-size: 0.9375rem;
   max-width: min(100%, 600px);
   margin-inline: auto;
@@ -165,10 +159,10 @@
 }
 
 /* Fallback para navegadores que no soportan aspect-ratio */
-@supports not (aspect-ratio: 4/3) {
+@supports not (aspect-ratio: 3/4) {
   .before-after-container::before {
     float: left;
-    padding-top: 75%;
+    padding-top: 133.33%; /* 4/3 = 133.33% para proporción vertical */
     content: '';
   }
   
@@ -179,6 +173,11 @@
   }
 }
 
+/* Estado activo durante el deslizamiento */
+.before-after-wrapper.sliding {
+  cursor: grabbing;
+}
+
 /* Ajustes responsivos */
 @container before-after (max-width: 480px) {
   .compare-label {
@@ -187,7 +186,7 @@
     font-size: 0.75rem;
   }
 
-  .slider-line .slider-button {
+  .slider-button {
     --button-size: 36px;
 
     & svg {
@@ -217,8 +216,7 @@
 .before-after-wrapper,
 .slider-line,
 .before-image-container {
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   transform-style: preserve-3d;
   perspective: 1000px;
 }

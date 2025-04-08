@@ -1,15 +1,184 @@
-facial:
+# Casos de éxito IVLU - Estructura para ambos idiomas (ES/EN)
+# Casos de Tratamientos Faciales
+faciales:
+  - title:
+      es: "Dysport - Orbicular"
+      en: "Dysport - Orbicular"
+    description:
+      es: "Reducción de arrugas de expresión mediante relajación muscular controlada en la zona orbicular, logrando resultados naturales con efecto inmediato."
+      en: "Reduction of expression wrinkles through controlled muscle relaxation in the orbicular area, achieving natural results with immediate effect."
+    before_image: "/assets/images/orbicular-before.avif"
+    after_image: "/assets/images/orbicular.avif"
+    categoria:
+      es: "Tratamientos faciales"
+      en: "Facial treatments"
+    subcategoria:
+      es: "Dysport"
+      en: "Dysport"
 
-implante-capilar:
+  - title:
+      es: "Dysport - Entrecejo"
+      en: "Dysport - Frown Lines"
+    description:
+      es: "Tratamiento inyectable para suavizar las líneas del entrecejo, aportando un aspecto más relajado y juvenil con resultados naturales."
+      en: "Injectable treatment to smooth frown lines, providing a more relaxed and youthful appearance with natural results."
+    before_image: "/assets/images/entrecejo-before.avif"
+    after_image: "/assets/images/entrecejo.avif"
+    categoria:
+      es: "Tratamientos faciales"
+      en: "Facial treatments"
+    subcategoria:
+      es: "Dysport"
+      en: "Dysport"
 
-terapia-capilar:
+  - title:
+      es: "Dysport - Frente"
+      en: "Dysport - Forehead"
+    description:
+      es: "Suavizado de líneas horizontales en la frente mediante neurotoxina, consiguiendo una apariencia descansada y rejuvenecida sin perder expresividad."
+      en: "Smoothing of horizontal lines on the forehead with neurotoxin, achieving a rested and rejuvenated appearance without losing expressiveness."
+    before_image: "/assets/images/frente-before.avif"
+    after_image: "/assets/images/frente.avif"
+    categoria:
+      es: "Tratamientos faciales"
+      en: "Facial treatments"
+    subcategoria:
+      es: "Dysport"
+      en: "Dysport"
 
-cases:
-  - title: "Abdominal Reduction with Sculptor"
-    before_image: "/img/antes-sculptor-abdomen.avif"
-    after_image: "/img/despues-sculptor-abdomen.avif"
-    description: "Results after 6 Sculptor sessions, showing notable reduction of abdominal fat and improved body contour."
-  - title: "Leg Contouring"
-    before_image: "/img/antes-sculptor-piernas.avif"
-    after_image: "/img/despues-sculptor-piernas.avif"
-    description: "Impressive leg definition after 8 Sculptor sessions, with visible reduction of cellulite and improved firmness."
+  - title:
+      es: "Disminución de pigmentos"
+      en: "Pigment reduction"
+    description:
+      es: "Tratamiento avanzado que elimina eficazmente manchas y pigmentaciones residuales tras la primera sesión, devolviendo luminosidad y uniformidad al tono de la piel."
+      en: "Advanced treatment that effectively eliminates spots and residual pigmentations after the first session, restoring luminosity and uniformity to the skin tone."
+    before_image: "/assets/images/disminucion-depigmentos-before.avif"
+    after_image: "/assets/images/disminucion-depigmentos-despues.avif"
+    categoria:
+      es: "Tratamientos faciales"
+      en: "Facial treatments"
+    subcategoria:
+      es: "Pigmentación"
+      en: "Pigmentation"
+
+  - title:
+      es: "Realce de labios"
+      en: "Lip enhancement"
+    description:
+      es: "Realce y definición de labios con técnicas profesionales para un aspecto natural y voluminoso. Tratamientos personalizados que hidratan y embellecen su sonrisa."
+      en: "Enhancement and definition of lips with professional techniques for a natural and voluminous appearance. Personalized treatments that hydrate and beautify your smile."
+    before_image: "/assets/images/labios-before.avif"
+    after_image: "/assets/images/labios.avif"
+    categoria:
+      es: "Tratamientos faciales"
+      en: "Facial treatments"
+    subcategoria:
+      es: "Aumento labial"
+      en: "Lip augmentation"
+
+  - title:
+      es: "Morpheus 8 - Rejuvenecimiento"
+      en: "Morpheus 8 - Rejuvenation"
+    description:
+      es: "Tratamiento avanzado de rejuvenecimiento que combina microagujas y radiofrecuencia para remodelar y reafirmar la piel, reduciendo arrugas y mejorando su textura a nivel profundo."
+      en: "Advanced rejuvenation treatment that combines microneedles and radiofrequency to reshape and firm the skin, reducing wrinkles and improving its texture at a deep level."
+    before_image: "/assets/images/morpheus-8-1.avif"
+    after_image: "/assets/images/morpheus-8-2.avif"
+    categoria:
+      es: "Tratamientos faciales"
+      en: "Facial treatments"
+    subcategoria:
+      es: "Morpheus 8"
+      en: "Morpheus 8"
+
+  - title:
+      es: "Morpheus 8 - Firmeza facial"
+      en: "Morpheus 8 - Facial firmness"
+    description:
+      es: "Tecnología innovadora que estimula la producción de colágeno para recuperar la firmeza facial perdida, con resultados visibles desde la primera sesión y mínimo tiempo de recuperación."
+      en: "Innovative technology that stimulates collagen production to recover lost facial firmness, with visible results from the first session and minimal recovery time."
+    before_image: "/assets/images/morpheus-8-3.avif"
+    after_image: "/assets/images/morpheus-8-4.avif"
+    categoria:
+      es: "Tratamientos faciales"
+      en: "Facial treatments"
+    subcategoria:
+      es: "Morpheus 8"
+      en: "Morpheus 8"
+
+  - title:
+      es: "Perfilado de mentón"
+      en: "Chin contouring"
+    description:
+      es: "Remodelación y definición del mentón mediante técnicas no invasivas que proporcionan armonía facial y mejoran el perfil, corrigiendo imperfecciones para un aspecto natural y equilibrado."
+      en: "Remodeling and definition of the chin through non-invasive techniques that provide facial harmony and improve the profile, correcting imperfections for a natural and balanced appearance."
+    before_image: "/assets/images/menton-before.avif"
+    after_image: "/assets/images/menton.avif"
+    categoria:
+      es: "Tratamientos faciales"
+      en: "Facial treatments"
+    subcategoria:
+      es: "Perfilado facial"
+      en: "Facial contouring"
+
+# Casos de Tratamientos Capilares
+capilares:
+  - title:
+      es: "Implante Capilar"
+      en: "Hair Implant"
+    description:
+      es: "Procedimiento estético-quirúrgico que consiste en extraer folículos pilosos sanos de una zona donante (generalmente la nuca) e implantarlos en áreas con calvicie o poco pelo, logrando resultados permanentes y naturales."
+      en: "Aesthetic-surgical procedure that consists of extracting healthy hair follicles from a donor area (usually the nape) and implanting them in areas with baldness or little hair, achieving permanent and natural results."
+    before_image: "/assets/images/implante-capilar-before.avif"
+    after_image: "/assets/images/implante-capilar-bogota-colombia.avif"
+    categoria:
+      es: "Tratamientos capilares"
+      en: "Hair treatments"
+    subcategoria:
+      es: "Implante capilar"
+      en: "Hair implant"
+
+  - title:
+      es: "Terapia Capilar - Alopecia"
+      en: "Hair Therapy - Alopecia"
+    description:
+      es: "Tratamiento que frena la caída del cabello, aumenta la densidad capilar y mejora la calidad del pelo, ideal para casos de alopecia incipiente o como complemento postrasplante, con resultados variables según cada paciente."
+      en: "Treatment that stops hair loss, increases hair density and improves hair quality, ideal for cases of incipient alopecia or as a post-transplant complement, with results varying according to each patient."
+    before_image: "/assets/images/terapia-capilar-before.avif"
+    after_image: "/assets/images/terapia-capilar.avif"
+    categoria:
+      es: "Tratamientos capilares"
+      en: "Hair treatments"
+    subcategoria:
+      es: "Terapia capilar"
+      en: "Hair therapy"
+
+  - title:
+      es: "Terapia Capilar - Recuperación"
+      en: "Hair Therapy - Recovery"
+    description:
+      es: "Protocolo personalizado para recuperar el volumen y densidad capilar mediante la estimulación de folículos debilitados, ofreciendo resultados progresivos con mínimas molestias y sin tiempo de inactividad."
+      en: "Personalized protocol to recover hair volume and density by stimulating weakened follicles, offering progressive results with minimal discomfort and no downtime."
+    before_image: "/assets/images/capilar-terapia-before.avif"
+    after_image: "/assets/images/capilar-terapia.avif"
+    categoria:
+      es: "Tratamientos capilares"
+      en: "Hair treatments"
+    subcategoria:
+      es: "Terapia capilar"
+      en: "Hair therapy"
+
+  - title:
+      es: "Terapia Capilar Intensiva"
+      en: "Intensive Hair Therapy"
+    description:
+      es: "Tratamiento avanzado que combina múltiples técnicas para combatir la caída severa y estimular el crecimiento capilar, con protocolos personalizados según el grado de alopecia y las necesidades específicas del paciente."
+      en: "Advanced treatment that combines multiple techniques to combat severe hair loss and stimulate hair growth, with personalized protocols according to the degree of alopecia and the specific needs of the patient."
+    before_image: "/assets/images/terapia-capilar-bogota-before.avif"
+    after_image: "/assets/images/terapia-capilar-bogota.avif"
+    categoria:
+      es: "Tratamientos capilares"
+      en: "Hair treatments"
+    subcategoria:
+      es: "Terapia capilar"
+      en: "Hair therapy"
