@@ -1,0 +1,15 @@
+facial:
+
+implante-capilar:
+
+terapia-capilar:
+
+cases:
+  - title: "Abdominal Reduction with Sculptor"
+    before_image: "/img/antes-sculptor-abdomen.avif"
+    after_image: "/img/despues-sculptor-abdomen.avif"
+    description: "Results after 6 Sculptor sessions, showing notable reduction of abdominal fat and improved body contour."
+  - title: "Leg Contouring"
+    before_image: "/img/antes-sculptor-piernas.avif"
+    after_image: "/img/despues-sculptor-piernas.avif"
+    description: "Impressive leg definition after 8 Sculptor sessions, with visible reduction of cellulite and improved firmness."

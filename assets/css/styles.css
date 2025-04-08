@@ -8,8 +8,9 @@ layout: compress
 {% include css/highlight.css %}
 {% include css/cards.css %}
 {% include css/gallery.css %}
-{% include css/contact.css %}
-{% include css/blog.css %}
 {% include css/footer.css %}
 {% include css/pages.css %}
+{% include css/comparacion.css %}
+{% include css/contact.css %}
+{% include css/blog.css %}
 {% include css/queries.css %}
