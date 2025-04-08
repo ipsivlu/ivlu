@@ -130,7 +130,7 @@ capilares:
       es: "Procedimiento estético-quirúrgico que consiste en extraer folículos pilosos sanos de una zona donante (generalmente la nuca) e implantarlos en áreas con calvicie o poco pelo, logrando resultados permanentes y naturales."
       en: "Aesthetic-surgical procedure that consists of extracting healthy hair follicles from a donor area (usually the nape) and implanting them in areas with baldness or little hair, achieving permanent and natural results."
     before_image: "/assets/images/implante-capilar-before.avif"
-    after_image: "/assets/images/implante-capilar-bogota-colombia.avif"
+    after_image: "/assets/images/implante-capilar-despues-colombia.avif"
     categoria:
       es: "Tratamientos capilares"
       en: "Hair treatments"
@@ -144,8 +144,8 @@ capilares:
     description:
       es: "Tratamiento que frena la caída del cabello, aumenta la densidad capilar y mejora la calidad del pelo, ideal para casos de alopecia incipiente o como complemento postrasplante, con resultados variables según cada paciente."
       en: "Treatment that stops hair loss, increases hair density and improves hair quality, ideal for cases of incipient alopecia or as a post-transplant complement, with results varying according to each patient."
-    before_image: "/assets/images/terapia-capilar-before.avif"
-    after_image: "/assets/images/terapia-capilar.avif"
+    before_image: "/assets/images/terapia-capilar1-before.avif"
+    after_image: "/assets/images/terapia-capilar1.avif"
     categoria:
       es: "Tratamientos capilares"
       en: "Hair treatments"
@@ -159,8 +159,8 @@ capilares:
     description:
       es: "Protocolo personalizado para recuperar el volumen y densidad capilar mediante la estimulación de folículos debilitados, ofreciendo resultados progresivos con mínimas molestias y sin tiempo de inactividad."
       en: "Personalized protocol to recover hair volume and density by stimulating weakened follicles, offering progressive results with minimal discomfort and no downtime."
-    before_image: "/assets/images/capilar-terapia-before.avif"
-    after_image: "/assets/images/capilar-terapia.avif"
+    before_image: "/assets/images/capilar-1terapia-before.avif"
+    after_image: "/assets/images/capilar-1terapia.avif"
     categoria:
       es: "Tratamientos capilares"
       en: "Hair treatments"
@@ -174,8 +174,8 @@ capilares:
     description:
       es: "Tratamiento avanzado que combina múltiples técnicas para combatir la caída severa y estimular el crecimiento capilar, con protocolos personalizados según el grado de alopecia y las necesidades específicas del paciente."
       en: "Advanced treatment that combines multiple techniques to combat severe hair loss and stimulate hair growth, with personalized protocols according to the degree of alopecia and the specific needs of the patient."
-    before_image: "/assets/images/terapia-capilar-bogota-before.avif"
-    after_image: "/assets/images/terapia-capilar-bogota.avif"
+    before_image: "/assets/images/terapia-capilar2-bogota-before.avif"
+    after_image: "/assets/images/terapia-capilar2-bogota.avif"
     categoria:
       es: "Tratamientos capilares"
       en: "Hair treatments"
