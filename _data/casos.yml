@@ -82,8 +82,8 @@ faciales:
     description:
       es: "Tratamiento avanzado de rejuvenecimiento que combina microagujas y radiofrecuencia para remodelar y reafirmar la piel, reduciendo arrugas y mejorando su textura a nivel profundo."
       en: "Advanced rejuvenation treatment that combines microneedles and radiofrequency to reshape and firm the skin, reducing wrinkles and improving its texture at a deep level."
-    before_image: "/assets/images/morpheus-8-1.avif"
-    after_image: "/assets/images/morpheus-8-2.avif"
+    before_image: "/assets/images/morpheus-antes1.avif"
+    after_image: "/assets/images/morpheus-despues1.avif"
     categoria:
       es: "Tratamientos faciales"
       en: "Facial treatments"
@@ -97,8 +97,8 @@ faciales:
     description:
       es: "Tecnología innovadora que estimula la producción de colágeno para recuperar la firmeza facial perdida, con resultados visibles desde la primera sesión y mínimo tiempo de recuperación."
       en: "Innovative technology that stimulates collagen production to recover lost facial firmness, with visible results from the first session and minimal recovery time."
-    before_image: "/assets/images/morpheus-8-3.avif"
-    after_image: "/assets/images/morpheus-8-4.avif"
+    before_image: "/assets/images/morpheus-firmesa-antes.avif"
+    after_image: "/assets/images/morpheus-firmesa-despues.avif"
     categoria:
       es: "Tratamientos faciales"
       en: "Facial treatments"
