@@ -23,25 +23,13 @@
   </div>
   <img src="/assets/images/tratamiento-bruxismo.avif" alt="Tratamiento para bruxismo en Bogotá" loading="lazy" decoding="async" width="520" height="520">
 </header>
-<main class="especialidades-cards wrapper">
+<main class="especialidades-cards">
   <div class="especialidad-card width">
-    <h3>Valor</h3>
-    <div class="card-link">
-      <h4>
-        $960.000 - $1'500.000
-      </h4>
-      <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" title="WhatsApp IVLU" class="circle-arrow" target="_blank">→</a>
-    </div>
+    <h4>Valor: $960.000 - $1'500.000</h4>
   </div>
 
   <div class="especialidad-card width">
-    <h3>Tiempo de aplicación</h3>
-    <div class="card-link">
-      <h4>
-        15 - 30 minutos
-      </h4>
-      <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" title="WhatsApp IVLU" class="circle-arrow" target="_blank">→</a>
-    </div>
+    <h4>Tiempo de aplicación: 15 - 30 minutos</h4>
   </div>
 </main>
 <section class="two_columns wrapper">
@@ -122,14 +110,14 @@
       <path fill="#d7bc73"
         d="m16.556 12.906-.455.453s-1.083 1.076-4.038-1.862-1.872-4.014-1.872-4.014l.286-.286c.707-.702.774-1.83.157-2.654L9.374 2.86C8.61 1.84 7.135 1.705 6.26 2.575l-1.57 1.56c-.433.432-.723.99-.688 1.61.09 1.587.808 5 4.812 8.982 4.247 4.222 8.232 4.39 9.861 4.238.516-.048.964-.31 1.325-.67l1.42-1.412c.96-.953.69-2.588-.538-3.255l-1.91-1.039c-.806-.438-1.787-.309-2.417.317Z" />
     </svg>
-    <a href="tel:+5712345678">Teléfono: +57 3228351465</a>
+    <a href="tel:573228351465" id="lead_llamada">Teléfono: +57 3228351465</a>
   </li>
   <li>
     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#d7bc73" viewBox="0 0 20 20">
       <path fill="#d7bc73" fill-rule="evenodd"
         d="M15.821 14.121c-.241.682-1.199 1.247-1.963 1.412-.523.11-1.205.199-3.503-.754C7.774 13.71 4.19 9.901 4.19 7.366c0-1.29.744-2.793 2.045-2.793.626 0 .764.012.97.507.241.582.829 2.016.899 2.163.289.603-.294.956-.717 1.482-.135.158-.288.329-.117.623.17.288.758 1.246 1.622 2.015 1.116.995 2.021 1.312 2.345 1.447.241.1.529.077.705-.111.223-.241.5-.641.782-1.036.199-.282.452-.317.717-.217.179.062 2.454 1.119 2.55 1.288.071.123.071.705-.17 1.387M10.002 0h-.005C4.484 0 0 4.485 0 10c0 2.187.705 4.215 1.904 5.86L.658 19.578l3.843-1.228A9.923 9.923 0 0 0 10.002 20C15.515 20 20 15.515 20 10S15.515 0 10.002 0" />
     </svg>
-    <a href="https://wa.me/573123456789" target="_blank">Whatsapp: +57 3228351465</a>
+    <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" target="_blank">Whatsapp: +57 3228351465</a>
   </li>
   <li>
     <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="40" height="40" fill="#d7bc73"
@@ -168,25 +156,13 @@
   </div>
   <img src="/assets/images/consulta-capilar-especializada.avif" alt="Realizando una consulta capilar en la clínica IVLU experta de Bogotá" loading="lazy" decoding="async" width="520" height="520">
 </header>
-<main class="especialidades-cards wrapper">
+<main class="especialidades-cards">
   <div class="especialidad-card width">
-    <h3>Valor</h3>
-    <div class="card-link">
-      <h4>
-        $100.000
-      </h4>
-      <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" title="WhatsApp IVLU" class="circle-arrow" target="_blank">→</a>
-    </div>
+    <h4>Valor: $100.000</h4>
   </div>
 
   <div class="especialidad-card width">
-    <h3>Tiempo de aplicación</h3>
-    <div class="card-link">
-      <h4>
-        60 minutos
-      </h4>
-      <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" title="WhatsApp IVLU" class="circle-arrow" target="_blank">→</a>
-    </div>
+    <h4>Tiempo de aplicación: 60 minutos</h4>
   </div>
 </main>
 <section class="two_columns wrapper">
@@ -254,14 +230,14 @@
       <path fill="#d7bc73"
         d="m16.556 12.906-.455.453s-1.083 1.076-4.038-1.862-1.872-4.014-1.872-4.014l.286-.286c.707-.702.774-1.83.157-2.654L9.374 2.86C8.61 1.84 7.135 1.705 6.26 2.575l-1.57 1.56c-.433.432-.723.99-.688 1.61.09 1.587.808 5 4.812 8.982 4.247 4.222 8.232 4.39 9.861 4.238.516-.048.964-.31 1.325-.67l1.42-1.412c.96-.953.69-2.588-.538-3.255l-1.91-1.039c-.806-.438-1.787-.309-2.417.317Z" />
     </svg>
-    <a href="tel:+5712345678">Teléfono: +57 3228351465</a>
+    <a href="tel:573228351465" id="lead_llamada">Teléfono: +57 3228351465</a>
   </li>
   <li>
     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#d7bc73" viewBox="0 0 20 20">
       <path fill="#d7bc73" fill-rule="evenodd"
         d="M15.821 14.121c-.241.682-1.199 1.247-1.963 1.412-.523.11-1.205.199-3.503-.754C7.774 13.71 4.19 9.901 4.19 7.366c0-1.29.744-2.793 2.045-2.793.626 0 .764.012.97.507.241.582.829 2.016.899 2.163.289.603-.294.956-.717 1.482-.135.158-.288.329-.117.623.17.288.758 1.246 1.622 2.015 1.116.995 2.021 1.312 2.345 1.447.241.1.529.077.705-.111.223-.241.5-.641.782-1.036.199-.282.452-.317.717-.217.179.062 2.454 1.119 2.55 1.288.071.123.071.705-.17 1.387M10.002 0h-.005C4.484 0 0 4.485 0 10c0 2.187.705 4.215 1.904 5.86L.658 19.578l3.843-1.228A9.923 9.923 0 0 0 10.002 20C15.515 20 20 15.515 20 10S15.515 0 10.002 0" />
     </svg>
-    <a href="https://wa.me/573123456789" target="_blank">Whatsapp: +57 3228351465</a>
+    <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" target="_blank">Whatsapp: +57 3228351465</a>
   </li>
   <li>
     <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="40" height="40" fill="#d7bc73"
@@ -301,25 +277,13 @@
   <img src="/assets/images/tratamiento-exosomas.avif"
     alt="Tratamiento capilar con exosomas en IVLU Bogotá" loading="lazy" decoding="async" width="520" height="520">
 </header>
-<main class="especialidades-cards wrapper">
+<main class="especialidades-cards">
   <div class="especialidad-card width">
-    <h3>Valor</h3>
-    <div class="card-link">
-      <h4>
-        Desde $1.500.000
-      </h4>
-      <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" title="WhatsApp IVLU" class="circle-arrow" target="_blank">→</a>
-    </div>
+    <h4>Valor: Desde $1.500.000</h4>
   </div>
 
   <div class="especialidad-card width">
-    <h3>Tiempo de aplicación</h3>
-    <div class="card-link">
-      <h4>
-        60 minutos<br><small>Requiere anestesia</small>
-      </h4>
-      <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" title="WhatsApp IVLU" class="circle-arrow" target="_blank">→</a>
-    </div>
+    <h4>Tiempo de aplicación: 60 minutos<br><small>Requiere anestesia</small></h4>
   </div>
 </main>
 <section class="two_columns wrapper">
@@ -404,14 +368,14 @@
       <path fill="#d7bc73"
         d="m16.556 12.906-.455.453s-1.083 1.076-4.038-1.862-1.872-4.014-1.872-4.014l.286-.286c.707-.702.774-1.83.157-2.654L9.374 2.86C8.61 1.84 7.135 1.705 6.26 2.575l-1.57 1.56c-.433.432-.723.99-.688 1.61.09 1.587.808 5 4.812 8.982 4.247 4.222 8.232 4.39 9.861 4.238.516-.048.964-.31 1.325-.67l1.42-1.412c.96-.953.69-2.588-.538-3.255l-1.91-1.039c-.806-.438-1.787-.309-2.417.317Z" />
     </svg>
-    <a href="tel:+5712345678">Teléfono: +57 3228351465</a>
+    <a href="tel:573228351465" id="lead_llamada">Teléfono: +57 3228351465</a>
   </li>
   <li>
     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#d7bc73" viewBox="0 0 20 20">
       <path fill="#d7bc73" fill-rule="evenodd"
         d="M15.821 14.121c-.241.682-1.199 1.247-1.963 1.412-.523.11-1.205.199-3.503-.754C7.774 13.71 4.19 9.901 4.19 7.366c0-1.29.744-2.793 2.045-2.793.626 0 .764.012.97.507.241.582.829 2.016.899 2.163.289.603-.294.956-.717 1.482-.135.158-.288.329-.117.623.17.288.758 1.246 1.622 2.015 1.116.995 2.021 1.312 2.345 1.447.241.1.529.077.705-.111.223-.241.5-.641.782-1.036.199-.282.452-.317.717-.217.179.062 2.454 1.119 2.55 1.288.071.123.071.705-.17 1.387M10.002 0h-.005C4.484 0 0 4.485 0 10c0 2.187.705 4.215 1.904 5.86L.658 19.578l3.843-1.228A9.923 9.923 0 0 0 10.002 20C15.515 20 20 15.515 20 10S15.515 0 10.002 0" />
     </svg>
-    <a href="https://wa.me/573123456789" target="_blank">Whatsapp: +57 3228351465</a>
+    <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" target="_blank">Whatsapp: +57 3228351465</a>
   </li>
   <li>
     <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="40" height="40" fill="#d7bc73"
@@ -530,14 +494,14 @@
       <path fill="#d7bc73"
         d="m16.556 12.906-.455.453s-1.083 1.076-4.038-1.862-1.872-4.014-1.872-4.014l.286-.286c.707-.702.774-1.83.157-2.654L9.374 2.86C8.61 1.84 7.135 1.705 6.26 2.575l-1.57 1.56c-.433.432-.723.99-.688 1.61.09 1.587.808 5 4.812 8.982 4.247 4.222 8.232 4.39 9.861 4.238.516-.048.964-.31 1.325-.67l1.42-1.412c.96-.953.69-2.588-.538-3.255l-1.91-1.039c-.806-.438-1.787-.309-2.417.317Z" />
     </svg>
-    <a href="tel:+5712345678">Teléfono: +57 3228351465</a>
+    <a href="tel:573228351465" id="lead_llamada">Teléfono: +57 3228351465</a>
   </li>
   <li>
     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#d7bc73" viewBox="0 0 20 20">
       <path fill="#d7bc73" fill-rule="evenodd"
         d="M15.821 14.121c-.241.682-1.199 1.247-1.963 1.412-.523.11-1.205.199-3.503-.754C7.774 13.71 4.19 9.901 4.19 7.366c0-1.29.744-2.793 2.045-2.793.626 0 .764.012.97.507.241.582.829 2.016.899 2.163.289.603-.294.956-.717 1.482-.135.158-.288.329-.117.623.17.288.758 1.246 1.622 2.015 1.116.995 2.021 1.312 2.345 1.447.241.1.529.077.705-.111.223-.241.5-.641.782-1.036.199-.282.452-.317.717-.217.179.062 2.454 1.119 2.55 1.288.071.123.071.705-.17 1.387M10.002 0h-.005C4.484 0 0 4.485 0 10c0 2.187.705 4.215 1.904 5.86L.658 19.578l3.843-1.228A9.923 9.923 0 0 0 10.002 20C15.515 20 20 15.515 20 10S15.515 0 10.002 0" />
     </svg>
-    <a href="https://wa.me/573123456789" target="_blank">Whatsapp: +57 3228351465</a>
+    <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" target="_blank">Whatsapp: +57 3228351465</a>
   </li>
   <li>
     <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="40" height="40" fill="#d7bc73"
@@ -577,25 +541,13 @@
   <img src="/assets/images/tratamiento-hiperhidrosis.avif" alt="Tratamiento para hiperhidrosis en IVLU Bogotá" loading="lazy" decoding="async" width="520" height="520">
 </header>
 
-<main class="especialidades-cards wrapper">
+<main class="especialidades-cards">
   <div class="especialidad-card width">
-    <h3>Valor</h3>
-    <div class="card-link">
-      <h4>
-        $960.000 - $1'500.000
-      </h4>
-      <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" title="WhatsApp IVLU" class="circle-arrow" target="_blank">→</a>
-    </div>
+    <h4>Valor: $960.000 - $1'500.000</h4>
   </div>
 
   <div class="especialidad-card width">
-    <h3>Tiempo de aplicación</h3>
-    <div class="card-link">
-      <h4>
-        15 - 30 minutos
-      </h4>
-      <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" title="WhatsApp IVLU" class="circle-arrow" target="_blank">→</a>
-    </div>
+    <h4>Tiempo de aplicación: 15 - 30 minutos</h4>
   </div>
 </main>
 
@@ -679,14 +631,14 @@
       <path fill="#d7bc73"
         d="m16.556 12.906-.455.453s-1.083 1.076-4.038-1.862-1.872-4.014-1.872-4.014l.286-.286c.707-.702.774-1.83.157-2.654L9.374 2.86C8.61 1.84 7.135 1.705 6.26 2.575l-1.57 1.56c-.433.432-.723.99-.688 1.61.09 1.587.808 5 4.812 8.982 4.247 4.222 8.232 4.39 9.861 4.238.516-.048.964-.31 1.325-.67l1.42-1.412c.96-.953.69-2.588-.538-3.255l-1.91-1.039c-.806-.438-1.787-.309-2.417.317Z" />
     </svg>
-    <a href="tel:+5712345678">Teléfono: +57 3228351465</a>
+    <a href="tel:573228351465" id="lead_llamada">Teléfono: +57 3228351465</a>
   </li>
   <li>
     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#d7bc73" viewBox="0 0 20 20">
       <path fill="#d7bc73" fill-rule="evenodd"
         d="M15.821 14.121c-.241.682-1.199 1.247-1.963 1.412-.523.11-1.205.199-3.503-.754C7.774 13.71 4.19 9.901 4.19 7.366c0-1.29.744-2.793 2.045-2.793.626 0 .764.012.97.507.241.582.829 2.016.899 2.163.289.603-.294.956-.717 1.482-.135.158-.288.329-.117.623.17.288.758 1.246 1.622 2.015 1.116.995 2.021 1.312 2.345 1.447.241.1.529.077.705-.111.223-.241.5-.641.782-1.036.199-.282.452-.317.717-.217.179.062 2.454 1.119 2.55 1.288.071.123.071.705-.17 1.387M10.002 0h-.005C4.484 0 0 4.485 0 10c0 2.187.705 4.215 1.904 5.86L.658 19.578l3.843-1.228A9.923 9.923 0 0 0 10.002 20C15.515 20 20 15.515 20 10S15.515 0 10.002 0" />
     </svg>
-    <a href="https://wa.me/573123456789" target="_blank">Whatsapp: +57 3228351465</a>
+    <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" target="_blank">Whatsapp: +57 3228351465</a>
   </li>
   <li>
     <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="40" height="40" fill="#d7bc73"
@@ -799,14 +751,14 @@
       <path fill="#d7bc73"
         d="m16.556 12.906-.455.453s-1.083 1.076-4.038-1.862-1.872-4.014-1.872-4.014l.286-.286c.707-.702.774-1.83.157-2.654L9.374 2.86C8.61 1.84 7.135 1.705 6.26 2.575l-1.57 1.56c-.433.432-.723.99-.688 1.61.09 1.587.808 5 4.812 8.982 4.247 4.222 8.232 4.39 9.861 4.238.516-.048.964-.31 1.325-.67l1.42-1.412c.96-.953.69-2.588-.538-3.255l-1.91-1.039c-.806-.438-1.787-.309-2.417.317Z" />
     </svg>
-    <a href="tel:+5712345678">Teléfono: +57 3228351465</a>
+    <a href="tel:573228351465" id="lead_llamada">Teléfono: +57 3228351465</a>
   </li>
   <li>
     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#d7bc73" viewBox="0 0 20 20">
       <path fill="#d7bc73" fill-rule="evenodd"
         d="M15.821 14.121c-.241.682-1.199 1.247-1.963 1.412-.523.11-1.205.199-3.503-.754C7.774 13.71 4.19 9.901 4.19 7.366c0-1.29.744-2.793 2.045-2.793.626 0 .764.012.97.507.241.582.829 2.016.899 2.163.289.603-.294.956-.717 1.482-.135.158-.288.329-.117.623.17.288.758 1.246 1.622 2.015 1.116.995 2.021 1.312 2.345 1.447.241.1.529.077.705-.111.223-.241.5-.641.782-1.036.199-.282.452-.317.717-.217.179.062 2.454 1.119 2.55 1.288.071.123.071.705-.17 1.387M10.002 0h-.005C4.484 0 0 4.485 0 10c0 2.187.705 4.215 1.904 5.86L.658 19.578l3.843-1.228A9.923 9.923 0 0 0 10.002 20C15.515 20 20 15.515 20 10S15.515 0 10.002 0" />
     </svg>
-    <a href="https://wa.me/573123456789" target="_blank">Whatsapp: +57 3228351465</a>
+    <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" target="_blank">Whatsapp: +57 3228351465</a>
   </li>
   <li>
     <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="40" height="40" fill="#d7bc73"
@@ -917,14 +869,14 @@
       <path fill="#d7bc73"
         d="m16.556 12.906-.455.453s-1.083 1.076-4.038-1.862-1.872-4.014-1.872-4.014l.286-.286c.707-.702.774-1.83.157-2.654L9.374 2.86C8.61 1.84 7.135 1.705 6.26 2.575l-1.57 1.56c-.433.432-.723.99-.688 1.61.09 1.587.808 5 4.812 8.982 4.247 4.222 8.232 4.39 9.861 4.238.516-.048.964-.31 1.325-.67l1.42-1.412c.96-.953.69-2.588-.538-3.255l-1.91-1.039c-.806-.438-1.787-.309-2.417.317Z" />
     </svg>
-    <a href="tel:+5712345678">Teléfono: +57 3228351465</a>
+    <a href="tel:573228351465" id="lead_llamada">Teléfono: +57 3228351465</a>
   </li>
   <li>
     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#d7bc73" viewBox="0 0 20 20">
       <path fill="#d7bc73" fill-rule="evenodd"
         d="M15.821 14.121c-.241.682-1.199 1.247-1.963 1.412-.523.11-1.205.199-3.503-.754C7.774 13.71 4.19 9.901 4.19 7.366c0-1.29.744-2.793 2.045-2.793.626 0 .764.012.97.507.241.582.829 2.016.899 2.163.289.603-.294.956-.717 1.482-.135.158-.288.329-.117.623.17.288.758 1.246 1.622 2.015 1.116.995 2.021 1.312 2.345 1.447.241.1.529.077.705-.111.223-.241.5-.641.782-1.036.199-.282.452-.317.717-.217.179.062 2.454 1.119 2.55 1.288.071.123.071.705-.17 1.387M10.002 0h-.005C4.484 0 0 4.485 0 10c0 2.187.705 4.215 1.904 5.86L.658 19.578l3.843-1.228A9.923 9.923 0 0 0 10.002 20C15.515 20 20 15.515 20 10S15.515 0 10.002 0" />
     </svg>
-    <a href="https://wa.me/573123456789" target="_blank">Whatsapp: +57 3228351465</a>
+    <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" target="_blank">Whatsapp: +57 3228351465</a>
   </li>
   <li>
     <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="40" height="40" fill="#d7bc73"
@@ -964,25 +916,13 @@
   <img src="/assets/images/tratamiento-labios.avif" alt="Mujer aplicándose un tratamiento en sus labios en la clínica IVLU de Bogotá" loading="lazy" decoding="async" width="520" height="520">
 </header>
 
-<main class="especialidades-cards wrapper">
+<main class="especialidades-cards">
   <div class="especialidad-card width">
-    <h3>Valor</h3>
-    <div class="card-link">
-      <h4>
-        $1'250.000
-      </h4>
-      <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" title="WhatsApp IVLU" class="circle-arrow" target="_blank">→</a>
-    </div>
+    <h4>Valor: $1'250.000</h4>
   </div>
 
   <div class="especialidad-card width">
-    <h3>Tiempo de aplicación</h3>
-    <div class="card-link">
-      <h4>
-        15 - 30 minutos
-      </h4>
-      <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" title="WhatsApp IVLU" class="circle-arrow" target="_blank">→</a>
-    </div>
+    <h4>Tiempo de aplicación: 15 - 30 minutos</h4>
   </div>
 </main>
 
@@ -1065,14 +1005,14 @@
       <path fill="#d7bc73"
         d="m16.556 12.906-.455.453s-1.083 1.076-4.038-1.862-1.872-4.014-1.872-4.014l.286-.286c.707-.702.774-1.83.157-2.654L9.374 2.86C8.61 1.84 7.135 1.705 6.26 2.575l-1.57 1.56c-.433.432-.723.99-.688 1.61.09 1.587.808 5 4.812 8.982 4.247 4.222 8.232 4.39 9.861 4.238.516-.048.964-.31 1.325-.67l1.42-1.412c.96-.953.69-2.588-.538-3.255l-1.91-1.039c-.806-.438-1.787-.309-2.417.317Z" />
     </svg>
-    <a href="tel:+5712345678">Teléfono: +57 3228351465</a>
+    <a href="tel:573228351465" id="lead_llamada">Teléfono: +57 3228351465</a>
   </li>
   <li>
     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#d7bc73" viewBox="0 0 20 20">
       <path fill="#d7bc73" fill-rule="evenodd"
         d="M15.821 14.121c-.241.682-1.199 1.247-1.963 1.412-.523.11-1.205.199-3.503-.754C7.774 13.71 4.19 9.901 4.19 7.366c0-1.29.744-2.793 2.045-2.793.626 0 .764.012.97.507.241.582.829 2.016.899 2.163.289.603-.294.956-.717 1.482-.135.158-.288.329-.117.623.17.288.758 1.246 1.622 2.015 1.116.995 2.021 1.312 2.345 1.447.241.1.529.077.705-.111.223-.241.5-.641.782-1.036.199-.282.452-.317.717-.217.179.062 2.454 1.119 2.55 1.288.071.123.071.705-.17 1.387M10.002 0h-.005C4.484 0 0 4.485 0 10c0 2.187.705 4.215 1.904 5.86L.658 19.578l3.843-1.228A9.923 9.923 0 0 0 10.002 20C15.515 20 20 15.515 20 10S15.515 0 10.002 0" />
     </svg>
-    <a href="https://wa.me/573123456789" target="_blank">Whatsapp: +57 3228351465</a>
+    <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" target="_blank">Whatsapp: +57 3228351465</a>
   </li>
   <li>
     <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="40" height="40" fill="#d7bc73"
@@ -1111,25 +1051,13 @@
   </div>
   <img src="/assets/images/limpieza-facial-premium.avif" alt="Paciente en un procedimiento de limpieza facial en Bogotá" loading="lazy" decoding="async" width="520" height="520">
 </header>
-<main class="especialidades-cards wrapper">
+<main class="especialidades-cards">
   <div class="especialidad-card width">
-    <h3>Valor</h3>
-    <div class="card-link">
-      <h4>
-        $250.000
-      </h4>
-      <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" title="WhatsApp IVLU" class="circle-arrow" target="_blank">→</a>
-    </div>
+    <h4>Valor: $250.000</h4>
   </div>
 
   <div class="especialidad-card width">
-    <h3>Tiempo de aplicación</h3>
-    <div class="card-link">
-      <h4>
-        60 - 90 minutos
-      </h4>
-      <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" title="WhatsApp IVLU" class="circle-arrow" target="_blank">→</a>
-    </div>
+    <h4>Tiempo de aplicación: 60 - 90 minutos</h4>
   </div>
 </main>
 <section class="two_columns wrapper">
@@ -1214,14 +1142,14 @@
       <path fill="#d7bc73"
         d="m16.556 12.906-.455.453s-1.083 1.076-4.038-1.862-1.872-4.014-1.872-4.014l.286-.286c.707-.702.774-1.83.157-2.654L9.374 2.86C8.61 1.84 7.135 1.705 6.26 2.575l-1.57 1.56c-.433.432-.723.99-.688 1.61.09 1.587.808 5 4.812 8.982 4.247 4.222 8.232 4.39 9.861 4.238.516-.048.964-.31 1.325-.67l1.42-1.412c.96-.953.69-2.588-.538-3.255l-1.91-1.039c-.806-.438-1.787-.309-2.417.317Z" />
     </svg>
-    <a href="tel:+5712345678">Teléfono: +57 3228351465</a>
+    <a href="tel:573228351465" id="lead_llamada">Teléfono: +57 3228351465</a>
   </li>
   <li>
     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#d7bc73" viewBox="0 0 20 20">
       <path fill="#d7bc73" fill-rule="evenodd"
         d="M15.821 14.121c-.241.682-1.199 1.247-1.963 1.412-.523.11-1.205.199-3.503-.754C7.774 13.71 4.19 9.901 4.19 7.366c0-1.29.744-2.793 2.045-2.793.626 0 .764.012.97.507.241.582.829 2.016.899 2.163.289.603-.294.956-.717 1.482-.135.158-.288.329-.117.623.17.288.758 1.246 1.622 2.015 1.116.995 2.021 1.312 2.345 1.447.241.1.529.077.705-.111.223-.241.5-.641.782-1.036.199-.282.452-.317.717-.217.179.062 2.454 1.119 2.55 1.288.071.123.071.705-.17 1.387M10.002 0h-.005C4.484 0 0 4.485 0 10c0 2.187.705 4.215 1.904 5.86L.658 19.578l3.843-1.228A9.923 9.923 0 0 0 10.002 20C15.515 20 20 15.515 20 10S15.515 0 10.002 0" />
     </svg>
-    <a href="https://wa.me/573123456789" target="_blank">Whatsapp: +57 3228351465</a>
+    <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" target="_blank">Whatsapp: +57 3228351465</a>
   </li>
   <li>
     <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="40" height="40" fill="#d7bc73"
@@ -1260,25 +1188,13 @@
   </div>
   <img src="/assets/images/mesoterapia-capilar.avif" alt="Doctora Ivonne de la clínica IVLU preparando un tratamiento de mesoterapia capilar" loading="lazy" decoding="async" width="520" height="520">
 </header>
-<main class="especialidades-cards wrapper">
+<main class="especialidades-cards">
   <div class="especialidad-card width">
-    <h3>Valor</h3>
-    <div class="card-link">
-      <h4>
-        Cada sesión: $400.000
-      </h4>
-      <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" title="WhatsApp IVLU" class="circle-arrow" target="_blank">→</a>
-    </div>
+    <h4>Valor: Cada sesión: $400.000</h4>
   </div>
 
   <div class="especialidad-card width">
-    <h3>Tiempo de aplicación</h3>
-    <div class="card-link">
-      <h4>
-        60 minutos<br><small>Requiere anestesia</small>
-      </h4>
-      <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" title="WhatsApp IVLU" class="circle-arrow" target="_blank">→</a>
-    </div>
+    <h4>Tiempo de aplicación: 60 minutos<br><small>Requiere anestesia</small></h4>
   </div>
 </main>
 <section class="two_columns wrapper">
@@ -1366,14 +1282,14 @@
       <path fill="#d7bc73"
         d="m16.556 12.906-.455.453s-1.083 1.076-4.038-1.862-1.872-4.014-1.872-4.014l.286-.286c.707-.702.774-1.83.157-2.654L9.374 2.86C8.61 1.84 7.135 1.705 6.26 2.575l-1.57 1.56c-.433.432-.723.99-.688 1.61.09 1.587.808 5 4.812 8.982 4.247 4.222 8.232 4.39 9.861 4.238.516-.048.964-.31 1.325-.67l1.42-1.412c.96-.953.69-2.588-.538-3.255l-1.91-1.039c-.806-.438-1.787-.309-2.417.317Z" />
     </svg>
-    <a href="tel:+5712345678">Teléfono: +57 3228351465</a>
+    <a href="tel:573228351465" id="lead_llamada">Teléfono: +57 3228351465</a>
   </li>
   <li>
     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#d7bc73" viewBox="0 0 20 20">
       <path fill="#d7bc73" fill-rule="evenodd"
         d="M15.821 14.121c-.241.682-1.199 1.247-1.963 1.412-.523.11-1.205.199-3.503-.754C7.774 13.71 4.19 9.901 4.19 7.366c0-1.29.744-2.793 2.045-2.793.626 0 .764.012.97.507.241.582.829 2.016.899 2.163.289.603-.294.956-.717 1.482-.135.158-.288.329-.117.623.17.288.758 1.246 1.622 2.015 1.116.995 2.021 1.312 2.345 1.447.241.1.529.077.705-.111.223-.241.5-.641.782-1.036.199-.282.452-.317.717-.217.179.062 2.454 1.119 2.55 1.288.071.123.071.705-.17 1.387M10.002 0h-.005C4.484 0 0 4.485 0 10c0 2.187.705 4.215 1.904 5.86L.658 19.578l3.843-1.228A9.923 9.923 0 0 0 10.002 20C15.515 20 20 15.515 20 10S15.515 0 10.002 0" />
     </svg>
-    <a href="https://wa.me/573123456789" target="_blank">Whatsapp: +57 3228351465</a>
+    <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" target="_blank">Whatsapp: +57 3228351465</a>
   </li>
   <li>
     <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="40" height="40" fill="#d7bc73"
@@ -1414,25 +1330,13 @@
     alt="Tratamiento Nanopore con microcanales transdérmicos en IVLU" loading="lazy" decoding="async" width="520" height="520">
 </header>
 
-<main class="especialidades-cards wrapper">
+<main class="especialidades-cards">
   <div class="especialidad-card width">
-    <h3>Valor</h3>
-    <div class="card-link">
-      <h4>
-        $450.000 - $1.100.000
-      </h4>
-      <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" title="WhatsApp IVLU" class="circle-arrow" target="_blank">→</a>
-    </div>
+    <h4>Valor: $450.000 - $1.100.000</h4>
   </div>
 
   <div class="especialidad-card width">
-    <h3>Tiempo de aplicación</h3>
-    <div class="card-link">
-      <h4>
-        60 minutos
-      </h4>
-      <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" title="WhatsApp IVLU" class="circle-arrow" target="_blank">→</a>
-    </div>
+    <h4>Tiempo de aplicación: 60 minutos</h4>
   </div>
 </main>
 <section class="two_columns wrapper">
@@ -1514,14 +1418,14 @@
       <path fill="#d7bc73"
         d="m16.556 12.906-.455.453s-1.083 1.076-4.038-1.862-1.872-4.014-1.872-4.014l.286-.286c.707-.702.774-1.83.157-2.654L9.374 2.86C8.61 1.84 7.135 1.705 6.26 2.575l-1.57 1.56c-.433.432-.723.99-.688 1.61.09 1.587.808 5 4.812 8.982 4.247 4.222 8.232 4.39 9.861 4.238.516-.048.964-.31 1.325-.67l1.42-1.412c.96-.953.69-2.588-.538-3.255l-1.91-1.039c-.806-.438-1.787-.309-2.417.317Z" />
     </svg>
-    <a href="tel:+5712345678">Teléfono: +57 3228351465</a>
+    <a href="tel:573228351465" id="lead_llamada">Teléfono: +57 3228351465</a>
   </li>
   <li>
     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#d7bc73" viewBox="0 0 20 20">
       <path fill="#d7bc73" fill-rule="evenodd"
         d="M15.821 14.121c-.241.682-1.199 1.247-1.963 1.412-.523.11-1.205.199-3.503-.754C7.774 13.71 4.19 9.901 4.19 7.366c0-1.29.744-2.793 2.045-2.793.626 0 .764.012.97.507.241.582.829 2.016.899 2.163.289.603-.294.956-.717 1.482-.135.158-.288.329-.117.623.17.288.758 1.246 1.622 2.015 1.116.995 2.021 1.312 2.345 1.447.241.1.529.077.705-.111.223-.241.5-.641.782-1.036.199-.282.452-.317.717-.217.179.062 2.454 1.119 2.55 1.288.071.123.071.705-.17 1.387M10.002 0h-.005C4.484 0 0 4.485 0 10c0 2.187.705 4.215 1.904 5.86L.658 19.578l3.843-1.228A9.923 9.923 0 0 0 10.002 20C15.515 20 20 15.515 20 10S15.515 0 10.002 0" />
     </svg>
-    <a href="https://wa.me/573123456789" target="_blank">Whatsapp: +57 3228351465</a>
+    <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" target="_blank">Whatsapp: +57 3228351465</a>
   </li>
   <li>
     <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="40" height="40" fill="#d7bc73"
@@ -1558,25 +1462,13 @@
   </div>
   <img src="/assets/images/eliminacion-ojeras-ivlu-bogota.avif" alt="Tratamientos para ojeras realizadas en IVLU" loading="lazy" decoding="async" width="520" height="520">
 </header>
-<main class="especialidades-cards wrapper">
+<main class="especialidades-cards">
   <div class="especialidad-card width">
-    <h3>Valor</h3>
-    <div class="card-link">
-      <h4>
-        $1'250.000
-      </h4>
-      <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" title="WhatsApp IVLU" class="circle-arrow" target="_blank">→</a>
-    </div>
+    <h4>Valor: $1'250.000</h4>
   </div>
 
   <div class="especialidad-card width">
-    <h3>Tiempo de aplicación</h3>
-    <div class="card-link">
-      <h4>
-        15 - 30 minutos
-      </h4>
-      <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" title="WhatsApp IVLU" class="circle-arrow" target="_blank">→</a>
-    </div>
+    <h4>Tiempo de aplicación: 15 - 30 minutos</h4>
   </div>
 </main>
 <section class="two_columns wrapper">
@@ -1651,14 +1543,14 @@
       <path fill="#d7bc73"
         d="m16.556 12.906-.455.453s-1.083 1.076-4.038-1.862-1.872-4.014-1.872-4.014l.286-.286c.707-.702.774-1.83.157-2.654L9.374 2.86C8.61 1.84 7.135 1.705 6.26 2.575l-1.57 1.56c-.433.432-.723.99-.688 1.61.09 1.587.808 5 4.812 8.982 4.247 4.222 8.232 4.39 9.861 4.238.516-.048.964-.31 1.325-.67l1.42-1.412c.96-.953.69-2.588-.538-3.255l-1.91-1.039c-.806-.438-1.787-.309-2.417.317Z" />
     </svg>
-    <a href="tel:+5712345678">Teléfono: +57 3228351465</a>
+    <a href="tel:573228351465" id="lead_llamada">Teléfono: +57 3228351465</a>
   </li>
   <li>
     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#d7bc73" viewBox="0 0 20 20">
       <path fill="#d7bc73" fill-rule="evenodd"
         d="M15.821 14.121c-.241.682-1.199 1.247-1.963 1.412-.523.11-1.205.199-3.503-.754C7.774 13.71 4.19 9.901 4.19 7.366c0-1.29.744-2.793 2.045-2.793.626 0 .764.012.97.507.241.582.829 2.016.899 2.163.289.603-.294.956-.717 1.482-.135.158-.288.329-.117.623.17.288.758 1.246 1.622 2.015 1.116.995 2.021 1.312 2.345 1.447.241.1.529.077.705-.111.223-.241.5-.641.782-1.036.199-.282.452-.317.717-.217.179.062 2.454 1.119 2.55 1.288.071.123.071.705-.17 1.387M10.002 0h-.005C4.484 0 0 4.485 0 10c0 2.187.705 4.215 1.904 5.86L.658 19.578l3.843-1.228A9.923 9.923 0 0 0 10.002 20C15.515 20 20 15.515 20 10S15.515 0 10.002 0" />
     </svg>
-    <a href="https://wa.me/573123456789" target="_blank">Whatsapp: +57 3228351465</a>
+    <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" target="_blank">Whatsapp: +57 3228351465</a>
   </li>
   <li>
     <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="40" height="40" fill="#d7bc73"
@@ -1698,25 +1590,13 @@
   <img src="/assets/images/peeling-facial-medico.avif"
     alt="Tratamiento de peeling facial médico en IVLU" loading="lazy" decoding="async" width="520" height="520">
 </header>
-<main class="especialidades-cards wrapper">
+<main class="especialidades-cards">
   <div class="especialidad-card width">
-    <h3>Valor</h3>
-    <div class="card-link">
-      <h4>
-        $350.000
-      </h4>
-      <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" title="WhatsApp IVLU" class="circle-arrow" target="_blank">→</a>
-    </div>
+    <h4>Valor: $350.000</h4>
   </div>
 
   <div class="especialidad-card width">
-    <h3>Tiempo de aplicación</h3>
-    <div class="card-link">
-      <h4>
-        60 minutos <br><small>No requiere anestesia</small>
-      </h4>
-      <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" title="WhatsApp IVLU" class="circle-arrow" target="_blank">→</a>
-    </div>
+    <h4>Tiempo de aplicación: 60 minutos <br><small>No requiere anestesia</small></h4>
   </div>
 </main>
 <section class="two_columns wrapper">
@@ -1808,14 +1688,14 @@
       <path fill="#d7bc73"
         d="m16.556 12.906-.455.453s-1.083 1.076-4.038-1.862-1.872-4.014-1.872-4.014l.286-.286c.707-.702.774-1.83.157-2.654L9.374 2.86C8.61 1.84 7.135 1.705 6.26 2.575l-1.57 1.56c-.433.432-.723.99-.688 1.61.09 1.587.808 5 4.812 8.982 4.247 4.222 8.232 4.39 9.861 4.238.516-.048.964-.31 1.325-.67l1.42-1.412c.96-.953.69-2.588-.538-3.255l-1.91-1.039c-.806-.438-1.787-.309-2.417.317Z" />
     </svg>
-    <a href="tel:+5712345678">Teléfono: +57 3228351465</a>
+    <a href="tel:573228351465" id="lead_llamada">Teléfono: +57 3228351465</a>
   </li>
   <li>
     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#d7bc73" viewBox="0 0 20 20">
       <path fill="#d7bc73" fill-rule="evenodd"
         d="M15.821 14.121c-.241.682-1.199 1.247-1.963 1.412-.523.11-1.205.199-3.503-.754C7.774 13.71 4.19 9.901 4.19 7.366c0-1.29.744-2.793 2.045-2.793.626 0 .764.012.97.507.241.582.829 2.016.899 2.163.289.603-.294.956-.717 1.482-.135.158-.288.329-.117.623.17.288.758 1.246 1.622 2.015 1.116.995 2.021 1.312 2.345 1.447.241.1.529.077.705-.111.223-.241.5-.641.782-1.036.199-.282.452-.317.717-.217.179.062 2.454 1.119 2.55 1.288.071.123.071.705-.17 1.387M10.002 0h-.005C4.484 0 0 4.485 0 10c0 2.187.705 4.215 1.904 5.86L.658 19.578l3.843-1.228A9.923 9.923 0 0 0 10.002 20C15.515 20 20 15.515 20 10S15.515 0 10.002 0" />
     </svg>
-    <a href="https://wa.me/573123456789" target="_blank">Whatsapp: +57 3228351465</a>
+    <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" target="_blank">Whatsapp: +57 3228351465</a>
   </li>
   <li>
     <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="40" height="40" fill="#d7bc73"
@@ -1852,25 +1732,13 @@
   </div>
   <img src="/assets/images/plasma-capilar.avif" alt="Inyección y frascos con plasma para la pérdida de cabello" loading="lazy" decoding="async" width="520" height="520">
 </header>
-<main class="especialidades-cards wrapper">
+<main class="especialidades-cards">
   <div class="especialidad-card width">
-    <h3>Valor</h3>
-    <div class="card-link">
-      <h4>
-        430.000
-      </h4>
-      <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" title="WhatsApp IVLU" class="circle-arrow" target="_blank">→</a>
-    </div>
+    <h4>Valor: 430.000</h4>
   </div>
 
   <div class="especialidad-card width">
-    <h3>Tiempo de aplicación</h3>
-    <div class="card-link">
-      <h4>
-        60 minutos<br><small>Requiere anestesia</small>
-      </h4>
-      <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" title="WhatsApp IVLU" class="circle-arrow" target="_blank">→</a>
-    </div>
+    <h4>Tiempo de aplicación: 60 minutos<br><small>Requiere anestesia</small></h4>
   </div>
 </main>
 <section class="two_columns wrapper">
@@ -1951,14 +1819,14 @@
       <path fill="#d7bc73"
         d="m16.556 12.906-.455.453s-1.083 1.076-4.038-1.862-1.872-4.014-1.872-4.014l.286-.286c.707-.702.774-1.83.157-2.654L9.374 2.86C8.61 1.84 7.135 1.705 6.26 2.575l-1.57 1.56c-.433.432-.723.99-.688 1.61.09 1.587.808 5 4.812 8.982 4.247 4.222 8.232 4.39 9.861 4.238.516-.048.964-.31 1.325-.67l1.42-1.412c.96-.953.69-2.588-.538-3.255l-1.91-1.039c-.806-.438-1.787-.309-2.417.317Z" />
     </svg>
-    <a href="tel:+5712345678">Teléfono: +57 3228351465</a>
+    <a href="tel:573228351465" id="lead_llamada">Teléfono: +57 3228351465</a>
   </li>
   <li>
     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#d7bc73" viewBox="0 0 20 20">
       <path fill="#d7bc73" fill-rule="evenodd"
         d="M15.821 14.121c-.241.682-1.199 1.247-1.963 1.412-.523.11-1.205.199-3.503-.754C7.774 13.71 4.19 9.901 4.19 7.366c0-1.29.744-2.793 2.045-2.793.626 0 .764.012.97.507.241.582.829 2.016.899 2.163.289.603-.294.956-.717 1.482-.135.158-.288.329-.117.623.17.288.758 1.246 1.622 2.015 1.116.995 2.021 1.312 2.345 1.447.241.1.529.077.705-.111.223-.241.5-.641.782-1.036.199-.282.452-.317.717-.217.179.062 2.454 1.119 2.55 1.288.071.123.071.705-.17 1.387M10.002 0h-.005C4.484 0 0 4.485 0 10c0 2.187.705 4.215 1.904 5.86L.658 19.578l3.843-1.228A9.923 9.923 0 0 0 10.002 20C15.515 20 20 15.515 20 10S15.515 0 10.002 0" />
     </svg>
-    <a href="https://wa.me/573123456789" target="_blank">Whatsapp: +57 3228351465</a>
+    <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" target="_blank">Whatsapp: +57 3228351465</a>
   </li>
   <li>
     <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="40" height="40" fill="#d7bc73"
@@ -1998,25 +1866,13 @@
   <img src="/assets/images/tratamiento-pomulos.avif" alt="Doctora aplicando tratamiento en los pómulos" loading="lazy" decoding="async" width="520" height="520">
 </header>
 
-<main class="especialidades-cards wrapper">
+<main class="especialidades-cards">
   <div class="especialidad-card width">
-    <h3>Valor</h3>
-    <div class="card-link">
-      <h4>
-        $1'250.000
-      </h4>
-      <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" title="WhatsApp IVLU" class="circle-arrow" target="_blank">→</a>
-    </div>
+    <h4>Valor: $1'250.000</h4>
   </div>
 
   <div class="especialidad-card width">
-    <h3>Tiempo de aplicación</h3>
-    <div class="card-link">
-      <h4>
-        15 - 30 minutos
-      </h4>
-      <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" title="WhatsApp IVLU" class="circle-arrow" target="_blank">→</a>
-    </div>
+    <h4>Tiempo de aplicación: 15 - 30 minutos</h4>
   </div>
 </main>
 
@@ -2105,14 +1961,14 @@
       <path fill="#d7bc73"
         d="m16.556 12.906-.455.453s-1.083 1.076-4.038-1.862-1.872-4.014-1.872-4.014l.286-.286c.707-.702.774-1.83.157-2.654L9.374 2.86C8.61 1.84 7.135 1.705 6.26 2.575l-1.57 1.56c-.433.432-.723.99-.688 1.61.09 1.587.808 5 4.812 8.982 4.247 4.222 8.232 4.39 9.861 4.238.516-.048.964-.31 1.325-.67l1.42-1.412c.96-.953.69-2.588-.538-3.255l-1.91-1.039c-.806-.438-1.787-.309-2.417.317Z" />
     </svg>
-    <a href="tel:+5712345678">Teléfono: +57 3228351465</a>
+    <a href="tel:573228351465" id="lead_llamada">Teléfono: +57 3228351465</a>
   </li>
   <li>
     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#d7bc73" viewBox="0 0 20 20">
       <path fill="#d7bc73" fill-rule="evenodd"
         d="M15.821 14.121c-.241.682-1.199 1.247-1.963 1.412-.523.11-1.205.199-3.503-.754C7.774 13.71 4.19 9.901 4.19 7.366c0-1.29.744-2.793 2.045-2.793.626 0 .764.012.97.507.241.582.829 2.016.899 2.163.289.603-.294.956-.717 1.482-.135.158-.288.329-.117.623.17.288.758 1.246 1.622 2.015 1.116.995 2.021 1.312 2.345 1.447.241.1.529.077.705-.111.223-.241.5-.641.782-1.036.199-.282.452-.317.717-.217.179.062 2.454 1.119 2.55 1.288.071.123.071.705-.17 1.387M10.002 0h-.005C4.484 0 0 4.485 0 10c0 2.187.705 4.215 1.904 5.86L.658 19.578l3.843-1.228A9.923 9.923 0 0 0 10.002 20C15.515 20 20 15.515 20 10S15.515 0 10.002 0" />
     </svg>
-    <a href="https://wa.me/573123456789" target="_blank">Whatsapp: +57 3228351465</a>
+    <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" target="_blank">Whatsapp: +57 3228351465</a>
   </li>
   <li>
     <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="40" height="40" fill="#d7bc73"
@@ -2151,25 +2007,13 @@
   </div>
   <img src="/assets/images/profhilo-tratamiento.avif" alt="Tratamiento Profhilo de hidratación y bioestimulación en IVLU" loading="lazy" decoding="async" width="520" height="520">
 </header>
-<main class="especialidades-cards wrapper">
+<main class="especialidades-cards">
   <div class="especialidad-card width">
-    <h3>Valor</h3>
-    <div class="card-link">
-      <h4>
-        $2'200.000
-      </h4>
-      <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" title="WhatsApp IVLU" class="circle-arrow" target="_blank">→</a>
-    </div>
+    <h4>Valor: $2'200.000</h4>
   </div>
 
   <div class="especialidad-card width">
-    <h3>Tiempo de aplicación</h3>
-    <div class="card-link">
-      <h4>
-        15 - 30 minutos
-      </h4>
-      <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" title="WhatsApp IVLU" class="circle-arrow" target="_blank">→</a>
-    </div>
+    <h4>Tiempo de aplicación: 15 - 30 minutos</h4>
   </div>
 </main>
 <section class="two_columns wrapper">
@@ -2248,14 +2092,14 @@
       <path fill="#d7bc73"
         d="m16.556 12.906-.455.453s-1.083 1.076-4.038-1.862-1.872-4.014-1.872-4.014l.286-.286c.707-.702.774-1.83.157-2.654L9.374 2.86C8.61 1.84 7.135 1.705 6.26 2.575l-1.57 1.56c-.433.432-.723.99-.688 1.61.09 1.587.808 5 4.812 8.982 4.247 4.222 8.232 4.39 9.861 4.238.516-.048.964-.31 1.325-.67l1.42-1.412c.96-.953.69-2.588-.538-3.255l-1.91-1.039c-.806-.438-1.787-.309-2.417.317Z" />
     </svg>
-    <a href="tel:+5712345678">Teléfono: +57 3228351465</a>
+    <a href="tel:573228351465" id="lead_llamada">Teléfono: +57 3228351465</a>
   </li>
   <li>
     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#d7bc73" viewBox="0 0 20 20">
       <path fill="#d7bc73" fill-rule="evenodd"
         d="M15.821 14.121c-.241.682-1.199 1.247-1.963 1.412-.523.11-1.205.199-3.503-.754C7.774 13.71 4.19 9.901 4.19 7.366c0-1.29.744-2.793 2.045-2.793.626 0 .764.012.97.507.241.582.829 2.016.899 2.163.289.603-.294.956-.717 1.482-.135.158-.288.329-.117.623.17.288.758 1.246 1.622 2.015 1.116.995 2.021 1.312 2.345 1.447.241.1.529.077.705-.111.223-.241.5-.641.782-1.036.199-.282.452-.317.717-.217.179.062 2.454 1.119 2.55 1.288.071.123.071.705-.17 1.387M10.002 0h-.005C4.484 0 0 4.485 0 10c0 2.187.705 4.215 1.904 5.86L.658 19.578l3.843-1.228A9.923 9.923 0 0 0 10.002 20C15.515 20 20 15.515 20 10S15.515 0 10.002 0" />
     </svg>
-    <a href="https://wa.me/573123456789" target="_blank">Whatsapp: +57 3228351465</a>
+    <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" target="_blank">Whatsapp: +57 3228351465</a>
   </li>
   <li>
     <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="40" height="40" fill="#d7bc73"
@@ -2295,25 +2139,13 @@
   <img src="/assets/images/tratamiento-radiesse.avif" alt="Paciente de Bogotá rejuveneciendo su rostros con Radiesse" loading="lazy" decoding="async" width="520" height="520">
 </header>
 
-<main class="especialidades-cards wrapper">
+<main class="especialidades-cards">
   <div class="especialidad-card width">
-    <h3>Valor</h3>
-    <div class="card-link">
-      <h4>
-        $2'100.000
-      </h4>
-      <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" title="WhatsApp IVLU" class="circle-arrow" target="_blank">→</a>
-    </div>
+    <h4>Valor: $2'100.000</h4>
   </div>
 
   <div class="especialidad-card width">
-    <h3>Tiempo de aplicación</h3>
-    <div class="card-link">
-      <h4>
-        30 - 40 minutos
-      </h4>
-      <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" title="WhatsApp IVLU" class="circle-arrow" target="_blank">→</a>
-    </div>
+    <h4>Tiempo de aplicación: 30 - 40 minutos</h4>
   </div>
 </main>
 <section class="two_columns wrapper">
@@ -2398,14 +2230,14 @@
       <path fill="#d7bc73"
         d="m16.556 12.906-.455.453s-1.083 1.076-4.038-1.862-1.872-4.014-1.872-4.014l.286-.286c.707-.702.774-1.83.157-2.654L9.374 2.86C8.61 1.84 7.135 1.705 6.26 2.575l-1.57 1.56c-.433.432-.723.99-.688 1.61.09 1.587.808 5 4.812 8.982 4.247 4.222 8.232 4.39 9.861 4.238.516-.048.964-.31 1.325-.67l1.42-1.412c.96-.953.69-2.588-.538-3.255l-1.91-1.039c-.806-.438-1.787-.309-2.417.317Z" />
     </svg>
-    <a href="tel:+5712345678">Teléfono: +57 3228351465</a>
+    <a href="tel:573228351465" id="lead_llamada">Teléfono: +57 3228351465</a>
   </li>
   <li>
     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#d7bc73" viewBox="0 0 20 20">
       <path fill="#d7bc73" fill-rule="evenodd"
         d="M15.821 14.121c-.241.682-1.199 1.247-1.963 1.412-.523.11-1.205.199-3.503-.754C7.774 13.71 4.19 9.901 4.19 7.366c0-1.29.744-2.793 2.045-2.793.626 0 .764.012.97.507.241.582.829 2.016.899 2.163.289.603-.294.956-.717 1.482-.135.158-.288.329-.117.623.17.288.758 1.246 1.622 2.015 1.116.995 2.021 1.312 2.345 1.447.241.1.529.077.705-.111.223-.241.5-.641.782-1.036.199-.282.452-.317.717-.217.179.062 2.454 1.119 2.55 1.288.071.123.071.705-.17 1.387M10.002 0h-.005C4.484 0 0 4.485 0 10c0 2.187.705 4.215 1.904 5.86L.658 19.578l3.843-1.228A9.923 9.923 0 0 0 10.002 20C15.515 20 20 15.515 20 10S15.515 0 10.002 0" />
     </svg>
-    <a href="https://wa.me/573123456789" target="_blank">Whatsapp: +57 3228351465</a>
+    <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" target="_blank">Whatsapp: +57 3228351465</a>
   </li>
   <li>
     <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="40" height="40" fill="#d7bc73"
@@ -2444,25 +2276,13 @@
   </div>
   <img src="/assets/images/sculptra.avif" alt="Tratamiento con Sculptra en IVLU Bogotá" loading="lazy" decoding="async" width="520" height="520">
 </header>
-<main class="especialidades-cards wrapper">
+<main class="especialidades-cards">
   <div class="especialidad-card width">
-    <h3>Valor</h3>
-    <div class="card-link">
-      <h4>
-        $2'600.000
-      </h4>
-      <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" title="WhatsApp IVLU" class="circle-arrow" target="_blank">→</a>
-    </div>
+    <h4>Valor: $2'600.000</h4>
   </div>
 
   <div class="especialidad-card width">
-    <h3>Tiempo de aplicación</h3>
-    <div class="card-link">
-      <h4>
-        15 - 30 minutos
-      </h4>
-      <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" title="WhatsApp IVLU" class="circle-arrow" target="_blank">→</a>
-    </div>
+    <h4>Tiempo de aplicación: 15 - 30 minutos</h4>
   </div>
 </main>
 <section class="two_columns wrapper">
@@ -2536,14 +2356,14 @@
       <path fill="#d7bc73"
         d="m16.556 12.906-.455.453s-1.083 1.076-4.038-1.862-1.872-4.014-1.872-4.014l.286-.286c.707-.702.774-1.83.157-2.654L9.374 2.86C8.61 1.84 7.135 1.705 6.26 2.575l-1.57 1.56c-.433.432-.723.99-.688 1.61.09 1.587.808 5 4.812 8.982 4.247 4.222 8.232 4.39 9.861 4.238.516-.048.964-.31 1.325-.67l1.42-1.412c.96-.953.69-2.588-.538-3.255l-1.91-1.039c-.806-.438-1.787-.309-2.417.317Z" />
     </svg>
-    <a href="tel:+5712345678">Teléfono: +57 3228351465</a>
+    <a href="tel:573228351465" id="lead_llamada">Teléfono: +57 3228351465</a>
   </li>
   <li>
     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#d7bc73" viewBox="0 0 20 20">
       <path fill="#d7bc73" fill-rule="evenodd"
         d="M15.821 14.121c-.241.682-1.199 1.247-1.963 1.412-.523.11-1.205.199-3.503-.754C7.774 13.71 4.19 9.901 4.19 7.366c0-1.29.744-2.793 2.045-2.793.626 0 .764.012.97.507.241.582.829 2.016.899 2.163.289.603-.294.956-.717 1.482-.135.158-.288.329-.117.623.17.288.758 1.246 1.622 2.015 1.116.995 2.021 1.312 2.345 1.447.241.1.529.077.705-.111.223-.241.5-.641.782-1.036.199-.282.452-.317.717-.217.179.062 2.454 1.119 2.55 1.288.071.123.071.705-.17 1.387M10.002 0h-.005C4.484 0 0 4.485 0 10c0 2.187.705 4.215 1.904 5.86L.658 19.578l3.843-1.228A9.923 9.923 0 0 0 10.002 20C15.515 20 20 15.515 20 10S15.515 0 10.002 0" />
     </svg>
-    <a href="https://wa.me/573123456789" target="_blank">Whatsapp: +57 3228351465</a>
+    <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" target="_blank">Whatsapp: +57 3228351465</a>
   </li>
   <li>
     <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="40" height="40" fill="#d7bc73"
@@ -2663,14 +2483,14 @@
       <path fill="#d7bc73"
         d="m16.556 12.906-.455.453s-1.083 1.076-4.038-1.862-1.872-4.014-1.872-4.014l.286-.286c.707-.702.774-1.83.157-2.654L9.374 2.86C8.61 1.84 7.135 1.705 6.26 2.575l-1.57 1.56c-.433.432-.723.99-.688 1.61.09 1.587.808 5 4.812 8.982 4.247 4.222 8.232 4.39 9.861 4.238.516-.048.964-.31 1.325-.67l1.42-1.412c.96-.953.69-2.588-.538-3.255l-1.91-1.039c-.806-.438-1.787-.309-2.417.317Z" />
     </svg>
-    <a href="tel:+5712345678">Teléfono: +57 3228351465</a>
+    <a href="tel:573228351465" id="lead_llamada">Teléfono: +57 3228351465</a>
   </li>
   <li>
     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#d7bc73" viewBox="0 0 20 20">
       <path fill="#d7bc73" fill-rule="evenodd"
         d="M15.821 14.121c-.241.682-1.199 1.247-1.963 1.412-.523.11-1.205.199-3.503-.754C7.774 13.71 4.19 9.901 4.19 7.366c0-1.29.744-2.793 2.045-2.793.626 0 .764.012.97.507.241.582.829 2.016.899 2.163.289.603-.294.956-.717 1.482-.135.158-.288.329-.117.623.17.288.758 1.246 1.622 2.015 1.116.995 2.021 1.312 2.345 1.447.241.1.529.077.705-.111.223-.241.5-.641.782-1.036.199-.282.452-.317.717-.217.179.062 2.454 1.119 2.55 1.288.071.123.071.705-.17 1.387M10.002 0h-.005C4.484 0 0 4.485 0 10c0 2.187.705 4.215 1.904 5.86L.658 19.578l3.843-1.228A9.923 9.923 0 0 0 10.002 20C15.515 20 20 15.515 20 10S15.515 0 10.002 0" />
     </svg>
-    <a href="https://wa.me/573123456789" target="_blank">Whatsapp: +57 3228351465</a>
+    <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" target="_blank">Whatsapp: +57 3228351465</a>
   </li>
   <li>
     <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="40" height="40" fill="#d7bc73"
@@ -2708,25 +2528,13 @@
   <img src="/assets/images/surcos-nasogenianos.avif"
     alt="Tratamiento para surcos nasogenianos en IVLU" loading="lazy" decoding="async" width="520" height="520">
 </header>
-<main class="especialidades-cards wrapper">
+<main class="especialidades-cards">
   <div class="especialidad-card width">
-    <h3>Valor</h3>
-    <div class="card-link">
-      <h4>
-        $1'200.000
-      </h4>
-      <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" title="WhatsApp IVLU" class="circle-arrow" target="_blank">→</a>
-    </div>
+    <h4>Valor: $1'200.000</h4>
   </div>
 
   <div class="especialidad-card width">
-    <h3>Tiempo de aplicación</h3>
-    <div class="card-link">
-      <h4>
-        15 - 30 minutos
-      </h4>
-      <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" title="WhatsApp IVLU" class="circle-arrow" target="_blank">→</a>
-    </div>
+    <h4>Tiempo de aplicación: 15 - 30 minutos</h4>
   </div>
 </main>
 <section class="two_columns wrapper">
@@ -2801,14 +2609,14 @@
       <path fill="#d7bc73"
         d="m16.556 12.906-.455.453s-1.083 1.076-4.038-1.862-1.872-4.014-1.872-4.014l.286-.286c.707-.702.774-1.83.157-2.654L9.374 2.86C8.61 1.84 7.135 1.705 6.26 2.575l-1.57 1.56c-.433.432-.723.99-.688 1.61.09 1.587.808 5 4.812 8.982 4.247 4.222 8.232 4.39 9.861 4.238.516-.048.964-.31 1.325-.67l1.42-1.412c.96-.953.69-2.588-.538-3.255l-1.91-1.039c-.806-.438-1.787-.309-2.417.317Z" />
     </svg>
-    <a href="tel:+5712345678">Teléfono: +57 3228351465</a>
+    <a href="tel:573228351465" id="lead_llamada">Teléfono: +57 3228351465</a>
   </li>
   <li>
     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#d7bc73" viewBox="0 0 20 20">
       <path fill="#d7bc73" fill-rule="evenodd"
         d="M15.821 14.121c-.241.682-1.199 1.247-1.963 1.412-.523.11-1.205.199-3.503-.754C7.774 13.71 4.19 9.901 4.19 7.366c0-1.29.744-2.793 2.045-2.793.626 0 .764.012.97.507.241.582.829 2.016.899 2.163.289.603-.294.956-.717 1.482-.135.158-.288.329-.117.623.17.288.758 1.246 1.622 2.015 1.116.995 2.021 1.312 2.345 1.447.241.1.529.077.705-.111.223-.241.5-.641.782-1.036.199-.282.452-.317.717-.217.179.062 2.454 1.119 2.55 1.288.071.123.071.705-.17 1.387M10.002 0h-.005C4.484 0 0 4.485 0 10c0 2.187.705 4.215 1.904 5.86L.658 19.578l3.843-1.228A9.923 9.923 0 0 0 10.002 20C15.515 20 20 15.515 20 10S15.515 0 10.002 0" />
     </svg>
-    <a href="https://wa.me/573123456789" target="_blank">Whatsapp: +57 3228351465</a>
+    <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" target="_blank">Whatsapp: +57 3228351465</a>
   </li>
   <li>
     <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="40" height="40" fill="#d7bc73"
@@ -2924,14 +2732,14 @@
       <path fill="#d7bc73"
         d="m16.556 12.906-.455.453s-1.083 1.076-4.038-1.862-1.872-4.014-1.872-4.014l.286-.286c.707-.702.774-1.83.157-2.654L9.374 2.86C8.61 1.84 7.135 1.705 6.26 2.575l-1.57 1.56c-.433.432-.723.99-.688 1.61.09 1.587.808 5 4.812 8.982 4.247 4.222 8.232 4.39 9.861 4.238.516-.048.964-.31 1.325-.67l1.42-1.412c.96-.953.69-2.588-.538-3.255l-1.91-1.039c-.806-.438-1.787-.309-2.417.317Z" />
     </svg>
-    <a href="tel:+5712345678">Teléfono: +57 3228351465</a>
+    <a href="tel:573228351465" id="lead_llamada">Teléfono: +57 3228351465</a>
   </li>
   <li>
     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#d7bc73" viewBox="0 0 20 20">
       <path fill="#d7bc73" fill-rule="evenodd"
         d="M15.821 14.121c-.241.682-1.199 1.247-1.963 1.412-.523.11-1.205.199-3.503-.754C7.774 13.71 4.19 9.901 4.19 7.366c0-1.29.744-2.793 2.045-2.793.626 0 .764.012.97.507.241.582.829 2.016.899 2.163.289.603-.294.956-.717 1.482-.135.158-.288.329-.117.623.17.288.758 1.246 1.622 2.015 1.116.995 2.021 1.312 2.345 1.447.241.1.529.077.705-.111.223-.241.5-.641.782-1.036.199-.282.452-.317.717-.217.179.062 2.454 1.119 2.55 1.288.071.123.071.705-.17 1.387M10.002 0h-.005C4.484 0 0 4.485 0 10c0 2.187.705 4.215 1.904 5.86L.658 19.578l3.843-1.228A9.923 9.923 0 0 0 10.002 20C15.515 20 20 15.515 20 10S15.515 0 10.002 0" />
     </svg>
-    <a href="https://wa.me/573123456789" target="_blank">Whatsapp: +57 3228351465</a>
+    <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" target="_blank">Whatsapp: +57 3228351465</a>
   </li>
   <li>
     <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="40" height="40" fill="#d7bc73"
@@ -2970,25 +2778,13 @@
   </div>
   <img src="/assets/images/toxina-tercio-superior.avif" alt="Toxina Botulínica para Tercio Superior en Bogotá" loading="lazy" decoding="async" width="520" height="520">
 </header>
-<main class="especialidades-cards wrapper">
+<main class="especialidades-cards">
   <div class="especialidad-card width">
-    <h3>Valor</h3>
-    <div class="card-link">
-      <h4>
-        $400.000 - $1'500.000
-      </h4>
-      <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" title="WhatsApp IVLU" class="circle-arrow" target="_blank">→</a>
-    </div>
+    <h4>Valor: $400.000 - $1'500.000</h4>
   </div>
 
   <div class="especialidad-card width">
-    <h3>Tiempo de aplicación</h3>
-    <div class="card-link">
-      <h4>
-        15 - 30 minutos
-      </h4>
-      <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" title="WhatsApp IVLU" class="circle-arrow" target="_blank">→</a>
-    </div>
+    <h4>Tiempo de aplicación: 15 - 30 minutos</h4>
   </div>
 </main>
 <section class="two_columns wrapper">
@@ -3090,14 +2886,14 @@
       <path fill="#d7bc73"
         d="m16.556 12.906-.455.453s-1.083 1.076-4.038-1.862-1.872-4.014-1.872-4.014l.286-.286c.707-.702.774-1.83.157-2.654L9.374 2.86C8.61 1.84 7.135 1.705 6.26 2.575l-1.57 1.56c-.433.432-.723.99-.688 1.61.09 1.587.808 5 4.812 8.982 4.247 4.222 8.232 4.39 9.861 4.238.516-.048.964-.31 1.325-.67l1.42-1.412c.96-.953.69-2.588-.538-3.255l-1.91-1.039c-.806-.438-1.787-.309-2.417.317Z" />
     </svg>
-    <a href="tel:+5712345678">Teléfono: +57 3228351465</a>
+    <a href="tel:573228351465" id="lead_llamada">Teléfono: +57 3228351465</a>
   </li>
   <li>
     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#d7bc73" viewBox="0 0 20 20">
       <path fill="#d7bc73" fill-rule="evenodd"
         d="M15.821 14.121c-.241.682-1.199 1.247-1.963 1.412-.523.11-1.205.199-3.503-.754C7.774 13.71 4.19 9.901 4.19 7.366c0-1.29.744-2.793 2.045-2.793.626 0 .764.012.97.507.241.582.829 2.016.899 2.163.289.603-.294.956-.717 1.482-.135.158-.288.329-.117.623.17.288.758 1.246 1.622 2.015 1.116.995 2.021 1.312 2.345 1.447.241.1.529.077.705-.111.223-.241.5-.641.782-1.036.199-.282.452-.317.717-.217.179.062 2.454 1.119 2.55 1.288.071.123.071.705-.17 1.387M10.002 0h-.005C4.484 0 0 4.485 0 10c0 2.187.705 4.215 1.904 5.86L.658 19.578l3.843-1.228A9.923 9.923 0 0 0 10.002 20C15.515 20 20 15.515 20 10S15.515 0 10.002 0" />
     </svg>
-    <a href="https://wa.me/573123456789" target="_blank">Whatsapp: +57 3228351465</a>
+    <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" target="_blank">Whatsapp: +57 3228351465</a>
   </li>
   <li>
     <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="40" height="40" fill="#d7bc73"
@@ -3136,25 +2932,13 @@
   </div>
   <img src="/assets/images/tratamiento-cosmelan.avif" alt="" loading="lazy" decoding="async" width="520" height="520">
 </header>
-<main class="especialidades-cards wrapper">
+<main class="especialidades-cards">
   <div class="especialidad-card width">
-    <h3>Valor</h3>
-    <div class="card-link">
-      <h4>
-        $3'000.000
-      </h4>
-      <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" title="WhatsApp IVLU" class="circle-arrow" target="_blank">→</a>
-    </div>
+    <h4>Valor: $3'000.000</h4>
   </div>
 
   <div class="especialidad-card width">
-    <h3>Tiempo de aplicación</h3>
-    <div class="card-link">
-      <h4>
-        15 - 30 minutos
-      </h4>
-      <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" title="WhatsApp IVLU" class="circle-arrow" target="_blank">→</a>
-    </div>
+    <h4>Tiempo de aplicación: 15 - 30 minutos</h4>
   </div>
 </main>
 <section class="two_columns wrapper">
@@ -3254,14 +3038,14 @@
       <path fill="#d7bc73"
         d="m16.556 12.906-.455.453s-1.083 1.076-4.038-1.862-1.872-4.014-1.872-4.014l.286-.286c.707-.702.774-1.83.157-2.654L9.374 2.86C8.61 1.84 7.135 1.705 6.26 2.575l-1.57 1.56c-.433.432-.723.99-.688 1.61.09 1.587.808 5 4.812 8.982 4.247 4.222 8.232 4.39 9.861 4.238.516-.048.964-.31 1.325-.67l1.42-1.412c.96-.953.69-2.588-.538-3.255l-1.91-1.039c-.806-.438-1.787-.309-2.417.317Z" />
     </svg>
-    <a href="tel:+5712345678">Teléfono: +57 3228351465</a>
+    <a href="tel:573228351465" id="lead_llamada">Teléfono: +57 3228351465</a>
   </li>
   <li>
     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#d7bc73" viewBox="0 0 20 20">
       <path fill="#d7bc73" fill-rule="evenodd"
         d="M15.821 14.121c-.241.682-1.199 1.247-1.963 1.412-.523.11-1.205.199-3.503-.754C7.774 13.71 4.19 9.901 4.19 7.366c0-1.29.744-2.793 2.045-2.793.626 0 .764.012.97.507.241.582.829 2.016.899 2.163.289.603-.294.956-.717 1.482-.135.158-.288.329-.117.623.17.288.758 1.246 1.622 2.015 1.116.995 2.021 1.312 2.345 1.447.241.1.529.077.705-.111.223-.241.5-.641.782-1.036.199-.282.452-.317.717-.217.179.062 2.454 1.119 2.55 1.288.071.123.071.705-.17 1.387M10.002 0h-.005C4.484 0 0 4.485 0 10c0 2.187.705 4.215 1.904 5.86L.658 19.578l3.843-1.228A9.923 9.923 0 0 0 10.002 20C15.515 20 20 15.515 20 10S15.515 0 10.002 0" />
     </svg>
-    <a href="https://wa.me/573123456789" target="_blank">Whatsapp: +57 3228351465</a>
+    <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" target="_blank">Whatsapp: +57 3228351465</a>
   </li>
   <li>
     <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="40" height="40" fill="#d7bc73"
@@ -3300,25 +3084,13 @@
   </div>
   <img src="/assets/images/tratamiento-enzimas-pb-serum.avif" alt="Preparación de una paciente para aplicar enzimas serum en Bogotá" loading="lazy" decoding="async" width="520" height="520">
 </header>
-<main class="especialidades-cards wrapper">
+<main class="especialidades-cards">
   <div class="especialidad-card width">
-    <h3>Valor</h3>
-    <div class="card-link">
-      <h4>
-        $600.000 - $2.000.000
-      </h4>
-      <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" title="WhatsApp IVLU" class="circle-arrow" target="_blank">→</a>
-    </div>
+    <h4>Valor: $600.000 - $2.000.000</h4>
   </div>
 
   <div class="especialidad-card width">
-    <h3>Tiempo de aplicación</h3>
-    <div class="card-link">
-      <h4>
-        15 - 30 minutos
-      </h4>
-      <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" title="WhatsApp IVLU" class="circle-arrow" target="_blank">→</a>
-    </div>
+    <h4>Tiempo de aplicación: 15 - 30 minutos</h4>
   </div>
 </main>
 <section class="two_columns wrapper">
@@ -3408,14 +3180,14 @@
       <path fill="#d7bc73"
         d="m16.556 12.906-.455.453s-1.083 1.076-4.038-1.862-1.872-4.014-1.872-4.014l.286-.286c.707-.702.774-1.83.157-2.654L9.374 2.86C8.61 1.84 7.135 1.705 6.26 2.575l-1.57 1.56c-.433.432-.723.99-.688 1.61.09 1.587.808 5 4.812 8.982 4.247 4.222 8.232 4.39 9.861 4.238.516-.048.964-.31 1.325-.67l1.42-1.412c.96-.953.69-2.588-.538-3.255l-1.91-1.039c-.806-.438-1.787-.309-2.417.317Z" />
     </svg>
-    <a href="tel:+5712345678">Teléfono: +57 3228351465</a>
+    <a href="tel:573228351465" id="lead_llamada">Teléfono: +57 3228351465</a>
   </li>
   <li>
     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#d7bc73" viewBox="0 0 20 20">
       <path fill="#d7bc73" fill-rule="evenodd"
         d="M15.821 14.121c-.241.682-1.199 1.247-1.963 1.412-.523.11-1.205.199-3.503-.754C7.774 13.71 4.19 9.901 4.19 7.366c0-1.29.744-2.793 2.045-2.793.626 0 .764.012.97.507.241.582.829 2.016.899 2.163.289.603-.294.956-.717 1.482-.135.158-.288.329-.117.623.17.288.758 1.246 1.622 2.015 1.116.995 2.021 1.312 2.345 1.447.241.1.529.077.705-.111.223-.241.5-.641.782-1.036.199-.282.452-.317.717-.217.179.062 2.454 1.119 2.55 1.288.071.123.071.705-.17 1.387M10.002 0h-.005C4.484 0 0 4.485 0 10c0 2.187.705 4.215 1.904 5.86L.658 19.578l3.843-1.228A9.923 9.923 0 0 0 10.002 20C15.515 20 20 15.515 20 10S15.515 0 10.002 0" />
     </svg>
-    <a href="https://wa.me/573123456789" target="_blank">Whatsapp: +57 3228351465</a>
+    <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" target="_blank">Whatsapp: +57 3228351465</a>
   </li>
   <li>
     <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="40" height="40" fill="#d7bc73"
@@ -3455,25 +3227,13 @@
   <img src="/assets/images/tratamiento-hidratacion.avif" alt="Hombre recibiendo un tratamiento de hidratación facial en Bogotá con la doctora de IVLU" loading="lazy" decoding="async" width="520" height="520">
 </header>
 
-<main class="especialidades-cards wrapper">
+<main class="especialidades-cards">
   <div class="especialidad-card width">
-    <h3>Valor</h3>
-    <div class="card-link">
-      <h4>
-        $700.000
-      </h4>
-      <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" title="WhatsApp IVLU" class="circle-arrow" target="_blank">→</a>
-    </div>
+    <h4>Valor: $700.000</h4>
   </div>
 
   <div class="especialidad-card width">
-    <h3>Tiempo de aplicación</h3>
-    <div class="card-link">
-      <h4>
-        15 - 30 minutos
-      </h4>
-      <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" title="WhatsApp IVLU" class="circle-arrow" target="_blank">→</a>
-    </div>
+    <h4>Tiempo de aplicación: 15 - 30 minutos</h4>
   </div>
 </main>
 
@@ -3560,14 +3320,14 @@
       <path fill="#d7bc73"
         d="m16.556 12.906-.455.453s-1.083 1.076-4.038-1.862-1.872-4.014-1.872-4.014l.286-.286c.707-.702.774-1.83.157-2.654L9.374 2.86C8.61 1.84 7.135 1.705 6.26 2.575l-1.57 1.56c-.433.432-.723.99-.688 1.61.09 1.587.808 5 4.812 8.982 4.247 4.222 8.232 4.39 9.861 4.238.516-.048.964-.31 1.325-.67l1.42-1.412c.96-.953.69-2.588-.538-3.255l-1.91-1.039c-.806-.438-1.787-.309-2.417.317Z" />
     </svg>
-    <a href="tel:+5712345678">Teléfono: +57 3228351465</a>
+    <a href="tel:573228351465" id="lead_llamada">Teléfono: +57 3228351465</a>
   </li>
   <li>
     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#d7bc73" viewBox="0 0 20 20">
       <path fill="#d7bc73" fill-rule="evenodd"
         d="M15.821 14.121c-.241.682-1.199 1.247-1.963 1.412-.523.11-1.205.199-3.503-.754C7.774 13.71 4.19 9.901 4.19 7.366c0-1.29.744-2.793 2.045-2.793.626 0 .764.012.97.507.241.582.829 2.016.899 2.163.289.603-.294.956-.717 1.482-.135.158-.288.329-.117.623.17.288.758 1.246 1.622 2.015 1.116.995 2.021 1.312 2.345 1.447.241.1.529.077.705-.111.223-.241.5-.641.782-1.036.199-.282.452-.317.717-.217.179.062 2.454 1.119 2.55 1.288.071.123.071.705-.17 1.387M10.002 0h-.005C4.484 0 0 4.485 0 10c0 2.187.705 4.215 1.904 5.86L.658 19.578l3.843-1.228A9.923 9.923 0 0 0 10.002 20C15.515 20 20 15.515 20 10S15.515 0 10.002 0" />
     </svg>
-    <a href="https://wa.me/573123456789" target="_blank">Whatsapp: +57 3228351465</a>
+    <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" target="_blank">Whatsapp: +57 3228351465</a>
   </li>
   <li>
     <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="40" height="40" fill="#d7bc73"
@@ -3607,25 +3367,13 @@
   <img src="/assets/images/tratamiento-menton.avif" alt="Cliente de IVLU haciendo un tratamiento facial de mentón en Bogotá" loading="lazy" decoding="async" width="520" height="520">
 </header>
 
-<main class="especialidades-cards wrapper">
+<main class="especialidades-cards">
   <div class="especialidad-card width">
-    <h3>Valor</h3>
-    <div class="card-link">
-      <h4>
-        $1'250.000
-      </h4>
-      <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" title="WhatsApp IVLU" class="circle-arrow" target="_blank">→</a>
-    </div>
+    <h4>Valor: $1'250.000</h4>
   </div>
 
   <div class="especialidad-card width">
-    <h3>Tiempo de aplicación</h3>
-    <div class="card-link">
-      <h4>
-        15 - 30 minutos
-      </h4>
-      <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" title="WhatsApp IVLU" class="circle-arrow" target="_blank">→</a>
-    </div>
+    <h4>Tiempo de aplicación: 15 - 30 minutos</h4>
   </div>
 </main>
 <section class="two_columns wrapper">
@@ -3706,14 +3454,14 @@
       <path fill="#d7bc73"
         d="m16.556 12.906-.455.453s-1.083 1.076-4.038-1.862-1.872-4.014-1.872-4.014l.286-.286c.707-.702.774-1.83.157-2.654L9.374 2.86C8.61 1.84 7.135 1.705 6.26 2.575l-1.57 1.56c-.433.432-.723.99-.688 1.61.09 1.587.808 5 4.812 8.982 4.247 4.222 8.232 4.39 9.861 4.238.516-.048.964-.31 1.325-.67l1.42-1.412c.96-.953.69-2.588-.538-3.255l-1.91-1.039c-.806-.438-1.787-.309-2.417.317Z" />
     </svg>
-    <a href="tel:+5712345678">Teléfono: +57 3228351465</a>
+    <a href="tel:573228351465" id="lead_llamada">Teléfono: +57 3228351465</a>
   </li>
   <li>
     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#d7bc73" viewBox="0 0 20 20">
       <path fill="#d7bc73" fill-rule="evenodd"
         d="M15.821 14.121c-.241.682-1.199 1.247-1.963 1.412-.523.11-1.205.199-3.503-.754C7.774 13.71 4.19 9.901 4.19 7.366c0-1.29.744-2.793 2.045-2.793.626 0 .764.012.97.507.241.582.829 2.016.899 2.163.289.603-.294.956-.717 1.482-.135.158-.288.329-.117.623.17.288.758 1.246 1.622 2.015 1.116.995 2.021 1.312 2.345 1.447.241.1.529.077.705-.111.223-.241.5-.641.782-1.036.199-.282.452-.317.717-.217.179.062 2.454 1.119 2.55 1.288.071.123.071.705-.17 1.387M10.002 0h-.005C4.484 0 0 4.485 0 10c0 2.187.705 4.215 1.904 5.86L.658 19.578l3.843-1.228A9.923 9.923 0 0 0 10.002 20C15.515 20 20 15.515 20 10S15.515 0 10.002 0" />
     </svg>
-    <a href="https://wa.me/573123456789" target="_blank">Whatsapp: +57 3228351465</a>
+    <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" target="_blank">Whatsapp: +57 3228351465</a>
   </li>
   <li>
     <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="40" height="40" fill="#d7bc73"

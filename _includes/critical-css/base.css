@@ -511,7 +511,7 @@ h4,
 h5{
   line-height: var(--line-height);
   text-transform: none;
-  max-width: 26ch;
+  max-width: 600px;
 }
 
 h1 {

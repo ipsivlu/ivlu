@@ -1,21 +1,9 @@
-<main class="especialidades-cards wrapper">
+<main class="especialidades-cards">
   <div class="especialidad-card width">
-    <h3>{% if current_lang == 'en' %}Price{% else %}Valor{% endif %}</h3>
-    <div class="card-link">
-      <h4>
-        {{page.precios}}
-      </h4>
-      <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" title="WhatsApp IVLU" class="circle-arrow" target="_blank">→</a>
-    </div>
+    <h4>{% if current_lang == 'en' %}Price{% else %}Valor{% endif %}: {{page.precios}}</h4>
   </div>
 
   <div class="especialidad-card width">
-    <h3>{% if current_lang == 'en' %}Application time{% else %}Tiempo de aplicación{% endif %}</h3>
-    <div class="card-link">
-      <h4>
-        {{page.tiempo_aplicacion}}
-      </h4>
-      <a href="#" id="lead_whatsapp" rel="nofollow noreferrer noopener" title="WhatsApp IVLU" class="circle-arrow" target="_blank">→</a>
-    </div>
+    <h4>{% if current_lang == 'en' %}Application time{% else %}Tiempo de aplicación{% endif %}: {{page.tiempo_aplicacion}}</h4>
   </div>
 </main>
