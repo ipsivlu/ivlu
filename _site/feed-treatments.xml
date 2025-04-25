@@ -1954,7 +1954,7 @@
 <section class="two_columns wrapper">
   <div class="center">
     <img src="/assets/images/plasma-capilar-bogota.avif"
-      alt="Aplicación de plasma rico en plaquetas capilar en IVLU" loading="lazy" decoding="async" width="616" height="740">
+      alt="Aplicación de plasma rico en plaquetas capilar en IVLU" loading="lazy" decoding="async" width="520" height="520">
   </div>
   <div class="flow">
     <h2 class="content-title">Plasma rico en plaquetas capilar: el poder regenerativo de tus células</h2>
@@ -3504,7 +3504,7 @@
 <section class="two_columns wrapper">
   <div class="center">
     <img src="/assets/images/tratamiento-menton-ivlu.avif"
-      alt="Aplicación de tratamiento para mentón en IVLU" loading="lazy" decoding="async" width="616" height="740">
+      alt="Aplicación de tratamiento para mentón en IVLU" loading="lazy" decoding="async" width="520" height="520">
   </div>
   <div class="flow">
     <h2 class="content-title">Perfilado de Mentón: Proyección, Definición y Armonización Facial</h2>
@@ -3556,7 +3556,7 @@
     
   </div>
   <div class="center">
-    <img src="/assets/images/tratamiento-menton-bogota.avif" alt="Resultados del tratamiento para mentón en IVLU Bogotá" loading="lazy" decoding="async" width="616" height="740">
+    <img src="/assets/images/tratamiento-menton-bogota.avif" alt="Resultados del tratamiento para mentón en IVLU Bogotá" loading="lazy" decoding="async" width="520" height="520">
   </div>
 </section>
 
