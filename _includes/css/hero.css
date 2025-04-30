@@ -39,6 +39,10 @@ header.hero_home {
 .banner-image {
   display: grid;
   place-items: center;
+  
+  picture{
+    line-height: 0;
+  }
 }
 
 .banner-image img {

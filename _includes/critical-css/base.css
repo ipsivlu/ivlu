@@ -588,6 +588,10 @@ img {
   width: min(calc(100% - 2rem), 1280px);
   margin-inline: auto;
 }
+.seccion {
+  width: min(calc(100% - 2rem), 1280px);
+  margin-inline: auto;
+}
 
 /* Flow Utility for Spacing */
 .flow > * + * {
