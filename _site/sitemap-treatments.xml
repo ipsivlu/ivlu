@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"><url>
     <loc>http://localhost:4000/es/servicios/bruxismo/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <image:image>
       <image:loc>http://localhost:4000/assets/images/tratamiento-bruxismo.avif</image:loc>
       <image:title>Tratamiento para Bruxismo | Expertos en Bogotá</image:title>
@@ -13,7 +13,7 @@
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/es/servicios/consulta-capilar/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <image:image>
       <image:loc>http://localhost:4000/assets/images/consulta-capilar-especializada.avif</image:loc>
       <image:title>Consulta Capilar Experta | Diagnóstico Avanzado en Bogotá</image:title>
@@ -23,12 +23,12 @@
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/es/servicios/exosomas/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/es/servicios/hidratacion-facial/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <image:image>
       <image:loc>http://localhost:4000/assets/images/tratamiento-hidratacion.avif</image:loc>
       <image:title>Hidratación Facial Avanzada | Tratamientos Premium en Bogotá</image:title>
@@ -38,7 +38,7 @@
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/es/servicios/hidrolipoclasia/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <image:image>
       <image:loc>http://localhost:4000/assets/images/hidrolipoclasia.avif</image:loc>
       <image:title>Hidrolipoclasia Avanzada | Reducción de Grasa Localizada en Bogotá</image:title>
@@ -48,7 +48,7 @@
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/es/servicios/hiperhidrosis/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <image:image>
       <image:loc>http://localhost:4000/assets/images/tratamiento-hiperhidrosis.avif</image:loc>
       <image:title>Tratamiento Avanzado para Hiperhidrosis | Expertas en Bogotá</image:title>
@@ -58,12 +58,12 @@
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/es/servicios/implante-barba/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/es/servicios/implante-capilar/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <image:image>
       <image:loc>http://localhost:4000/assets/images/implante-capilar.avif</image:loc>
       <image:title>Implante Capilar en Bogotá | ivlu</image:title>
@@ -73,7 +73,7 @@
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/es/servicios/labios/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <image:image>
       <image:loc>http://localhost:4000/assets/images/tratamiento-labios.avif</image:loc>
       <image:title>Perfilado y Voluminización de Labios Premium | Expertos en Bogotá</image:title>
@@ -83,7 +83,7 @@
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/es/servicios/limpieza-facial/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <image:image>
       <image:loc>http://localhost:4000/assets/images/limpieza-facial-premium.avif</image:loc>
       <image:title>Limpieza Facial Profunda | Tratamiento Dermatológico en Bogotá</image:title>
@@ -93,7 +93,7 @@
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/es/servicios/mesoterapia-capilar/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <image:image>
       <image:loc>http://localhost:4000/assets/images/mesoterapia-capilar.avif</image:loc>
       <image:title>Mesoterapia Capilar | Tratamiento Avanzado contra la Caída del Cabello en Bogotá</image:title>
@@ -103,12 +103,12 @@
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/es/servicios/nanopore-tratamiento/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/es/servicios/ojeras/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <image:image>
       <image:loc>http://localhost:4000/assets/images/eliminacion-ojeras-ivlu-bogota.avif</image:loc>
       <image:title>Tratamiento Avanzado de Ojeras | Expertos en Bogotá</image:title>
@@ -118,12 +118,12 @@
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/es/servicios/peeling-facial/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/es/servicios/plasma-capilar/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <image:image>
       <image:loc>http://localhost:4000/assets/images/plasma-capilar.avif</image:loc>
       <image:title>Plasma Rico en Plaquetas Capilar en Bogotá</image:title>
@@ -133,7 +133,7 @@
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/es/servicios/pomulos/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <image:image>
       <image:loc>http://localhost:4000/assets/images/tratamiento-pomulos.avif</image:loc>
       <image:title>Aumento y Definición de Pómulos Premium | Expertos en Bogotá</image:title>
@@ -143,7 +143,7 @@
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/es/servicios/profhilo-tratamiento/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <image:image>
       <image:loc>http://localhost:4000/assets/images/profhilo-tratamiento.avif</image:loc>
       <image:title>Profhilo | Hidratación y Bioestimulación de Colágeno Avanzada en Bogotá</image:title>
@@ -153,7 +153,7 @@
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/es/servicios/radiesse/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <image:image>
       <image:loc>http://localhost:4000/assets/images/tratamiento-radiesse.avif</image:loc>
       <image:title>Radiesse | Tecnología Avanzada de Bioestimulación en Bogotá</image:title>
@@ -163,22 +163,22 @@
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/es/servicios/sculptra/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/es/servicios/sueroterapia/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/es/servicios/surcos/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/es/servicios/terapia-laser-capilar/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <image:image>
       <image:loc>http://localhost:4000/assets/images/terapia-laser-capilar.avif</image:loc>
       <image:title>Terapia Láser de Baja Potencia (LLLT) para Alopecia en Bogotá</image:title>
@@ -188,7 +188,7 @@
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/es/servicios/toxina-botulinica-tercio-superior/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <image:image>
       <image:loc>http://localhost:4000/assets/images/toxina-tercio-superior.avif</image:loc>
       <image:title>Toxina Botulínica para Tercio Superior | Expertos en Dysport y Xeomin en Bogotá</image:title>
@@ -198,7 +198,7 @@
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/es/servicios/tratamiento-cosmelan/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <image:image>
       <image:loc>http://localhost:4000/assets/images/tratamiento-cosmelan.avif</image:loc>
       <image:title>Cosmelan® Premium | Tratamiento Despigmentante Avanzado en Bogotá</image:title>
@@ -207,7 +207,7 @@
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/es/servicios/tratamiento-enzimas-pb-serum/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <image:image>
       <image:loc>http://localhost:4000/assets/images/tratamiento-enzimas-pb-serum.avif</image:loc>
       <image:title>Enzimas PB Serum Premium | Tratamiento Enzimático Avanzado en Bogotá</image:title>
@@ -217,7 +217,7 @@
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/es/servicios/tratamiento-menton/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <image:image>
       <image:loc>http://localhost:4000/assets/images/tratamiento-menton.avif</image:loc>
       <image:title>Perfilado y Definición de Mentón Premium | Expertos en Bogotá</image:title>
@@ -227,12 +227,12 @@
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/en/services/beard-implant/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/en/services/botulinum-toxin-upper-face/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <image:image>
       <image:loc>http://localhost:4000/assets/images/toxina-tercio-superior.avif</image:loc>
       <image:title>Botulinum Toxin for Upper Third | Dysport and Xeomin Experts in Bogotá</image:title>
@@ -242,7 +242,7 @@
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/en/services/bruxism/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <image:image>
       <image:loc>http://localhost:4000/assets/images/tratamiento-bruxismo.avif</image:loc>
       <image:title>Bruxism Treatment | Experts in Bogotá</image:title>
@@ -252,7 +252,7 @@
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/en/services/cheekbone-treatment/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <image:image>
       <image:loc>http://localhost:4000/assets/images/tratamiento-pomulos.avif</image:loc>
       <image:title>Premium Cheek Enhancement &amp; Definition | Experts in Bogotá</image:title>
@@ -262,7 +262,7 @@
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/en/services/chin/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <image:image>
       <image:loc>http://localhost:4000/assets/images/tratamiento-menton.avif</image:loc>
       <image:title>Premium Chin Contouring &amp; Definition | Experts in Bogotá</image:title>
@@ -272,7 +272,7 @@
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/en/services/cosmelan-treatment/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <image:image>
       <image:loc>http://localhost:4000/assets/images/tratamiento-cosmelan.avif</image:loc>
       <image:title>Cosmelan® Premium | Advanced Depigmentation Treatment in Bogotá</image:title>
@@ -282,12 +282,12 @@
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/en/services/exosomes/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/en/services/facial-cleansing/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <image:image>
       <image:loc>http://localhost:4000/assets/images/limpieza-facial-premium.avif</image:loc>
       <image:title>Deep Facial Cleansing | Dermatological Treatment in Bogotá</image:title>
@@ -297,12 +297,12 @@
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/en/services/facial-folds/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/en/services/facial-hydration/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <image:image>
       <image:loc>http://localhost:4000/assets/images/tratamiento-hidratacion.avif</image:loc>
       <image:title>Advanced Facial Hydration | Premium Treatments in Bogotá</image:title>
@@ -312,12 +312,12 @@
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/en/services/facial-peeling/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/en/services/hair-consultation/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <image:image>
       <image:loc>http://localhost:4000/assets/images/consulta-capilar-especializada.avif</image:loc>
       <image:title>Expert Hair Consultation | Advanced Diagnosis in Bogotá</image:title>
@@ -327,7 +327,7 @@
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/en/services/hair-mesotherapy/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <image:image>
       <image:loc>http://localhost:4000/assets/images/mesoterapia-capilar.avif</image:loc>
       <image:title>Hair Mesotherapy | Advanced Treatment for Hair Loss in Bogotá</image:title>
@@ -337,7 +337,7 @@
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/en/services/hair-plasma/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <image:image>
       <image:loc>http://localhost:4000/assets/images/plasma-capilar.avif</image:loc>
       <image:title>Platelet-Rich Plasma Hair Treatment in Bogotá</image:title>
@@ -347,7 +347,7 @@
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/en/services/hair-transplant/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <image:image>
       <image:loc>http://localhost:4000/assets/images/implante-capilar.avif</image:loc>
       <image:title>Hair Transplant in Bogotá | ivlu</image:title>
@@ -357,7 +357,7 @@
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/en/services/hydrolipoclasia/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <image:image>
       <image:loc>http://localhost:4000/assets/images/hidrolipoclasia.avif</image:loc>
       <image:title>Advanced Hydrolipoclasia | Localized Fat Reduction in Bogotá</image:title>
@@ -367,7 +367,7 @@
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/en/services/hyperhidrosis/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <image:image>
       <image:loc>http://localhost:4000/assets/images/tratamiento-hiperhidrosis.avif</image:loc>
       <image:title>Advanced Hyperhidrosis Treatment | Experts in Bogotá</image:title>
@@ -377,7 +377,7 @@
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/en/services/lips-treatment/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <image:image>
       <image:loc>http://localhost:4000/assets/images/tratamiento-labios.avif</image:loc>
       <image:title>Premium Lip Contouring and Volumizing | Experts in Bogotá</image:title>
@@ -387,7 +387,7 @@
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/en/services/low-level-laser-therapy/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <image:image>
       <image:loc>http://localhost:4000/assets/images/terapia-laser-capilar.avif</image:loc>
       <image:title>Low-Level Laser Therapy (LLLT) for Hair Loss in Bogotá</image:title>
@@ -397,12 +397,12 @@
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/en/services/nanopore-treatment/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/en/services/pb-serum-enzyme-treatment/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <image:image>
       <image:loc>http://localhost:4000/assets/images/tratamiento-enzimas-pb-serum.avif</image:loc>
       <image:title>PB Serum Premium Enzymes | Advanced Enzymatic Treatment in Bogotá</image:title>
@@ -412,7 +412,7 @@
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/en/services/profhilo-treatment/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <image:image>
       <image:loc>http://localhost:4000/assets/images/profhilo-tratamiento.avif</image:loc>
       <image:title>Profhilo | Advanced Collagen Hydration and Biostimulation in Bogotá</image:title>
@@ -422,7 +422,7 @@
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/en/services/radiesse/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <image:image>
       <image:loc>http://localhost:4000/assets/images/katamiento-radiesse.avif</image:loc>
       <image:title>Radiesse | Advanced Bio-Stimulation Technology in Bogotá</image:title>
@@ -432,17 +432,17 @@
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/en/services/sculptra/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/en/services/suerotherapy/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/en/services/under-eye-treatment/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <image:image>
       <image:loc>http://localhost:4000/assets/images/eliminacion-ojeras-ivlu-bogota.avif</image:loc>
       <image:title>Advanced Dark Circles Treatment | Experts in Bogotá</image:title>
@@ -452,7 +452,7 @@
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/es/tecnologias/colormax-manchas-pecas/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <image:image>
       <image:loc>http://localhost:4000/assets/images/colormax-tratamiento.avif</image:loc>
       <image:title>Colormax | Tratamiento Rejuvenecedor con Plasma en Bogotá</image:title>
@@ -462,7 +462,7 @@
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/es/tecnologias/forma-tratamiento/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <image:image>
       <image:loc>http://localhost:4000/assets/images/forma-tratamiento.avif</image:loc>
       <image:title>Radiofrecuencia Forma | Reducción de Grasa y Tonificación en Bogotá</image:title>
@@ -472,12 +472,12 @@
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/es/tecnologias/hydrash-tratamiento/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/es/tecnologias/lummeca-rosacea/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <image:image>
       <image:loc>http://localhost:4000/assets/images/lummeca-rosacea.avif</image:loc>
       <image:title>Lummeca para Rosácea | Tratamiento Avanzado contra el Enrojecimiento Facial en Bogotá</image:title>
@@ -487,7 +487,7 @@
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/es/tecnologias/morpheus-8/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <image:image>
       <image:loc>http://localhost:4000/assets/images/morpheus-8-tratamiento.avif</image:loc>
       <image:title>Morpheus8 | Rejuvenecimiento Facial Avanzado con Radiofrecuencia Fraccionada en Bogotá</image:title>
@@ -497,7 +497,7 @@
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/es/tecnologias/remocion-tatuajes-colormax/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <image:image>
       <image:loc>http://localhost:4000/assets/images/laser-colormax-tatuajes.avif</image:loc>
       <image:title>Láser Colormax para Remoción de Tatuajes | Tecnología Avanzada en Bogotá</image:title>
@@ -507,7 +507,7 @@
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/es/tecnologias/tratamiento-ultherapy/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <image:image>
       <image:loc>http://localhost:4000/assets/images/tratamiento-ultherapy.avif</image:loc>
       <image:title>Ultherapy Premium | Lifting Sin Cirugía Avanzado en Bogotá</image:title>
@@ -517,7 +517,7 @@
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/en/technologies/colormax-spots-freckles/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <image:image>
       <image:loc>http://localhost:4000/assets/images/colormax-tratamiento.avif</image:loc>
       <image:title>Colormax | Rejuvenating Plasma Treatment in Bogotá</image:title>
@@ -527,7 +527,7 @@
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/en/technologies/colormax-tattoos-removal/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <image:image>
       <image:loc>http://localhost:4000/assets/images/laser-colormax-tatuajes.avif</image:loc>
       <image:title>Colormax Laser for Tattoo Removal | Advanced Technology in Bogotá</image:title>
@@ -537,7 +537,7 @@
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/en/technologies/forma-treatment/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <image:image>
       <image:loc>http://localhost:4000/assets/images/forma-tratamiento.avif</image:loc>
       <image:title>Forma Radiofrequency | Fat Reduction and Toning in Bogotá</image:title>
@@ -547,12 +547,12 @@
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/en/technologies/hydrash-treatment/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/en/technologies/lummeca-rosacea/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <image:image>
       <image:loc>http://localhost:4000/assets/images/lummeca-rosacea.avif</image:loc>
       <image:title>Lummeca for Rosacea | Advanced Facial Redness Treatment in Bogotá</image:title>
@@ -562,7 +562,7 @@
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/en/technologies/morpheus-8/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <image:image>
       <image:loc>http://localhost:4000/assets/images/morpheus-8-tratamiento.avif</image:loc>
       <image:title>Morpheus8 | Advanced Facial Rejuvenation with Fractional Radiofrequency in Bogotá</image:title>
@@ -572,7 +572,7 @@
     <priority>0.9</priority>
   </url><url>
     <loc>http://localhost:4000/en/technologies/ultherapy-treatment/</loc>
-    <lastmod>2025-04-29T11:09:43-05:00</lastmod>
+    <lastmod>2025-04-30T07:41:12-05:00</lastmod>
     <image:image>
       <image:loc>http://localhost:4000/assets/images/tratamiento-ultherapy.avif</image:loc>
       <image:title>Ultherapy Premium | Advanced Non-Surgical Lifting in Bogotá</image:title>
