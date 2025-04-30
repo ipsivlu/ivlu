@@ -128,10 +128,6 @@
                   {% if current_lang == 'en' %}Cosmelan for Facial Spots{% else %}Cosmelan para Manchas Faciales{% endif %}
                 </a>
                 <a
-                  href="/{{ current_lang }}/{% if current_lang == 'en' %}services/facial-cleansing/{% else %}servicios/limpieza-facial/{% endif %}">
-                  {% if current_lang == 'en' %}Facial Cleansing{% else %}Limpieza facial{% endif %}
-                </a>
-                <a
                   href="/{{ current_lang }}/{% if current_lang == 'en' %}services/sculptra/{% else %}servicios/sculptra/{% endif %}">
                   {% if current_lang == 'en' %}Rejuvenation with Sculptra{% else %}Rejuvenecimiento con Sculptra{% endif %}
                 </a>
@@ -234,6 +230,10 @@
                   - Colormax{% endif %}
                 </a>
                 <a
+                  href="/{{ current_lang }}/{% if current_lang == 'en' %}technologies/facial-cleansing/{% else %}tecnologias/limpieza-facial/{% endif %}">
+                  {% if current_lang == 'en' %}Facial Cleansing{% else %}Limpieza facial{% endif %}
+                </a>
+                <a
                   href="/{{ current_lang }}/{% if current_lang == 'en' %}technologies/colormax-tattoos-removal/{% else %}tecnologias/remocion-tatuajes-colormax/{% endif %}">
                   {% if current_lang == 'en' %}Tattoos Removal - Colormax{% else %}Remoción de tatuajes - Colormax{% endif %}
                 </a>
@@ -249,10 +249,10 @@
                   href="/{{ current_lang }}/{% if current_lang == 'en' %}technologies/forma-treatment/{% else %}tecnologias/forma-tratamiento/{% endif %}">
                   Forma
                 </a>
-                <a
+                <!-- <a
                   href="/{{ current_lang }}/{% if current_lang == 'en' %}technologies/hydrash-treatment/{% else %}tecnologias/hydrash-tratamiento/{% endif %}">
                   Hydrash
-                </a>
+                </a> -->
               </div>
             </div>
           </div>
