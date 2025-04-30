@@ -8,7 +8,7 @@ ref: protocolo-pieles-sensibles
 hero: "/assets/images/tratamiento-pieles-sensibles-protocolo.avif"
 jpg: "/assets/images/tratamiento-pieles-sensibles-protocolo.jpg"
 description: "Descubre el protocolo de 7 pasos desarrollado por expertas para tratar eficazmente pieles sensibles y reactivas. Basado en evidencia clínica y experiencia dermatológica para resultados duraderos."
-excerpt: "La piel sensible afecta a casi el 60% de la población y necesita un enfoque especializado. Nuestras expertas comparten sugerencias basadas en evidencia clínica para transformar pieles sensibles y reactivas, devolviendo confort y salud."
+excerpt: "La piel sensible afecta a casi el 60% de la población y necesita un enfoque especializado. Nuestras médicas expertas comparten sugerencias basadas en evidencia clínica para transformar pieles sensibles y reactivas, devolviendo confort y salud."
 ---
 La piel sensible y reactiva requiere un enfoque delicado para mantenerla saludable y protegida. Si tu piel tiende a enrojecerse, irritarse o experimentar reacciones a ciertos productos, los tratamientos adecuados son clave para mejorar su condición.
 
