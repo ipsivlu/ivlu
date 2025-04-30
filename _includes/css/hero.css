@@ -78,14 +78,14 @@ header.hero_home {
 }
 
 .hero_blog {
-  background-image: url("../images/blog-ivlu.avif");
+  background-image: url("../images/equipo-ivlu-bogota.avif");
   background-size: cover;
   background-position: center;
-
-  p,
-  h1 {
-    color: var(--text-dark);
-  }
+  
+    p,
+    h1 {
+      color: var(--text-light);
+    }
 }
 
 .hero_tecnologias {
