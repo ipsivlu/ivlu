@@ -5,8 +5,8 @@ h1: "Morpheus 8: Rejuvenecimiento facial y corporal mediante radiofrecuencia fra
 date: 2025-03-14
 lang: es
 ref: morpheus8-revolucion
-hero: "/assets/images/morpheus8-tratamiento-resultados.avif"
-jpg: "/assets/images/morpheus8-tratamiento-resultados.jpg"
+hero: "/assets/images/morpheus-8-tratamiento.avif"
+jpg: "/assets/images/morpheus-8-tratamiento.jpg"
 description: "Descubre por qué Morpheus 8 se ha convertido en el tratamiento preferido por dermatólogos y pacientes para rejuvenecimiento facial y corporal. Analizamos sus ventajas, casos de éxito y resultados transformadores."
 excerpt: "El Morpheus 8 ha transformado el enfoque de los tratamientos estéticos no invasivos. Descubre por qué especialistas y pacientes lo están eligiendo como la tecnología más avanzada para rejuvenecimiento facial y corporal."
 ---
