@@ -119,15 +119,15 @@
   --label-distance: 1.25rem;
   
   position: absolute;
-  top: var(--label-distance);
+  bottom: var(--label-distance);
   padding: var(--label-padding);
-  background: white;
-  border-radius: 24px;
-  font: bold 0.875rem var(--fuenteTexto);
-  box-shadow: 0 2px 4px rgb(0 0 0 / 0.2);
+  color: white;
+  font-weight: 900;
   pointer-events: none;
   text-transform: uppercase;
+  text-shadow: 0 0 10px rgb(0 0 0 / 0.5);
   letter-spacing: 0.5px;
+  border-radius: 24px;
 
   &.before {
     left: var(--label-distance);
