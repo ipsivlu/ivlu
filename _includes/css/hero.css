@@ -9,16 +9,17 @@ header.two_columns {
 }
 
 header.hero_home {
-  background-image: url(../images/banner-bg.avif);
+  background-image: url(../images/banner-home-ivlu.avif);
   background-size: cover;
   background-position: center;
+  min-height: 50dvh;
 
   div.wrapper {
     padding: 5em 0 0;
   }
 
   img {
-    box-shadow: none;
+    display: none;
   }
 }
 
@@ -27,6 +28,8 @@ header.hero_home {
   align-content: center;
   text-shadow: var(--shadow);
   flex: 1;
+  padding: 4em 0;
+  color: white;
 }
 
 .banner-content h1 {
