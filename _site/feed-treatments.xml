@@ -2484,67 +2484,125 @@
   <img src="/assets/images/sueroterapia.avif"
     alt="Tratamiento de sueroterapia intravenosa en IVLU" loading="lazy" decoding="async" width="520" height="520">
 </header>
+<main class="especialidades-cards">
+  <div class="especialidad-card width">
+    <h4>Valor: </h4>
+  </div>
+
+  <div class="especialidad-card width">
+    <h4>Tiempo de aplicación: Cada sesión dura entre 45 y 90 minutos. Se recomiendan de 4 a 6 sesiones, según el objetivo terapéutico y respuesta del paciente.</h4>
+  </div>
+</main>
+
 <section class="two_columns wrapper">
   <div class="center">
     <img src="/assets/images/sueroterapia-aplicacion.avif"
       alt="Aplicación de sueroterapia personalizada en IVLU" loading="lazy" decoding="async" width="616" height="740">
   </div>
   <div class="flow">
-    <h2 class="content-title">Sueroterapia intravenosa: nutrición celular directa para optimizar tu salud y bienestar</h2>
-    <p>La sueroterapia intravenosa es un método avanzado que permite administrar directamente en el torrente sanguíneo cócteles personalizados de vitaminas, minerales, aminoácidos y antioxidantes, garantizando una biodisponibilidad del 100% y evitando la pérdida de nutrientes que ocurre con la administración oral.</p>
-    <p>En IVLU, nuestro equipo médico experto diseña protocolos exclusivos de sueroterapia adaptados a tus necesidades específicas, utilizando ingredientes de la más alta calidad farmacéutica y tecnología de infusión avanzada. Ya sea para potenciar tu sistema inmunológico, aumentar tus niveles de energía, mejorar la calidad de tu piel o recuperarte de actividad física intensa, nuestros cócteles intravenosos te brindan una revitalización profunda y duradera que sentirás desde la primera sesión.</p>
+    <h2 class="content-title">Sueroterapia intravenosa: ¿Qué es exactamente?</h2>
+    <p>La sueroterapia es un tratamiento intravenoso que administra medicamentos homeopáticos directamente en la sangre. En medicina biorreguladora, ayuda a restablecer el equilibrio del organismo, desintoxicar, fortalecer el sistema inmune y estimular la regeneración celular.</p>
+    <p>Son Fabricados por el Laboratorio Alemán Heel con respaldo científico, calidad farmacéutica y registro INVIMA vigente para uso en Colombia.</p>
 
     <a href="#" id="lead_whatsapp" rel="nofollow noopener noreferrer" target="_blank" title="WhatsApp IVLU" class="buttons btn-secondary">Solicita información detallada</a>
   </div>
 </section>
 
-<section class="highlight-quote">
-  <div class="flex-section wrapper">
-    <div>
-      <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="120" height="120" fill="#fde9c4" viewBox="0 0 482.496 482.496"><path d="M392.503 231.424c-43.183 0-78.308 47.865-78.308 106.692 0 58.827 35.125 106.692 78.308 106.692s78.308-47.865 78.308-106.692c-.001-58.827-35.126-106.692-78.308-106.692zm0 193.692c-32.317 0-58.615-39.029-58.615-87s26.298-87 58.615-87 58.615 39.029 58.615 87-26.298 87-58.615 87zM89.993 37.741c-43.183 0-78.308 47.856-78.308 106.683 0 58.827 35.125 106.692 78.308 106.692 43.173 0 78.298-47.865 78.298-106.692 0-58.827-35.125-106.683-78.298-106.683zm0 193.683c-32.317 0-58.615-39.029-58.615-87s26.298-86.99 58.615-86.99c32.317 0 58.606 39.019 58.606 86.99s-26.289 87-58.606 87zM96.278 472.649 369.163.012l17.053 9.846L113.33 482.495z"/></svg>
-      <b>100% biodisponibilidad</b>
-    </div>
-    <div>
-      <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="120" height="120" fill="#fde9c4" viewBox="0 0 492.308 492.308"><path d="M246.154 161.913 142.885 273.308l14.442 13.384 78.981-85.196V411.5H256V201.495l78.986 85.197 14.442-13.384z"/><path d="M242.168 63.726 181.447 0H0v492.308h492.308V63.726h-250.14zm230.447 408.889H19.692V19.692h153.322l60.721 63.726h238.88v389.197z"/></svg>
-      <b>Personalización total</b>
-    </div>
-    <div>
-      <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="120" height="120" fill="#fde9c4" viewBox="0 0 32 32"><path d="M15 8a8 8 0 1 0 0 16 8 8 0 0 0 0-16zm0 15c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7zm16.295-4.207a.999.999 0 0 1 0 1.414L29.002 22.5a.5.5 0 0 1-.707-.707L30.088 20H28a3 3 0 0 1-3-3v-1c0-5.741-4.862-10.367-10.685-9.977C9.006 6.379 5 11.032 5 16.353V17a3 3 0 0 1-3 3H.5a.5.5 0 0 1 0-1H2a2 2 0 0 0 2-2v-1C4 9.856 9.037 4.889 15.206 5.002 21.262 5.113 26 10.312 26 16.369v.516C26 18.11 26.895 19 28 19h2.088l-1.793-1.793a.5.5 0 0 1 .707-.707l2.293 2.293z" style="fill:#fde9c4"/></svg>
-      <b>Efecto inmediato</b>
-    </div>
-    <div>
-      <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="120" height="120" fill="#fde9c4" viewBox="0 0 1800 1800"><path d="M1096.233 698.227c0-108.2-88.028-196.229-196.229-196.229-108.205 0196.234 88.029-196.234 196.229v74.779H571.518v226.107c1.825 179.273 149.183 325.127 328.487 325.127s326.658-145.854 328.478-325.445V773.006h-132.249v-74.779zm69.52 137.507v162.74c-1.47 145.039-120.684 263.037-265.749 263.037s-264.283-117.998-265.758-262.717v-163.06h531.507zM766.5 773.006v-74.779c0-73.611 59.889-133.5 133.504-133.5 73.611 0 133.5 59.889 133.5 133.5v74.779H766.5z"/><path d="M1668.854 759.284c-58.126-318.375-309.768-570.017-628.138-628.141C1031.553 61.639 971.966 7.808 900 7.808S768.442 61.642 759.28 131.146c-318.37 58.125-570.012 309.768-628.134 628.138-69.507 9.162-123.34 68.754-123.34 140.72 0 71.968 53.833 131.551 123.34 140.713 58.121 318.371 309.763 570.008 628.134 628.135 9.162 69.502 68.754 123.34 140.72 123.34s131.553-53.834 140.716-123.34c318.37-58.122 570.017-309.764 628.138-628.13 69.507-9.163 123.34-68.75 123.34-140.718-.001-71.966-53.834-131.558-123.34-140.72zM900 70.537c33.898 0 62.808 21.432 74.109 51.424 3.27 8.672 5.142 18.025 5.142 27.827 0 12.525-3.001 24.335-8.195 34.876-12.93 26.241-39.88 44.382-71.056 44.382-31.181 0-58.13-18.141-71.06-44.382-5.198-10.541-8.196-22.351-8.196-34.876 0-9.801 1.873-19.154 5.142-27.827C837.188 91.969 866.098 70.537 900 70.537zM121.962 974.115c-29.995-11.306-51.427-40.211-51.427-74.111 0-33.902 21.432-62.812 51.427-74.114 8.672-3.269 18.027-5.142 27.829-5.142 12.523 0 24.333 2.998 34.874 8.196 26.236 12.93 44.377 39.879 44.377 71.06 0 31.179-18.141 58.123-44.377 71.058-10.541 5.19-22.351 8.191-34.874 8.191-9.802 0-19.157-1.872-27.829-5.138zM900 1729.462c-33.902 0-62.812-21.432-74.114-51.427-3.269-8.672-5.142-18.027-5.142-27.828 0-12.523 2.998-24.334 8.196-34.875 12.93-26.24 39.879-44.377 71.06-44.377 31.176 0 58.126 18.137 71.056 44.377 5.194 10.541 8.195 22.352 8.195 34.875 0 9.801-1.872 19.156-5.142 27.828-11.301 29.995-40.211 51.427-74.109 51.427zm134.927-123.375c-18.605-56.747-72.04-97.86-134.927-97.86s-116.326 41.113-134.931 97.86c-288.367-54.993-516.166-282.788-571.159-571.159 56.748-18.604 97.861-72.039 97.861-134.924 0-62.887-41.113-116.326-97.861-134.931 54.993-288.371 282.792-516.17 571.159-571.163 18.605 56.752 72.044 97.865 134.931 97.865s116.321-41.113 134.927-97.865c288.371 54.993 516.17 282.792 571.163 571.163-56.752 18.605-97.865 72.044-97.865 134.931 0 62.885 41.113 116.319 97.865 134.924-54.993 288.371-282.792 516.166-571.163 571.159zm643.111-631.972c-8.673 3.266-18.023 5.138-27.824 5.138-12.528 0-24.338-3.001-34.879-8.191-26.24-12.935-44.382-39.879-44.382-71.058 0-31.176 18.142-58.126 44.382-71.06 10.541-5.198 22.351-8.196 34.879-8.196 9.801 0 19.151 1.873 27.824 5.142 29.995 11.298 51.427 40.212 51.427 74.114 0 33.9-21.432 62.814-51.427 74.111z"/></svg>
-      <b>Máxima seguridad</b>
-    </div>
-    <div>
-      <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="120" height="120" fill="#fde9c4" viewBox="0 0 512 512"><path d="M74.543 348.782h10.168v10.168H74.543zM371.439 322.795h10.168v10.169h-10.168zM430.74 347.442h10.168v10.168H430.74zM234.609 266.617h-10a3.043 3.043 0 0 1-3.04 3.04 3.043 3.043 0 0 1-3.041-3.04h-10c0 7.19 5.85 13.04 13.041 13.04 7.19 0 13.04-5.849 13.04-13.04zM248.937 316.81c-8.604 0-16.556-5.016-20.26-12.777l-9.025 4.307c5.354 11.221 16.849 18.471 29.285 18.471 12.424 0 23.918-7.249 29.284-18.468l-9.021-4.313c-3.714 7.762-11.667 12.78-20.263 12.78zM276.303 279.657c7.191 0 13.041-5.85 13.041-13.04h-10a3.043 3.043 0 0 1-3.041 3.04 3.042 3.042 0 0 1-3.039-3.04h-10c0 7.191 5.849 13.04 13.039 13.04zM268.709 461.698h69.18v-29.852h-69.18v29.852zm10-19.851h49.18v9.852h-49.18v-9.852zM50.136 409.554H71.47v10H50.136zM426.717 409.554h21.334v10h-21.334z"/><path d="M453.609 374.901h-44.672v14.177h-36.908v10h88.93v30.96H359.1v10h49.838v12.24h-48.959v10h48.959v.003h44.672v-.003h7.35v14.55H353.256V424.35a61.239 61.239 0 0 0-2.996-18.953c9.51-10.152 14.914-23.69 14.914-37.661 0-16.866-7.576-32.577-20.789-43.104-4.121-3.279-6.484-8.145-6.484-13.35v-8.803c43.291 4.197 86.605 11.466 128.836 21.64l2.342-9.722c-42.994-10.358-87.104-17.736-131.178-21.963v-72.229c0-24.175-9.527-46.941-26.828-64.105-16.816-16.684-38.859-25.846-62.141-25.846-.234 0-.47.001-.703.003-23.497.186-45.587 9.438-62.201 26.051-16.805 16.797-26.06 39.137-26.06 62.904v75.482a954.4 954.4 0 0 0-127.556 21.569l2.334 9.724a944.443 944.443 0 0 1 125.222-21.239v6.112c0 5.273-2.411 10.181-6.612 13.463-13.476 10.511-21.204 26.334-21.204 43.413 0 14.196 5.552 27.888 15.323 38.083a61.232 61.232 0 0 0-2.858 18.531v52.478H36.939v-14.55h6.44v.003h44.669v-.003h49.88v-10h-49.88v-12.24h50.76v-10H36.939v-30.96h88.32v-10h-37.21v-14.177h-44.67v14.177h-16.44v50.96h16.44v12.24h-16.44v34.55h444.02v-34.55h-17.35v-12.24h17.35v-50.96h-17.35v-14.177zm-10 77.377h-24.672v-12.24h24.672v12.24zm-390.23-67.377h24.669v4.177H53.379v-4.177zm0 55.137h24.669v12.24H53.379v-12.24zm289.877 36.79H154.615V424.35c0-23.819 16.225-44.133 39.456-49.397l13.589-3.08c10.412 11.979 25.279 18.787 41.277 18.787 15.997 0 30.866-6.808 41.282-18.786l13.584 3.079c23.23 5.265 39.453 25.577 39.453 49.397v52.478zM203.07 362.659l-9.982 2.263a85.64 85.64 0 0 1-3.69-24.853v-22.485a69.7 69.7 0 0 0 10.894 13.696v8.545a95.56 95.56 0 0 0 2.778 22.834zm68.133 4.905 7.555 1.712c-8.137 7.305-18.639 11.384-29.821 11.384s-21.684-4.079-29.817-11.385l7.545-1.71a37.152 37.152 0 0 0 44.538-.001zm-38.297-7.835v-10.523a69.14 69.14 0 0 0 15.757 1.83c5.616 0 11.072-.689 16.304-1.957v10.633a27.173 27.173 0 0 1-32.061.017zm42.061-1.566v-12.33a69.123 69.123 0 0 0 12.504-6.721v.713c0 6.963-.857 13.871-2.525 20.6l-9.979-2.262zm-52.061 0-10.083 2.286a85.617 85.617 0 0 1-2.531-20.624v-.425a69.087 69.087 0 0 0 12.614 6.648v12.115zm71.793 4.473a95.632 95.632 0 0 0 2.771-22.811v-8.962a69.635 69.635 0 0 0 10.449-13.267v25.297c0 6.079-.506 12.195-1.506 18.176-.225 1.35-.484 2.701-.762 4.049l-10.952-2.482zm20.551 5.442a119.87 119.87 0 0 0 1.027-5.36 120.674 120.674 0 0 0 1.643-19.824v-60.965c0-.052.004-.103.004-.154h-.004v-13.18c0-27.646-17.701-51.798-44.045-60.102l-3.006 9.537c22.16 6.985 37.051 27.305 37.051 50.564v13.334c-.084 32.605-26.633 59.107-59.257 59.107-32.677 0-59.261-26.585-59.261-59.262h-.004v-11.416c0-19.364 11.262-37.131 28.737-45.415l.492-.227c21.281-9.802 35.032-31.282 35.032-54.725v-7.656h-10v7.656c0 19.361-11.247 37.118-28.699 45.399l-.525.243c-21.284 9.811-35.037 31.291-35.037 54.724v69.711a95.592 95.592 0 0 0 4.097 27.669c-13.829 5.271-24.948 15.244-31.696 27.84-6.191-7.882-9.648-17.706-9.648-27.842 0-13.976 6.325-26.925 17.357-35.53 6.647-5.193 10.459-12.973 10.459-21.346V219.21c0-21.096 8.214-40.924 23.131-55.832 14.746-14.747 34.354-22.959 55.209-23.123l.621-.003c20.626 0 40.171 8.134 55.101 22.944 15.393 15.272 23.871 35.518 23.871 57.007v91.077c0 8.27 3.738 15.987 10.254 21.172 10.816 8.619 17.02 21.479 17.02 35.282 0 10.104-3.268 19.624-9.311 27.443-6.623-12.141-17.332-21.803-30.613-27.099zm128.359 21h-24.672v-4.177h24.672v4.177zM336.471 101.946c0 31.685 25.777 57.462 57.461 57.462 12.373 0 24.158-3.871 34.086-11.196l-5.938-8.047c-8.195 6.047-17.928 9.243-28.148 9.243-26.17 0-47.461-21.291-47.461-47.462 0-6.963 1.471-13.669 4.375-19.933l-9.072-4.205c-3.52 7.59-5.303 15.713-5.303 24.138zM436.977 140.015a57.394 57.394 0 0 0 14.418-38.068c0-31.685-25.777-57.462-57.463-57.462a57.46 57.46 0 0 0-43.406 19.809l7.551 6.556a47.466 47.466 0 0 1 35.855-16.364c26.172 0 47.463 21.291 47.463 47.462 0 11.6-4.229 22.766-11.906 31.441l7.488 6.626z"/><path d="M460.707 101.946c0 36.819-29.955 66.774-66.775 66.774-10.078 0-19.764-2.188-28.781-6.503l-4.316 9.021c10.377 4.965 21.514 7.482 33.098 7.482 42.334 0 76.775-34.44 76.775-76.774 0-25.512-12.629-49.293-33.779-63.615l-5.607 8.28c18.399 12.459 29.385 33.146 29.385 55.335zM424.156 31.352a76.406 76.406 0 0 0-15.834-4.833l-1.863 9.825a66.483 66.483 0 0 1 13.758 4.199l3.939-9.191zM346.057 161.968l6.24-7.813c-15.977-12.759-25.139-31.788-25.139-52.208 0-36.819 29.955-66.774 66.773-66.774v-10c-42.334 0-76.773 34.441-76.773 76.774 0 23.477 10.533 45.354 28.899 60.021zM131.892 102.149c0-11.75-9.56-21.31-21.31-21.31s-21.309 9.56-21.309 21.31h10c0-6.236 5.074-11.31 11.309-11.31 6.236 0 11.31 5.073 11.31 11.31 0 6.235-5.073 11.309-11.31 11.309h-80.16v10h80.16c11.751 0 21.31-9.56 21.31-21.309z"/><path d="M155.493 117.431c6.235 0 11.309 5.073 11.309 11.31 0 6.235-5.073 11.309-11.309 11.309H75.332v10h80.161c11.75 0 21.309-9.56 21.309-21.309 0-11.75-9.559-21.31-21.309-21.31s-21.31 9.56-21.31 21.31h10c0-6.237 5.073-11.31 11.31-11.31zM51.049 140.049h12.458v10H51.049zM463.752 225.222c-11.75 0-21.309 9.559-21.309 21.309h10c0-6.235 5.072-11.309 11.309-11.309s11.309 5.073 11.309 11.309-5.072 11.309-11.309 11.309h-72.369v10h72.369c11.75 0 21.309-9.559 21.309-21.309s-9.559-21.309-21.309-21.309zM432.564 222.808c0-11.749-9.559-21.309-21.309-21.309s-21.309 9.56-21.309 21.309h10c0-6.235 5.072-11.309 11.309-11.309s11.309 5.073 11.309 11.309c0 6.236-5.072 11.31-11.309 11.31h-60.207v10h60.207c11.751-.001 21.309-9.56 21.309-21.31zM367.1 257.839h12.457v10H367.1z"/></svg>
-      <b>Ambiente premium</b>
-    </div>
-  </div>
-</section>
-
-<section class="wrapper two_columns">
+<main class="wrapper two_columns">
   <div class="flow">
-    <h2>Nuestros protocolos exclusivos de sueroterapia</h2>
-    <p>En IVLU hemos desarrollado formulaciones exclusivas de sueroterapia para abordar necesidades específicas utilizando componentes de grado farmacéutico y las concentraciones óptimas avaladas por estudios científicos.</p>
+    <h2>Tipos de Sueroterapia y sus beneficios</h2>
+    <h3>1. DetoxCell / Detoxificación</h3>
+    <p>Activa hígado, riñones, sistema linfático y digestivo para eliminar toxinas, metales pesados y residuos inflamatorios.</p>
+    <h4>Beneficios de DetoxCell / Detoxificación</h4>
     
     <div class="highlight-list">
       
-      <p><span>01</span><strong>IVLU Immunity Boost:</strong> Potente combinación de vitamina C de alta dosis, zinc, selenio y complejo B que fortalece tu sistema inmunológico, aumenta las defensas y previene enfermedades. Ideal durante cambios estacionales o periodos de alto estrés para evitar infecciones recurrentes.</p>
+      <p><span>01</span> Favorece la eliminación de toxinas.</p>
       
-      <p><span>02</span><strong>IVLU Energy & Focus:</strong> Fórmula avanzada con coenzima Q10, carnitina, taurina y complejo B que combate la fatiga crónica, mejora la concentración mental y optimiza el rendimiento energético celular. Perfecta para profesionales con alta exigencia mental o deportistas que buscan potenciar su rendimiento.</p>
+      <p><span>02</span> Mejora funciones hepáticas y renales.</p>
       
-      <p><span>03</span><strong>IVLU Beauty Glow:</strong> Cóctel revitalizante con glutatión, vitamina C, biotina y ácido hialurónico que mejora la luminosidad de la piel, reduce manchas, fortalece cabello y uñas, y potencia el efecto de los tratamientos estéticos faciales. El complemento ideal para tu rutina de belleza desde el interior.</p>
+      <p><span>03</span> Claridad mental y mejor digestión.</p>
       
-      <p><span>04</span><strong>IVLU Detox Ultimate:</strong> Combinación depurativa de antioxidantes, aminoácidos esenciales y minerales que favorece la eliminación de toxinas, mejora la función hepática y optimiza el metabolismo celular. Recomendada después de periodos de excesos, para desintoxicar el organismo o como parte de programas de pérdida de peso.</p>
+      <p><span>04</span> Refuerza el sistema inmune.</p>
       
-      <p><span>05</span><strong>IVLU Custom Formula:</strong> Después de una evaluación médica completa, diseñamos un protocolo totalmente personalizado según tus necesidades específicas, objetivos de salud y bienestar, combinando los componentes ideales en las concentraciones óptimas para tu organismo.</p>
+    </div>
+    <h3>2. ReVitaCapilar</h3>
+    <p>Nutre los folículos, mejora la circulación del cuero cabelludo y reduce la inflamación.</p>
+    <h4>Beneficios de ReVitaCapilar</h4>
+    
+    <div class="highlight-list">
+      
+      <p><span>01</span> Estimula el crecimiento capilar.</p>
+      
+      <p><span>02</span> Oxigena y activa el cuero cabelludo.</p>
+      
+      <p><span>03</span> Reduce la caída del cabello.</p>
+      
+      <p><span>04</span> Aumenta el grosor y vitalidad del nuevo cabello.</p>
+      
+    </div>
+    <h3>3. ImmunoC Max Therapy</h3>
+    <p>Aumenta los niveles de vitamina C para apoyar la inmunidad, combatir el estrés oxidativo y acelerar la recuperación.</p>
+    <h4>Beneficios de ImmunoC Max Therapy</h4>
+    
+    <div class="highlight-list">
+      
+      <p><span>01</span> Refuerza las defensas.</p>
+      
+      <p><span>02</span> Neutraliza radicales libres.</p>
+      
+      <p><span>03</span> Estimula colágeno y reparación tisular.</p>
+      
+      <p><span>04</span> Aporta energía y reduce la fatiga.</p>
+      
+    </div>
+    <h3>4. Metabolic Reset</h3>
+    <p>Acelera el metabolismo, mejora la quema de grasa y regula el azúcar en sangre.</p>
+    <h4>Beneficios de Metabolic Reset</h4>
+    
+    <div class="highlight-list">
+      
+      <p><span>01</span> Aumenta el gasto calórico.</p>
+      
+      <p><span>02</span> Estabiliza glucosa e insulina.</p>
+      
+      <p><span>03</span> Reduce grasa y retención de líquidos.</p>
+      
+      <p><span>04</span> Disminuye inflamación asociada al sobrepeso.</p>
+      
+    </div>
+    <h3>5. NeuroVital Energy / Fatiga Crónica</h3>
+    <p>Restaura la energía, mejora el sueño y modula la inflamación crónica.</p>
+    <h4>Beneficios de NeuroVital Energy / Fatiga Crónica</h4>
+    
+    <div class="highlight-list">
+      
+      <p><span>01</span> Aumenta energía celular.</p>
+      
+      <p><span>02</span> Regula el sistema inmune.</p>
+      
+      <p><span>03</span> Mejora enfoque y ánimo.</p>
+      
+      <p><span>04</span> Reduce el estrés celular.</p>
+      
     </div>
     
   </div>
-  <div class="center">
-    <img src="/assets/images/sueroterapia-relax.avif" alt="Experiencia premium de sueroterapia en IVLU Bogotá" loading="lazy" decoding="async" width="616" height="740">
+  <div class="nosotros_cards">
+    <img src="/assets/images/detoxheel.avif" alt="Experiencia premium de sueroterapia en IVLU Bogotá" loading="lazy" decoding="async" width="616" height="740">
+    <img src="/assets/images/metabolic-heel.avif" alt="Experiencia premium de sueroterapia en IVLU Bogotá" loading="lazy" decoding="async" width="616" height="740">
+    <img src="/assets/images/neuroheel.avif" alt="Experiencia premium de sueroterapia en IVLU Bogotá" loading="lazy" decoding="async" width="616" height="740">
   </div>
+</main>
+<section class="wrapper flow">
+    <h2>Contraindicaciones Generales</h2>
+    <ul> 
+      <li>Alergias a componentes del suero.</li>
+      <li>Insuficiencia renal o hepática grave.</li>
+      <li>Embarazo y lactancia (requiere evaluación).</li>
+      <li>Enfermedades autoinmunes activas sin control.</li>
+      <li>Infecciones agudas graves sin diagnóstico.</li>
+    </ul>
 </section>
 
 <section class="bg-inverted">
