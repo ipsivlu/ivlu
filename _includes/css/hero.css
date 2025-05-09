@@ -69,15 +69,27 @@ header.hero_home {
   }
 }
 
-.hero_nosotros {
-  background-image: url("../images/equipo-de-doctoras-de-ivlu.avif");
-  background-size: cover;
-  background-position: center;
+.hero_text{
+  width: min(100%, 1920px);
+  min-height: 80dvh;
+  margin-inline: auto;
+  padding: 10em 2em 2em;
+  text-align: center;
+  display: grid;
+  align-content: end;
+  justify-content: center;
 
   p,
   h1 {
     color: var(--text-light);
   }
+}
+
+.hero_nosotros {
+  background-image: url("../images/equipo-de-doctoras-de-ivlu.avif");
+  background-size: cover;
+  background-position: center;
+  
 }
 
 .hero_blog {
