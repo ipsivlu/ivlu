@@ -44,7 +44,9 @@
 
     <section class="footer-bottom">
       <p>{% if current_lang == 'en' %}@2025 - IVLU S.A.S. | All rights reserved{% else %}@2025 - IVLU S.A.S. | Todos los derechos reservados{% endif %}</p>
+      {% if page.url == "/" %}
       <small>{% if current_lang == 'en' %}Web design by{% else %}Diseño web de{% endif %} <a href="https://juli.com.co/desarrollo-paginas-web" target="_blank">Juli.Com.Co</a></small>
+      {% endif %}
     </section>
   </div>
 </footer>
