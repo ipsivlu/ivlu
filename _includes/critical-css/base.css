@@ -586,7 +586,7 @@ img {
 
 /* Responsive Wrapper */
 .wrapper {
-  padding: 8em 0;
+  padding: 6em 0;
   width: min(calc(100% - 2rem), 1280px);
   margin-inline: auto;
 }

@@ -9,6 +9,7 @@
 
 .especialidad-card {
   flex: 1 0 480px;
+  max-width: 100%;
   background-color: var(--crystal-clear);
   padding: 2rem;
   position: relative;
