@@ -1,6 +1,10 @@
 .buttons {
   display: inline-block;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
   max-width: max-content;
+  height: -webkit-min-content;
+  height: -moz-min-content;
   height: min-content;
   padding: 20px 36px;
   text-align: center;
