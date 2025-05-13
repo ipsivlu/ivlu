@@ -10,7 +10,7 @@
   & .intro {
     width: 100%;
     -webkit-margin-after: 3rem;
-            margin-block-end: 3rem;
+    margin-block-end: 3rem;
   }
 }
 
@@ -23,7 +23,7 @@
   & h3 {
     text-align: center;
     -webkit-margin-after: 1rem;
-            margin-block-end: 1rem;
+    margin-block-end: 1rem;
     font-size: clamp(1.375rem, 1.25rem + 0.63vw, 1.75rem);
   }
 }
@@ -44,8 +44,8 @@
   inset: 0;
   cursor: col-resize;
   -moz-user-select: none;
-   -ms-user-select: none;
-       user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   -webkit-user-select: none;
 }
 
@@ -62,7 +62,7 @@
   width: 100%;
   height: 100%;
   -webkit-clip-path: inset(0 50% 0 0);
-          clip-path: inset(0 50% 0 0);
+  clip-path: inset(0 50% 0 0);
   transition: -webkit-clip-path 0.1s ease-out;
   transition: clip-path 0.1s ease-out;
   transition: clip-path 0.1s ease-out, -webkit-clip-path 0.1s ease-out;
@@ -77,9 +77,9 @@
   height: 100%;
   /* Cambiado para mejor adaptación a cualquier proporción de imagen */
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   -o-object-position: center;
-     object-position: center;
+  object-position: center;
   pointer-events: none;
   -webkit-user-drag: none;
 }
@@ -110,7 +110,7 @@
   place-items: center;
   box-shadow: 0 2px 6px rgb(0 0 0 / 0.3);
   pointer-events: none;
-  
+
   & svg {
     color: var(--principal);
     transition: transform 0.2s ease;
@@ -126,7 +126,7 @@
 .compare-label {
   --label-padding: 0.5rem 1rem;
   --label-distance: 1.25rem;
-  
+
   position: absolute;
   bottom: var(--label-distance);
   padding: var(--label-padding);
@@ -158,12 +158,12 @@
 .case-description {
   text-align: center;
   -webkit-margin-before: 1rem;
-          margin-block-start: 1rem;
+  margin-block-start: 1rem;
   font-size: 0.9375rem;
   max-width: min(100%, 600px);
   margin-inline: auto;
   line-height: 1.6;
-  
+
   @container before-after (min-width: 768px) {
     font-size: 1rem;
   }
@@ -174,12 +174,12 @@
   .before-after-container::before {
     float: left;
     padding-top: 133.33%; /* 4/3 = 133.33% para proporción vertical */
-    content: '';
+    content: "";
   }
-  
+
   .before-after-container::after {
     display: block;
-    content: '';
+    content: "";
     clear: both;
   }
 }
@@ -229,7 +229,7 @@
 .slider-line,
 .before-image-container {
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   transform-style: preserve-3d;
   perspective: 1000px;
 }

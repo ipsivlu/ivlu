@@ -8,10 +8,10 @@
 
 <!-- Sección de Tratamientos Faciales -->
 <section class="wrapper padding">
-  <header class="intro flow">
+  <div class="intro flow">
     <h2>{% if current_lang == "es" %}Tratamientos Faciales{% else %}Facial Treatments{% endif %}</h2>
     <p>{% if current_lang == "es" %}Transforma tu apariencia con resultados naturales comprobados{% else %}Transform your appearance with proven natural results{% endif %}</p>
-  </header>
+  </div>
 
   <div class="before-after-section">
     {% for case in data.casos.faciales %}
