@@ -181,3 +181,24 @@
     width: min(100%, 1320px);
   }
 }
+
+.banner{
+  background-image: url('/assets/images/banner-bg.avif');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 7em;
+
+  & .two_columns{
+    align-items: center;
+  }
+
+  .banner-image{
+    line-height: 1;
+      
+      img{
+        box-shadow: none;
+        align-self: flex-end;
+    }
+  }
+}
