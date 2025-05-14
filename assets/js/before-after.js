@@ -1,130 +1,161 @@
-// Reemplazar tu script before-after.js actual con este:
-document.addEventListener('DOMContentLoaded', function() {
-  console.log('Script before-after.js cargado correctamente');
+/**
+ * Comparador de imágenes Antes/Después
+ * Versión: 2.0
+ * Compatible con: Chrome, Firefox, Safari, Edge
+ */
+(function() {
+  'use strict';
   
-  // Inicializar el slider para todas las imágenes
-  initBeforeAfterSliders();
-});
-
-// Inicializar si el DOM ya está cargado
-if (document.readyState === 'complete' || document.readyState === 'interactive') {
-  setTimeout(initBeforeAfterSliders, 1);
-}
-
-function initBeforeAfterSliders() {
-  // Seleccionar todos los contenedores de before-after
-  const containers = document.querySelectorAll('.before-after-wrapper');
-  
-  if (containers.length === 0) {
-    console.warn('No se encontraron contenedores .before-after-wrapper');
-    return;
-  }
-  
-  console.log(`Inicializando ${containers.length} sliders de before-after`);
-  
-  // Inicializar cada contenedor
-  containers.forEach((container, index) => {
-    let isMoving = false;
-    const beforeContainer = container.querySelector('.before-image-container');
-    const sliderLine = container.querySelector('.slider-line');
+  // Función principal para inicializar cuando el DOM esté listo
+  function initBeforeAfterSliders() {
+    // Seleccionar todos los comparadores en la página
+    const sliders = document.querySelectorAll('.before-after-wrapper');
     
-    if (!beforeContainer || !sliderLine) {
-      console.warn(`Slider #${index}: Faltan elementos necesarios`);
+    if (!sliders.length) {
+      console.log('No se encontraron comparadores de antes/después en esta página');
       return;
     }
     
-    // Establecer posición inicial manualmente para Safari
-    setSliderPosition(beforeContainer, sliderLine, 50);
+    console.log(`Inicializando ${sliders.length} comparadores de antes/después`);
+    
+    // Procesar cada comparador
+    sliders.forEach(function(slider, index) {
+      setupSlider(slider, index);
+    });
+  }
+  
+  // Configurar un comparador individual
+  function setupSlider(slider, index) {
+    const beforeContainer = slider.querySelector('.before-image-container');
+    const sliderControl = slider.querySelector('.slider-control');
+    
+    if (!beforeContainer || !sliderControl) {
+      console.warn(`Comparador #${index}: Faltan elementos necesarios`);
+      return;
+    }
+    
+    // Variables para el seguimiento del estado
+    let isDragging = false;
+    
+    // Establecer la posición inicial (50%)
+    updateSliderPosition(50);
     
     // Función para actualizar la posición del slider
-    function setSliderPosition(beforeElement, lineElement, percent) {
-      // Fix para Safari: usar ambas versiones del clip-path
-      beforeElement.style.webkitClipPath = `inset(0 ${100 - percent}% 0 0)`;
-      beforeElement.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
+    function updateSliderPosition(percent) {
+      const limitedPercent = Math.max(0, Math.min(100, percent));
       
-      // Usar left con % en lugar de transform para mejor compatibilidad
-      lineElement.style.left = `${percent}%`;
+      // Actualizar el clip-path de la imagen antes
+      beforeContainer.style.clipPath = `polygon(0% 0%, ${limitedPercent}% 0%, ${limitedPercent}% 100%, 0% 100%)`;
+      beforeContainer.style.webkitClipPath = `polygon(0% 0%, ${limitedPercent}% 0%, ${limitedPercent}% 100%, 0% 100%)`;
+      
+      // Actualizar la posición del control deslizante
+      sliderControl.style.left = `${limitedPercent}%`;
+      
+      // Actualizar el atributo ARIA para accesibilidad
+      slider.setAttribute('aria-valuenow', limitedPercent);
     }
     
-    const updateSliderPosition = function(clientX) {
-      if (!isMoving) return;
+    // Función para manejar eventos de movimiento (mouse/touch)
+    function handleMove(clientX) {
+      if (!isDragging) return;
       
-      const rect = container.getBoundingClientRect();
-      let x = clientX;
+      const rect = slider.getBoundingClientRect();
+      const position = Math.max(0, Math.min(clientX - rect.left, rect.width));
+      const percentage = (position / rect.width) * 100;
       
-      // Asegurar que x está dentro de los límites del contenedor
-      if (x < rect.left) x = rect.left;
-      if (x > rect.right) x = rect.right;
-      
-      const percent = ((x - rect.left) / rect.width) * 100;
-      
-      // Aplicar cambios directamente sin requestAnimationFrame para Safari
-      setSliderPosition(beforeContainer, sliderLine, percent);
-    };
+      updateSliderPosition(percentage);
+    }
     
-    // Funciones mejoradas para eventos
-    function handleStart(e) {
-      isMoving = true;
-      container.classList.add('sliding');
-      
-      // Determinar tipo de evento (mouse o touch)
-      const clientX = e.type.includes('mouse') ? e.clientX : e.touches[0].clientX;
-      updateSliderPosition(clientX);
-      
-      // Prevenir comportamiento por defecto solo para eventos táctiles
-      if (e.type.includes('touch')) {
+    // --- Manejadores de eventos para ratón ---
+    function handleMouseDown(e) {
+      e.preventDefault();
+      isDragging = true;
+      slider.classList.add('sliding');
+      handleMove(e.clientX);
+    }
+    
+    function handleMouseMove(e) {
+      if (isDragging) {
         e.preventDefault();
+        handleMove(e.clientX);
       }
     }
     
-    function handleMove(e) {
-      if (!isMoving) return;
-      
-      // Determinar tipo de evento
-      const clientX = e.type.includes('mouse') ? e.clientX : e.touches[0].clientX;
-      updateSliderPosition(clientX);
-      
-      // Prevenir comportamiento por defecto
-      e.preventDefault();
+    function handleMouseUp() {
+      isDragging = false;
+      slider.classList.remove('sliding');
     }
     
-    function handleEnd() {
-      isMoving = false;
-      container.classList.remove('sliding');
+    // --- Manejadores de eventos para touch ---
+    function handleTouchStart(e) {
+      isDragging = true;
+      slider.classList.add('sliding');
+      handleMove(e.touches[0].clientX);
     }
     
-    // Añadir eventos para mouse (capturar eventos en fase de captura)
-    container.addEventListener('mousedown', handleStart, true);
-    window.addEventListener('mousemove', handleMove, true);
-    window.addEventListener('mouseup', handleEnd, true);
+    function handleTouchMove(e) {
+      if (isDragging) {
+        e.preventDefault(); // Prevenir el scroll
+        handleMove(e.touches[0].clientX);
+      }
+    }
     
-    // Añadir eventos para touch (móviles) con opciones específicas para Safari
-    container.addEventListener('touchstart', handleStart, {passive: false, capture: true});
-    window.addEventListener('touchmove', handleMove, {passive: false, capture: true});
-    window.addEventListener('touchend', handleEnd, {capture: true});
+    function handleTouchEnd() {
+      isDragging = false;
+      slider.classList.remove('sliding');
+    }
+    
+    // --- Navegación con teclado (accesibilidad) ---
+    function handleKeyDown(e) {
+      const step = 5; // Porcentaje de movimiento
+      let currentValue = parseInt(slider.getAttribute('aria-valuenow'), 10) || 50;
+      
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        updateSliderPosition(currentValue - step);
+      } else if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        updateSliderPosition(currentValue + step);
+      } else if (e.key === 'Home') {
+        e.preventDefault();
+        updateSliderPosition(0);
+      } else if (e.key === 'End') {
+        e.preventDefault();
+        updateSliderPosition(100);
+      }
+    }
+    
+    // Registrar eventos para ratón
+    slider.addEventListener('mousedown', handleMouseDown);
+    document.addEventListener('mousemove', handleMouseMove);
+    document.addEventListener('mouseup', handleMouseUp);
+    
+    // Registrar eventos para touch
+    slider.addEventListener('touchstart', handleTouchStart, {passive: false});
+    slider.addEventListener('touchmove', handleTouchMove, {passive: false});
+    slider.addEventListener('touchend', handleTouchEnd);
     
     // Accesibilidad con teclado
-    container.addEventListener('keydown', function(e) {
-      if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
-        e.preventDefault();
-        
-        // Obtener el porcentaje actual
-        const currentSliderStyle = window.getComputedStyle(sliderLine);
-        let currentLeft = parseFloat(currentSliderStyle.left) || 50;
-        
-        // Convertir de px a porcentaje si es necesario
-        if (currentSliderStyle.left.endsWith('px')) {
-          const containerWidth = container.getBoundingClientRect().width;
-          currentLeft = (currentLeft / containerWidth) * 100;
-        }
-        
-        const step = e.key === 'ArrowLeft' ? -5 : 5;
-        const newPercent = Math.max(0, Math.min(100, currentLeft + step));
-        
-        setSliderPosition(beforeContainer, sliderLine, newPercent);
-      }
-    });
+    slider.addEventListener('keydown', handleKeyDown);
     
-    console.log(`Slider #${index}: Inicializado correctamente`);
+    console.log(`Comparador #${index}: Inicializado correctamente`);
+  }
+  
+  // --- Inicialización ---
+  
+  // Detectar cuándo el DOM está listo
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initBeforeAfterSliders);
+  } else {
+    // Si el DOM ya está cargado
+    initBeforeAfterSliders();
+  }
+  
+  // También inicializar en caso de carga tardía
+  window.addEventListener('load', function() {
+    setTimeout(initBeforeAfterSliders, 100);
   });
-}
+  
+  // Exponer función para inicialización manual
+  window.initBeforeAfterComparisons = initBeforeAfterSliders;
+})();

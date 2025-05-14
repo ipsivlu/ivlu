@@ -1,57 +1,56 @@
-.before-after-section {
-  container-type: inline-size;
-  container-name: before-after;
-  padding-block: 4rem;
+/* Estilos de la cuadrícula para el componente antes/después */
+.before-after-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
-  place-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-
-  & .intro {
-    width: 100%;
-    -webkit-margin-after: 3rem;
-    margin-block-end: 3rem;
-  }
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
+/* Estilos para cada caso de antes/después */
 .before-after-case {
-  width: min(100%, 400px);
-  margin-inline: auto;
-  margin-block: 2rem;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 2rem;
   text-align: center;
-
-  & h3 {
-    text-align: center;
-    -webkit-margin-after: 1rem;
-    margin-block-end: 1rem;
-    font-size: clamp(1.375rem, 1.25rem + 0.63vw, 1.75rem);
-  }
 }
 
+.before-after-case h3 {
+  margin-bottom: 1rem;
+  font-size: clamp(1.375rem, 1.25rem + 0.63vw, 1.75rem);
+  text-align: center;
+}
+
+/* Contenedor principal para el comparador */
 .before-after-container {
   position: relative;
   width: 100%;
-  aspect-ratio: 3/4;
-  border-radius: var(--radius);
+  height: 0;
+  padding-bottom: 133.33%; /* Proporción 3:4 */
+  background-color: #f0f0f0;
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: var(--shadow);
-  touch-action: none;
-  background-color: var(--gris2);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  margin-bottom: 1rem;
 }
 
+/* Wrapper del comparador */
 .before-after-wrapper {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  cursor: col-resize;
-  -moz-user-select: none;
-  -ms-user-select: none;
+  width: 100%;
+  height: 100%;
+  cursor: ew-resize;
   user-select: none;
   -webkit-user-select: none;
+  touch-action: none;
+  outline: none;
 }
 
+/* Contenedor de imagen después (visible por defecto) */
 .after-image-container {
   position: absolute;
   top: 0;
@@ -62,201 +61,161 @@
   height: 100%;
 }
 
+/* Contenedor de imagen antes (revelada por el deslizador) */
 .before-image-container {
   position: absolute;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  -webkit-clip-path: inset(0 50% 0 0);
-  clip-path: inset(0 50% 0 0);
-  transition: -webkit-clip-path 0.1s ease-out;
-  transition: clip-path 0.1s ease-out;
-  transition: clip-path 0.1s ease-out, -webkit-clip-path 0.1s ease-out;
-  will-change: clip-path;
+  /* Usar una versión más compatible del clip-path */
+  clip-path: polygon(0% 0%, 50% 0%, 50% 100%, 0% 100%);
+  -webkit-clip-path: polygon(0% 0%, 50% 0%, 50% 100%, 0% 100%);
 }
 
+/* Estilos para las imágenes */
 .before-image,
 .after-image {
   position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  -o-object-position: center;
-  object-position: center;
-  pointer-events: none;
-  -webkit-user-drag: none;
-}
-
-.before-image-container,
-.before-after-wrapper,
-.after-image-container {
-  position: absolute;
-  inset: 0;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  object-position: center;
+  -webkit-user-drag: none;
+  pointer-events: none;
 }
 
-.slider-line {
-  --slider-width: 4px;
+/* Control deslizante */
+.slider-control {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 50%; /* Dejar solo left en lugar de inset-inline-start */
-  width: var(--slider-width);
-  background: white;
+  left: 50%;
   transform: translateX(-50%);
   pointer-events: none;
-  box-shadow: 0 0 10px rgb(0 0 0 / 0.2);
+  z-index: 10;
 }
 
+/* Línea del deslizador */
+.slider-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 4px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Botón del deslizador */
 .slider-button {
-  --button-size: 48px;
   position: absolute;
   top: 50%;
-  left: 50%;
-  width: var(--button-size);
-  height: var(--button-size);
-  background: white;
+  left: 0;
+  width: 44px;
+  height: 44px;
+  background-color: #fff;
   border-radius: 50%;
   transform: translate(-50%, -50%);
-  display: grid;
-  place-items: center;
-  box-shadow: 0 2px 6px rgb(0 0 0 / 0.3);
-  pointer-events: none;
-
-  & svg {
-    color: var(--principal);
-    transition: transform 0.2s ease;
-  }
-
-  @media (hover: hover) {
-    &:hover svg {
-      transform: scale(1.1);
-    }
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
+.slider-button svg {
+  color: var(--primary, #ccaf66);
+  transition: transform 0.2s ease;
+}
+
+/* Etiquetas de comparación */
 .compare-label {
-  --label-padding: 0.5rem 1rem;
-  --label-distance: 1.25rem;
-
   position: absolute;
-  bottom: var(--label-distance);
-  padding: var(--label-padding);
-  color: white;
-  font-weight: 900;
-  pointer-events: none;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  font-weight: 700;
   text-transform: uppercase;
-  text-shadow: 0 0 10px rgb(0 0 0 / 0.5);
   letter-spacing: 0.5px;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  bottom: 1.25rem;
   border-radius: 24px;
-
-  &.before {
-    left: var(--label-distance);
-  }
-
-  &.after {
-    right: var(--label-distance);
-  }
-
-  @media (hover: hover) {
-    transition: transform 0.2s ease;
-
-    &:hover {
-      transform: translateY(-2px);
-    }
-  }
+  z-index: 5;
 }
 
+.compare-label.before {
+  left: 1.25rem;
+}
+
+.compare-label.after {
+  right: 1.25rem;
+}
+
+/* Descripción del caso */
 .case-description {
-  text-align: center;
-  -webkit-margin-before: 1rem;
-  margin-block-start: 1rem;
-  font-size: 0.9375rem;
-  max-width: min(100%, 600px);
-  margin-inline: auto;
+  margin-top: 1rem;
+  font-size: 0.95rem;
   line-height: 1.6;
-
-  @container before-after (min-width: 768px) {
-    font-size: 1rem;
-  }
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Fallback para navegadores que no soportan aspect-ratio */
-@supports not (aspect-ratio: 3/4) {
-  .before-after-container::before {
-    float: left;
-    padding-top: 133.33%; /* 4/3 = 133.33% para proporción vertical */
-    content: "";
-  }
-
-  .before-after-container::after {
-    display: block;
-    content: "";
-    clear: both;
-  }
-}
-
-/* Estado activo durante el deslizamiento */
+/* Estados activos */
 .before-after-wrapper.sliding {
-  cursor: -webkit-grabbing;
   cursor: grabbing;
+  cursor: -webkit-grabbing;
 }
 
-/* Ajustes responsivos */
-@container before-after (max-width: 480px) {
+.before-after-wrapper:focus {
+  outline: 2px solid var(--primary, #ccaf66);
+  outline-offset: 2px;
+}
+
+.before-after-wrapper:active .slider-button {
+  transform: translate(-50%, -50%) scale(0.95);
+}
+
+/* Optimizaciones para móviles */
+@media (max-width: 480px) {
   .compare-label {
-    --label-padding: 0.25rem 0.75rem;
-    --label-distance: 0.75rem;
+    padding: 0.25rem 0.75rem;
     font-size: 0.75rem;
+    bottom: 0.75rem;
   }
-
+  
+  .compare-label.before {
+    left: 0.75rem;
+  }
+  
+  .compare-label.after {
+    right: 0.75rem;
+  }
+  
   .slider-button {
-    --button-size: 36px;
-
-    & svg {
-      width: 24px;
-      height: 24px;
-    }
+    width: 36px;
+    height: 36px;
   }
-
+  
+  .slider-button svg {
+    width: 20px;
+    height: 20px;
+  }
+  
   .case-description {
     font-size: 0.875rem;
   }
 }
 
-/* Estados activos y focus */
-.before-after-wrapper:focus-visible {
-  outline: 2px solid var(--principal);
-  outline-offset: 2px;
-}
-
-.before-after-wrapper:active {
-  & .slider-button {
-    transform: translate(-50%, -50%) scale(0.95);
-  }
-}
-
-/* Optimizaciones de rendimiento */
-.before-after-wrapper,
-.slider-line,
-.before-image-container {
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  transform-style: preserve-3d;
-  perspective: 1000px;
-}
-
-/* Mejoras de accesibilidad */
+/* Accesibilidad - reducción de movimiento */
 @media (prefers-reduced-motion: reduce) {
-  .before-image-container,
-  .slider-button,
+  .before-image-container, 
+  .slider-button, 
   .compare-label {
     transition: none;
   }
