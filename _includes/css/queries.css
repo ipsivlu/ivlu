@@ -5,6 +5,17 @@
 }
 
 @media (max-width: 768px) {
+  /* Estilos base del banner */
+.hero-banner {
+  min-height: 95dvh;
+  padding-top: 15em;
+}
+
+  
+  .banner-layer-1 {
+    background-image: url('/assets/images/banner-home-ivlu-phone.avif');
+    animation-delay: 0s;
+  }
 
   .post-content{
     display: grid;
