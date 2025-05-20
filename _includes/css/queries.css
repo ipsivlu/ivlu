@@ -15,10 +15,17 @@
     background-image: url('/assets/images/banner-home-ivlu-phone.avif');
   }
 
-    .banner-layer-3 {
+  .banner-layer-3 {
     background-image: url('/assets/images/banner-home-ivlu-3-phone.avif');
   }
+  
+  .hero_blog {
+    background-image: url("/assets/images/equipo-ivlu-bogota-phone.avif");
+  }
 
+  .hero_nosotros {
+    background-image: url("../images/equipo-de-doctoras-de-ivlu-phone.avif");
+  }
   .post-content{
     display: grid;
     place-content: center;
