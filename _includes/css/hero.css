@@ -89,6 +89,8 @@
 }
 
 /* HERO NOSOTROS */
+header:not(.banner){padding-top: 10em;}
+
 .heros {
   padding: 10em 0;
 
