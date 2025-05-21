@@ -8,20 +8,22 @@ image: "/assets/images/banner-img.avif"
 datePublished: "2023-01-15"
 dateModified: "2025-03-05"
 ---
-<header class="hero_home">
-  <div class="wrapper banner two_columns">
-    <div class="banner-content flow">
-      <p>Transform your image with cutting-edge technology and certified medical experts</p>
+<header class="hero-banner">
+  <!-- Capas de imágenes -->
+  <div class="banner-layer banner-layer-1"></div>
+  <div class="banner-layer banner-layer-2"></div>
+  <div class="banner-layer banner-layer-3"></div>
+  
+  <!-- Contenido -->
+  <div class="banner-content flow">
+      <p data-lang="en" class="hidden">Transform your look with cutting-edge technology and certified medical experts.</p>
       <h1>
-        <strong>IVLU Medical Center:</strong><br>
-        Facial Rejuvenation and Hair Restoration
+        <strong data-lang="en" class="hidden">Ivlu Medical Center:</strong>
+        <br>
+        <span data-lang="en" class="hidden">Facial Rejuvenation and Hair Restoration</span>
       </h1>
       {% include button.html %}
-    </div>
-    <div class="banner-image">
-      <img src="{{'/assets/images/banner-img.avif' | relative_url }}"
-        alt="Facial rejuvenation and hair restoration at IVLU Bogotá" width="616" height="760" loading="lazy" decoding="async">
-    </div>
+    <div class="banner-overlay"></div>
   </div>
 </header>
 
