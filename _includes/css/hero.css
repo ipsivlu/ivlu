@@ -6,6 +6,7 @@
   overflow: hidden;
   isolation: isolate;
   padding-top: 10em;
+  margin-top: 7em;
 }
 
 .banner-layer {
@@ -89,7 +90,7 @@
 }
 
 /* HERO NOSOTROS */
-header:not(.banner){padding-top: 10em;}
+header:not(.banner){padding-top: 11em;}
 
 .heros {
   padding: 10em 0;

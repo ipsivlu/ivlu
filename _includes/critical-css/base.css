@@ -72,10 +72,10 @@ body {
   margin-inline: auto;
   z-index: 1000;
   transition: all var(--transition);
+  box-shadow: var(--shadow);
 }
 
 .site-header.scrolled {
-  box-shadow: var(--shadow);
   top: 0;
   width: 100%;
 }
@@ -86,14 +86,6 @@ body {
 
 .site-header.scrolled .nav-link {
   color: var(--accion);
-}
-
-.site-header:not(.scrolled) .navegacion {
-  background-color: transparent;
-}
-
-.site-header.scrolled .navegacion {
-  background-color: var(--bg-white);
 }
 
 /* Banner superior con información de contacto */
@@ -134,11 +126,12 @@ body {
 
 /* Barra de navegación principal */
 .navegacion {
+  background-color: var(--bg-white);
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 4px 12px;
+  padding: 8px 12px;
   margin-left: auto;
   gap: 1em;
 }
