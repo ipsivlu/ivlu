@@ -186,14 +186,15 @@ header:not(.banner){padding-top: 11em;}
 }
 
 .banner{
-  background-image: url('/assets/images/banner-bg.avif');
+  background-image: url('/assets/images/dra-luisa.avif');
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top center;
   background-size: cover;
   padding-top: 7em;
+  height: 900px;
 
   & .two_columns{
-    align-items: center;
+    align-items: boton;
   }
 
   .banner-image{
@@ -205,3 +206,26 @@ header:not(.banner){padding-top: 11em;}
     }
   }
 }
+
+.banner1{
+  background-image: url('/assets/images/dra-ivonne.avif');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  padding-top: 7em;
+  height: 900px;
+
+  & .two_columns{
+    align-items: boton;
+  }
+
+  .banner-image{
+    line-height: 1;
+      
+      img{
+        box-shadow: none;
+        align-self: flex-end;
+    }
+  }
+}
+
