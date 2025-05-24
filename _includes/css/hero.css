@@ -1,3 +1,8 @@
+.hero_home{
+  display: grid;
+  align-items: end;
+}
+
 /* Estilos base del banner */
 .hero-banner {
   background: var(--color-gris); 
@@ -191,8 +196,9 @@ header:not(.banner){padding-top: 11em;}
   background-position: top center;
   background-size: cover;
   padding-top: 7em;
-  height: 750px;
-
+  margin-top: 7em;
+  min-height: 80dvh;
+  
   & .two_columns{
     align-items: boton;
   }
@@ -203,8 +209,8 @@ header:not(.banner){padding-top: 11em;}
       img{
         box-shadow: none;
         align-self: flex-end;
+      }
     }
-  }
 }
 
 .banner1{
@@ -213,7 +219,8 @@ header:not(.banner){padding-top: 11em;}
   background-position: top center;
   background-size: cover;
   padding-top: 7em;
-  height: 750px;
+  margin-top: 7em;
+  min-height: 80dvh;
 
   & .two_columns{
     align-items: boton;
