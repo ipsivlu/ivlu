@@ -1,6 +1,6 @@
 # Configuración básica del sitio
-baseurl: ''
-url: 'https://ivlumedicinaestetica.com'
+baseurl: '/ivlu'
+url: ''
 name: Ivonne Vanessa Camacho Viancha
 title: "Centro medico IVLU en Bogotá | Dra.Luisa & Dra.Ivonne"
 description: "Rejuvenecimiento facial y restauración capilar en Bogotá. Transforma tu imagen con tecnología de vanguardia y médicos especialistas certificados."
