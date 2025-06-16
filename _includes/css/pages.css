@@ -24,7 +24,7 @@
 .filter {
   box-shadow: none;
   -webkit-filter: drop-shadow(3px 3px 8px rgba(0, 0, 0, 0.3));
-          filter: drop-shadow(3px 3px 8px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(3px 3px 8px rgba(0, 0, 0, 0.3));
 }
 
 .text_center {
@@ -37,10 +37,14 @@
 }
 
 .bg-inverted {
-  background: rgb(254,254,254);
-  background: linear-gradient(180deg, rgba(254,254,254,1) 6%, rgba(253,233,196,1) 100%);
+  background: rgb(254, 254, 254);
+  background: linear-gradient(
+    180deg,
+    rgba(254, 254, 254, 1) 6%,
+    rgba(253, 233, 196, 1) 100%
+  );
 
-  div img{
+  div img {
     padding: 24px;
     margin: 32px 24px;
     background-color: white;
@@ -48,20 +52,20 @@
 }
 
 /* PAGINA CONTACTO */
-.nosotros_profesionales{
+.nosotros_profesionales {
   align-self: center;
-  
-  ul li{
+
+  ul li {
     margin: 0 0 0 2rem;
   }
 }
 
-.nosotros_cards{
+.nosotros_cards {
   display: grid;
   gap: 2em;
   align-content: center;
 
-  h2{
+  h2 {
     text-align: center;
     max-width: 20ch;
     margin-inline: auto;
@@ -83,7 +87,6 @@
     margin: 1rem 0 1rem;
   }
 }
-
 
 .testimonial-card {
   display: none;
@@ -115,7 +118,7 @@
 .stars {
   margin-right: 0.5rem;
   font-size: 1.2rem;
-  color: #FFD700;
+  color: #ffd700;
 }
 
 .testimonial-text {
@@ -154,7 +157,7 @@
   border-top: 1px solid #e5e5e5;
   padding-top: 1rem;
 
-  span{
+  span {
     font-size: 1.9rem;
     color: #7f6d3f;
   }
@@ -227,14 +230,14 @@
   text-align: start;
   padding: 1rem;
   border-radius: var(--border-radius);
-  
+
   img {
     height: 334px;
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
-  
-  h4{
+
+  h4 {
     color: var(--accion);
   }
 }
@@ -245,167 +248,170 @@
   box-shadow: var(--shadow);
 }
 
-  .servicios-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
-  }
-  
-  .servicio-card {
-    background: #f9f9f9;
-    border-radius: 10px;
-    padding: 1.5rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease;
-  }
-  
-  .servicio-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-  }
-  
-  .servicio-card h3 {
-    color: var(--primary);
-    margin-bottom: 0.75rem;
-    font-size: 1.25rem;
-  }
-  
-  .servicio-card p {
-    color: #555;
-    font-size: 0.95rem;
-  }
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
 
-   .us-patient-cta {
-    background: var(--color-gray-light);
-    border-left: 4px solid var(--primary);
-    padding: 1.2rem;
-    margin-top: 1.5rem;
-    border-radius: 0 8px 8px 0;
-    max-width: 500px;
-    text-shadow: none;
+.servicio-card {
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
 
-    & > p{
-      color: var(--text-dark);
-    }
+.servicio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
 
+.servicio-card h3 {
+  color: var(--primary);
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+}
+
+.servicio-card p {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.us-patient-cta {
+  background: var(--color-gray-light);
+  border-left: 4px solid var(--primary);
+  padding: 1.2rem;
+  margin-top: 1.5rem;
+  border-radius: 0 8px 8px 0;
+  max-width: 500px;
+  text-shadow: none;
+
+  & > p {
+    color: var(--text-dark);
   }
-  
-  .us-patient-cta h3 {
-    color: var(--primary);
-    margin-bottom: 0.5rem;
-  }
-  
-  .travel-note {
-    background: #f8f9fa;
-    border: 1px dashed var(--primary);
-    padding: 0.7rem;
-    border-radius: 8px;
-    font-weight: bold;
-    color: var(--primary);
-    margin-top: 0.5rem;
-  }
-  
-  .us-standards {
-    background: #f8f9fa;
-    padding: 1.2rem;
-    border-radius: 8px;
-    margin-top: 1.5rem;
-    border-left: 3px solid var(--primary);
-  }
-  
-  .us-standards h3 {
-    color: var(--primary);
-    margin-bottom: 0.8rem;
-  }
-  
-  .price-compare {
-    display: block;
-    color: var(--);
-    font-weight: bold;
-    margin-top: 0.5rem;
-    font-size: 0.9rem;
-  }
-  
-  .travel-section {
-    background: linear-gradient(rgba(245,248,252,0.9), rgba(245,248,252,0.9)), url('{{ "/assets/images/bogota-skyline.avif" | relative_url }}');
-    background-size: cover;
-    padding: 4rem 0;
-  }
-  
+}
+
+.us-patient-cta h3 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.travel-note {
+  background: #f8f9fa;
+  border: 1px dashed var(--primary);
+  padding: 0.7rem;
+  border-radius: 8px;
+  font-weight: bold;
+  color: var(--primary);
+  margin-top: 0.5rem;
+}
+
+.us-standards {
+  background: #f8f9fa;
+  padding: 1.2rem;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+  border-left: 3px solid var(--primary);
+}
+
+.us-standards h3 {
+  color: var(--primary);
+  margin-bottom: 0.8rem;
+}
+
+.price-compare {
+  display: block;
+  color: var(--);
+  font-weight: bold;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.travel-section {
+  background: linear-gradient(
+      rgba(245, 248, 252, 0.9),
+      rgba(245, 248, 252, 0.9)
+    ),
+    url('{{ "/assets/images/bogota-skyline.avif" | relative_url }}');
+  background-size: cover;
+  padding: 4rem 0;
+}
+
+.journey-steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 2.5rem 0;
+  justify-content: center;
+}
+
+.step {
+  background: white;
+  border-radius: 12px;
+  padding: 1.8rem 1.2rem;
+  width: 180px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.step-number {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.step h3 {
+  margin-top: 1rem;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.testimonial-us {
+  background: white;
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.testimonial-us blockquote {
+  font-style: italic;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-us footer {
+  font-weight: bold;
+  color: var(--primary);
+  font-style: normal;
+}
+
+@media (max-width: 768px) {
   .journey-steps {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    margin: 2.5rem 0;
-    justify-content: center;
-  }
-  
-  .step {
-    background: white;
-    border-radius: 12px;
-    padding: 1.8rem 1.2rem;
-    width: 180px;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    position: relative;
-  }
-  
-  .step-number {
-    position: absolute;
-    top: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--primary);
-    color: white;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 1.2rem;
   }
-  
-  .step h3 {
-    margin-top: 1rem;
-    color: #333;
-    font-size: 1.1rem;
+
+  .step {
+    width: 100%;
+    max-width: 300px;
   }
-  
-  .testimonial-us {
-    background: white;
-    max-width: 700px;
-    margin: 3rem auto;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    text-align: center;
-  }
-  
-  .testimonial-us blockquote {
-    font-style: italic;
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: #444;
-    margin-bottom: 1.5rem;
-  }
-  
-  .testimonial-us footer {
-    font-weight: bold;
-    color: var(--primary);
-    font-style: normal;
-  }
-  
-  @media (max-width: 768px) {
-    .journey-steps {
-      flex-direction: column;
-      align-items: center;
-    }
-    
-    .step {
-      width: 100%;
-      max-width: 300px;
-    }
-  }
+}
