@@ -239,223 +239,279 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 /* Sliders de galerías*/
-document.addEventListener('DOMContentLoaded', function () {
-  /* Seleccionar todas las galerías en la página*/
+document.addEventListener('DOMContentLoaded', function() {
   const galleries = document.querySelectorAll('.gallery');
-
-  /* Configurar cada galería independientemente*/
-  galleries.forEach(function (gallery, galleryIndex) {
-    initGallery(gallery, galleryIndex);
-  });
-
-  function initGallery(gallery, galleryIndex) {
-    /* Seleccionar elementos dentro de esta galería específica*/
+  
+  galleries.forEach(gallery => {
     const galleryImages = gallery.querySelector('.gallery-images');
     const indicators = gallery.querySelectorAll('.indicator');
+    const prevBtn = gallery.querySelector('.gallery-prev');
+    const nextBtn = gallery.querySelector('.gallery-next');
     const items = gallery.querySelectorAll('.gallery-item');
-
-    if (!galleryImages || !indicators.length || !items.length) return;
-
-    // Dar a cada galería un ID único para evitar confusiones
-    gallery.setAttribute('data-gallery-id', galleryIndex);
-
+    
+    if (!galleryImages || !items.length) return;
+    
     let currentIndex = 0;
-
-    // Agregar botones de navegación para escritorio
-    const navButtons = document.createElement('div');
-    navButtons.className = 'gallery-nav';
-    navButtons.innerHTML = `
-          <button class="gallery-prev" aria-label="Anterior">&lt;</button>
-          <button class="gallery-next" aria-label="Siguiente">&gt;</button>
-      `;
-    gallery.appendChild(navButtons);
-
-    // Botones de navegación para esta galería
-    const prevButton = gallery.querySelector('.gallery-prev');
-    const nextButton = gallery.querySelector('.gallery-next');
-
-    // Establecer el primer indicador como activo
-    indicators[0].classList.add('active');
-
-    // Función para cambiar slide con control preciso
-    function goToSlide(index) {
-      // Asegurar que el índice esté dentro del rango
-      if (index < 0) index = items.length - 1;
-      if (index >= items.length) index = 0;
-
-      currentIndex = index;
-
-      // Cálculo manual del desplazamiento para mejor precisión
-      if (items[index]) {
-        const scrollPosition = items[index].offsetLeft - galleryImages.offsetLeft;
-
-        // Usar scrollTo en lugar de scrollIntoView para mayor control
-        galleryImages.scrollTo({
-          left: scrollPosition,
-          behavior: 'smooth'
-        });
-
-        // Actualizar indicadores
-        indicators.forEach((indicator, i) => {
-          indicator.classList.toggle('active', i === index);
-        });
-      }
+    let isAnimating = false;
+    
+    // Función para obtener cuántos elementos son visibles
+    function getVisibleItems() {
+      const containerWidth = galleryImages.offsetWidth;
+      const itemWidth = items[0].offsetWidth;
+      return Math.floor(containerWidth / itemWidth) || 1;
     }
-
-    // Event listeners para los indicadores
-    indicators.forEach((indicator) => {
-      indicator.addEventListener('click', () => {
-        // Obtener el índice del atributo data-index
-        const index = parseInt(indicator.getAttribute('data-index'));
-        if (!isNaN(index)) {
-          goToSlide(index);
-
-          // Detener autoplay al hacer clic manualmente
-          stopAutoplay();
+    
+    // Función para obtener el máximo índice válido
+    function getMaxIndex() {
+      const visibleItems = getVisibleItems();
+      return Math.max(0, items.length - visibleItems);
+    }
+    
+    // Función para actualizar indicadores con transición suave
+    function updateIndicators() {
+      if (!indicators.length) return;
+      
+      const visibleItems = getVisibleItems();
+      const indicatorIndex = Math.floor(currentIndex / visibleItems);
+      
+      indicators.forEach((indicator, index) => {
+        if (index === indicatorIndex) {
+          indicator.classList.add('active');
+        } else {
+          indicator.classList.remove('active');
         }
       });
+    }
+    
+    // Función principal para mover el carrusel con animación fluida
+    function scrollToItem(index, smooth = true) {
+      if (isAnimating) return; // Evitar múltiples animaciones simultáneas
+      
+      const maxIndex = getMaxIndex();
+      
+      // Limitar el índice dentro del rango válido
+      if (index < 0) index = 0;
+      if (index > maxIndex) index = maxIndex;
+      
+      // Si ya estamos en la posición correcta, no hacer nada
+      if (index === currentIndex) return;
+      
+      currentIndex = index;
+      
+      // Calcular la posición de scroll
+      const itemWidth = items[0].offsetWidth;
+      const gap = 10; // Gap definido en CSS
+      const scrollPosition = index * (itemWidth + gap);
+      
+      // Configurar la animación
+      if (smooth) {
+        isAnimating = true;
+        
+        // Usar requestAnimationFrame para una animación más suave
+        const startPosition = galleryImages.scrollLeft;
+        const distance = scrollPosition - startPosition;
+        const duration = 400; // Duración en milisegundos
+        const startTime = performance.now();
+        
+        // Función de easing para una transición más natural
+        function easeOutCubic(t) {
+          return 1 - Math.pow(1 - t, 3);
+        }
+        
+        function animate(currentTime) {
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          const easedProgress = easeOutCubic(progress);
+          
+          const currentPosition = startPosition + (distance * easedProgress);
+          galleryImages.scrollLeft = currentPosition;
+          
+          if (progress < 1) {
+            requestAnimationFrame(animate);
+          } else {
+            isAnimating = false;
+            // Asegurar posición exacta al final
+            galleryImages.scrollLeft = scrollPosition;
+          }
+        }
+        
+        requestAnimationFrame(animate);
+      } else {
+        // Scroll inmediato sin animación
+        galleryImages.scrollLeft = scrollPosition;
+      }
+      
+      updateIndicators();
+    }
+    
+    // Función para mover un elemento a la vez (más fluido)
+    function moveOne(direction) {
+      if (isAnimating) return;
+      
+      const maxIndex = getMaxIndex();
+      let newIndex;
+      
+      if (direction === 'next') {
+        newIndex = Math.min(currentIndex + 1, maxIndex);
+      } else {
+        newIndex = Math.max(currentIndex - 1, 0);
+      }
+      
+      scrollToItem(newIndex, true);
+    }
+    
+    // Event listeners para botones de navegación (movimiento de uno en uno)
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        moveOne('prev');
+      });
+    }
+    
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        moveOne('next');
+      });
+    }
+    
+    // Event listeners para indicadores (salto directo pero suave)
+    indicators.forEach((indicator, index) => {
+      indicator.addEventListener('click', () => {
+        const visibleItems = getVisibleItems();
+        const targetIndex = index * visibleItems;
+        scrollToItem(targetIndex, true);
+      });
     });
-
-    // Event listeners para los botones de navegación
-    prevButton.addEventListener('click', () => {
-      goToSlide(currentIndex - 1);
-      stopAutoplay();
-    });
-
-    nextButton.addEventListener('click', () => {
-      goToSlide(currentIndex + 1);
-      stopAutoplay();
-    });
-
-    // Detectar cuando el scroll termina
-    galleryImages.addEventListener('scroll', function () {
-      clearTimeout(galleryImages.scrollTimer);
-      galleryImages.scrollTimer = setTimeout(function () {
-        // Solo actualizar si no está en transición automática
-        if (!galleryImages.isScrolling) {
-          updateActiveIndicator();
+    
+    // Detectar scroll manual (con debounce para mejor rendimiento)
+    let scrollTimeout;
+    let userScrolling = false;
+    
+    galleryImages.addEventListener('scroll', () => {
+      if (isAnimating) return; // Ignorar durante animaciones programáticas
+      
+      userScrolling = true;
+      clearTimeout(scrollTimeout);
+      
+      scrollTimeout = setTimeout(() => {
+        if (userScrolling) {
+          // Detectar el índice actual basado en la posición de scroll
+          const itemWidth = items[0].offsetWidth;
+          const gap = 10;
+          const scrollLeft = galleryImages.scrollLeft;
+          const newIndex = Math.round(scrollLeft / (itemWidth + gap));
+          
+          if (newIndex !== currentIndex && newIndex >= 0 && newIndex <= getMaxIndex()) {
+            currentIndex = newIndex;
+            updateIndicators();
+          }
+          userScrolling = false;
         }
       }, 150);
     });
-
-    // Actualizar indicador activo basado en posición de scroll
-    function updateActiveIndicator() {
-      const centerPosition = galleryImages.scrollLeft + galleryImages.offsetWidth / 2;
-      let closestIndex = 0;
-      let closestDistance = Infinity;
-
-      items.forEach((item, index) => {
-        const itemCenter = item.offsetLeft + (item.offsetWidth / 2);
-        const distance = Math.abs(itemCenter - centerPosition);
-
-        if (distance < closestDistance) {
-          closestDistance = distance;
-          closestIndex = index;
-        }
-      });
-
-      // Solo actualizar si el índice ha cambiado
-      if (closestIndex !== currentIndex) {
-        currentIndex = closestIndex;
-
-        // Actualizar indicadores de esta galería
-        indicators.forEach((indicator, i) => {
-          indicator.classList.toggle('active', i === closestIndex);
-        });
-      }
-    }
-
-    // Mejorar detección de swipes
+    
+    // Soporte para gestos táctiles mejorado
     let touchStartX = 0;
     let touchEndX = 0;
-    let isSwiping = false;
-
+    let touchStartTime = 0;
+    
     galleryImages.addEventListener('touchstart', (e) => {
       touchStartX = e.changedTouches[0].screenX;
-      isSwiping = true;
-
-      // Detener autoplay al interactuar
-      stopAutoplay();
+      touchStartTime = Date.now();
+      userScrolling = true;
     }, { passive: true });
-
+    
     galleryImages.addEventListener('touchend', (e) => {
-      if (isSwiping) {
-        touchEndX = e.changedTouches[0].screenX;
+      touchEndX = e.changedTouches[0].screenX;
+      const touchDuration = Date.now() - touchStartTime;
+      
+      // Solo procesar swipes rápidos (menos de 300ms)
+      if (touchDuration < 300) {
         handleSwipe();
-        isSwiping = false;
       }
+      userScrolling = false;
     }, { passive: true });
-
-    // Cancelar swipe si se sale del elemento
-    galleryImages.addEventListener('touchcancel', () => {
-      isSwiping = false;
-    }, { passive: true });
-
+    
     function handleSwipe() {
       const swipeThreshold = 50;
       const swipeDistance = touchEndX - touchStartX;
-
+      
       if (Math.abs(swipeDistance) > swipeThreshold) {
         if (swipeDistance < 0) {
-          // Swipe hacia la izquierda - siguiente slide
-          goToSlide(currentIndex + 1);
+          // Swipe izquierda - siguiente
+          moveOne('next');
         } else {
-          // Swipe hacia la derecha - slide anterior
-          goToSlide(currentIndex - 1);
+          // Swipe derecha - anterior
+          moveOne('prev');
         }
       }
     }
-
-    // Autoplay mejorado
+    
+    // Soporte para teclado (accesibilidad)
+    galleryImages.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        moveOne('next');
+      } else if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        moveOne('prev');
+      }
+    });
+    
+    // Hacer el contenedor enfocable para navegación por teclado
+    galleryImages.setAttribute('tabindex', '0');
+    
+    // Recalcular en resize con debounce
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        const maxIndex = getMaxIndex();
+        if (currentIndex > maxIndex) {
+          scrollToItem(maxIndex, false); // Sin animación en resize
+        } else {
+          updateIndicators();
+        }
+      }, 250);
+    });
+    
+    // Pausar animaciones cuando la pestaña no está visible
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        isAnimating = false;
+      }
+    });
+    
+    // Inicializar
+    updateIndicators();
+    
+    // Autoplay opcional (descomentar si lo deseas)
+    /*
     let autoplayInterval;
-    let autoplayActive = true;
-
+    const autoplayDelay = 3000;
+    
     function startAutoplay() {
-      if (!autoplayActive) return;
-
-      stopAutoplay(); // Limpiar cualquier intervalo existente
-
       autoplayInterval = setInterval(() => {
-        // Marcar que estamos en transición automática
-        galleryImages.isScrolling = true;
-
-        // Ir al siguiente slide
-        let nextIndex = currentIndex + 1;
-        if (nextIndex >= items.length) nextIndex = 0;
-        goToSlide(nextIndex);
-
-        // Restablecer la bandera después de un tiempo
-        setTimeout(() => {
-          galleryImages.isScrolling = false;
-        }, 500);
-      }, 5000);
+        if (!isAnimating && !userScrolling) {
+          const maxIndex = getMaxIndex();
+          const nextIndex = currentIndex >= maxIndex ? 0 : currentIndex + 1;
+          scrollToItem(nextIndex, true);
+        }
+      }, autoplayDelay);
     }
-
+    
     function stopAutoplay() {
       clearInterval(autoplayInterval);
     }
-
-    function disableAutoplay() {
-      stopAutoplay();
-      autoplayActive = false;
-    }
-
-    // Iniciar autoplay
-    startAutoplay();
-
-    // Control de autoplay con eventos
+    
+    // Controlar autoplay
     gallery.addEventListener('mouseenter', stopAutoplay);
     gallery.addEventListener('mouseleave', startAutoplay);
-    galleryImages.addEventListener('touchstart', stopAutoplay, { passive: true });
-    galleryImages.addEventListener('mousedown', disableAutoplay);
-
-    indicators.forEach(indicator => {
-      indicator.addEventListener('click', disableAutoplay);
-    });
-
-    prevButton.addEventListener('click', disableAutoplay);
-    nextButton.addEventListener('click', disableAutoplay);
-  }
+    gallery.addEventListener('touchstart', stopAutoplay);
+    
+    // Iniciar autoplay
+    startAutoplay();
+    
+  });
 });
 
 // Código para WhatsApp
