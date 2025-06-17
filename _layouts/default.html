@@ -24,7 +24,7 @@ layout: compress
 
   {% include footer.html data=site.data.includes.footer.footer %}
 
-  <script src="/assets/js/main.js" defer></script>
+  <script defer src="{{'/assets/js/main.js'|relative_url}}"></script>
 
   <!-- boton whatssapp -->
   <a href="#" class="boton-whatsapp" id="lead_whatsapp"
@@ -59,7 +59,7 @@ layout: compress
 
   <!-- Scripts de la página -->
 {% if page.url contains 'casos-de-exito' or page.url contains 'success-cases' %}
-<script src="{{ '/assets/js/before-after.js' | relative_url }}"></script>
+<script defer src="{{ '/assets/js/before-after.js' | relative_url }}"></script>
 {% endif %}
 </body>
 
