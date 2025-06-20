@@ -144,15 +144,6 @@
   color: #f0f0f0;
 }
 
-.two_columns {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 2rem;
-  align-items: center;
-  border-top: 1px solid #444;
-  padding-top: 1.5rem;
-}
-
 .testimonial-author span {
   font-size: 1.4rem;
   color: var(--primary);
