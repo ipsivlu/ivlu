@@ -1,711 +1,872 @@
-document.addEventListener('DOMContentLoaded', function() {
-  const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
-  const navLinks = document.querySelector('.nav-links');
-  const dropdowns = document.querySelectorAll('.dropdown');
-  const header = document.getElementById('header');
-  const servicesDropdown = document.getElementById('services-dropdown');
-  const megamenu = document.getElementById('services-megamenu');
+/**
+ * Sistema de Componentes Web Optimizado
+ * Enfoque modular para mejor mantenimiento y rendimiento
+ */
 
-  // Control del menú móvil
-  if (mobileNavToggle) {
-    mobileNavToggle.addEventListener('click', function() {
-      navLinks.classList.toggle('nav-links-mobile');
-      this.classList.toggle('active');
+// Configuración global y constantes
+const CONFIG = {
+  BREAKPOINTS: {
+    mobile: 1120,
+    tablet: 768
+  },
+  TIMINGS: {
+    animation: 400,
+    debounce: 150,
+    autoplay: 3000,
+    resize: 250
+  },
+  GAPS: {
+    gallery: 10
+  },
+  MESSAGES: {
+    es: "Hola. Me gustaría pedir más información de los tratamientos estéticos que vi en tu página web. Gracias",
+    en: "Hello. I would like to request more information about the aesthetic treatments I saw on your website. Thank you"
+  }
+};
+
+// Utilidades principales
+const Utils = {
+  // Debounce mejorado con cancelación
+  debounce(func, wait, immediate = false) {
+    let timeout;
+    const debounced = function executedFunction(...args) {
+      const later = () => {
+        timeout = null;
+        if (!immediate) func.apply(this, args);
+      };
+      const callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) func.apply(this, args);
+    };
+    
+    debounced.cancel = () => {
+      clearTimeout(timeout);
+      timeout = null;
+    };
+    
+    return debounced;
+  },
+
+  // Throttle para eventos de scroll
+  throttle(func, limit) {
+    let inThrottle;
+    return function(...args) {
+      if (!inThrottle) {
+        func.apply(this, args);
+        inThrottle = true;
+        setTimeout(() => inThrottle = false, limit);
+      }
+    };
+  },
+
+  // Detección de dispositivo moderna
+  getDeviceType() {
+    return window.matchMedia(`(max-width: ${CONFIG.BREAKPOINTS.mobile}px)`).matches ? 'mobile' : 'desktop';
+  },
+
+  // Manejo seguro de elementos DOM
+  safeQuerySelector(selector, parent = document) {
+    try {
+      return parent.querySelector(selector);
+    } catch (error) {
+      console.warn(`Selector inválido: ${selector}`, error);
+      return null;
+    }
+  },
+
+  // Animación suave usando requestAnimationFrame
+  animateValue(start, end, duration, callback, easing = 'easeOutCubic') {
+    const startTime = performance.now();
+    const change = end - start;
+    
+    const easingFunctions = {
+      easeOutCubic: t => 1 - Math.pow(1 - t, 3),
+      easeInOut: t => t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t
+    };
+    
+    const easingFunc = easingFunctions[easing] || easingFunctions.easeOutCubic;
+    
+    function animate(currentTime) {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const easedProgress = easingFunc(progress);
+      const currentValue = start + (change * easedProgress);
       
-      // Actualiza el atributo aria-expanded para accesibilidad
-      const expanded = this.getAttribute('aria-expanded') === 'true' || false;
-      this.setAttribute('aria-expanded', !expanded);
+      callback(currentValue, progress === 1);
       
-      // Cerrar todos los dropdowns cuando abrimos/cerramos el menú
-      dropdowns.forEach(dropdown => {
-        dropdown.classList.remove('active');
-      });
-      
-      // Asegurarse que el megamenú esté cerrado en móvil
-      if (megamenu && window.innerWidth <= 1120) {
-        megamenu.style.display = 'none';
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      }
+    }
+    
+    requestAnimationFrame(animate);
+  }
+};
+
+// Componente de Navegación
+class NavigationComponent {
+  constructor() {
+    this.elements = this.initializeElements();
+    this.state = {
+      isMobileMenuOpen: false,
+      activeDropdown: null,
+      isMegaMenuOpen: false
+    };
+    
+    if (this.elements.isValid) {
+      this.bindEvents();
+      this.initializeAccessibility();
+    }
+  }
+  
+  initializeElements() {
+    const elements = {
+      mobileToggle: Utils.safeQuerySelector('.mobile-nav-toggle'),
+      navLinks: Utils.safeQuerySelector('.nav-links'),
+      header: Utils.safeQuerySelector('#header'),
+      servicesDropdown: Utils.safeQuerySelector('#services-dropdown'),
+      megaMenu: Utils.safeQuerySelector('#services-megamenu'),
+      dropdowns: document.querySelectorAll('.dropdown')
+    };
+    
+    elements.isValid = elements.mobileToggle && elements.navLinks;
+    return elements;
+  }
+  
+  initializeAccessibility() {
+    // Configurar ARIA attributes
+    if (this.elements.mobileToggle) {
+      this.elements.mobileToggle.setAttribute('aria-expanded', 'false');
+      this.elements.mobileToggle.setAttribute('aria-controls', 'nav-links');
+    }
+    
+    // Hacer dropdowns navegables por teclado
+    this.elements.dropdowns.forEach(dropdown => {
+      const trigger = dropdown.querySelector('span');
+      if (trigger) {
+        trigger.setAttribute('tabindex', '0');
+        trigger.setAttribute('role', 'button');
       }
     });
   }
-
-  // Control de dropdowns
-  dropdowns.forEach(dropdown => {
-    // Capturar el elemento span que actúa como trigger
-    const dropdownTrigger = dropdown.querySelector('span');
+  
+  bindEvents() {
+    // Toggle móvil
+    this.elements.mobileToggle?.addEventListener('click', (e) => {
+      e.preventDefault();
+      this.toggleMobileMenu();
+    });
     
-    if (dropdownTrigger) {
-      dropdownTrigger.addEventListener('click', function(e) {
-        if (window.innerWidth <= 1120) {
-          e.preventDefault();
-          e.stopPropagation();
-          
-          // Si hacemos clic en Servicios, manejo especial para el megamenú
-          if (dropdown.id === 'services-dropdown') {
-            const isActive = dropdown.classList.contains('active');
-            
-            // Cerrar todos los otros dropdowns primero
-            dropdowns.forEach(otherDropdown => {
-              if (otherDropdown !== dropdown) {
-                otherDropdown.classList.remove('active');
-              }
-            });
-            
-            // Alternar el estado de este dropdown
-            dropdown.classList.toggle('active');
-            
-            // Manejar el megamenú
-            if (megamenu) {
-              if (dropdown.classList.contains('active')) {
-                megamenu.style.display = 'block';
-              } else {
-                megamenu.style.display = 'none';
-              }
-            }
-          } else {
-            // Para otros dropdowns, comportamiento normal
-            // Cerrar el megamenú si está abierto
-            if (megamenu) {
-              megamenu.style.display = 'none';
-            }
-            
-            // Cerrar servicios dropdown si está activo
-            if (servicesDropdown) {
-              servicesDropdown.classList.remove('active');
-            }
-            
-            // Cerrar otros dropdowns
-            dropdowns.forEach(otherDropdown => {
-              if (otherDropdown !== dropdown) {
-                otherDropdown.classList.remove('active');
-              }
-            });
-            
-            // Alternar estado del actual
-            dropdown.classList.toggle('active');
-          }
-        }
-      });
+    // Dropdowns con manejo de teclado
+    this.elements.dropdowns.forEach(dropdown => {
+      const trigger = dropdown.querySelector('span');
+      if (trigger) {
+        trigger.addEventListener('click', (e) => this.handleDropdownClick(e, dropdown));
+        trigger.addEventListener('keydown', (e) => this.handleDropdownKeydown(e, dropdown));
+      }
+    });
+    
+    // Megamenú para escritorio
+    if (this.elements.servicesDropdown && this.elements.megaMenu) {
+      this.setupMegaMenu();
     }
-  });
-
-  // Control del megamenú para escritorio
-  if (servicesDropdown && megamenu) {
-    // Para escritorio: mostrar megamenú al hacer hover
-    servicesDropdown.addEventListener('mouseenter', function() {
-      if (window.innerWidth > 1120) {
-        megamenu.style.display = 'block';
-        setTimeout(function() {
-          megamenu.style.opacity = '1';
-          megamenu.style.transform = 'translateY(0)';
-        }, 10);
-      }
+    
+    // Cerrar menús al hacer clic fuera
+    document.addEventListener('click', (e) => this.handleOutsideClick(e));
+    
+    // Cerrar al hacer clic en enlaces
+    const menuLinks = document.querySelectorAll('.nav-links a:not(.dropdown span), #services-megamenu a');
+    menuLinks.forEach(link => {
+      link.addEventListener('click', () => this.closeAllMenus());
     });
     
-    // Mantener abierto cuando el mouse está sobre el megamenú
-    megamenu.addEventListener('mouseenter', function() {
-      if (window.innerWidth > 1120) {
-        megamenu.style.display = 'block';
-        megamenu.style.opacity = '1';
-        megamenu.style.transform = 'translateY(0)';
-      }
-    });
+    // Manejo de resize
+    window.addEventListener('resize', Utils.debounce(() => {
+      this.handleResize();
+    }, CONFIG.TIMINGS.resize));
     
-    // Cerrar cuando el mouse sale del megamenú
-    megamenu.addEventListener('mouseleave', function() {
-      if (window.innerWidth > 1120) {
-        closeMegamenu();
-      }
-    });
+    // Scroll header effect
+    window.addEventListener('scroll', Utils.throttle(() => {
+      this.handleScroll();
+    }, 16)); // ~60fps
+  }
+  
+  toggleMobileMenu() {
+    this.state.isMobileMenuOpen = !this.state.isMobileMenuOpen;
     
-    // Cuando el mouse sale del dropdown, verificar si va hacia el megamenú
-    servicesDropdown.addEventListener('mouseleave', function(e) {
-      if (window.innerWidth > 1120) {
-        const megaRect = megamenu.getBoundingClientRect();
-        // Si el mouse se mueve hacia el megamenú (hacia abajo)
-        if (!(e.clientY >= megaRect.top - 20)) {
-          closeMegamenu();
-        }
-      }
-    });
+    this.elements.navLinks.classList.toggle('nav-links-mobile', this.state.isMobileMenuOpen);
+    this.elements.mobileToggle.classList.toggle('active', this.state.isMobileMenuOpen);
+    this.elements.mobileToggle.setAttribute('aria-expanded', this.state.isMobileMenuOpen);
     
-    // Función para cerrar el megamenú con transición
-    function closeMegamenu() {
-      megamenu.style.opacity = '0';
-      megamenu.style.transform = 'translateY(-10px)';
-      setTimeout(function() {
-        megamenu.style.display = 'none';
-      }, 300);
+    if (this.state.isMobileMenuOpen) {
+      this.closeAllDropdowns();
     }
   }
-
-  // Cerrar menús al hacer clic fuera
-  document.addEventListener('click', function(e) {
+  
+  handleDropdownClick(e, dropdown) {
+    if (Utils.getDeviceType() === 'mobile') {
+      e.preventDefault();
+      e.stopPropagation();
+      this.toggleDropdown(dropdown);
+    }
+  }
+  
+  handleDropdownKeydown(e, dropdown) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      this.toggleDropdown(dropdown);
+    } else if (e.key === 'Escape') {
+      this.closeAllDropdowns();
+      e.target.blur();
+    }
+  }
+  
+  toggleDropdown(dropdown) {
+    const isActive = dropdown.classList.contains('active');
+    
+    // Cerrar otros dropdowns
+    this.elements.dropdowns.forEach(otherDropdown => {
+      if (otherDropdown !== dropdown) {
+        otherDropdown.classList.remove('active');
+      }
+    });
+    
+    // Toggle actual dropdown
+    dropdown.classList.toggle('active', !isActive);
+    this.state.activeDropdown = !isActive ? dropdown : null;
+    
+    // Manejo especial del megamenú
+    if (dropdown.id === 'services-dropdown') {
+      this.toggleMegaMenu(!isActive);
+    } else if (this.elements.megaMenu) {
+      this.closeMegaMenu();
+    }
+  }
+  
+  setupMegaMenu() {
+    if (Utils.getDeviceType() === 'desktop') {
+      this.elements.servicesDropdown.addEventListener('mouseenter', () => {
+        this.openMegaMenu();
+      });
+      
+      this.elements.servicesDropdown.addEventListener('mouseleave', (e) => {
+        this.handleMegaMenuMouseLeave(e);
+      });
+      
+      this.elements.megaMenu.addEventListener('mouseenter', () => {
+        this.openMegaMenu();
+      });
+      
+      this.elements.megaMenu.addEventListener('mouseleave', () => {
+        this.closeMegaMenu();
+      });
+    }
+  }
+  
+  openMegaMenu() {
+    if (Utils.getDeviceType() === 'desktop' && this.elements.megaMenu) {
+      this.elements.megaMenu.style.display = 'block';
+      requestAnimationFrame(() => {
+        this.elements.megaMenu.style.opacity = '1';
+        this.elements.megaMenu.style.transform = 'translateY(0)';
+      });
+      this.state.isMegaMenuOpen = true;
+    }
+  }
+  
+  closeMegaMenu() {
+    if (this.elements.megaMenu && this.state.isMegaMenuOpen) {
+      this.elements.megaMenu.style.opacity = '0';
+      this.elements.megaMenu.style.transform = 'translateY(-10px)';
+      
+      setTimeout(() => {
+        if (this.elements.megaMenu) {
+          this.elements.megaMenu.style.display = 'none';
+        }
+      }, CONFIG.TIMINGS.animation);
+      
+      this.state.isMegaMenuOpen = false;
+    }
+  }
+  
+  toggleMegaMenu(show) {
+    if (Utils.getDeviceType() === 'mobile' && this.elements.megaMenu) {
+      this.elements.megaMenu.style.display = show ? 'block' : 'none';
+    }
+  }
+  
+  handleMegaMenuMouseLeave(e) {
+    if (Utils.getDeviceType() === 'desktop') {
+      const megaRect = this.elements.megaMenu.getBoundingClientRect();
+      if (!(e.clientY >= megaRect.top - 20)) {
+        this.closeMegaMenu();
+      }
+    }
+  }
+  
+  closeAllDropdowns() {
+    this.elements.dropdowns.forEach(dropdown => {
+      dropdown.classList.remove('active');
+    });
+    this.state.activeDropdown = null;
+  }
+  
+  closeAllMenus() {
+    if (this.state.isMobileMenuOpen) {
+      this.toggleMobileMenu();
+    }
+    this.closeAllDropdowns();
+    this.closeMegaMenu();
+  }
+  
+  handleOutsideClick(e) {
     if (!e.target.closest('.nav-links') && 
         !e.target.closest('.mobile-nav-toggle') && 
         !e.target.closest('#services-megamenu')) {
-      
-      if (window.innerWidth <= 1120) {
-        // Cerrar el menú móvil si está abierto
-        if (mobileNavToggle && mobileNavToggle.classList.contains('active')) {
-          mobileNavToggle.classList.remove('active');
-          navLinks.classList.remove('nav-links-mobile');
-          mobileNavToggle.setAttribute('aria-expanded', 'false');
-        }
-        
-        // Cerrar todos los dropdowns
-        dropdowns.forEach(dropdown => {
-          dropdown.classList.remove('active');
-        });
-        
-        // Cerrar megamenú
-        if (megamenu) {
-          megamenu.style.display = 'none';
-        }
-      } else {
-        // En escritorio, cerrar el megamenú
-        if (megamenu) {
-          closeMegamenu();
-        }
-      }
+      this.closeAllMenus();
     }
-  });
-
-  // Cerrar menú al hacer clic en un enlace
-  const menuLinks = document.querySelectorAll('.nav-links a:not(.dropdown span), #services-megamenu a');
-  menuLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      if (mobileNavToggle && mobileNavToggle.classList.contains('active')) {
-        mobileNavToggle.classList.remove('active');
-        navLinks.classList.remove('nav-links-mobile');
-        mobileNavToggle.setAttribute('aria-expanded', 'false');
-      }
-      
-      // Cerrar todos los dropdowns
-      dropdowns.forEach(dropdown => {
-        dropdown.classList.remove('active');
-      });
-      
-      // Cerrar megamenú
-      if (megamenu) {
-        megamenu.style.display = 'none';
-      }
-    });
-  });
-
-  // Manejar cambios de tamaño de ventana
-  window.addEventListener('resize', function() {
-    if (window.innerWidth > 1120) {
-      // Restablecer todo cuando se cambia a desktop
-      if (navLinks.classList.contains('nav-links-mobile')) {
-        navLinks.classList.remove('nav-links-mobile');
-      }
-      
-      if (mobileNavToggle && mobileNavToggle.classList.contains('active')) {
-        mobileNavToggle.classList.remove('active');
-        mobileNavToggle.setAttribute('aria-expanded', 'false');
-      }
-      
-      dropdowns.forEach(dropdown => {
-        dropdown.classList.remove('active');
-      });
-      
-      // En modo escritorio, resetear megamenú
-      if (megamenu) {
-        megamenu.style.display = 'none';
-        megamenu.style.opacity = '0';
-        megamenu.style.transform = 'translateY(-10px)';
-      }
-    } else {
-      // En móvil, ocultar el megamenú si no está activo
-      if (megamenu && servicesDropdown && !servicesDropdown.classList.contains('active')) {
-        megamenu.style.display = 'none';
-      }
-    }
-  });
-  
-  // Verificar el scroll inicial cuando carga la página
-  if (window.scrollY > 0) {
-    header.classList.add('scrolled');
   }
   
-  // Añadir evento de scroll para cambiar apariencia del header
-  window.addEventListener('scroll', function() {
-    if (window.scrollY > 0) {
-      header.classList.add('scrolled');
+  handleResize() {
+    const deviceType = Utils.getDeviceType();
+    
+    if (deviceType === 'desktop') {
+      // Reset mobile states
+      if (this.state.isMobileMenuOpen) {
+        this.elements.navLinks.classList.remove('nav-links-mobile');
+        this.elements.mobileToggle.classList.remove('active');
+        this.elements.mobileToggle.setAttribute('aria-expanded', 'false');
+        this.state.isMobileMenuOpen = false;
+      }
+      
+      this.closeAllDropdowns();
+      this.closeMegaMenu();
     } else {
-      header.classList.remove('scrolled');
+      // Mobile mode
+      if (this.elements.megaMenu && this.state.activeDropdown?.id !== 'services-dropdown') {
+        this.elements.megaMenu.style.display = 'none';
+      }
     }
-  });
-});
-
-/* Sliders de galerías*/
-document.addEventListener('DOMContentLoaded', function() {
-  const galleries = document.querySelectorAll('.gallery');
+  }
   
-  galleries.forEach(gallery => {
-    const galleryImages = gallery.querySelector('.gallery-images');
-    const indicators = gallery.querySelectorAll('.indicator');
-    const prevBtn = gallery.querySelector('.gallery-prev');
-    const nextBtn = gallery.querySelector('.gallery-next');
-    const items = gallery.querySelectorAll('.gallery-item');
-    
-    if (!galleryImages || !items.length) return;
-    
-    let currentIndex = 0;
-    let isAnimating = false;
-    
-    // Función para obtener cuántos elementos son visibles
-    function getVisibleItems() {
-      const containerWidth = galleryImages.offsetWidth;
-      const itemWidth = items[0].offsetWidth;
-      return Math.floor(containerWidth / itemWidth) || 1;
+  handleScroll() {
+    if (this.elements.header) {
+      const shouldAddScrolled = window.scrollY > 0;
+      this.elements.header.classList.toggle('scrolled', shouldAddScrolled);
     }
+  }
+}
+
+// Componente de Galería
+class GalleryComponent {
+  constructor(element) {
+    this.gallery = element;
+    this.elements = this.initializeElements();
+    this.state = {
+      currentIndex: 0,
+      isAnimating: false,
+      userScrolling: false,
+      autoplayInterval: null
+    };
     
-    // Función para obtener el máximo índice válido
-    function getMaxIndex() {
-      const visibleItems = getVisibleItems();
-      return Math.max(0, items.length - visibleItems);
+    if (this.elements.isValid) {
+      this.bindEvents();
+      this.initialize();
     }
+  }
+  
+  initializeElements() {
+    const elements = {
+      container: this.gallery.querySelector('.gallery-images'),
+      indicators: this.gallery.querySelectorAll('.indicator'),
+      prevBtn: this.gallery.querySelector('.gallery-prev'),
+      nextBtn: this.gallery.querySelector('.gallery-next'),
+      items: this.gallery.querySelectorAll('.gallery-item')
+    };
     
-    // Función para actualizar indicadores con transición suave
-    function updateIndicators() {
-      if (!indicators.length) return;
-      
-      const visibleItems = getVisibleItems();
-      const indicatorIndex = Math.floor(currentIndex / visibleItems);
-      
-      indicators.forEach((indicator, index) => {
-        if (index === indicatorIndex) {
-          indicator.classList.add('active');
-        } else {
-          indicator.classList.remove('active');
-        }
-      });
+    elements.isValid = elements.container && elements.items.length > 0;
+    return elements;
+  }
+  
+  initialize() {
+    this.updateIndicators();
+    this.setupAccessibility();
+    
+    // Configurar autoplay si se desea
+    // this.startAutoplay();
+  }
+  
+  setupAccessibility() {
+    this.elements.container.setAttribute('tabindex', '0');
+    this.elements.container.setAttribute('role', 'region');
+    this.elements.container.setAttribute('aria-label', 'Galería de imágenes');
+    
+    // Agregar ARIA labels a los botones
+    if (this.elements.prevBtn) {
+      this.elements.prevBtn.setAttribute('aria-label', 'Imagen anterior');
     }
-    
-    // Función principal para mover el carrusel con animación fluida
-    function scrollToItem(index, smooth = true) {
-      if (isAnimating) return; // Evitar múltiples animaciones simultáneas
-      
-      const maxIndex = getMaxIndex();
-      
-      // Limitar el índice dentro del rango válido
-      if (index < 0) index = 0;
-      if (index > maxIndex) index = maxIndex;
-      
-      // Si ya estamos en la posición correcta, no hacer nada
-      if (index === currentIndex) return;
-      
-      currentIndex = index;
-      
-      // Calcular la posición de scroll
-      const itemWidth = items[0].offsetWidth;
-      const gap = 10; // Gap definido en CSS
-      const scrollPosition = index * (itemWidth + gap);
-      
-      // Configurar la animación
-      if (smooth) {
-        isAnimating = true;
-        
-        // Usar requestAnimationFrame para una animación más suave
-        const startPosition = galleryImages.scrollLeft;
-        const distance = scrollPosition - startPosition;
-        const duration = 400; // Duración en milisegundos
-        const startTime = performance.now();
-        
-        // Función de easing para una transición más natural
-        function easeOutCubic(t) {
-          return 1 - Math.pow(1 - t, 3);
-        }
-        
-        function animate(currentTime) {
-          const elapsed = currentTime - startTime;
-          const progress = Math.min(elapsed / duration, 1);
-          const easedProgress = easeOutCubic(progress);
-          
-          const currentPosition = startPosition + (distance * easedProgress);
-          galleryImages.scrollLeft = currentPosition;
-          
-          if (progress < 1) {
-            requestAnimationFrame(animate);
-          } else {
-            isAnimating = false;
-            // Asegurar posición exacta al final
-            galleryImages.scrollLeft = scrollPosition;
-          }
-        }
-        
-        requestAnimationFrame(animate);
-      } else {
-        // Scroll inmediato sin animación
-        galleryImages.scrollLeft = scrollPosition;
-      }
-      
-      updateIndicators();
+    if (this.elements.nextBtn) {
+      this.elements.nextBtn.setAttribute('aria-label', 'Siguiente imagen');
     }
+  }
+  
+  bindEvents() {
+    // Botones de navegación
+    this.elements.prevBtn?.addEventListener('click', () => this.moveOne('prev'));
+    this.elements.nextBtn?.addEventListener('click', () => this.moveOne('next'));
     
-    // Función para mover un elemento a la vez (más fluido)
-    function moveOne(direction) {
-      if (isAnimating) return;
-      
-      const maxIndex = getMaxIndex();
-      let newIndex;
-      
-      if (direction === 'next') {
-        newIndex = Math.min(currentIndex + 1, maxIndex);
-      } else {
-        newIndex = Math.max(currentIndex - 1, 0);
-      }
-      
-      scrollToItem(newIndex, true);
-    }
-    
-    // Event listeners para botones de navegación (movimiento de uno en uno)
-    if (prevBtn) {
-      prevBtn.addEventListener('click', () => {
-        moveOne('prev');
-      });
-    }
-    
-    if (nextBtn) {
-      nextBtn.addEventListener('click', () => {
-        moveOne('next');
-      });
-    }
-    
-    // Event listeners para indicadores (salto directo pero suave)
-    indicators.forEach((indicator, index) => {
-      indicator.addEventListener('click', () => {
-        const visibleItems = getVisibleItems();
-        const targetIndex = index * visibleItems;
-        scrollToItem(targetIndex, true);
-      });
+    // Indicadores
+    this.elements.indicators.forEach((indicator, index) => {
+      indicator.addEventListener('click', () => this.scrollToItem(index * this.getVisibleItems(), true));
     });
     
-    // Detectar scroll manual (con debounce para mejor rendimiento)
-    let scrollTimeout;
-    let userScrolling = false;
-    
-    galleryImages.addEventListener('scroll', () => {
-      if (isAnimating) return; // Ignorar durante animaciones programáticas
-      
-      userScrolling = true;
-      clearTimeout(scrollTimeout);
-      
-      scrollTimeout = setTimeout(() => {
-        if (userScrolling) {
-          // Detectar el índice actual basado en la posición de scroll
-          const itemWidth = items[0].offsetWidth;
-          const gap = 10;
-          const scrollLeft = galleryImages.scrollLeft;
-          const newIndex = Math.round(scrollLeft / (itemWidth + gap));
-          
-          if (newIndex !== currentIndex && newIndex >= 0 && newIndex <= getMaxIndex()) {
-            currentIndex = newIndex;
-            updateIndicators();
-          }
-          userScrolling = false;
-        }
-      }, 150);
-    });
-    
-    // Soporte para gestos táctiles mejorado
-    let touchStartX = 0;
-    let touchEndX = 0;
-    let touchStartTime = 0;
-    
-    galleryImages.addEventListener('touchstart', (e) => {
-      touchStartX = e.changedTouches[0].screenX;
-      touchStartTime = Date.now();
-      userScrolling = true;
-    }, { passive: true });
-    
-    galleryImages.addEventListener('touchend', (e) => {
-      touchEndX = e.changedTouches[0].screenX;
-      const touchDuration = Date.now() - touchStartTime;
-      
-      // Solo procesar swipes rápidos (menos de 300ms)
-      if (touchDuration < 300) {
-        handleSwipe();
+    // Scroll manual con debounce
+    const debouncedScrollHandler = Utils.debounce(() => {
+      if (this.state.userScrolling && !this.state.isAnimating) {
+        this.syncCurrentIndex();
       }
-      userScrolling = false;
-    }, { passive: true });
+      this.state.userScrolling = false;
+    }, CONFIG.TIMINGS.debounce);
     
-    function handleSwipe() {
-      const swipeThreshold = 50;
-      const swipeDistance = touchEndX - touchStartX;
-      
-      if (Math.abs(swipeDistance) > swipeThreshold) {
-        if (swipeDistance < 0) {
-          // Swipe izquierda - siguiente
-          moveOne('next');
-        } else {
-          // Swipe derecha - anterior
-          moveOne('prev');
-        }
-      }
-    }
-    
-    // Soporte para teclado (accesibilidad)
-    galleryImages.addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowRight') {
-        e.preventDefault();
-        moveOne('next');
-      } else if (e.key === 'ArrowLeft') {
-        e.preventDefault();
-        moveOne('prev');
+    this.elements.container.addEventListener('scroll', () => {
+      if (!this.state.isAnimating) {
+        this.state.userScrolling = true;
+        debouncedScrollHandler();
       }
     });
     
-    // Hacer el contenedor enfocable para navegación por teclado
-    galleryImages.setAttribute('tabindex', '0');
+    // Soporte táctil mejorado
+    this.setupTouchSupport();
     
-    // Recalcular en resize con debounce
-    let resizeTimeout;
-    window.addEventListener('resize', () => {
-      clearTimeout(resizeTimeout);
-      resizeTimeout = setTimeout(() => {
-        const maxIndex = getMaxIndex();
-        if (currentIndex > maxIndex) {
-          scrollToItem(maxIndex, false); // Sin animación en resize
-        } else {
-          updateIndicators();
-        }
-      }, 250);
-    });
+    // Navegación por teclado
+    this.setupKeyboardNavigation();
+    
+    // Resize con debounce
+    window.addEventListener('resize', Utils.debounce(() => {
+      this.handleResize();
+    }, CONFIG.TIMINGS.resize));
     
     // Pausar animaciones cuando la pestaña no está visible
     document.addEventListener('visibilitychange', () => {
       if (document.hidden) {
-        isAnimating = false;
+        this.state.isAnimating = false;
+        this.stopAutoplay();
+      } else {
+        // this.startAutoplay();
       }
     });
+  }
+  
+  setupTouchSupport() {
+    let touchStartX = 0;
+    let touchEndX = 0;
+    let touchStartTime = 0;
     
-    // Inicializar
-    updateIndicators();
+    this.elements.container.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+      touchStartTime = Date.now();
+      this.state.userScrolling = true;
+      this.stopAutoplay();
+    }, { passive: true });
     
-    // Autoplay opcional (descomentar si lo deseas)
-    /*
-    let autoplayInterval;
-    const autoplayDelay = 3000;
+    this.elements.container.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      const touchDuration = Date.now() - touchStartTime;
+      
+      if (touchDuration < 300) {
+        this.handleSwipe(touchStartX, touchEndX);
+      }
+      
+      this.state.userScrolling = false;
+      // this.startAutoplay();
+    }, { passive: true });
+  }
+  
+  setupKeyboardNavigation() {
+    this.elements.container.addEventListener('keydown', (e) => {
+      switch (e.key) {
+        case 'ArrowRight':
+          e.preventDefault();
+          this.moveOne('next');
+          break;
+        case 'ArrowLeft':
+          e.preventDefault();
+          this.moveOne('prev');
+          break;
+        case 'Home':
+          e.preventDefault();
+          this.scrollToItem(0, true);
+          break;
+        case 'End':
+          e.preventDefault();
+          this.scrollToItem(this.getMaxIndex(), true);
+          break;
+      }
+    });
+  }
+  
+  handleSwipe(startX, endX) {
+    const swipeThreshold = 50;
+    const swipeDistance = endX - startX;
     
-    function startAutoplay() {
-      autoplayInterval = setInterval(() => {
-        if (!isAnimating && !userScrolling) {
-          const maxIndex = getMaxIndex();
-          const nextIndex = currentIndex >= maxIndex ? 0 : currentIndex + 1;
-          scrollToItem(nextIndex, true);
+    if (Math.abs(swipeDistance) > swipeThreshold) {
+      if (swipeDistance < 0) {
+        this.moveOne('next');
+      } else {
+        this.moveOne('prev');
+      }
+    }
+  }
+  
+  getVisibleItems() {
+    const containerWidth = this.elements.container.offsetWidth;
+    const itemWidth = this.elements.items[0]?.offsetWidth || 0;
+    return Math.floor(containerWidth / itemWidth) || 1;
+  }
+  
+  getMaxIndex() {
+    const visibleItems = this.getVisibleItems();
+    return Math.max(0, this.elements.items.length - visibleItems);
+  }
+  
+  moveOne(direction) {
+    if (this.state.isAnimating) return;
+    
+    const maxIndex = this.getMaxIndex();
+    let newIndex;
+    
+    if (direction === 'next') {
+      newIndex = Math.min(this.state.currentIndex + 1, maxIndex);
+    } else {
+      newIndex = Math.max(this.state.currentIndex - 1, 0);
+    }
+    
+    this.scrollToItem(newIndex, true);
+  }
+  
+  scrollToItem(index, smooth = true) {
+    if (this.state.isAnimating || index === this.state.currentIndex) return;
+    
+    const maxIndex = this.getMaxIndex();
+    index = Math.max(0, Math.min(index, maxIndex));
+    
+    this.state.currentIndex = index;
+    
+    const itemWidth = this.elements.items[0].offsetWidth;
+    const scrollPosition = index * (itemWidth + CONFIG.GAPS.gallery);
+    
+    if (smooth) {
+      this.state.isAnimating = true;
+      
+      Utils.animateValue(
+        this.elements.container.scrollLeft,
+        scrollPosition,
+        CONFIG.TIMINGS.animation,
+        (value, isComplete) => {
+          this.elements.container.scrollLeft = value;
+          if (isComplete) {
+            this.state.isAnimating = false;
+          }
         }
-      }, autoplayDelay);
-    }
-    
-    function stopAutoplay() {
-      clearInterval(autoplayInterval);
-    }
-    
-    // Controlar autoplay
-    gallery.addEventListener('mouseenter', stopAutoplay);
-    gallery.addEventListener('mouseleave', startAutoplay);
-    gallery.addEventListener('touchstart', stopAutoplay);
-    
-    // Iniciar autoplay
-    startAutoplay();
-    
-  });
-});
-
-// Código para WhatsApp
-document.addEventListener("DOMContentLoaded", function () {
-  /* Detectar si el usuario está en móvil o escritorio*/
-  var isMobile = /iPhone|Android|iPad|iPod|Windows Phone|webOS|BlackBerry|Opera Mini|IEMobile|Mobile/i.test(
-    navigator.userAgent
-  );
-
-  /* Obtener el idioma de la página (mejorado)*/
-  var pageLanguage = document.documentElement.lang ||
-    (window.location.pathname.indexOf('/en/') > -1 ? 'en' : 'es');
-
-  /*Definir los mensajes en español e inglés*/
-  var messages = {
-    es: "Hola. Me gustaría pedir más información de los tratamientos estéticos que vi en tu página web. Gracias",
-    en: "Hello. I would like to request more information about the aesthetic treatments I saw on your website. Thank you"
-  };
-
-  /* Seleccionar el mensaje según el idioma de la página*/
-  var message = messages[pageLanguage] || messages["es"]; // Default to Spanish if language not found
-
-  /* Obtener todos los enlaces de WhatsApp en la página*/
-  var whatsappLinks = document.querySelectorAll("a#lead_whatsapp");
-
-  /*Recorrer los enlaces y cambiar el href según el dispositivo y el idioma*/
-  whatsappLinks.forEach(function (link) {
-    /* Codificar el mensaje para usarlo en la URL de WhatsApp*/
-    var encodedMessage = encodeURIComponent(message);
-
-    /* Enlaces de WhatsApp para móvil y escritorio con el mensaje dinámico*/
-    var mobileLink = "https://wa.me/573228351465?text=" + encodedMessage;
-    var desktopLink = "https://web.whatsapp.com/send?phone=573228351465&text=" + encodedMessage;
-
-    /* Asignar el enlace adecuado según el dispositivo*/
-    if (isMobile) {
-      link.setAttribute("href", mobileLink);
+      );
     } else {
-      link.setAttribute("href", desktopLink);
+      this.elements.container.scrollLeft = scrollPosition;
     }
-  });
-});
-
-// Scroll to top
-document.addEventListener('DOMContentLoaded', function () {
-  const scrollBtn = document.getElementById('scrollTop');
-
-  function checkScrollPosition() {
-    if (window.scrollY > 300) {
-      scrollBtn.classList.add('visible');
-    } else {
-      scrollBtn.classList.remove('visible');
+    
+    this.updateIndicators();
+  }
+  
+  syncCurrentIndex() {
+    const itemWidth = this.elements.items[0].offsetWidth;
+    const scrollLeft = this.elements.container.scrollLeft;
+    const newIndex = Math.round(scrollLeft / (itemWidth + CONFIG.GAPS.gallery));
+    const maxIndex = this.getMaxIndex();
+    
+    if (newIndex !== this.state.currentIndex && newIndex >= 0 && newIndex <= maxIndex) {
+      this.state.currentIndex = newIndex;
+      this.updateIndicators();
     }
   }
-
-  checkScrollPosition();
-
-  window.addEventListener('scroll', checkScrollPosition);
-
-  scrollBtn.addEventListener('click', function (e) {
-    e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
+  
+  updateIndicators() {
+    if (!this.elements.indicators.length) return;
+    
+    const visibleItems = this.getVisibleItems();
+    const indicatorIndex = Math.floor(this.state.currentIndex / visibleItems);
+    
+    this.elements.indicators.forEach((indicator, index) => {
+      indicator.classList.toggle('active', index === indicatorIndex);
     });
-  });
-});
+  }
+  
+  handleResize() {
+    const maxIndex = this.getMaxIndex();
+    if (this.state.currentIndex > maxIndex) {
+      this.scrollToItem(maxIndex, false);
+    } else {
+      this.updateIndicators();
+    }
+  }
+  
+  startAutoplay() {
+    this.stopAutoplay();
+    this.state.autoplayInterval = setInterval(() => {
+      if (!this.state.isAnimating && !this.state.userScrolling) {
+        const maxIndex = this.getMaxIndex();
+        const nextIndex = this.state.currentIndex >= maxIndex ? 0 : this.state.currentIndex + 1;
+        this.scrollToItem(nextIndex, true);
+      }
+    }, CONFIG.TIMINGS.autoplay);
+  }
+  
+  stopAutoplay() {
+    if (this.state.autoplayInterval) {
+      clearInterval(this.state.autoplayInterval);
+      this.state.autoplayInterval = null;
+    }
+  }
+}
 
-document.addEventListener('DOMContentLoaded', function() {
-  // Elementos del slider
-  const slides = document.querySelectorAll('.testimonial-card');
-  const dots = document.querySelectorAll('.dot');
-  const prevBtn = document.querySelector('.prev-btn');
-  const nextBtn = document.querySelector('.next-btn');
-  let currentSlide = 0;
-  const totalSlides = slides.length;
+// Componente de WhatsApp
+class WhatsAppComponent {
+  constructor() {
+    this.deviceType = this.detectDevice();
+    this.pageLanguage = this.detectLanguage();
+    this.setupWhatsAppLinks();
+  }
+  
+  detectDevice() {
+    return window.matchMedia('(max-width: 768px)').matches ? 'mobile' : 'desktop';
+  }
+  
+  detectLanguage() {
+    return document.documentElement.lang || 
+           (window.location.pathname.includes('/en/') ? 'en' : 'es');
+  }
+  
+  setupWhatsAppLinks() {
+    const message = CONFIG.MESSAGES[this.pageLanguage] || CONFIG.MESSAGES.es;
+    const encodedMessage = encodeURIComponent(message);
+    const phoneNumber = '573228351465';
+    
+    const links = {
+      mobile: `https://wa.me/${phoneNumber}?text=${encodedMessage}`,
+      desktop: `https://web.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`
+    };
+    
+    const whatsappLinks = document.querySelectorAll('a#lead_whatsapp');
+    whatsappLinks.forEach(link => {
+      link.setAttribute('href', links[this.deviceType]);
+      link.setAttribute('target', '_blank');
+      link.setAttribute('rel', 'noopener noreferrer');
+    });
+  }
+}
 
-  // Inicializar la funcionalidad "Ver más" para todos los testimoniales
-  slides.forEach((card) => {
-      // Obtener el elemento de texto
+// Componente de Scroll to Top
+class ScrollToTopComponent {
+  constructor() {
+    this.button = Utils.safeQuerySelector('#scrollTop');
+    if (this.button) {
+      this.bindEvents();
+      this.checkInitialPosition();
+    }
+  }
+  
+  bindEvents() {
+    const throttledScroll = Utils.throttle(() => {
+      this.checkScrollPosition();
+    }, 16);
+    
+    window.addEventListener('scroll', throttledScroll);
+    
+    this.button.addEventListener('click', (e) => {
+      e.preventDefault();
+      this.scrollToTop();
+    });
+  }
+  
+  checkInitialPosition() {
+    this.checkScrollPosition();
+  }
+  
+  checkScrollPosition() {
+    const shouldShow = window.scrollY > 300;
+    this.button.classList.toggle('visible', shouldShow);
+  }
+  
+  scrollToTop() {
+    Utils.animateValue(
+      window.scrollY,
+      0,
+      CONFIG.TIMINGS.animation * 2,
+      (value) => {
+        window.scrollTo(0, value);
+      }
+    );
+  }
+}
+
+// Componente de Testimoniales
+class TestimonialComponent {
+  constructor() {
+    this.elements = this.initializeElements();
+    this.state = {
+      currentSlide: 0,
+      totalSlides: this.elements.slides.length
+    };
+    
+    if (this.elements.isValid) {
+      this.initializeReadMore();
+      this.bindEvents();
+      this.showSlide(0);
+    }
+  }
+  
+  initializeElements() {
+    const elements = {
+      slides: document.querySelectorAll('.testimonial-card'),
+      dots: document.querySelectorAll('.dot'),
+      prevBtn: Utils.safeQuerySelector('.prev-btn'),
+      nextBtn: Utils.safeQuerySelector('.next-btn')
+    };
+    
+    elements.isValid = elements.slides.length > 0;
+    return elements;
+  }
+  
+  initializeReadMore() {
+    this.elements.slides.forEach((card) => {
       const textElement = card.querySelector('.testimonial-text');
+      if (!textElement) return;
       
-      if (textElement) {
-          // Añadir la clase para truncar inicialmente 
-          textElement.classList.add('truncated');
-          
-          // Crear el botón "Ver más"
-          const readMoreBtn = document.createElement('button');
-          readMoreBtn.className = 'read-more-btn';
-          readMoreBtn.textContent = 'Ver más';
-          
-          // Insertar el botón después del texto
-          textElement.parentNode.insertBefore(readMoreBtn, textElement.nextSibling);
-          
-          // Añadir evento de clic al botón
-          readMoreBtn.addEventListener('click', function(e) {
-              // Evitar que el clic afecte al slider
-              e.stopPropagation();
-              
-              if (textElement.classList.contains('truncated')) {
-                  // Expandir el texto
-                  textElement.classList.remove('truncated');
-                  readMoreBtn.textContent = 'Ver menos';
-              } else {
-                  // Colapsar el texto
-                  textElement.classList.add('truncated');
-                  readMoreBtn.textContent = 'Ver más';
-              }
-          });
-      }
-  });
-
-  // Función para mostrar un slide específico
-  function showSlide(index) {
-      // Validar el índice
-      if (index < 0) index = totalSlides - 1;
-      if (index >= totalSlides) index = 0;
+      textElement.classList.add('truncated');
       
-      // Actualizar el slide actual
-      currentSlide = index;
+      const readMoreBtn = document.createElement('button');
+      readMoreBtn.className = 'read-more-btn';
+      readMoreBtn.textContent = 'Ver más';
+      readMoreBtn.setAttribute('aria-label', 'Expandir testimonio');
       
-      // Ocultar todos los slides y desactivar todos los dots
-      slides.forEach(slide => slide.classList.remove('active'));
-      dots.forEach(dot => dot.classList.remove('active'));
+      textElement.parentNode.insertBefore(readMoreBtn, textElement.nextSibling);
       
-      // Mostrar el slide actual y activar el dot correspondiente
-      slides[currentSlide].classList.add('active');
-      dots[currentSlide].classList.add('active');
-      
-      // Evaluar si el botón "Ver más" debe mostrarse para el slide actual
-      const currentTextElement = slides[currentSlide].querySelector('.testimonial-text');
-      const currentReadMoreBtn = slides[currentSlide].querySelector('.read-more-btn');
-      
-      if (currentTextElement && currentReadMoreBtn) {
-          // Hacer visible temporalmente para calcular altura real
-          const originalDisplay = slides[currentSlide].style.display;
-          slides[currentSlide].style.display = 'block';
-          
-          // Comprobar si el texto necesita el botón "Ver más"
-          if (currentTextElement.scrollHeight <= currentTextElement.clientHeight) {
-              currentReadMoreBtn.style.display = 'none';
-          } else {
-              currentReadMoreBtn.style.display = 'inline-block';
-          }
-          
-          // Restaurar display
-          slides[currentSlide].style.display = originalDisplay;
-      }
-  }
-
-  // IMPORTANTE: Inicializar el slider inmediatamente
-  // Primero ocultar todos los slides
-  slides.forEach(slide => slide.classList.remove('active'));
-  
-  // Luego activar solo el primero
-  if (slides.length > 0) {
-      slides[0].classList.add('active');
-      if (dots.length > 0) {
-          dots[0].classList.add('active');
-      }
-      
-      // Verificar botón "Ver más" para el primer slide
-      setTimeout(() => {
-          const firstTextElement = slides[0].querySelector('.testimonial-text');
-          const firstReadMoreBtn = slides[0].querySelector('.read-more-btn');
-          
-          if (firstTextElement && firstReadMoreBtn) {
-              if (firstTextElement.scrollHeight <= firstTextElement.clientHeight) {
-                  firstReadMoreBtn.style.display = 'none';
-              } else {
-                  firstReadMoreBtn.style.display = 'inline-block';
-              }
-          }
-      }, 100);
-  }
-
-  // Event listeners para los botones
-  if (prevBtn) {
-      prevBtn.addEventListener('click', () => {
-          showSlide(currentSlide - 1);
+      readMoreBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        this.toggleReadMore(textElement, readMoreBtn);
       });
+    });
   }
   
-  if (nextBtn) {
-      nextBtn.addEventListener('click', () => {
-          showSlide(currentSlide + 1);
-      });
+  toggleReadMore(textElement, button) {
+    const isExpanded = !textElement.classList.contains('truncated');
+    
+    textElement.classList.toggle('truncated', isExpanded);
+    button.textContent = isExpanded ? 'Ver más' : 'Ver menos';
+    button.setAttribute('aria-label', isExpanded ? 'Expandir testimonio' : 'Contraer testimonio');
   }
-
-  // Event listeners para los dots
-  dots.forEach((dot, index) => {
+  
+  bindEvents() {
+    this.elements.prevBtn?.addEventListener('click', () => {
+      this.showSlide(this.state.currentSlide - 1);
+    });
+    
+    this.elements.nextBtn?.addEventListener('click', () => {
+      this.showSlide(this.state.currentSlide + 1);
+    });
+    
+    this.elements.dots.forEach((dot, index) => {
       dot.addEventListener('click', () => {
-          showSlide(index);
+        this.showSlide(index);
       });
-  });
-});
+    });
+  }
+  
+  showSlide(index) {
+    // Normalizar índice
+    if (index < 0) index = this.state.totalSlides - 1;
+    if (index >= this.state.totalSlides) index = 0;
+    
+    this.state.currentSlide = index;
+    
+    // Actualizar visualización
+    this.elements.slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+    });
+    
+    this.elements.dots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === index);
+    });
+    
+    // Verificar botón "Ver más" para el slide actual
+    this.checkReadMoreVisibility(this.elements.slides[index]);
+  }
+  
+  checkReadMoreVisibility(slide) {
+    const textElement = slide.querySelector('.testimonial-text');
+    const readMoreBtn = slide.querySelector('.read-more-btn');
+    
+    if (textElement && readMoreBtn) {
+      // Usar intersection observer o verificación de altura
+      requestAnimationFrame(() => {
+        const needsButton = textElement.scrollHeight > textElement.clientHeight;
+        readMoreBtn.style.display = needsButton ? 'inline-block' : 'none';
+      });
+    }
+  }
+}
 
+// Sistema de inicialización principal
+class WebApp {
+  constructor() {
+    this.components = new Map();
+    this.isInitialized = false;
+  }
+  
+  init() {
+    if (this.isInitialized) return;
+    
+    try {
+      // Inicializar componentes en orden
+      this.components.set('navigation', new NavigationComponent());
+      this.components.set('whatsapp', new WhatsAppComponent());
+      this.components.set('scrollTop', new ScrollToTopComponent());
+      this.components.set('testimonials', new TestimonialComponent());
+      
+      // Inicializar galerías
+      const galleries = document.querySelectorAll('.gallery');
+      galleries.forEach((gallery, index) => {
+        this.components.set(`gallery-${index}`, new GalleryComponent(gallery));
+      });
+      
+      this.isInitialized = true;
+      console.log('✅ WebApp inicializada correctamente');
+      
+    } catch (error) {
+      console.error('❌ Error inicializando WebApp:', error);
+    }
+  }
+  
+  destroy() {
+    // Limpiar event listeners y recursos
+    this.components.forEach(component => {
+      if (component.destroy && typeof component.destroy === 'function') {
+        component.destroy();
+      }
+    });
+    this.components.clear();
+    this.isInitialized = false;
+  }
+}
+
+// Inicialización
+const app = new WebApp();
+
+// Usar DOMContentLoaded una sola vez
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => app.init());
+} else {
+  app.init();
+}
+
+// Cleanup global
+window.addEventListener('beforeunload', () => app.destroy());
