@@ -1,28 +1,48 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const slides = document.querySelectorAll(".testimonial-slide");
-  const prevBtn = document.querySelector(".carousel-btn.prev");
-  const nextBtn = document.querySelector(".carousel-btn.next");
+document.addEventListener("DOMContentLoaded", () => {
+  const testimonials = document.querySelectorAll(".testimonial");
+  const prevBtn = document.getElementById("prev-testimonial");
+  const nextBtn = document.getElementById("next-testimonial");
+  let index = 0;
+  let interval;
 
-  let currentSlide = 0;
-
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.classList.toggle("active", i === index);
+  const showTestimonial = (i) => {
+    testimonials.forEach((t, idx) => {
+      t.classList.remove("active");
+      if (idx === i) {
+        t.classList.add("active");
+      }
     });
-  }
+  };
 
-  function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-  }
+  const nextTestimonial = () => {
+    index = (index + 1) % testimonials.length;
+    showTestimonial(index);
+  };
 
-  function prevSlide() {
-    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-    showSlide(currentSlide);
-  }
+  const prevTestimonial = () => {
+    index = (index - 1 + testimonials.length) % testimonials.length;
+    showTestimonial(index);
+  };
 
-  nextBtn.addEventListener("click", nextSlide);
-  prevBtn.addEventListener("click", prevSlide);
+  const startAutoCycle = () => {
+    interval = setInterval(nextTestimonial, 7000); // 7 segundos
+  };
 
-  setInterval(nextSlide, 6000); // cambia cada 6 segundos automáticamente
+  const resetCycle = () => {
+    clearInterval(interval);
+    startAutoCycle();
+  };
+
+  nextBtn.addEventListener("click", () => {
+    nextTestimonial();
+    resetCycle();
+  });
+
+  prevBtn.addEventListener("click", () => {
+    prevTestimonial();
+    resetCycle();
+  });
+
+  showTestimonial(index);
+  startAutoCycle();
 });
