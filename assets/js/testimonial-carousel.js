@@ -6,11 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
   let interval;
 
   const showTestimonial = (i) => {
-    testimonials.forEach((t, idx) => {
-      t.classList.remove("active");
-      if (idx === i) {
-        t.classList.add("active");
-      }
+    testimonials.forEach((el, idx) => {
+      el.classList.remove("active");
+      if (idx === i) el.classList.add("active");
     });
   };
 
@@ -25,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const startAutoCycle = () => {
-    interval = setInterval(nextTestimonial, 7000); // 7 segundos
+    interval = setInterval(nextTestimonial, 7000);
   };
 
   const resetCycle = () => {
@@ -33,13 +31,13 @@ document.addEventListener("DOMContentLoaded", () => {
     startAutoCycle();
   };
 
-  nextBtn.addEventListener("click", () => {
-    nextTestimonial();
+  prevBtn.addEventListener("click", () => {
+    prevTestimonial();
     resetCycle();
   });
 
-  prevBtn.addEventListener("click", () => {
-    prevTestimonial();
+  nextBtn.addEventListener("click", () => {
+    nextTestimonial();
     resetCycle();
   });
 
