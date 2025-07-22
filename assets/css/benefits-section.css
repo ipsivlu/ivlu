@@ -3,12 +3,12 @@
   border: 1.5px solid #d6b36a;
   border-radius: 1rem;
   padding: 2rem;
+  margin: 4rem auto;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   width: 100%;
   max-width: 900px;
   box-sizing: border-box;
 }
-
 
 .ivlu-benefits-section h2 {
   color: #604b25;
