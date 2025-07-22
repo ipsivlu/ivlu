@@ -1,0 +1,56 @@
+.ivlu-benefits-section {
+  background-color: #fffefc;
+  border: 2px solid #c8aa6e;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  margin: 2rem 0;
+  box-shadow: 0 4px 16px rgba(200, 170, 110, 0.15);
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.ivlu-benefits-section h2 {
+  color: #604b25;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.ivlu-benefits-section .intro {
+  font-size: 1.05rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.ivlu-benefits-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ivlu-benefits-list > li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.ivlu-benefits-list .emoji {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+.ivlu-benefits-list h4 {
+  font-size: 1.2rem;
+  color: #8b6d2c;
+  margin-bottom: 0.5rem;
+}
+
+.sub-benefits {
+  list-style: none;
+  padding-left: 1rem;
+  margin: 0;
+}
+
+.sub-benefits li {
+  margin-bottom: 0.3rem;
+  font-size: 0.95rem;
+  color: #444;
+}

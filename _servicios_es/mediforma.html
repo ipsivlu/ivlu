@@ -12,10 +12,13 @@ dateModified: "2025-07-07"
 precios: "Consulta inicial $180.000"
 tiempo_aplicacion: "45 minutos"
 ---
+<script src="{{ '/assets/js/accordeon-funct.js' | relative_url }}"></script>
 <header class="wrapper two_columns">
   <div class="flow">
     <h1>Mediforma: Salud y peso en equilibrio</h1>
     <p>Mediforma es un programa clínico de pérdida de peso diseñado para impactar positivamente tu salud física, emocional y metabólica. Lo hacemos desde un enfoque humano, cercano y científicamente respaldado.</p>
+    <p>Combinamos medicina familiar, nutrición personalizada, psicología clínica y, cuando es necesario, tratamiento farmacológico con <strong>Ozempic®</strong> o <strong>Saxenda®.</strong></p>
+    <p>Nuestro objetivo es ayudarte a bajar de peso de forma saludable, prevenir enfermedades metabólicas y mejorar tu calidad de vida. Que te veas aun mejor, nuestra prioridad ¡Eres tú! sabemos lo importante que es sentirse bien con nuestro físico, por eso, queremos ofrecerte un servicio que no solo te de resultados, queremos que te sientas bien, que alcances tu peso y forma ideales.</p>
     {% include button.html %}
   </div>
   <img src="{{'/assets/images/ft-loss.avif' | relative_url }}" alt="{{page.alt}}" loading="lazy" decoding="async" width="520" height="520">
@@ -37,111 +40,64 @@ tiempo_aplicacion: "45 minutos"
 </section>
 
 <section class="wrapper">
-  <style>
-.ivlu-accordion {
-  border: 2px solid #c8aa6e;
-  border-radius: 1rem;
-  box-shadow: 0 4px 12px rgba(200, 170, 110, 0.2);
-  overflow: hidden;
-  margin-bottom: 1.5rem;
-  background-color: #fffefc;
-  font-family: 'Helvetica Neue', sans-serif;
-}
-
-.ivlu-accordion-item {
-  border-bottom: 1px solid #e5d8b2;
-}
-
-.ivlu-accordion-header {
-  background-color: #fdf8ef;
-  padding: 1rem 1.2rem;
-  cursor: pointer;
-  font-weight: bold;
-  color: #604b25;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 1.1rem;
-  transition: background-color 0.3s ease;
-}
-
-.ivlu-accordion-header:hover {
-  background-color: #f6eee1;
-}
-
-.ivlu-accordion-header span.emoji {
-  margin-right: 0.5rem;
-  font-size: 1.3rem;
-}
-
-.ivlu-accordion-body {
-  display: none;
-  padding: 1rem 1.2rem;
-  background-color: #fffdf9;
-  color: #333;
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-.ivlu-accordion-item.active .ivlu-accordion-body {
-  display: block;
-}
-
-.ivlu-accordion-item.active .ivlu-accordion-header::after {
-  content: "▲";
-}
-
-.ivlu-accordion-header::after {
-  content: "▼";
-  font-size: 0.8rem;
-  color: #c8aa6e;
-  transition: transform 0.2s ease;
-}
-</style>
-
-<div class="ivlu-accordion">
-  <div class="ivlu-accordion-item">
-    <div class="ivlu-accordion-header">
-      <span class="emoji">🧬</span>¿Qué incluye el Programa Mediforma?
-    </div>
-    <div class="ivlu-accordion-body">
-      <p><strong>✔ Evaluación médica integral:</strong><br>
-        • Historia clínica detallada<br>
-        • Toma de signos vitales<br>
-        • Laboratorios clínicos y electrocardiograma (EKG) según pertinencia médica
-      </p>
-      <p><strong>✔ Acompañamiento profesional continuo:</strong><br>
-        • Médico de familia: seguimiento clínico, evaluación de riesgo metabólico y ajuste de tratamiento<br>
-        • Nutricionista: plan flexible, realista y adaptado a tus preferencias y estilo de vida<br>
-        • Psicóloga clínica: acompañamiento emocional, motivacional y manejo del comer emocional
-      </p>
-      <p><strong>✔ Tratamiento farmacológico (si aplica):</strong><br>
-        • Ozempic® (semaglutida): regula el apetito, mejora la glucosa y favorece la pérdida de peso sostenida<br>
-        • Saxenda® (liraglutida): aumenta la saciedad, regula la ansiedad alimentaria y mejora la adherencia al tratamiento<br>
-        <em>🧬 Estos tratamientos solo se indican tras valoración médica personalizada y bajo seguimiento clínico estricto.</em>
-      </p>
-      <p><strong>✔ Kit de bienvenida Mediforma:</strong><br>
-        • Bandas elásticas de resistencia para entrenar desde casa<br>
-        • Agujas hipodérmicas estériles (para uso con tratamientos subcutáneos)
-      </p>
+  <div class="ivlu-accordion">
+    <div class="ivlu-accordion-item">
+      <div class="ivlu-accordion-header">
+        <span class="emoji">🧬</span>¿Qué incluye el Programa Mediforma?
+      </div>
+      <div class="ivlu-accordion-body">
+        <p><strong>✔ Evaluación médica integral:</strong><br>
+          • Historia clínica detallada<br>
+          • Toma de signos vitales<br>
+          • Laboratorios clínicos y electrocardiograma (EKG) según pertinencia médica
+        </p>
+        <p><strong>✔ Acompañamiento profesional continuo:</strong><br>
+          • Médico de familia: seguimiento clínico, evaluación de riesgo metabólico y ajuste de tratamiento<br>
+          • Nutricionista: plan flexible, realista y adaptado a tus preferencias y estilo de vida<br>
+          • Psicóloga clínica: acompañamiento emocional, motivacional y manejo del comer emocional
+        </p>
+        <p><strong>✔ Tratamiento farmacológico (si aplica):</strong><br>
+          • Ozempic® (semaglutida): regula el apetito, mejora la glucosa y favorece la pérdida de peso sostenida<br>
+          • Saxenda® (liraglutida): aumenta la saciedad, regula la ansiedad alimentaria y mejora la adherencia al tratamiento<br>
+          <em>🧬 Estos tratamientos solo se indican tras valoración médica personalizada y bajo seguimiento clínico estricto.</em>
+        </p>
+        <p><strong>✔ Kit de bienvenida Mediforma:</strong><br>
+          • Bandas elásticas de resistencia para entrenar desde casa<br>
+          • Agujas hipodérmicas estériles (para uso con tratamientos subcutáneos)
+        </p>
+      </div>
     </div>
   </div>
-</div>
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const items = document.querySelectorAll('.ivlu-accordion-header');
-  items.forEach(header => {
-    header.addEventListener('click', () => {
-      const parent = header.parentElement;
-      parent.classList.toggle('active');
-    });
-  });
-});
-</script>
-
 </section>
 
+{% include css/benefits-section.css %}
+<section class="ivlu-benefits-section">
+  <h2>🌟 Beneficios exclusivos para pacientes Mediforma</h2>
+  <p class="intro">
+    🎁 Al unirte al programa, accedes a experiencias y contenidos únicos para potenciar tu cambio:
+  </p>
+
+  <ul class="ivlu-benefits-list">
+    <li>
+      <span class="emoji">👨‍🍳</span>
+      <div>
+        <h4>Clases virtuales de cocina saludable</h4>
+        <p>Aprende recetas prácticas, deliciosas y alineadas con tu plan nutricional.</p>
+      </div>
+    </li>
+    <li>
+      <span class="emoji">👥</span>
+      <div>
+        <h4>Talleres grupales en vivo con profesionales de salud:</h4>
+        <ul class="sub-benefits">
+          <li>🥗 Nutrición práctica y hábitos saludables</li>
+          <li>🧠 Psicología aplicada a la alimentación y autoestima</li>
+          <li>🏃‍♀️ Actividad física funcional desde casa</li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</section>
 
 <section class="highlight-quote">
   <div class="flex-section wrapper">
