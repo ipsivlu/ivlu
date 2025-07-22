@@ -2,8 +2,8 @@
   background-color: #1a1a1a;
   color: white;
   border-radius: 1rem;
-  padding: 4rem 3rem;
-  max-width: 900px;
+  padding: 4rem 5rem;
+  max-width: 960px;
   margin: 4rem auto;
   position: relative;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
@@ -18,11 +18,14 @@
   width: 100%;
   opacity: 0;
   transition: opacity 0.8s ease-in-out;
+  transform: translateX(100%);
 }
 
 .testimonial.active {
   opacity: 1;
   position: relative;
+  transform: translateX(0%);
+  transition: all 0.8s ease-in-out;
 }
 
 .testimonial p {
@@ -32,6 +35,7 @@
   text-align: center;
   margin-bottom: 1.5rem;
   color: #fff;
+  padding: 0 2rem;
 }
 
 .testimonial span {
@@ -41,30 +45,30 @@
   color: #d6b36a;
 }
 
-.carousel-controls {
+.carousel-btn {
   position: absolute;
   top: 50%;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
   transform: translateY(-50%);
-  padding: 0 1.5rem;
-  pointer-events: none;
-}
-
-.carousel-controls button {
-  background: transparent;
+  background: none;
   border: 1px solid #d6b36a;
   color: #d6b36a;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
   cursor: pointer;
-  pointer-events: all;
+  border-radius: 8px;
   transition: all 0.3s ease;
+  z-index: 10;
 }
 
-.carousel-controls button:hover {
-  background-color: #d6b36a;
+.carousel-btn:hover {
+  background: #d6b36a;
   color: #1a1a1a;
+}
+
+.carousel-btn.prev {
+  left: 1.5rem;
+}
+
+.carousel-btn.next {
+  right: 1.5rem;
 }
