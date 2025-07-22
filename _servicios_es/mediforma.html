@@ -38,88 +38,108 @@ tiempo_aplicacion: "45 minutos"
 
 <section class="wrapper">
   <style>
-  .accordion-card {
-    background-color: #fff;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    transition: box-shadow 0.3s ease;
-  }
-  .accordion-header {
-    background-color: #f7f7f7;
-    padding: 1rem 1.5rem;
-    font-weight: 600;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1rem;
-  }
-  .accordion-header:hover {
-    background-color: #eaeaea;
-  }
-  .accordion-content {
-    display: none;
-    padding: 1rem 1.5rem;
-    line-height: 1.6;
-    animation: fadeIn 0.3s ease-in-out;
-  }
-  .accordion-card.active .accordion-content {
-    display: block;
-  }
-  .accordion-icon {
-    transition: transform 0.3s ease;
-  }
-  .accordion-card.active .accordion-icon {
-    transform: rotate(180deg);
-  }
-  @keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
-  }
+.ivlu-accordion {
+  border: 2px solid #c8aa6e;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(200, 170, 110, 0.2);
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  background-color: #fffefc;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.ivlu-accordion-item {
+  border-bottom: 1px solid #e5d8b2;
+}
+
+.ivlu-accordion-header {
+  background-color: #fdf8ef;
+  padding: 1rem 1.2rem;
+  cursor: pointer;
+  font-weight: bold;
+  color: #604b25;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.ivlu-accordion-header:hover {
+  background-color: #f6eee1;
+}
+
+.ivlu-accordion-header span.emoji {
+  margin-right: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.ivlu-accordion-body {
+  display: none;
+  padding: 1rem 1.2rem;
+  background-color: #fffdf9;
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.ivlu-accordion-item.active .ivlu-accordion-body {
+  display: block;
+}
+
+.ivlu-accordion-item.active .ivlu-accordion-header::after {
+  content: "▲";
+}
+
+.ivlu-accordion-header::after {
+  content: "▼";
+  font-size: 0.8rem;
+  color: #c8aa6e;
+  transition: transform 0.2s ease;
+}
 </style>
 
-<!-- Script del acordeón -->
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    document.querySelectorAll(".accordion-header").forEach(function(header) {
-      header.addEventListener("click", function() {
-        const card = this.parentElement;
-        card.classList.toggle("active");
-      });
-    });
-  });
-</script>
-
-<!-- Tarjeta desplegable ejemplo para Mediforma -->
-<div class="accordion-card">
-  <div class="accordion-header">
-    ¿Qué incluye el Programa Mediforma?
-    <span class="accordion-icon">▼</span>
-  </div>
-  <div class="accordion-content">
-    <strong>✔ Evaluación médica integral:</strong><br>
-    • Historia clínica detallada<br>
-    • Toma de signos vitales<br>
-    • Laboratorios clínicos y electrocardiograma (EKG) según pertinencia médica<br><br>
-
-    <strong>✔ Acompañamiento profesional continuo:</strong><br>
-    • Médico de familia: seguimiento clínico, evaluación de riesgo metabólico y ajuste de tratamiento<br>
-    • Nutricionista: plan flexible, realista y adaptado a tus preferencias y estilo de vida<br>
-    • Psicóloga clínica: acompañamiento emocional, motivacional y manejo del comer emocional<br><br>
-
-    <strong>✔ Tratamiento farmacológico (si aplica):</strong><br>
-    • Ozempic® (semaglutida): regula el apetito, mejora la glucosa y favorece la pérdida de peso sostenida<br>
-    • Saxenda® (liraglutida): aumenta la saciedad, regula la ansiedad alimentaria y mejora la adherencia al tratamiento<br>
-    <em>🧬 Estos tratamientos solo se indican tras valoración médica personalizada y bajo seguimiento clínico estricto.</em><br><br>
-
-    <strong>✔ Kit de bienvenida Mediforma:</strong><br>
-    • Bandas elásticas de resistencia para entrenar desde casa<br>
-    • Agujas hipodérmicas estériles (para uso con tratamientos subcutáneos)
+<div class="ivlu-accordion">
+  <div class="ivlu-accordion-item">
+    <div class="ivlu-accordion-header">
+      <span class="emoji">🧬</span>¿Qué incluye el Programa Mediforma?
+    </div>
+    <div class="ivlu-accordion-body">
+      <p><strong>✔ Evaluación médica integral:</strong><br>
+        • Historia clínica detallada<br>
+        • Toma de signos vitales<br>
+        • Laboratorios clínicos y electrocardiograma (EKG) según pertinencia médica
+      </p>
+      <p><strong>✔ Acompañamiento profesional continuo:</strong><br>
+        • Médico de familia: seguimiento clínico, evaluación de riesgo metabólico y ajuste de tratamiento<br>
+        • Nutricionista: plan flexible, realista y adaptado a tus preferencias y estilo de vida<br>
+        • Psicóloga clínica: acompañamiento emocional, motivacional y manejo del comer emocional
+      </p>
+      <p><strong>✔ Tratamiento farmacológico (si aplica):</strong><br>
+        • Ozempic® (semaglutida): regula el apetito, mejora la glucosa y favorece la pérdida de peso sostenida<br>
+        • Saxenda® (liraglutida): aumenta la saciedad, regula la ansiedad alimentaria y mejora la adherencia al tratamiento<br>
+        <em>🧬 Estos tratamientos solo se indican tras valoración médica personalizada y bajo seguimiento clínico estricto.</em>
+      </p>
+      <p><strong>✔ Kit de bienvenida Mediforma:</strong><br>
+        • Bandas elásticas de resistencia para entrenar desde casa<br>
+        • Agujas hipodérmicas estériles (para uso con tratamientos subcutáneos)
+      </p>
+    </div>
   </div>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const items = document.querySelectorAll('.ivlu-accordion-header');
+  items.forEach(header => {
+    header.addEventListener('click', () => {
+      const parent = header.parentElement;
+      parent.classList.toggle('active');
+    });
+  });
+});
+</script>
+
 </section>
 
 
