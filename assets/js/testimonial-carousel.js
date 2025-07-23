@@ -1,46 +1,28 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const testimonials = document.querySelectorAll(".testimonial");
-  const prevBtn = document.getElementById("prev-testimonial");
-  const nextBtn = document.getElementById("next-testimonial");
-  let index = 0;
-  let interval;
 
-  const showTestimonial = (i) => {
-    testimonials.forEach((el, idx) => {
-      el.classList.remove("active");
-      if (idx === i) el.classList.add("active");
-    });
-  };
+const slides = document.querySelectorAll('.testimonial-slide');
+const prevBtn = document.querySelector('.carousel-btn.prev');
+const nextBtn = document.querySelector('.carousel-btn.next');
+let currentIndex = 0;
 
-  const nextTestimonial = () => {
-    index = (index + 1) % testimonials.length;
-    showTestimonial(index);
-  };
-
-  const prevTestimonial = () => {
-    index = (index - 1 + testimonials.length) % testimonials.length;
-    showTestimonial(index);
-  };
-
-  const startAutoCycle = () => {
-    interval = setInterval(nextTestimonial, 7000);
-  };
-
-  const resetCycle = () => {
-    clearInterval(interval);
-    startAutoCycle();
-  };
-
-  prevBtn.addEventListener("click", () => {
-    prevTestimonial();
-    resetCycle();
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.remove('active');
+    if (i === index) slide.classList.add('active');
   });
+}
 
-  nextBtn.addEventListener("click", () => {
-    nextTestimonial();
-    resetCycle();
-  });
-
-  showTestimonial(index);
-  startAutoCycle();
+prevBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+  showSlide(currentIndex);
 });
+
+nextBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % slides.length;
+  showSlide(currentIndex);
+});
+
+setInterval(() => {
+  currentIndex = (currentIndex + 1) % slides.length;
+  showSlide(currentIndex);
+}, 8000); // 8 segundos
+
