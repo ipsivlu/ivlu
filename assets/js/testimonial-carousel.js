@@ -1,46 +1,43 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const testimonials = document.querySelectorAll(".testimonial");
-  const prevBtn = document.getElementById("prev-testimonial");
-  const nextBtn = document.getElementById("next-testimonial");
-  let index = 0;
-  let interval;
+const slides = document.querySelectorAll(".testimonial-slide");
+const nextBtn = document.querySelector(".carousel-btn.next");
+const prevBtn = document.querySelector(".carousel-btn.prev");
+let currentSlide = 0;
+let autoSlideInterval;
 
-  const showTestimonial = (i) => {
-    testimonials.forEach((el, idx) => {
-      el.classList.remove("active");
-      if (idx === i) el.classList.add("active");
-    });
-  };
-
-  const nextTestimonial = () => {
-    index = (index + 1) % testimonials.length;
-    showTestimonial(index);
-  };
-
-  const prevTestimonial = () => {
-    index = (index - 1 + testimonials.length) % testimonials.length;
-    showTestimonial(index);
-  };
-
-  const startAutoCycle = () => {
-    interval = setInterval(nextTestimonial, 7000);
-  };
-
-  const resetCycle = () => {
-    clearInterval(interval);
-    startAutoCycle();
-  };
-
-  prevBtn.addEventListener("click", () => {
-    prevTestimonial();
-    resetCycle();
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.toggle("active", i === index);
   });
+}
 
-  nextBtn.addEventListener("click", () => {
-    nextTestimonial();
-    resetCycle();
-  });
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+}
 
-  showTestimonial(index);
-  startAutoCycle();
+function prevSlide() {
+  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+  showSlide(currentSlide);
+}
+
+function startAutoSlide() {
+  autoSlideInterval = setInterval(nextSlide, 8000); // 8 segundos
+}
+
+nextBtn.addEventListener("click", () => {
+  nextSlide();
+  resetAutoSlide();
 });
+
+prevBtn.addEventListener("click", () => {
+  prevSlide();
+  resetAutoSlide();
+});
+
+function resetAutoSlide() {
+  clearInterval(autoSlideInterval);
+  startAutoSlide();
+}
+
+showSlide(currentSlide);
+startAutoSlide();

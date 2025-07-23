@@ -160,20 +160,23 @@ tiempo_aplicacion: "45 minutos"
   </div>
 </section>
 
-<section class="testimonial-carousel wrapper">
+<section class="testimonial-carousel-container">
   <script src="{{ '/assets/js/testimonial-carousel.js' | relative_url }}" defer></script>
-  <div class="testimonial active">
-    <p>“No solo bajé 14 kg, sino que ahora entiendo mi cuerpo y mis emociones. Mediforma me dio herramientas que nunca había recibido en otros programas.”</p>
-    <span>— Catalina R.</span>
-  </div>
-  <div class="testimonial">
-    <p>“El kit de bienvenida fue un impulso. Las clases de cocina me enseñaron que comer sano no es aburrido. Y Saxenda me ayudó a mantenerme sin ansiedad.”</p>
-    <span>— Mauricio T.</span>
-  </div>
+  <div class="testimonial-carousel">
+    <button class="carousel-btn prev" aria-label="Anterior">&#8592;</button>
 
-  <div class="carousel-controls">
-    <button id="prev-testimonial">←</button>
-    <button id="next-testimonial">→</button>
+    <div class="testimonial-slide active">
+      <p>“No solo bajé 14 kg, sino que ahora entiendo mi cuerpo y mis emociones. Mediforma me dio herramientas que nunca había recibido en otros programas.”</p>
+      <h4>— <span>Catalina R.</span></h4>
+    </div>
+
+    <div class="testimonial-slide">
+      <p>“El kit de bienvenida fue un impulso. Las clases de cocina me enseñaron que comer sano no es aburrido. Y Saxenda me ayudó a mantenerme sin ansiedad.”</p>
+      <h4>— <span>Mauricio T.</span></h4>
+    </div>
+
+    <button class="carousel-btn next" aria-label="Siguiente">&#8594;</button>
   </div>
 </section>
+
 
