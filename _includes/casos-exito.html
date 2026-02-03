@@ -1,95 +1,141 @@
 {% assign current_lang = page.lang %}
-{% assign data = site.data %}
 
 <header class="wrapper flow">
-  <h1>{% if current_lang == "es" %}Casos de éxito de nuestro Centro Médico IVLU{% else %}Our Medical Center IVLU Success Cases{% endif %}</h1>
+  <h1>{% if current_lang == "es" %}Casos de éxito de nuestro Centro Médico IVLU{% else %}Success Cases of our Medical Center IVLU{% endif %}</h1>
   <p>{% if current_lang == "es" %}En esta sección encontrarás resultados reales de nuestros tratamientos. Cada imagen muestra el antes y después, permitiéndote apreciar la calidad y efectividad de nuestros procedimientos.{% else %}In this section you will find real results of our treatments. Each image shows the before and after, allowing you to appreciate the quality and effectiveness of our procedures.{% endif %}</p>
 </header>
 
-<!-- Sección de Tratamientos Faciales -->
-<section class="wrapper padding">
-  <div class="intro flow">
-    <h2>{% if current_lang == "es" %}Tratamientos Faciales{% else %}Facial Treatments{% endif %}</h2>
-    <p>{% if current_lang == "es" %}Transforma tu apariencia con resultados naturales comprobados{% else %}Transform your appearance with proven natural results{% endif %}</p>
-  </div>
-
-  <div class="before-after-grid">
-    {% for case in data.casos.faciales %}
-    <div class="before-after-case">
-      <h3>{% if current_lang == "es" %}{{ case.title.es }}{% else %}{{ case.title.en }}{% endif %}</h3>
-      <div class="before-after-container">
-        <div class="before-after-wrapper" tabindex="0" role="slider" aria-label="{% if current_lang == 'es' %}Desliza para comparar antes y después{% else %}Slide to compare before and after{% endif %}" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-          <!-- Contenedor de imagen después -->
-          <div class="after-image-container">
-            <img class="after-image" src="{{ case.after_image | relative_url }}" alt="{% if current_lang == 'es' %}Después del {{ case.title.es }}{% else %}After {{ case.title.en }}{% endif %}" loading="lazy" decoding="async" width="400" height="560">
-          </div>
-          
-          <!-- Contenedor de imagen antes -->
-          <div class="before-image-container">
-            <img class="before-image" src="{{ case.before_image | relative_url }}" alt="{% if current_lang == 'es' %}Antes del {{ case.title.es }}{% else %}Before {{ case.title.en }}{% endif %}" loading="lazy" decoding="async" width="400" height="560">
-          </div>
-          
-          <!-- Línea divisoria y control deslizante -->
-          <div class="slider-control">
-            <div class="slider-line"></div>
-            <div class="slider-button">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 12H3M8 17l-5-5 5-5M16 17l5-5-5-5"></path>
-              </svg>
-            </div>
-          </div>
-          
-          <!-- Etiquetas de antes/después -->
-          <div class="compare-label before">{% if current_lang == "es" %}Antes{% else %}Before{% endif %}</div>
-          <div class="compare-label after">{% if current_lang == "es" %}Después{% else %}After{% endif %}</div>
-        </div>
-      </div>
-      <p class="case-description">{% if current_lang == "es" %}{{ case.description.es }}{% else %}{{ case.description.en }}{% endif %}</p>
+{% if page.casos_exito %}
+  <!-- Casos específicos desde frontmatter -->
+  <section class="wrapper padding">
+    <div class="intro flow">
+      <h2>{% if current_lang == "es" %}Resultados de este tratamiento{% else %}Treatment Results{% endif %}</h2>
+      <p>{% if current_lang == "es" %}Transformaciones reales de nuestros pacientes{% else %}Real transformations of our patients{% endif %}</p>
     </div>
-    {% endfor %}
-  </div>
-</section>
 
-<!-- Sección de Tratamientos Capilares -->
-<section class="wrapper padding bg_full">
-  <header class="intro flow">
-    <h2>{% if current_lang == "es" %}Tratamientos Capilares{% else %}Hair Treatments{% endif %}</h2>
-    <p>{% if current_lang == "es" %}Resultados reales en restauración y fortalecimiento capilar{% else %}Real results in hair restoration and strengthening{% endif %}</p>
-  </header>
-
-  <div class="before-after-grid">
-    {% for case in data.casos.capilares %}
-    <div class="before-after-case">
-      <h3>{% if current_lang == "es" %}{{ case.title.es }}{% else %}{{ case.title.en }}{% endif %}</h3>
-      <div class="before-after-container">
-        <div class="before-after-wrapper" tabindex="0" role="slider" aria-label="{% if current_lang == 'es' %}Desliza para comparar antes y después{% else %}Slide to compare before and after{% endif %}" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-          <!-- Contenedor de imagen después -->
-          <div class="after-image-container">
-            <img class="after-image" src="{{ case.after_image | relative_url }}" alt="{% if current_lang == 'es' %}Después del {{ case.title.es }}{% else %}After {{ case.title.en }}{% endif %}" loading="lazy" decoding="async" width="400" height="560">
-          </div>
-          
-          <!-- Contenedor de imagen antes -->
-          <div class="before-image-container">
-            <img class="before-image" src="{{ case.before_image | relative_url }}" alt="{% if current_lang == 'es' %}Antes del {{ case.title.es }}{% else %}Before {{ case.title.en }}{% endif %}" loading="lazy" decoding="async" width="400" height="560">
-          </div>
-          
-          <!-- Línea divisoria y control deslizante -->
-          <div class="slider-control">
-            <div class="slider-line"></div>
-            <div class="slider-button">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 12H3M8 17l-5-5 5-5M16 17l5-5-5-5"></path>
-              </svg>
+    <div class="before-after-grid">
+      {% for caso in page.casos_exito %}
+      <div class="before-after-case">
+        <h3>{{ caso.title }}</h3>
+        <div class="before-after-container">
+          <div class="before-after-wrapper" tabindex="0" role="slider" aria-label="{% if current_lang == 'es' %}Desliza para comparar antes y después{% else %}Slide to compare before and after{% endif %}" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+            <!-- Contenedor de imagen después -->
+            <div class="after-image-container">
+              <img class="after-image" src="{{ caso.after_image | relative_url }}" alt="{% if current_lang == 'es' %}Después - {{ caso.title }}{% else %}After - {{ caso.title }}{% endif %}" loading="lazy" decoding="async" width="400" height="560">
             </div>
+            
+            <!-- Contenedor de imagen antes -->
+            <div class="before-image-container">
+              <img class="before-image" src="{{ caso.before_image | relative_url }}" alt="{% if current_lang == 'es' %}Antes - {{ caso.title }}{% else %}Before - {{ caso.title }}{% endif %}" loading="lazy" decoding="async" width="400" height="560">
+            </div>
+            
+            <!-- Línea divisoria y control deslizante -->
+            <div class="slider-control">
+              <div class="slider-line"></div>
+              <div class="slider-button">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 12H3M8 17l-5-5 5-5M16 17l5-5-5-5"></path>
+                </svg>
+              </div>
+            </div>
+            
+            <!-- Etiquetas de antes/después -->
+            <div class="compare-label before">{% if current_lang == "es" %}Antes{% else %}Before{% endif %}</div>
+            <div class="compare-label after">{% if current_lang == "es" %}Después{% else %}After{% endif %}</div>
           </div>
-          
-          <!-- Etiquetas de antes/después -->
-          <div class="compare-label before">{% if current_lang == "es" %}Antes{% else %}Before{% endif %}</div>
-          <div class="compare-label after">{% if current_lang == "es" %}Después{% else %}After{% endif %}</div>
         </div>
+        <p class="case-description">{{ caso.description }}</p>
       </div>
-      <p class="case-description">{% if current_lang == "es" %}{{ case.description.es }}{% else %}{{ case.description.en }}{% endif %}</p>
+      {% endfor %}
     </div>
-    {% endfor %}
-  </div>
-</section>
+  </section>
+{% else %}
+  <!-- Casos por defecto desde _data/casos.yml -->
+  <!-- Sección de Tratamientos Faciales -->
+  <section class="wrapper padding">
+    <div class="intro flow">
+      <h2>{% if current_lang == "es" %}Tratamientos Faciales{% else %}Facial Treatments{% endif %}</h2>
+      <p>{% if current_lang == "es" %}Transforma tu apariencia con resultados naturales comprobados{% else %}Transform your appearance with proven natural results{% endif %}</p>
+    </div>
+
+    <div class="before-after-grid">
+      {% for case in site.data.casos.faciales %}
+      <div class="before-after-case">
+        <h3>{% if current_lang == "es" %}{{ case.title.es }}{% else %}{{ case.title.en }}{% endif %}</h3>
+        <div class="before-after-container">
+          <div class="before-after-wrapper" tabindex="0" role="slider" aria-label="{% if current_lang == 'es' %}Desliza para comparar antes y después{% else %}Slide to compare before and after{% endif %}" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+            <!-- Contenedor de imagen después -->
+            <div class="after-image-container">
+              <img class="after-image" src="{{ case.after_image | relative_url }}" alt="{% if current_lang == 'es' %}Después del {{ case.title.es }}{% else %}After {{ case.title.en }}{% endif %}" loading="lazy" decoding="async" width="400" height="560">
+            </div>
+            
+            <!-- Contenedor de imagen antes -->
+            <div class="before-image-container">
+              <img class="before-image" src="{{ case.before_image | relative_url }}" alt="{% if current_lang == 'es' %}Antes del {{ case.title.es }}{% else %}Before {{ case.title.en }}{% endif %}" loading="lazy" decoding="async" width="400" height="560">
+            </div>
+            
+            <!-- Línea divisoria y control deslizante -->
+            <div class="slider-control">
+              <div class="slider-line"></div>
+              <div class="slider-button">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 12H3M8 17l-5-5 5-5M16 17l5-5-5-5"></path>
+                </svg>
+              </div>
+            </div>
+            
+            <!-- Etiquetas de antes/después -->
+            <div class="compare-label before">{% if current_lang == "es" %}Antes{% else %}Before{% endif %}</div>
+            <div class="compare-label after">{% if current_lang == "es" %}Después{% else %}After{% endif %}</div>
+          </div>
+        </div>
+        <p class="case-description">{% if current_lang == "es" %}{{ case.description.es }}{% else %}{{ case.description.en }}{% endif %}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- Sección de Tratamientos Capilares -->
+  <section class="wrapper padding bg_full">
+    <header class="intro flow">
+      <h2>{% if current_lang == "es" %}Tratamientos Capilares{% else %}Hair Treatments{% endif %}</h2>
+      <p>{% if current_lang == "es" %}Resultados reales en restauración y fortalecimiento capilar{% else %}Real results in hair restoration and strengthening{% endif %}</p>
+    </header>
+
+    <div class="before-after-grid">
+      {% for case in site.data.casos.capilares %}
+      <div class="before-after-case">
+        <h3>{% if current_lang == "es" %}{{ case.title.es }}{% else %}{{ case.title.en }}{% endif %}</h3>
+        <div class="before-after-container">
+          <div class="before-after-wrapper" tabindex="0" role="slider" aria-label="{% if current_lang == 'es' %}Desliza para comparar antes y después{% else %}Slide to compare before and after{% endif %}" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+            <!-- Contenedor de imagen después -->
+            <div class="after-image-container">
+              <img class="after-image" src="{{ case.after_image | relative_url }}" alt="{% if current_lang == 'es' %}Después del {{ case.title.es }}{% else %}After {{ case.title.en }}{% endif %}" loading="lazy" decoding="async" width="400" height="560">
+            </div>
+            
+            <!-- Contenedor de imagen antes -->
+            <div class="before-image-container">
+              <img class="before-image" src="{{ case.before_image | relative_url }}" alt="{% if current_lang == 'es' %}Antes del {{ case.title.es }}{% else %}Before {{ case.title.en }}{% endif %}" loading="lazy" decoding="async" width="400" height="560">
+            </div>
+            
+            <!-- Línea divisoria y control deslizante -->
+            <div class="slider-control">
+              <div class="slider-line"></div>
+              <div class="slider-button">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 12H3M8 17l-5-5 5-5M16 17l5-5-5-5"></path>
+                </svg>
+              </div>
+            </div>
+            
+            <!-- Etiquetas de antes/después -->
+            <div class="compare-label before">{% if current_lang == "es" %}Antes{% else %}Before{% endif %}</div>
+            <div class="compare-label after">{% if current_lang == "es" %}Después{% else %}After{% endif %}</div>
+          </div>
+        </div>
+        <p class="case-description">{% if current_lang == "es" %}{{ case.description.es }}{% else %}{{ case.description.en }}{% endif %}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+{% endif %}

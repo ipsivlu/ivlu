@@ -58,7 +58,7 @@ layout: compress
   </a>
 
   <!-- Scripts de la página -->
-{% if page.url contains 'casos-de-exito' or page.url contains 'success-cases' %}
+{% if page.url contains 'casos-de-exito' or page.url contains 'success-cases' or page.casos_exito %}
 <script defer src="{{ '/assets/js/before-after.js' | relative_url }}"></script>
 {% endif %}
 </body>
