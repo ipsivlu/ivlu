@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 <url>
-<loc>http://localhost:4000/en/blog/reasons-morpheus-8-revolution/</loc>
-<lastmod>2025-03-14T00:00:00-05:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
 <loc>http://localhost:4000/es/blog/razones-revolucion-morpheus-8/</loc>
 <lastmod>2025-03-14T00:00:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 <url>
-<loc>http://localhost:4000/en/blog/dutasteride-vs-finasteride/</loc>
-<lastmod>2025-03-12T00:00:00-05:00</lastmod>
+<loc>http://localhost:4000/en/blog/reasons-morpheus-8-revolution/</loc>
+<lastmod>2025-03-14T00:00:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 <url>
 <loc>http://localhost:4000/es/blog/dutasteride-vs-finasteride/</loc>
+<lastmod>2025-03-12T00:00:00-05:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>http://localhost:4000/en/blog/dutasteride-vs-finasteride/</loc>
 <lastmod>2025-03-12T00:00:00-05:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
