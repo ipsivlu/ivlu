@@ -121,6 +121,520 @@ faciales:
       es: "Perfilado facial"
       en: "Facial contouring"
 
+  # Casos de Aumento labial desde página de servicio
+  - title:
+      es: "Aumento de Labios"
+      en: "Lip Enhancement"
+    description:
+      es: "Voluminización natural de labios con ácido hialurónico premium."
+      en: "Natural lip plumping with premium hyaluronic acid."
+    before_image: "/assets/images/labios-aumento-antes.avif"
+    after_image: "/assets/images/labios-aumento-despues.avif"
+    categoria:
+      es: "Tratamientos faciales"
+      en: "Facial treatments"
+    subcategoria:
+      es: "Aumento labial"
+      en: "Lip augmentation"
+
+  - title:
+      es: "Perfilado de Labios"
+      en: "Lip Contouring"
+    description:
+      es: "Definición del contorno labial para una sonrisa más armoniosa."
+      en: "Defining the lip contours for a more harmonious smile."
+    before_image: "/assets/images/labios-perfilado-antes.avif"
+    after_image: "/assets/images/labios-perfilado-despues.avif"
+    categoria:
+      es: "Tratamientos faciales"
+      en: "Facial treatments"
+    subcategoria:
+      es: "Aumento labial"
+      en: "Lip augmentation"
+
+  - title:
+      es: "Hidratación Labial"
+      en: "Lip Hydration - Case 3"
+    description:
+      es: "Hidratación profunda y brillo natural con ácido hialurónico."
+      en: "Deep hydration and natural shine with hyaluronic acid."
+    before_image: "/assets/images/labios-hidratacion-antes.avif"
+    after_image: "/assets/images/labios-hidratacion-despues.avif"
+    categoria:
+      es: "Tratamientos faciales"
+      en: "Facial treatments"
+    subcategoria:
+      es: "Aumento labial"
+      en: "Lip augmentation"
+
+  - title:
+      es: "Labios Más Gruesos"
+      en: "Fuller Lips"
+    description:
+      es: "Aumento de volumen para labios más llenos y atractivos."
+      en: "Volume boost for plumper, more attractive lips."
+    before_image: "/assets/images/labios-gruesos-antes.avif"
+    after_image: "/assets/images/labios-gruesos-despues.avif"
+    categoria:
+      es: "Tratamientos faciales"
+      en: "Facial treatments"
+    subcategoria:
+      es: "Aumento labial"
+      en: "Lip augmentation"
+
+  - title:
+      es: "Corrección de Asimetría"
+      en: "Asymmetry Correction"
+    description:
+      es: "Equilibrio y simetría en los labios con ácido hialurónico."
+      en: "Balance and symmetry in lips with hyaluronic acid."
+    before_image: "/assets/images/labios-asimetria-antes.avif"
+    after_image: "/assets/images/labios-asimetria-despues.avif"
+    categoria:
+      es: "Tratamientos faciales"
+      en: "Facial treatments"
+    subcategoria:
+      es: "Aumento labial"
+      en: "Lip augmentation"
+
+  - title:
+      es: "Perfilado de Borde Labial"
+      en: "Lip Border Definition"
+    description:
+      es: "Definición precisa del borde de los labios para mayor nitidez."
+      en: "Precise definition of the lip border for a sharper look."
+    before_image: "/assets/images/labios-borde-antes.avif"
+    after_image: "/assets/images/labios-borde-despues.avif"
+    categoria:
+      es: "Tratamientos faciales"
+      en: "Facial treatments"
+    subcategoria:
+      es: "Aumento labial"
+      en: "Lip augmentation"
+
+  - title:
+      es: "Hidratación Profunda"
+      en: "Deep Hydration"
+    description:
+      es: "Labios suaves e hidratados con ácido hialurónico."
+      en: "Soft, hydrated lips with hyaluronic acid."
+    before_image: "/assets/images/labios-suaves-antes.avif"
+    after_image: "/assets/images/labios-suaves-despues.avif"
+    categoria:
+      es: "Tratamientos faciales"
+      en: "Facial treatments"
+    subcategoria:
+      es: "Aumento labial"
+      en: "Lip augmentation"
+
+  - title:
+      es: "Volumen Natural"
+      en: "Natural Volume"
+    description:
+      es: "Resultados naturales con el volumen ideal para tus labios."
+      en: "Natural results with the perfect volume for your lips."
+    before_image: "/assets/images/labios-natural-antes.avif"
+    after_image: "/assets/images/labios-natural-despues.avif"
+    categoria:
+      es: "Tratamientos faciales"
+      en: "Facial treatments"
+    subcategoria:
+      es: "Aumento labial"
+      en: "Lip augmentation"
+
+  - title:
+      es: "Elevación de Comisuras"
+      en: "Corner Lift"
+    description:
+      es: "Levantamiento de las esquinas de los labios para una sonrisa más alegre."
+      en: "Lifting the corners of the lips for a happier smile."
+    before_image: "/assets/images/labios-comisuras-antes.avif"
+    after_image: "/assets/images/labios-comisuras-despues.avif"
+    categoria:
+      es: "Tratamientos faciales"
+      en: "Facial treatments"
+    subcategoria:
+      es: "Aumento labial"
+      en: "Lip augmentation"
+
+  - title:
+      es: "Definición del Arco de Cupido"
+      en: "Cupid's Bow Definition"
+    description:
+      es: "Resalto del arco natural de los labios para una look más atractivo."
+      en: "Enhancing the natural lip bow for a more attractive look."
+    before_image: "/assets/images/labios-arco-antes.avif"
+    after_image: "/assets/images/labios-arco-despues.avif"
+    categoria:
+      es: "Tratamientos faciales"
+      en: "Facial treatments"
+    subcategoria:
+      es: "Aumento labial"
+      en: "Lip augmentation"
+
+  - title:
+      es: "Hidratación con Vitaminas"
+      en: "Hydration with Vitamins"
+    description:
+      es: "Nutrición intensiva para labios saludables y brillantes."
+      en: "Intensive care for healthy, shiny lips."
+    before_image: "/assets/images/labios-vitaminas-antes.avif"
+    after_image: "/assets/images/labios-vitaminas-despues.avif"
+    categoria:
+      es: "Tratamientos faciales"
+      en: "Facial treatments"
+    subcategoria:
+      es: "Aumento labial"
+      en: "Lip augmentation"
+
+  - title:
+      es: "Contorno Labial"
+      en: "Lip Contour"
+    description:
+      es: "Marco perfecto para tus labios con definición precisa."
+      en: "Perfect framing for your lips with precise definition."
+    before_image: "/assets/images/labios-contorno-antes.avif"
+    after_image: "/assets/images/labios-contorno-despues.avif"
+    categoria:
+      es: "Tratamientos faciales"
+      en: "Facial treatments"
+    subcategoria:
+      es: "Aumento labial"
+      en: "Lip augmentation"
+
+  - title:
+      es: "Labios Sensuales"
+      en: "Sensual Lips"
+    description:
+      es: "Mayor sensualidad y atractivo en tus labios naturalmente."
+      en: "More sensuality and appeal in your lips naturally."
+    before_image: "/assets/images/labios-sensuales-antes.avif"
+    after_image: "/assets/images/labios-sensuales-despues.avif"
+    categoria:
+      es: "Tratamientos faciales"
+      en: "Facial treatments"
+    subcategoria:
+      es: "Aumento labial"
+      en: "Lip augmentation"
+
+  # Casos de Toxina botulínica desde página de servicio
+  - title:
+      es: "Eliminación de Arrugas"
+      en: "Wrinkle Removal"
+    description:
+      es: "Despídete de las arrugas y luce una piel más suave y juvenil."
+      en: "Say goodbye to wrinkles and enjoy smoother, younger-looking skin."
+    before_image: "/assets/images/toxina-arrugas-antes.avif"
+    after_image: "/assets/images/toxina-arrugas-despues.avif"
+    categoria:
+      es: "Tratamientos faciales"
+      en: "Facial treatments"
+    subcategoria:
+      es: "Toxina botulínica"
+      en: "Botulinum toxin"
+
+  - title:
+      es: "Mirada Renovada"
+      en: "Refreshed Gaze"
+    description:
+      es: "Renueva tu mirada y siente la confianza de verte mejor."
+      en: "Refresh your gaze and feel confident about how you look."
+    before_image: "/assets/images/toxina-mirada-antes.avif"
+    after_image: "/assets/images/toxina-mirada-despues.avif"
+    categoria:
+      es: "Tratamientos faciales"
+      en: "Facial treatments"
+    subcategoria:
+      es: "Toxina botulínica"
+      en: "Botulinum toxin"
+
+  - title:
+      es: "Piel más Suave"
+      en: "Smoother Skin"
+    description:
+      es: "Consigue una piel más suave y libre de líneas de expresión."
+      en: "Achieve smoother skin free from expression lines."
+    before_image: "/assets/images/toxina-suave-antes.avif"
+    after_image: "/assets/images/toxina-suave-despues.avif"
+    categoria:
+      es: "Tratamientos faciales"
+      en: "Facial treatments"
+    subcategoria:
+      es: "Toxina botulínica"
+      en: "Botulinum toxin"
+
+  - title:
+      es: "Resultado Natural"
+      en: "Natural Result"
+    description:
+      es: "Luce un resultado natural que resalta tu belleza sin cambios drásticos."
+      en: "Enjoy natural results that enhance your beauty without dramatic changes."
+    before_image: "/assets/images/toxina-natural-antes.avif"
+    after_image: "/assets/images/toxina-natural-despues.avif"
+    categoria:
+      es: "Tratamientos faciales"
+      en: "Facial treatments"
+    subcategoria:
+      es: "Toxina botulínica"
+      en: "Botulinum toxin"
+
+  - title:
+      es: "Rejuvenecimiento Facial"
+      en: "Facial Rejuvenation"
+    description:
+      es: "Rejuvenece tu rostro de manera efectiva y segura."
+      en: "Rejuvenate your face effectively and safely."
+    before_image: "/assets/images/toxina-rejuvenecimiento-antes.avif"
+    after_image: "/assets/images/toxina-rejuvenecimiento-despues.avif"
+    categoria:
+      es: "Tratamientos faciales"
+      en: "Facial treatments"
+    subcategoria:
+      es: "Toxina botulínica"
+      en: "Botulinum toxin"
+
+  - title:
+      es: "Arrugas de Expresión"
+      en: "Expression Lines"
+    description:
+      es: "Elimina las arrugas de expresión y luce descansado."
+      en: "Erase expression lines and look well-rested."
+    before_image: "/assets/images/toxina-expresion-antes.avif"
+    after_image: "/assets/images/toxina-expresion-despues.avif"
+    categoria:
+      es: "Tratamientos faciales"
+      en: "Facial treatments"
+    subcategoria:
+      es: "Toxina botulínica"
+      en: "Botulinum toxin"
+
+  - title:
+      es: "Frente Más Lisa"
+      en: "Smoother Forehead"
+    description:
+      es: "Obtén una frente más lisa y con menos líneas visibles."
+      en: "Get a smoother forehead with fewer visible lines."
+    before_image: "/assets/images/toxina-frente-antes.avif"
+    after_image: "/assets/images/toxina-frente-despues.avif"
+    categoria:
+      es: "Tratamientos faciales"
+      en: "Facial treatments"
+    subcategoria:
+      es: "Toxina botulínica"
+      en: "Botulinum toxin"
+
+  - title:
+      es: "Entrecejo Suavizado"
+      en: "Softened Glabella"
+    description:
+      es: "Suaviza el entrecejo y proyecta una imagen más tranquila."
+      en: "Soften your glabella and project a more relaxed image."
+    before_image: "/assets/images/toxina-entrecejo-antes.avif"
+    after_image: "/assets/images/toxina-entrecejo-despues.avif"
+    categoria:
+      es: "Tratamientos faciales"
+      en: "Facial treatments"
+    subcategoria:
+      es: "Toxina botulínica"
+      en: "Botulinum toxin"
+
+  - title:
+      es: "Contorno de Ojos"
+      en: "Eye Area"
+    description:
+      es: "Mejora el contorno de tus ojos para una mirada más fresca."
+      en: "Improve your eye area for a fresher, more awake look."
+    before_image: "/assets/images/toxina-ojos-antes.avif"
+    after_image: "/assets/images/toxina-ojos-despues.avif"
+    categoria:
+      es: "Tratamientos faciales"
+      en: "Facial treatments"
+    subcategoria:
+      es: "Toxina botulínica"
+      en: "Botulinum toxin"
+
+  - title:
+      es: "Apariencia Descansada"
+      en: "Rested Appearance"
+    description:
+      es: "Logra una apariencia más descansada y renovada."
+      en: "Achieve a more rested and renewed appearance."
+    before_image: "/assets/images/toxina-descansado-antes.avif"
+    after_image: "/assets/images/toxina-descansado-despues.avif"
+    categoria:
+      es: "Tratamientos faciales"
+      en: "Facial treatments"
+    subcategoria:
+      es: "Toxina botulínica"
+      en: "Botulinum toxin"
+
+  - title:
+      es: "Efecto Preventivo"
+      en: "Preventive Effect"
+    description:
+      es: "Prevén la formación de nuevas arrugas con un tratamiento efectivo."
+      en: "Prevent new wrinkles from forming with effective treatment."
+    before_image: "/assets/images/toxina-preventivo-antes.avif"
+    after_image: "/assets/images/toxina-preventivo-despues.avif"
+    categoria:
+      es: "Tratamientos faciales"
+      en: "Facial treatments"
+    subcategoria:
+      es: "Toxina botulínica"
+      en: "Botulinum toxin"
+
+  # Casos de Ojeras desde página de servicio
+  - title:
+      es: "Ojeras con Ácido Hialurónico"
+      en: "Hollow Under-Eyes with Hyaluronic Acid"
+    description:
+      es: "Relleno de ojeras hundidas con ácido hialurónico especializado. Recupera el volumen perdido y luce una mirada descansada."
+      en: "Restore lost volume and wake up looking refreshed. Say goodbye to that sunken, tired look."
+    before_image: "/assets/images/ojeras-hialuronico-antes.avif"
+    after_image: "/assets/images/ojeras-hialuronico-despues.avif"
+    categoria:
+      es: "Tratamientos faciales"
+      en: "Facial treatments"
+    subcategoria:
+      es: "Ojeras"
+      en: "Dark circles"
+
+  - title:
+      es: "Ojeras Pigmentadas"
+      en: "Dark Pigmented Circles"
+    description:
+      es: "Tratamiento de ojeras oscuras con múltiples terapias combinadas. Despégate de ese aspecto de cansancio permanente."
+      en: "Target stubborn dark circles that make you look exhausted—even when you're not. Finally break free from that constantly drained appearance."
+    before_image: "/assets/images/ojeras-oscuras-antes.avif"
+    after_image: "/assets/images/ojeras-oscuras-despues.avif"
+    categoria:
+      es: "Tratamientos faciales"
+      en: "Facial treatments"
+    subcategoria:
+      es: "Ojeras"
+      en: "Dark circles"
+
+  - title:
+      es: "Bolsas y Ojeras"
+      en: "Bags and Dark Circles"
+    description:
+      es: "Reducción de bolsas y ojeras para mirada descansada. Di goodbye a las bolsas que te hacen ver más mayor."
+      en: "Smooth out under-eye bags and reclaim your youthful glow. Put your best face forward again."
+    before_image: "/assets/images/bolsas-ojeras-antes.avif"
+    after_image: "/assets/images/bolsas-ojeras-despues.avif"
+    categoria:
+      es: "Tratamientos faciales"
+      en: "Facial treatments"
+    subcategoria:
+      es: "Ojeras"
+      en: "Dark circles"
+
+  - title:
+      es: "Mirada Cansada"
+      en: "Tired-Looking Eyes"
+    description:
+      es: "Revitalización completa de la zona periocular. Despídete del aspecto de agotado aunque descanses."
+      en: "Complete revitalization of your eye area. Stop hearing 'you look tired' when you feel great."
+    before_image: "/assets/images/mirada-cansada-antes.avif"
+    after_image: "/assets/images/mirada-cansada-despues.avif"
+    categoria:
+      es: "Tratamientos faciales"
+      en: "Facial treatments"
+    subcategoria:
+      es: "Ojeras"
+      en: "Dark circles"
+
+  - title:
+      es: "Ojeras Hundidas"
+      en: "Deep Hollows Restoration"
+    description:
+      es: "Restauración de volumen profundo con ácido hialurónico. Recupera la juventud de tu mirada."
+      en: "Deep volume restoration with premium hyaluronic acid. Bring back the vibrancy you deserve."
+    before_image: "/assets/images/ojeras-hundidas-antes.avif"
+    after_image: "/assets/images/ojeras-hundidas-despues.avif"
+    categoria:
+      es: "Tratamientos faciales"
+      en: "Facial treatments"
+    subcategoria:
+      es: "Ojeras"
+      en: "Dark circles"
+
+  - title:
+      es: "Ojeras Genéticas"
+      en: "Genetic Dark Circles"
+    description:
+      es: "Tratamiento especializado para ojeras de origen hereditario. Luce naturalmente radiante."
+      en: "Specialized treatment for hereditary dark circles. Embrace your natural radiance without hiding behind concealer."
+    before_image: "/assets/images/ojeras-geneticas-antes.avif"
+    after_image: "/assets/images/ojeras-geneticas-despues.avif"
+    categoria:
+      es: "Tratamientos faciales"
+      en: "Facial treatments"
+    subcategoria:
+      es: "Ojeras"
+      en: "Dark circles"
+
+  # Casos de Radiesse desde página de servicio
+  - title:
+      es: "Rejuvenecimiento de Manos - Vista Frontal"
+      en: "Hand Rejuvenation - Front View"
+    description:
+      es: "Resultado del tratamiento Radiesse en manos vista frontal antes y después."
+      en: "Radiesse hand treatment results shown front view before and after."
+    before_image: "/assets/images/radiesse-manos-frontal-antes.avif"
+    after_image: "/assets/images/radiesse-manos-frontal-despues.avif"
+    categoria:
+      es: "Tratamientos faciales"
+      en: "Facial treatments"
+    subcategoria:
+      es: "Radiesse"
+      en: "Radiesse"
+
+  - title:
+      es: "Rejuvenecimiento de Manos - Vista Lateral"
+      en: "Hand Rejuvenation - Side View"
+    description:
+      es: "Perfil del rejuvenecimiento de manos con Radiesse para volumen natural."
+      en: "Profile of hand rejuvenation with Radiesse for natural volume."
+    before_image: "/assets/images/radiesse-manos-lateral-antes.avif"
+    after_image: "/assets/images/radiesse-manos-lateral-despues.avif"
+    categoria:
+      es: "Tratamientos faciales"
+      en: "Facial treatments"
+    subcategoria:
+      es: "Radiesse"
+      en: "Radiesse"
+
+  - title:
+      es: "Rejuvenecimiento de Manos - Detalle de Dorsos"
+      en: "Hand Rejuvenation - Back Detail"
+    description:
+      es: "Mejora visible en la textura y luminosidad de los dorsos de las manos."
+      en: "Visible improvement in texture and glow of the hand backs."
+    before_image: "/assets/images/radiesse-manos-dorso-antes.avif"
+    after_image: "/assets/images/radiesse-manos-dorso-despues.avif"
+    categoria:
+      es: "Tratamientos faciales"
+      en: "Facial treatments"
+    subcategoria:
+      es: "Radiesse"
+      en: "Radiesse"
+
+  - title:
+      es: "Rejuvenecimiento de Manos - Comparación Completa"
+      en: "Hand Rejuvenation - Full Comparison"
+    description:
+      es: "Transformación completa de manos envejecidas a manos juveniles con Radiesse."
+      en: "Complete transformation from aging hands to youthful hands with Radiesse."
+    before_image: "/assets/images/radiesse-manos-completo-antes.avif"
+    after_image: "/assets/images/radiesse-manos-completo-despues.avif"
+    categoria:
+      es: "Tratamientos faciales"
+      en: "Facial treatments"
+    subcategoria:
+      es: "Radiesse"
+      en: "Radiesse"
+
 # Casos de Tratamientos Capilares
 capilares:
   - title:
@@ -182,3 +696,304 @@ capilares:
     subcategoria:
       es: "Terapia capilar"
       en: "Hair therapy"
+
+  # Casos de Implante capilar desde página de servicio (20 casos)
+  - title:
+      es: "Recuperación de Cabello"
+      en: "Hair Recovery"
+    description:
+      es: "Recupera tu cabello perdido y siente la confianza de nuevo."
+      en: "Recover your lost hair and feel confident again."
+    before_image: "/assets/images/implante-recuperacion-antes.avif"
+    after_image: "/assets/images/implante-recuperacion-despues.avif"
+    categoria:
+      es: "Tratamientos capilares"
+      en: "Hair treatments"
+    subcategoria:
+      es: "Implante capilar"
+      en: "Hair implant"
+
+  - title:
+      es: "Restauración Capilar"
+      en: "Hair Restoration"
+    description:
+      es: "Restaura tu cabello a su estado óptimo con resultados permanentes."
+      en: "Restore your hair to its optimal state with permanent results."
+    before_image: "/assets/images/implante-restauracion-antes.avif"
+    after_image: "/assets/images/implante-restauracion-despues.avif"
+    categoria:
+      es: "Tratamientos capilares"
+      en: "Hair treatments"
+    subcategoria:
+      es: "Implante capilar"
+      en: "Hair implant"
+
+  - title:
+      es: "Aumento de Cabello"
+      en: "Hair Increase"
+    description:
+      es: "Aumenta la densidad de tu cabello para un aspecto más lleno."
+      en: "Increase your hair density for a fuller appearance."
+    before_image: "/assets/images/implante-aumento-antes.avif"
+    after_image: "/assets/images/implante-aumento-despues.avif"
+    categoria:
+      es: "Tratamientos capilares"
+      en: "Hair treatments"
+    subcategoria:
+      es: "Implante capilar"
+      en: "Hair implant"
+
+  - title:
+      es: "Transformación Capilar"
+      en: "Hair Transformation"
+    description:
+      es: "Transforma tu imagen con un cabello más grueso y saludable."
+      en: "Transform your look with thicker, healthier hair."
+    before_image: "/assets/images/implante-transformacion-antes.avif"
+    after_image: "/assets/images/implante-transformacion-despues.avif"
+    categoria:
+      es: "Tratamientos capilares"
+      en: "Hair treatments"
+    subcategoria:
+      es: "Implante capilar"
+      en: "Hair implant"
+
+  - title:
+      es: "Línea Frontal Restaurada"
+      en: "Restored Hairline"
+    description:
+      es: "Restaura tu línea frontal para un look más juvenil."
+      en: "Restore your hairline for a more youthful look."
+    before_image: "/assets/images/implante-linea-frontal-antes.avif"
+    after_image: "/assets/images/implante-linea-frontal-despues.avif"
+    categoria:
+      es: "Tratamientos capilares"
+      en: "Hair treatments"
+    subcategoria:
+      es: "Implante capilar"
+      en: "Hair implant"
+
+  - title:
+      es: "Coronilla Más Llena"
+      en: "Fuller Crown"
+    description:
+      es: "Obtén una coronilla más llena y con más volumen."
+      en: "Get a fuller crown with more volume and density."
+    before_image: "/assets/images/implante-coronilla-antes.avif"
+    after_image: "/assets/images/implante-coronilla-despues.avif"
+    categoria:
+      es: "Tratamientos capilares"
+      en: "Hair treatments"
+    subcategoria:
+      es: "Implante capilar"
+      en: "Hair implant"
+
+  - title:
+      es: "Cabello Más Grueso"
+      en: "Thicker Hair"
+    description:
+      es: "Pasa de cabello fino a cabello grueso y con cuerpo."
+      en: "Go from thin hair to thick, full-bodied hair."
+    before_image: "/assets/images/implante-grueso-antes.avif"
+    after_image: "/assets/images/implante-grueso-despues.avif"
+    categoria:
+      es: "Tratamientos capilares"
+      en: "Hair treatments"
+    subcategoria:
+      es: "Implante capilar"
+      en: "Hair implant"
+
+  - title:
+      es: "Resultado Natural"
+      en: "Natural Result"
+    description:
+      es: "Luce un resultado completamente natural e indetectable."
+      en: "Enjoy a completely natural, undetectable result."
+    before_image: "/assets/images/implante-natural-antes.avif"
+    after_image: "/assets/images/implante-natural-despues.avif"
+    categoria:
+      es: "Tratamientos capilares"
+      en: "Hair treatments"
+    subcategoria:
+      es: "Implante capilar"
+      en: "Hair implant"
+
+  - title:
+      es: "Cobertura Completa"
+      en: "Complete Coverage"
+    description:
+      es: "Cobertura completa de las áreas con pérdida de cabello."
+      en: "Complete coverage of areas with hair loss."
+    before_image: "/assets/images/implante-cobertura-antes.avif"
+    after_image: "/assets/images/implante-cobertura-despues.avif"
+    categoria:
+      es: "Tratamientos capilares"
+      en: "Hair treatments"
+    subcategoria:
+      es: "Implante capilar"
+      en: "Hair implant"
+
+  - title:
+      es: "Cabello Permanente"
+      en: "Permanent Hair"
+    description:
+      es: "Disfruta de un cabello permanente que crece naturalmente."
+      en: "Enjoy permanent hair that grows naturally."
+    before_image: "/assets/images/implante-permanente-antes.avif"
+    after_image: "/assets/images/implante-permanente-despues.avif"
+    categoria:
+      es: "Tratamientos capilares"
+      en: "Hair treatments"
+    subcategoria:
+      es: "Implante capilar"
+      en: "Hair implant"
+
+  - title:
+      es: "Mejora Integral"
+      en: "Overall Improvement"
+    description:
+      es: "Mejora integral de tu imagen capilar con resultados garantizados."
+      en: "Overall improvement of your hair with guaranteed results."
+    before_image: "/assets/images/implante-mejora-antes.avif"
+    after_image: "/assets/images/implante-mejora-despues.avif"
+    categoria:
+      es: "Tratamientos capilares"
+      en: "Hair treatments"
+    subcategoria:
+      es: "Implante capilar"
+      en: "Hair implant"
+
+  - title:
+      es: "Cabello Saludable"
+      en: "Healthier Hair"
+    description:
+      es: "Consigue un cabello más saludable y con vitalidad."
+      en: "Get healthier hair with more vitality and shine."
+    before_image: "/assets/images/implante-saludable-antes.avif"
+    after_image: "/assets/images/implante-saludable-despues.avif"
+    categoria:
+      es: "Tratamientos capilares"
+      en: "Hair treatments"
+    subcategoria:
+      es: "Implante capilar"
+      en: "Hair implant"
+
+  - title:
+      es: "Densificación Total"
+      en: "Full Densification"
+    description:
+      es: "Densificación total de tu cuero cabelludo para más volumen."
+      en: "Full scalp densification for more volume."
+    before_image: "/assets/images/implante-densificacion-antes.avif"
+    after_image: "/assets/images/implante-densificacion-despues.avif"
+    categoria:
+      es: "Tratamientos capilares"
+      en: "Hair treatments"
+    subcategoria:
+      es: "Implante capilar"
+      en: "Hair implant"
+
+  - title:
+      es: "Apariencia Juvenil"
+      en: "Youthful Appearance"
+    description:
+      es: "Recupera una apariencia más juvenil y energética."
+      en: "Regain a more youthful and vibrant appearance."
+    before_image: "/assets/images/implante-juvenil-antes.avif"
+    after_image: "/assets/images/implante-juvenil-despues.avif"
+    categoria:
+      es: "Tratamientos capilares"
+      en: "Hair treatments"
+    subcategoria:
+      es: "Implante capilar"
+      en: "Hair implant"
+
+  - title:
+      es: "Reflejo de Confianza"
+      en: "Confidence Boost"
+    description:
+      es: "Siente la confianza que te da tener un cabello espectacular."
+      en: "Feel the confidence that comes with great-looking hair."
+    before_image: "/assets/images/implante-confianza-antes.avif"
+    after_image: "/assets/images/implante-confianza-despues.avif"
+    categoria:
+      es: "Tratamientos capilares"
+      en: "Hair treatments"
+    subcategoria:
+      es: "Implante capilar"
+      en: "Hair implant"
+
+  - title:
+      es: "Cabello Definido"
+      en: "Defined Hair"
+    description:
+      es: "Obtén un cabello definido con un aspecto muy natural."
+      en: "Get defined hair with a very natural look."
+    before_image: "/assets/images/implante-definido-antes.avif"
+    after_image: "/assets/images/implante-definido-despues.avif"
+    categoria:
+      es: "Tratamientos capilares"
+      en: "Hair treatments"
+    subcategoria:
+      es: "Implante capilar"
+      en: "Hair implant"
+
+  - title:
+      es: "Resultado Inmediato"
+      en: "Immediate Results"
+    description:
+      es: "Observa resultados inmediatos desde las primeras semanas."
+      en: "See immediate results from the very first weeks."
+    before_image: "/assets/images/implante-inmediato-antes.avif"
+    after_image: "/assets/images/implante-inmediato-despues.avif"
+    categoria:
+      es: "Tratamientos capilares"
+      en: "Hair treatments"
+    subcategoria:
+      es: "Implante capilar"
+      en: "Hair implant"
+
+  - title:
+      es: "Recuperación Rápida"
+      en: "Quick Recovery"
+    description:
+      es: "Recuperate rápidamente y vuelve a tu rutina pronto."
+      en: "Recover quickly and get back to your routine soon."
+    before_image: "/assets/images/implante-rapido-antes.avif"
+    after_image: "/assets/images/implante-rapido-despues.avif"
+    categoria:
+      es: "Tratamientos capilares"
+      en: "Hair treatments"
+    subcategoria:
+      es: "Implante capilar"
+      en: "Hair implant"
+
+  - title:
+      es: "Cabello Premium"
+      en: "Premium Hair"
+    description:
+      es: "Obtén un cabello premium con la mejor técnica disponible."
+      en: "Get premium hair with the best technique available."
+    before_image: "/assets/images/implante-exclusivo-antes.avif"
+    after_image: "/assets/images/implante-exclusivo-despues.avif"
+    categoria:
+      es: "Tratamientos capilares"
+      en: "Hair treatments"
+    subcategoria:
+      es: "Implante capilar"
+      en: "Hair implant"
+
+  - title:
+      es: "Transformación Total"
+      en: "Total Transformation"
+    description:
+      es: "Transforma completamente tu imagen con un cabello nuevo."
+      en: "Totally transform your look with new hair."
+    before_image: "/assets/images/implante-total-antes.avif"
+    after_image: "/assets/images/implante-total-despues.avif"
+    categoria:
+      es: "Tratamientos capilares"
+      en: "Hair treatments"
+    subcategoria:
+      es: "Implante capilar"
+      en: "Hair implant"
