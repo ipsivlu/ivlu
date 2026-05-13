@@ -1,2 +1,19 @@
+# Jekyll
 _site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Bundler
+.bundle/
+vendor/
+
+# Editor and OS
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Kilo
 .qodo
+.kilo
