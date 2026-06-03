@@ -53,7 +53,7 @@
   <nav aria-label="{% if current_lang == 'en' %}Main navigation{% else %}Navegación principal{% endif %}"
     class="navegacion">
     <!-- Logo -->
-    <a href="/{{ current_lang }}/"
+    <a href="{% if current_lang == 'es' %}/{% else %}/{{ current_lang }}/{% endif %}"
       title="{% if current_lang == 'en' %}IVLU Bogotá Homepage{% else %}Página de inicio de IVLU Bogotá{% endif %}"
       class="logo_nav" aria-label="{% if current_lang == 'en' %}Home{% else %}Inicio{% endif %}">
       <img src="{{ '/assets/images/logo.avif' | relative_url }}"

@@ -8,19 +8,22 @@ image: "/assets/images/banner-img.avif"
 datePublished: "2023-01-15"
 dateModified: "2025-03-05"
 ---
-<header class="hero-banner">
-  <!-- Capas de imágenes -->
+
+<header class="hero-banner hero_home">
+  <!-- Image layers -->
   <div class="banner-layer banner-layer-1"></div>
   <div class="banner-layer banner-layer-2"></div>
   <div class="banner-layer banner-layer-3"></div>
-  
-  <!-- Contenido -->
+
+  <!-- Content -->
   <div class="banner-content flow seccion">
-    <p data-lang="en" class="hidden">Transform your look with cutting-edge technology and certified medical experts.</p>
+    <p data-lang="en">
+      Transform your look with cutting-edge technology and certified medical experts.
+    </p>
     <h1>
-      <strong data-lang="en" class="hidden">Ivlu Medical Center:</strong>
-      <br>
-      <span data-lang="en" class="hidden">Facial Rejuvenation and Hair Restoration</span>
+      <strong data-lang="en">Ivlu Medical Center:</strong>
+      <br />
+      <span data-lang="en">Facial Rejuvenation and Hair Restoration</span>
     </h1>
     {% include button.html %}
   </div>
@@ -28,43 +31,62 @@ dateModified: "2025-03-05"
 </header>
 
 <main class="especialidades-cards wrapper">
-  <div class="especialidad-card">
+  <div class="especialidad-card flow">
     <h3>Facial</h3>
     <div class="card-link">
       <p>
-        Premium facial rejuvenation treatments with botulinum toxin, hyaluronic acid, and biostimulators for natural and long-lasting results.
+        Premium facial rejuvenation treatments with botulinum toxin,
+        hyaluronic acid, and biostimulators for natural and long-lasting results.
       </p>
-      <a href="{{'/en/aesthetic-services/'|relative_url}}" title="IVLU aesthetic treatment services" class="circle-arrow">→</a>
+      <a
+        href="{{'/en/aesthetic-services/#faciales'|relative_url}}"
+        title="IVLU aesthetic treatment services"
+        class="circle-arrow"
+        >→</a
+      >
     </div>
   </div>
 
-  <div class="especialidad-card">
+  <div class="especialidad-card flow">
     <h3>Body</h3>
     <div class="card-link">
       <p>
-        Advanced solutions for localized fat reduction, skin laxity treatment, and skin quality improvement with cutting-edge technology.
+        Advanced solutions for localized fat reduction, skin laxity treatment,
+        and skin quality improvement with cutting-edge technology.
       </p>
-      <a href="{{'/en/aesthetic-services/'|relative_url}}" title="IVLU aesthetic treatment services" class="circle-arrow">→</a>
+      <a
+        href="{{'/en/aesthetic-services/#corporales'|relative_url}}"
+        title="IVLU aesthetic treatment services"
+        class="circle-arrow"
+        >→</a
+      >
     </div>
   </div>
 
-  <div class="especialidad-card">
+  <div class="especialidad-card flow">
     <h3>Hair Care</h3>
     <div class="card-link">
       <p>
-        Precision hair restoration with FUE HD micrografting and regenerative therapies to combat hair loss permanently.
+        Precision hair restoration with FUE HD micrografting and regenerative
+        therapies to combat hair loss permanently.
       </p>
-      <a href="{{'/en/aesthetic-services/'|relative_url}}" title="IVLU aesthetic treatment services" class="circle-arrow">→</a>
+      <a
+        href="{{'/en/aesthetic-services/#capilares'|relative_url}}"
+        title="IVLU aesthetic treatment services"
+        class="circle-arrow"
+        >→</a
+      >
     </div>
   </div>
 
-  <div class="especialidad-card">
+  <div class="especialidad-card flow">
     <h3>Technologies</h3>
     <div class="card-link">
       <p>
-        Internationally certified premium equipment including Ultherapy, Morpheus8, and other exclusive technologies for remarkable transformations.
+        Internationally certified premium equipment including Ultherapy,
+        Morpheus8, and other exclusive technologies for remarkable transformations.
       </p>
-        <a href="{{'/en/technologies/'|relative_url}}" class="circle-arrow">→</a>
+      <a href="{{'/en/technologies/'|relative_url}}" class="circle-arrow">→</a>
     </div>
   </div>
 </main>
@@ -73,299 +95,584 @@ dateModified: "2025-03-05"
   <div class="two_columns two_columns_left">
     <div class="flow">
       <h2 class="content-title">Welcome to our clinic</h2>
-      <p class="subtitle">Discover why we are the leading aesthetic clinic in Bogotá</p>
-      <p>With over 5,000 satisfied patients and a 98% satisfaction rate, at IVLU we don't just perform treatments - we create transformative experiences. Under the leadership of Dr. Luisa and Dr. Ivonne, each procedure is a masterpiece of medical precision and personalization.</p>
-      <a href="{{'/en/contact/'|relative_url}}" class="buttons btn-secondary">Get answers to your questions</a>
+      <p class="subtitle">
+        Discover why we are the leading aesthetic clinic in Bogotá
+      </p>
+      <p>
+        With over 5,000 satisfied patients and a 98% satisfaction rate, at IVLU
+        we don't just perform treatments - we create transformative experiences.
+        Under the leadership of Dr. Luisa and Dr. Ivonne, each procedure is a
+        masterpiece of medical precision and personalization.
+      </p>
+      <a href="{{'/en/contact/'|relative_url}}" class="buttons btn-secondary"
+        >Get answers to your questions</a
+      >
     </div>
-      <img src="{{ '/assets/images/team.avif' | relative_url }}" width="598" height="504" alt="IVLU Logo - Leading aesthetic clinic in Bogotá" loading="lazy" decoding="async">
+    <img
+      src="{{ '/assets/images/team.avif' | relative_url }}"
+      width="598"
+      height="504"
+      alt="IVLU Logo - Leading aesthetic clinic in Bogotá"
+      loading="lazy"
+      decoding="async"
+    />
   </div>
-
 </section>
 
-
-  <section class="wrapper two_columns bg_full">
-    <div class="flow">
-      <h2>Discover some of our featured treatments.</h2>
-      <p>We invest in world-class certified technology to guarantee your results:</p>
-      <blockquote class="highlight-testimonial">
-        <p><i>"At IVLU, we don't follow trends - we create them. Every technology we incorporate is backed by scientific studies and proven results."</i></p>
-        <cite>Dr. Luisa & Dr. Ivonne</cite>
-      </blockquote>
+<section class="wrapper bg_full">
+  <div class="flow seccion">
+    <h2>Discover some of our featured treatments.</h2>
+    <p>
+      We invest in world-class certified technology to guarantee your results:
+    </p>
+    <blockquote class="highlight-testimonial">
+      <p>
+        <i
+          >"At IVLU, we don't follow trends - we create them. Every technology
+          we incorporate is backed by scientific studies and proven results."</i
+        >
+      </p>
+      <cite>Dr. Luisa & Dr. Ivonne</cite>
+    </blockquote>
+  </div>
+  <div class="three_columns">
+    <div class="flow treatments">
+      <img
+        src="{{ '/assets/images/tratamiento-ultheraoy-tratamiento-bogota.avif' | relative_url }}"
+        width="334"
+        height="334"
+        alt="Ultherapy treatment in Bogotá - IVLU"
+        loading="lazy"
+        decoding="async"
+      />
+      <h4>Ultherapy in Bogotá</h4>
+      <p>Non-invasive ultrasound treatment that lifts and tightens skin.</p>
+      {% include button.html %}
     </div>
-  <div class="flow treatments">
-    <img src="{{ '/assets/images/tratamiento-ultheraoy-tratamiento-bogota.avif' | relative_url }}" width="334" height="334" alt="IVLU Logo - Leading aesthetic clinic in Bogotá" loading="lazy" decoding="async">
-    <h4>Ultherapy in Bogotá</h4>
-    <p>Non-invasive ultrasound treatment that lifts and tightens skin.</p>
-
-    {% include button.html %}
-  </div>
-
-  <div class="flow treatments">
-    <img src="{{ '/assets/images/tratamiento-implante-capilar.avif' | relative_url }}" width="334" height="334" alt="IVLU Logo - Leading aesthetic clinic in Bogotá" loading="lazy" decoding="async">
-    <h4>Hair Transplant in Bogotá</h4>
-    <p>Follicle transplantation to restore hair in bald areas.</p>
-
-    {% include button.html %}
-  </div>
-  <div class="flow treatments">
-    <img src="{{ '/assets/images/tratamiento-radiesse-tratamiento.avif' | relative_url }}" width="334" height="334" alt="IVLU Logo - Leading aesthetic clinic in Bogotá" loading="lazy" decoding="async">
-    <h4>Radiesse in Bogotá</h4>
-    <p>Calcium hydroxylapatite dermal filler to restore facial volume.</p>
-
-    {% include button.html %}
+    <div class="flow treatments">
+      <img
+        src="{{ '/assets/images/tratamiento-implante-capilar.avif' | relative_url }}"
+        width="334"
+        height="334"
+        alt="Hair transplant in Bogotá - IVLU"
+        loading="lazy"
+        decoding="async"
+      />
+      <h4>Hair Transplant in Bogotá</h4>
+      <p>Follicle transplantation to restore hair in bald areas.</p>
+      {% include button.html %}
+    </div>
+    <div class="flow treatments">
+      <img
+        src="{{ '/assets/images/tratamiento-morpheus-8.avif' | relative_url }}"
+        width="334"
+        height="334"
+        alt="Morpheus8 treatment in Bogotá - IVLU"
+        loading="lazy"
+        decoding="async"
+      />
+      <h4>Morpheus8 in Bogotá</h4>
+      <p>Advanced facial rejuvenation with fractional radiofrequency.</p>
+      {% include button.html %}
+    </div>
   </div>
 </section>
+
 <section class="wrapper">
   <div class="flow">
     <div class="testimonials-container">
-      <!-- Slider navigation -->
-      <div class="slider-nav">
-        <button class="slider-btn prev-btn">&#8249;</button>
-        <button class="slider-btn next-btn">&#8250;</button>
-      </div>
-    
-      <!-- Ana Maria testimonial - ONLY THE FIRST ONE HAS THE ACTIVE CLASS -->
-      <div class="testimonial-card active">
-        <h2>IVLU</h2>
-        <h3>Cl 127 A #7-19 Office 513, Bogotá</h3>
-        <div class="testimonial-rating">
-          <span class="stars">★★★★★</span>
-          <strong>6 months ago</strong>
-        </div>
-        <p class="testimonial-text">"My experience with Ivlu has been incredible! I had a hair transplant in February of this year, and from the very first moment, the team was extremely professional and made me feel completely at ease. The personalized attention and support from Dr. Ivonne Camacho throughout the entire process was exceptional. She explained each step in detail and provided me with the necessary care to ensure the best result. She was always available to resolve my doubts, which made the process much easier and more relaxed. The results have exceeded my expectations and have changed my life for the better. I couldn't be happier with my decision. Ivlu and their work team are highly recommended!"</p>
-        <div class="two_columns">
-          <div class="testimonial-author">
-            <span>Kevin Stiven Gallo Camacho</span>
-            <small>Cali, Colombia</small>
+      <!-- Radio buttons to control the slider -->
+      <input
+        type="radio"
+        name="testimonial-slider"
+        id="testimonial-1"
+        class="testimonial-radio"
+        checked
+      />
+      <input
+        type="radio"
+        name="testimonial-slider"
+        id="testimonial-2"
+        class="testimonial-radio"
+      />
+      <input
+        type="radio"
+        name="testimonial-slider"
+        id="testimonial-3"
+        class="testimonial-radio"
+      />
+      <input
+        type="radio"
+        name="testimonial-slider"
+        id="testimonial-4"
+        class="testimonial-radio"
+      />
+      <input
+        type="radio"
+        name="testimonial-slider"
+        id="testimonial-5"
+        class="testimonial-radio"
+      />
+      <input
+        type="radio"
+        name="testimonial-slider"
+        id="testimonial-6"
+        class="testimonial-radio"
+      />
+      <input
+        type="radio"
+        name="testimonial-slider"
+        id="testimonial-7"
+        class="testimonial-radio"
+      />
+
+      <!-- Track containing all testimonials -->
+      <div class="testimonials-track">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card">
+          <h2>IVLU</h2>
+          <h3>Cl 127 A #7-19 Office 513, Bogotá</h3>
+          <div class="testimonial-rating">
+            <span class="stars">★★★★★</span>
+            <strong>6 months ago</strong>
           </div>
-          <div class="center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="-0.5 0 48 48">
-              <!-- SVG paths -->
-            </svg>
-            <h3>Google Reviews</h3>
+          <p class="testimonial-text">
+            "My experience with Ivlu has been incredible! I had a hair transplant
+            in February of this year, and from the very first moment, the team was
+            extremely professional and made me feel completely at ease. The
+            personalized attention and support from Dr. Ivonne Camacho throughout
+            the entire process was exceptional. She explained each step in detail
+            and provided me with the necessary care to ensure the best result. She
+            was always available to resolve my doubts, which made the process much
+            easier and more relaxed. The results have exceeded my expectations and
+            have changed my life for the better. I couldn't be happier with my
+            decision. Ivlu and their work team are highly recommended!"
+          </p>
+          <div class="two_columns">
+            <div class="testimonial-author">
+              <span>Kevin Stiven Gallo Camacho</span>
+              <small>Cali, Colombia</small>
+            </div>
+            <div class="center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="48"
+                height="48"
+                viewBox="-0.5 0 48 48"
+                fill="#4285f4"
+              >
+                <path
+                  d="M9.827 24.514c0-5.096 3.868-9.257 8.964-9.257s8.964 4.161 8.964 9.257c0 5.096-3.868 9.257-8.964 9.257s-8.964-4.161-8.964-9.257z"
+                />
+                <path
+                  d="M23.071 24.514c0-2.68 2.17-4.85 4.85-4.85s4.85 2.17 4.85 4.85c0 2.68-2.17 4.85-4.85 4.85s-4.85-2.17-4.85-4.85z"
+                  fill="#ea4335"
+                />
+              </svg>
+              <h3>Google Reviews</h3>
+            </div>
           </div>
         </div>
-      </div>
-    
-      <!-- SECOND TESTIMONIAL - WITHOUT ACTIVE CLASS -->
-      <div class="testimonial-card">
-        <h2>IVLU</h2>
-        <h3>Cl 127 A #7-19 Office 513, Bogotá</h3>
-        <div class="testimonial-rating">
-          <span class="stars">★★★★★</span>
-          <strong>1 month ago</strong>
-        </div>
-        <p class="testimonial-text">"Excellent clinic, everything is well-organized with a great sense of aesthetics. The service is courteous and friendly, and the alopecia treatment is indeed effective. I've been in treatment with Dr. Vanessa, who is quite direct and honest about the results you'll have. This has been the only place where I've been able to improve my alopecia, which started when I was 25. The results obtained are incredible—I couldn't believe it myself. Plus, you don't have to go elsewhere to get what you need for your treatment. They supply it here and even deliver the products you need to your home."</p>
-        <div class="two_columns">
-          <div class="testimonial-author">
-            <span>Edgar Muñoz</span>
-            <small>Bogotá, Colombia</small>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card">
+          <h2>IVLU</h2>
+          <h3>Cl 127 A #7-19 Office 513, Bogotá</h3>
+          <div class="testimonial-rating">
+            <span class="stars">★★★★★</span>
+            <strong>1 month ago</strong>
           </div>
-          <div class="center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="-0.5 0 48 48">
-              <!-- SVG paths -->
-            </svg>
-            <h3>Google Reviews</h3>
+          <p class="testimonial-text">
+            "Excellent clinic, everything is well-organized with a great sense of
+            aesthetics. The service is courteous and friendly, and the alopecia
+            treatment is indeed effective. I've been in treatment with Dr. Vanessa,
+            who is quite direct and honest about the results you'll have. This has
+            been the only place where I've been able to improve my alopecia, which
+            started when I was 25. The results obtained are incredible — I couldn't
+            believe it myself. Plus, you don't have to go elsewhere to get what you
+            need for your treatment. They supply it here and even deliver the
+            products you need to your home."
+          </p>
+          <div class="two_columns">
+            <div class="testimonial-author">
+              <span>Edgar Muñoz</span>
+              <small>Bogotá, Colombia</small>
+            </div>
+            <div class="center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="48"
+                height="48"
+                viewBox="-0.5 0 48 48"
+                fill="#4285f4"
+              >
+                <path
+                  d="M9.827 24.514c0-5.096 3.868-9.257 8.964-9.257s8.964 4.161 8.964 9.257c0 5.096-3.868 9.257-8.964 9.257s-8.964-4.161-8.964-9.257z"
+                />
+                <path
+                  d="M23.071 24.514c0-2.68 2.17-4.85 4.85-4.85s4.85 2.17 4.85 4.85c0 2.68-2.17 4.85-4.85 4.85s-4.85-2.17-4.85-4.85z"
+                  fill="#ea4335"
+                />
+              </svg>
+              <h3>Google Reviews</h3>
+            </div>
           </div>
         </div>
-      </div>
-    
-      <!-- THIRD TESTIMONIAL - WITHOUT ACTIVE CLASS -->
-      <div class="testimonial-card">
-        <h2>IVLU</h2>
-        <h3>Cl 127 A #7-19 Office 513, Bogotá</h3>
-        <div class="testimonial-rating">
-          <span class="stars">★★★★★</span>
-          <strong>5 months ago</strong>
-        </div>
-        <p class="testimonial-text">"The service the doctors have provided me has been very positive. From the first consultation, they have treated me very well. They have listened to my symptoms and have focused on efficiently treating the condition I have on my skin. I recommend them 100%, they are charismatic, respectful, and very professional in their work."</p>
-        <div class="two_columns">
-          <div class="testimonial-author">
-            <span>Paula Gamboa</span>
-            <small>Colombia</small>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card">
+          <h2>IVLU</h2>
+          <h3>Cl 127 A #7-19 Office 513, Bogotá</h3>
+          <div class="testimonial-rating">
+            <span class="stars">★★★★★</span>
+            <strong>5 months ago</strong>
           </div>
-          <div class="center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="-0.5 0 48 48">
-              <!-- SVG paths -->
-            </svg>
-            <h3>Google Reviews</h3>
+          <p class="testimonial-text">
+            "The service the doctors have provided me has been very positive. From
+            the first consultation, they have treated me very well. They have
+            listened to my symptoms and have focused on efficiently treating the
+            condition I have on my skin. I recommend them 100%, they are
+            charismatic, respectful, and very professional in their work."
+          </p>
+          <div class="two_columns">
+            <div class="testimonial-author">
+              <span>Paula Gamboa</span>
+              <small>Colombia</small>
+            </div>
+            <div class="center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="48"
+                height="48"
+                viewBox="-0.5 0 48 48"
+                fill="#4285f4"
+              >
+                <path
+                  d="M9.827 24.514c0-5.096 3.868-9.257 8.964-9.257s8.964 4.161 8.964 9.257c0 5.096-3.868 9.257-8.964 9.257s-8.964-4.161-8.964-9.257z"
+                />
+                <path
+                  d="M23.071 24.514c0-2.68 2.17-4.85 4.85-4.85s4.85 2.17 4.85 4.85c0 2.68-2.17 4.85-4.85 4.85s-4.85-2.17-4.85-4.85z"
+                  fill="#ea4335"
+                />
+              </svg>
+              <h3>Google Reviews</h3>
+            </div>
           </div>
         </div>
-      </div>
-    
-      <!-- FOURTH TESTIMONIAL - WITHOUT ACTIVE CLASS -->
-      <div class="testimonial-card">
-        <h2>IVLU</h2>
-        <h3>Cl 127 A #7-19 Office 513, Bogotá</h3>
-        <div class="testimonial-rating">
-          <span class="stars">★★★★★</span>
-          <strong>3 months ago</strong>
-        </div>
-        <p class="testimonial-text">"Since I was very young, I've had complexes about my hair because I've suffered from excessive hair loss and have been diagnosed with alopecia. This has led me to try countless products, visit medical experts, and invest time and money in medications, but nothing had been as effective and rewarding as the process I've been able to advance at IVLU. Truly, arriving at this place and having an effective treatment from Dr. Ivonne has been an incredible experience, not only because of the human quality of the doctors but because it has been a journey full of positive changes, very evident progress, and above all, a 100% informed process."</p>
-        <div class="two_columns">
-          <div class="testimonial-author">
-            <span>Nana Merchan</span>
-            <small>Colombia</small>
+
+        <!-- Testimonial 4 -->
+        <div class="testimonial-card">
+          <h2>IVLU</h2>
+          <h3>Cl 127 A #7-19 Office 513, Bogotá</h3>
+          <div class="testimonial-rating">
+            <span class="stars">★★★★★</span>
+            <strong>3 months ago</strong>
           </div>
-          <div class="center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="-0.5 0 48 48">
-              <!-- SVG paths -->
-            </svg>
-            <h3>Google Reviews</h3>
+          <p class="testimonial-text">
+            "Since I was very young, I've had complexes about my hair because I've
+            suffered from excessive hair loss and have been diagnosed with alopecia.
+            This has led me to try countless products, visit medical experts, and
+            invest time and money in medications, but nothing had been as effective
+            and rewarding as the process I've been able to advance at IVLU. Truly,
+            arriving at this place and having an effective treatment from Dr. Ivonne
+            has been an incredible experience, not only because of the human quality
+            of the doctors but because it has been a journey full of positive
+            changes, very evident progress, and above all, a 100% informed process."
+          </p>
+          <div class="two_columns">
+            <div class="testimonial-author">
+              <span>Nana Merchan</span>
+              <small>Colombia</small>
+            </div>
+            <div class="center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="48"
+                height="48"
+                viewBox="-0.5 0 48 48"
+                fill="#4285f4"
+              >
+                <path
+                  d="M9.827 24.514c0-5.096 3.868-9.257 8.964-9.257s8.964 4.161 8.964 9.257c0 5.096-3.868 9.257-8.964 9.257s-8.964-4.161-8.964-9.257z"
+                />
+                <path
+                  d="M23.071 24.514c0-2.68 2.17-4.85 4.85-4.85s4.85 2.17 4.85 4.85c0 2.68-2.17 4.85-4.85 4.85s-4.85-2.17-4.85-4.85z"
+                  fill="#ea4335"
+                />
+              </svg>
+              <h3>Google Reviews</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 5 -->
+        <div class="testimonial-card">
+          <h2>IVLU</h2>
+          <h3>Cl 127 A #7-19 Office 513, Bogotá</h3>
+          <div class="testimonial-rating">
+            <span class="stars">★★★★★</span>
+            <strong>5 months ago</strong>
+          </div>
+          <p class="testimonial-text">
+            "From a very young age, I've struggled with self-consciousness about my
+            hair because I've suffered from excessive hair loss and have been
+            diagnosed with alopecia. This has led me to try countless products,
+            visit specialists, invest time and money in medications, and nothing had
+            been as effective and gratifying as the process I've been able to pursue
+            at IVLU. Truly, arriving at this place and having an effective treatment
+            from Dr. Ivonne has been an incredible experience, not only because of
+            the human quality of the doctors, but because it has been a path filled
+            with positive changes, very evident progress, and above all, a 100%
+            informed process."
+          </p>
+          <div class="two_columns">
+            <div class="testimonial-author">
+              <span>Nana Merchan</span>
+              <small>Colombia</small>
+            </div>
+            <div class="center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="48"
+                height="48"
+                viewBox="-0.5 0 48 48"
+                fill="#4285f4"
+              >
+                <path
+                  d="M9.827 24.514c0-5.096 3.868-9.257 8.964-9.257s8.964 4.161 8.964 9.257c0 5.096-3.868 9.257-8.964 9.257s-8.964-4.161-8.964-9.257z"
+                />
+                <path
+                  d="M23.071 24.514c0-2.68 2.17-4.85 4.85-4.85s4.85 2.17 4.85 4.85c0 2.68-2.17 4.85-4.85 4.85s-4.85-2.17-4.85-4.85z"
+                  fill="#ea4335"
+                />
+              </svg>
+              <h3>Google Reviews</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 6 -->
+        <div class="testimonial-card">
+          <h2>IVLU</h2>
+          <h3>Cl 127 A #7-19 Office 513, Bogotá</h3>
+          <div class="testimonial-rating">
+            <span class="stars">★★★★★</span>
+            <strong>1 year ago</strong>
+          </div>
+          <p class="testimonial-text">
+            "I am delighted with the attention received at IVLU. The team was
+            extremely professional and kind, providing me with an exceptional
+            experience in alopecia treatment, answering all of my questions. I
+            recommend IVLU without hesitation to those seeking quality hair
+            solutions. Thank you for the exceptional treatment and for your
+            follow-up throughout my treatment!"
+          </p>
+          <div class="two_columns">
+            <div class="testimonial-author">
+              <span>Mauro Flores</span>
+              <small>Colombia</small>
+            </div>
+            <div class="center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="48"
+                height="48"
+                viewBox="-0.5 0 48 48"
+                fill="#4285f4"
+              >
+                <path
+                  d="M9.827 24.514c0-5.096 3.868-9.257 8.964-9.257s8.964 4.161 8.964 9.257c0 5.096-3.868 9.257-8.964 9.257s-8.964-4.161-8.964-9.257z"
+                />
+                <path
+                  d="M23.071 24.514c0-2.68 2.17-4.85 4.85-4.85s4.85 2.17 4.85 4.85c0 2.68-2.17 4.85-4.85 4.85s-4.85-2.17-4.85-4.85z"
+                  fill="#ea4335"
+                />
+              </svg>
+              <h3>Google Reviews</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 7 -->
+        <div class="testimonial-card">
+          <h2>IVLU</h2>
+          <h3>Cl 127 A #7-19 Office 513, Bogotá</h3>
+          <div class="testimonial-rating">
+            <span class="stars">★★★★★</span>
+            <strong>1 year ago</strong>
+          </div>
+          <p class="testimonial-text">
+            "I recommend the doctors at IVLU 1000%! They are excellent
+            professionals, and from the moment you enter the site, you feel the
+            confidence and security of being in the best hands. Of course, I would
+            go a thousand times more and bring my entire family and dear friends
+            without a second thought."
+          </p>
+          <div class="two_columns">
+            <div class="testimonial-author">
+              <span>Kelly Jimenez</span>
+              <small>Colombia</small>
+            </div>
+            <div class="center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="48"
+                height="48"
+                viewBox="-0.5 0 48 48"
+                fill="#4285f4"
+              >
+                <path
+                  d="M9.827 24.514c0-5.096 3.868-9.257 8.964-9.257s8.964 4.161 8.964 9.257c0 5.096-3.868 9.257-8.964 9.257s-8.964-4.161-8.964-9.257z"
+                />
+                <path
+                  d="M23.071 24.514c0-2.68 2.17-4.85 4.85-4.85s4.85 2.17 4.85 4.85c0 2.68-2.17 4.85-4.85 4.85s-4.85-2.17-4.85-4.85z"
+                  fill="#ea4335"
+                />
+              </svg>
+              <h3>Google Reviews</h3>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- QUINTO TESTIMONIO - SIN CLASE ACTIVE -->
-      <div class="testimonial-card">
-        <h2>IVLU</h2>
-        <h3>Cl 127 A #7-19 Consultorio 513, Bogotá</h3>
-        <div class="testimonial-rating">
-          <span class="stars">★★★★★</span>
-          <strong>5 months ago</strong>
-        </div>
-        <p class="testimonial-text">"From a very young age, I've struggled with self-consciousness about my hair because I've suffered from excessive hair loss and have been diagnosed with alopecia. This has led me to try countless products, visit specialists, invest time and money in medications, and nothing had been as effective and gratifying as the process I've been able to pursue at IVLU. Truly, arriving at this place and having an effective treatment from Dr. Ivonne has been an incredible experience, not only because of the human quality of the doctors, but because it has been a path filled with positive changes, very evident progress, and above all, a 100% informed process.
-
-          "</p>
-        <div class="two_columns">
-          <div class="testimonial-author">
-            <span>Nana Merchan</span>
-            <small>Colombia</small>
-          </div>
-          <div class="center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="-0.5 0 48 48">
-              <!-- SVG paths -->
-            </svg>
-            <h3>Google Reviews</h3>
-          </div>
-        </div>
-      </div>
-
-      <!-- SEXTO TESTIMONIO - SIN CLASE ACTIVE -->
-      <div class="testimonial-card">
-        <h2>IVLU</h2>
-        <h3>Cl 127 A #7-19 Consultorio 513, Bogotá</h3>
-        <div class="testimonial-rating">
-          <span class="stars">★★★★★</span>
-          <strong>1 year ago</strong>
-        </div>
-        <p class="testimonial-text">"I am delighted with the attention received at IVLU. The team was extremely professional and kind, providing me with an exceptional experience in alopecia treatment, answering all of my questions. I recommend IVLU without hesitation to those seeking quality hair solutions. Thank you for the exceptional treatment and for your follow-up throughout my treatment!
-
-          "</p>
-        <div class="two_columns">
-          <div class="testimonial-author">
-            <span>Mauro Flores</span>
-            <small>Colombia</small>
-          </div>
-          <div class="center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="-0.5 0 48 48">
-              <!-- SVG paths -->
-            </svg>
-            <h3>Google Reviews</h3>
-          </div>
-        </div>
-      </div>
-
-      <!-- SEPTIMO TESTIMONIO - SIN CLASE ACTIVE -->
-      <div class="testimonial-card">
-        <h2>IVLU</h2>
-        <h3>Cl 127 A #7-19 Consultorio 513, Bogotá</h3>
-        <div class="testimonial-rating">
-          <span class="stars">★★★★★</span>
-          <strong>1 year ago</strong>
-        </div>
-        <p class="testimonial-text">"I recommend the doctors at IVLU 1000%! They are excellent professionals, and from the moment you enter the site, you feel the confidence and security of being in the best hands. Of course, I would go a thousand times more and bring my entire family and dear friends without a second thought."</p>
-        <div class="two_columns">
-          <div class="testimonial-author">
-            <span>Kelly Jimenez</span>
-            <small>Colombia</small>
-          </div>
-          <div class="center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="-0.5 0 48 48">
-              <!-- SVG paths -->
-            </svg>
-            <h3>Google Reviews</h3>
-          </div>
-        </div>
-      </div>
-    
-    
-      <!-- Dot controls for navigation -->
+      <!-- Dot controls -->
       <div class="slider-controls">
-        <div class="slider-dots">
-          <span class="dot active" data-slide="0"></span>
-          <span class="dot" data-slide="1"></span>
-          <span class="dot" data-slide="2"></span>
-          <span class="dot" data-slide="3"></span>
-        </div>
+        <label for="testimonial-1" class="slider-label"></label>
+        <label for="testimonial-2" class="slider-label"></label>
+        <label for="testimonial-3" class="slider-label"></label>
+        <label for="testimonial-4" class="slider-label"></label>
+        <label for="testimonial-5" class="slider-label"></label>
+        <label for="testimonial-6" class="slider-label"></label>
+        <label for="testimonial-7" class="slider-label"></label>
       </div>
     </div>
   </div>
-  
-  <div>
-
-  </div>
 </section>
 
+{% include banner-doctoras.html %}
 
 <!-- Enhanced location section with microformats -->
 <section class="wrapper flow">
   <h2>Our Clinic in Bogotá</h2>
   <div class="two_columns">
     <div class="location-details flow">
-      <p>We are located in an exclusive area in northern Bogotá, with luxury facilities designed for your maximum comfort and privacy.</p>
-      <address class="location-address" itemscope itemtype="https://schema.org/MedicalBusiness">
+      <p>
+        We are located in an exclusive area in northern Bogotá, with luxury
+        facilities designed for your maximum comfort and privacy.
+      </p>
+      <address
+        class="location-address"
+        itemscope
+        itemtype="https://schema.org/MedicalBusiness"
+      >
         <h3 itemprop="name">IVLU Aesthetic Clinic</h3>
-        <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-          <p>Address: <span itemprop="streetAddress">Calle 127 A #7-19 Office 513</span>, <span
-              itemprop="addressLocality">Usaquén</span>, <span itemprop="addressRegion">Bogotá</span>, <span
-              itemprop="addressCountry">Colombia</span></p>
-          <p><strong>Hours:</strong> <time itemprop="openingHours" datetime="Mo-Fr:00-19:00">Monday to Friday from 8:00 am
-              to 7:00 pm</time> | <time itemprop="openingHours" datetime="Sa 09:00-15:00">Saturdays from 9:00 am to 3:00
-              pm</time></p>
+        <div
+          itemprop="address"
+          itemscope
+          itemtype="https://schema.org/PostalAddress"
+        >
+          <p>
+            Address:
+            <span itemprop="streetAddress">Calle 127 A #7-19 Office 513</span>,
+            <span itemprop="addressLocality">Usaquén</span>,
+            <span itemprop="addressRegion">Bogotá</span>,
+            <span itemprop="addressCountry">Colombia</span>
+          </p>
+          <p>
+            <strong>Hours:</strong>
+            <time itemprop="openingHours" datetime="Mo-Fr:00-19:00"
+              >Monday to Friday from 8:00 am to 7:00 pm</time
+            >
+            |
+            <time itemprop="openingHours" datetime="Sa 09:00-15:00"
+              >Saturdays from 9:00 am to 3:00 pm</time
+            >
+          </p>
         </div>
       </address>
       <div class="location-map">
-        <!-- Google Maps iframe would go here -->
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d742.2997655189331!2d-74.0296029772355!3d4.703001716621662!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f91ef6b3e6e8d%3A0x8ede8552141118a9!2sIVLU!5e0!3m2!1ses-419!2sco!4v1741799804544!5m2!1ses-419!2sco"
-          width="600" height="480" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          width="600"
+          height="480"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
       </div>
     </div>
 
     <div class="contact-content flow">
       <h3>Have questions? We're here for you</h3>
-      <p>We understand that taking the first step can raise questions. That's why we want you to feel completely confident before beginning your transformation. Are you concerned about pain? Want to know more about the results? Need information about post-treatment care? We're here to guide you every step of the way.
+      <p>
+        We understand that taking the first step can raise questions. That's why
+        we want you to feel completely confident before beginning your
+        transformation. Are you concerned about pain? Want to know more about the
+        results? Need information about post-treatment care? We're here to guide
+        you every step of the way.
       </p>
 
       <ul class="contact-details flow">
         <li>
-          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 24 24">
-            <path fill="#d7bc73"
-              d="m16.556 12.906-.455.453s-1.083 1.076-4.038-1.862-1.872-4.014-1.872-4.014l.286-.286c.707-.702.774-1.83.157-2.654L9.374 2.86C8.61 1.84 7.135 1.705 6.26 2.575l-1.57 1.56c-.433.432-.723.99-.688 1.61.09 1.587.808 5 4.812 8.982 4.247 4.222 8.232 4.39 9.861 4.238.516-.048.964-.31 1.325-.67l1.42-1.412c.96-.953.69-2.588-.538-3.255l-1.91-1.039c-.806-.438-1.787-.309-2.417.317Z" />
-          </svg>
-          <a href="tel:+5712345678" itemprop="telephone">Phone: +57 {{site.telefono}}</a>
-        </li>
-        <li>
-          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#d7bc73" viewBox="0 0 20 20">
-            <path fill="#d7bc73" fill-rule="evenodd"
-              d="M15.821 14.121c-.241.682-1.199 1.247-1.963 1.412-.523.11-1.205.199-3.503-.754C7.774 13.71 4.19 9.901 4.19 7.366c0-1.29.744-2.793 2.045-2.793.626 0 .764.012.97.507.241.582.829 2.016.899 2.163.289.603-.294.956-.717 1.482-.135.158-.288.329-.117.623.17.288.758 1.246 1.622 2.015 1.116.995 2.021 1.312 2.345 1.447.241.1.529.077.705-.111.223-.241.5-.641.782-1.036.199-.282.452-.317.717-.217.179.062 2.454 1.119 2.55 1.288.071.123.071.705-.17 1.387M10.002 0h-.005C4.484 0 0 4.485 0 10c0 2.187.705 4.215 1.904 5.86L.658 19.578l3.843-1.228A9.923 9.923 0 0 0 10.002 20C15.515 20 20 15.515 20 10S15.515 0 10.002 0" />
-          </svg>
-          <a href="#" id="lead_whatsapp" rel="nofollow noopener noreferrer" target="_blank"
-            title="WhatsApp of IVLU medical center in Bogotá">Whatsapp: +57 {{site.telefono}}</a>
-        </li>
-        <li>
-          <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="40" height="40" fill="#d7bc73"
-            viewBox="0 0 24 24">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
             <path
-              d="M21 11c0 6.7-4.3 6.4-4.8 6.4-.6 0-1.1-.1-1.6-.4-.4-.3-.8-.6-1-1.1-.4.5-.8.9-1.3 1.1-.5.3-1 .4-1.6.4-.5 0-1-.1-1.4-.3-.4-.2-.8-.6-1-1-.3-.4-.5-.9-.6-1.5-.1-.6-.1-1.3-.1-2 .1-.9.3-1.7.6-2.5.3-.7.7-1.4 1.1-1.9.4-.5.9-.9 1.5-1.2.6-.3 1.2-.4 1.8-.4 2 0 3.1 1 3.3 1.2l-.5 6.2c0 .4-.2 1.8 1.1 1.8.4 0 2.4-.5 2.4-4.7 0-.1.9-7-6.6-7C6.3 4 5 9.9 5 12c0 8.4 5.3 8 7 8 2 0 3.1-.4 3.3-.5l.4 1.8c-.2.2-1.2.7-3.7.7-3.1 0-9-.1-9-10 0-1.4.8-10 9.5-10 8.3 0 8.5 7.6 8.5 9zm-10.9 1.6c-.1.9 0 1.7.2 2.2.2.5.6.7 1.2.7 1.1 0 1.7-1.4 1.8-1.8l.5-5.1c-.1 0-.7-.1-.9-.1-.8 0-1.5.4-1.9 1.1-.5.6-.8 1.6-.9 3z" />
-            <path d="M0 0h24v24H0z" style="fill:none" />
+              fill="#d7bc73"
+              d="m16.556 12.906-.455.453s-1.083 1.076-4.038-1.862-1.872-4.014-1.872-4.014l.286-.286c.707-.702.774-1.83.157-2.654L9.374 2.86C8.61 1.84 7.135 1.705 6.26 2.575l-1.57 1.56c-.433.432-.723.99-.688 1.61.09 1.587.808 5 4.812 8.982 4.247 4.222 8.232 4.39 9.861 4.238.516-.048.964-.31 1.325-.67l1.42-1.412c.96-.953.69-2.588-.538-3.255l-1.91-1.039c-.806-.438-1.787-.309-2.417.317Z"
+            />
           </svg>
-          <a href="mailto:info@ivlu.com.co" itemprop="email">Email: {{site.email}}</a>
+          <a href="tel:57{{site.telefono}}" itemprop="telephone"
+            >Phone: +57 {{site.telefono}}</a
+          >
         </li>
         <li>
-          {{site.form_english}}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            fill="#d7bc73"
+            viewBox="0 0 20 20"
+          >
+            <path
+              fill="#d7bc73"
+              fill-rule="evenodd"
+              d="M15.821 14.121c-.241.682-1.199 1.247-1.963 1.412-.523.11-1.205.199-3.503-.754C7.774 13.71 4.19 9.901 4.19 7.366c0-1.29.744-2.793 2.045-2.793.626 0 .764.012.97.507.241.582.829 2.016.899 2.163.289.603-.294.956-.717 1.482-.135.158-.288.329-.117.623.17.288.758 1.246 1.622 2.015 1.116.995 2.021 1.312 2.345 1.447.241.1.529.077.705-.111.223-.241.5-.641.782-1.036.199-.282.452-.317.717-.217.179.062 2.454 1.119 2.55 1.288.071.123.071.705-.17 1.387M10.002 0h-.005C4.484 0 0 4.485 0 10c0 2.187.705 4.215 1.904 5.86L.658 19.578l3.843-1.228A9.923 9.923 0 0 0 10.002 20C15.515 20 20 15.515 20 10S15.515 0 10.002 0"
+            />
+          </svg>
+          <a
+            href="#"
+            id="lead_whatsapp"
+            rel="nofollow noopener noreferrer"
+            target="_blank"
+            title="WhatsApp of IVLU medical center in Bogotá"
+            >Whatsapp: +57 {{site.telefono}}</a
+          >
         </li>
+        <li>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xml:space="preserve"
+            width="40"
+            height="40"
+            fill="#d7bc73"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M21 11c0 6.7-4.3 6.4-4.8 6.4-.6 0-1.1-.1-1.6-.4-.4-.3-.8-.6-1-1.1-.4.5-.8.9-1.3 1.1-.5.3-1 .4-1.6.4-.5 0-1-.1-1.4-.3-.4-.2-.8-.6-1-1-.3-.4-.5-.9-.6-1.5-.1-.6-.1-1.3-.1-2 .1-.9.3-1.7.6-2.5.3-.7.7-1.4 1.1-1.9.4-.5.9-.9 1.5-1.2.6-.3 1.2-.4 1.8-.4 2 0 3.1 1 3.3 1.2l-.5 6.2c0 .4-.2 1.8 1.1 1.8.4 0 2.4-.5 2.4-4.7 0-.1.9-7-6.6-7C6.3 4 5 9.9 5 12c0 8.4 5.3 8 7 8 2 0 3.1-.4 3.3-.5l.4 1.8c-.2.2-1.2.7-3.7.7-3.1 0-9-.1-9-10 0-1.4.8-10 9.5-10 8.3 0 8.5 7.6 8.5 9zm-10.9 1.6c-.1.9 0 1.7.2 2.2.2.5.6.7 1.2.7 1.1 0 1.7-1.4 1.8-1.8l.5-5.1c-.1 0-.7-.1-.9-.1-.8 0-1.5.4-1.9 1.1-.5.6-.8 1.6-.9 3z"
+            />
+            <path d="M0 0h24v24H0z" style="fill: none" />
+          </svg>
+          <a href="mailto:info@ivlu.com.co" itemprop="email"
+            >Email: {{site.email}}</a
+          >
+        </li>
+        <li>{{site.form_english}}</li>
       </ul>
 
       {% include button.html %}

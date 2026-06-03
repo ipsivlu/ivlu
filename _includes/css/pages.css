@@ -157,6 +157,18 @@
   font-size: 1rem;
 }
 
+/* Pie de la tarjeta de testimonio: anula el min-width de 400px de .two_columns */
+.testimonial-card .two_columns {
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: nowrap;
+}
+
+.testimonial-card .two_columns > div {
+  flex: 0 1 auto;
+}
+
 .center {
   display: flex;
   flex-direction: column;

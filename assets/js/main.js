@@ -708,110 +708,40 @@ class ScrollToTopComponent {
   }
 }
 
-// Componente de Testimoniales
+// Componente de Testimoniales — swipe táctil para el slider CSS de radio buttons
 class TestimonialComponent {
   constructor() {
-    this.elements = this.initializeElements();
-    this.state = {
-      currentSlide: 0,
-      totalSlides: this.elements.slides.length
-    };
-    
-    if (this.elements.isValid) {
-      this.initializeReadMore();
-      this.bindEvents();
-      this.showSlide(0);
+    this.containers = document.querySelectorAll('.testimonials-container');
+    if (this.containers.length) {
+      this.initSwipe();
     }
   }
-  
-  initializeElements() {
-    const elements = {
-      slides: document.querySelectorAll('.testimonial-card'),
-      dots: document.querySelectorAll('.dot'),
-      prevBtn: Utils.safeQuerySelector('.prev-btn'),
-      nextBtn: Utils.safeQuerySelector('.next-btn')
-    };
-    
-    elements.isValid = elements.slides.length > 0;
-    return elements;
-  }
-  
-  initializeReadMore() {
-    this.elements.slides.forEach((card) => {
-      const textElement = card.querySelector('.testimonial-text');
-      if (!textElement) return;
-      
-      textElement.classList.add('truncated');
-      
-      const readMoreBtn = document.createElement('button');
-      readMoreBtn.className = 'read-more-btn';
-      readMoreBtn.textContent = 'Ver más';
-      readMoreBtn.setAttribute('aria-label', 'Expandir testimonio');
-      
-      textElement.parentNode.insertBefore(readMoreBtn, textElement.nextSibling);
-      
-      readMoreBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        this.toggleReadMore(textElement, readMoreBtn);
-      });
+
+  initSwipe() {
+    this.containers.forEach(container => {
+      const radios = Array.from(container.querySelectorAll('.testimonial-radio'));
+      if (!radios.length) return;
+
+      let touchStartX = 0;
+
+      container.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].clientX;
+      }, { passive: true });
+
+      container.addEventListener('touchend', (e) => {
+        const diff = touchStartX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) < 50) return;
+
+        const currentIndex = radios.findIndex(r => r.checked);
+        const nextIndex = diff > 0
+          ? Math.min(currentIndex + 1, radios.length - 1)
+          : Math.max(currentIndex - 1, 0);
+
+        if (nextIndex !== currentIndex) {
+          radios[nextIndex].checked = true;
+        }
+      }, { passive: true });
     });
-  }
-  
-  toggleReadMore(textElement, button) {
-    const isExpanded = !textElement.classList.contains('truncated');
-    
-    textElement.classList.toggle('truncated', isExpanded);
-    button.textContent = isExpanded ? 'Ver más' : 'Ver menos';
-    button.setAttribute('aria-label', isExpanded ? 'Expandir testimonio' : 'Contraer testimonio');
-  }
-  
-  bindEvents() {
-    this.elements.prevBtn?.addEventListener('click', () => {
-      this.showSlide(this.state.currentSlide - 1);
-    });
-    
-    this.elements.nextBtn?.addEventListener('click', () => {
-      this.showSlide(this.state.currentSlide + 1);
-    });
-    
-    this.elements.dots.forEach((dot, index) => {
-      dot.addEventListener('click', () => {
-        this.showSlide(index);
-      });
-    });
-  }
-  
-  showSlide(index) {
-    // Normalizar índice
-    if (index < 0) index = this.state.totalSlides - 1;
-    if (index >= this.state.totalSlides) index = 0;
-    
-    this.state.currentSlide = index;
-    
-    // Actualizar visualización
-    this.elements.slides.forEach((slide, i) => {
-      slide.classList.toggle('active', i === index);
-    });
-    
-    this.elements.dots.forEach((dot, i) => {
-      dot.classList.toggle('active', i === index);
-    });
-    
-    // Verificar botón "Ver más" para el slide actual
-    this.checkReadMoreVisibility(this.elements.slides[index]);
-  }
-  
-  checkReadMoreVisibility(slide) {
-    const textElement = slide.querySelector('.testimonial-text');
-    const readMoreBtn = slide.querySelector('.read-more-btn');
-    
-    if (textElement && readMoreBtn) {
-      // Usar intersection observer o verificación de altura
-      requestAnimationFrame(() => {
-        const needsButton = textElement.scrollHeight > textElement.clientHeight;
-        readMoreBtn.style.display = needsButton ? 'inline-block' : 'none';
-      });
-    }
   }
 }
 
