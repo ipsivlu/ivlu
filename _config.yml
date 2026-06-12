@@ -104,6 +104,12 @@ defaults:
  
 keep_files: [/img]
 
+# Excluir carpetas de IA y planes del build
+exclude:
+  - ".claude"
+  - ".agents"
+  - "plans"
+
 # Optimización HTML
 compress_html:
   endings: ["li", "dt", "dd", "optgroup", "option", "colgroup", "caption", "thead", "tbody", "tfoot", "tr", "td", "th"]
