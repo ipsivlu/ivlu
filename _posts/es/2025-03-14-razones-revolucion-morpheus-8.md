@@ -8,7 +8,7 @@ ref: morpheus8-revolucion
 hero: "/assets/images/morpheus-8-tratamiento.avif"
 jpg: "/assets/images/morpheus-8-tratamiento.jpg"
 description: "Descubre por qué Morpheus 8 se ha convertido en el tratamiento preferido por dermatólogos y pacientes para rejuvenecimiento facial y corporal. Analizamos sus ventajas, casos de éxito y resultados transformadores."
-excerpt: "El Morpheus 8 ha transformado el enfoque de los tratamientos estéticos no invasivos. Descubre por qué especialistas y pacientes lo están eligiendo como la tecnología más avanzada para rejuvenecimiento facial y corporal."
+excerpt: "El Morpheus 8 ha transformado el enfoque de los tratamientos estéticos no invasivos. Descubre por qué profesionales y pacientes lo están eligiendo como la tecnología más avanzada para rejuvenecimiento facial y corporal."
 ---
 **El Morpheus 8** es una revolucionaria tecnología que combina dos potentes tratamientos en uno: radiofrecuencia fraccionada y microneedling. Este procedimiento no invasivo es ideal para rejuvenecer la piel tanto facial como corporal, proporcionando resultados notables en la reducción de arrugas, flacidez y cicatrices.
 

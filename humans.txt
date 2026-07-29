@@ -5,7 +5,7 @@ Site: https://ivlumedicinaestetica.com
 Location: Bogotá, Colombia
 
 Experta: Dra. Ivonne Camacho
-Título: Especialista en Medicina Estética y Restauración Capilar
+Título: Profesional en Medicina Estética y Restauración Capilar
 Location: Bogotá, Colombia
 
 /* SITE */
