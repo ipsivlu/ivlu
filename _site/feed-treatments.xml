@@ -1489,7 +1489,7 @@
       <li>
         <span class="emoji">👨‍⚕️</span>
         <div>
-          <h4>Médico especialista en restauración capilar</h4>
+          <h4>Médico profesional en restauración capilar</h4>
           <p>Encargado del diseño capilar, extracción e implantación. Alta experiencia en técnica FUE.</p>
         </div>
       </li>
@@ -1902,8 +1902,9 @@
 
 
 
-<details class="video-embed">
-  <summary class="video-embed__trigger" aria-label="Presentación del programa Mediforma de control de peso médico en Bogotá">
+
+<details class="video-embed" style="width: min(100%, 440px);">
+  <summary class="video-embed__trigger" aria-label="Presentación del programa Mediforma de control de peso médico en Bogotá" style="aspect-ratio: 450 / 800;">
 
     
       <img
@@ -1927,7 +1928,7 @@
   </summary>
 
   <video
-    src="/assets/videos/medi-1.mp4"
+    src="/assets/videos/medico-profesional-presenta-mediforma.mp4"
     controls
     autoplay
     playsinline
@@ -1988,58 +1989,108 @@
 
 
 
-<section class="wrapper" aria-labelledby="incluye-heading">
-  <h2 id="incluye-heading">¿Qué incluye el programa Mediforma?</h2>
-  <ol class="mediforma-includes">
-    <li class="mediforma-include-item">
-      <span class="mediforma-include-num" aria-hidden="true">01</span>
-      <div>
-        <h3>Evaluación médica integral</h3>
-        <ul>
-          <li>Historia clínica detallada</li>
-          <li>Toma de signos vitales</li>
-          <li>Laboratorios clínicos y electrocardiograma (EKG) según pertinencia médica</li>
-          <li>Bioimpedancia para análisis de composición corporal</li>
-        </ul>
-      </div>
-    </li>
-    <li class="mediforma-include-item">
-      <span class="mediforma-include-num" aria-hidden="true">02</span>
-      <div>
-        <h3>Acompañamiento profesional continuo</h3>
-        <ul>
-          <li><strong>Médico de familia:</strong> seguimiento clínico, evaluación de riesgo metabólico y ajuste de tratamiento</li>
-          <li><strong>Nutricionista:</strong> plan flexible, realista y adaptado a tus preferencias y estilo de vida</li>
-          <li><strong>Psicóloga clínica:</strong> acompañamiento emocional, motivacional y manejo del comer emocional</li>
-        </ul>
-      </div>
-    </li>
-    <li class="mediforma-include-item">
-      <span class="mediforma-include-num" aria-hidden="true">03</span>
-      <div>
-        <h3>Tratamiento farmacológico supervisado <em>(si aplica)</em></h3>
-        <ul>
-          <li><strong>Ozempic® (semaglutida):</strong> regula el apetito, mejora la glucosa y favorece la pérdida de peso sostenida</li>
-          <li><strong>Saxenda® (liraglutida):</strong> aumenta la saciedad, regula la ansiedad alimentaria y mejora la adherencia</li>
-        </ul>
-        <p><em>Indicados únicamente tras valoración médica personalizada y bajo seguimiento clínico estricto.</em></p>
-      </div>
-    </li>
-    <li class="mediforma-include-item">
-      <span class="mediforma-include-num" aria-hidden="true">04</span>
-      <div>
-        <h3>Kit de bienvenida Mediforma</h3>
-        <ul>
-          <li>Bandas elásticas de resistencia para entrenar desde casa</li>
-          <li>Material médico de apoyo para el tratamiento (si aplica)</li>
-        </ul>
-      </div>
-    </li>
-  </ol>
-  <div class="mediforma-cta-strip">
-    
+<section class="two_columns wrapper" aria-labelledby="incluye-heading">
+  <div class="flow">
+    <h2 id="incluye-heading">¿Qué incluye el programa Mediforma?</h2>
+    <ol class="mediforma-includes">
+      <li class="mediforma-include-item">
+        <span class="mediforma-include-num" aria-hidden="true">01</span>
+        <div>
+          <h3>Evaluación médica integral</h3>
+          <ul>
+            <li>Historia clínica detallada</li>
+            <li>Toma de signos vitales</li>
+            <li>Laboratorios clínicos y electrocardiograma (EKG) según pertinencia médica</li>
+            <li>Bioimpedancia para análisis de composición corporal</li>
+          </ul>
+        </div>
+      </li>
+      <li class="mediforma-include-item">
+        <span class="mediforma-include-num" aria-hidden="true">02</span>
+        <div>
+          <h3>Acompañamiento profesional continuo</h3>
+          <ul>
+            <li><strong>Médico de familia:</strong> seguimiento clínico, evaluación de riesgo metabólico y ajuste de tratamiento</li>
+            <li><strong>Nutricionista:</strong> plan flexible, realista y adaptado a tus preferencias y estilo de vida</li>
+            <li><strong>Psicóloga clínica:</strong> acompañamiento emocional, motivacional y manejo del comer emocional</li>
+          </ul>
+        </div>
+      </li>
+      <li class="mediforma-include-item">
+        <span class="mediforma-include-num" aria-hidden="true">03</span>
+        <div>
+          <h3>Tratamiento farmacológico supervisado <em>(si aplica)</em></h3>
+          <ul>
+            <li><strong>Ozempic® (semaglutida):</strong> regula el apetito, mejora la glucosa y favorece la pérdida de peso sostenida</li>
+            <li><strong>Saxenda® (liraglutida):</strong> aumenta la saciedad, regula la ansiedad alimentaria y mejora la adherencia</li>
+          </ul>
+          <p><em>Indicados únicamente tras valoración médica personalizada y bajo seguimiento clínico estricto.</em></p>
+        </div>
+      </li>
+      <li class="mediforma-include-item">
+        <span class="mediforma-include-num" aria-hidden="true">04</span>
+        <div>
+          <h3>Kit de bienvenida Mediforma</h3>
+          <ul>
+            <li>Bandas elásticas de resistencia para entrenar desde casa</li>
+            <li>Material médico de apoyo para el tratamiento (si aplica)</li>
+          </ul>
+        </div>
+      </li>
+    </ol>
+    <div class="mediforma-cta-strip">
+      
 <a href="#" id="lead_whatsapp" rel="nofollow noopener noreferrer" class="buttons btn-primary" title="WhatsApp IVLU Bogotá">Agenda tu cita</a>
+    </div>
   </div>
+  
+
+
+
+
+
+
+
+
+
+<details class="video-embed" style="width: min(100%, 440px);">
+  <summary class="video-embed__trigger" aria-label="Nuestra nutricionista explica el plan alimentario del programa Mediforma" style="aspect-ratio: 450 / 800;">
+
+    
+      <img
+        src="/assets/images/nutricionista-mediforma-poster.avif"
+        alt=""
+        role="presentation"
+        class="video-embed__poster"
+        width="450"
+        height="800"
+        loading="lazy"
+        decoding="async">
+    
+
+    <span class="video-embed__play" aria-hidden="true">
+      <svg width="72" height="72" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg" focusable="false">
+        <circle cx="36" cy="36" r="36" fill="rgba(0,0,0,0.55)"/>
+        <path d="M28 22 L52 36 L28 50 Z" fill="white"/>
+      </svg>
+    </span>
+
+  </summary>
+
+  <video
+    src="/assets/videos/nutricionista-mediforma.mp4"
+    controls
+    autoplay
+    playsinline
+    preload="none"
+    width="450"
+    height="800"
+    class="video-embed__video"
+    aria-label="Nuestra nutricionista explica el plan alimentario del programa Mediforma">
+    Tu navegador no admite vídeo HTML5.
+  </video>
+</details>
+
 </section>
 
 <section class="wrapper" aria-labelledby="beneficios-heading">
@@ -2104,6 +2155,159 @@
   </div>
 </section>
 
+<section class="wrapper" aria-labelledby="entrevista-heading">
+  <div class="text_center">
+    <h2 id="entrevista-heading">Entrevistas y testimonios en video</h2>
+    <p>Escucha en sus propias palabras la experiencia de nuestras pacientes y de nuestro equipo médico con el programa Mediforma.</p>
+  </div>
+  <div class="three_columns">
+    
+
+
+
+
+
+
+
+
+
+<details class="video-embed" style="width: min(100%, 376px);">
+  <summary class="video-embed__trigger" aria-label="Entrevista con el equipo Mediforma, parte 1" style="aspect-ratio: 450 / 800;">
+
+    
+      <img
+        src="/assets/images/entrevista-mediforma-primera-parte-poster.avif"
+        alt=""
+        role="presentation"
+        class="video-embed__poster"
+        width="450"
+        height="800"
+        loading="lazy"
+        decoding="async">
+    
+
+    <span class="video-embed__play" aria-hidden="true">
+      <svg width="72" height="72" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg" focusable="false">
+        <circle cx="36" cy="36" r="36" fill="rgba(0,0,0,0.55)"/>
+        <path d="M28 22 L52 36 L28 50 Z" fill="white"/>
+      </svg>
+    </span>
+
+  </summary>
+
+  <video
+    src="/assets/videos/entrevista-mediforma-primera-parte.MP4"
+    controls
+    autoplay
+    playsinline
+    preload="none"
+    width="450"
+    height="800"
+    class="video-embed__video"
+    aria-label="Entrevista con el equipo Mediforma, parte 1">
+    Tu navegador no admite vídeo HTML5.
+  </video>
+</details>
+
+    
+
+
+
+
+
+
+
+
+
+<details class="video-embed" style="width: min(100%, 376px);">
+  <summary class="video-embed__trigger" aria-label="Entrevista con el equipo Mediforma, parte 2" style="aspect-ratio: 450 / 800;">
+
+    
+      <img
+        src="/assets/images/entrevista-mediforma-segunda-parte-poster.avif"
+        alt=""
+        role="presentation"
+        class="video-embed__poster"
+        width="450"
+        height="800"
+        loading="lazy"
+        decoding="async">
+    
+
+    <span class="video-embed__play" aria-hidden="true">
+      <svg width="72" height="72" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg" focusable="false">
+        <circle cx="36" cy="36" r="36" fill="rgba(0,0,0,0.55)"/>
+        <path d="M28 22 L52 36 L28 50 Z" fill="white"/>
+      </svg>
+    </span>
+
+  </summary>
+
+  <video
+    src="/assets/videos/entrevista-mediforma-segunda-parte.MP4"
+    controls
+    autoplay
+    playsinline
+    preload="none"
+    width="450"
+    height="800"
+    class="video-embed__video"
+    aria-label="Entrevista con el equipo Mediforma, parte 2">
+    Tu navegador no admite vídeo HTML5.
+  </video>
+</details>
+
+    
+
+
+
+
+
+
+
+
+
+<details class="video-embed" style="width: min(100%, 376px);">
+  <summary class="video-embed__trigger" aria-label="Testimonio en video: caso de éxito del programa Mediforma" style="aspect-ratio: 450 / 800;">
+
+    
+      <img
+        src="/assets/images/caso-exito-mediforma-poster.avif"
+        alt=""
+        role="presentation"
+        class="video-embed__poster"
+        width="450"
+        height="800"
+        loading="lazy"
+        decoding="async">
+    
+
+    <span class="video-embed__play" aria-hidden="true">
+      <svg width="72" height="72" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg" focusable="false">
+        <circle cx="36" cy="36" r="36" fill="rgba(0,0,0,0.55)"/>
+        <path d="M28 22 L52 36 L28 50 Z" fill="white"/>
+      </svg>
+    </span>
+
+  </summary>
+
+  <video
+    src="/assets/videos/caso-exito-mediforma.mp4"
+    controls
+    autoplay
+    playsinline
+    preload="none"
+    width="450"
+    height="800"
+    class="video-embed__video"
+    aria-label="Testimonio en video: caso de éxito del programa Mediforma">
+    Tu navegador no admite vídeo HTML5.
+  </video>
+</details>
+
+  </div>
+</section>
+
 <section class="mediforma-tinted" aria-labelledby="testimonios-heading">
   <div class="wrapper">
   <h2 id="testimonios-heading" class="gold center">Historias reales de transformación</h2>
@@ -2123,38 +2327,88 @@
   </div>
 </section>
 
-<section class="wrapper" aria-labelledby="faq-heading">
-  <h2 id="faq-heading">Preguntas frecuentes sobre el programa Mediforma</h2>
-  <div class="faq-cards">
-    <article class="faq-card">
-      <p class="faq-card__q">¿Cuánto peso puedo perder por semana?</p>
-      <p class="faq-card__a">Lo saludable es perder entre 0,5 y 1 kg por semana. Esta tasa permite preservar masa muscular y minimizar el riesgo de efecto rebote.</p>
-    </article>
-    <article class="faq-card">
-      <p class="faq-card__q">¿Necesito hacer ejercicio durante el programa?</p>
-      <p class="faq-card__a">Sí. El movimiento es clave para mejorar tu metabolismo, mantener la pérdida de peso, regular el ánimo y cuidar tu salud cardiovascular. Incluimos rutinas prácticas con bandas elásticas desde casa.</p>
-    </article>
-    <article class="faq-card">
-      <p class="faq-card__q">¿Las grasas engordan?</p>
-      <p class="faq-card__a">No todas. Las grasas saludables (aguacate, frutos secos, aceite de oliva) son necesarias para tu cuerpo. En Mediforma te enseñamos cómo integrarlas inteligentemente sin temor.</p>
-    </article>
-    <article class="faq-card">
-      <p class="faq-card__q">¿Cómo evito el efecto rebote al terminar el programa?</p>
-      <p class="faq-card__a">Educándote y construyendo hábitos sostenibles. Nuestro enfoque multidisciplinario está diseñado para que el peso que pierdas no lo recuperes, gracias a acompañamiento nutricional, psicológico y médico.</p>
-    </article>
-    <article class="faq-card">
-      <p class="faq-card__q">¿Qué sucede si dejo de usar Ozempic o Saxenda?</p>
-      <p class="faq-card__a">Al suspenderlos sin control puedes experimentar aumento de apetito o retroceso. Por eso en Mediforma su uso es supervisado y planificado como parte de un tratamiento global, nunca como única solución.</p>
-    </article>
-    <article class="faq-card">
-      <p class="faq-card__q">¿Cómo afectan el sueño y el estrés en mi peso?</p>
-      <p class="faq-card__a">Dormir poco o vivir con estrés eleva el cortisol y desequilibra tus hormonas del hambre. En Mediforma lo abordamos con psicología clínica, técnicas de manejo emocional y ajustes de estilo de vida.</p>
-    </article>
-    <article class="faq-card">
-      <p class="faq-card__q">¿Qué pasa si me estanco durante el proceso?</p>
-      <p class="faq-card__a">Es completamente normal. En Mediforma hacemos ajustes estratégicos y te acompañamos para superar ese punto con nuevas herramientas de nutrición, motivación y movimiento.</p>
-    </article>
+<section class="two_columns wrapper" aria-labelledby="faq-heading">
+  <div class="flow">
+    <h2 id="faq-heading">Preguntas frecuentes sobre el programa Mediforma</h2>
+    <div class="faq-cards">
+      <article class="faq-card">
+        <p class="faq-card__q">¿Cuánto peso puedo perder por semana?</p>
+        <p class="faq-card__a">Lo saludable es perder entre 0,5 y 1 kg por semana. Esta tasa permite preservar masa muscular y minimizar el riesgo de efecto rebote.</p>
+      </article>
+      <article class="faq-card">
+        <p class="faq-card__q">¿Necesito hacer ejercicio durante el programa?</p>
+        <p class="faq-card__a">Sí. El movimiento es clave para mejorar tu metabolismo, mantener la pérdida de peso, regular el ánimo y cuidar tu salud cardiovascular. Incluimos rutinas prácticas con bandas elásticas desde casa.</p>
+      </article>
+      <article class="faq-card">
+        <p class="faq-card__q">¿Las grasas engordan?</p>
+        <p class="faq-card__a">No todas. Las grasas saludables (aguacate, frutos secos, aceite de oliva) son necesarias para tu cuerpo. En Mediforma te enseñamos cómo integrarlas inteligentemente sin temor.</p>
+      </article>
+      <article class="faq-card">
+        <p class="faq-card__q">¿Cómo evito el efecto rebote al terminar el programa?</p>
+        <p class="faq-card__a">Educándote y construyendo hábitos sostenibles. Nuestro enfoque multidisciplinario está diseñado para que el peso que pierdas no lo recuperes, gracias a acompañamiento nutricional, psicológico y médico.</p>
+      </article>
+      <article class="faq-card">
+        <p class="faq-card__q">¿Qué sucede si dejo de usar Ozempic o Saxenda?</p>
+        <p class="faq-card__a">Al suspenderlos sin control puedes experimentar aumento de apetito o retroceso. Por eso en Mediforma su uso es supervisado y planificado como parte de un tratamiento global, nunca como única solución.</p>
+      </article>
+      <article class="faq-card">
+        <p class="faq-card__q">¿Cómo afectan el sueño y el estrés en mi peso?</p>
+        <p class="faq-card__a">Dormir poco o vivir con estrés eleva el cortisol y desequilibra tus hormonas del hambre. En Mediforma lo abordamos con psicología clínica, técnicas de manejo emocional y ajustes de estilo de vida.</p>
+      </article>
+      <article class="faq-card">
+        <p class="faq-card__q">¿Qué pasa si me estanco durante el proceso?</p>
+        <p class="faq-card__a">Es completamente normal. En Mediforma hacemos ajustes estratégicos y te acompañamos para superar ese punto con nuevas herramientas de nutrición, motivación y movimiento.</p>
+      </article>
+    </div>
   </div>
+  
+
+
+
+
+
+
+
+
+
+<details class="video-embed" style="width: min(100%, 440px);">
+  <summary class="video-embed__trigger" aria-label="Recomendaciones médicas sobre el uso de Wegovy en el programa Mediforma" style="aspect-ratio: 450 / 800;">
+
+    
+      <img
+        src="/assets/images/recomendaciones-wegovy-mediforma-poster.avif"
+        alt=""
+        role="presentation"
+        class="video-embed__poster"
+        width="450"
+        height="800"
+        loading="lazy"
+        decoding="async">
+    
+
+    <span class="video-embed__play" aria-hidden="true">
+      <svg width="72" height="72" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg" focusable="false">
+        <circle cx="36" cy="36" r="36" fill="rgba(0,0,0,0.55)"/>
+        <path d="M28 22 L52 36 L28 50 Z" fill="white"/>
+      </svg>
+    </span>
+
+  </summary>
+
+  <video
+    src="/assets/videos/recomendaciones-wegovy-mediforma.mp4"
+    controls
+    autoplay
+    playsinline
+    preload="none"
+    width="450"
+    height="800"
+    class="video-embed__video"
+    aria-label="Recomendaciones médicas sobre el uso de Wegovy en el programa Mediforma">
+    Tu navegador no admite vídeo HTML5.
+  </video>
+</details>
+
 </section>
 
 <section class="mediforma-final-cta" aria-labelledby="cta-final-heading">
@@ -3552,7 +3806,7 @@
 
 <section class="two_columns wrapper">
   <div class="center">
-    <img src="/assets/images/aplicacion-sculptra.avif" alt="Imagen tomada de internet sobre Aplicación de Sculptra por especialistas en IVLU" loading="lazy" decoding="async" width="520" height="520">
+    <img src="/assets/images/aplicacion-sculptra.avif" alt="Imagen tomada de internet sobre Aplicación de Sculptra por profesionales en IVLU" loading="lazy" decoding="async" width="520" height="520">
   </div>
   <div class="flow">
     <h2 class="content-title">¿En qué consiste el tratamiento Sculptra®?</h2>
