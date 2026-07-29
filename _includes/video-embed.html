@@ -9,17 +9,19 @@
     include.poster  — ruta a imagen de miniatura (opcional, recomendado)
     include.width   — ancho nativo del video, default 800
     include.height  — alto nativo del video, default 450
+    include.max_width — ancho máximo del reproductor en pantalla, default 440 (usar para filas de 3+ videos)
 {% endcomment %}
 
 {% assign _lang    = page.lang | default: site.default_lang | default: "es" %}
 {% assign _label   = include.title | default: "Reproducir video" %}
 {% assign _width   = include.width  | default: 800 %}
 {% assign _height  = include.height | default: 450 %}
+{% assign _max_width = include.max_width | default: 440 %}
 {% assign _no_html5 = "Tu navegador no admite vídeo HTML5." %}
 {% if _lang == "en" %}{% assign _no_html5 = "Your browser does not support HTML5 video." %}{% endif %}
 
-<details class="video-embed">
-  <summary class="video-embed__trigger" aria-label="{{ _label }}">
+<details class="video-embed" style="width: min(100%, {{ _max_width }}px);">
+  <summary class="video-embed__trigger" aria-label="{{ _label }}" style="aspect-ratio: {{ _width }} / {{ _height }};">
 
     {% if include.poster %}
       <img
