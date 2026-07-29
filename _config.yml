@@ -107,8 +107,6 @@ keep_files: [/img]
 # Excluir carpetas de IA y planes del build
 exclude:
   - ".claude"
-  - ".agents"
-  - "plans"
 
 # Optimización HTML
 compress_html:
