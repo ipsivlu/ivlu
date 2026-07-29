@@ -14,7 +14,16 @@ tiempo_aplicacion: "15 - 30 minutos"
   <div class="flow">
     <h1>Mejora los Surcos Faciales con Ácido Hialurónico</h1>
     <p>Los surcos faciales, especialmente los nasogenianos, son una de las primeras líneas de expresión que aparecen en el rostro debido a los movimientos repetitivos de los músculos faciales, como al sonreír o hablar. Estos surcos pueden hacer que el rostro luzca más envejecido, perdiendo su firmeza y volumen natural.</p>
-    {% include button.html %}
+        <div class="hero-stats">
+      <span class="hero-stat"><strong>Precio:</strong> {{ page.precios }}</span>
+      {% if page.tiempo_aplicacion %}
+      <span class="hero-stat"><strong>Duración:</strong> {{ page.tiempo_aplicacion }}</span>
+      {% endif %}
+    </div>
+    <div class="hero-cta-group">
+      {% include button.html %}
+      <a href="#precios-heading" class="buttons btn-secondary">Ver precios</a>
+    </div>
   </div>
   <img src="{{'/assets/images/surcos-nasogenianos.avif' | relative_url }}"
     alt="Tratamiento para surcos nasogenianos en IVLU" loading="lazy" decoding="async" width="520" height="520">

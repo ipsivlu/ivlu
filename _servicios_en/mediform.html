@@ -2,125 +2,238 @@
 layout: servicios
 lang: en
 ref: servicio-mediforma
-title: "Mediforma – Health & Balanced Weight | IVLU Bogotá"
-description: "Comprehensive weight control program in Bogotá. Mediforma combines medicine, nutrition, and aesthetics to achieve sustainable wellness and health."
+title: "Medical Weight Management Program in Bogotá | Mediforma – IVLU"
+description: "Medical weight loss program in Bogotá with Ozempic® and Saxenda® under clinical supervision. Includes medical evaluation, nutritionist and psychology. Initial consultation from $150,000 COP."
 hero: "/assets/images/mediforma-generica.avif"
 jpg: "/assets/images/mediforma-generica.jpg"
-alt: "Mediforma Program in Bogotá"
+alt: "Doctor performing a weight management consultation at IVLU Bogotá clinic"
 datePublished: "2025-07-07"
-dateModified: "2025-07-07"
+dateModified: "2026-06-22"
 precios: "Initial consultation $150,000 COP"
 tiempo_aplicacion: "45 minutes"
 ---
-
 <link rel="stylesheet" href="{{ '/assets/css/acordeon-extra.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/benefits-section.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/testimonial-carousel.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/video-embed.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/mediforma.css' | relative_url }}">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalWebPage",
+      "@id": "{{ page.url | absolute_url }}#webpage",
+      "url": "{{ page.url | absolute_url }}",
+      "name": "{{ page.title }}",
+      "description": "{{ page.description }}",
+      "inLanguage": "en",
+      "isPartOf": { "@id": "{{ site.url }}/#website" },
+      "datePublished": "{{ page.datePublished }}",
+      "dateModified": "{{ page.dateModified }}"
+    },
+    {
+      "@type": "Service",
+      "@id": "{{ page.url | absolute_url }}#service",
+      "name": "Mediforma Medical Weight Management Program",
+      "description": "Multidisciplinary medical weight loss program with clinical follow-up, nutritionist, psychologist and supervised pharmacological treatment with Ozempic® or Saxenda®.",
+      "url": "{{ page.url | absolute_url }}",
+      "provider": {
+        "@type": "MedicalBusiness",
+        "name": "IVLU Bogotá",
+        "url": "{{ site.url }}"
+      },
+      "areaServed": { "@type": "City", "name": "Bogotá" },
+      "offers": {
+        "@type": "Offer",
+        "price": "150000",
+        "priceCurrency": "COP",
+        "description": "Initial Mediforma consultation"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much weight can I lose per week with Mediforma?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A healthy range is between 0.5 and 1 kg per week. This rate helps preserve muscle mass and minimizes the risk of rebound weight gain." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to exercise during the Mediforma program?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Physical activity is key to boosting your metabolism, maintaining weight loss, and protecting cardiovascular health. We include practical home routines using resistance bands." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do fats make you gain weight?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Not all of them. Healthy fats (avocado, nuts, olive oil) are essential for your body. At Mediforma, we teach you how to integrate them wisely and without fear." }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I avoid rebound weight gain after the program?",
+          "acceptedAnswer": { "@type": "Answer", "text": "By educating yourself and building sustainable habits. Our multidisciplinary approach is designed to help you maintain your results with nutritional, psychological, and medical support." }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if I stop using Ozempic or Saxenda?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Stopping abruptly may increase appetite or cause setbacks. At Mediforma, their use is planned and supervised as part of a holistic treatment — never as a standalone solution." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do sleep and stress affect my weight?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Poor sleep and high stress raise cortisol levels and disrupt hunger hormones. At Mediforma, we address this with clinical psychology, emotional management techniques, and lifestyle adjustments." }
+        },
+        {
+          "@type": "Question",
+          "name": "What if I hit a plateau during the weight loss process?",
+          "acceptedAnswer": { "@type": "Answer", "text": "It's completely normal. At Mediforma, we make strategic adjustments and support you with new tools in nutrition, motivation, and movement to help you push through." }
+        }
+      ]
+    }
+  ]
+}
+</script>
 
 <header class="wrapper two_columns">
   <div class="flow">
-    <h1>Mediforma: Health and Weight in Balance</h1>
-    <p>Mediforma is a clinical weight loss program designed to positively impact your physical, emotional, and metabolic health. We approach it from a human, empathetic, and scientifically backed perspective.</p>
-    <p>We combine family medicine, personalized nutrition, clinical psychology, and, when necessary, pharmacological treatment with <strong>Ozempic®</strong> or <strong>Saxenda®.</strong></p>
-    <p>Our goal is to help you lose weight in a healthy way, prevent metabolic diseases, and improve your quality of life. Looking better is great, but our priority is <strong>you</strong>! We know how important it is to feel good in your own body, so we want to offer a service that not only delivers results — we want you to feel good, reach your ideal weight and body shape.</p>
-    {% include button.html %}
+    <h1>Mediforma: medical weight management program in Bogotá</h1>
+    <p>Mediforma is a clinical program designed to help you lose weight safely and sustainably. We combine family medicine, personalized nutrition, and clinical psychology — with pharmacological treatment when medically indicated.</p>
+    <p>We work with <strong>Ozempic® (semaglutide)</strong> and <strong>Saxenda® (liraglutide)</strong>, always under strict medical supervision. The goal isn't just weight loss: it's improving your metabolic health and maintaining results long-term.</p>
+    <div class="hero-stats">
+      <span class="hero-stat"><strong>Initial consultation:</strong> $150,000 COP</span>
+      <span class="hero-stat"><strong>Duration:</strong> 45 minutes</span>
+      <span class="hero-stat"><strong>Team:</strong> Doctor · Nutritionist · Psychologist</span>
+    </div>
+    <div class="hero-cta-group">
+      {% include button.html %}
+      <a href="#includes-heading" class="buttons btn-secondary">See what's included</a>
+    </div>
   </div>
-  <img src="{{'/assets/images/ft-loss.avif' | relative_url }}" alt="{{page.alt}}" loading="lazy" decoding="async" width="520" height="520">
+  <img
+    src="{{'/assets/images/ft-loss.avif' | relative_url }}"
+    alt="{{ page.alt }}"
+    loading="eager"
+    fetchpriority="high"
+    width="520"
+    height="520"
+    decoding="async">
 </header>
 
 {% include precios.html %}
 
-<section class="two_columns wrapper">
-  <div class="center">
-    <video src="/assets/videos/medi-1.mp4" controls loop playsinline style="width: 50%; border-radius: 12px;"></video>
-  </div>
+<section class="two_columns wrapper" aria-labelledby="program-heading">
   <div class="flow">
-    <h2 class="content-title">A Program to Improve Your Health from the Inside Out</h2>
-    <p>Mediforma is not a crash diet. It’s a multidisciplinary program that combines medicine, nutrition, psychology, and aesthetics to reach a healthy weight, improve body composition, and promote overall well-being.</p>
-    <p>The initial consultation includes a medical evaluation, bioimpedance, clinical history, and the definition of a personalized plan. Transform your life with professional support and continuous monitoring!</p>
-    <a href="#" class="buttons btn-secondary" target="_blank">Request detailed information</a>
+    <h2 id="program-heading">A program to improve your health from the inside out</h2>
+    <p>Mediforma is not a crash diet. It's a multidisciplinary program combining medicine, nutrition, psychology, and aesthetics to reach a healthy weight, improve body composition, and promote overall wellbeing.</p>
+    <p>The initial consultation includes a complete medical evaluation, bioimpedance analysis, clinical history, and a personalized plan.</p>
+    <a href="#" class="buttons btn-secondary lead-whatsapp" rel="nofollow noopener noreferrer" target="_blank">Request detailed information</a>
+  </div>
+  <div style="max-width: 340px; margin-inline: auto;">
+    {% include video-embed.html
+      src="/assets/videos/medi-1.mp4"
+      title="Mediforma medical weight management program in Bogotá – overview"
+      poster="/assets/images/mediforma-resultados-1.avif"
+      width="450"
+      height="800" %}
   </div>
 </section>
 
-<section class="wrapper">
-  <div class="center">
-    <h2 class="gold" style="white-space: nowrap;">Results with Mediforma</h2>
-  </div>
+<section class="wrapper" aria-labelledby="results-heading">
+  <h2 id="results-heading" class="gold center">Real results with the Mediforma program</h2>
   <div class="two_columns wrapper">
-    <div>
-      <img src="/assets/images/mediforma-resultados-1.avif" alt="Before and after Mediforma" loading="lazy" decoding="async" width="500" height="600">
-    </div>
-    <div>
-      <img src="/assets/images/mediforma-resultados-2.avif" alt="Mediforma treatment result" loading="lazy" decoding="async" width="500" height="600">
-    </div>
+    <img
+      src="/assets/images/mediforma-resultados-1.avif"
+      alt="Before and after of a patient on the Mediforma medical weight loss program in Bogotá"
+      loading="lazy"
+      decoding="async"
+      width="500"
+      height="600">
+    <img
+      src="/assets/images/mediforma-resultados-2.avif"
+      alt="Weight management treatment result with supervised medical care at IVLU Bogotá"
+      loading="lazy"
+      decoding="async"
+      width="500"
+      height="600">
   </div>
 </section>
 
-<section class="wrapper">
-  <script src="{{ '/assets/js/acordeon-funct.js' | relative_url }}"></script>
+<section class="wrapper" aria-labelledby="includes-heading">
+  <script src="{{ '/assets/js/acordeon-funct.js' | relative_url }}" defer></script>
+  <h2 id="includes-heading">What's included in the Mediforma program?</h2>
   <div class="ivlu-accordion">
     <div class="ivlu-accordion-item">
-      <div class="ivlu-accordion-header">
-        <span class="emoji">🧬</span>What’s Included in the Mediforma Program?
-      </div>
+      <div class="ivlu-accordion-header" role="button" tabindex="0">Comprehensive medical evaluation</div>
       <div class="ivlu-accordion-body">
-        <p><strong>✔ Comprehensive medical evaluation:</strong><br>
-          • Detailed clinical history<br>
-          • Vital signs check<br>
-          • Lab tests and electrocardiogram (EKG) as medically required
-        </p>
-        <p><strong>✔ Ongoing professional support:</strong><br>
-          • Family doctor: clinical follow-up, metabolic risk assessment, and treatment adjustments<br>
-          • Nutritionist: flexible, realistic plan tailored to your preferences and lifestyle<br>
-          • Clinical psychologist: emotional support, motivation, and guidance on emotional eating
-        </p>
-        <p><strong>✔ Pharmacological treatment (if applicable):</strong><br>
-          • Ozempic® (semaglutide): regulates appetite, improves glucose levels, and supports sustained weight loss<br>
-          • Saxenda® (liraglutide): increases satiety, reduces food anxiety, and improves adherence to treatment<br>
-          <em>🧬 These treatments are prescribed after a personalized medical evaluation and under strict clinical supervision.</em>
-        </p>
-        <p><strong>✔ Mediforma Welcome Kit:</strong><br>
-          • Resistance bands for home workouts<br>
-          • Sterile hypodermic needles (for use with subcutaneous treatments)
-        </p>
+        <ul>
+          <li>Detailed clinical history</li>
+          <li>Vital signs check</li>
+          <li>Lab tests and electrocardiogram (EKG) as medically required</li>
+          <li>Bioimpedance for body composition analysis</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ivlu-accordion-item">
+      <div class="ivlu-accordion-header" role="button" tabindex="0">Ongoing professional support</div>
+      <div class="ivlu-accordion-body">
+        <ul>
+          <li><strong>Family doctor:</strong> clinical follow-up, metabolic risk assessment, and treatment adjustments</li>
+          <li><strong>Nutritionist:</strong> flexible, realistic plan tailored to your preferences and lifestyle</li>
+          <li><strong>Clinical psychologist:</strong> emotional support, motivation, and guidance on emotional eating</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ivlu-accordion-item">
+      <div class="ivlu-accordion-header" role="button" tabindex="0">Supervised pharmacological treatment (if applicable)</div>
+      <div class="ivlu-accordion-body">
+        <ul>
+          <li><strong>Ozempic® (semaglutide):</strong> regulates appetite, improves glucose levels, and supports sustained weight loss</li>
+          <li><strong>Saxenda® (liraglutide):</strong> increases satiety, reduces food anxiety, and improves adherence to treatment</li>
+        </ul>
+        <p><em>These treatments are prescribed only after a personalized medical evaluation and under strict clinical supervision.</em></p>
+      </div>
+    </div>
+    <div class="ivlu-accordion-item">
+      <div class="ivlu-accordion-header" role="button" tabindex="0">Mediforma welcome kit</div>
+      <div class="ivlu-accordion-body">
+        <ul>
+          <li>Resistance bands for home workouts</li>
+          <li>Medical support materials for your treatment (if applicable)</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
-<section class="wrapper">
+<section class="wrapper" aria-labelledby="benefits-heading">
   <div class="ivlu-benefits-section">
-    <h2>🌟 Exclusive Benefits for Mediforma Patients</h2>
-    <p class="intro">
-      🎁 By joining the program, you’ll get access to unique experiences and content to boost your transformation:
-    </p>
-
+    <h2 id="benefits-heading">Exclusive benefits for Mediforma patients</h2>
+    <p class="intro">By joining the program, you'll get access to unique experiences and content to boost your transformation:</p>
     <ul class="ivlu-benefits-list">
       <li>
-        <span class="emoji">👨‍🍳</span>
         <div>
-          <h4>Healthy Cooking Virtual Classes</h4>
+          <h3>Healthy cooking virtual classes</h3>
           <p>Learn easy and tasty recipes aligned with your nutritional plan.</p>
         </div>
       </li>
       <li>
-        <span class="emoji">👥</span>
         <div>
-          <h4>Live Group Workshops with Health Professionals:</h4>
+          <h3>Live group workshops with health professionals</h3>
           <ul class="sub-benefits">
-            <li>🥗 Practical nutrition and healthy habits</li>
-            <li>🧠 Psychology applied to eating and self-esteem</li>
-            <li>🏃‍♀️ Functional home workouts</li>
+            <li>Practical nutrition and healthy habits</li>
+            <li>Psychology applied to eating and self-esteem</li>
+            <li>Functional home workouts</li>
           </ul>
         </div>
       </li>
       <li>
-        <span class="emoji">📦</span>
         <div>
-          <h4>Mediforma Welcome Kit:</h4>
+          <h3>Mediforma starter kit</h3>
           <ul class="sub-benefits">
-            <li>🏠 Elastic bands for home workouts</li>
-            <li>❗ Hypodermic needles for subcutaneous medications (if needed)</li>
+            <li>Elastic bands for home workouts</li>
+            <li>Medical support materials for treatment</li>
           </ul>
         </div>
       </li>
@@ -128,63 +241,91 @@ tiempo_aplicacion: "45 minutes"
   </div>
 </section>
 
-<section class="highlight-quote">
+<section class="highlight-quote" aria-label="Mediforma program pillars">
   <div class="flex-section wrapper">
     <div>
-      <b>Comprehensive Medical Evaluation</b>
+      <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="80" height="80" fill="#fde9c4" viewBox="0 0 369.648 369.648" aria-hidden="true" focusable="false"><path d="M184.824 114.941c31.689 0 57.47-25.781 57.47-57.47 0-31.69-25.781-57.472-57.47-57.472s-57.47 25.781-57.47 57.472c0 31.689 25.781 57.47 57.47 57.47zm0-94.941c20.661 0 37.47 16.81 37.47 37.472 0 20.661-16.809 37.47-37.47 37.47s-37.47-16.809-37.47-37.47c0-20.662 16.809-37.472 37.47-37.472zm0 207.557c-39.175 0-71.045 31.871-71.045 71.046s31.871 71.046 71.045 71.046 71.045-31.871 71.045-71.046-31.87-71.046-71.045-71.046zm0 122.091c-28.146 0-51.045-22.899-51.045-51.046s22.899-51.046 51.045-51.046 51.045 22.899 51.045 51.046-22.898 51.046-51.045 51.046zm29.368-56.13a10.001 10.001 0 0 1-.631 10.331l-20.408 29.513a9.99 9.99 0 0 1-8.234 4.313 9.956 9.956 0 0 1-5.679-1.776c-4.542-3.141-5.679-9.37-2.538-13.912l9.56-13.825h-21.95a10.001 10.001 0 0 1-8.115-15.843l20.615-28.63c3.226-4.482 9.475-5.498 13.958-2.271 4.482 3.228 5.499 9.477 2.272 13.959l-9.207 12.786h21.5a9.995 9.995 0 0 1 8.857 5.355zm125.557 6.716a.375.375 0 0 1-.005-.03v-.001l-.002-.014v-.003l-.002-.012-.001-.007-.001-.008-.001-.008-.001-.008a.02.02 0 0 0-.001-.005l-.002-.01a10.009 10.009 0 0 0-.909-2.692l-49.778-98.658c-12.705-25.171-35.36-58.635-85.21-58.635h-38.017c-49.849 0-72.504 33.464-85.209 58.636l-49.778 98.657c-.44.872-.74 1.778-.909 2.692l-.001.007-.001.008-.001.008-.001.008-.001.008-.001.007-.002.012v.003l-.002.01-.001.005a10.014 10.014 0 0 0 .738 5.857v.001l.005.011.001.003.012.027.005.012.001.002a.03.03 0 0 0 .004.01l.002.005.004.01.001.003.004.009.003.006.002.005a.08.08 0 0 0 .004.009l.001.004.005.011.001.002.005.011.002.005.004.009.001.002.005.012.001.002a9.952 9.952 0 0 0 4.573 4.661l32.327 16.238c4.934 2.479 10.946.488 13.425-4.447 2.479-4.935.488-10.945-4.447-13.424l-23.402-11.756 45.265-89.712c10.168-20.146 24.292-40.675 52.029-46.203l25.528 47.457a10 10 0 0 0 17.614 0l25.528-47.457c27.735 5.528 41.86 26.058 52.028 46.202l45.265 89.713-23.402 11.756c-4.935 2.479-6.926 8.489-4.447 13.424a10 10 0 0 0 13.425 4.448l32.327-16.238a9.962 9.962 0 0 0 4.573-4.661v-.001l.005-.011.001-.004.004-.009.002-.005.005-.011v-.001l.006-.012.001-.004.004-.009.002-.005.003-.006.004-.009.001-.003.004-.01.002-.005.004-.01.001-.002.005-.012a.358.358 0 0 1 .012-.027l.001-.003.005-.011v-.001a10.01 10.01 0 0 0 .745-5.828zM184.824 183.198l-12.401-23.054h24.802l-12.401 23.054z"/></svg>
+      <p><strong>Comprehensive medical evaluation</strong></p>
     </div>
     <div>
-      <b>Personalized Plan</b>
+      <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="#fde9c4" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path fill="#fde9c4" fill-rule="evenodd" d="M14.083 6c0-2.206-1.831-4-4.083-4-2.252 0-4.083 1.794-4.083 4S7.748 10 10 10c2.252 0 4.083-1.794 4.083-4m3.863 14h-1.821a1.01 1.01 0 0 1-1.021-1c0-.552.457-1 1.02-1h.439c.706 0 1.228-.697.96-1.338C16.287 13.698 13.383 12 10 12c-3.384 0-6.287 1.698-7.523 4.662-.268.641.254 1.338.96 1.338h.438c.564 0 1.021.448 1.021 1s-.457 1-1.02 1H2.053c-1.276 0-2.28-1.143-2.01-2.364.743-3.359 3.064-5.838 6.12-6.963C4.77 9.574 3.875 7.89 3.875 6c0-3.551 3.148-6.381 6.859-5.958 2.689.306 4.916 2.405 5.32 5.028.346 2.261-.598 4.326-2.218 5.603 3.056 1.125 5.377 3.604 6.12 6.963.27 1.221-.734 2.364-2.01 2.364m-4.76-4.536c.399.391.399 1.024 0 1.415L10 20l-2.165-2.121a.986.986 0 0 1 0-1.415 1.037 1.037 0 0 1 1.443 0l.722.708 1.742-1.708c.4-.39 1.046-.39 1.444 0"/></svg>
+      <p><strong>Personalized plan</strong></p>
     </div>
     <div>
-      <b>Holistic Approach</b>
+      <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="80" height="80" fill="#fde9c4" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M18.211 14.894a1 1 0 0 0 0-1.789L14 11l-2.106-4.211c-.184-.369-.539-.553-.894-.553s-.71.184-.894.553L8 11l-4.211 2.106a1 1 0 0 0 0 1.789L8 17l2.106 4.211c.184.369.539.553.894.553s.71-.184.894-.553L14 17l4.211-2.106zm-4.956 1.361-.149.298L11 20.764l-2.106-4.211-.149-.298-.298-.149L4.236 14l4.211-2.106.298-.149.149-.298 2.1-4.21.005-.001 2.106 4.211.149.298.298.149L17.764 14l-4.211 2.106-.298.149zm14.424-9.183L25 6l-1.072-2.679c-.167-.419-.548-.628-.928-.628s-.761.21-.928.629L21 6l-2.679 1.072c-.838.335-.838 1.522 0 1.857L21 10l1.072 2.679c.168.419.548.629.928.629s.761-.21.928-.629L25 10l2.679-1.072c.838-.335.838-1.521 0-1.856zm-3.05 2-.398.159-.159.398L23 12.307l-1.072-2.679-.159-.398-.398-.159L18.693 8l2.679-1.072.398-.159.159-.398 1.064-2.678.008-.001 1.072 2.679.159.398.398.159L27.307 8l-2.678 1.072zm-1.95 15L20 23l-1.072-2.679c-.168-.419-.548-.629-.928-.629s-.761.21-.928.629L16 23l-2.679 1.072c-.838.335-.838 1.522 0 1.857L16 27l1.072 2.679c.168.419.548.629.928.629s.761-.21.928-.629L20 27l2.679-1.072c.838-.335.838-1.521 0-1.856zm-3.05 2-.398.159-.159.398L18 29.307l-1.072-2.679-.159-.398-.398-.159L13.693 25l2.679-1.072.398-.159.159-.398 1.064-2.678.008-.001 1.072 2.679.159.398.398.159L22.307 25l-2.678 1.072zm7.566-8.474L26 17l-.598-1.195c-.082-.166-.242-.249-.402-.249s-.32.083-.403.249L24 17l-1.195.598a.45.45 0 0 0 0 .805L24 19l.597 1.195c.083.166.243.249.403.249s.32-.083.402-.249L26 19l1.195-.597a.45.45 0 0 0 0-.805zm-1.94.657-.255.509-.255-.509-.509-.255.509-.255.255-.509.255.509.509.255-.509.255zM12.805 4.403 14 5l.597 1.195c.083.166.243.249.403.249s.32-.083.402-.249L16 5l1.195-.597a.45.45 0 0 0 0-.805L16 3l-.598-1.195c-.082-.166-.242-.249-.402-.249s-.32.083-.403.249L14 3l-1.195.598a.45.45 0 0 0 0 .805zm1.94-.658L15 3.236l.255.509.509.255-.509.255-.255.509-.255-.509L14.236 4l.509-.255zm-5.55 20.853L8 24l-.598-1.195c-.082-.166-.242-.249-.402-.249s-.32.083-.403.249L6 24l-1.195.598a.45.45 0 0 0 0 .805L6 26l.597 1.195c.083.166.243.249.403.249s.32-.083.402-.249L8 26l1.195-.597a.45.45 0 0 0 0-.805zm-1.94.657L7 25.764l-.255-.509L6.236 25l.509-.255.255-.509.255.509.509.255-.509.255z" style="fill:#fde9c4"/></svg>
+      <p><strong>Holistic approach</strong></p>
     </div>
     <div>
-      <b>Better Quality of Life</b>
+      <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="none" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#fde9c4" fill-rule="evenodd" d="M12 24C5.373 24 0 18.627 0 12S5.373 0 12 0s12 5.373 12 12-5.373 12-12 12Zm0-2c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10Zm-5.949-6.684a1 1 0 0 1 1.898-.632c.08.239.318.67.758 1.109C9.46 16.546 10.52 17 12 17c1.48 0 2.54-.454 3.293-1.207.44-.44.679-.87.758-1.11a1 1 0 0 1 1.898.633c-.17.511-.557 1.206-1.242 1.891C15.585 18.33 14.02 19 12 19s-3.585-.67-4.707-1.793c-.685-.685-1.071-1.38-1.242-1.89Zm1.504-5.484a1 1 0 0 1-1.11-1.664l.39-.26a3 3 0 0 1 3.33 0l.39.26a1 1 0 0 1-1.11 1.664l-.39-.26a1 1 0 0 0-1.11 0l-.39.26Zm7 0a1 1 0 0 1-1.11-1.664l.39-.26a3 3 0 0 1 3.33 0l.39.26a1 1 0 0 1-1.11 1.664l-.39-.26a1 1 0 0 0-1.11 0l-.39.26Z" clip-rule="evenodd"/></svg>
+      <p><strong>Better quality of life</strong></p>
     </div>
   </div>
 </section>
 
-<section class="wrapper two_columns">
-  <div class="flow">
-    <h2>Frequently Asked Questions</h2>
-    <div class="highlight-list">
-      <p><span>01</span><strong>How much weight can I lose per week?</strong><br>
-      A healthy range is between 0.5 and 1 kg per week. This helps preserve muscle mass and reduces the risk of rebound.</p>
-      <p><span>02</span><strong>Do I need to exercise?</strong><br>
-      Yes. Physical activity is key to boosting your metabolism, maintaining weight loss, regulating mood, and protecting cardiovascular health. We include practical home routines using resistance bands.</p>
-      <p><span>03</span><strong>Do fats make you gain weight?</strong><br>
-      Not all of them. Healthy fats (like avocado, nuts, olive oil) are essential for your body. At Mediforma, we teach you how to integrate them wisely and without fear.</p>
-      <p><span>04</span><strong>How can I avoid rebound weight gain?</strong><br>
-      By educating yourself and building sustainable habits. Our multidisciplinary approach is designed to help you maintain your results with nutritional, psychological, and medical support.</p>
-      <p><span>05</span><strong>What happens if I stop using medications like Ozempic or Saxenda?</strong><br>
-      Stopping them abruptly may increase appetite or cause setbacks. That’s why, at Mediforma, their use is planned and supervised as part of a holistic treatment — never as a standalone solution.</p>
-      <p><span>06</span><strong>How do sleep and stress affect my weight?</strong><br>
-      Poor sleep and high stress raise cortisol levels and disrupt hunger hormones. At Mediforma, we address this with psychological support, emotional management techniques, and lifestyle adjustments.</p>
-      <p><span>07</span><strong>What if I hit a plateau during the process?</strong><br>
-      It’s totally normal. At Mediforma, we make strategic adjustments and support you with new tools in nutrition, motivation, and movement to help you push through.</p>
-    </div>
-  </div>
-  <div class="center">
-    <video src="/assets/videos/medi-2.mp4" controls loop playsinline style="width: 80%; border-radius: 12px;"></video>
-  </div>
-</section>
-
-<section class="testimonial-carousel-container wrapper">
+<section class="testimonial-carousel-container wrapper" aria-label="Mediforma patient testimonials">
   <div class="testimonial-carousel wrapper">
     <script src="{{ '/assets/js/testimonial-carousel.js' | relative_url }}" defer></script>
-
     <div class="testimonial-slide active">
-      <p>“Not only did I lose 14 kg, but now I understand my body and emotions. Mediforma gave me tools I never got from other programs.”</p>
+      <p>"Not only did I lose 14 kg, but now I understand my body and emotions. Mediforma gave me tools I never got from other programs."</p>
       <p class="testimonial-author">— <span>Catalina R.</span></p>
     </div>
-
     <div class="testimonial-slide">
-      <p>“The welcome kit gave me a boost. The cooking classes taught me that eating healthy isn’t boring. And Saxenda helped me stay on track without anxiety.”</p>
+      <p>"The welcome kit gave me a boost. The cooking classes taught me that eating healthy isn't boring. And Saxenda helped me stay on track without anxiety."</p>
       <p class="testimonial-author">— <span>Mauricio T.</span></p>
     </div>
+    <button class="carousel-btn prev" aria-label="Previous testimonial">←</button>
+    <button class="carousel-btn next" aria-label="Next testimonial">→</button>
+  </div>
+</section>
 
-    <button class="carousel-btn prev">←</button>
-    <button class="carousel-btn next">→</button>
+<section class="wrapper" aria-labelledby="faq-heading">
+  <h2 id="faq-heading">Frequently asked questions about the Mediforma program</h2>
+  <div class="faq-cards">
+    <article class="faq-card">
+      <p class="faq-card__q">How much weight can I lose per week?</p>
+      <p class="faq-card__a">A healthy range is between 0.5 and 1 kg per week. This rate helps preserve muscle mass and minimizes the risk of rebound weight gain.</p>
+    </article>
+    <article class="faq-card">
+      <p class="faq-card__q">Do I need to exercise during the program?</p>
+      <p class="faq-card__a">Yes. Physical activity is key to boosting your metabolism, maintaining weight loss, regulating mood, and protecting cardiovascular health. We include practical home routines using resistance bands.</p>
+    </article>
+    <article class="faq-card">
+      <p class="faq-card__q">Do fats make you gain weight?</p>
+      <p class="faq-card__a">Not all of them. Healthy fats (avocado, nuts, olive oil) are essential for your body. At Mediforma, we teach you how to integrate them wisely and without fear.</p>
+    </article>
+    <article class="faq-card">
+      <p class="faq-card__q">How can I avoid rebound weight gain?</p>
+      <p class="faq-card__a">By educating yourself and building sustainable habits. Our multidisciplinary approach is designed to help you maintain your results with nutritional, psychological, and medical support.</p>
+    </article>
+    <article class="faq-card">
+      <p class="faq-card__q">What happens if I stop using Ozempic or Saxenda?</p>
+      <p class="faq-card__a">Stopping abruptly may increase appetite or cause setbacks. At Mediforma, their use is planned and supervised as part of a holistic treatment — never as a standalone solution.</p>
+    </article>
+    <article class="faq-card">
+      <p class="faq-card__q">How do sleep and stress affect my weight?</p>
+      <p class="faq-card__a">Poor sleep and high stress raise cortisol and disrupt hunger hormones. At Mediforma, we address this with clinical psychology, emotional management techniques, and lifestyle adjustments.</p>
+    </article>
+    <article class="faq-card">
+      <p class="faq-card__q">What if I hit a plateau during the process?</p>
+      <p class="faq-card__a">It's completely normal. At Mediforma, we make strategic adjustments and support you with new tools in nutrition, motivation, and movement to help you push through.</p>
+    </article>
+  </div>
+</section>
+
+<section class="cta-section" aria-labelledby="video-mediforma-heading">
+  <div class="wrapper two_columns" style="align-items: center; gap: 3rem;">
+    <div style="max-width: 320px; margin-inline: auto; flex-shrink: 0;">
+      {% include video-embed.html
+        src="/assets/videos/medi-2.mp4"
+        title="How the Mediforma medical weight management program works in Bogotá"
+        poster="/assets/images/mediforma-resultados-2.avif"
+        width="450"
+        height="800" %}
+    </div>
+    <div class="flow">
+      <h2 id="video-mediforma-heading">See how the Mediforma program works</h2>
+      <p>Book your initial consultation and receive a complete, personalized medical evaluation. Limited spots per month.</p>
+      {% include button.html %}
+    </div>
   </div>
 </section>

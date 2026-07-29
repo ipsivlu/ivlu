@@ -14,7 +14,16 @@ tiempo_aplicacion: "60 minutos <br><small>No requiere anestesia</small>"
   <div class="flow">
     <h1>Renovación Cutánea Avanzada con Peeling Facial Médico</h1>
     <p>El peeling facial es un tratamiento no invasivo que utiliza ácidos específicos para exfoliar la piel de manera controlada, mejorando su textura, luminosidad y tono. Este proceso promueve la regeneración celular, dejando la piel más suave y homogénea.</p>
-    {% include button.html %}
+        <div class="hero-stats">
+      <span class="hero-stat"><strong>Precio:</strong> {{ page.precios }}</span>
+      {% if page.tiempo_aplicacion %}
+      <span class="hero-stat"><strong>Duración:</strong> {{ page.tiempo_aplicacion }}</span>
+      {% endif %}
+    </div>
+    <div class="hero-cta-group">
+      {% include button.html %}
+      <a href="#precios-heading" class="buttons btn-secondary">Ver precios</a>
+    </div>
   </div>
   <img src="{{'/assets/images/peeling-facial-medico.avif' | relative_url }}"
     alt="Tratamiento de peeling facial médico en IVLU" loading="lazy" decoding="async" width="520" height="520">

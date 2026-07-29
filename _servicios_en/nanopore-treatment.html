@@ -14,7 +14,16 @@ tiempo_aplicacion: "60 minutes"
   <div class="flow">
     <h1>Nanopore Treatment: Skin Regeneration and Improvement with Microneedles</h1>
     <p>Nanopore treatment is an advanced technique that uses microneedles to create microchannels in the skin, promoting the penetration of active ingredients and vitamins.</p>
-    {% include button.html %}
+        <div class="hero-stats">
+      <span class="hero-stat"><strong>Price:</strong> {{ page.precios }}</span>
+      {% if page.tiempo_aplicacion %}
+      <span class="hero-stat"><strong>Duration:</strong> {{ page.tiempo_aplicacion }}</span>
+      {% endif %}
+    </div>
+    <div class="hero-cta-group">
+      {% include button.html %}
+      <a href="#precios-heading" class="buttons btn-secondary">View prices</a>
+    </div>
   </div>
   <img src="{{'/assets/images/nanopore-tratamiento.avif' | relative_url }}"
     alt="Nanopore treatment with transdermal microchannels at IVLU" loading="lazy" decoding="async" width="520" height="520">

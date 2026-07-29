@@ -16,7 +16,16 @@ precios: "From $250,000 COP (~$65 USD)"
   <div class="flow">
     <h1>Advanced cellular nutrition with customized IV vitamin, mineral & amino acid cocktails</h1>
     <p>Premium Intravenous Therapy in Bogotá</p>
-    {% include button.html %}
+        <div class="hero-stats">
+      <span class="hero-stat"><strong>Price:</strong> {{ page.precios }}</span>
+      {% if page.tiempo_aplicacion %}
+      <span class="hero-stat"><strong>Duration:</strong> {{ page.tiempo_aplicacion }}</span>
+      {% endif %}
+    </div>
+    <div class="hero-cta-group">
+      {% include button.html %}
+      <a href="#precios-heading" class="buttons btn-secondary">View prices</a>
+    </div>
   </div>
   <img src="{{'/assets/images/sueroterapia.avif' | relative_url }}"
     alt="Intravenous IV therapy treatment at IVLU" loading="lazy" decoding="async" width="520" height="520">

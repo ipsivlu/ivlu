@@ -16,7 +16,16 @@ tiempo_aplicacion: "60 minutos<br><small>Requiere anestesia</small>"
   <div class="flow">
     <h1>Plasma Rico en Plaquetas Capilar en Bogotá</h1>
     <p>Terapia regenerativa con factores de crecimiento autólogos para combatir la alopecia de forma natural</p>
-    {% include button.html %}
+        <div class="hero-stats">
+      <span class="hero-stat"><strong>Precio:</strong> {{ page.precios }}</span>
+      {% if page.tiempo_aplicacion %}
+      <span class="hero-stat"><strong>Duración:</strong> {{ page.tiempo_aplicacion }}</span>
+      {% endif %}
+    </div>
+    <div class="hero-cta-group">
+      {% include button.html %}
+      <a href="#precios-heading" class="buttons btn-secondary">Ver precios</a>
+    </div>
   </div>
   <img src="{{page.hero | relative_url }}" alt="{{page.alt}}" loading="lazy" decoding="async" width="520" height="520">
 </header>

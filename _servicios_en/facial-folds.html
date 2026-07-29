@@ -14,7 +14,16 @@ tiempo_aplicacion: "15 - 30 minutes"
   <div class="flow">
     <h1>Improve Facial Folds with Hyaluronic Acid</h1>
     <p>Facial folds, especially nasolabial folds, are among the first expression lines that appear on the face due to repetitive facial muscle movements such as smiling or talking. These folds can make the face look more aged, losing its firmness and natural volume.</p>
-    {% include button.html %}
+        <div class="hero-stats">
+      <span class="hero-stat"><strong>Price:</strong> {{ page.precios }}</span>
+      {% if page.tiempo_aplicacion %}
+      <span class="hero-stat"><strong>Duration:</strong> {{ page.tiempo_aplicacion }}</span>
+      {% endif %}
+    </div>
+    <div class="hero-cta-group">
+      {% include button.html %}
+      <a href="#precios-heading" class="buttons btn-secondary">View prices</a>
+    </div>
   </div>
   <img src="{{'/assets/images/surcos-nasogenianos.avif' | relative_url }}"
     alt="Nasolabial fold treatment at IVLU" loading="lazy" decoding="async" width="520" height="520">

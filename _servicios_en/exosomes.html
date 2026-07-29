@@ -14,7 +14,16 @@ tiempo_aplicacion: "60 minutes<br><small>Requires anesthesia</small>"
   <div class="flow">
     <h1>Scalp Exosome Application in Bogotá</h1>
     <p>Regenerative therapy with <strong>10 billion exosomes</strong> that stimulates hair growth and strengthening at the cellular level.</p>
-    {% include button.html %}
+        <div class="hero-stats">
+      <span class="hero-stat"><strong>Price:</strong> {{ page.precios }}</span>
+      {% if page.tiempo_aplicacion %}
+      <span class="hero-stat"><strong>Duration:</strong> {{ page.tiempo_aplicacion }}</span>
+      {% endif %}
+    </div>
+    <div class="hero-cta-group">
+      {% include button.html %}
+      <a href="#precios-heading" class="buttons btn-secondary">View prices</a>
+    </div>
   </div>
   <img src="{{'/assets/images/tratamiento-exosomas.avif' | relative_url }}"
     alt="Hair treatment with exosomes at IVLU Bogotá" loading="lazy" decoding="async" width="520" height="520">

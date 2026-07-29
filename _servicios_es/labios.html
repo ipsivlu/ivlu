@@ -70,7 +70,16 @@ casos_exito:
   <div class="flow">
     <h1>Tratamiento Premium de Labios en Bogotá</h1>
     <p>Realza la sensualidad de tu sonrisa con labios perfectamente definidos, hidratados y con volumen natural</p>
-    {% include button.html %}
+        <div class="hero-stats">
+      <span class="hero-stat"><strong>Precio:</strong> {{ page.precios }}</span>
+      {% if page.tiempo_aplicacion %}
+      <span class="hero-stat"><strong>Duración:</strong> {{ page.tiempo_aplicacion }}</span>
+      {% endif %}
+    </div>
+    <div class="hero-cta-group">
+      {% include button.html %}
+      <a href="#precios-heading" class="buttons btn-secondary">Ver precios</a>
+    </div>
   </div>
   <img src="{{page.hero | relative_url }}" alt="{{page.alt}}" loading="lazy" decoding="async" width="520" height="520">
 </header>

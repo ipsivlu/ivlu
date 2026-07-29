@@ -14,7 +14,16 @@ tiempo_aplicacion: "60 minutos"
   <div class="flow">
     <h1>Tratamiento Nanopore: Regeneración y Mejoría de la Piel con Microagujas</h1>
     <p>El tratamiento Nanopore es una técnica avanzada que utiliza micro-agujas para crear microcanales en la piel, favoreciendo la penetración de activos y vitaminas.</p>
-    {% include button.html %}
+        <div class="hero-stats">
+      <span class="hero-stat"><strong>Precio:</strong> {{ page.precios }}</span>
+      {% if page.tiempo_aplicacion %}
+      <span class="hero-stat"><strong>Duración:</strong> {{ page.tiempo_aplicacion }}</span>
+      {% endif %}
+    </div>
+    <div class="hero-cta-group">
+      {% include button.html %}
+      <a href="#precios-heading" class="buttons btn-secondary">Ver precios</a>
+    </div>
   </div>
   <img src="{{'/assets/images/nanopore-tratamiento.avif' | relative_url }}"
     alt="Tratamiento Nanopore con microcanales transdérmicos en IVLU" loading="lazy" decoding="async" width="520" height="520">

@@ -2,123 +2,238 @@
 layout: servicios
 lang: es
 ref: servicio-mediforma
-title: "Mediforma - Salud y Peso en Equilibrio | IVLU Bogotá"
-description: "Programa de control de peso integral en Bogotá. Mediforma combina medicina, nutrición y estética para lograr bienestar y salud sostenible."
+title: "Programa médico de control de peso en Bogotá | Mediforma – IVLU"
+description: "Programa médico de pérdida de peso en Bogotá con Ozempic® y Saxenda® bajo supervisión clínica. Evaluación médica, nutricionista y psicología incluidos. Consulta inicial desde $150.000."
 hero: "/assets/images/mediforma-generica.avif"
 jpg: "/assets/images/mediforma-generica.jpg"
-alt: "Programa Mediforma en Bogotá"
+alt: "Médica realizando consulta de control de peso en clínica IVLU Bogotá"
 datePublished: "2025-07-07"
-dateModified: "2025-07-07"
+dateModified: "2026-06-22"
 precios: "Consulta inicial $150.000"
 tiempo_aplicacion: "45 minutos"
 ---
 <link rel="stylesheet" href="{{ '/assets/css/acordeon-extra.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/benefits-section.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/testimonial-carousel.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/video-embed.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/mediforma.css' | relative_url }}">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalWebPage",
+      "@id": "{{ page.url | absolute_url }}#webpage",
+      "url": "{{ page.url | absolute_url }}",
+      "name": "{{ page.title }}",
+      "description": "{{ page.description }}",
+      "inLanguage": "es-CO",
+      "isPartOf": { "@id": "{{ site.url }}/#website" },
+      "datePublished": "{{ page.datePublished }}",
+      "dateModified": "{{ page.dateModified }}"
+    },
+    {
+      "@type": "Service",
+      "@id": "{{ page.url | absolute_url }}#service",
+      "name": "Programa Mediforma de control de peso médico",
+      "description": "Programa médico multidisciplinario de pérdida de peso con seguimiento clínico, nutricionista, psicóloga y tratamiento farmacológico supervisado con Ozempic® o Saxenda®.",
+      "url": "{{ page.url | absolute_url }}",
+      "provider": {
+        "@type": "MedicalBusiness",
+        "name": "IVLU Bogotá",
+        "url": "{{ site.url }}"
+      },
+      "areaServed": { "@type": "City", "name": "Bogotá" },
+      "offers": {
+        "@type": "Offer",
+        "price": "150000",
+        "priceCurrency": "COP",
+        "description": "Consulta inicial Mediforma"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cuánto peso puedo perder por semana con Mediforma?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Lo saludable es perder entre 0,5 y 1 kg por semana. Esta tasa permite preservar masa muscular y minimizar el riesgo de efecto rebote." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Necesito hacer ejercicio durante el programa Mediforma?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sí. El movimiento es clave para mejorar tu metabolismo, mantener la pérdida de peso y cuidar tu salud cardiovascular. Incluimos rutinas prácticas con bandas elásticas desde casa." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Las grasas engordan?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No todas. Las grasas saludables (aguacate, frutos secos, aceite de oliva) son necesarias para tu cuerpo. En Mediforma te enseñamos cómo integrarlas inteligentemente sin temor." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo evito el efecto rebote al terminar el programa?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Educándote y construyendo hábitos sostenibles. Nuestro enfoque multidisciplinario está diseñado para que el peso que pierdas no lo recuperes, con acompañamiento nutricional, psicológico y médico." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué sucede si dejo de usar Ozempic o Saxenda?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Al suspenderlos sin control puedes experimentar aumento de apetito. Por eso en Mediforma su uso es supervisado y planificado como parte de un tratamiento global, nunca como única solución." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo afectan el sueño y el estrés en mi peso?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Dormir poco o vivir con estrés eleva el cortisol y desequilibra tus hormonas del hambre. En Mediforma lo abordamos con psicología clínica, técnicas de manejo emocional y ajustes de estilo de vida." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué pasa si me estanco durante el proceso de pérdida de peso?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Es completamente normal. En Mediforma hacemos ajustes estratégicos y te acompañamos para superar ese punto con nuevas herramientas de nutrición, motivación y movimiento." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
 <header class="wrapper two_columns">
   <div class="flow">
-    <h1>Mediforma: Salud y peso en equilibrio</h1>
-    <p>Mediforma es un programa clínico de pérdida de peso diseñado para impactar positivamente tu salud física, emocional y metabólica. Lo hacemos desde un enfoque humano, cercano y científicamente respaldado.</p>
-    <p>Combinamos medicina familiar, nutrición personalizada, psicología clínica y, cuando es necesario, tratamiento farmacológico con <strong>Ozempic®</strong>, <strong>Wegovy®</strong> o <strong>Saxenda®.</strong></p>
-    <p>Nuestro objetivo es ayudarte a bajar de peso de forma saludable, prevenir enfermedades metabólicas y mejorar tu calidad de vida. Que te veas aun mejor, nuestra prioridad ¡Eres tú! sabemos lo importante que es sentirse bien con nuestro físico, por eso, queremos ofrecerte un servicio que no solo te de resultados, queremos que te sientas bien, que alcances tu peso y forma ideales.</p>
-    {% include button.html %}
+    <h1>Mediforma: programa médico de control de peso en Bogotá</h1>
+    <p>Mediforma es un programa clínico diseñado para ayudarte a bajar de peso de forma saludable y sostenible. Combinamos medicina familiar, nutrición personalizada y psicología clínica, con tratamiento farmacológico cuando el médico lo indica.</p>
+    <p>Trabajamos con <strong>Ozempic® (semaglutida)</strong>, <strong>Wegovy®</strong> y <strong>Saxenda® (liraglutida)</strong> siempre bajo supervisión médica estricta. El objetivo no es solo bajar de peso: es mejorar tu salud metabólica y mantener los resultados a largo plazo.</p>
+    <div class="hero-stats">
+      <span class="hero-stat"><strong>Consulta inicial:</strong> $150.000</span>
+      <span class="hero-stat"><strong>Duración:</strong> 45 minutos</span>
+      <span class="hero-stat"><strong>Equipo:</strong> Médico · Nutricionista · Psicóloga</span>
+    </div>
+    <div class="hero-cta-group">
+      {% include button.html %}
+      <a href="#incluye-heading" class="buttons btn-secondary">Ver qué incluye</a>
+    </div>
   </div>
-  <img src="{{'/assets/images/ft-loss.avif' | relative_url }}" alt="{{page.alt}}" loading="lazy" decoding="async" width="520" height="520">
+  <img
+    src="{{'/assets/images/ft-loss.avif' | relative_url }}"
+    alt="{{ page.alt }}"
+    loading="eager"
+    fetchpriority="high"
+    width="520"
+    height="520"
+    decoding="async">
 </header>
 
 {% include precios.html %}
 
-<section class="two_columns wrapper">
-  <div class="center">
-    <video src="/assets/videos/medi-1.mp4" controls loop playsinline style="width: 50%; border-radius: 12px;"></video>
-  </div>
+<section class="two_columns wrapper" aria-labelledby="programa-heading">
   <div class="flow">
-    <h2 class="content-title">Un programa para cambiar tu salud desde adentro</h2>
-    <p>Mediforma no es una dieta rápida. Es un programa multidisciplinario que une medicina, nutrición, psicología y estética para lograr un peso saludable, mejorar la composición corporal y promover el bienestar general.</p>
-    <p>La consulta inicial incluye evaluación médica, bioimpedancia, historia clínica y definición del plan individualizado. ¡Transforma tu vida con apoyo profesional y seguimiento constante!</p>
-    <a href="#" class="buttons btn-secondary" target="_blank">Solicita información detallada</a>
+    <h2 id="programa-heading">Un programa para mejorar tu salud desde adentro</h2>
+    <p>Mediforma no es una dieta rápida. Es un programa multidisciplinario que une medicina, nutrición, psicología y estética para alcanzar un peso saludable, mejorar tu composición corporal y promover el bienestar general.</p>
+    <p>La consulta inicial incluye evaluación médica completa, bioimpedancia, historia clínica y definición de tu plan personalizado.</p>
+    <a href="#" class="buttons btn-secondary lead-whatsapp" rel="nofollow noopener noreferrer" target="_blank">Solicita información del programa</a>
+  </div>
+  <div style="max-width: 340px; margin-inline: auto;">
+    {% include video-embed.html
+      src="/assets/videos/medi-1.mp4"
+      title="Presentación del programa Mediforma de control de peso médico en Bogotá"
+      poster="/assets/images/mediforma-resultados-1.avif"
+      width="450"
+      height="800" %}
   </div>
 </section>
 
-<section class="wrapper">
-  <div class="center">
-    <h2 class="gold" style="white-space: nowrap;">Resultados con Mediforma</h2>
-  </div>
+<section class="wrapper" aria-labelledby="resultados-heading">
+  <h2 id="resultados-heading" class="gold center">Resultados reales con el programa Mediforma</h2>
   <div class="two_columns wrapper">
-    <div>
-      <img src="/assets/images/mediforma-resultados-1.avif" alt="Antes y después Mediforma" loading="lazy" decoding="async" width="500" height="600">
-    </div>
-    <div>
-      <img src="/assets/images/mediforma-resultados-2.avif" alt="Resultado tratamiento Mediforma" loading="lazy" decoding="async" width="500" height="600">
-    </div>
+    <img
+      src="/assets/images/mediforma-resultados-1.avif"
+      alt="Antes y después de paciente del programa Mediforma de pérdida de peso médico en Bogotá"
+      loading="lazy"
+      decoding="async"
+      width="500"
+      height="600">
+    <img
+      src="/assets/images/mediforma-resultados-2.avif"
+      alt="Resultado de control de peso con tratamiento médico supervisado en IVLU Bogotá"
+      loading="lazy"
+      decoding="async"
+      width="500"
+      height="600">
   </div>
 </section>
 
-<section class="wrapper">
-  <script src="{{ '/assets/js/acordeon-funct.js' | relative_url }}"></script>
+<section class="wrapper" aria-labelledby="incluye-heading">
+  <script src="{{ '/assets/js/acordeon-funct.js' | relative_url }}" defer></script>
+  <h2 id="incluye-heading">¿Qué incluye el programa Mediforma?</h2>
   <div class="ivlu-accordion">
     <div class="ivlu-accordion-item">
-      <div class="ivlu-accordion-header">
-        <span class="emoji">🧬</span>¿Qué incluye el Programa Mediforma?
-      </div>
+      <div class="ivlu-accordion-header" role="button" tabindex="0">Evaluación médica integral</div>
       <div class="ivlu-accordion-body">
-        <p><strong>✔ Evaluación médica integral:</strong><br>
-          • Historia clínica detallada<br>
-          • Toma de signos vitales<br>
-          • Laboratorios clínicos y electrocardiograma (EKG) según pertinencia médica
-        </p>
-        <p><strong>✔ Acompañamiento profesional continuo:</strong><br>
-          • Médico de familia: seguimiento clínico, evaluación de riesgo metabólico y ajuste de tratamiento<br>
-          • Nutricionista: plan flexible, realista y adaptado a tus preferencias y estilo de vida<br>
-          • Psicóloga clínica: acompañamiento emocional, motivacional y manejo del comer emocional
-        </p>
-        <p><strong>✔ Tratamiento farmacológico (si aplica):</strong><br>
-          • Ozempic® (semaglutida): regula el apetito, mejora la glucosa y favorece la pérdida de peso sostenida<br>
-          • Saxenda® (liraglutida): aumenta la saciedad, regula la ansiedad alimentaria y mejora la adherencia al tratamiento<br>
-          <em>🧬 Estos tratamientos solo se indican tras valoración médica personalizada y bajo seguimiento clínico estricto.</em>
-        </p>
-        <p><strong>✔ Kit de bienvenida Mediforma:</strong><br>
-          • Bandas elásticas de resistencia para entrenar desde casa<br>
-          • Agujas hipodérmicas estériles (para uso con tratamientos subcutáneos)
-        </p>
+        <ul>
+          <li>Historia clínica detallada</li>
+          <li>Toma de signos vitales</li>
+          <li>Laboratorios clínicos y electrocardiograma (EKG) según pertinencia médica</li>
+          <li>Bioimpedancia para análisis de composición corporal</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ivlu-accordion-item">
+      <div class="ivlu-accordion-header" role="button" tabindex="0">Acompañamiento profesional continuo</div>
+      <div class="ivlu-accordion-body">
+        <ul>
+          <li><strong>Médico de familia:</strong> seguimiento clínico, evaluación de riesgo metabólico y ajuste de tratamiento</li>
+          <li><strong>Nutricionista:</strong> plan flexible, realista y adaptado a tus preferencias y estilo de vida</li>
+          <li><strong>Psicóloga clínica:</strong> acompañamiento emocional, motivacional y manejo del comer emocional</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ivlu-accordion-item">
+      <div class="ivlu-accordion-header" role="button" tabindex="0">Tratamiento farmacológico supervisado (si aplica)</div>
+      <div class="ivlu-accordion-body">
+        <ul>
+          <li><strong>Ozempic® (semaglutida):</strong> regula el apetito, mejora la glucosa y favorece la pérdida de peso sostenida</li>
+          <li><strong>Saxenda® (liraglutida):</strong> aumenta la saciedad, regula la ansiedad alimentaria y mejora la adherencia</li>
+        </ul>
+        <p><em>Estos tratamientos se indican únicamente tras valoración médica personalizada y bajo seguimiento clínico estricto.</em></p>
+      </div>
+    </div>
+    <div class="ivlu-accordion-item">
+      <div class="ivlu-accordion-header" role="button" tabindex="0">Kit de bienvenida Mediforma</div>
+      <div class="ivlu-accordion-body">
+        <ul>
+          <li>Bandas elásticas de resistencia para entrenar desde casa</li>
+          <li>Material médico de apoyo para el tratamiento (si aplica)</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
-<section class="wrapper">
+<section class="wrapper" aria-labelledby="beneficios-heading">
   <div class="ivlu-benefits-section">
-    <h2>🌟 Beneficios exclusivos para pacientes Mediforma</h2>
-    <p class="intro">
-      🎁 Al unirte al programa, accedes a experiencias y contenidos únicos para potenciar tu cambio:
-    </p>
-
+    <h2 id="beneficios-heading">Beneficios exclusivos para pacientes Mediforma</h2>
+    <p class="intro">Al unirte al programa, accedes a experiencias y contenidos únicos para potenciar tu cambio:</p>
     <ul class="ivlu-benefits-list">
       <li>
-        <span class="emoji">👨‍🍳</span>
         <div>
-          <h4>Clases virtuales de cocina saludable</h4>
+          <h3>Clases virtuales de cocina saludable</h3>
           <p>Aprende recetas prácticas, deliciosas y alineadas con tu plan nutricional.</p>
         </div>
       </li>
       <li>
-        <span class="emoji">👥</span>
         <div>
-          <h4>Talleres grupales en vivo con profesionales de salud:</h4>
+          <h3>Talleres grupales en vivo con profesionales de salud</h3>
           <ul class="sub-benefits">
-            <li>🥗 Nutrición práctica y hábitos saludables</li>
-            <li>🧠 Psicología aplicada a la alimentación y autoestima</li>
-            <li>🏃‍♀️ Actividad física funcional desde casa</li>
+            <li>Nutrición práctica y hábitos saludables</li>
+            <li>Psicología aplicada a la alimentación y la autoestima</li>
+            <li>Actividad física funcional desde casa</li>
           </ul>
         </div>
       </li>
       <li>
-        <span class="emoji">📦</span>
         <div>
-          <h4>Kit de bienvenida Mediforma:</h4>
+          <h3>Kit de inicio Mediforma</h3>
           <ul class="sub-benefits">
-            <li>🏠 Bandas elásticas para entrenar desde casa</li>
-            <li>❗ Agujas hipodérmicas para medicamentos subcutáneos (si aplica)</li>
+            <li>Bandas elásticas para entrenar en casa</li>
+            <li>Material médico de apoyo para el tratamiento</li>
           </ul>
         </div>
       </li>
@@ -126,69 +241,91 @@ tiempo_aplicacion: "45 minutos"
   </div>
 </section>
 
-<section class="highlight-quote">
+<section class="highlight-quote" aria-label="Pilares del programa Mediforma">
   <div class="flex-section wrapper">
     <div>
-      <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="120" height="120" fill="#fde9c4" viewBox="0 0 369.648 369.648"><path d="M184.824 114.941c31.689 0 57.47-25.781 57.47-57.47 0-31.69-25.781-57.472-57.47-57.472s-57.47 25.781-57.47 57.472c0 31.689 25.781 57.47 57.47 57.47zm0-94.941c20.661 0 37.47 16.81 37.47 37.472 0 20.661-16.809 37.47-37.47 37.47s-37.47-16.809-37.47-37.47c0-20.662 16.809-37.472 37.47-37.472zm0 207.557c-39.175 0-71.045 31.871-71.045 71.046s31.871 71.046 71.045 71.046 71.045-31.871 71.045-71.046-31.87-71.046-71.045-71.046zm0 122.091c-28.146 0-51.045-22.899-51.045-51.046s22.899-51.046 51.045-51.046 51.045 22.899 51.045 51.046-22.898 51.046-51.045 51.046zm29.368-56.13a10.001 10.001 0 0 1-.631 10.331l-20.408 29.513a9.99 9.99 0 0 1-8.234 4.313 9.956 9.956 0 0 1-5.679-1.776c-4.542-3.141-5.679-9.37-2.538-13.912l9.56-13.825h-21.95a10.001 10.001 0 0 1-8.115-15.843l20.615-28.63c3.226-4.482 9.475-5.498 13.958-2.271 4.482 3.228 5.499 9.477 2.272 13.959l-9.207 12.786h21.5a9.995 9.995 0 0 1 8.857 5.355zm125.557 6.716a.375.375 0 0 1-.005-.03v-.001l-.002-.014v-.003l-.002-.012-.001-.007-.001-.008-.001-.008-.001-.008a.02.02 0 0 0-.001-.005l-.002-.01a10.009 10.009 0 0 0-.909-2.692l-49.778-98.658c-12.705-25.171-35.36-58.635-85.21-58.635h-38.017c-49.849 0-72.504 33.464-85.209 58.636l-49.778 98.657c-.44.872-.74 1.778-.909 2.692l-.001.007-.001.008-.001.008-.001.008-.001.008-.001.007-.002.012v.003l-.002.01-.001.005a10.014 10.014 0 0 0 .738 5.857v.001l.005.011.001.003.012.027.005.012.001.002a.03.03 0 0 0 .004.01l.002.005.004.01.001.003.004.009.003.006.002.005a.08.08 0 0 0 .004.009l.001.004.005.011.001.002.005.011.002.005.004.009.001.002.005.012.001.002a9.952 9.952 0 0 0 4.573 4.661l32.327 16.238c4.934 2.479 10.946.488 13.425-4.447 2.479-4.935.488-10.945-4.447-13.424l-23.402-11.756 45.265-89.712c10.168-20.146 24.292-40.675 52.029-46.203l25.528 47.457a10 10 0 0 0 17.614 0l25.528-47.457c27.735 5.528 41.86 26.058 52.028 46.202l45.265 89.713-23.402 11.756c-4.935 2.479-6.926 8.489-4.447 13.424a10 10 0 0 0 13.425 4.448l32.327-16.238a9.962 9.962 0 0 0 4.573-4.661v-.001l.005-.011.001-.004.004-.009.002-.005.005-.011v-.001l.006-.012.001-.004.004-.009.002-.005.003-.006.004-.009.001-.003.004-.01.002-.005.004-.01.001-.002.005-.012a.358.358 0 0 1 .012-.027l.001-.003.005-.011v-.001a10.01 10.01 0 0 0 .745-5.828zM184.824 183.198l-12.401-23.054h24.802l-12.401 23.054z"/></svg>
-      <b>Evaluación médica completa</b>
+      <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="80" height="80" fill="#fde9c4" viewBox="0 0 369.648 369.648" aria-hidden="true" focusable="false"><path d="M184.824 114.941c31.689 0 57.47-25.781 57.47-57.47 0-31.69-25.781-57.472-57.47-57.472s-57.47 25.781-57.47 57.472c0 31.689 25.781 57.47 57.47 57.47zm0-94.941c20.661 0 37.47 16.81 37.47 37.472 0 20.661-16.809 37.47-37.47 37.47s-37.47-16.809-37.47-37.47c0-20.662 16.809-37.472 37.47-37.472zm0 207.557c-39.175 0-71.045 31.871-71.045 71.046s31.871 71.046 71.045 71.046 71.045-31.871 71.045-71.046-31.87-71.046-71.045-71.046zm0 122.091c-28.146 0-51.045-22.899-51.045-51.046s22.899-51.046 51.045-51.046 51.045 22.899 51.045 51.046-22.898 51.046-51.045 51.046zm29.368-56.13a10.001 10.001 0 0 1-.631 10.331l-20.408 29.513a9.99 9.99 0 0 1-8.234 4.313 9.956 9.956 0 0 1-5.679-1.776c-4.542-3.141-5.679-9.37-2.538-13.912l9.56-13.825h-21.95a10.001 10.001 0 0 1-8.115-15.843l20.615-28.63c3.226-4.482 9.475-5.498 13.958-2.271 4.482 3.228 5.499 9.477 2.272 13.959l-9.207 12.786h21.5a9.995 9.995 0 0 1 8.857 5.355zm125.557 6.716a.375.375 0 0 1-.005-.03v-.001l-.002-.014v-.003l-.002-.012-.001-.007-.001-.008-.001-.008-.001-.008a.02.02 0 0 0-.001-.005l-.002-.01a10.009 10.009 0 0 0-.909-2.692l-49.778-98.658c-12.705-25.171-35.36-58.635-85.21-58.635h-38.017c-49.849 0-72.504 33.464-85.209 58.636l-49.778 98.657c-.44.872-.74 1.778-.909 2.692l-.001.007-.001.008-.001.008-.001.008-.001.008-.001.007-.002.012v.003l-.002.01-.001.005a10.014 10.014 0 0 0 .738 5.857v.001l.005.011.001.003.012.027.005.012.001.002a.03.03 0 0 0 .004.01l.002.005.004.01.001.003.004.009.003.006.002.005a.08.08 0 0 0 .004.009l.001.004.005.011.001.002.005.011.002.005.004.009.001.002.005.012.001.002a9.952 9.952 0 0 0 4.573 4.661l32.327 16.238c4.934 2.479 10.946.488 13.425-4.447 2.479-4.935.488-10.945-4.447-13.424l-23.402-11.756 45.265-89.712c10.168-20.146 24.292-40.675 52.029-46.203l25.528 47.457a10 10 0 0 0 17.614 0l25.528-47.457c27.735 5.528 41.86 26.058 52.028 46.202l45.265 89.713-23.402 11.756c-4.935 2.479-6.926 8.489-4.447 13.424a10 10 0 0 0 13.425 4.448l32.327-16.238a9.962 9.962 0 0 0 4.573-4.661v-.001l.005-.011.001-.004.004-.009.002-.005.005-.011v-.001l.006-.012.001-.004.004-.009.002-.005.003-.006.004-.009.001-.003.004-.01.002-.005.004-.01.001-.002.005-.012a.358.358 0 0 1 .012-.027l.001-.003.005-.011v-.001a10.01 10.01 0 0 0 .745-5.828zM184.824 183.198l-12.401-23.054h24.802l-12.401 23.054z"/></svg>
+      <p><strong>Evaluación médica completa</strong></p>
     </div>
     <div>
-      <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" fill="#fde9c4" viewBox="0 0 20 20"><path fill="#fde9c4" fill-rule="evenodd" d="M14.083 6c0-2.206-1.831-4-4.083-4-2.252 0-4.083 1.794-4.083 4S7.748 10 10 10c2.252 0 4.083-1.794 4.083-4m3.863 14h-1.821a1.01 1.01 0 0 1-1.021-1c0-.552.457-1 1.02-1h.439c.706 0 1.228-.697.96-1.338C16.287 13.698 13.383 12 10 12c-3.384 0-6.287 1.698-7.523 4.662-.268.641.254 1.338.96 1.338h.438c.564 0 1.021.448 1.021 1s-.457 1-1.02 1H2.053c-1.276 0-2.28-1.143-2.01-2.364.743-3.359 3.064-5.838 6.12-6.963C4.77 9.574 3.875 7.89 3.875 6c0-3.551 3.148-6.381 6.859-5.958 2.689.306 4.916 2.405 5.32 5.028.346 2.261-.598 4.326-2.218 5.603 3.056 1.125 5.377 3.604 6.12 6.963.27 1.221-.734 2.364-2.01 2.364m-4.76-4.536c.399.391.399 1.024 0 1.415L10 20l-2.165-2.121a.986.986 0 0 1 0-1.415 1.037 1.037 0 0 1 1.443 0l.722.708 1.742-1.708c.4-.39 1.046-.39 1.444 0"/></svg>
-      <b>Plan personalizado</b>
+      <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="#fde9c4" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path fill="#fde9c4" fill-rule="evenodd" d="M14.083 6c0-2.206-1.831-4-4.083-4-2.252 0-4.083 1.794-4.083 4S7.748 10 10 10c2.252 0 4.083-1.794 4.083-4m3.863 14h-1.821a1.01 1.01 0 0 1-1.021-1c0-.552.457-1 1.02-1h.439c.706 0 1.228-.697.96-1.338C16.287 13.698 13.383 12 10 12c-3.384 0-6.287 1.698-7.523 4.662-.268.641.254 1.338.96 1.338h.438c.564 0 1.021.448 1.021 1s-.457 1-1.02 1H2.053c-1.276 0-2.28-1.143-2.01-2.364.743-3.359 3.064-5.838 6.12-6.963C4.77 9.574 3.875 7.89 3.875 6c0-3.551 3.148-6.381 6.859-5.958 2.689.306 4.916 2.405 5.32 5.028.346 2.261-.598 4.326-2.218 5.603 3.056 1.125 5.377 3.604 6.12 6.963.27 1.221-.734 2.364-2.01 2.364m-4.76-4.536c.399.391.399 1.024 0 1.415L10 20l-2.165-2.121a.986.986 0 0 1 0-1.415 1.037 1.037 0 0 1 1.443 0l.722.708 1.742-1.708c.4-.39 1.046-.39 1.444 0"/></svg>
+      <p><strong>Plan personalizado</strong></p>
     </div>
     <div>
-      <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="120" height="120" fill="#fde9c4" viewBox="0 0 32 32"><path d="M18.211 14.894a1 1 0 0 0 0-1.789L14 11l-2.106-4.211c-.184-.369-.539-.553-.894-.553s-.71.184-.894.553L8 11l-4.211 2.106a1 1 0 0 0 0 1.789L8 17l2.106 4.211c.184.369.539.553.894.553s.71-.184.894-.553L14 17l4.211-2.106zm-4.956 1.361-.149.298L11 20.764l-2.106-4.211-.149-.298-.298-.149L4.236 14l4.211-2.106.298-.149.149-.298 2.1-4.21.005-.001 2.106 4.211.149.298.298.149L17.764 14l-4.211 2.106-.298.149zm14.424-9.183L25 6l-1.072-2.679c-.167-.419-.548-.628-.928-.628s-.761.21-.928.629L21 6l-2.679 1.072c-.838.335-.838 1.522 0 1.857L21 10l1.072 2.679c.168.419.548.629.928.629s.761-.21.928-.629L25 10l2.679-1.072c.838-.335.838-1.521 0-1.856zm-3.05 2-.398.159-.159.398L23 12.307l-1.072-2.679-.159-.398-.398-.159L18.693 8l2.679-1.072.398-.159.159-.398 1.064-2.678.008-.001 1.072 2.679.159.398.398.159L27.307 8l-2.678 1.072zm-1.95 15L20 23l-1.072-2.679c-.168-.419-.548-.629-.928-.629s-.761.21-.928.629L16 23l-2.679 1.072c-.838.335-.838 1.522 0 1.857L16 27l1.072 2.679c.168.419.548.629.928.629s.761-.21.928-.629L20 27l2.679-1.072c.838-.335.838-1.521 0-1.856zm-3.05 2-.398.159-.159.398L18 29.307l-1.072-2.679-.159-.398-.398-.159L13.693 25l2.679-1.072.398-.159.159-.398 1.064-2.678.008-.001 1.072 2.679.159.398.398.159L22.307 25l-2.678 1.072zm7.566-8.474L26 17l-.598-1.195c-.082-.166-.242-.249-.402-.249s-.32.083-.403.249L24 17l-1.195.598a.45.45 0 0 0 0 .805L24 19l.597 1.195c.083.166.243.249.403.249s.32-.083.402-.249L26 19l1.195-.597a.45.45 0 0 0 0-.805zm-1.94.657-.255.509-.255-.509-.509-.255.509-.255.255-.509.255.509.509.255-.509.255zM12.805 4.403 14 5l.597 1.195c.083.166.243.249.403.249s.32-.083.402-.249L16 5l1.195-.597a.45.45 0 0 0 0-.805L16 3l-.598-1.195c-.082-.166-.242-.249-.402-.249s-.32.083-.403.249L14 3l-1.195.598a.45.45 0 0 0 0 .805zm1.94-.658L15 3.236l.255.509.509.255-.509.255-.255.509-.255-.509L14.236 4l.509-.255zm-5.55 20.853L8 24l-.598-1.195c-.082-.166-.242-.249-.402-.249s-.32.083-.403.249L6 24l-1.195.598a.45.45 0 0 0 0 .805L6 26l.597 1.195c.083.166.243.249.403.249s.32-.083.402-.249L8 26l1.195-.597a.45.45 0 0 0 0-.805zm-1.94.657L7 25.764l-.255-.509L6.236 25l.509-.255.255-.509.255.509.509.255-.509.255z" style="fill:#fde9c4"/></svg>
-      <b>Enfoque integral</b>
+      <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="80" height="80" fill="#fde9c4" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M18.211 14.894a1 1 0 0 0 0-1.789L14 11l-2.106-4.211c-.184-.369-.539-.553-.894-.553s-.71.184-.894.553L8 11l-4.211 2.106a1 1 0 0 0 0 1.789L8 17l2.106 4.211c.184.369.539.553.894.553s.71-.184.894-.553L14 17l4.211-2.106zm-4.956 1.361-.149.298L11 20.764l-2.106-4.211-.149-.298-.298-.149L4.236 14l4.211-2.106.298-.149.149-.298 2.1-4.21.005-.001 2.106 4.211.149.298.298.149L17.764 14l-4.211 2.106-.298.149zm14.424-9.183L25 6l-1.072-2.679c-.167-.419-.548-.628-.928-.628s-.761.21-.928.629L21 6l-2.679 1.072c-.838.335-.838 1.522 0 1.857L21 10l1.072 2.679c.168.419.548.629.928.629s.761-.21.928-.629L25 10l2.679-1.072c.838-.335.838-1.521 0-1.856zm-3.05 2-.398.159-.159.398L23 12.307l-1.072-2.679-.159-.398-.398-.159L18.693 8l2.679-1.072.398-.159.159-.398 1.064-2.678.008-.001 1.072 2.679.159.398.398.159L27.307 8l-2.678 1.072zm-1.95 15L20 23l-1.072-2.679c-.168-.419-.548-.629-.928-.629s-.761.21-.928.629L16 23l-2.679 1.072c-.838.335-.838 1.522 0 1.857L16 27l1.072 2.679c.168.419.548.629.928.629s.761-.21.928-.629L20 27l2.679-1.072c.838-.335.838-1.521 0-1.856zm-3.05 2-.398.159-.159.398L18 29.307l-1.072-2.679-.159-.398-.398-.159L13.693 25l2.679-1.072.398-.159.159-.398 1.064-2.678.008-.001 1.072 2.679.159.398.398.159L22.307 25l-2.678 1.072zm7.566-8.474L26 17l-.598-1.195c-.082-.166-.242-.249-.402-.249s-.32.083-.403.249L24 17l-1.195.598a.45.45 0 0 0 0 .805L24 19l.597 1.195c.083.166.243.249.403.249s.32-.083.402-.249L26 19l1.195-.597a.45.45 0 0 0 0-.805zm-1.94.657-.255.509-.255-.509-.509-.255.509-.255.255-.509.255.509.509.255-.509.255zM12.805 4.403 14 5l.597 1.195c.083.166.243.249.403.249s.32-.083.402-.249L16 5l1.195-.597a.45.45 0 0 0 0-.805L16 3l-.598-1.195c-.082-.166-.242-.249-.402-.249s-.32.083-.403.249L14 3l-1.195.598a.45.45 0 0 0 0 .805zm1.94-.658L15 3.236l.255.509.509.255-.509.255-.255.509-.255-.509L14.236 4l.509-.255zm-5.55 20.853L8 24l-.598-1.195c-.082-.166-.242-.249-.402-.249s-.32.083-.403.249L6 24l-1.195.598a.45.45 0 0 0 0 .805L6 26l.597 1.195c.083.166.243.249.403.249s.32-.083.402-.249L8 26l1.195-.597a.45.45 0 0 0 0-.805zm-1.94.657L7 25.764l-.255-.509L6.236 25l.509-.255.255-.509.255.509.509.255-.509.255z" style="fill:#fde9c4"/></svg>
+      <p><strong>Enfoque integral</strong></p>
     </div>
     <div>
-      <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" fill="none" viewBox="0 0 24 24"><path fill="#fde9c4" fill-rule="evenodd" d="M12 24C5.373 24 0 18.627 0 12S5.373 0 12 0s12 5.373 12 12-5.373 12-12 12Zm0-2c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10Zm-5.949-6.684a1 1 0 0 1 1.898-.632c.08.239.318.67.758 1.109C9.46 16.546 10.52 17 12 17c1.48 0 2.54-.454 3.293-1.207.44-.44.679-.87.758-1.11a1 1 0 0 1 1.898.633c-.17.511-.557 1.206-1.242 1.891C15.585 18.33 14.02 19 12 19s-3.585-.67-4.707-1.793c-.685-.685-1.071-1.38-1.242-1.89Zm1.504-5.484a1 1 0 0 1-1.11-1.664l.39-.26a3 3 0 0 1 3.33 0l.39.26a1 1 0 0 1-1.11 1.664l-.39-.26a1 1 0 0 0-1.11 0l-.39.26Zm7 0a1 1 0 0 1-1.11-1.664l.39-.26a3 3 0 0 1 3.33 0l.39.26a1 1 0 0 1-1.11 1.664l-.39-.26a1 1 0 0 0-1.11 0l-.39.26Z" clip-rule="evenodd"/></svg>
-      <b>Mejor calidad de vida</b>
+      <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="none" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#fde9c4" fill-rule="evenodd" d="M12 24C5.373 24 0 18.627 0 12S5.373 0 12 0s12 5.373 12 12-5.373 12-12 12Zm0-2c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10Zm-5.949-6.684a1 1 0 0 1 1.898-.632c.08.239.318.67.758 1.109C9.46 16.546 10.52 17 12 17c1.48 0 2.54-.454 3.293-1.207.44-.44.679-.87.758-1.11a1 1 0 0 1 1.898.633c-.17.511-.557 1.206-1.242 1.891C15.585 18.33 14.02 19 12 19s-3.585-.67-4.707-1.793c-.685-.685-1.071-1.38-1.242-1.89Zm1.504-5.484a1 1 0 0 1-1.11-1.664l.39-.26a3 3 0 0 1 3.33 0l.39.26a1 1 0 0 1-1.11 1.664l-.39-.26a1 1 0 0 0-1.11 0l-.39.26Zm7 0a1 1 0 0 1-1.11-1.664l.39-.26a3 3 0 0 1 3.33 0l.39.26a1 1 0 0 1-1.11 1.664l-.39-.26a1 1 0 0 0-1.11 0l-.39.26Z" clip-rule="evenodd"/></svg>
+      <p><strong>Mejor calidad de vida</strong></p>
     </div>
   </div>
 </section>
 
-<section class="wrapper two_columns">
-  <div class="flow">
-    <h2>Preguntas frecuentes</h2>
-    <div class="highlight-list">
-      <p><span>01</span><strong>¿Cuánto peso puedo perder por semana?</strong><br>
-      Lo saludable es perder entre 0.5 y 1 kg por semana. Esta tasa permite preservar masa muscular y minimizar el riesgo de efecto rebote.</p>
-      <p><span>02</span><strong>¿Necesito hacer ejercicio?</strong><br>
-      Sí. El movimiento es clave para mejorar tu metabolismo, mantener la pérdida de peso, regular el ánimo y cuidar tu salud cardiovascular. Incluimos rutinas prácticas con bandas elásticas desde casa.</p>
-      <p><span>03</span><strong>¿Las grasas engordan?</strong><br>
-      No todas. Las grasas saludables (aguacate, frutos secos, aceite de oliva) son necesarias para tu cuerpo. En Mediforma te enseñamos cómo integrarlas inteligentemente sin temor.</p>
-      <p><span>04</span><strong>¿Cómo evito el efecto rebote?</strong><br>
-      Educándote y construyendo hábitos sostenibles. Nuestro enfoque multidisciplinario está diseñado para que el peso que pierdas no lo recuperes, gracias a acompañamiento nutricional, psicológico y médico.</p>
-      <p><span>05</span><strong>¿Qué sucede si dejo de usar medicamentos como Ozempic o Saxenda?</strong><br>
-      A suspenderlos sin control puedes experimentar aumento de apetito o retroceso. Por eso en Mediforma su uso es supervisado y planificado como parte de un tratamiento global, nunca como única solución.</p>
-
-      <p><span>06</span><strong>¿Cómo afectan el sueño y el estrés mi peso?</strong><br>
-      Dormir poco o vivir con estrés eleva el cortisol y desequilibra tus hormonas del hambre. En Mediforma lo abordamos con psicología, técnicas de manejo emocional y ajustes de estilo de vida.</p>
-      <p><span>07</span><strong>¿Y si me estanco durante el proceso?</strong><br>
-      Es completamente normal. En Mediforma hacemos ajustes estratégicos y te acompañamos para superar ese punto con nuevas herramientas de nutrición, motivación y movimiento.</p>
-    </div>
-  </div>
-  <div class="center">
-    <video src="/assets/videos/medi-2.mp4" controls loop playsinline style="width: 80%; border-radius: 12px;"></video>
-  </div>
-</section>
-
-<section class="testimonial-carousel-container wrapper">
+<section class="testimonial-carousel-container wrapper" aria-label="Testimonios de pacientes del programa Mediforma">
   <div class="testimonial-carousel wrapper">
     <script src="{{ '/assets/js/testimonial-carousel.js' | relative_url }}" defer></script>
-
     <div class="testimonial-slide active">
-      <p>“No solo bajé 14 kg, sino que ahora entiendo mi cuerpo y mis emociones. Mediforma me dio herramientas que nunca había recibido en otros programas.”</p>
+      <p>"No solo bajé 14 kg, sino que ahora entiendo mi cuerpo y mis emociones. Mediforma me dio herramientas que nunca había recibido en otros programas."</p>
       <p class="testimonial-author">— <span>Catalina R.</span></p>
     </div>
-
     <div class="testimonial-slide">
-      <p>“El kit de bienvenida fue un impulso. Las clases de cocina me enseñaron que comer sano no es aburrido. Y Saxenda me ayudó a mantenerme sin ansiedad.”</p>
+      <p>"El kit de bienvenida fue un impulso. Las clases de cocina me enseñaron que comer sano no es aburrido. Y Saxenda me ayudó a mantenerme sin ansiedad."</p>
       <p class="testimonial-author">— <span>Mauricio T.</span></p>
     </div>
-
-    <button class="carousel-btn prev">←</button>
-    <button class="carousel-btn next">→</button>
+    <button class="carousel-btn prev" aria-label="Testimonio anterior">←</button>
+    <button class="carousel-btn next" aria-label="Testimonio siguiente">→</button>
   </div>
 </section>
 
+<section class="wrapper" aria-labelledby="faq-heading">
+  <h2 id="faq-heading">Preguntas frecuentes sobre el programa Mediforma</h2>
+  <div class="faq-cards">
+    <article class="faq-card">
+      <p class="faq-card__q">¿Cuánto peso puedo perder por semana?</p>
+      <p class="faq-card__a">Lo saludable es perder entre 0,5 y 1 kg por semana. Esta tasa permite preservar masa muscular y minimizar el riesgo de efecto rebote.</p>
+    </article>
+    <article class="faq-card">
+      <p class="faq-card__q">¿Necesito hacer ejercicio durante el programa?</p>
+      <p class="faq-card__a">Sí. El movimiento es clave para mejorar tu metabolismo, mantener la pérdida de peso, regular el ánimo y cuidar tu salud cardiovascular. Incluimos rutinas prácticas con bandas elásticas desde casa.</p>
+    </article>
+    <article class="faq-card">
+      <p class="faq-card__q">¿Las grasas engordan?</p>
+      <p class="faq-card__a">No todas. Las grasas saludables (aguacate, frutos secos, aceite de oliva) son necesarias para tu cuerpo. En Mediforma te enseñamos cómo integrarlas inteligentemente sin temor.</p>
+    </article>
+    <article class="faq-card">
+      <p class="faq-card__q">¿Cómo evito el efecto rebote al terminar el programa?</p>
+      <p class="faq-card__a">Educándote y construyendo hábitos sostenibles. Nuestro enfoque multidisciplinario está diseñado para que el peso que pierdas no lo recuperes, gracias a acompañamiento nutricional, psicológico y médico.</p>
+    </article>
+    <article class="faq-card">
+      <p class="faq-card__q">¿Qué sucede si dejo de usar Ozempic o Saxenda?</p>
+      <p class="faq-card__a">Al suspenderlos sin control puedes experimentar aumento de apetito o retroceso. Por eso en Mediforma su uso es supervisado y planificado como parte de un tratamiento global, nunca como única solución.</p>
+    </article>
+    <article class="faq-card">
+      <p class="faq-card__q">¿Cómo afectan el sueño y el estrés en mi peso?</p>
+      <p class="faq-card__a">Dormir poco o vivir con estrés eleva el cortisol y desequilibra tus hormonas del hambre. En Mediforma lo abordamos con psicología clínica, técnicas de manejo emocional y ajustes de estilo de vida.</p>
+    </article>
+    <article class="faq-card">
+      <p class="faq-card__q">¿Qué pasa si me estanco durante el proceso?</p>
+      <p class="faq-card__a">Es completamente normal. En Mediforma hacemos ajustes estratégicos y te acompañamos para superar ese punto con nuevas herramientas de nutrición, motivación y movimiento.</p>
+    </article>
+  </div>
+</section>
+
+<section class="cta-section" aria-labelledby="video-mediforma-heading">
+  <div class="wrapper two_columns" style="align-items: center; gap: 3rem;">
+    <div style="max-width: 320px; margin-inline: auto; flex-shrink: 0;">
+      {% include video-embed.html
+        src="/assets/videos/medi-2.mp4"
+        title="Cómo funciona el programa Mediforma de control de peso médico en Bogotá"
+        poster="/assets/images/mediforma-resultados-2.avif"
+        width="450"
+        height="800" %}
+    </div>
+    <div class="flow">
+      <h2 id="video-mediforma-heading">Conoce cómo funciona el programa Mediforma</h2>
+      <p>Agenda tu consulta inicial y recibe una evaluación médica completa personalizada. Cupos limitados por mes.</p>
+      {% include button.html %}
+    </div>
+  </div>
+</section>

@@ -14,7 +14,16 @@ tiempo_aplicacion: "15 - 30 minutes"
   <div class="flow">
     <h1>Sculptra® - Poly-L-Lactic Acid for Natural Rejuvenation</h1>
     <p>Sculptra® is an advanced treatment based on poly-L-lactic acid that stimulates collagen production in the skin. Ideal for restoring volume and treating sagging skin, this biostimulator works deep within, regenerating the dermis and reducing wrinkles in both face and body.</p>
-    {% include button.html %}
+        <div class="hero-stats">
+      <span class="hero-stat"><strong>Price:</strong> {{ page.precios }}</span>
+      {% if page.tiempo_aplicacion %}
+      <span class="hero-stat"><strong>Duration:</strong> {{ page.tiempo_aplicacion }}</span>
+      {% endif %}
+    </div>
+    <div class="hero-cta-group">
+      {% include button.html %}
+      <a href="#precios-heading" class="buttons btn-secondary">View prices</a>
+    </div>
   </div>
   <img src="{{'/assets/images/sculptra.avif' | relative_url }}" alt="Sculptra Treatment at IVLU Bogotá" loading="lazy" decoding="async" width="520" height="520">
 </header>

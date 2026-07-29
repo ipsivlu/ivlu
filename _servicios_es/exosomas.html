@@ -14,7 +14,16 @@ tiempo_aplicacion: "60 minutos<br><small>Requiere anestesia</small>"
   <div class="flow">
     <h1>Aplicación capilar de Exosomas en Bogotá</h1>
     <p>Terapia regenerativa con <strong>10.000 millones de exosomas</strong> que estimula el crecimiento y fortalecimiento del cabello desde nivel celular.</p>
-    {% include button.html %}
+        <div class="hero-stats">
+      <span class="hero-stat"><strong>Precio:</strong> {{ page.precios }}</span>
+      {% if page.tiempo_aplicacion %}
+      <span class="hero-stat"><strong>Duración:</strong> {{ page.tiempo_aplicacion }}</span>
+      {% endif %}
+    </div>
+    <div class="hero-cta-group">
+      {% include button.html %}
+      <a href="#precios-heading" class="buttons btn-secondary">Ver precios</a>
+    </div>
   </div>
   <img src="{{'/assets/images/tratamiento-exosomas.avif' | relative_url }}"
     alt="Tratamiento capilar con exosomas en IVLU Bogotá" loading="lazy" decoding="async" width="520" height="520">

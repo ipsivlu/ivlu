@@ -14,7 +14,16 @@ tiempo_aplicacion: "60 minutes <br><small>No anesthesia required</small>"
   <div class="flow">
     <h1>Advanced Skin Renewal with Medical Facial Peeling</h1>
     <p>Facial peeling is a non-invasive treatment that uses specific acids to exfoliate the skin in a controlled manner, improving its texture, luminosity, and tone. This process promotes cell regeneration, leaving skin softer and more even.</p>
-    {% include button.html %}
+        <div class="hero-stats">
+      <span class="hero-stat"><strong>Price:</strong> {{ page.precios }}</span>
+      {% if page.tiempo_aplicacion %}
+      <span class="hero-stat"><strong>Duration:</strong> {{ page.tiempo_aplicacion }}</span>
+      {% endif %}
+    </div>
+    <div class="hero-cta-group">
+      {% include button.html %}
+      <a href="#precios-heading" class="buttons btn-secondary">View prices</a>
+    </div>
   </div>
   <img src="{{'/assets/images/peeling-facial-medico.avif' | relative_url }}"
     alt="Medical facial peeling treatment at IVLU" loading="lazy" decoding="async" width="520" height="520">

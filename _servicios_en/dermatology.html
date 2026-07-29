@@ -18,7 +18,16 @@ tiempo_aplicacion: "30 - 45 minutes"
     <p>At our clinic, we provide a comprehensive approach to dermatology, combining clinical medicine with personalized aesthetic solutions. During the consultation, you can share your symptoms, concerns, and expectations, so we can offer you an accurate diagnosis and a customized treatment plan.</p>
     <p>We treat skin, hair, and nail conditions such as <b>acne, rosacea, dark spots, hair loss, and dermatitis</b>, among others.</p>
     <p><b>Book an appointment and discover your skin's full potential!</b></p>
-    {% include button.html %}
+        <div class="hero-stats">
+      <span class="hero-stat"><strong>Price:</strong> {{ page.precios }}</span>
+      {% if page.tiempo_aplicacion %}
+      <span class="hero-stat"><strong>Duration:</strong> {{ page.tiempo_aplicacion }}</span>
+      {% endif %}
+    </div>
+    <div class="hero-cta-group">
+      {% include button.html %}
+      <a href="#precios-heading" class="buttons btn-secondary">View prices</a>
+    </div>
   </div>
   <img src="{{'/assets/images/mask-derm.avif' | relative_url }}" 
       alt="{{page.alt}}" loading="lazy" decoding="async" width="520" height="520">
