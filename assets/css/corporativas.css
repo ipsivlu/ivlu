@@ -1,0 +1,11 @@
+---
+layout: compress
+---
+{% include css/utilities/pages.css %}
+{% include css/components/buttons.css %}
+{% include css/components/cards.css %}
+{% include css/components/hero.css %}
+{% include css/components/contact.css %}
+{% include css/layout-specific/distintivos.css %}
+{% include css/layout-specific/footer.css %}
+{% include css/utilities/queries.css %}

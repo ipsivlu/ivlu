@@ -1,0 +1,52 @@
+/* FAQ — lista tipográfica, sin cajas, estilo CALM */
+.faq-cards {
+  margin-top: 2rem;
+}
+
+.faq-card {
+  border-top: 1px solid rgba(204, 175, 102, 0.3);
+  padding: 1.5rem 0;
+}
+
+.faq-card:last-child {
+  border-bottom: 1px solid rgba(204, 175, 102, 0.3);
+}
+
+.faq-card__q {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0 0 0.5rem;
+  line-height: 1.4;
+}
+
+/* Funciona tanto con p.faq-card__a (párrafo simple) como div.faq-card__a (contenido de bloque) */
+.faq-card__a {
+  font-size: 0.9375rem;
+  color: #555;
+  margin: 0;
+  line-height: 1.65;
+  max-width: 72ch;
+}
+
+.faq-card__a p {
+  margin-bottom: 0.75rem;
+}
+
+.faq-card__a p:last-child {
+  margin-bottom: 0;
+}
+
+.faq-card__a ul,
+.faq-card__a ol {
+  margin: 0.25rem 0 0.75rem 1.25rem;
+}
+
+.faq-card__a li {
+  margin-bottom: 0.3rem;
+}
+
+.faq-card__a ul:last-child,
+.faq-card__a ol:last-child {
+  margin-bottom: 0;
+}

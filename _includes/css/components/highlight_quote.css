@@ -1,0 +1,72 @@
+.highlight-quote {
+  display: grid;
+  align-items: center;
+  background: var(--crystal-clear);
+  padding-block: 4rem;
+  border-top: 1px solid rgba(204, 175, 102, 0.2);
+  border-bottom: 1px solid rgba(204, 175, 102, 0.2);
+
+  blockquote,
+  .highlight-quote__cta {
+    padding: 8em 0;
+    align-items: center;
+    justify-content: space-between;
+
+    &> p, cite {
+      font-size: var(--font-size-h3);
+      text-align: center;
+      width: min(100%, 70ch);
+      color: var(--text-dark);
+    }
+  }
+
+  .services_cta {
+    font-style: italic;
+    display: grid;
+    place-items: center;
+    gap: 2em;
+  }
+
+  /* Iconos SVG con fill como atributo de presentación — el CSS los sobreescribe */
+  .flex-section > div svg path,
+  .flex-section > div svg circle,
+  .flex-section > div svg g path {
+    fill: var(--primary);
+  }
+
+  .flex-section > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.75rem;
+    padding: 1.5rem 1rem;
+    flex: 1 0 160px;
+    max-width: 240px;
+
+    p {
+      color: var(--text-dark);
+      font-size: 0.9375rem;
+      max-width: none;
+      text-align: center;
+      margin: 0;
+    }
+
+    strong {
+      font-weight: 600;
+    }
+  }
+
+  div {
+    p {
+      font-size: var(--font-size-h3);
+      max-width: 40ch;
+      text-align: left;
+    }
+
+    .buttons {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}

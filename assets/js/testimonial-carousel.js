@@ -1,7 +1,7 @@
 
-const slides = document.querySelectorAll('.testimonial-slide');
-const prevBtn = document.querySelector('.carousel-btn.prev');
-const nextBtn = document.querySelector('.carousel-btn.next');
+const slides = document.querySelectorAll('.testimonial-item');
+const prevBtn = document.querySelector('.testimonial-nav.prev');
+const nextBtn = document.querySelector('.testimonial-nav.next');
 let currentIndex = 0;
 
 function showSlide(index) {

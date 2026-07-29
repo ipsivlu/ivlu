@@ -1,0 +1,59 @@
+{% comment %}
+  Componente: Video Embed — Zero JS, Performance Optimized
+  Técnica: <details>/<summary> — el video no carga hasta que el usuario hace clic.
+  Requiere: assets/css/video-embed.css
+
+  Parámetros:
+    include.src     — ruta al archivo .mp4 (obligatorio)
+    include.title   — texto accesible del botón play (obligatorio para a11y)
+    include.poster  — ruta a imagen de miniatura (opcional, recomendado)
+    include.width   — ancho nativo del video, default 800
+    include.height  — alto nativo del video, default 450
+{% endcomment %}
+
+{% assign _lang    = page.lang | default: site.default_lang | default: "es" %}
+{% assign _label   = include.title | default: "Reproducir video" %}
+{% assign _width   = include.width  | default: 800 %}
+{% assign _height  = include.height | default: 450 %}
+{% assign _no_html5 = "Tu navegador no admite vídeo HTML5." %}
+{% if _lang == "en" %}{% assign _no_html5 = "Your browser does not support HTML5 video." %}{% endif %}
+
+<details class="video-embed">
+  <summary class="video-embed__trigger" aria-label="{{ _label }}">
+
+    {% if include.poster %}
+      <img
+        src="{{ include.poster | relative_url }}"
+        alt=""
+        role="presentation"
+        class="video-embed__poster"
+        width="{{ _width }}"
+        height="{{ _height }}"
+        loading="lazy"
+        decoding="async">
+    {% else %}
+      <div class="video-embed__poster video-embed__poster--placeholder" aria-hidden="true"></div>
+    {% endif %}
+
+    <span class="video-embed__play" aria-hidden="true">
+      <svg width="72" height="72" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg" focusable="false">
+        <circle cx="36" cy="36" r="36" fill="rgba(0,0,0,0.55)"/>
+        <path d="M28 22 L52 36 L28 50 Z" fill="white"/>
+      </svg>
+    </span>
+
+  </summary>
+
+  <video
+    src="{{ include.src | relative_url }}"
+    controls
+    autoplay
+    playsinline
+    preload="none"
+    width="{{ _width }}"
+    height="{{ _height }}"
+    class="video-embed__video"
+    aria-label="{{ _label }}">
+    {{ _no_html5 }}
+  </video>
+</details>

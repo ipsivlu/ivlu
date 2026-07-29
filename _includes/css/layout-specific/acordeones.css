@@ -1,0 +1,59 @@
+.ivlu-accordion {
+  border: 2px solid #c8aa6e;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(200, 170, 110, 0.2);
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  background-color: #fffefc;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.ivlu-accordion-item {
+  border-bottom: 1px solid #e5d8b2;
+}
+
+.ivlu-accordion-header {
+  background-color: #fdf8ef;
+  padding: 1rem 1.2rem;
+  cursor: pointer;
+  font-weight: bold;
+  color: #604b25;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.ivlu-accordion-header:hover {
+  background-color: #f6eee1;
+}
+
+.ivlu-accordion-header span.emoji {
+  margin-right: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.ivlu-accordion-body {
+  display: none;
+  padding: 1rem 1.2rem;
+  background-color: #fffdf9;
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.ivlu-accordion-item.active .ivlu-accordion-body {
+  display: block;
+}
+
+.ivlu-accordion-item.active .ivlu-accordion-header::after {
+  content: "▲";
+}
+
+.ivlu-accordion-header::after {
+  content: "▼";
+  font-size: 0.8rem;
+  color: #c8aa6e;
+  transition: transform 0.2s ease;
+}

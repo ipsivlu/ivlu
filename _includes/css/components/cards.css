@@ -1,0 +1,71 @@
+.especialidades-cards {
+  width: min(calc(100% - 2rem), 1280px);
+  margin-inline: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.especialidad-card {
+  flex: 1 0 480px;
+  max-width: 100%;
+  background-color: var(--crystal-clear);
+  padding: 2rem;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+
+  h4,
+  .card-title {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+}
+
+.width {
+  width: min(100%, 480px)
+}
+
+.especialidad-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+  border-color: var(--primary);
+}
+
+.card-link {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+
+  p {
+    max-width: 480px;
+  }
+
+  h4 {
+    margin: 0 1rem 0 1rem;
+  }
+}
+
+.circle-arrow {
+  display: grid;
+  place-items: center;
+  place-content: center;
+  width: 50px;
+  height: 50px;
+  border: 2px solid var(--primary);
+  border-radius: 50%;
+  color: var(--primary);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 20px;
+  font-size: 1.5rem;
+}
+
+.circle-arrow:hover {
+  background-color: var(--primary);
+  color: var(--text-light);
+  transform: translateX(5px);
+  text-decoration: none;
+}

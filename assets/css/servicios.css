@@ -1,0 +1,20 @@
+---
+layout: compress
+---
+{% include css/utilities/pages.css %}
+{% include css/components/buttons.css %}
+{% include css/components/cards.css %}
+{% include css/components/hero.css %}
+{% include css/components/gallery.css %}
+{% include css/components/highlight.css %}
+{% include css/components/highlight_quote.css %}
+{% include css/components/testimonios.css %}
+{% include css/components/videos.css %}
+{% include css/components/faq.css %}
+{% include css/layout-specific/mediforma.css %}
+{% include css/layout-specific/testimonials.css %}
+{% include css/layout-specific/acordeones.css %}
+{% include css/layout-specific/benefits.css %}
+{% include css/layout-specific/comparacion.css %}
+{% include css/layout-specific/footer.css %}
+{% include css/utilities/queries.css %}

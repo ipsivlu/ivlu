@@ -7,6 +7,25 @@ description: "Expertas en rejuvenecimiento facial y restauración capilar en Bog
 image: "/assets/images/banner-img.avif"
 datePublished: "2023-01-15"
 dateModified: "2025-03-05"
+testimonios:
+  - autor: "Kevin Stiven Gallo Camacho"
+    lugar: "Cali, Colombia"
+    texto: "El equipo fue muy profesional y me hicieron sentir en total confianza. La atención personalizada de la doctora Ivonne fue excepcional. Los resultados han superado mis expectativas y ha cambiado mi vida para bien."
+  - autor: "Edgar Muñoz"
+    lugar: "Bogotá, Colombia"
+    texto: "Ha sido el único lugar en que sí he podido mejorar mi alopecia. Los resultados obtenidos son increíbles, yo mismo no me lo podía creer. Acá te suministran todo lo que necesitas y hasta realizan el envío a tu casa."
+  - autor: "Paula Gamboa"
+    lugar: "Colombia"
+    texto: "Desde la primera consulta me han tratado muy bien. Han escuchado mis síntomas y se han enfocado en tratar eficientemente la condición de mi piel. Las recomiendo 100%, son carismáticas, respetuosas y muy profesionales."
+  - autor: "Nana Merchan"
+    lugar: "Colombia"
+    texto: "Llegar a este lugar y tener un tratamiento efectivo de mano de la doctora Ivonne ha sido una experiencia increíble. Ha sido un camino lleno de cambios positivos, avances muy evidentes y un proceso 100% informado."
+  - autor: "Mauro Flores"
+    lugar: "Colombia"
+    texto: "Estoy encantado con la atención recibida en IVLU. El equipo fue extremadamente profesional y amable. Recomiendo a IVLU sin dudarlo a quienes busquen soluciones capilares de calidad."
+  - autor: "Kelly Jimenez"
+    lugar: "Colombia"
+    texto: "¡Recomiendo al 1000% a las doctoras de IVLU! Son excelentes profesionales. Desde la entrada sientes la confianza de que estás en las mejores manos. Claro que sí iría una y mil veces más."
 ---
 
 <header class="hero-banner hero_home">
@@ -27,119 +46,80 @@ dateModified: "2025-03-05"
       <span data-lang="es">Rejuvenecimiento Facial y Restauración Capilar</span>
     </h1>
     {% include button.html %}
+    <div class="home-stat-bar">
+      <span><strong>+5.000</strong>pacientes satisfechas</span>
+      <span><strong>98%</strong>de satisfacción</span>
+      <span><strong>+10 años</strong>de experiencia</span>
+      <span>Especialistas certificadas</span>
+    </div>
   </div>
   <div class="banner-overlay"></div>
 </header>
 
-<main class="especialidades-cards wrapper">
-  <div class="especialidad-card flow">
-    <h3>Facial</h3>
-    <div class="card-link">
-      <p>
-        Tratamientos premium de rejuvenecimiento facial con toxina botulínica,
-        ácido hialurónico y bioestimuladores para resultados naturales y
-        duraderos.
-      </p>
-      <a
-        href="{{'/es/servicios/#faciales'|relative_url}}"
-        title="Servicios de tratamientos estéticos de IVLU"
-        class="circle-arrow"
-        >→</a
-      >
-    </div>
-  </div>
-
-  <div class="especialidad-card flow">
-    <h3>Corporal</h3>
-    <div class="card-link">
-      <p>
-        Soluciones avanzadas para reducción de grasa localizada, tratamiento de
-        flacidez y mejora de la calidad cutánea con tecnología de vanguardia.
-      </p>
-      <a
-        href="{{'/es/servicios/#corporales'|relative_url}}"
-        title="Servicios de tratamientos estéticos de IVLU"
-        class="circle-arrow"
-        >→</a
-      >
-    </div>
-  </div>
-
-  <div class="especialidad-card flow">
-    <h3>Cuidado capilar</h3>
-    <div class="card-link">
-      <p>
-        Restauración capilar de precisión con microinjerto FUE HD y terapias
-        regenerativas para combatir la pérdida de cabello de forma definitiva.
-      </p>
-      <a
-        href="{{'/es/servicios/#capilares'|relative_url}}"
-        title="Servicios de tratamientos estéticos de IVLU"
-        class="circle-arrow"
-        >→</a
-      >
-    </div>
-  </div>
-
-  <div class="especialidad-card flow">
-    <h3>Tecnologías</h3>
-    <div class="card-link">
-      <p>
-        Equipamiento premium certificado internacionalmente incluyendo
-        Ultherapy, Morpheus8 y otras tecnologías exclusivas para
-        transformaciones notables.
-      </p>
-      <a href="{{'/es/tecnologias/'|relative_url}}" class="circle-arrow">→</a>
-    </div>
-  </div>
-</main>
-
-<section class="home_about wrapper">
-  <div class="two_columns two_columns_left">
-    <div class="flow">
-      <h2 class="content-title">Bienvenido a nuestro consultorio</h2>
-      <p class="subtitle">
-        Descubre por qué somos la clínica estética líder en Bogotá
-      </p>
-      <p>
-        Con más de 5.000 pacientes satisfechas y una tasa de satisfacción del
-        98%, en IVLU no solo realizamos tratamientos - creamos experiencias
-        transformadoras. Bajo el liderazgo de la Dra. Luisa y la Dra. Ivonne,
-        cada procedimiento es una obra maestra de precisión médica y
-        personalización.
-      </p>
-      <a href="{{'/es/contacto/'|relative_url}}" class="buttons btn-secondary"
-        >Resuelve tus dudas</a
-      >
-    </div>
-    <img
-      src="{{ '/assets/images/team.avif' | relative_url }}"
-      width="598"
-      height="504"
-      alt="Logo de IVLU - Clínica estética líder en Bogotá"
-      loading="lazy"
-      decoding="async"
-    />
+<section class="home-categorias wrapper" aria-label="Áreas de especialidad">
+  <p class="home-eyebrow">Nuestras áreas de especialidad</p>
+  <div class="home-categorias-grid">
+    <a href="{{'/es/servicios/#faciales'|relative_url}}" class="home-categoria" title="Tratamientos faciales IVLU">
+      <h3>Facial</h3>
+      <p>Toxina botulínica, ácido hialurónico y bioestimuladores para resultados naturales y duraderos.</p>
+      <span class="home-categoria-link">Ver tratamientos →</span>
+    </a>
+    <a href="{{'/es/servicios/#corporales'|relative_url}}" class="home-categoria" title="Tratamientos corporales IVLU">
+      <h3>Corporal</h3>
+      <p>Reducción de grasa localizada, tratamiento de flacidez y mejora cutánea con tecnología avanzada.</p>
+      <span class="home-categoria-link">Ver tratamientos →</span>
+    </a>
+    <a href="{{'/es/servicios/#capilares'|relative_url}}" class="home-categoria" title="Tratamientos capilares IVLU">
+      <h3>Cuidado capilar</h3>
+      <p>Microinjerto FUE HD y terapias regenerativas para combatir la caída de cabello definitivamente.</p>
+      <span class="home-categoria-link">Ver tratamientos →</span>
+    </a>
+    <a href="{{'/es/tecnologias/'|relative_url}}" class="home-categoria" title="Tecnologías estéticas IVLU">
+      <h3>Tecnologías</h3>
+      <p>Ultherapy, Morpheus8 y tecnologías certificadas internacionalmente para transformaciones notables.</p>
+      <span class="home-categoria-link">Ver tecnologías →</span>
+    </a>
   </div>
 </section>
 
-<section class="wrapper bg_full">
+<section class="home-section-tinted">
+  <div class="wrapper">
+    <div class="home-trust">
+      <div class="flow">
+        <p class="home-eyebrow">¿Por qué elegir IVLU?</p>
+        <h2>Más de 5.000 pacientes confían en nosotras</h2>
+        <ul class="home-trust-pillars">
+          <li>
+            <h3>Médicas especialistas certificadas</h3>
+            <p>La Dra. Luisa y la Dra. Ivonne llevan más de 10 años transformando vidas con rigor clínico y resultados comprobados.</p>
+          </li>
+          <li>
+            <h3>Tecnología de élite mundial</h3>
+            <p>Solo usamos equipos certificados internacionalmente: Ultherapy, Morpheus8 y protocolos avalados por evidencia científica.</p>
+          </li>
+          <li>
+            <h3>Seguimiento personalizado</h3>
+            <p>Cada tratamiento incluye evaluación inicial, plan personalizado y acompañamiento hasta obtener los resultados que mereces.</p>
+          </li>
+        </ul>
+        <a href="{{'/es/contacto/'|relative_url}}" class="buttons btn-secondary">Agenda tu consulta inicial</a>
+      </div>
+      <img
+        src="{{ '/assets/images/team.avif' | relative_url }}"
+        width="598"
+        height="504"
+        alt="Dra. Luisa y Dra. Ivonne, especialistas de la clínica estética IVLU en Bogotá"
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="home-treatments-section wrapper">
   <div class="flow seccion">
-    <h2>Conoce algunos de nuestros tratamientos destacados.</h2>
-    <p>
-      Invertimos en tecnología de élite mundial certificada para garantizar tus
-      resultados:
-    </p>
-    <blockquote class="highlight-testimonial">
-      <p>
-        <i
-          >"En IVLU no seguimos tendencias - las creamos. Cada tecnología que
-          incorporamos está respaldada por estudios científicos y resultados
-          comprobados."</i
-        >
-      </p>
-      <cite>Dra. Luisa & Dra. Ivonne</cite>
-    </blockquote>
+    <p class="home-eyebrow">Tratamientos destacados</p>
+    <h2>Tecnología de élite para resultados reales</h2>
   </div>
   <div class="three_columns">
     <div class="flow treatments">
@@ -147,12 +127,12 @@ dateModified: "2025-03-05"
         src="{{ '/assets/images/tratamiento-ultheraoy-tratamiento-bogota.avif' | relative_url }}"
         width="334"
         height="334"
-        alt="Logo de IVLU - Clínica estética líder en Bogotá"
+        alt="Tratamiento Ultherapy con ultrasonido focalizado en IVLU Bogotá"
         loading="lazy"
         decoding="async"
       />
-      <h4>Ultherapy en Bogotá</h4>
-      <p>Tratamiento no invasivo con ultrasonido que eleva y tensa la piel.</p>
+      <h3>Ultherapy en Bogotá</h3>
+      <p>Eleva y tensa la piel sin cirugía usando ultrasonido focalizado de alta intensidad para estimular colágeno.</p>
       {% include button.html %}
     </div>
     <div class="flow treatments">
@@ -160,12 +140,12 @@ dateModified: "2025-03-05"
         src="{{ '/assets/images/tratamiento-implante-capilar.avif' | relative_url }}"
         width="334"
         height="334"
-        alt="Logo de IVLU - Clínica estética líder en Bogotá"
+        alt="Implante capilar FUE HD para restauración de cabello en IVLU Bogotá"
         loading="lazy"
         decoding="async"
       />
-      <h4>Implante capilar Bogotá</h4>
-      <p>Trasplante de folículos para restaurar cabello en zonas calvas.</p>
+      <h3>Implante capilar</h3>
+      <p>Recupera cabello natural y permanente con microinjerto FUE HD — resultados definitivos en una sola sesión.</p>
       {% include button.html %}
     </div>
     <div class="flow treatments">
@@ -173,211 +153,35 @@ dateModified: "2025-03-05"
         src="{{ '/assets/images/tratamiento-morpheus-8.avif' | relative_url }}"
         width="334"
         height="334"
-        alt="Logo de IVLU - Clínica estética líder en Bogotá"
+        alt="Tratamiento Morpheus8 con radiofrecuencia fraccionada en IVLU Bogotá"
         loading="lazy"
         decoding="async"
       />
-      <h4>Morpheus8 en Bogotá</h4>
-      <p>Rejuvenecimiento facial avanzado con radiofrecuencia fraccionada.</p>
+      <h3>Morpheus8 en Bogotá</h3>
+      <p>Remodela y rejuvenece el rostro con radiofrecuencia fraccionada de máxima profundidad y resultados duraderos.</p>
       {% include button.html %}
     </div>
   </div>
 </section>
 
-<section class="wrapper">
-  <div class="flow">
-    <div class="testimonials-container">
-      <!-- Radio buttons para controlar el slider -->
-      <input type="radio" name="testimonial-slider" id="testimonial-1" class="testimonial-radio" checked />
-      <input type="radio" name="testimonial-slider" id="testimonial-2" class="testimonial-radio" />
-      <input type="radio" name="testimonial-slider" id="testimonial-3" class="testimonial-radio" />
-      <input type="radio" name="testimonial-slider" id="testimonial-4" class="testimonial-radio" />
-      <input type="radio" name="testimonial-slider" id="testimonial-5" class="testimonial-radio" />
-      <input type="radio" name="testimonial-slider" id="testimonial-6" class="testimonial-radio" />
-      <input type="radio" name="testimonial-slider" id="testimonial-7" class="testimonial-radio" />
-
-      <div class="testimonials-track">
-        <div class="testimonial-card">
-          <h2>IVLU</h2>
-          <h3>Cl 127 A #7-19 Consultorio 513, Bogotá</h3>
-          <div class="testimonial-rating">
-            <span class="stars">★★★★★</span>
-            <strong>Hace 6 meses</strong>
-          </div>
-          <p class="testimonial-text">"¡Mi experiencia con Ivlu ha sido increíble! Me hice un implante capilar en febrero de este año y desde el primer momento, el equipo fue muy profesional y me hicieron sentir en total confianza. La atención personalizada y el acompañamiento de la doctora Ivonne Camacho durante todo el proceso fue excepcional. Me explicó cada paso detalladamente y me brindó los cuidados necesarios para asegurar el mejor resultado. Ella siempre estuvo disponible para resolver mis dudas, lo que hizo que el proceso fuera mucho más fácil y tranquilo. Los resultados han superado mis expectativas, y ha cambiado mi vida para bien. No podría estar más feliz con mi decisión. ¡Altamente recomendado a Ivlu y su equipo de trabajo!."</p>
-          <div class="two_columns">
-            <div class="testimonial-author">
-              <span>Kevin Stiven Gallo Camacho</span>
-              <small>Cali, Colombia</small>
-            </div>
-            <div class="center">
-              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="-0.5 0 48 48" fill="#4285f4">
-                <path d="M9.827 24.514c0-5.096 3.868-9.257 8.964-9.257s8.964 4.161 8.964 9.257c0 5.096-3.868 9.257-8.964 9.257s-8.964-4.161-8.964-9.257z"/>
-                <path d="M23.071 24.514c0-2.68 2.17-4.85 4.85-4.85s4.85 2.17 4.85 4.85c0 2.68-2.17 4.85-4.85 4.85s-4.85-2.17-4.85-4.85z" fill="#ea4335"/>
-              </svg>
-              <h3>Google Reviews</h3>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-card">
-          <h2>IVLU</h2>
-          <h3>Cl 127 A #7-19 Consultorio 513, Bogotá</h3>
-          <div class="testimonial-rating">
-            <span class="stars">★★★★★</span>
-            <strong>Hace 1 mes</strong>
-          </div>
-          <p class="testimonial-text">"Muy buen consultorio, todo está bien ordenado y hay un buen sentido de la estética. A su vez la atención es cordial y amable, además el tratamiento de la alopecia sí es efectivo. He estado en tratamiento con la Dra Vanessa y es bastante directa y honesta, respecto a los resultados que uno va tener. Pero ha sido en el único lugar en que sí he podido mejorar mi alopecia que empezó desde los 25 años. Los resultados obtenidos son increíbles yo mismo no me lo podía creer, además de que no te toca ir a otro lugar para conseguir lo que necesitas para tu tratamiento. Acá te lo suministran y hasta te realizan el envío a tu casa de los productos que necesites."</p>
-          <div class="two_columns">
-            <div class="testimonial-author">
-              <span>Edgar Muñoz</span>
-              <small>Bogotá, Colombia</small>
-            </div>
-            <div class="center">
-              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="-0.5 0 48 48" fill="#4285f4">
-                <path d="M9.827 24.514c0-5.096 3.868-9.257 8.964-9.257s8.964 4.161 8.964 9.257c0 5.096-3.868 9.257-8.964 9.257s-8.964-4.161-8.964-9.257z"/>
-                <path d="M23.071 24.514c0-2.68 2.17-4.85 4.85-4.85s4.85 2.17 4.85 4.85c0 2.68-2.17 4.85-4.85 4.85s-4.85-2.17-4.85-4.85z" fill="#ea4335"/>
-              </svg>
-              <h3>Google Reviews</h3>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-card">
-          <h2>IVLU</h2>
-          <h3>Cl 127 A #7-19 Consultorio 513, Bogotá</h3>
-          <div class="testimonial-rating">
-            <span class="stars">★★★★★</span>
-            <strong>Hace 5 meses</strong>
-          </div>
-          <p class="testimonial-text">"El servicio que me han brindado las doctoras ha sido muy positivo. Desde la primera consulta me han tratado muy bien. Han escuchado mis síntomas y se han enfocado en tratar eficientemente la condición que tengo en mi piel. Las recomiendo 100%, son carismáticas, respetuosas y muy profesionales en su trabajo."</p>
-          <div class="two_columns">
-            <div class="testimonial-author">
-              <span>Paula Gamboa</span>
-              <small>Colombia</small>
-            </div>
-            <div class="center">
-              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="-0.5 0 48 48" fill="#4285f4">
-                <path d="M9.827 24.514c0-5.096 3.868-9.257 8.964-9.257s8.964 4.161 8.964 9.257c0 5.096-3.868 9.257-8.964 9.257s-8.964-4.161-8.964-9.257z"/>
-                <path d="M23.071 24.514c0-2.68 2.17-4.85 4.85-4.85s4.85 2.17 4.85 4.85c0 2.68-2.17 4.85-4.85 4.85s-4.85-2.17-4.85-4.85z" fill="#ea4335"/>
-              </svg>
-              <h3>Google Reviews</h3>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-card">
-          <h2>IVLU</h2>
-          <h3>Cl 127 A #7-19 Consultorio 513, Bogotá</h3>
-          <div class="testimonial-rating">
-            <span class="stars">★★★★★</span>
-            <strong>Hace 3 meses</strong>
-          </div>
-          <p class="testimonial-text">"Desde muy niña he tenido complejos con mi cabello pues he sufrido de caída excesiva y tengo un diagnóstico de alopecia. Lo que me ha llevado ha probar infinidad de productos, visitar expertas, invertir tiempo y dinero en medicamentos y nada había sido tan efectivo y gratificante como el proceso que he podido adelantar en IVLU. Realmente, llegar a este lugar y tener un tratamiento efectivo de mano de la doctora Ivonne ha sido una experiencia increíble, no solo por la calidad humana de las doctoras, sino porque ha sido un camino lleno de cambios positivos, avances muy evidentes y sobre todo un proceso 100% informado."</p>
-          <div class="two_columns">
-            <div class="testimonial-author">
-              <span>Nana Merchan</span>
-              <small>Colombia</small>
-            </div>
-            <div class="center">
-              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="-0.5 0 48 48" fill="#4285f4">
-                <path d="M9.827 24.514c0-5.096 3.868-9.257 8.964-9.257s8.964 4.161 8.964 9.257c0 5.096-3.868 9.257-8.964 9.257s-8.964-4.161-8.964-9.257z"/>
-                <path d="M23.071 24.514c0-2.68 2.17-4.85 4.85-4.85s4.85 2.17 4.85 4.85c0 2.68-2.17 4.85-4.85 4.85s-4.85-2.17-4.85-4.85z" fill="#ea4335"/>
-              </svg>
-              <h3>Google Reviews</h3>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-card">
-          <h2>IVLU</h2>
-          <h3>Cl 127 A #7-19 Consultorio 513, Bogotá</h3>
-          <div class="testimonial-rating">
-            <span class="stars">★★★★★</span>
-            <strong>Hace 5 meses</strong>
-          </div>
-          <p class="testimonial-text">"Desde muy niña he tenido complejos con mi cabello pues he sufrido de caída excesiva y tengo un diagnóstico de alopecia. Lo que me ha llevado ha probar infinidad de productos, visitar especialistas, invertir tiempo y dinero en medicamentos y nada había sido tan efectivo y gratificante como el proceso que he podido adelantar en IVLU. Realmente, llegar a este lugar y tener un tratamiento efectivo de mano de la doctora Ivonne ha sido una experiencia increíble, no solo por la calidad humana de las doctoras, sino porque ha sido un camino lleno de cambios positivos, avances muy evidentes y sobre todo un proceso 100% informado."</p>
-          <div class="two_columns">
-            <div class="testimonial-author">
-              <span>Nana Merchan</span>
-              <small>Colombia</small>
-            </div>
-            <div class="center">
-              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="-0.5 0 48 48" fill="#4285f4">
-                <path d="M9.827 24.514c0-5.096 3.868-9.257 8.964-9.257s8.964 4.161 8.964 9.257c0 5.096-3.868 9.257-8.964 9.257s-8.964-4.161-8.964-9.257z"/>
-                <path d="M23.071 24.514c0-2.68 2.17-4.85 4.85-4.85s4.85 2.17 4.85 4.85c0 2.68-2.17 4.85-4.85 4.85s-4.85-2.17-4.85-4.85z" fill="#ea4335"/>
-              </svg>
-              <h3>Google Reviews</h3>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-card">
-          <h2>IVLU</h2>
-          <h3>Cl 127 A #7-19 Consultorio 513, Bogotá</h3>
-          <div class="testimonial-rating">
-            <span class="stars">★★★★★</span>
-            <strong>Hace 1 año</strong>
-          </div>
-          <p class="testimonial-text">"Estoy encantado con la atención recibida en Ivlu. El equipo fue extremadamente profesional y amable, brindándome una experiencia excepcional en el tratamiento de alopecia, respondiendo a todas mis dudas. Recomiendo a Ivlu sin dudarlo a quienes busquen soluciones capilares de calidad. ¡Gracias por el trato excepcional y por su seguimiento durante mi tratamiento!"</p>
-          <div class="two_columns">
-            <div class="testimonial-author">
-              <span>Mauro Flores</span>
-              <small>Colombia</small>
-            </div>
-            <div class="center">
-              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="-0.5 0 48 48" fill="#4285f4">
-                <path d="M9.827 24.514c0-5.096 3.868-9.257 8.964-9.257s8.964 4.161 8.964 9.257c0 5.096-3.868 9.257-8.964 9.257s-8.964-4.161-8.964-9.257z"/>
-                <path d="M23.071 24.514c0-2.68 2.17-4.85 4.85-4.85s4.85 2.17 4.85 4.85c0 2.68-2.17 4.85-4.85 4.85s-4.85-2.17-4.85-4.85z" fill="#ea4335"/>
-              </svg>
-              <h3>Google Reviews</h3>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-card">
-          <h2>IVLU</h2>
-          <h3>Cl 127 A #7-19 Consultorio 513, Bogotá</h3>
-          <div class="testimonial-rating">
-            <span class="stars">★★★★★</span>
-            <strong>Hace 1 año</strong>
-          </div>
-          <p class="testimonial-text">"Recomiendo al 1000% a las doctoras de Ivlu! Son excelentes profesionales, desde la entrada al sitio sientes la confianza y seguridad de que estás en las mejores manos. Claro que sí iría una y mil veces más y llevaría a toda mi familia y amistades queridas sin pensarlo."</p>
-          <div class="two_columns">
-            <div class="testimonial-author">
-              <span>Kelly Jimenez</span>
-              <small>Colombia</small>
-            </div>
-            <div class="center">
-              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="-0.5 0 48 48" fill="#4285f4">
-                <path d="M9.827 24.514c0-5.096 3.868-9.257 8.964-9.257s8.964 4.161 8.964 9.257c0 5.096-3.868 9.257-8.964 9.257s-8.964-4.161-8.964-9.257z"/>
-                <path d="M23.071 24.514c0-2.68 2.17-4.85 4.85-4.85s4.85 2.17 4.85 4.85c0 2.68-2.17 4.85-4.85 4.85s-4.85-2.17-4.85-4.85z" fill="#ea4335"/>
-              </svg>
-              <h3>Google Reviews</h3>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Controles de puntos -->
-      <div class="slider-controls">
-        <label for="testimonial-1" class="slider-label"></label>
-        <label for="testimonial-2" class="slider-label"></label>
-        <label for="testimonial-3" class="slider-label"></label>
-        <label for="testimonial-4" class="slider-label"></label>
-        <label for="testimonial-5" class="slider-label"></label>
-        <label for="testimonial-6" class="slider-label"></label>
-        <label for="testimonial-7" class="slider-label"></label>
-      </div>
-    </div>
+<section class="cta-band">
+  <div class="wrapper">
+    <p class="home-eyebrow">Tu transformación comienza hoy</p>
+    <h2>Agenda tu consulta y diseñemos tu plan personalizado</h2>
+    <p>Una valoración inicial con nuestras médicas es el primer paso para lograr resultados naturales, seguros y duraderos.</p>
+    {% include button.html %}
   </div>
 </section>
+
+{% include testimonios.html %}
 
 {% include banner-doctoras.html %}
 
 <!-- Sección de ubicación mejorada con microformatos -->
-<section class="wrapper flow">
-  <h2>Nuestra clínica en Bogotá</h2>
+<section class="home-section-tinted">
+<div class="wrapper flow">
+  <p class="home-eyebrow">Dónde encontrarnos</p>
+  <h2>Nuestra clínica en el norte de Bogotá</h2>
   <div class="two_columns">
     <div class="location-details flow">
       <p>
@@ -455,4 +259,5 @@ dateModified: "2025-03-05"
       {% include button.html %}
     </div>
   </div>
+</div>
 </section>

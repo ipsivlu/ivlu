@@ -1,0 +1,37 @@
+{% if page.distintivos %}
+<section class="distintivos-section" aria-label="Distintivos y habilitaciones">
+  <div class="wrapper">
+    {% if page.distintivos.titulo %}
+      <h2 class="center">{{ page.distintivos.titulo }}</h2>
+    {% endif %}
+
+    <div class="distintivos-grid">
+      {% for distintivo in page.distintivos.lista %}
+        <div class="distintivo-protected-wrapper">
+          <!-- Capa protectora transparente -->
+          <div class="distintivo-protector-overlay"></div>
+
+          <img
+            src="{{ distintivo.src | relative_url }}"
+            alt="{{ distintivo.alt }}"
+            class="distintivo-img"
+            loading="lazy"
+            decoding="async"
+            oncontextmenu="return false;"
+            draggable="false"
+            {% if distintivo.width %}width="{{ distintivo.width }}"{% endif %}
+            {% if distintivo.height %}height="{{ distintivo.height }}"{% endif %}>
+
+          {% if distintivo.descripcion %}
+            <p class="distintivo-description">{{ distintivo.descripcion }}</p>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+
+    {% if page.distintivos.nota %}
+      <p class="distintivos-nota">{{ page.distintivos.nota }}</p>
+    {% endif %}
+  </div>
+</section>
+{% endif %}

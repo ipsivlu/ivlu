@@ -1,0 +1,26 @@
+.contact-details {
+  margin: 3rem 0;
+  font-weight: bold;
+
+  li {
+    list-style: none !important;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 1em;
+  }
+
+  li::marker {
+    list-style: none;
+  }
+}
+
+.contact-details {
+  list-style: none !important;
+}
+
+.icon {
+  margin-right: 12px;
+  width: 40px;
+  height: 40px;
+}

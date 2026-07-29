@@ -1,0 +1,33 @@
+{% if page.resultados %}
+<section class="mediforma-tinted" aria-labelledby="resultados-heading">
+  <div class="wrapper">
+    <h2 id="resultados-heading" class="center">{{ page.resultados.titulo }}</h2>
+
+    <div class="resultados-gallery">
+      <!-- Columna de texto y CTA -->
+      <div class="resultados-text">
+        <p>{{ page.resultados.texto }}</p>
+        {% if page.resultados.cta_text %}
+          <p class="resultados-cta-text">{{ page.resultados.cta_text }}</p>
+        {% endif %}
+        <div class="resultados-cta-button">
+          {% include button.html %}
+        </div>
+      </div>
+
+      <!-- Columnas de fotos -->
+      {% for foto in page.resultados.fotos %}
+        <div class="resultados-photo">
+          <img
+            src="{{ foto.src | relative_url }}"
+            alt="{{ foto.alt }}"
+            loading="lazy"
+            decoding="async"
+            {% if foto.width %}width="{{ foto.width }}"{% endif %}
+            {% if foto.height %}height="{{ foto.height }}"{% endif %}>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}

@@ -1,9 +1,9 @@
-<main class="especialidades-cards">
+<aside class="especialidades-cards" aria-label="{% if current_lang == 'en' %}Service details{% else %}Detalles del servicio{% endif %}">
   <div class="especialidad-card width">
-    <h4>{% if current_lang == 'en' %}Price{% else %}Valor{% endif %}: {{page.precios}}</h4>
+    <p class="card-title">{% if current_lang == 'en' %}Price{% else %}Valor{% endif %}: <strong>{{page.precios}}</strong></p>
   </div>
 
   <div class="especialidad-card width">
-    <h4>{% if current_lang == 'en' %}Application time{% else %}Tiempo de aplicación{% endif %}: {{page.tiempo_aplicacion}}</h4>
+    <p class="card-title">{% if current_lang == 'en' %}Application time{% else %}Tiempo de aplicación{% endif %}: <strong>{{page.tiempo_aplicacion}}</strong></p>
   </div>
-</main>
+</aside>

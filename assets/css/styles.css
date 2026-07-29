@@ -1,16 +1,18 @@
 ---
 layout: compress
 ---
-{% include css/hero.css %}
-{% include css/buttons.css %}
-{% include css/home.css %}
-{% include css/highlight_quote.css %}
-{% include css/highlight.css %}
-{% include css/cards.css %}
-{% include css/gallery.css %}
-{% include css/footer.css %}
-{% include css/pages.css %}
-{% include css/comparacion.css %}
-{% include css/contact.css %}
-{% include css/blog.css %}
-{% include css/queries.css %}
+{% include css/utilities/pages.css %}
+{% include css/components/hero.css %}
+{% include css/components/buttons.css %}
+{% include css/page-types/home.css %}
+{% include css/components/testimonios.css %}
+{% include css/components/highlight_quote.css %}
+{% include css/components/highlight.css %}
+{% include css/components/cards.css %}
+{% include css/components/gallery.css %}
+{% include css/layout-specific/footer.css %}
+{% include css/layout-specific/comparacion.css %}
+{% include css/components/contact.css %}
+{% include css/page-types/blog.css %}
+{% include css/components/faq.css %}
+{% include css/utilities/queries.css %}

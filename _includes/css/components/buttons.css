@@ -1,0 +1,102 @@
+/* CALM Button System - 2026
+   Calm Design principles: reduced cognitive load, subtle feedback,
+   accessible states, touch-friendly sizing */
+
+.buttons {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: var(--font-size-p);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+/* CALM: Accessible focus state */
+.buttons:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 3px;
+}
+
+/* CALM: Primary button - Dorado CALM */
+.btn-primary {
+  color: #2c1810;
+  background: linear-gradient(135deg, #d4b878 0%, #c9a460 100%);
+  border: 2px solid #b8944f;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.btn-primary:hover {
+  color: #2c1810;
+  background: linear-gradient(135deg, #c9a460 0%, #b8944f 100%);
+  border-color: #a88a48;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+
+.btn-primary:active {
+  background: linear-gradient(135deg, #c0a060 0%, #b09048 100%);
+  transform: translateY(0);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+/* CALM: Secondary button - subtle outlined */
+.btn-secondary {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid #d4c4a8;
+  box-shadow: none;
+}
+
+.btn-secondary:hover {
+  background: rgba(212, 196, 168, 0.15);
+  border-color: #c4b496;
+  color: #5c4a35;
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+
+.btn-secondary:active {
+  background: rgba(212, 196, 168, 0.25);
+  transform: translateY(0);
+}
+
+/* CALM: Loading/disabled states */
+.buttons:disabled,
+.buttons.is-loading {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* CALM: Optional ripple microinteraction */
+.buttons::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255,255,255,0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.4s ease, height 0.4s ease;
+}
+
+.buttons:active::after {
+  width: 300px;
+  height: 300px;
+  opacity: 0;
+}

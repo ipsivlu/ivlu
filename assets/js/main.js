@@ -650,14 +650,11 @@ class WhatsAppComponent {
     const encodedMessage = encodeURIComponent(message);
     const phoneNumber = '573228351465';
     
-    const links = {
-      mobile: `https://wa.me/${phoneNumber}?text=${encodedMessage}`,
-      desktop: `https://web.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`
-    };
-    
-    const whatsappLinks = document.querySelectorAll('a#lead_whatsapp');
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+    const whatsappLinks = document.querySelectorAll('a#lead_whatsapp, a.lead-whatsapp');
     whatsappLinks.forEach(link => {
-      link.setAttribute('href', links[this.deviceType]);
+      link.setAttribute('href', whatsappUrl);
       link.setAttribute('target', '_blank');
       link.setAttribute('rel', 'noopener noreferrer');
     });
@@ -708,43 +705,6 @@ class ScrollToTopComponent {
   }
 }
 
-// Componente de Testimoniales — swipe táctil para el slider CSS de radio buttons
-class TestimonialComponent {
-  constructor() {
-    this.containers = document.querySelectorAll('.testimonials-container');
-    if (this.containers.length) {
-      this.initSwipe();
-    }
-  }
-
-  initSwipe() {
-    this.containers.forEach(container => {
-      const radios = Array.from(container.querySelectorAll('.testimonial-radio'));
-      if (!radios.length) return;
-
-      let touchStartX = 0;
-
-      container.addEventListener('touchstart', (e) => {
-        touchStartX = e.changedTouches[0].clientX;
-      }, { passive: true });
-
-      container.addEventListener('touchend', (e) => {
-        const diff = touchStartX - e.changedTouches[0].clientX;
-        if (Math.abs(diff) < 50) return;
-
-        const currentIndex = radios.findIndex(r => r.checked);
-        const nextIndex = diff > 0
-          ? Math.min(currentIndex + 1, radios.length - 1)
-          : Math.max(currentIndex - 1, 0);
-
-        if (nextIndex !== currentIndex) {
-          radios[nextIndex].checked = true;
-        }
-      }, { passive: true });
-    });
-  }
-}
-
 // Sistema de inicialización principal
 class WebApp {
   constructor() {
@@ -760,8 +720,7 @@ class WebApp {
       this.components.set('navigation', new NavigationComponent());
       this.components.set('whatsapp', new WhatsAppComponent());
       this.components.set('scrollTop', new ScrollToTopComponent());
-      this.components.set('testimonials', new TestimonialComponent());
-      
+
       // Inicializar galerías
       const galleries = document.querySelectorAll('.gallery');
       galleries.forEach((gallery, index) => {

@@ -1,0 +1,436 @@
+
+/* Gallery section */
+.categories_services{
+
+  .category_button{
+    display: grid;
+    justify-items: center;
+  }
+
+  .category_service{
+    padding: 4em 0 2em;
+  }
+}
+
+.home_about .two_columns div{
+  display: grid;
+  align-content: center;
+}
+
+/* Estilos para la sección de ubicación */
+
+.location-details span{padding: 0;}
+
+.location-address {font-style: normal;}
+
+.location-map {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.location-map img,
+.location-map iframe {
+  width: 100%;
+  height: 480;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* Estilos adicionales responsive */
+@media screen and (max-width: 768px) {
+  .stats-container,
+  .blog-posts-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .testimonial-card,
+  .stat-box,
+  .blog-post {
+    margin-bottom: 1.5rem;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+  }
+}
+
+/* Clases de utilidad adicionales */
+.subtitle {
+  color: var(--color-gray);
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  font-weight: 700;
+}
+
+/* Seccion con fondo full width */
+.bg_full {
+  background-color: var(--crystal-clear);
+    box-shadow: 0 0 0 100vmax var(--crystal-clear);
+    -webkit-clip-path: inset(0 -100vmax);
+            clip-path: inset(0 -100vmax);
+}
+
+/* =============================================
+   HOME REDESIGN — CALM STYLE
+   ============================================= */
+
+/* Eyebrow / kicker label */
+.home-eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin: 0;
+  width: auto;
+}
+
+/* Hero trust stat bar */
+.home-stat-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  margin-top: 2rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.home-stat-bar > span {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.88);
+  padding-right: 1.25rem;
+  margin-right: 1.25rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.25);
+  line-height: 1.5;
+}
+
+.home-stat-bar > span:last-child {
+  border-right: none;
+  padding-right: 0;
+  margin-right: 0;
+}
+
+.home-stat-bar strong {
+  display: block;
+  color: var(--secundary);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+@media (max-width: 480px) {
+  .home-stat-bar {
+    gap: 0.75rem;
+  }
+  .home-stat-bar > span {
+    border-right: none;
+    padding-right: 0;
+    margin-right: 0;
+  }
+}
+
+/* Tinted alternate section — warm emphasis block */
+.home-section-tinted {
+  background: var(--crystal-clear);
+  border-top: 1px solid rgba(204, 175, 102, 0.18);
+  border-bottom: 1px solid rgba(204, 175, 102, 0.18);
+}
+
+.home-section-tinted > .wrapper {
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+}
+
+/* Centered section head (eyebrow + heading) reusable */
+.calm-head {
+  text-align: center;
+  max-width: 62ch;
+  margin-inline: auto;
+}
+
+.calm-head h2 {
+  margin: 0.5rem auto 0;
+  max-width: 22ch;
+}
+
+/* --- Specialty categories — airy top-accent cards --- */
+.home-categorias {
+  padding: 5rem 0 4rem;
+}
+
+.home-categorias-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.75rem;
+  margin-top: 2.5rem;
+}
+
+.home-categoria {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid var(--primary);
+  text-decoration: none;
+  color: var(--text-dark);
+  transition: transform 0.25s ease, border-top-color 0.25s ease;
+}
+
+.home-categoria:hover {
+  border-top-color: var(--accion);
+  transform: translateY(-5px);
+  text-decoration: none;
+}
+
+.home-categoria h3 {
+  font-size: var(--font-size-h4);
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0;
+  max-width: none;
+}
+
+.home-categoria p {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+  flex: 1;
+  width: 100%;
+}
+
+.home-categoria-link {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-top: 0.25rem;
+  display: block;
+  transition: color 0.2s ease;
+}
+
+.home-categoria:hover .home-categoria-link {
+  color: var(--accion);
+}
+
+@media (max-width: 900px) {
+  .home-categorias-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.25rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .home-categorias-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- Trust / Why IVLU section — numbered editorial list --- */
+.home-trust {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4.5rem;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.home-trust-pillars {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 2.25rem;
+  display: grid;
+  gap: 1.75rem;
+  counter-reset: pillar;
+}
+
+.home-trust-pillars li {
+  counter-increment: pillar;
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  column-gap: 1.25rem;
+  align-items: start;
+}
+
+.home-trust-pillars li::before {
+  content: "0" counter(pillar);
+  grid-column: 1;
+  grid-row: 1;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--primary);
+  padding-top: 0.3rem;
+}
+
+.home-trust-pillars li h3,
+.home-trust-pillars li p {
+  grid-column: 2;
+}
+
+.home-trust-pillars h3 {
+  font-size: var(--font-size-h5);
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0 0 0.35rem;
+  max-width: none;
+}
+
+.home-trust-pillars p {
+  font-size: 0.9375rem;
+  color: #555;
+  line-height: 1.65;
+  margin: 0;
+  width: 100%;
+}
+
+.home-trust img {
+  width: 100%;
+  border-radius: var(--border-radius-imgs);
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .home-trust {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .home-trust img {
+    order: -1;
+  }
+}
+
+/* --- Dark CTA band — strong emphasis / conversion anchor (reusable) --- */
+.cta-band {
+  background: var(--text-dark);
+  text-align: center;
+}
+
+.cta-band > .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.4rem;
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+}
+
+.cta-band .home-eyebrow {
+  color: var(--primary);
+}
+
+.cta-band h2 {
+  color: var(--secundary);
+  max-width: 24ch;
+  margin: 0;
+}
+
+.cta-band p {
+  color: rgba(253, 233, 196, 0.78);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  max-width: 58ch;
+  margin: 0;
+  width: auto;
+}
+
+.cta-band .buttons {
+  margin-top: 0.4rem;
+}
+
+/* --- Treatments — calm white cards, rounded imagery, no boxes --- */
+.home-treatments-section {
+  padding-bottom: 1rem;
+}
+
+.home-treatments-section .three_columns {
+  gap: 2.5rem;
+  padding-top: 3rem;
+}
+
+.home-treatments-section .treatments {
+  padding: 0;
+  border: none;
+  border-radius: 0;
+}
+
+.home-treatments-section .treatments img {
+  border-radius: var(--border-radius-imgs);
+}
+
+.home-treatments-section .treatments:hover {
+  background-color: transparent;
+  transform: none;
+  box-shadow: none;
+}
+
+.home-treatments-section .treatments h3 {
+  color: var(--accion);
+}
+
+/* Los testimonios del home ahora usan el módulo compartido
+   {% include testimonios.html %} (ver css/components/testimonios.css) */
+
+/* --- Calm icon pillars — reusable (tech "por qué" benefits) --- */
+.calm-pillars {
+  list-style: none;
+  padding: 0;
+  margin: 3rem 0 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.calm-pillars > * {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.calm-pillars .icon {
+  display: inline-flex;
+  width: 56px;
+  height: 56px;
+}
+
+.calm-pillars .icon svg,
+.calm-pillars > * > svg {
+  width: 56px;
+  height: 56px;
+}
+
+/* Recolor pale cream icons to gold so they read on white */
+.calm-pillars svg[fill="#fde9c4"],
+.calm-pillars svg [fill="#fde9c4"] {
+  fill: var(--primary);
+}
+
+.calm-pillars h3,
+.calm-pillars h4 {
+  font-size: var(--font-size-h4);
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0;
+  max-width: none;
+}
+
+.calm-pillars p {
+  font-size: 0.9375rem;
+  color: #555;
+  line-height: 1.65;
+  margin: 0;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .calm-pillars {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    max-width: 420px;
+    margin-inline: auto;
+  }
+}

@@ -1,0 +1,30 @@
+{% comment %}
+  Módulo reutilizable de testimonios.
+  Lee la lista desde el front matter de la página: page.testimonios
+  Cada item: { texto, autor, lugar (opcional) }
+
+  Parámetros opcionales del include:
+    titulo  — encabezado (default: "Lo que dicen nuestros pacientes")
+    eyebrow — etiqueta superior (default: "Reseñas de Google ★★★★★")
+    fuente  — fuente mostrada junto al lugar (default: "Google Reviews")
+{% endcomment %}
+{% if page.testimonios and page.testimonios.size > 0 %}
+<section class="wrapper testimonios" aria-label="Testimonios de pacientes">
+  <div class="seccion testimonios-head">
+    <p class="testimonios-eyebrow">{{ include.eyebrow | default: "Reseñas de Google ★★★★★" }}</p>
+    <h2>{{ include.titulo | default: "Lo que dicen nuestros pacientes" }}</h2>
+  </div>
+  <div class="testimonios-grid">
+    {% for t in page.testimonios %}
+    <figure class="testimonio">
+      <p class="testimonios-stars" aria-hidden="true">★★★★★</p>
+      <blockquote><p>"{{ t.texto }}"</p></blockquote>
+      <figcaption>
+        <strong>{{ t.autor }}</strong>
+        {% if t.lugar %}<span>{{ t.lugar }} · {{ include.fuente | default: "Google Reviews" }}</span>{% endif %}
+      </figcaption>
+    </figure>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}

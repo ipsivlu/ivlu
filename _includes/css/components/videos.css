@@ -1,0 +1,121 @@
+/* ================================================
+   Video Embed — Zero JS / Performance / CSS Moderno
+   Técnica: <details>/<summary> + aspect-ratio nativo
+   SIN estilos inline - CSS puro con variables
+   ================================================ */
+
+.video-embed {
+  --video-bg: #0a0a0a;
+  --video-placeholder-from: #1a1a1a;
+  --video-placeholder-to: #2d2d2d;
+  --video-focus: #c8aa6e;
+  --video-shadow: rgba(0, 0, 0, 0.5);
+  --video-play-bg: rgba(0, 0, 0, 0.55);
+  --video-play-bg-hover: rgba(0, 0, 0, 0.72);
+
+  display: block;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--video-bg);
+
+  /* WIDTH: min(100%, 440px) - Responsivo sin media queries */
+  width: min(100%, 440px);
+
+  /* Centrar el video si la pantalla es más ancha que 440px */
+  margin-inline: auto;
+}
+
+/* El <summary> actúa como clic-to-play */
+.video-embed__trigger {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  border: none;
+  background: none;
+
+  /* Aspect ratio por defecto para el placeholder: 16:9 */
+  aspect-ratio: 16 / 9;
+}
+
+/* Eliminar marcadores nativos del navegador */
+.video-embed__trigger::-webkit-details-marker {
+  display: none;
+}
+
+.video-embed__trigger::marker {
+  content: "";
+}
+
+.video-embed__poster {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* Placeholder cuando no hay poster — aspect-ratio CSS nativo */
+.video-embed__poster--placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--video-placeholder-from), var(--video-placeholder-to));
+}
+
+/* Botón play superpuesto sobre el poster mediante posición absoluta */
+.video-embed__play {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: transform 0.2s ease;
+}
+
+.video-embed__trigger:hover .video-embed__play {
+  transform: scale(1.1);
+}
+
+.video-embed__trigger:hover .video-embed__play circle {
+  fill: var(--video-play-bg-hover);
+}
+
+.video-embed__play svg {
+  filter: drop-shadow(0 2px 8px var(--video-shadow));
+}
+
+/* El video ocupa todo el ancho; la altura respeta la relación de aspecto nativa */
+.video-embed__video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Cuando details está abierto, ocultar el trigger (poster + play) */
+.video-embed[open] .video-embed__trigger {
+  display: none;
+}
+
+/* Focus visible para accesibilidad por teclado */
+.video-embed__trigger:focus-visible {
+  outline: 3px solid var(--video-focus);
+  outline-offset: 2px;
+}
+
+/* ================================================
+   Utilidad accesibilidad
+   ================================================ */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

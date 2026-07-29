@@ -22,6 +22,17 @@
   
   <!-- Canonical URL con absolute_url -->
   <link rel="canonical" href="{{ page.url | absolute_url }}">
+
+  <!-- Hreflang: versiones alternativas de idioma -->
+  {% if page.ref %}
+    {% for doc in site.documents %}{% if doc.ref == page.ref and doc.url != page.url %}<link rel="alternate" hreflang="{{ doc.lang }}" href="{{ site.url }}{{ doc.url }}">
+    {% endif %}{% endfor %}
+    {% assign _alt_pages = site.pages | where: "ref", page.ref %}
+    {% for p in _alt_pages %}{% if p.url != page.url %}<link rel="alternate" hreflang="{{ p.lang }}" href="{{ site.url }}{{ p.url }}">
+    {% endif %}{% endfor %}
+    <link rel="alternate" hreflang="{{ page.lang | default: 'es' }}" href="{{ page.url | absolute_url }}">
+    <link rel="alternate" hreflang="x-default" href="{{ page.url | absolute_url }}">
+  {% endif %}
   
   <!-- Favicon con absolute_url para garantizar rutas absolutas -->
   <link rel="shortcut icon" href="{{ site.url }}/assets/images/favicon/favicon.ico" type="image/x-icon">
@@ -44,8 +55,22 @@
   {% endcapture %}
   <style>{{ critical_css }}</style>
 
-  <link rel="preload" href="{{ '/assets/css/styles.css' | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}"></noscript>
+  {% if page.layout == 'servicios' or page.layout contains 'servicio' %}
+    <link rel="preload" href="{{ '/assets/css/servicios.css' | relative_url }}" as="style" fetchpriority="high" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ '/assets/css/servicios.css' | relative_url }}"></noscript>
+  {% elsif page.layout == 'post' or page.layout == 'blog' or page.url contains '/blog/' or page.url contains '/en/blog/' %}
+    <link rel="preload" href="{{ '/assets/css/blog.css' | relative_url }}" as="style" fetchpriority="high" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ '/assets/css/blog.css' | relative_url }}"></noscript>
+  {% elsif page.url contains '/politica-privacidad' or page.url contains '/privacy-policy' or page.url contains '/terminos' or page.url contains '/terms' or page.url contains '/sobre-' or page.url contains '/about-' or page.url contains '/contact' or page.url contains '/contacto' %}
+    <link rel="preload" href="{{ '/assets/css/corporativas.css' | relative_url }}" as="style" fetchpriority="high" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ '/assets/css/corporativas.css' | relative_url }}"></noscript>
+  {% elsif page.url == '/' or page.url == '/en/' or page.url contains '/index' %}
+    <link rel="preload" href="{{ '/assets/css/home.css' | relative_url }}" as="style" fetchpriority="high" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ '/assets/css/home.css' | relative_url }}"></noscript>
+  {% else %}
+    <link rel="preload" href="{{ '/assets/css/styles.css' | relative_url }}" as="style" fetchpriority="high" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}"></noscript>
+  {% endif %}
 
   <link rel="preload" href="{{'/assets/images/banner-home-ivlu-2.avif'|relative_url}}" as="image">
   <link rel="preload" href="{{'/assets/images/banner-home-ivlu-3.avif'|relative_url}}" as="image">
