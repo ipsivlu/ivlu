@@ -21,13 +21,11 @@ sitemap: false
     <webfeeds:logo>{{ site.url }}{{ site.logo }}</webfeeds:logo>
     <webfeeds:accentColor>0085CA</webfeeds:accentColor>
     <webfeeds:related layout="card" target="browser"/>
-    
     <image>
       <url>{{ site.url }}{{ site.logo }}</url>
       <title>{{ site.name }}</title>
       <link>{{ site.url }}/en/</link>
     </image>
-
     {% assign posts = site.posts | where:"lang", "en" %}
     {% for post in posts limit:20 %}
     <item>
