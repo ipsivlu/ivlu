@@ -628,6 +628,34 @@ class GalleryComponent {
   }
 }
 
+// Componente de Video Embed (click-to-play)
+// El <details>/<summary> ya revela el <video> sin JS; esto solo dispara
+// play() al abrir para que el ícono/foto que diseñamos inicie la reproducción
+// en vez de que el usuario tenga que volver a pulsar los controles nativos.
+class VideoEmbedComponent {
+  constructor(details) {
+    this.details = details;
+    this.video = details.querySelector('video');
+
+    if (this.video) {
+      this.bindEvents();
+    }
+  }
+
+  bindEvents() {
+    this.details.addEventListener('toggle', () => {
+      if (this.details.open) {
+        this.video.play().catch(() => {
+          // Autoplay bloqueado por el navegador; el usuario aún puede
+          // usar los controles nativos del <video> para reproducir.
+        });
+      } else {
+        this.video.pause();
+      }
+    });
+  }
+}
+
 // Componente de WhatsApp
 class WhatsAppComponent {
   constructor() {
@@ -726,7 +754,13 @@ class WebApp {
       galleries.forEach((gallery, index) => {
         this.components.set(`gallery-${index}`, new GalleryComponent(gallery));
       });
-      
+
+      // Inicializar video embeds (click-to-play)
+      const videoEmbeds = document.querySelectorAll('.video-embed');
+      videoEmbeds.forEach((details, index) => {
+        this.components.set(`video-embed-${index}`, new VideoEmbedComponent(details));
+      });
+
       this.isInitialized = true;
       console.log('✅ WebApp inicializada correctamente');
       

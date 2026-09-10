@@ -1,7 +1,10 @@
 {% comment %}
-  Componente: Video Embed — Zero JS, Performance Optimized
+  Componente: Video Embed — Zero JS base, Performance Optimized
   Técnica: <details>/<summary> — el video no carga hasta que el usuario hace clic.
-  Requiere: assets/css/video-embed.css
+  Funciona sin JS (el usuario ve los controles nativos del <video> al abrir);
+  con JS, VideoEmbedComponent (assets/js/main.js) llama a play() automáticamente
+  al hacer clic en el ícono/poster, para no requerir un segundo clic.
+  Requiere: _includes/css/components/videos.css
 
   Parámetros:
     include.src     — ruta al archivo .mp4 (obligatorio)
