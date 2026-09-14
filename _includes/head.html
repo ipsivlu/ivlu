@@ -8,17 +8,19 @@
   <title>{{ page.title | default: site.title }}</title>
   
   <!-- Open Graph Meta Tags (Facebook, WhatsApp) -->
+  {% assign _og_image = page.jpg | default: page.image | default: page.hero %}
+  {% if _og_image %}{% assign _og_image = _og_image | absolute_url %}{% else %}{% assign _og_image = site.url | append: "/img/favicon/apple-touch-icon.png" %}{% endif %}
   <meta property="og:type" content="website">
   <meta property="og:title" content="{{ page.title | default: site.title }}">
-  <meta property="og:description" content="{{ page.excerpt | default: site.description | escape }}">
-  <meta property="og:image" content="{{ site.url }}/img/favicon/apple-touch-icon.png">
+  <meta property="og:description" content="{{ page.description | default: site.description | escape }}">
+  <meta property="og:image" content="{{ _og_image }}">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
-  
+
   <!-- Twitter Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ page.title | default: site.title }}">
-  <meta name="twitter:description" content="{{ page.excerpt | default: site.description | escape }}">
-  <meta name="twitter:image" content="{{ site.url }}/img/favicon/apple-touch-icon.png">
+  <meta name="twitter:description" content="{{ page.description | default: site.description | escape }}">
+  <meta name="twitter:image" content="{{ _og_image }}">
   
   <!-- Canonical URL con absolute_url -->
   <link rel="canonical" href="{{ page.url | absolute_url }}">
