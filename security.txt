@@ -1,6 +1,6 @@
 # /security.txt
-Contact: mailto:asistentetatianaleal@gmail.com
-Expires: 2024-12-31T23:59:59.000Z
+Contact: mailto:centromedicoivlu@gmail.com
+Expires: 2027-09-19T23:59:59.000Z
 Preferred-Languages: es, en
 Canonical: https://ivlumedicinaestetica.com/security.txt
 Policy: https://ivlumedicinaestetica.com/es/informacion-paciente/

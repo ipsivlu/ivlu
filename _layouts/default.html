@@ -13,7 +13,7 @@ layout: compress
 <html lang="{{ current_lang }}">
 {% include head.html %}
 
-<body class="lang-{{ current_lang }}">
+<body class="lang-{{ current_lang }}" data-telefono="57{{ site.telefono }}" data-email="{{ site.email }}">
   <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KTP9DWNR"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -28,7 +28,7 @@ layout: compress
 
   <!-- boton whatssapp -->
   <a href="#" class="boton-whatsapp" id="lead_whatsapp"
-    title="{% if page.lang == 'es' %}WhatsApp Dra. Tatiana Leal{% else %}WhatsApp Dr. Tatiana Leal{% endif %}"
+    title="{% if current_lang == 'es' %}WhatsApp IVLU{% else %}IVLU WhatsApp{% endif %}"
     target="_blank" rel="nofollow noopener noreferrer">
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40"
       viewBox="-2.73 0 1225.016 1225.016">

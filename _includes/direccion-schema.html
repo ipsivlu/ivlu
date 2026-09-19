@@ -1,0 +1,10 @@
+{%- comment -%}
+Direccion con microdatos schema.org/PostalAddress.
+Fuente unica de verdad: las variables direccion_* de _config.yml.
+Colocar dentro de un contenedor con itemprop="address" itemscope
+itemtype="https://schema.org/PostalAddress".
+{%- endcomment -%}
+<span itemprop="streetAddress">{{ site.direccion_calle }}</span>,
+<span itemprop="addressLocality">{{ site.direccion_localidad }}</span>,
+<span itemprop="addressRegion">{{ site.direccion_ciudad }}</span>,
+<span itemprop="addressCountry">{{ site.direccion_pais }}</span>

@@ -206,13 +206,13 @@ distintivos:
     <ul>
       <li><strong>Correo electrónico:</strong> {{site.email}}</li>
       <li><strong>Teléfono:</strong> +57{{site.telefono}}</li>
-      <li><strong>Dirección postal:</strong> {{site.direccion}}</li>
+      <li><strong>Dirección postal:</strong> {% include direccion.html %}</li>
     </ul>
     
     <p>Responsable del tratamiento de datos:<br>
     IVLU S.A.S.<br>
     NIT: {{site.nit}}<br>
-    Dirección: {{site.direccion}}</p>
+    Dirección: {% include direccion.html %}</p>
   </div>
   
   <div style="margin-top: 2em;">

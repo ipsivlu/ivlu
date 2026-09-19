@@ -676,8 +676,13 @@ class WhatsAppComponent {
   setupWhatsAppLinks() {
     const message = CONFIG.MESSAGES[this.pageLanguage] || CONFIG.MESSAGES.es;
     const encodedMessage = encodeURIComponent(message);
-    const phoneNumber = '573228351465';
-    
+    // El telefono viene de _config.yml via data-telefono en <body>; no hardcodear aqui.
+    const phoneNumber = document.body.dataset.telefono;
+    if (!phoneNumber) {
+      console.warn('setupWhatsAppLinks: falta data-telefono en <body>');
+      return;
+    }
+
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
     const whatsappLinks = document.querySelectorAll('a#lead_whatsapp, a.lead-whatsapp');

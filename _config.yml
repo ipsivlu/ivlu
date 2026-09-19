@@ -4,22 +4,28 @@ url: 'https://ivlumedicinaestetica.com'
 name: Ivonne Vanessa Camacho Viancha
 title: "Centro medico IVLU en Bogotá | Dra.Luisa & Dra.Ivonne"
 description: "Rejuvenecimiento facial y restauración capilar en Bogotá. Transforma tu imagen con tecnología de vanguardia y médicos profesionales con amplia experiencia."
-email: centromedicoivlu@gmail.com
+email: &email centromedicoivlu@gmail.com
 maps: https://g.co/kgs/Eg89pm4
-direccion: "Calle 127 A #7-19 Consultorio 306, Usaquén, Bogotá"
+# === DIRECCIÓN: fuente única de verdad ===
+# Editar SOLO aquí. Toda la web (texto y datos estructurados schema.org)
+# se alimenta de estas variables vía {% include direccion.html %} o site.direccion_*
+direccion_calle: "Calle 127 A #7-19 Consultorio 306"
+direccion_localidad: "Usaquén"
+direccion_ciudad: "Bogotá"
+direccion_pais: "Colombia"
 telefono: 3228351465
 nit: 901681646
-instagram: https://www.instagram.com/ivluoficial/
-facebook: https://www.facebook.com/profile.php?id=100094015719929
-tiktok: https://www.tiktok.com/@ivluoficial
+instagram: &instagram https://www.instagram.com/ivluoficial/
+facebook: &facebook https://www.facebook.com/profile.php?id=100094015719929
+tiktok: &tiktok https://www.tiktok.com/@ivluoficial
 
 # Información del autor y social
 author:
   name: Ivonne Vanessa Camacho Viancha
-  email: centromedicoivlu@gmail.com
-  instagram: https://www.instagram.com
-  facebook: https://www.facebook.com
-  youtube: https://www.youtube.com/
+  email: *email
+  instagram: *instagram
+  facebook: *facebook
+  tiktok: *tiktok
   job_title: "Profesional en medicina estética y láser"
   bio: "La Dra. es una destacada profesional en Medicina Estética..."
 
@@ -29,9 +35,9 @@ logo: /assets/images/logo.png
 social:
   name: Dra.Luisa & Dra.Ivonne | Expertas en rejuvenecimiento
   links:
-    - https://www.instagram.com/
-    - https://www.facebook.com/
-    - https://www.youtube.com/
+    - *instagram
+    - *facebook
+    - *tiktok
 
 # Publisher
 publisher:
