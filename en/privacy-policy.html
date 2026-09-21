@@ -194,13 +194,13 @@ dateModified: "2025-03-07"
     <ul>
       <li><strong>Email:</strong> {{site.email}}</li>
       <li><strong>Phone:</strong> +57{{site.telefono}}</li>
-      <li><strong>Mailing Address:</strong> {{site.direccion}}</li>
+      <li><strong>Mailing Address:</strong> {% include direccion.html %}</li>
     </ul>
     
     <p>Data Controller:<br>
     IVLU S.A.S.<br>
     NIT (Tax ID): {{site.nit}}<br>
-    Address: {{site.direccion}}</p>
+    Address: {% include direccion.html %}</p>
   </div>
   
   <div style="margin-top: 2em;">

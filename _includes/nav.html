@@ -6,8 +6,7 @@
     <div itemscope itemtype="https://schema.org/MedicalBusiness" hidden>
       <span itemprop="name">IVLU Bogotá</span>
       <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-        <span itemprop="addressLocality">Bogotá</span>
-        <span itemprop="addressCountry">Colombia</span>
+        {% include direccion-schema.html %}
       </div>
       <span itemprop="telephone">+57{{site.telefono}}</span>
       <span itemprop="email">{{site.email}}</span>

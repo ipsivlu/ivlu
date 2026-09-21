@@ -223,10 +223,7 @@ testimonios:
         >
           <p>
             Address:
-            <span itemprop="streetAddress">Calle 127 A #7-19 Office 513</span>,
-            <span itemprop="addressLocality">Usaquén</span>,
-            <span itemprop="addressRegion">Bogotá</span>,
-            <span itemprop="addressCountry">Colombia</span>
+            {% include direccion-schema.html %}
           </p>
           <p>
             <strong>Hours:</strong>
@@ -318,7 +315,7 @@ testimonios:
             />
             <path d="M0 0h24v24H0z" style="fill: none" />
           </svg>
-          <a href="mailto:info@ivlu.com.co" itemprop="email"
+          <a href="mailto:{{site.email}}" itemprop="email"
             >Email: {{site.email}}</a
           >
         </li>

@@ -46,10 +46,10 @@ dateModified: "2025-03-07"
       <div class="faq-answer">
         <p>Four convenient options:</p>
         <ol>
-          <li>Call: +57 1 234 5678</li>
-          <li>WhatsApp: +57 312 345 6789</li>
+          <li>Call: {% include telefono.html %}</li>
+          <li>WhatsApp: {% include telefono.html %}</li>
           <li><a href="/en/contact/">Online contact form</a></li>
-          <li>Email: info@ivlu.com.co</li>
+          <li>Email: <a href="mailto:{{site.email}}">{{site.email}}</a></li>
         </ol>
         <p>New patient appointments typically book 5-7 days in advance. Urgent requests accommodated when possible.</p>
       </div>
@@ -157,7 +157,7 @@ dateModified: "2025-03-07"
           <li>Seasonal promotions</li>
           <li>Referral discounts</li>
         </ul>
-        <p>Follow our <a href="https://www.instagram.com/ivlu_clinica/" target="_blank">Instagram</a> for current offers.</p>
+        <p>Follow our <a href="{{site.instagram}}" target="_blank" rel="noopener noreferrer nofollow">Instagram</a> for current offers.</p>
       </div>
     </details>
   </div>

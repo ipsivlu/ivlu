@@ -1,0 +1,6 @@
+{%- comment -%}
+Telefono en formato legible (+57 322 835 1465).
+Fuente unica de verdad: la variable telefono de _config.yml.
+{%- endcomment -%}
+{%- assign tel = site.telefono | append: "" -%}
++57 {{ tel | slice: 0, 3 }} {{ tel | slice: 3, 3 }} {{ tel | slice: 6, 4 }}
