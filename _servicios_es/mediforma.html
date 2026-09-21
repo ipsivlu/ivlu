@@ -24,10 +24,6 @@ resultados:
       alt: "Resultado de control de peso con tratamiento médico supervisado en IVLU Bogotá"
       width: 500
       height: 600
-    - src: "/assets/images/mediforma-resultados-3.avif"
-      alt: "Transformación corporal antes y después de una paciente en el programa Mediforma de control de peso en Bogotá"
-      width: 800
-      height: 602
 ---
 <script type="application/ld+json">
 {
@@ -149,6 +145,20 @@ resultados:
 </section>
 
 {% include resultados-gallery.html %}
+
+<section class="two_columns wrapper" aria-labelledby="caso-real-heading">
+  <div class="center">
+    <img src="{{'/assets/images/mediforma-resultados-3.avif' | relative_url }}"
+      alt="Antes y después real de una paciente del programa Mediforma tras perder peso con supervisión médica en Bogotá"
+      loading="lazy" decoding="async" width="800" height="602">
+  </div>
+  <div class="flow">
+    <h2 id="caso-real-heading" class="content-title">Así se ve un cambio real con el programa Mediforma</h2>
+    <p>Esta transformación no nació de una dieta extrema ni de pasar hambre: nació de un programa médico supervisado que combina ajuste hormonal con Ozempic® o Saxenda®, seguimiento nutricional y acompañamiento psicológico constante, para que el cuerpo cambie sin sacrificar masa muscular ni salud metabólica.</p>
+    <p>La diferencia entre la foto de la izquierda y la de la derecha se construyó en meses de acompañamiento profesional real, no en promesas. Así empieza también tu propio proceso: con una consulta médica inicial en Bogotá que define tu punto de partida.</p>
+    {% include button.html %}
+  </div>
+</section>
 
 <section class="two_columns wrapper" aria-labelledby="incluye-heading">
   <div class="flow">

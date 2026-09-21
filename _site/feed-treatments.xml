@@ -1930,7 +1930,6 @@
   <video
     src="/assets/videos/medico-profesional-presenta-mediforma.mp4"
     controls
-    autoplay
     playsinline
     preload="none"
     width="450"
@@ -1981,6 +1980,16 @@
             decoding="async"
             width="500"
             height="600">
+        </div>
+      
+        <div class="resultados-photo">
+          <img
+            src="/assets/images/mediforma-resultados-3.avif"
+            alt="Transformación corporal antes y después de una paciente en el programa Mediforma de control de peso en Bogotá"
+            loading="lazy"
+            decoding="async"
+            width="800"
+            height="602">
         </div>
       
     </div>
@@ -2080,7 +2089,6 @@
   <video
     src="/assets/videos/nutricionista-mediforma.mp4"
     controls
-    autoplay
     playsinline
     preload="none"
     width="450"
@@ -2198,7 +2206,6 @@
   <video
     src="/assets/videos/entrevista-mediforma-primera-parte.MP4"
     controls
-    autoplay
     playsinline
     preload="none"
     width="450"
@@ -2246,7 +2253,6 @@
   <video
     src="/assets/videos/entrevista-mediforma-segunda-parte.MP4"
     controls
-    autoplay
     playsinline
     preload="none"
     width="450"
@@ -2294,13 +2300,59 @@
   <video
     src="/assets/videos/caso-exito-mediforma.mp4"
     controls
-    autoplay
     playsinline
     preload="none"
     width="450"
     height="800"
     class="video-embed__video"
     aria-label="Testimonio en video: caso de éxito del programa Mediforma">
+    Tu navegador no admite vídeo HTML5.
+  </video>
+</details>
+
+    
+
+
+
+
+
+
+
+
+
+<details class="video-embed" style="width: min(100%, 376px);">
+  <summary class="video-embed__trigger" aria-label="Testimonio en video: paciente logra bajar de peso en Bogotá con Mediforma" style="aspect-ratio: 450 / 800;">
+
+    
+      <img
+        src="/assets/images/mediforma-testimonio-bajar-de-peso-poster.avif"
+        alt=""
+        role="presentation"
+        class="video-embed__poster"
+        width="450"
+        height="800"
+        loading="lazy"
+        decoding="async">
+    
+
+    <span class="video-embed__play" aria-hidden="true">
+      <svg width="72" height="72" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg" focusable="false">
+        <circle cx="36" cy="36" r="36" fill="rgba(0,0,0,0.55)"/>
+        <path d="M28 22 L52 36 L28 50 Z" fill="white"/>
+      </svg>
+    </span>
+
+  </summary>
+
+  <video
+    src="/assets/videos/mediforma-testimonio-bajar-de-peso-bogota.mp4"
+    controls
+    playsinline
+    preload="none"
+    width="450"
+    height="800"
+    class="video-embed__video"
+    aria-label="Testimonio en video: paciente logra bajar de peso en Bogotá con Mediforma">
     Tu navegador no admite vídeo HTML5.
   </video>
 </details>
@@ -2398,7 +2450,6 @@
   <video
     src="/assets/videos/recomendaciones-wegovy-mediforma.mp4"
     controls
-    autoplay
     playsinline
     preload="none"
     width="450"
