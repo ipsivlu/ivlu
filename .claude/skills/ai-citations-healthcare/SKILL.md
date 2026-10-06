@@ -226,7 +226,6 @@ Artículos recomendados (2,000-4,000 palabras cada uno):
 <title>Programa médico de control de peso en Bogotá | Mediforma – IVLU</title>
 <meta name="description" content="Programa médico de pérdida de peso con Ozempic y Saxenda bajo supervisión. Evaluación médica, nutricionista y psicología incluidos. Consulta desde $150.000.">
 <meta name="author" content="Dra. Ivonne Vanessa Camacho Viancha">
-<meta name="keywords" content="control de peso médico, Ozempic Bogotá, Saxenda, pérdida de peso">
 ```
 
 ## Métricas para IA (Aún en Desarrollo)

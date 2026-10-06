@@ -291,16 +291,16 @@ H4: Preguntas frecuentes, información técnica
 **Scarcity (Escasez):**
 ```html
 <section class="urgency">
-  <p>Solo <strong>3 cupos disponibles</strong> este mes para valoración inicial.</p>
-  <p>La agenda del Dr. [Nombre] está completa hasta julio 2026.</p>
+  <!-- Solo si el dato es real y verificable; nunca escasez inventada -->
+  <p>[dato: cupos reales disponibles] para valoración inicial este mes.</p>
 </section>
 ```
 
 **Authority (Autoridad):**
 ```html
 <section class="credentials">
-  <p>Más de <strong>15 años de experiencia</strong> tratando [condición] en Bogotá.</p>
-  <p>Miembro de la Sociedad Colombiana de [Especialidad] desde 2010.</p>
+  <p>[dato: años de experiencia] tratando [condición] en Bogotá.</p>
+  <p>Miembro de la Sociedad Colombiana de [Especialidad] desde [dato: año].</p>
   <p>Formado en [Universidad de prestigio] con especialización en [Sub-especialidad].</p>
 </section>
 ```
@@ -439,7 +439,7 @@ H4: Preguntas frecuentes, información técnica
 ### Primer párrafo contesta la intención
 ```html
 <p class="lead">
-  Si sufre de [condición], el tratamiento X le ofrece alivio en 2 semanas y recuperación completa en 6. Más de 500 pacientes tratados en Bogotá desde 2010.
+  Si sufre de [condición], el tratamiento X le ofrece alivio en 2 semanas y recuperación completa en 6. [dato: pacientes tratados y año de inicio, solo si son reales].
 </p>
 ```
 
@@ -457,12 +457,12 @@ H4: Preguntas frecuentes, información técnica
 ### Sección de credenciales (E-E-A-T)
 ```html
 <section>
-  <h2>Por qué más de 500 pacientes en Bogotá nos eligen</h2>
+  <h2>Por qué [dato: número real de pacientes] en Bogotá nos eligen</h2>
   <ul>
-    <li><strong>15+ años de experiencia</strong> exclusiva en [condición]</li>
-    <li><strong>Miembro de la Sociedad Colombiana de [Especialidad]</strong> desde 2010</li>
+    <li><strong>[dato: años de experiencia]</strong> exclusiva en [condición]</li>
+    <li><strong>Miembro de la Sociedad Colombiana de [Especialidad]</strong> desde [dato: año]</li>
     <li><strong>Formado en [Universidad]</strong> con especialización en [Sub-especialidad]</li>
-    <li><strong>4.9★ en Google Reviews</strong> con más de 200 verificaciones</li>
+    <li><strong>[dato: calificación real] en Google Reviews</strong> con [dato: número de reseñas]</li>
   </ul>
 </section>
 ```

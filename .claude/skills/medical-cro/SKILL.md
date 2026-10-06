@@ -30,10 +30,9 @@ Optimiza páginas de servicios médicos y de salud para aumentar la tasa de conv
 ### 2. CTAs Estratégicos
 
 **Distribución ideal:**
-- Mínimo 3-4 CTAs por página (header, mitad de contenido, final)
+- Un solo botón sólido por pantalla y máximo 2 CTAs en la primera pantalla (método web). El CTA se repite al cierre de cada bloque largo, nunca dos sólidos a la vez
 - Textos claros: "Agendar consulta", "Solicitar información", "Consultar disponibilidad"
 - WhatsApp directo como alternativa (reduce fricción)
-- Urgencia suave: "Cupos limitados", "Últimos disponibles este mes"
 
 ### 3. Chat/Chatbot
 
@@ -79,7 +78,6 @@ Optimiza páginas de servicios médicos y de salud para aumentar la tasa de conv
 - Tasa de conversión: 3-5% es aceptable, 8%+ es excelente
 - Tasa de rebote: <50% es ideal
 - Tiempo en página: >2 minutos indica interés real
-- Clics en CTA: mínimo 10-15% de visitantes
 - Formularios completados: ratio vs visitas totales
 
 ## Checklist de Implementación
@@ -112,13 +110,13 @@ Optimiza páginas de servicios médicos y de salud para aumentar la tasa de conv
 ```
 Estado actual: 2 CTAs, 7 FAQs, testimonios sin fotos
 Optimización sugerida:
-- Añadir 3-4 CTAs adicionales
+- Revisar que cada pantalla tenga un solo botón sólido y que el CTA cierre cada bloque largo
 - Añadir 5-8 FAQs más (total 12-15)
 - Testimonios con fotos reales de pacientes
 - Chatbot con FAQs predefinidas
 - Sección "Equipo médico" con biografías
 - Video del programa funcionando
-- Precios claros + uruguay suave ("Cupos limitados")
+- Precios claros (solo los reales del cliente)
 ```
 
 ## Fuentes y Referencias
