@@ -12,7 +12,7 @@ dateModified: "2025-03-12"
 precios: "Cada sesión: $400.000"
 tiempo_aplicacion: "60 minutos<br><small>Requiere anestesia</small>"
 ---
-<header class="wrapper two_columns">
+<header data-hero class="wrapper two_columns">
   <div class="flow">
     <h1>Mesoterapia Capilar en Bogotá</h1>
     <p>Tratamiento avanzado para frenar la caída del cabello y estimular su crecimiento.</p>
@@ -23,7 +23,7 @@ tiempo_aplicacion: "60 minutos<br><small>Requiere anestesia</small>"
       {% endif %}
     </div>
     <div class="hero-cta-group">
-      {% include button.html %}
+      {% include button.html location="mesoterapia-capilar-boton-1" %}
       <a href="#precios-heading" class="buttons btn-secondary">Ver precios</a>
     </div>
   </div>
@@ -38,7 +38,7 @@ tiempo_aplicacion: "60 minutos<br><small>Requiere anestesia</small>"
   <div class="flow">
     <h2 class="content-title">Mesoterapia capilar: nutrición directa al folículo</h2>
     <p>La mesoterapia capilar es un tratamiento no quirúrgico que consiste en la infiltración de vitaminas, aminoácidos y factores de crecimiento directamente en el cuero cabelludo. Su objetivo es estimular el crecimiento del cabello, mejorar su salud y prevenir la caída.</p>
-    <a href="#" id="lead_whatsapp" rel="nofollow noopener noreferrer" target="_blank" title="WhatsApp IVLU" class="buttons btn-secondary">Solicita información detallada</a>
+    {% include enlace-contacto.html canal="whatsapp" clase="buttons btn-secondary" texto="Solicita información detallada" location="mesoterapia-capilar-cta-1" %}
   </div>
 </section>
 
@@ -158,6 +158,6 @@ tiempo_aplicacion: "60 minutos<br><small>Requiere anestesia</small>"
     <p class="mediforma-final-label">Fortalecimiento capilar · Bogotá</p>
     <h2 id="cta-final-heading">Activa el crecimiento de tu cabello</h2>
     <p class="mediforma-final-sub">Mesoterapia personalizada · Vitaminas y minerales · Follículos fortalecidos</p>
-    {% include button.html %}
+    {% include button.html location="mesoterapia-capilar-boton-2" %}
   </div>
 </section>

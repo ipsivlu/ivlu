@@ -12,7 +12,7 @@ dateModified: "2025-04-10"
 precios: "$3'000.000"
 tiempo_aplicacion: "15 - 30 minutes"
 ---
-<header class="wrapper two_columns">
+<header data-hero class="wrapper two_columns">
   <div class="flow">
     <h1>Cosmelan®: Effective Treatment for Facial Spots</h1>
     <p>Facial spots are common pigmentation disorders caused by excessive melanin production, the skin's main pigment. At IVLU, we use advanced technology and effective methods to safely treat facial pigmentation.</p>
@@ -23,7 +23,7 @@ tiempo_aplicacion: "15 - 30 minutes"
       {% endif %}
     </div>
     <div class="hero-cta-group">
-      {% include button.html %}
+      {% include button.html location="cosmelan-treatment-boton-1" %}
       <a href="#precios-heading" class="buttons btn-secondary">View prices</a>
     </div>
   </div>
@@ -43,7 +43,7 @@ tiempo_aplicacion: "15 - 30 minutes"
     <h3>Procedure</h3>
     <p>The treatment involves professional applications using facial masks and massage techniques that enhance absorption of depigmenting actives. A prior evaluation is necessary to determine eligibility and design a personalized plan.</p>
 
-    <a href="#" id="lead_whatsapp" rel="nofollow noopener noreferrer" target="_blank" title="WhatsApp IVLU" class="buttons btn-secondary">Request detailed information</a>
+    {% include enlace-contacto.html canal="email" clase="buttons btn-secondary" texto="Request detailed information" location="cosmelan-treatment-cta-1" %}
   </div>
 </section>
 
@@ -79,7 +79,7 @@ tiempo_aplicacion: "15 - 30 minutes"
         </div>
       </li>
       <li>
-        <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" id="Icons" width="120" height="120" fill="#fde9c4" version="1.1" viewBox="0 0 32 32"><g id="SVGRepo_iconCarrier"><style>.st0{fill:none;stroke:#fde9c4;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10}</style><path d="m3 25 2.6-4.2c1.5-2.3 4-3.8 6.8-3.8H19v0c0 2.2-1.8 4-4 4h-2" class="st0"/><path d="M15 21h8l1.2-1.6c1.1-1.5 2.9-2.4 4.8-2.4h0l-2.7 4.8c-1.4 2.6-4.2 4.2-7.1 4.2h0c-4.7 0-9.3 1.4-13.2 4h0M20 9c0 2.2-1.8 4-4 4s-4-1.8-4-4c0-3 4-7 4-7s4 4 4 7z" class="st0"/></g></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" id="Icons" width="120" height="120" fill="#fde9c4" version="1.1" viewBox="0 0 32 32"><g><style>.st0{fill:none;stroke:#fde9c4;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10}</style><path d="m3 25 2.6-4.2c1.5-2.3 4-3.8 6.8-3.8H19v0c0 2.2-1.8 4-4 4h-2" class="st0"/><path d="M15 21h8l1.2-1.6c1.1-1.5 2.9-2.4 4.8-2.4h0l-2.7 4.8c-1.4 2.6-4.2 4.2-7.1 4.2h0c-4.7 0-9.3 1.4-13.2 4h0M20 9c0 2.2-1.8 4-4 4s-4-1.8-4-4c0-3 4-7 4-7s4 4 4 7z" class="st0"/></g></svg>
         <div>
           <h3>Rejuvenating effect</h3>
           <p>Beyond depigmentation, Cosmelan® improves overall skin texture, radiance, and evenness for a visibly younger-looking complexion.</p>
@@ -148,6 +148,6 @@ tiempo_aplicacion: "15 - 30 minutes"
     <p class="mediforma-final-label">Premium depigmentation · Bogotá</p>
     <h2 id="cta-final-heading">Eliminate your spots definitively</h2>
     <p class="mediforma-final-sub">Professional Cosmelan · Customized protocol · Safe results</p>
-    {% include button.html %}
+    {% include button.html location="cosmelan-treatment-boton-2" %}
   </div>
 </section>

@@ -9,7 +9,7 @@ datePublished: "2023-01-05"
 dateModified: "2025-03-07"
 ---
 
-<header class="wrapper flow">
+<header data-hero class="wrapper flow">
   <div class="text_center">
     <h1>Frequently Asked Questions</h1>
     <p>Find answers to common questions about our services. Need more details? <a href="{{'/en/contact/'|relative_url}}">Contact us directly</a> for personalized assistance.</p>
@@ -46,10 +46,10 @@ dateModified: "2025-03-07"
       <div class="faq-answer">
         <p>Four convenient options:</p>
         <ol>
-          <li>Call: {% include telefono.html %}</li>
-          <li>WhatsApp: {% include telefono.html %}</li>
+          <li>Call: {% include enlace-contacto.html canal="tel" texto=site.contact.phone_display location="faq-tel" %}</li>
+          <li>WhatsApp: {% include enlace-contacto.html canal="whatsapp" texto=site.contact.phone_display location="faq-whatsapp" %}</li>
           <li><a href="/en/contact/">Online contact form</a></li>
-          <li>Email: <a href="mailto:{{site.email}}">{{site.email}}</a></li>
+          <li>Email: {% include enlace-contacto.html canal="email" texto=site.contact.email location="faq-email" %}</li>
         </ol>
         <p>New patient appointments typically book 5-7 days in advance. Urgent requests accommodated when possible.</p>
       </div>

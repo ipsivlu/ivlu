@@ -12,7 +12,7 @@ dateModified: "2025-04-10"
 precios: "$3'000.000"
 tiempo_aplicacion: "15 - 30 minutos"
 ---
-<header class="wrapper two_columns">
+<header data-hero class="wrapper two_columns">
   <div class="flow">
     <h1>Cosmelan®: Tratamiento Efectivo para Manchas Faciales</h1>
     <p>Las manchas en el rostro son alteraciones comunes de la pigmentación causadas por una producción excesiva de melanina, el principal pigmento de la piel. En IVLU, contamos con tecnología avanzada y métodos efectivos para tratar las manchas faciales de manera segura.</p>
@@ -23,7 +23,7 @@ tiempo_aplicacion: "15 - 30 minutos"
       {% endif %}
     </div>
     <div class="hero-cta-group">
-      {% include button.html %}
+      {% include button.html location="tratamiento-cosmelan-boton-1" %}
       <a href="#precios-heading" class="buttons btn-secondary">Ver precios</a>
     </div>
   </div>
@@ -43,7 +43,7 @@ tiempo_aplicacion: "15 - 30 minutos"
     <h3>Procedimiento</h3>
     <p>El tratamiento se realiza con aplicaciones profesionales, utilizando mascarillas faciales y técnicas de masaje que potencian la absorción de los activos despigmentantes. Es necesario realizar una valoración previa para determinar si eres apto para el tratamiento y diseñar un plan personalizado.</p>
 
-    <a href="#" id="lead_whatsapp" rel="nofollow noopener noreferrer" target="_blank" title="WhatsApp IVLU" class="buttons btn-secondary">Solicita información detallada</a>
+    {% include enlace-contacto.html canal="whatsapp" clase="buttons btn-secondary" texto="Solicita información detallada" location="tratamiento-cosmelan-cta-1" %}
   </div>
 </section>
 
@@ -79,7 +79,7 @@ tiempo_aplicacion: "15 - 30 minutos"
         </div>
       </li>
       <li>
-        <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" id="Icons" width="120" height="120" fill="#fde9c4" version="1.1" viewBox="0 0 32 32"><g id="SVGRepo_iconCarrier"><style>.st0{fill:none;stroke:#fde9c4;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10}</style><path d="m3 25 2.6-4.2c1.5-2.3 4-3.8 6.8-3.8H19v0c0 2.2-1.8 4-4 4h-2" class="st0"/><path d="M15 21h8l1.2-1.6c1.1-1.5 2.9-2.4 4.8-2.4h0l-2.7 4.8c-1.4 2.6-4.2 4.2-7.1 4.2h0c-4.7 0-9.3 1.4-13.2 4h0M20 9c0 2.2-1.8 4-4 4s-4-1.8-4-4c0-3 4-7 4-7s4 4 4 7z" class="st0"/></g></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" id="Icons" width="120" height="120" fill="#fde9c4" version="1.1" viewBox="0 0 32 32"><g><style>.st0{fill:none;stroke:#fde9c4;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10}</style><path d="m3 25 2.6-4.2c1.5-2.3 4-3.8 6.8-3.8H19v0c0 2.2-1.8 4-4 4h-2" class="st0"/><path d="M15 21h8l1.2-1.6c1.1-1.5 2.9-2.4 4.8-2.4h0l-2.7 4.8c-1.4 2.6-4.2 4.2-7.1 4.2h0c-4.7 0-9.3 1.4-13.2 4h0M20 9c0 2.2-1.8 4-4 4s-4-1.8-4-4c0-3 4-7 4-7s4 4 4 7z" class="st0"/></g></svg>
         <div>
           <h3>Efecto rejuvenecedor</h3>
           <p>Además de despigmentar, Cosmelan® mejora la textura, luminosidad y firmeza de la piel, devolviendo un aspecto más joven y saludable al rostro.</p>
@@ -148,6 +148,6 @@ tiempo_aplicacion: "15 - 30 minutos"
     <p class="mediforma-final-label">Despigmentación premium · Bogotá</p>
     <h2 id="cta-final-heading">Elimina tus manchas definitivamente</h2>
     <p class="mediforma-final-sub">Cosmelan profesional · Protocolo personalizado · Resultados seguros</p>
-    {% include button.html %}
+    {% include button.html location="tratamiento-cosmelan-boton-2" %}
   </div>
 </section>

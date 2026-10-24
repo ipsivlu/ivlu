@@ -10,7 +10,7 @@ dateModified: "2025-03-12"
 precios: "From $1,500,000"
 tiempo_aplicacion: "60 minutes<br><small>Requires anesthesia</small>"
 ---
-<header class="wrapper two_columns">
+<header data-hero class="wrapper two_columns">
   <div class="flow">
     <h1>Scalp Exosome Application in Bogotá</h1>
     <p>Regenerative therapy with <strong>10 billion exosomes</strong> that stimulates hair growth and strengthening at the cellular level.</p>
@@ -21,7 +21,7 @@ tiempo_aplicacion: "60 minutes<br><small>Requires anesthesia</small>"
       {% endif %}
     </div>
     <div class="hero-cta-group">
-      {% include button.html %}
+      {% include button.html location="exosomes-boton-1" %}
       <a href="#precios-heading" class="buttons btn-secondary">View prices</a>
     </div>
   </div>
@@ -46,7 +46,7 @@ tiempo_aplicacion: "60 minutes<br><small>Requires anesthesia</small>"
       
     </div>
 
-    <a href="#" id="lead_whatsapp" rel="nofollow noopener noreferrer" target="_blank" title="WhatsApp IVLU" class="buttons btn-secondary">Request detailed information</a>
+    {% include enlace-contacto.html canal="email" clase="buttons btn-secondary" texto="Request detailed information" location="exosomes-cta-1" %}
   </div>
 </section>
 
@@ -132,6 +132,6 @@ tiempo_aplicacion: "60 minutes<br><small>Requires anesthesia</small>"
     <p class="mediforma-final-label">Cellular regeneration · Bogotá</p>
     <h2 id="cta-final-heading">Revitalize your skin with exosomes</h2>
     <p class="mediforma-final-sub">Regenerative therapy · Hair rejuvenation · Visible results</p>
-    {% include button.html %}
+    {% include button.html location="exosomes-boton-2" %}
   </div>
 </section>

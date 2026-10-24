@@ -6,10 +6,10 @@ title: "Privacy Policy | IVLU Aesthetic Medicine Clinic"
 description: "IVLU's data protection policy outlining collection, use, and protection of personal information for patients and website users."
 image: "/assets/images/logo-ivlu.avif"
 datePublished: "2023-01-01"
-dateModified: "2025-03-07"
+dateModified: "2026-10-24"
 ---
 
-<header class="wrapper flow">
+<header data-hero class="wrapper flow">
   <div class="text_center">
     <h1>Privacy Policy</h1>
     <p>Effective: January 1, 2023</p>
@@ -21,7 +21,7 @@ dateModified: "2025-03-07"
     <h2>1. Introduction</h2>
     <p>At IVLU S.A.S. ("IVLU"), we prioritize and respect your privacy. This Privacy Policy explains how we collect, use, disclose, and protect personal information obtained through our website, medical consultations, and service delivery.</p>
     
-    <p>IVLU complies with Colombia's Data Protection Law 1581 of 2012, Decree 1377 of 2013, and relevant international standards including GDPR principles. By providing personal data, you agree to the practices described herein.</p>
+    <p>IVLU complies with Colombia's Data Protection Law 1581 of 2012, Decree 1377 of 2013 (compiled in Decree 1074 of 2015), and relevant international standards including GDPR principles. By providing personal data, you agree to the practices described herein.</p>
   </div>
   
   <div>
@@ -153,6 +153,14 @@ dateModified: "2025-03-07"
       <li>File complaints with supervisory authorities</li>
     </ul>
     <p>GDPR-specific rights apply to EU residents. CCPA provisions apply to California residents.</p>
+
+    <h3>Queries answered in 10 business days, claims in 15</h3>
+    <p>Send your request to {{ site.contact.email }} or in writing to {% include direccion.html %}, with your name, ID number, a description of the request, a reply address and any supporting documents.</p>
+    <ul>
+      <li><strong>Queries</strong> (what data we hold and how we use it): answered within 10 business days of receipt, extendable by up to 5 business days with notice.</li>
+      <li><strong>Claims</strong> (update, correct or delete data, or withdraw consent): answered within 15 business days from the day after receipt, extendable by up to 8 business days with notice. If a claim is incomplete, we will ask you to complete it within 5 days; after 2 months without a reply, the claim is considered withdrawn.</li>
+    </ul>
+    <p>Withdrawal of consent and deletion do not apply where the law or a contract requires us to keep the data, as with medical records. Once this process is complete, you may file a complaint with Colombia's data protection authority, the Superintendencia de Industria y Comercio (SIC).</p>
   </div>
   
   <div>
@@ -165,6 +173,7 @@ dateModified: "2025-03-07"
       <li><strong>Marketing cookies:</strong> Ad personalization (opt-in required)</li>
     </ul>
     <p>Manage preferences through browser settings. Note: Disabling cookies may affect site functionality.</p>
+    <p>Each service that sets cookies is listed in our <a href="{{ '/en/cookie-policy/' | relative_url }}">cookie policy</a>.</p>
   </div>
   
   <div>
@@ -192,8 +201,8 @@ dateModified: "2025-03-07"
     <h2>15. Contact Us</h2>
     <p>For privacy inquiries or data requests:</p>
     <ul>
-      <li><strong>Email:</strong> {{site.email}}</li>
-      <li><strong>Phone:</strong> +57{{site.telefono}}</li>
+      <li><strong>Email:</strong> {{ site.contact.email }}</li>
+      <li><strong>Phone:</strong> {{ site.contact.phone_display }}</li>
       <li><strong>Mailing Address:</strong> {% include direccion.html %}</li>
     </ul>
     
@@ -202,9 +211,40 @@ dateModified: "2025-03-07"
     NIT (Tax ID): {{site.nit}}<br>
     Address: {% include direccion.html %}</p>
   </div>
-  
+
+  <div>
+    <h2>16. Visitors from the United States: care is provided in Bogotá, Colombia</h2>
+    <p>IVLU is a medical practice in {{ site.direccion_ciudad }}, {{ site.direccion_pais }}. All consultations and treatments take place at our clinic in Colombia, and Colombian law governs the processing of your data. This section explains what happens to the data you send us from the United States.</p>
+
+    <h3>Data we collect: your form, your messages and website usage</h3>
+    <ul>
+      <li><strong>Contact form:</strong> the name, email, phone number and message you type, including the treatment you are interested in.</li>
+      <li><strong>Email, phone or WhatsApp:</strong> the content of the messages you choose to send us and your contact details.</li>
+      <li><strong>Usage data:</strong> pages visited, device and browser type, approximate location derived from your IP address, and the contact links you click.</li>
+    </ul>
+
+    <h3>We use it to answer you and book your consultation in Bogotá</h3>
+    <p>To answer your inquiry, schedule your consultation in Bogotá, send you preparation instructions and measure which pages and contact channels work, so we can improve the website.</p>
+
+    <h3>Kommo, Google and Cloudflare process your data; we do not sell it</h3>
+    <ul>
+      <li><strong>Kommo:</strong> receives the data from the contact form on our pages.</li>
+      <li><strong>Google Analytics, through Google Tag Manager:</strong> measures website usage.</li>
+      <li><strong>Google Maps:</strong> displays the embedded map of our location.</li>
+      <li><strong>Google Sheets / Apps Script and Cloudflare Turnstile:</strong> only once our own appointment form is enabled; they store the request and block spam.</li>
+      <li><strong>Your messaging provider</strong> (for example, WhatsApp or your email service) when you choose to contact us through it.</li>
+    </ul>
+    <p>We do not sell your personal data.</p>
+
+    <h3>Inquiry data is kept only while we handle your appointment</h3>
+    <p>Inquiry data is kept as long as needed to answer you and manage your appointment. If you become a patient, your medical record is kept for the period required by Colombian law (section 9).</p>
+
+    <h3>Access, correct or delete your data by email or phone</h3>
+    <p>You can ask to access, correct or delete your data and withdraw your consent by writing to {{ site.contact.email }} or calling {{ site.contact.phone_display }}. We follow the deadlines in section 10. Health-related data from U.S. residents is covered in our <a href="{{ '/en/consumer-health-data-privacy-notice/' | relative_url }}">Consumer Health Data Privacy Notice</a>.</p>
+  </div>
+
   <div style="margin-top: 2em;">
     <p>By using our services, you acknowledge reading and understanding this Privacy Policy.</p>
-    <p><strong>Last Updated:</strong> March 7, 2025</p>
+    <p><strong>Last Updated:</strong> October 24, 2026</p>
   </div>
 </section>

@@ -8,6 +8,15 @@ sitemap: false
 <url>
 <loc>{{ site.url }}{{ page.url | remove: "index.html" | xml_escape }}</loc>
 <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+{%- if page.ref -%}
+  {%- assign par = site.html_pages | where: "ref", page.ref | where_exp: "d", "d.url != page.url" | first -%}
+  {%- if par -%}
+{%- if page.lang == 'en' -%}{%- assign u_es = par.url -%}{%- assign u_en = page.url -%}{%- else -%}{%- assign u_es = page.url -%}{%- assign u_en = par.url -%}{%- endif %}
+<xhtml:link rel="alternate" hreflang="es" href="{{ site.url }}{{ u_es | xml_escape }}"/>
+<xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}{{ u_en | xml_escape }}"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ u_es | xml_escape }}"/>
+  {%- endif -%}
+{%- endif %}
 <changefreq>{% if page.url == "/" %}daily{% else %}weekly{% endif %}</changefreq>
 <priority>{% if page.url == "/" %}1.0{% elsif page.url contains "/es/" or page.url contains "/en/" %}0.9{% else %}0.8{% endif %}</priority>
 </url>{% endunless %}{% endfor %}

@@ -12,7 +12,7 @@ dateModified: "2025-03-25"
 precios: "$1'250.000"
 tiempo_aplicacion: "15 - 30 minutos"
 ---
-<header class="wrapper two_columns">
+<header data-hero class="wrapper two_columns">
   <div class="flow">
     <h1>Tratamiento Premium de Pómulos en Bogotá</h1>
     <p>Realza y define el contorno facial con pómulos armónicos que devuelven proyección, equilibrio y juventud a tu rostro</p>
@@ -23,7 +23,7 @@ tiempo_aplicacion: "15 - 30 minutos"
       {% endif %}
     </div>
     <div class="hero-cta-group">
-      {% include button.html %}
+      {% include button.html location="pomulos-boton-1" %}
       <a href="#precios-heading" class="buttons btn-secondary">Ver precios</a>
     </div>
   </div>
@@ -48,7 +48,7 @@ tiempo_aplicacion: "15 - 30 minutos"
       pómulos ayuda a restaurar el volumen perdido, redefiniendo la zona y devolviendo al rostro una expresión más
       juvenil y descansada.</p>
 
-    <a href="#" id="lead_whatsapp" rel="nofollow noopener noreferrer" target="_blank" title="WhatsApp IVLU" class="buttons btn-secondary">Solicita información detallada</a>
+    {% include enlace-contacto.html canal="whatsapp" clase="buttons btn-secondary" texto="Solicita información detallada" location="pomulos-cta-1" %}
   </div>
 </section>
 
@@ -134,6 +134,6 @@ tiempo_aplicacion: "15 - 30 minutos"
     <p class="mediforma-final-label">Pómulos definidos · Bogotá</p>
     <h2 id="cta-final-heading">Realza tu rostro hoy</h2>
     <p class="mediforma-final-sub">Ácido hialurónico premium · Proyección armónica · Resultados naturales</p>
-    {% include button.html %}
+    {% include button.html location="pomulos-boton-2" %}
   </div>
 </section>

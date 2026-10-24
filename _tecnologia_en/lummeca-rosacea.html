@@ -12,11 +12,11 @@ dateModified: "2025-03-12"
 precios: "$680.000 per session"
 tiempo_aplicacion: "30 minutes<br><small>No anesthesia required</small>"
 ---
-<header class="wrapper two_columns">
+<header data-hero class="wrapper two_columns">
   <div class="flow">
     <h1>Lumecca Intense Pulsed Light</h1>
     <p>Definitive treatment for facial redness and symptoms of different skin conditions.</p>
-    {% include button.html %}
+    {% include button.html location="lummeca-rosacea-boton-1" %}
   </div>
   <picture>
     <source srcset="{{page.hero | relative_url }}" type="image/avif">
@@ -37,7 +37,7 @@ tiempo_aplicacion: "30 minutes<br><small>No anesthesia required</small>"
     <p><strong>Intense pulsed light</strong> (IPL) is a phototherapy technology that uses a wide range of light wavelengths to treat various skin conditions.</p>
     <p>Unlike laser, which emits a single wavelength, pulsed light emits light pulses with multiple wavelengths, making it more versatile for treating different skin problems.</p>
 
-    <a href="#" id="lead_whatsapp" rel="nofollow noopener noreferrer" target="_blank" title="WhatsApp IVLU" class="buttons btn-secondary">Request detailed information</a>
+    {% include enlace-contacto.html canal="email" clase="buttons btn-secondary" texto="Request detailed information" location="lummeca-rosacea-cta-1" %}
   </div>
 </section>
 

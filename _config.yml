@@ -4,7 +4,6 @@ url: 'https://ivlumedicinaestetica.com'
 name: Ivonne Vanessa Camacho Viancha
 title: "Centro medico IVLU en Bogotá | Dra.Luisa & Dra.Ivonne"
 description: "Rejuvenecimiento facial y restauración capilar en Bogotá. Transforma tu imagen con tecnología de vanguardia y médicos profesionales con amplia experiencia."
-email: &email centromedicoivlu@gmail.com
 maps: https://g.co/kgs/Eg89pm4
 # === DIRECCIÓN: fuente única de verdad ===
 # Editar SOLO aquí. Toda la web (texto y datos estructurados schema.org)
@@ -13,7 +12,22 @@ direccion_calle: "Calle 127 A #7-19 Consultorio 306"
 direccion_localidad: "Usaquén"
 direccion_ciudad: "Bogotá"
 direccion_pais: "Colombia"
-telefono: 3228351465
+# Contacto: única fuente para enlaces (_includes/enlace-contacto.html), schema y js/canales.js.
+contact:
+  whatsapp: "573228351465"           # solo dígitos, para wa.me
+  phone: "+573228351465"             # E.164, para tel: y schema
+  phone_display: "+57 322 835 1465"
+  sms: ""                            # número +1 con SMS bidireccional; vacío = sin "Text us"
+  email: &email centromedicoivlu@gmail.com
+
+# Formulario EN (Apps Script + Turnstile). Con endpoint vacío, /en usa correo como botón principal.
+lead:
+  endpoint: ""
+  turnstile_sitekey: ""
+  site_id: ivlu
+  consent_version: "2026-11-v1"
+  privacy_url: /en/privacy-policy/
+  health_notice_url: /en/consumer-health-data-privacy-notice/   # aviso de datos de salud (Washington MHMDA, Nevada SB 370)
 nit: 901681646
 instagram: &instagram https://www.instagram.com/ivluoficial/
 facebook: &facebook https://www.facebook.com/profile.php?id=100094015719929
@@ -127,6 +141,6 @@ compress_html:
 
 #Formularios en ambos idiomas
 
-form_ingles: '<script defer>!function(a,m,o,c,r,m){a[o+c]=a[o+c]||{setMeta:function(p){this.params=(this.params||[]).concat([p])}},a[o+r]=a[o+r]||function(f){a[o+r].f=(a[o+r].f||[]).concat([f])},a[o+r]({id:"1447147",hash:"c74242a0099f539545d2feabb5bfe903",locale:"es"}),a[o+m]=a[o+m]||function(f,k){a[o+m].f=(a[o+m].f||[]).concat([[f,k]])}}(window,0,"amo_forms_","params","load","loaded");</script><script id="amoforms_script_1447147" async="async" charset="utf-8" src="https://forms.kommo.com/forms/assets/js/amoforms.js?1747842039"></script>'
+form_ingles: '<script defer>!function(a,m,o,c,r,m){a[o+c]=a[o+c]||{setMeta:function(p){this.params=(this.params||[]).concat([p])}},a[o+r]=a[o+r]||function(f){a[o+r].f=(a[o+r].f||[]).concat([f])},a[o+r]({id:"1447147",hash:"c74242a0099f539545d2feabb5bfe903",locale:"en"}),a[o+m]=a[o+m]||function(f,k){a[o+m].f=(a[o+m].f||[]).concat([[f,k]])}}(window,0,"amo_forms_","params","load","loaded");</script><script id="amoforms_script_1447147" async="async" charset="utf-8" src="https://forms.kommo.com/forms/assets/js/amoforms.js?1747842039"></script>'
 
 form_spanish: '<script defer>!function(a,m,o,c,r,m){a[o+c]=a[o+c]||{setMeta:function(p){this.params=(this.params||[]).concat([p])}},a[o+r]=a[o+r]||function(f){a[o+r].f=(a[o+r].f||[]).concat([f])},a[o+r]({id:"1446983",hash:"7a92d426608c3f8ee1dcd51d7d2418c4",locale:"es"}),a[o+m]=a[o+m]||function(f,k){a[o+m].f=(a[o+m].f||[]).concat([[f,k]])}}(window,0,"amo_forms_","params","load","loaded");</script><script id="amoforms_script_1446983" async="async" charset="utf-8" src="https://forms.kommo.com/forms/assets/js/amoforms.js?1747842148"></script>'

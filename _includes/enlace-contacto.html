@@ -1,0 +1,49 @@
+{%- comment -%}
+Único generador de enlaces de contacto del sitio: ningún wa.me, tel:, mailto: ni sms: se
+escribe a mano fuera de este include. Todo sale de site.contact.* (_config.yml) y
+js/canales.js lo mide por su destino (whatsapp_click / contact_click).
+Parámetros:
+  canal     whatsapp (por defecto) | email | tel | sms (solo si site.contact.sms)
+  location  obligatorio, data-location único en la página
+  texto     texto visible (por defecto, el del canal en _data/contacto.yml)
+  clase     clases del <a>
+  mensaje   texto prellenado de WhatsApp/SMS o cuerpo del correo
+  icono     HTML capturado (un <svg aria-hidden="true">) que va delante del texto
+  id        solo para enlaces únicos que ya usa GTM (p. ej. lead_llamada en la barra)
+  flecha    "si": añade → (enlaces secundarios)
+  itemprop  microdatos, si el bloque los usa
+Los enlaces de WhatsApp llevan además la clase lead_whatsapp (contrato con GTM, que antes
+usaba un id repetido). Las variables internas llevan prefijo ec_ porque en Jekyll las de
+un include se filtran a quien lo llama.
+{%- endcomment -%}
+{%- assign lang = page.lang | default: site.default_lang | default: 'es' -%}
+{%- assign ec_tc = site.data.contacto[lang] -%}
+{%- assign ec_canal = include.canal | default: 'whatsapp' -%}
+{%- assign ec_rel = nil -%}
+{%- assign ec_clase = include.clase -%}
+{%- case ec_canal -%}
+  {%- when 'email' -%}
+    {%- assign ec_cuerpo = include.mensaje | default: ec_tc.email_cuerpo -%}
+    {%- capture ec_href %}mailto:{{ site.contact.email }}?subject={{ ec_tc.email_asunto | url_encode | replace: '+', '%20' }}&amp;body={{ ec_cuerpo | url_encode | replace: '+', '%20' }}{% endcapture -%}
+    {%- assign ec_texto = include.texto | default: ec_tc.canal_email -%}
+  {%- when 'tel' -%}
+    {%- capture ec_href %}tel:{{ site.contact.phone }}{% endcapture -%}
+    {%- capture ec_texto_tel %}{{ ec_tc.canal_llamar }} {{ site.contact.phone_display }}{% endcapture -%}
+    {%- assign ec_texto = include.texto | default: ec_texto_tel -%}
+  {%- when 'sms' -%}
+    {%- assign ec_cuerpo = include.mensaje | default: ec_tc.sms_cuerpo -%}
+    {%- capture ec_href %}sms:{{ site.contact.sms }}?&amp;body={{ ec_cuerpo | url_encode | replace: '+', '%20' }}{% endcapture -%}
+    {%- assign ec_texto = include.texto | default: ec_tc.canal_sms -%}
+  {%- else -%}
+    {%- assign ec_mensaje = include.mensaje | default: ec_tc.wa_mensaje -%}
+    {%- capture ec_href %}https://wa.me/{{ site.contact.whatsapp }}?text={{ ec_mensaje | url_encode | replace: '+', '%20' }}{% endcapture -%}
+    {%- assign ec_texto = include.texto | default: ec_tc.canal_whatsapp -%}
+    {%- assign ec_rel = 'nofollow noopener' -%}
+    {%- assign ec_clase = ec_clase | append: ' lead_whatsapp' | strip -%}
+{%- endcase -%}
+<a href="{{ ec_href }}"{% if include.id %} id="{{ include.id }}"{% endif %}{% if ec_clase and ec_clase != '' %} class="{{ ec_clase }}"{% endif %}{% if ec_rel %} target="_blank" rel="{{ ec_rel }}"{% endif %}{% if include.itemprop %} itemprop="{{ include.itemprop }}"{% endif %} data-location="{{ include.location | default: 'sin-ubicacion' }}">
+  {%- if include.icono %}{{ include.icono }}{% endif -%}
+  {%- if include.icono %}<span>{{ ec_texto }}</span>{% else %}{{ ec_texto }}{% endif -%}
+  {%- if ec_rel %}<span class="sr-only"> {{ ec_tc.nueva_pestana }}</span>{% endif -%}
+  {%- if include.flecha %} <span class="flecha" aria-hidden="true">→</span>{% endif -%}
+</a>

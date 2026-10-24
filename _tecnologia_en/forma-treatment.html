@@ -12,11 +12,11 @@ dateModified: "2025-03-12"
 precios: "$180.000 per session"
 tiempo_aplicacion: "60 minutes<br><small>No anesthesia required</small>"
 ---
-<header class="wrapper two_columns">
+<header data-hero class="wrapper two_columns">
   <div class="flow">
     <h1>Forma Radiofrequency: Body Treatment in Bogotá</h1>
     <p>Reshape your silhouette with advanced radiofrequency and electrostimulation technology</p>
-    {% include button.html %}
+    {% include button.html location="forma-treatment-boton-1" %}
   </div>
   <img src="{{page.hero | relative_url }}" alt="{{page.alt}}" loading="lazy" decoding="async" width="520" height="520">
 </header>
@@ -30,7 +30,7 @@ tiempo_aplicacion: "60 minutes<br><small>No anesthesia required</small>"
     <h2 class="content-title">Forma Radiofrequency: Comprehensive body treatment</h2>
     <p>Forma Radiofrequency is a non-invasive treatment that uses bipolar transdermal radiofrequency applicators to stimulate collagen and elastin regeneration in the skin. This procedure is based on the use of thermal energy, which flows uniformly between the electrodes, providing a comfortable and effective thermal experience.</p>
 
-    <a href="#" id="lead_whatsapp" rel="nofollow noopener noreferrer" target="_blank" title="WhatsApp IVLU" class="buttons btn-secondary">Request detailed information</a>
+    {% include enlace-contacto.html canal="email" clase="buttons btn-secondary" texto="Request detailed information" location="forma-treatment-cta-1" %}
   </div>
 </section>
 

@@ -12,7 +12,7 @@ tiempo_aplicacion: "Each session lasts 45-90 minutes. Recommended course: 4-6 se
 precios: "From $250,000 COP (~$65 USD)"
 ---
 
-<header class="wrapper two_columns">
+<header data-hero class="wrapper two_columns">
   <div class="flow">
     <h1>Advanced cellular nutrition with customized IV vitamin, mineral & amino acid cocktails</h1>
     <p>Premium Intravenous Therapy in Bogotá</p>
@@ -23,7 +23,7 @@ precios: "From $250,000 COP (~$65 USD)"
       {% endif %}
     </div>
     <div class="hero-cta-group">
-      {% include button.html %}
+      {% include button.html location="suerotherapy-boton-1" %}
       <a href="#precios-heading" class="buttons btn-secondary">View prices</a>
     </div>
   </div>
@@ -41,7 +41,7 @@ precios: "From $250,000 COP (~$65 USD)"
     <p>IV therapy delivers homeopathic medications directly into your bloodstream. In bioregulatory medicine, it helps restore body balance, detoxify, strengthen immunity, and stimulate cellular regeneration.</p>
     <p>Our treatments use premium formulas from German laboratory Heel with scientific backing, pharmaceutical-grade quality, and active INVIMA registration for use in Colombia.</p>
 
-    <a href="#" id="lead_whatsapp" rel="nofollow noopener noreferrer" target="_blank" title="WhatsApp IVLU" class="buttons btn-secondary">Get detailed information</a>
+    {% include enlace-contacto.html canal="email" clase="buttons btn-secondary" texto="Get detailed information" location="suerotherapy-cta-1" %}
   </div>
 </section>
 
@@ -165,6 +165,6 @@ precios: "From $250,000 COP (~$65 USD)"
     <p class="mediforma-final-label">Cellular nutrition · Bogotá</p>
     <h2 id="cta-final-heading">Revitalize your organism today</h2>
     <p class="mediforma-final-sub">Intravenous therapy · Direct absorption · Immediate wellness</p>
-    {% include button.html %}
+    {% include button.html location="suerotherapy-boton-2" %}
   </div>
 </section>

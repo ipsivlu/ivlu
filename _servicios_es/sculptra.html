@@ -10,7 +10,7 @@ dateModified: "2025-03-14"
 precios: "$2'600.000"
 tiempo_aplicacion: "15 - 30 minutos"
 ---
-<header class="wrapper two_columns">
+<header data-hero class="wrapper two_columns">
   <div class="flow">
     <h1>Sculptra® - Ácido Poliláctico para el Rejuvenecimiento Natural</h1>
     <p>Sculptra® es un tratamiento avanzado basado en ácido poliláctico que estimula la producción de colágeno en la piel. Ideal para restaurar volumen y tratar la flacidez, este bioestimulador trabaja en profundidad, regenerando la dermis y atenuando arrugas tanto en el rostro como en el cuerpo.</p>
@@ -21,7 +21,7 @@ tiempo_aplicacion: "15 - 30 minutos"
       {% endif %}
     </div>
     <div class="hero-cta-group">
-      {% include button.html %}
+      {% include button.html location="sculptra-boton-1" %}
       <a href="#precios-heading" class="buttons btn-secondary">Ver precios</a>
     </div>
   </div>
@@ -36,7 +36,7 @@ tiempo_aplicacion: "15 - 30 minutos"
     <h2 class="content-title">¿En qué consiste el tratamiento Sculptra®?</h2>
     <p>Sculptra® aumenta la densidad de la dermis, recuperando volumen perdido y mejorando la firmeza de la piel. Este tratamiento ofrece resultados progresivos, visibles entre 2 y 3 meses después de la aplicación, y dura hasta 2 años. A diferencia de los rellenos tradicionales, Sculptra® no solo rellena, sino que estimula el colágeno, logrando un rejuvenecimiento natural.</p>
 
-    <a href="#" id="lead_whatsapp" rel="nofollow noopener noreferrer" target="_blank" title="WhatsApp IVLU" class="buttons btn-secondary">Solicita información detallada</a>
+    {% include enlace-contacto.html canal="whatsapp" clase="buttons btn-secondary" texto="Solicita información detallada" location="sculptra-cta-1" %}
   </div>
 </section>
 
@@ -120,6 +120,6 @@ tiempo_aplicacion: "15 - 30 minutos"
     <p class="mediforma-final-label">Colágeno natural · Bogotá</p>
     <h2 id="cta-final-heading">Recupera la juventud gradualmente</h2>
     <p class="mediforma-final-sub">Sculptra premium · Estimulación colágeno · Resultados progresivos</p>
-    {% include button.html %}
+    {% include button.html location="sculptra-boton-2" %}
   </div>
 </section>

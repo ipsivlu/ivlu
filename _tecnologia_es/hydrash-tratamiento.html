@@ -10,11 +10,11 @@ dateModified: "2025-03-12"
 published: no
 ---
 
-<header class="wrapper two_columns">
+<header data-hero class="wrapper two_columns">
   <div class="flow">
     <p>Hydrash en Bogotá</p>
     <h1>Hidratación profunda y bioestimulación facial para una piel radiante y rejuvenecida</h1>
-    {% include button.html %}
+    {% include button.html location="hydrash-tratamiento-boton-1" %}
   </div>
   <img src="{{'/assets/images/hydrash-tratamiento.avif' | relative_url }}"
     alt="Tratamiento Hydrash de hidratación profunda en IVLU" loading="lazy" decoding="async" width="520" height="520">
@@ -31,7 +31,7 @@ published: no
     <p>Hydrash representa una revolución en los tratamientos de hidratación facial, combinando la potencia del ácido hialurónico de baja densidad con un exclusivo cocktail de vitaminas, minerales, aminoácidos y péptidos bioestimulantes que actúan a múltiples niveles para transformar la calidad de la piel.</p>
     <p>A diferencia de otros tratamientos hidratantes, Hydrash no solo aporta humectación superficial, sino que estimula la producción natural de colágeno, elastina y ácido hialurónico, mejorando la estructura dérmica y devolviendo a la piel su capacidad de retener hidratación. El resultado es un rostro visiblemente más luminoso, firme y rejuvenecido desde la primera sesión.</p>
 
-    <a href="#" id="lead_whatsapp" rel="nofollow noopener noreferrer" target="_blank" title="WhatsApp IVLU" class="buttons btn-secondary">Solicita información detallada</a>
+    {% include enlace-contacto.html canal="whatsapp" clase="buttons btn-secondary" texto="Solicita información detallada" location="hydrash-tratamiento-cta-1" %}
   </div>
 </section>
 

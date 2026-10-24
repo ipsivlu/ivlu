@@ -10,7 +10,7 @@ dateModified: "2025-03-12"
 precios: "$1'200.000"
 tiempo_aplicacion: "15 - 30 minutes"
 ---
-<header class="wrapper two_columns">
+<header data-hero class="wrapper two_columns">
   <div class="flow">
     <h1>Improve Facial Folds with Hyaluronic Acid</h1>
     <p>Facial folds, especially nasolabial folds, are among the first expression lines that appear on the face due to repetitive facial muscle movements such as smiling or talking. These folds can make the face look more aged, losing its firmness and natural volume.</p>
@@ -21,7 +21,7 @@ tiempo_aplicacion: "15 - 30 minutes"
       {% endif %}
     </div>
     <div class="hero-cta-group">
-      {% include button.html %}
+      {% include button.html location="facial-folds-boton-1" %}
       <a href="#precios-heading" class="buttons btn-secondary">View prices</a>
     </div>
   </div>
@@ -39,7 +39,7 @@ tiempo_aplicacion: "15 - 30 minutes"
     <p>Hyaluronic acid treatment is an effective solution to improve the appearance of these folds.</p>
     <p>Hyaluronic acid works by filling depressed areas, restoring lost volume, and providing deep hydration. Thanks to its hydrating and regenerative properties, hyaluronic acid improves skin elasticity and firmness, achieving a smoother and rejuvenated texture. The application is precise, and results are visible immediately, with a softer face and a natural, fresh appearance.</p>
 
-    <a href="#" id="lead_whatsapp" rel="nofollow noopener noreferrer" target="_blank" class="buttons btn-secondary">Request detailed information</a>
+    {% include enlace-contacto.html canal="email" clase="buttons btn-secondary" texto="Request detailed information" location="facial-folds-cta-1" %}
   </div>
 </section>
 
@@ -112,6 +112,6 @@ tiempo_aplicacion: "15 - 30 minutes"
     <p class="mediforma-final-label">Premium fillers · Bogotá</p>
     <h2 id="cta-final-heading">Smooth your expression lines</h2>
     <p class="mediforma-final-sub">Nasolabial folds · Hyaluronic acid · Natural results</p>
-    {% include button.html %}
+    {% include button.html location="facial-folds-boton-2" %}
   </div>
 </section>

@@ -10,7 +10,7 @@ dateModified: "2025-03-12"
 precios: "$350.000"
 tiempo_aplicacion: "60 minutes <br><small>No anesthesia required</small>"
 ---
-<header class="wrapper two_columns">
+<header data-hero class="wrapper two_columns">
   <div class="flow">
     <h1>Advanced Skin Renewal with Medical Facial Peeling</h1>
     <p>Facial peeling is a non-invasive treatment that uses specific acids to exfoliate the skin in a controlled manner, improving its texture, luminosity, and tone. This process promotes cell regeneration, leaving skin softer and more even.</p>
@@ -21,7 +21,7 @@ tiempo_aplicacion: "60 minutes <br><small>No anesthesia required</small>"
       {% endif %}
     </div>
     <div class="hero-cta-group">
-      {% include button.html %}
+      {% include button.html location="facial-peeling-boton-1" %}
       <a href="#precios-heading" class="buttons btn-secondary">View prices</a>
     </div>
   </div>
@@ -38,7 +38,7 @@ tiempo_aplicacion: "60 minutes <br><small>No anesthesia required</small>"
     <h2 class="content-title">What does the Facial Peeling treatment involve?</h2>
     <p>Through the application of acids such as glycolic, salicylic, lactic, or combined formulas, we remove dead cells and stimulate skin renewal. The treatment is personalized according to your skin type and needs.</p>
 
-    <a href="#" id="lead_whatsapp" rel="nofollow noopener noreferrer" target="_blank" title="WhatsApp IVLU" class="buttons btn-secondary">Request detailed information</a>
+    {% include enlace-contacto.html canal="email" clase="buttons btn-secondary" texto="Request detailed information" location="facial-peeling-cta-1" %}
   </div>
 </section>
 
@@ -139,6 +139,6 @@ tiempo_aplicacion: "60 minutes <br><small>No anesthesia required</small>"
     <p class="mediforma-final-label">Facial renewal · Bogotá</p>
     <h2 id="cta-final-heading">Renew your skin this week</h2>
     <p class="mediforma-final-sub">Medical peeling · Skin renewal · Visible rejuvenation</p>
-    {% include button.html %}
+    {% include button.html location="facial-peeling-boton-2" %}
   </div>
 </section>

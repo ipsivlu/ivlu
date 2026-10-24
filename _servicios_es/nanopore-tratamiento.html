@@ -10,7 +10,7 @@ dateModified: "2025-03-12"
 precios: "$450.000 - $1.100.000"
 tiempo_aplicacion: "60 minutos"
 ---
-<header class="wrapper two_columns">
+<header data-hero class="wrapper two_columns">
   <div class="flow">
     <h1>Tratamiento Nanopore: Regeneración y Mejoría de la Piel con Microagujas</h1>
     <p>El tratamiento Nanopore es una técnica avanzada que utiliza micro-agujas para crear microcanales en la piel, favoreciendo la penetración de activos y vitaminas.</p>
@@ -21,7 +21,7 @@ tiempo_aplicacion: "60 minutos"
       {% endif %}
     </div>
     <div class="hero-cta-group">
-      {% include button.html %}
+      {% include button.html location="nanopore-tratamiento-boton-1" %}
       <a href="#precios-heading" class="buttons btn-secondary">Ver precios</a>
     </div>
   </div>
@@ -42,7 +42,7 @@ tiempo_aplicacion: "60 minutos"
       <li>Reducir poros dilatados: Minimiza la apariencia de los poros, logrando una piel más uniforme.</li>
       <li>Mejorar la hidratación y textura: Favorece una piel más suave, hidratada y con textura renovada.</li>
     </ul>
-    <a href="#" id="lead_whatsapp" rel="nofollow noopener noreferrer" target="_blank" title="WhatsApp IVLU" class="buttons btn-secondary">Solicita información detallada</a>
+    {% include enlace-contacto.html canal="whatsapp" clase="buttons btn-secondary" texto="Solicita información detallada" location="nanopore-tratamiento-cta-1" %}
   </div>
 </section>
 
@@ -127,6 +127,6 @@ tiempo_aplicacion: "60 minutos"
     <p class="mediforma-final-label">Nanopore revolucionario · Bogotá</p>
     <h2 id="cta-final-heading">Activa la regeneración de tu piel</h2>
     <p class="mediforma-final-sub">Tecnología de última generación · Estimulación celular · Resultados visibles</p>
-    {% include button.html %}
+    {% include button.html location="nanopore-tratamiento-boton-2" %}
   </div>
 </section>

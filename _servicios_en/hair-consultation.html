@@ -12,7 +12,7 @@ dateModified: "2025-03-12"
 precios: "$150.000"
 tiempo_aplicacion: "60 minutes"
 ---
-<header class="wrapper two_columns">
+<header data-hero class="wrapper two_columns">
   <div class="flow">
     <h1>Specialized Hair Consultation in Bogotá</h1>
     <p>The initial hair consultation is the fundamental cornerstone for addressing any problem related to your hair or scalp</p>
@@ -23,7 +23,7 @@ tiempo_aplicacion: "60 minutes"
       {% endif %}
     </div>
     <div class="hero-cta-group">
-      {% include button.html %}
+      {% include button.html location="hair-consultation-boton-1" %}
       <a href="#precios-heading" class="buttons btn-secondary">View prices</a>
     </div>
   </div>
@@ -40,7 +40,7 @@ tiempo_aplicacion: "60 minutes"
     <p>At our Ivlu Medical Center, our medical expert physician in Hair Restoration and Implants performs a comprehensive and thorough evaluation using advanced tools such as the Trichoscope, a high-resolution camera that examines the hair and scalp at a microscopic level; analyzing not only the visible condition of the hair, but also the state of the hair follicle, the scalp, and the underlying medical factors that may be affecting your hair health.</p>
     <p>This holistic approach allows us to design personalized and highly effective treatment protocols for each condition.</p>
 
-    <a href="#" id="lead_whatsapp" rel="nofollow noopener noreferrer" target="_blank" title="WhatsApp IVLU" class="buttons btn-secondary">Request detailed information</a>
+    {% include enlace-contacto.html canal="email" clase="buttons btn-secondary" texto="Request detailed information" location="hair-consultation-cta-1" %}
   </div>
 </section>
 
@@ -113,6 +113,6 @@ tiempo_aplicacion: "60 minutes"
     <p class="mediforma-final-label">Hair diagnosis · Bogotá</p>
     <h2 id="cta-final-heading">Identify the cause of your hair loss</h2>
     <p class="mediforma-final-sub">Consultation from <strong>$150.000</strong> · 60 minutes · Trichoscope HD and personalized plan</p>
-    {% include button.html %}
+    {% include button.html location="hair-consultation-boton-2" %}
   </div>
 </section>

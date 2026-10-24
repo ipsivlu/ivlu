@@ -66,7 +66,7 @@ casos_exito:
     before_image: "/assets/images/labios-sensuales-antes.avif"
     after_image: "/assets/images/labios-sensuales-despues.avif"
 ---
-<header class="wrapper two_columns">
+<header data-hero class="wrapper two_columns">
   <div class="flow">
     <h1>Premium Lip Treatment in Bogotá</h1>
     <p>Enhance the sensuality of your smile with perfectly defined, hydrated lips with natural volume</p>
@@ -77,7 +77,7 @@ casos_exito:
       {% endif %}
     </div>
     <div class="hero-cta-group">
-      {% include button.html %}
+      {% include button.html location="lips-treatment-boton-1" %}
       <a href="#precios-heading" class="buttons btn-secondary">View prices</a>
     </div>
   </div>
@@ -95,7 +95,7 @@ casos_exito:
     <p>Lip filling and contouring with hyaluronic acid is ideal for improving the harmony of your lips with the rest of your face. Enhance the sensuality of your smile, achieving defined, hydrated lips with natural volume.</p>
     <p>This treatment consists of applying hyaluronic acid to the lips to provide hydration, volume, and definition. It's an effective solution for achieving fuller lips, highlighting the profile, and lifting the corners. The results are immediate, offering a natural and harmonious improvement in lip aesthetics, with long-lasting duration.</p>
 
-    <a href="#" id="lead_whatsapp" rel="nofollow noopener noreferrer" target="_blank" title="WhatsApp IVLU" class="buttons btn-secondary">Request detailed information</a>
+    {% include enlace-contacto.html canal="email" clase="buttons btn-secondary" texto="Request detailed information" location="lips-treatment-cta-1" %}
   </div>
 </section>
 
@@ -185,6 +185,6 @@ casos_exito:
     <p class="mediforma-final-label">Defined lips · Bogotá</p>
     <h2 id="cta-final-heading">Perfect your smile today</h2>
     <p class="mediforma-final-sub">Premium volumizing · Natural contour · Harmonious results</p>
-    {% include button.html %}
+    {% include button.html location="lips-treatment-boton-2" %}
   </div>
 </section>

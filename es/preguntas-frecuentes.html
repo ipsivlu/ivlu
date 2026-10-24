@@ -9,7 +9,7 @@ datePublished: "2023-01-05"
 dateModified: "2026-06-22"
 ---
 
-<header class="wrapper flow">
+<header data-hero class="wrapper flow">
   <div class="text_center">
     <h1>Preguntas frecuentes</h1>
     <p>Aquí encontrarás respuestas a las dudas más comunes sobre nuestros tratamientos y servicios. Si no encuentras lo que buscas, no dudes en <a href="{{'/es/contacto/'|relative_url}}">contactarnos directamente</a>.</p>
@@ -53,10 +53,10 @@ dateModified: "2026-06-22"
         <div class="faq-card__a">
           <p>Agendar tu cita en el Centro Médico IVLU es muy sencillo. Puedes hacerlo a través de cualquiera de estos canales:</p>
           <ul>
-            <li>Llamándonos directamente al {% include telefono.html %}.</li>
+            <li>Llamándonos directamente al {% include enlace-contacto.html canal="tel" texto=site.contact.phone_display location="faq-tel" %}.</li>
             <li>Escribiéndonos por WhatsApp al mismo número.</li>
             <li>Completando el formulario en la sección de contacto de nuestra página web.</li>
-            <li>Enviando un correo electrónico a: <a href="mailto:{{site.email}}">{{site.email}}</a>.</li>
+            <li>Enviando un correo electrónico a: {% include enlace-contacto.html canal="email" texto=site.contact.email location="faq-email" %}.</li>
           </ul>
           <p>Para primeras consultas, te sugerimos agendar con al menos 3 a 5 días de anticipación, ya que nuestra agenda suele llenarse rápidamente.</p>
         </div>

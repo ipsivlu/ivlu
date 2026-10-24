@@ -60,7 +60,7 @@ casos_exito:
     before_image: "/assets/images/toxina-preventivo-antes.avif"
     after_image: "/assets/images/toxina-preventivo-despues.avif"
 ---
-<header class="wrapper two_columns">
+<header data-hero class="wrapper two_columns">
   <div class="flow">
     <h1>Toxina Botulínica para Tercio Superior en Bogotá</h1>
     <p>Rejuvenece tu mirada y elimina arrugas de expresión con técnicas avanzadas y resultados naturales</p>
@@ -71,7 +71,7 @@ casos_exito:
       {% endif %}
     </div>
     <div class="hero-cta-group">
-      {% include button.html %}
+      {% include button.html location="toxina-botulinica-tercio-superior-boton-1" %}
       <a href="#precios-heading" class="buttons btn-secondary">Ver precios</a>
     </div>
   </div>
@@ -89,7 +89,7 @@ casos_exito:
     <p>En IVLU, utilizamos exclusivamente Dysport y Xeomin, las formulaciones más avanzadas de toxina botulínica del mercado, para garantizar resultados naturales, precisos y armónicos, realzando tu belleza sin modificar tu expresividad esencial.</p>
     
 
-    <a href="#" id="lead_whatsapp" rel="nofollow noopener noreferrer" target="_blank" title="WhatsApp IVLU" class="buttons btn-secondary">Solicita información detallada</a>
+    {% include enlace-contacto.html canal="whatsapp" clase="buttons btn-secondary" texto="Solicita información detallada" location="toxina-botulinica-tercio-superior-cta-1" %}
   </div>
 </section>
 
@@ -192,6 +192,6 @@ casos_exito:
     <p class="mediforma-final-label">Rejuvenecimiento facial · Bogotá</p>
     <h2 id="cta-final-heading">Suaviza tu mirada naturalmente</h2>
     <p class="mediforma-final-sub">Toxina botulínica premium · Arrugas del tercio superior · Resultados naturales</p>
-    {% include button.html %}
+    {% include button.html location="toxina-botulinica-tercio-superior-boton-2" %}
   </div>
 </section>

@@ -66,7 +66,7 @@ casos_exito:
     before_image: "/assets/images/labios-sensuales-antes.avif"
     after_image: "/assets/images/labios-sensuales-despues.avif"
 ---
-<header class="wrapper two_columns">
+<header data-hero class="wrapper two_columns">
   <div class="flow">
     <h1>Tratamiento Premium de Labios en Bogotá</h1>
     <p>Realza la sensualidad de tu sonrisa con labios perfectamente definidos, hidratados y con volumen natural</p>
@@ -77,7 +77,7 @@ casos_exito:
       {% endif %}
     </div>
     <div class="hero-cta-group">
-      {% include button.html %}
+      {% include button.html location="labios-boton-1" %}
       <a href="#precios-heading" class="buttons btn-secondary">Ver precios</a>
     </div>
   </div>
@@ -95,7 +95,7 @@ casos_exito:
     <p>El relleno y perfilado de labios con ácido hialurónico es ideal para mejorar la armonía de tus labios con el resto del rostro. Realza la sensualidad de tu sonrisa, logrando labios definidos, hidratados y con volumen natural.</p>
     <p>Este tratamiento consiste en la aplicación de ácido hialurónico en los labios para aportar hidratación, volumen y definición. Es una solución efectiva para lograr labios más gruesos, resaltar el perfil y elevar las comisuras. Los resultados son inmediatos, ofreciendo una mejora natural y armónica en la estética de los labios, con una duración prolongada.</p>
 
-    <a href="#" id="lead_whatsapp" rel="nofollow noopener noreferrer" target="_blank" title="WhatsApp IVLU" class="buttons btn-secondary">Solicita información detallada</a>
+    {% include enlace-contacto.html canal="whatsapp" clase="buttons btn-secondary" texto="Solicita información detallada" location="labios-cta-1" %}
   </div>
 </section>
 
@@ -185,6 +185,6 @@ casos_exito:
     <p class="mediforma-final-label">Labios definidos · Bogotá</p>
     <h2 id="cta-final-heading">Perfecciona tu sonrisa hoy</h2>
     <p class="mediforma-final-sub">Ácido hialurónico premium · Efecto inmediato · Resultados naturales</p>
-    {% include button.html %}
+    {% include button.html location="labios-boton-2" %}
   </div>
 </section>

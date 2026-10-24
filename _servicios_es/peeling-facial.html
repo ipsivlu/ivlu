@@ -10,7 +10,7 @@ dateModified: "2025-03-12"
 precios: "$350.000"
 tiempo_aplicacion: "60 minutos <br><small>No requiere anestesia</small>"
 ---
-<header class="wrapper two_columns">
+<header data-hero class="wrapper two_columns">
   <div class="flow">
     <h1>Renovación Cutánea Avanzada con Peeling Facial Médico</h1>
     <p>El peeling facial es un tratamiento no invasivo que utiliza ácidos específicos para exfoliar la piel de manera controlada, mejorando su textura, luminosidad y tono. Este proceso promueve la regeneración celular, dejando la piel más suave y homogénea.</p>
@@ -21,7 +21,7 @@ tiempo_aplicacion: "60 minutos <br><small>No requiere anestesia</small>"
       {% endif %}
     </div>
     <div class="hero-cta-group">
-      {% include button.html %}
+      {% include button.html location="peeling-facial-boton-1" %}
       <a href="#precios-heading" class="buttons btn-secondary">Ver precios</a>
     </div>
   </div>
@@ -38,7 +38,7 @@ tiempo_aplicacion: "60 minutos <br><small>No requiere anestesia</small>"
     <h2 class="content-title">¿En qué consiste el tratamiento Peeling facial?</h2>
     <p>Mediante la aplicación de ácidos como glicólico, salicílico, láctico o combinados, eliminamos células muertas y estimulamos la renovación cutánea. El tratamiento es personalizado según el tipo de piel y sus necesidades.</p>
 
-    <a href="#" id="lead_whatsapp" rel="nofollow noopener noreferrer" target="_blank" title="WhatsApp IVLU" class="buttons btn-secondary">Solicita información detallada</a>
+    {% include enlace-contacto.html canal="whatsapp" clase="buttons btn-secondary" texto="Solicita información detallada" location="peeling-facial-cta-1" %}
   </div>
 </section>
 
@@ -139,6 +139,6 @@ tiempo_aplicacion: "60 minutos <br><small>No requiere anestesia</small>"
     <p class="mediforma-final-label">Renovación facial · Bogotá</p>
     <h2 id="cta-final-heading">Renueva tu piel esta semana</h2>
     <p class="mediforma-final-sub">Peeling químico personalizado · Brillo inmediato · Textura mejorada</p>
-    {% include button.html %}
+    {% include button.html location="peeling-facial-boton-2" %}
   </div>
 </section>

@@ -103,7 +103,7 @@ resultados:
 }
 </script>
 
-<header class="wrapper two_columns">
+<header data-hero class="wrapper two_columns">
   <div class="flow">
     <h1>Mediforma: programa médico de control de peso en Bogotá</h1>
     <p>Mediforma es un programa clínico diseñado para ayudarte a bajar de peso de forma saludable y sostenible. Combinamos medicina familiar, nutrición personalizada y psicología clínica, con tratamiento farmacológico cuando el médico lo indica.</p>
@@ -114,7 +114,7 @@ resultados:
       <span class="hero-stat"><strong>Equipo:</strong> Médico · Nutricionista · Psicóloga</span>
     </div>
     <div class="hero-cta-group">
-      {% include button.html %}
+      {% include button.html location="mediforma-boton-1" %}
       <a href="#incluye-heading" class="buttons btn-secondary">Ver qué incluye</a>
     </div>
   </div>
@@ -134,7 +134,7 @@ resultados:
     <h2 id="programa-heading">Un programa para mejorar tu salud desde adentro</h2>
     <p>Mediforma no es una dieta rápida. Es un programa multidisciplinario que une medicina, nutrición, psicología y estética para alcanzar un peso saludable, mejorar tu composición corporal y promover el bienestar general.</p>
     <p>La consulta inicial incluye evaluación médica completa, bioimpedancia, historia clínica y definición de tu plan personalizado.</p>
-    <a href="#" class="buttons btn-secondary lead-whatsapp" rel="nofollow noopener noreferrer" target="_blank">Solicita información del programa</a>
+    {% include enlace-contacto.html canal="whatsapp" clase="buttons btn-secondary" texto="Solicita información del programa" location="mediforma-cta-1" %}
   </div>
   {% include video-embed.html
     src="/assets/videos/medico-profesional-presenta-mediforma.mp4"
@@ -156,7 +156,7 @@ resultados:
     <h2 id="caso-real-heading" class="content-title">Así se ve un cambio real con el programa Mediforma</h2>
     <p>Esta transformación no nació de una dieta extrema ni de pasar hambre: nació de un programa médico supervisado que combina ajuste hormonal con Ozempic® o Saxenda®, seguimiento nutricional y acompañamiento psicológico constante, para que el cuerpo cambie sin sacrificar masa muscular ni salud metabólica.</p>
     <p>La diferencia entre la foto de la izquierda y la de la derecha se construyó en meses de acompañamiento profesional real, no en promesas. Así empieza también tu propio proceso: con una consulta médica inicial en Bogotá que define tu punto de partida.</p>
-    {% include button.html %}
+    {% include button.html location="mediforma-boton-2" %}
   </div>
 </section>
 
@@ -210,7 +210,7 @@ resultados:
       </li>
     </ol>
     <div class="mediforma-cta-strip">
-      {% include button.html %}
+      {% include button.html location="mediforma-boton-3" %}
     </div>
   </div>
   {% include video-embed.html
@@ -386,6 +386,6 @@ resultados:
     <p class="mediforma-final-label">Cupos limitados · Bogotá</p>
     <h2 id="cta-final-heading">Empieza tu transformación esta semana</h2>
     <p class="mediforma-final-sub">Consulta inicial desde <strong>$150.000</strong> · 45 minutos · Médico, nutricionista y psicóloga</p>
-    {% include button.html %}
+    {% include button.html location="mediforma-boton-4" %}
   </div>
 </section>

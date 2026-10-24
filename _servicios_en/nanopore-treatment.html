@@ -10,7 +10,7 @@ dateModified: "2025-03-12"
 precios: "$450.000 - $1.100.000"
 tiempo_aplicacion: "60 minutes"
 ---
-<header class="wrapper two_columns">
+<header data-hero class="wrapper two_columns">
   <div class="flow">
     <h1>Nanopore Treatment: Skin Regeneration and Improvement with Microneedles</h1>
     <p>Nanopore treatment is an advanced technique that uses microneedles to create microchannels in the skin, promoting the penetration of active ingredients and vitamins.</p>
@@ -21,7 +21,7 @@ tiempo_aplicacion: "60 minutes"
       {% endif %}
     </div>
     <div class="hero-cta-group">
-      {% include button.html %}
+      {% include button.html location="nanopore-treatment-boton-1" %}
       <a href="#precios-heading" class="buttons btn-secondary">View prices</a>
     </div>
   </div>
@@ -42,7 +42,7 @@ tiempo_aplicacion: "60 minutes"
       <li>Reduce enlarged pores: Minimizes the appearance of pores, achieving a more uniform skin.</li>
       <li>Improve hydration and texture: Promotes softer, hydrated skin with renewed texture.</li>
     </ul>
-    <a href="#" id="lead_whatsapp" rel="nofollow noopener noreferrer" target="_blank" title="WhatsApp IVLU" class="buttons btn-secondary">Request detailed information</a>
+    {% include enlace-contacto.html canal="email" clase="buttons btn-secondary" texto="Request detailed information" location="nanopore-treatment-cta-1" %}
   </div>
 </section>
 
@@ -127,6 +127,6 @@ tiempo_aplicacion: "60 minutes"
     <p class="mediforma-final-label">Revolutionary Nanopore · Bogotá</p>
     <h2 id="cta-final-heading">Activate your skin regeneration</h2>
     <p class="mediforma-final-sub">Transdermal microchannels · Deep penetration · Visible results</p>
-    {% include button.html %}
+    {% include button.html location="nanopore-treatment-boton-2" %}
   </div>
 </section>

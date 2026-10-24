@@ -12,11 +12,11 @@ dateModified: "2025-03-14"
 precios: "Desde $450.000 según el tamaño del tatuaje"
 tiempo_aplicacion: "30 minutos<br><small>Requiere anestesia</small>"
 ---
-<header class="wrapper two_columns">
+<header data-hero class="wrapper two_columns">
   <div class="flow">
     <h1>Láser Colormax para Remoción de Tatuajes en Bogotá</h1>
     <p>Elimina tus tatuajes de forma segura y eficaz con la tecnología láser más avanzada para todo tipo de colores</p>
-    {% include button.html %}
+    {% include button.html location="remocion-tatuajes-colormax-boton-1" %}
   </div>
   <img src="{{page.hero | relative_url }}" alt="{{page.alt}}" loading="lazy" decoding="async" width="520" height="520">
 </header>
@@ -31,7 +31,7 @@ tiempo_aplicacion: "30 minutos<br><small>Requiere anestesia</small>"
     <p>El Láser Colormax es un tratamiento avanzado y no invasivo que se utiliza para eliminar tatuajes de forma segura y eficaz. Este láser está diseñado para eliminar tanto tintas oscuras como colores más claros, desintegrando las partículas de tinta y permitiendo que el cuerpo las elimine de forma natural</p>
     <h3>¿Cómo funciona?</h3>
     <p>El láser desintegra la tinta del tatuaje, permitiendo su eliminación gradual a través del sistema linfático.</p>
-    <a href="#" id="lead_whatsapp" rel="nofollow noopener noreferrer" target="_blank" title="WhatsApp IVLU" class="buttons btn-secondary">Solicita información detallada</a>
+    {% include enlace-contacto.html canal="whatsapp" clase="buttons btn-secondary" texto="Solicita información detallada" location="remocion-tatuajes-colormax-cta-1" %}
   </div>
 </section>
 

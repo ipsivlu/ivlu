@@ -10,7 +10,7 @@ dateModified: "2025-03-12"
 precios: "Desde $1.500.000"
 tiempo_aplicacion: "60 minutos<br><small>Requiere anestesia</small>"
 ---
-<header class="wrapper two_columns">
+<header data-hero class="wrapper two_columns">
   <div class="flow">
     <h1>Aplicación capilar de Exosomas en Bogotá</h1>
     <p>Terapia regenerativa con <strong>10.000 millones de exosomas</strong> que estimula el crecimiento y fortalecimiento del cabello desde nivel celular.</p>
@@ -21,7 +21,7 @@ tiempo_aplicacion: "60 minutos<br><small>Requiere anestesia</small>"
       {% endif %}
     </div>
     <div class="hero-cta-group">
-      {% include button.html %}
+      {% include button.html location="exosomas-boton-1" %}
       <a href="#precios-heading" class="buttons btn-secondary">Ver precios</a>
     </div>
   </div>
@@ -60,7 +60,7 @@ tiempo_aplicacion: "60 minutos<br><small>Requiere anestesia</small>"
       </li>
     </ol>
 
-    <a href="#" id="lead_whatsapp" rel="nofollow noopener noreferrer" target="_blank" title="WhatsApp IVLU" class="buttons btn-secondary">Solicita información detallada</a>
+    {% include enlace-contacto.html canal="whatsapp" clase="buttons btn-secondary" texto="Solicita información detallada" location="exosomas-cta-1" %}
   </div>
 </section>
 
@@ -146,6 +146,6 @@ tiempo_aplicacion: "60 minutos<br><small>Requiere anestesia</small>"
     <p class="mediforma-final-label">Regeneración celular · Bogotá</p>
     <h2 id="cta-final-heading">Revitaliza tu piel con exosomas</h2>
     <p class="mediforma-final-sub">Tratamiento personalizado · Resultados visibles · Regeneración celular profunda</p>
-    {% include button.html %}
+    {% include button.html location="exosomas-boton-2" %}
   </div>
 </section>

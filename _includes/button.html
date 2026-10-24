@@ -1,2 +1,14 @@
-{% assign current_lang = page.lang | default: site.default_lang | default: "es" %}
-<a href="#" id="lead_whatsapp" rel="nofollow noopener noreferrer" class="buttons btn-primary" title="WhatsApp IVLU Bogotá">{% if current_lang == 'en' %}Book your appointment{% else %}Agenda tu cita{% endif %}</a>
+{%- comment -%}
+Botón sólido de cita según el idioma.
+  ES: WhatsApp con mensaje prellenado.
+  EN: correo prellenado (en EE. UU. pocos usan WhatsApp). Cuando exista site.lead.endpoint,
+      pasará al formulario de /en/contact/.
+Parámetros: location (único en la página), texto, mensaje.
+{%- endcomment -%}
+{%- assign lang = page.lang | default: site.default_lang | default: 'es' -%}
+{%- assign bt_texto = include.texto | default: site.data.contacto[lang].boton -%}
+{%- if lang == 'en' -%}
+{% include enlace-contacto.html canal="email" clase="buttons btn-primary" texto=bt_texto mensaje=include.mensaje location=include.location %}
+{%- else -%}
+{% include enlace-contacto.html canal="whatsapp" clase="buttons btn-primary" texto=bt_texto mensaje=include.mensaje location=include.location %}
+{%- endif -%}

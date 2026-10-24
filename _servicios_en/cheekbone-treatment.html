@@ -12,7 +12,7 @@ dateModified: "2025-03-25"
 precios: "$1'250.000"
 tiempo_aplicacion: "15 - 30 minutes"
 ---
-<header class="wrapper two_columns">
+<header data-hero class="wrapper two_columns">
   <div class="flow">
     <h1>Premium Cheek Treatment in Bogotá</h1>
     <p>Enhance and define your facial contour with harmonious cheekbones that restore projection, balance, and youthfulness to your face</p>
@@ -23,7 +23,7 @@ tiempo_aplicacion: "15 - 30 minutes"
       {% endif %}
     </div>
     <div class="hero-cta-group">
-      {% include button.html %}
+      {% include button.html location="cheekbone-treatment-boton-1" %}
       <a href="#precios-heading" class="buttons btn-secondary">View prices</a>
     </div>
   </div>
@@ -42,7 +42,7 @@ tiempo_aplicacion: "15 - 30 minutes"
     <p>Our hyaluronic acid cheek filler treatment reshapes and defines facial features, improving contour while providing enhanced projection and harmony to your cheeks.</p>
     <p>Cheekbones are essential to facial structure, providing support, balance, and definition. With time, natural aging causes volume loss and tissue descent, which blurs facial contours and creates a tired or aged appearance. Hyaluronic acid cheek treatment helps restore lost volume, redefining the area and returning a more youthful, refreshed look to your face.</p>
 
-    <a href="#" id="lead_whatsapp" rel="nofollow noopener noreferrer" target="_blank" title="WhatsApp IVLU" class="buttons btn-secondary">Request detailed information</a>
+    {% include enlace-contacto.html canal="email" clase="buttons btn-secondary" texto="Request detailed information" location="cheekbone-treatment-cta-1" %}
   </div>
 </section>
 
@@ -124,6 +124,6 @@ tiempo_aplicacion: "15 - 30 minutes"
     <p class="mediforma-final-label">Cheekbone definition · Bogotá</p>
     <h2 id="cta-final-heading">Enhance your face today</h2>
     <p class="mediforma-final-sub">Premium volumizing · Natural definition · Harmonious results</p>
-    {% include button.html %}
+    {% include button.html location="cheekbone-treatment-boton-2" %}
   </div>
 </section>

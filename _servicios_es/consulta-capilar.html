@@ -13,7 +13,7 @@ precios: "$150.000"
 tiempo_aplicacion: "60 minutos"
 ---
 
-<header class="wrapper two_columns">
+<header data-hero class="wrapper two_columns">
   <div class="flow">
     <h1>Consulta Capilar Especializada en Bogotá</h1>
     <p>La primera consulta capilar es el pilar fundamental para abordar cualquier problema relacionado con tu cabello o cuero cabelludo</p>
@@ -24,7 +24,7 @@ tiempo_aplicacion: "60 minutos"
       {% endif %}
     </div>
     <div class="hero-cta-group">
-      {% include button.html %}
+      {% include button.html location="consulta-capilar-boton-1" %}
       <a href="#precios-heading" class="buttons btn-secondary">Ver precios</a>
     </div>
   </div>
@@ -41,7 +41,7 @@ tiempo_aplicacion: "60 minutos"
     <p>En nuestro Centro Medico Ivlu, nuestra médica experta en Restauración e Implante Capilar realiza una evaluación completa y exhaustiva mediante herramientas avanzadas como el Tricoscopio, una cámara de alta resolución que examina el cabello y cuero cabelludo a nivel microscópico; analizando  no solo la condición visible del cabello, sino también el estado del folículo piloso, el cuero cabelludo y los factores médicos subyacentes que puedan estar afectando tu salud capilar.</p>
     <p>Esta visión integral nos permite diseñar protocolos de tratamiento personalizados y altamente efectivos para cada patologia.</p>
 
-    <a href="#" id="lead_whatsapp" rel="nofollow noopener noreferrer" target="_blank" title="WhatsApp IVLU" class="buttons btn-secondary">Solicita información detallada</a>
+    {% include enlace-contacto.html canal="whatsapp" clase="buttons btn-secondary" texto="Solicita información detallada" location="consulta-capilar-cta-1" %}
   </div>
 </section>
 
@@ -114,6 +114,6 @@ tiempo_aplicacion: "60 minutos"
     <p class="mediforma-final-label">Diagnóstico capilar · Bogotá</p>
     <h2 id="cta-final-heading">Identifica la causa de tu caída capilar</h2>
     <p class="mediforma-final-sub">Consulta desde <strong>$150.000</strong> · 60 minutos · Tricoscopio HD y plan personalizado</p>
-    {% include button.html %}
+    {% include button.html location="consulta-capilar-boton-2" %}
   </div>
 </section>

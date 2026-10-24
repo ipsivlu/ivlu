@@ -53,11 +53,11 @@ casos_exito:
     before_image: "/assets/images/colormax-renovacion-antes.avif"
     after_image: "/assets/images/colormax-renovacion-despues.avif"
 ---
-<header class="wrapper two_columns">
+<header data-hero class="wrapper two_columns">
   <div class="flow">
     <h1>Láser Colormax para Manchas y Pecas en Bogotá</h1>
     <p>Tecnología láser para lucir una piel más limpia y joven.</p>
-    {% include button.html %}
+    {% include button.html location="colormax-manchas-pecas-boton-1" %}
   </div>
   <img src="{{page.hero | relative_url }}" alt="{{page.alt}}" loading="lazy" decoding="async" width="520" height="520">
 </header>
@@ -72,7 +72,7 @@ casos_exito:
     <h2 class="content-title">Colormax: Regeneración celular</h2>
     <p>El Láser Colormax es un tratamiento no invasivo que utiliza pulsos de luz para eliminar manchas, pecas y otras hiperpigmentaciones en la piel, mejorando su tono y textura.</p>
 
-    <a href="#" id="lead_whatsapp" rel="nofollow noopener noreferrer" target="_blank" title="WhatsApp IVLU" class="buttons btn-secondary">Solicita información detallada</a>
+    {% include enlace-contacto.html canal="whatsapp" clase="buttons btn-secondary" texto="Solicita información detallada" location="colormax-manchas-pecas-cta-1" %}
   </div>
 </section>
 

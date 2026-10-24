@@ -30,7 +30,7 @@ casos_exito:
     before_image: "/assets/images/radiesse-manos-completo-antes.avif"
     after_image: "/assets/images/radiesse-manos-completo-despues.avif"
 ---
-<header class="wrapper two_columns">
+<header data-hero class="wrapper two_columns">
   <div class="flow">
     <h1>Radiesse® - Bioestimulación Facial y Corporal</h1>
     <p>Radiesse® es un tratamiento inyectable con hidroxiapatita de calcio que estimula la producción de colágeno, logrando un efecto lifting y tensado. Ideal para rejuvenecer el rostro, cuello y manos, mejorar la flacidez, atenuar estrías y cicatrices, y devolver elasticidad y tonicidad al cuerpo.</p>
@@ -41,7 +41,7 @@ casos_exito:
       {% endif %}
     </div>
     <div class="hero-cta-group">
-      {% include button.html %}
+      {% include button.html location="radiesse-boton-1" %}
       <a href="#precios-heading" class="buttons btn-secondary">Ver precios</a>
     </div>
   </div>
@@ -59,7 +59,7 @@ casos_exito:
     <p>Radiesse es un tratamiento innovador que combina microesferas de hidroxiapatita cálcica (CaHA) para estimular la producción de colágeno, especialmente del tipo I y III, los principales responsables de la firmeza y elasticidad de la piel.</p>
     <p>Su formulación única actúa como un andamiaje tridimensional, favoreciendo la regeneración dérmica profunda. Ideal para rejuvenecer el rostro, cuello, manos y tratar la flacidez corporal, con resultados duraderos hasta 15 meses. En IVLU aplicamos las técnicas más avanzadas, incluyendo la hiperdilución para tratar flacidez en áreas específicas.</p>
 
-    <a href="#" id="lead_whatsapp" rel="nofollow noopener noreferrer" target="_blank" title="WhatsApp IVLU" class="buttons btn-secondary">Conoce la tecnología en detalle</a>
+    {% include enlace-contacto.html canal="whatsapp" clase="buttons btn-secondary" texto="Conoce la tecnología en detalle" location="radiesse-cta-1" %}
   </div>
 </section>
 
@@ -145,6 +145,6 @@ casos_exito:
     <p class="mediforma-final-label">Bioestimulación avanzada · Bogotá</p>
     <h2 id="cta-final-heading">Rejuvenece tu piel naturalmente</h2>
     <p class="mediforma-final-sub">Radiesse premium · Estimula tu colágeno · Resultados graduales</p>
-    {% include button.html %}
+    {% include button.html location="radiesse-boton-2" %}
   </div>
 </section>

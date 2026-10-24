@@ -33,11 +33,11 @@ casos_exito:
     before_image: "/assets/images/morpheus-contorno-antes.avif"
     after_image: "/assets/images/morpheus-contorno-despues.avif"
 ---
-<header class="wrapper two_columns">
+<header data-hero class="wrapper two_columns">
   <div class="flow">
     <h1>Morpheus8 en Bogotá</h1>
     <p>Revoluciona tu piel con la tecnología más avanzada de radiofrecuencia fraccionada</p>
-    {% include button.html %}
+    {% include button.html location="morpheus-8-boton-1" %}
   </div>
   <img src="{{page.hero | relative_url }}" alt="{{page.alt}}" loading="lazy" decoding="async" width="520" height="520">
 </header>
@@ -50,7 +50,7 @@ casos_exito:
   <div class="flow">
     <h2 class="content-title">Morpheus8: Rejuvenecimiento facial con tecnología de élite mundial</h2>
     <p>El Rejuvenecimiento Facial con Morpheus 8 es un tratamiento avanzado que utiliza tecnología de radiofrecuencia fraccionada combinada con microagujas para penetrar en las capas profundas de la piel. Este procedimiento estimula la producción de colágeno, mejora la textura de la piel y combate los signos de envejecimiento, ofreciendo resultados visibles de manera no invasiva.</p>
-    <a href="#" id="lead_whatsapp" rel="nofollow noopener noreferrer" target="_blank" title="WhatsApp IVLU" class="buttons btn-secondary">Solicita información detallada</a>
+    {% include enlace-contacto.html canal="whatsapp" clase="buttons btn-secondary" texto="Solicita información detallada" location="morpheus-8-cta-1" %}
   </div>
 </section>
 

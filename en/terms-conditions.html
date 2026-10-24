@@ -9,7 +9,7 @@ datePublished: "2023-01-01"
 dateModified: "2025-03-07"
 ---
 
-<header class="wrapper flow">
+<header data-hero class="wrapper flow">
   <div class="text_center">
     <h1>Terms & Conditions</h1>
     <p>Effective: January 1, 2023</p>
@@ -140,8 +140,8 @@ dateModified: "2025-03-07"
     <h2>12. Contact</h2>
     <p>For inquiries:</p>
     <ul>
-      <li>Email: {{site.email}}</li>
-      <li>Phone: +57{{site.telefono}}</li>
+      <li>Email: {{ site.contact.email }}</li>
+      <li>Phone: {{ site.contact.phone_display }}</li>
       <li>Address: {% include direccion.html %}</li>
     </ul>
   </div>

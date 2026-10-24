@@ -17,6 +17,15 @@ sitemap: false
   <url>
     <loc>{{ site.url }}{{ treatment.url | xml_escape }}</loc>
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    {%- if treatment.ref -%}
+      {%- assign par = treatments | where: "ref", treatment.ref | where_exp: "d", "d.url != treatment.url" | first -%}
+      {%- if par -%}
+        {%- if treatment.lang == 'en' -%}{%- assign u_es = par.url -%}{%- assign u_en = treatment.url -%}{%- else -%}{%- assign u_es = treatment.url -%}{%- assign u_en = par.url -%}{%- endif %}
+    <xhtml:link rel="alternate" hreflang="es" href="{{ site.url }}{{ u_es | xml_escape }}"/>
+    <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}{{ u_en | xml_escape }}"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ u_es | xml_escape }}"/>
+      {%- endif -%}
+    {%- endif %}
     {%- if treatment.hero %}
     <image:image>
       <image:loc>{{ site.url }}{{ treatment.hero | xml_escape }}</image:loc>

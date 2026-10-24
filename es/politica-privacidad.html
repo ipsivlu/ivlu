@@ -6,7 +6,7 @@ title: "Política de Privacidad | IVLU Clínica de Medicina Estética"
 description: "Política de privacidad y tratamiento de datos personales de IVLU. Información sobre recolección, uso, almacenamiento y protección de datos de nuestros pacientes y usuarios."
 image: "/assets/images/logo-ivlu.avif"
 datePublished: "2023-01-01"
-dateModified: "2026-06-22"
+dateModified: "2026-10-24"
 distintivos:
   titulo: "Distintivos y Habilitaciones"
   nota: "IVLU S.A.S. se encuentra debidamente registrada y habilitada ante las autoridades sanitarias competentes para la prestación de servicios de medicina estética."
@@ -23,7 +23,7 @@ distintivos:
       height: 550
 ---
 
-<header class="wrapper flow">
+<header data-hero class="wrapper flow">
   <div class="text_center">
     <h1>Política de Privacidad</h1>
     <p>Vigente desde: 1 de enero de 2023</p>
@@ -35,14 +35,15 @@ distintivos:
     <h2>1. Introducción</h2>
     <p>En IVLU S.A.S. (en adelante "IVLU"), valoramos y respetamos su privacidad. Esta Política de Privacidad explica cómo recopilamos, utilizamos, divulgamos y protegemos la información personal que obtenemos a través de nuestro sitio web, durante las consultas médicas y en la prestación de nuestros servicios.</p>
     
-    <p>IVLU cumple con la Ley 1581 de 2012, el Decreto 1377 de 2013 y demás normativa colombiana aplicable en materia de protección de datos personales. Al proporcionarnos sus datos personales, usted acepta las prácticas descritas en esta política.</p>
+    <p>IVLU cumple con la Ley 1581 de 2012, el Decreto 1377 de 2013 (compilado en el Decreto Único Reglamentario 1074 de 2015) y demás normativa colombiana aplicable en materia de protección de datos personales. Al proporcionarnos sus datos personales, usted acepta las prácticas descritas en esta política.</p>
   </div>
   
   <div>
     <h2>2. Información que recopilamos</h2>
     <p>2.1. <strong>Información personal identificable:</strong> Podemos recopilar información como:</p>
     <ul>
-      <li>Nombre completo<li>Número de identificación</li>
+      <li>Nombre completo</li>
+      <li>Número de identificación</li>
       <li>Fecha de nacimiento</li>
       <li>Dirección de domicilio</li>
       <li>Número de teléfono</li>
@@ -160,10 +161,18 @@ distintivos:
       <li><strong>Derecho de rectificación:</strong> solicitar la corrección de información errónea</li>
       <li><strong>Derecho de supresión:</strong> solicitar la eliminación de sus datos cuando no sean necesarios para los fines autorizados (sujeto a excepciones legales)</li>
       <li><strong>Derecho a revocar el consentimiento:</strong> retirar su autorización para el tratamiento de sus datos</li>
-      <li><strong>Derecho a presentar reclamaciones:</strong> ante la autoridad de protección de datos en Colombia</li>
+      <li><strong>Derecho a presentar reclamaciones:</strong> ante la Superintendencia de Industria y Comercio (SIC), autoridad de protección de datos en Colombia, una vez agotado el trámite de consulta o reclamo ante IVLU</li>
     </ul>
-    
+
     <p>Para ejercer estos derechos, puede contactarnos a través de los medios indicados en la sección "Contacto" de esta política.</p>
+
+    <h3>Consultas en 10 días hábiles y reclamos en 15 días hábiles</h3>
+    <p>El titular, sus causahabientes o su representante pueden enviar la solicitud al correo {{ site.contact.email }} o por escrito a {% include direccion.html %}, indicando nombre, número de identificación, descripción de la solicitud, dirección de respuesta y los documentos que quiera hacer valer.</p>
+    <ul>
+      <li><strong>Consultas</strong> (conocer qué datos tratamos y cómo): se responden en un máximo de 10 días hábiles desde su recibo. Si no es posible en ese plazo, le informaremos el motivo y la nueva fecha, que no superará 5 días hábiles adicionales.</li>
+      <li><strong>Reclamos</strong> (actualizar, rectificar, suprimir datos o revocar la autorización): se atienden en un máximo de 15 días hábiles desde el día siguiente a su recibo, prorrogables hasta 8 días hábiles más con aviso previo. Si el reclamo llega incompleto, le pediremos completarlo dentro de los 5 días siguientes; si pasan 2 meses sin respuesta, se entenderá que desistió.</li>
+    </ul>
+    <p>La revocatoria de la autorización y la supresión no proceden cuando exista un deber legal o contractual de conservar los datos, como ocurre con la historia clínica.</p>
   </div>
   
   <div>
@@ -179,6 +188,8 @@ distintivos:
     </ul>
     
     <p>Puede gestionar sus preferencias de cookies a través de la configuración de su navegador. Sin embargo, deshabilitar ciertas cookies puede afectar la funcionalidad del sitio.</p>
+
+    <p>El detalle de cada servicio que instala cookies está en nuestra <a href="{{ '/es/politica-cookies/' | relative_url }}">política de cookies</a>. Si nos visita desde Estados Unidos, el uso de sus datos de salud se explica en el <a href="{{ '/es/aviso-privacidad-datos-salud/' | relative_url }}">aviso de privacidad de datos de salud del consumidor</a>.</p>
   </div>
   
   <div>
@@ -204,8 +215,8 @@ distintivos:
     <h2>15. Contacto</h2>
     <p>Si tiene preguntas, comentarios o solicitudes relacionadas con esta Política de Privacidad o el tratamiento de sus datos personales, puede contactarnos a través de:</p>
     <ul>
-      <li><strong>Correo electrónico:</strong> {{site.email}}</li>
-      <li><strong>Teléfono:</strong> +57{{site.telefono}}</li>
+      <li><strong>Correo electrónico:</strong> {{ site.contact.email }}</li>
+      <li><strong>Teléfono:</strong> {{ site.contact.phone_display }}</li>
       <li><strong>Dirección postal:</strong> {% include direccion.html %}</li>
     </ul>
     
@@ -218,7 +229,7 @@ distintivos:
   <div style="margin-top: 2em;">
     <p>Al utilizar nuestro sitio web o nuestros servicios, usted reconoce haber leído y entendido esta Política de Privacidad y acepta los términos y condiciones aquí establecidos.</p>
 
-    <p>Fecha de última actualización: 22 de junio de 2026</p>
+    <p>Fecha de última actualización: 24 de octubre de 2026</p>
   </div>
 </section>
 

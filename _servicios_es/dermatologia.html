@@ -13,7 +13,7 @@ precios: "$150.000"
 tiempo_aplicacion: "30 - 45 minutos"
 ---
 
-<header class="wrapper two_columns">
+<header data-hero class="wrapper two_columns">
   <div class="flow">
     <h1>Dermatología Clínica y Estética</h1>
     <p>En nuestro consultorio brindamos un enfoque integral en dermatología, combinando la medicina clínica con soluciones estéticas personalizadas. Durante la consulta podrás contarnos tus síntomas, preocupaciones y expectativas, para así ofrecerte un diagnóstico preciso y un plan de tratamiento a tu medida.</p>
@@ -26,7 +26,7 @@ tiempo_aplicacion: "30 - 45 minutos"
       {% endif %}
     </div>
     <div class="hero-cta-group">
-      {% include button.html %}
+      {% include button.html location="dermatologia-boton-1" %}
       <a href="#precios-heading" class="buttons btn-secondary">Ver precios</a>
     </div>
   </div>
@@ -45,7 +45,7 @@ tiempo_aplicacion: "30 - 45 minutos"
     <p>En IVLU evaluamos tu piel a profundidad mediante tecnologías como el dermatoscopio y la luz de Wood. Atendemos patologías que te puedan preocupar. Queremos lo mejor para ti.</p>
     <p>Además de resolver la patología, buscamos armonizar la piel desde una perspectiva estética. Nuestros tratamientos combinan medicina basada en evidencia con protocolos individualizados para lograr una piel saludable y radiante.</p>
     <p>Siempre procuraremos darte una atención profesional y cercana, utilizaremos tecnología de última generación para darte un diagnóstico detallado.</p>
-    <a href="#" class="buttons btn-secondary" target="_blank">Solicita información detallada</a>
+    {% include enlace-contacto.html canal="whatsapp" clase="buttons btn-secondary" texto="Solicita información detallada" location="dermatologia-cta-1" %}
   </div>
 </section>
 
@@ -137,6 +137,6 @@ tiempo_aplicacion: "30 - 45 minutos"
     <p class="mediforma-final-label">Consulta dermatológica · Bogotá</p>
     <h2 id="cta-final-heading">Cuida tu piel hoy mismo</h2>
     <p class="mediforma-final-sub">Valoración desde <strong>$150.000</strong> · 30-45 minutos · Diagnóstico preciso y tratamiento personalizado</p>
-    {% include button.html %}
+    {% include button.html location="dermatologia-boton-2" %}
   </div>
 </section>

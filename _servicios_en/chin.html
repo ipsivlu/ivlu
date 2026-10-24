@@ -12,7 +12,7 @@ dateModified: "2025-04-02"
 precios: "$1'250.000"
 tiempo_aplicacion: "15 - 30 minutes"
 ---
-<header class="wrapper two_columns">
+<header data-hero class="wrapper two_columns">
   <div class="flow">
     <h1>Premium Chin Treatment in Bogotá</h1>
     <p>Chin filler with hyaluronic acid corrects and projects a recessed chin, achieving a more balanced and natural facial profile.</p>
@@ -23,7 +23,7 @@ tiempo_aplicacion: "15 - 30 minutes"
       {% endif %}
     </div>
     <div class="hero-cta-group">
-      {% include button.html %}
+      {% include button.html location="chin-boton-1" %}
       <a href="#precios-heading" class="buttons btn-secondary">View prices</a>
     </div>
   </div>
@@ -41,7 +41,7 @@ tiempo_aplicacion: "15 - 30 minutes"
     <p>The chin is key to facial harmony. With high-density hyaluronic acid filler, we achieve proper projection and definition, improving facial balance and the transition between neck and face.</p>
     <p>At IVLU we use advanced techniques to harmonize your chin with other facial features, enhancing your profile and jawline definition without surgery.</p>
 
-    <a href="#" id="lead_whatsapp" rel="nofollow noopener noreferrer" target="_blank" title="WhatsApp IVLU" class="buttons btn-secondary">Request detailed information</a>
+    {% include enlace-contacto.html canal="email" clase="buttons btn-secondary" texto="Request detailed information" location="chin-cta-1" %}
   </div>
 </section>
 
@@ -130,6 +130,6 @@ tiempo_aplicacion: "15 - 30 minutes"
     <p class="mediforma-final-label">Facial contouring · Bogotá</p>
     <h2 id="cta-final-heading">Define your profile without surgery</h2>
     <p class="mediforma-final-sub">Hyaluronic acid · Improved projection · Harmonious results</p>
-    {% include button.html %}
+    {% include button.html location="chin-boton-2" %}
   </div>
 </section>

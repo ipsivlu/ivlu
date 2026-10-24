@@ -12,11 +12,11 @@ dateModified: "2025-03-12"
 precios: "$680.000 por sesión"
 tiempo_aplicacion: "30 minutos<br><small>No requiere anestesia</small>"
 ---
-<header class="wrapper two_columns">
+<header data-hero class="wrapper two_columns">
   <div class="flow">
     <h1>Lumecca Luz Pulsada Intensiva</h1>
     <p>Tratamiento definitivo para el enrojecimiento facial y los síntomas de diferentes problemas en tu piel.</p>
-    {% include button.html %}
+    {% include button.html location="lummeca-rosacea-boton-1" %}
   </div>
   <picture>
     <source srcset="{{page.hero | relative_url }}" type="image/avif">
@@ -37,7 +37,7 @@ tiempo_aplicacion: "30 minutos<br><small>No requiere anestesia</small>"
     <p>La <strong>luz pulsada intensa</strong> (IPL, por sus siglas en inglés) es una tecnología de fototerapia que utiliza una amplia gama de longitudes de onda de luz para tratar diversas afecciones de la piel.</p>
     <p>A diferencia del láser, que emite una sola longitud de onda, la luz pulsada emite pulsos de luz con múltiples longitudes, lo que la hace más versátil para tratar distintos problemas cutáneos.</p>
 
-    <a href="#" id="lead_whatsapp" rel="nofollow noopener noreferrer" target="_blank" title="WhatsApp IVLU" class="buttons btn-secondary">Solicita información detallada</a>
+    {% include enlace-contacto.html canal="whatsapp" clase="buttons btn-secondary" texto="Solicita información detallada" location="lummeca-rosacea-cta-1" %}
   </div>
 </section>
 

@@ -1,0 +1,27 @@
+# Textos de los enlaces de contacto (_includes/enlace-contacto.html, button.html, canales.html).
+# Clínica: nada de historia clínica por correo; el texto prellenado no pide datos de salud.
+en:
+  canal_email: "Email us"
+  canal_llamar: "Call"
+  canal_whatsapp: "Prefer WhatsApp?"
+  canal_sms: "Text us"
+  nueva_pestana: "(opens in a new tab)"
+  flotante: "Contact us"
+  boton: "Request your appointment"
+  email_asunto: "Appointment request – IVLU Bogotá"
+  email_cuerpo: "Hello, I would like to request an appointment and more information about your treatments."
+  sms_cuerpo: "Hello, I found you on your website and I'd like more information about your treatments."
+  wa_mensaje: "Hello. I would like to request more information about the aesthetic treatments I saw on your website. Thank you"
+
+es:
+  canal_email: "Escríbenos un correo"
+  canal_llamar: "Llámanos al"
+  canal_whatsapp: "WhatsApp"
+  canal_sms: "Envíanos un SMS"
+  nueva_pestana: "(se abre en una pestaña nueva)"
+  flotante: "WhatsApp IVLU"
+  boton: "Agenda tu cita"
+  email_asunto: "Solicitud de cita – IVLU Bogotá"
+  email_cuerpo: "Hola, quiero agendar una cita y recibir más información de sus tratamientos."
+  sms_cuerpo: "Hola, los encontré en su web y quiero información de sus tratamientos."
+  wa_mensaje: "Hola. Me gustaría pedir más información de los tratamientos estéticos que vi en tu página web. Gracias"

@@ -103,7 +103,7 @@ resultados:
 }
 </script>
 
-<header class="wrapper two_columns">
+<header data-hero class="wrapper two_columns">
   <div class="flow">
     <h1>Mediforma: medical weight management program in Bogotá</h1>
     <p>Mediforma is a clinical program designed to help you lose weight safely and sustainably. We combine family medicine, personalized nutrition, and clinical psychology — with pharmacological treatment when medically indicated.</p>
@@ -114,7 +114,7 @@ resultados:
       <span class="hero-stat"><strong>Team:</strong> Doctor · Nutritionist · Psychologist</span>
     </div>
     <div class="hero-cta-group">
-      {% include button.html %}
+      {% include button.html location="mediform-boton-1" %}
       <a href="#includes-heading" class="buttons btn-secondary">See what's included</a>
     </div>
   </div>
@@ -134,7 +134,7 @@ resultados:
     <h2 id="program-heading">A program to improve your health from the inside out</h2>
     <p>Mediforma is not a crash diet. It's a multidisciplinary program combining medicine, nutrition, psychology, and aesthetics to reach a healthy weight, improve body composition, and promote overall wellbeing.</p>
     <p>The initial consultation includes a complete medical evaluation, bioimpedance analysis, clinical history, and a personalized plan.</p>
-    <a href="#" class="buttons btn-secondary lead-whatsapp" rel="nofollow noopener noreferrer" target="_blank">Request detailed information</a>
+    {% include enlace-contacto.html canal="email" clase="buttons btn-secondary" texto="Request detailed information" location="mediform-cta-1" %}
   </div>
   {% include video-embed.html
     src="/assets/videos/medical-professional-presents-mediforma.mp4"
@@ -196,7 +196,7 @@ resultados:
       </li>
     </ol>
     <div class="mediforma-cta-strip">
-      {% include button.html %}
+      {% include button.html location="mediform-boton-2" %}
     </div>
   </div>
   {% include video-embed.html
@@ -372,6 +372,6 @@ resultados:
     <p class="mediforma-final-label">Limited spots · Bogotá</p>
     <h2 id="cta-final-heading">Start your transformation this week</h2>
     <p class="mediforma-final-sub">Initial consultation from <strong>$150,000 COP</strong> · 45 minutes · Doctor, nutritionist and psychologist</p>
-    {% include button.html %}
+    {% include button.html location="mediform-boton-3" %}
   </div>
 </section>

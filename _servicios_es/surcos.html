@@ -10,7 +10,7 @@ dateModified: "2025-03-12"
 precios: "$1'200.000"
 tiempo_aplicacion: "15 - 30 minutos"
 ---
-<header class="wrapper two_columns">
+<header data-hero class="wrapper two_columns">
   <div class="flow">
     <h1>Mejora los Surcos Faciales con Ácido Hialurónico</h1>
     <p>Los surcos faciales, especialmente los nasogenianos, son una de las primeras líneas de expresión que aparecen en el rostro debido a los movimientos repetitivos de los músculos faciales, como al sonreír o hablar. Estos surcos pueden hacer que el rostro luzca más envejecido, perdiendo su firmeza y volumen natural.</p>
@@ -21,7 +21,7 @@ tiempo_aplicacion: "15 - 30 minutos"
       {% endif %}
     </div>
     <div class="hero-cta-group">
-      {% include button.html %}
+      {% include button.html location="surcos-boton-1" %}
       <a href="#precios-heading" class="buttons btn-secondary">Ver precios</a>
     </div>
   </div>
@@ -39,7 +39,7 @@ tiempo_aplicacion: "15 - 30 minutos"
     <p>El tratamiento con ácido hialurónico es una solución efectiva para mejorar la apariencia de estos surcos.</p>
     <p>El ácido hialurónico actúa rellenando las áreas deprimidas, restaurando el volumen perdido y proporcionando hidratación profunda. Gracias a sus propiedades hidratantes y regeneradoras, el ácido hialurónico mejora la elasticidad y firmeza de la piel, logrando una textura más suave y rejuvenecida. La aplicación es precisa y los resultados son visibles de inmediato, con un rostro más suave y con una apariencia natural y fresca.</p>
 
-    <a href="#" id="lead_whatsapp" rel="nofollow noopener noreferrer" target="_blank" class="buttons btn-secondary">Solicita información detallada</a>
+    {% include enlace-contacto.html canal="whatsapp" clase="buttons btn-secondary" texto="Solicita información detallada" location="surcos-cta-1" %}
   </div>
 </section>
 
@@ -112,6 +112,6 @@ tiempo_aplicacion: "15 - 30 minutos"
     <p class="mediforma-final-label">Rellenos premium · Bogotá</p>
     <h2 id="cta-final-heading">Suaviza tus líneas de expresión</h2>
     <p class="mediforma-final-sub">Ácido hialurónico · Efecto natural · Duración 12-18 meses</p>
-    {% include button.html %}
+    {% include button.html location="surcos-boton-2" %}
   </div>
 </section>

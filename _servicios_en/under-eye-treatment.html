@@ -39,7 +39,7 @@ casos_exito:
     after_image: "/assets/images/ojeras-geneticas-despues.avif"
 ---
 
-<header class="wrapper two_columns">
+<header data-hero class="wrapper two_columns">
   <div class="flow">
     <h1>Dark Circles Treatment in Bogotá</h1>
     <p>Restore a fresh, well-rested look with customized solutions for dark circles and under-eye bags</p>
@@ -50,7 +50,7 @@ casos_exito:
       {% endif %}
     </div>
     <div class="hero-cta-group">
-      {% include button.html %}
+      {% include button.html location="under-eye-treatment-boton-1" %}
       <a href="#precios-heading" class="buttons btn-secondary">View prices</a>
     </div>
   </div>
@@ -67,7 +67,7 @@ casos_exito:
     <p>Hyaluronic acid treatment is indicated for patients with volume loss in the under-eye area. This procedure improves tone, elasticity and smoothes the lower eyelid area, restoring a more youthful and rested appearance. Results are immediate and last between 8 and 12 months. Additionally, it helps reduce bags and pigmentation that may affect facial appearance.</p>
     <p>At IVLU we perform a personalized diagnosis to determine the specific type of dark circles and design a protocol combining advanced techniques like hyaluronic acid fillers, depigmenting peels and vascular treatments. Our comprehensive approach guarantees natural, long-lasting results, restoring freshness and brightness to your gaze.</p>
 
-    <a href="#" id="lead_whatsapp" rel="nofollow noopener noreferrer" target="_blank" title="WhatsApp IVLU" class="buttons btn-secondary">Request detailed information</a>
+    {% include enlace-contacto.html canal="email" clase="buttons btn-secondary" texto="Request detailed information" location="under-eye-treatment-cta-1" %}
   </div>
 </section>
 
@@ -144,6 +144,6 @@ casos_exito:
     <p class="mediforma-final-label">Rejuvenated dark circles · Bogotá</p>
     <h2 id="cta-final-heading">Wake up with fresh look</h2>
     <p class="mediforma-final-sub">Advanced treatment · Dark circle elimination · Visible results</p>
-    {% include button.html %}
+    {% include button.html location="under-eye-treatment-boton-2" %}
   </div>
 </section>

@@ -12,7 +12,7 @@ dateModified: "2025-04-02"
 precios: "$1'250.000"
 tiempo_aplicacion: "15 - 30 minutos"
 ---
-<header class="wrapper two_columns">
+<header data-hero class="wrapper two_columns">
   <div class="flow">
     <h1>Tratamiento premium de mentón en Bogotá</h1>
     <p>El relleno de mentón con ácido hialurónico corrige y proyecta un mentón retraído, logrando un perfil facial más equilibrado y natural.</p>
@@ -23,7 +23,7 @@ tiempo_aplicacion: "15 - 30 minutos"
       {% endif %}
     </div>
     <div class="hero-cta-group">
-      {% include button.html %}
+      {% include button.html location="tratamiento-menton-boton-1" %}
       <a href="#precios-heading" class="buttons btn-secondary">Ver precios</a>
     </div>
   </div>
@@ -41,7 +41,7 @@ tiempo_aplicacion: "15 - 30 minutos"
     <p>El mentón es clave en la armonía del rostro. Con el relleno de ácido hialurónico de alta densidad, logramos la proyección y definición adecuadas, mejorando el equilibrio facial y la transición entre el cuello y la cara.</p>
     <p>En IVLU utilizamos técnicas avanzadas para armonizar tu mentón con el resto de los rasgos faciales, mejorando el perfil y la definición mandibular sin necesidad de cirugía.</p>
 
-    <a href="#" id="lead_whatsapp" rel="nofollow noopener noreferrer" target="_blank" title="WhatsApp IVLU" class="buttons btn-secondary">Solicita información detallada</a>
+    {% include enlace-contacto.html canal="whatsapp" clase="buttons btn-secondary" texto="Solicita información detallada" location="tratamiento-menton-cta-1" %}
   </div>
 </section>
 
@@ -130,6 +130,6 @@ tiempo_aplicacion: "15 - 30 minutos"
     <p class="mediforma-final-label">Perfilamiento facial · Bogotá</p>
     <h2 id="cta-final-heading">Define tu perfil sin cirugía</h2>
     <p class="mediforma-final-sub">Ácido hialurónico · Proyección mejorada · Resultados armoniosos</p>
-    {% include button.html %}
+    {% include button.html location="tratamiento-menton-boton-2" %}
   </div>
 </section>

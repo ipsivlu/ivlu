@@ -1,0 +1,9 @@
+{%- comment -%}
+Enlaces a las páginas legales, en el pie (footer.html). Las URL EN/ES son pares con `ref`.
+{%- endcomment -%}
+{%- assign el_lang = page.lang | default: site.default_lang | default: 'es' -%}
+{%- if el_lang == 'en' -%}
+<p>Check <a href="{{ '/en/terms-conditions/' | relative_url }}">our terms and conditions</a>, and <a href="{{ '/en/privacy-policy/' | relative_url }}">data processing policy</a>. You can enjoy our website with peace of mind. Also see our <a href="{{ '/en/cookie-policy/' | relative_url }}">cookie policy</a> and <a href="{{ site.lead.health_notice_url | relative_url }}">Consumer Health Data Privacy Notice</a>.</p>
+{%- else -%}
+<p>Consulta <a href="{{ '/es/terminos-condiciones/' | relative_url }}">nuestros términos y condiciones</a>, y <a href="{{ '/es/politica-privacidad/' | relative_url }}">política de tratamientos de datos</a>. Puedes disfrutar de nuestra página con tranquilidad. También puedes revisar la <a href="{{ '/es/politica-cookies/' | relative_url }}">política de cookies</a> y el <a href="{{ '/es/aviso-privacidad-datos-salud/' | relative_url }}">aviso de privacidad de datos de salud</a>.</p>
+{%- endif -%}

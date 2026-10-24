@@ -12,11 +12,11 @@ dateModified: "2025-03-12"
 precios: "$180.000 por sesión"
 tiempo_aplicacion: "60 minutos<br><small>No requiere anestesia</small>"
 ---
-<header class="wrapper two_columns">
+<header data-hero class="wrapper two_columns">
   <div class="flow">
     <h1>Radiofrecuencia Forma: Tratamiento Corporal en Bogotá</h1>
     <p>Remodela tu silueta con tecnología de radiofrecuencia y electroestimulación avanzada</p>
-    {% include button.html %}
+    {% include button.html location="forma-tratamiento-boton-1" %}
   </div>
   <img src="{{page.hero | relative_url }}" alt="{{page.alt}}" loading="lazy" decoding="async" width="520" height="520">
 </header>
@@ -30,7 +30,7 @@ tiempo_aplicacion: "60 minutos<br><small>No requiere anestesia</small>"
     <h2 class="content-title">Radiofrecuencia Forma: Tratamiento corporal integral</h2>
     <p>La Radiofrecuencia Forma es un tratamiento no invasivo que utiliza aplicadores de radiofrecuencia bipolar transdérmica para estimular la regeneración de colágeno y elastina en la piel. Este procedimiento se basa en el uso de energía térmica, que fluye de manera uniforme entre los electrodos, proporcionando una experiencia térmica cómoda y eficaz.</p>
 
-    <a href="#" id="lead_whatsapp" rel="nofollow noopener noreferrer" target="_blank" title="WhatsApp IVLU" class="buttons btn-secondary">Solicita información detallada</a>
+    {% include enlace-contacto.html canal="whatsapp" clase="buttons btn-secondary" texto="Solicita información detallada" location="forma-tratamiento-cta-1" %}
   </div>
 </section>
 

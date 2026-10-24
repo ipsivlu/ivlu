@@ -12,7 +12,7 @@ dateModified: "2025-03-18"
 precios: "$960.000 - $1'500.000"
 tiempo_aplicacion: "15 - 30 minutes"
 ---
-<header class="wrapper two_columns">
+<header data-hero class="wrapper two_columns">
   <div class="flow">
     <h1>Bruxism Treatment in Bogotá</h1>
     <p>Eliminate pain and protect your teeth with advanced therapies for teeth grinding and jaw tension</p>
@@ -23,7 +23,7 @@ tiempo_aplicacion: "15 - 30 minutes"
       {% endif %}
     </div>
     <div class="hero-cta-group">
-      {% include button.html %}
+      {% include button.html location="bruxism-boton-1" %}
       <a href="#precios-heading" class="buttons btn-secondary">View prices</a>
     </div>
   </div>
@@ -40,7 +40,7 @@ tiempo_aplicacion: "15 - 30 minutes"
     <p>Bruxism or nighttime teeth grinding is an increasingly common disorder that can cause severe dental wear, facial muscle pain, chronic headaches, and temporomandibular joint (TMJ) disorders.</p>
     <p>At IVLU, we address bruxism with a comprehensive medical approach, using precise application of botulinum toxin (Dysport/Xeomin) in the masseter and temporal muscles to relax hyperactive musculature. This treatment can offer excellent results and, when combined with complementary therapies, can provide additional benefits to reduce dental damage and relieve chronic pain.</p>
 
-    <a href="#" id="lead_whatsapp" rel="nofollow noopener noreferrer" target="_blank" title="WhatsApp IVLU" class="buttons btn-secondary">Request detailed information</a>
+    {% include enlace-contacto.html canal="email" clase="buttons btn-secondary" texto="Request detailed information" location="bruxism-cta-1" %}
   </div>
 </section>
 
@@ -126,6 +126,6 @@ tiempo_aplicacion: "15 - 30 minutes"
     <p class="mediforma-final-label">Comprehensive treatment · Bogotá</p>
     <h2 id="cta-final-heading">Eliminate bruxism this week</h2>
     <p class="mediforma-final-sub">Consultation from $960,000 · 15-30 minutes · Botulinum toxin and comprehensive therapy</p>
-    {% include button.html %}
+    {% include button.html location="bruxism-boton-2" %}
   </div>
 </section>

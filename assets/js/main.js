@@ -17,10 +17,6 @@ const CONFIG = {
   },
   GAPS: {
     gallery: 10
-  },
-  MESSAGES: {
-    es: "Hola. Me gustaría pedir más información de los tratamientos estéticos que vi en tu página web. Gracias",
-    en: "Hello. I would like to request more information about the aesthetic treatments I saw on your website. Thank you"
   }
 };
 
@@ -656,43 +652,8 @@ class VideoEmbedComponent {
   }
 }
 
-// Componente de WhatsApp
-class WhatsAppComponent {
-  constructor() {
-    this.deviceType = this.detectDevice();
-    this.pageLanguage = this.detectLanguage();
-    this.setupWhatsAppLinks();
-  }
-  
-  detectDevice() {
-    return window.matchMedia('(max-width: 768px)').matches ? 'mobile' : 'desktop';
-  }
-  
-  detectLanguage() {
-    return document.documentElement.lang || 
-           (window.location.pathname.includes('/en/') ? 'en' : 'es');
-  }
-  
-  setupWhatsAppLinks() {
-    const message = CONFIG.MESSAGES[this.pageLanguage] || CONFIG.MESSAGES.es;
-    const encodedMessage = encodeURIComponent(message);
-    // El telefono viene de _config.yml via data-telefono en <body>; no hardcodear aqui.
-    const phoneNumber = document.body.dataset.telefono;
-    if (!phoneNumber) {
-      console.warn('setupWhatsAppLinks: falta data-telefono en <body>');
-      return;
-    }
-
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-
-    const whatsappLinks = document.querySelectorAll('a#lead_whatsapp, a.lead-whatsapp');
-    whatsappLinks.forEach(link => {
-      link.setAttribute('href', whatsappUrl);
-      link.setAttribute('target', '_blank');
-      link.setAttribute('rel', 'noopener noreferrer');
-    });
-  }
-}
+// WhatsApp, teléfono y correo: los enlaces ya salen completos del HTML
+// (_includes/enlace-contacto.html) y los mide assets/js/canales.js.
 
 // Componente de Scroll to Top
 class ScrollToTopComponent {
@@ -751,7 +712,6 @@ class WebApp {
     try {
       // Inicializar componentes en orden
       this.components.set('navigation', new NavigationComponent());
-      this.components.set('whatsapp', new WhatsAppComponent());
       this.components.set('scrollTop', new ScrollToTopComponent());
 
       // Inicializar galerías
@@ -767,7 +727,6 @@ class WebApp {
       });
 
       this.isInitialized = true;
-      console.log('✅ WebApp inicializada correctamente');
       
     } catch (error) {
       console.error('❌ Error inicializando WebApp:', error);
@@ -796,5 +755,5 @@ if (document.readyState === 'loading') {
   app.init();
 }
 
-// Cleanup global
-window.addEventListener('beforeunload', () => app.destroy());
+// Sin limpieza en beforeunload: ese listener impedía que el navegador guardara la página
+// en el bfcache (volver atrás recargaba todo). Al salir, el navegador libera los recursos.

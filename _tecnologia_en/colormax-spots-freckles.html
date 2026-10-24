@@ -53,11 +53,11 @@ casos_exito:
     before_image: "/assets/images/colormax-renovacion-antes.avif"
     after_image: "/assets/images/colormax-renovacion-despues.avif"
 ---
-<header class="wrapper two_columns">
+<header data-hero class="wrapper two_columns">
   <div class="flow">
     <h1>Colormax Laser for Spots and Freckles in Bogotá</h1>
     <p>Laser technology for cleaner, younger-looking skin.</p>
-    {% include button.html %}
+    {% include button.html location="colormax-spots-freckles-boton-1" %}
   </div>
   <img src="{{page.hero | relative_url }}" alt="{{page.alt}}" loading="lazy" decoding="async" width="520" height="520">
 </header>
@@ -72,7 +72,7 @@ casos_exito:
     <h2 class="content-title">Colormax: Cellular regeneration</h2>
     <p>The Colormax Laser is a non-invasive treatment that uses light pulses to eliminate spots, freckles, and other skin hyperpigmentation, improving tone and texture.</p>
 
-    <a href="#" id="lead_whatsapp" rel="nofollow noopener noreferrer" target="_blank" title="WhatsApp IVLU" class="buttons btn-secondary">Request detailed information</a>
+    {% include enlace-contacto.html canal="email" clase="buttons btn-secondary" texto="Request detailed information" location="colormax-spots-freckles-cta-1" %}
   </div>
 </section>
 

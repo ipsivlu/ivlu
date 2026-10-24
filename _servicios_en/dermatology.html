@@ -13,7 +13,7 @@ precios: "$150.000 COP"
 tiempo_aplicacion: "30 - 45 minutes"
 ---
 
-<header class="wrapper two_columns">
+<header data-hero class="wrapper two_columns">
   <div class="flow">
     <h1>Clinical and Aesthetic Dermatology</h1>
     <p>At our clinic, we provide a comprehensive approach to dermatology, combining clinical medicine with personalized aesthetic solutions. During the consultation, you can share your symptoms, concerns, and expectations, so we can offer you an accurate diagnosis and a customized treatment plan.</p>
@@ -26,7 +26,7 @@ tiempo_aplicacion: "30 - 45 minutes"
       {% endif %}
     </div>
     <div class="hero-cta-group">
-      {% include button.html %}
+      {% include button.html location="dermatology-boton-1" %}
       <a href="#precios-heading" class="buttons btn-secondary">View prices</a>
     </div>
   </div>
@@ -45,7 +45,7 @@ tiempo_aplicacion: "30 - 45 minutes"
     <p>At IVLU we thoroughly assess your skin using technologies like dermatoscopes and Wood's lamp. We treat conditions that may concern you. We want the best for you.</p>
     <p>Beyond resolving the pathology, we aim to harmonize the skin from an aesthetic perspective. Our treatments combine evidence-based medicine with personalized protocols to achieve healthy and radiant skin.</p>
     <p>We will always strive to provide you with professional and close care, using cutting-edge technology for a detailed diagnosis.</p>
-    <a href="#" class="buttons btn-secondary" target="_blank">Request detailed information</a>
+    {% include enlace-contacto.html canal="email" clase="buttons btn-secondary" texto="Request detailed information" location="dermatology-cta-1" %}
   </div>
 </section>
 
@@ -107,6 +107,6 @@ tiempo_aplicacion: "30 - 45 minutes"
     <p class="mediforma-final-label">Dermatology consultation · Bogotá</p>
     <h2 id="cta-final-heading">Care for your skin today</h2>
     <p class="mediforma-final-sub">Evaluation from <strong>$150.000 COP</strong> · 30-45 minutes · Accurate diagnosis and personalized treatment</p>
-    {% include button.html %}
+    {% include button.html location="dermatology-boton-2" %}
   </div>
 </section>

@@ -10,11 +10,11 @@ dateModified: "2025-03-12"
 published: no
 ---
 
-<header class="wrapper two_columns">
+<header data-hero class="wrapper two_columns">
   <div class="flow">
     <p>Hydrash in Bogotá</p>
     <h1>Deep hydration and facial bio-stimulation for radiant, rejuvenated skin</h1>
-    {% include button.html %}
+    {% include button.html location="hydrash-treatment-boton-1" %}
   </div>
   <img src="{{'/assets/images/hydrash-tratamiento.avif' | relative_url }}"
     alt="Hydrash deep hydration treatment at IVLU" loading="lazy" decoding="async" width="520" height="520">
@@ -31,7 +31,7 @@ published: no
     <p>Hydrash represents a revolution in facial hydration treatments, combining the power of low-density hyaluronic acid with an exclusive cocktail of vitamins, minerals, amino acids, and bio-stimulating peptides that work at multiple levels to transform skin quality.</p>
     <p>Unlike other hydrating treatments, Hydrash doesn't just provide surface moisture - it stimulates natural collagen, elastin, and hyaluronic acid production, improving dermal structure and restoring the skin's ability to retain hydration. The result is visibly brighter, firmer, and rejuvenated skin from the first session.</p>
 
-    <a href="#" id="lead_whatsapp" rel="nofollow noopener noreferrer" target="_blank" title="WhatsApp IVLU" class="buttons btn-secondary">Request detailed information</a>
+    {% include enlace-contacto.html canal="email" clase="buttons btn-secondary" texto="Request detailed information" location="hydrash-treatment-cta-1" %}
   </div>
 </section>
 

@@ -1,0 +1,19 @@
+{%- comment -%}
+Botón flotante, una vez en el layout.
+  ES: WhatsApp directo (icono ligero, sin gradientes con id global).
+  EN: "Contact us" abre un selector de canales (Popover API: Chrome 114+, Safari 17+). Sin
+      popover, los mismos canales siguen en /en/contact/.
+Se oculta (data-oculto + inert) mientras se ve el hero [data-hero]: lo hace js/canales.js.
+{%- endcomment -%}
+{%- assign lang = page.lang | default: site.default_lang | default: 'es' -%}
+<div class="flotante" data-flotante>
+{%- if lang == 'en' %}
+  <button class="buttons btn-primary flotante__boton" type="button" popovertarget="flotante-canales" data-location="flotante">{{ site.data.contacto.en.flotante }}</button>
+  <div class="flotante__menu" id="flotante-canales" popover>
+    {% include canales.html location="flotante" %}
+  </div>
+{%- else %}
+  {%- capture icono_flotante %}<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.014 8.006c.114-.904 1.289-2.132 2.22-1.996V6.01c.907.172 1.625 1.734 2.03 2.436.286.509.1 1.025-.167 1.243-.361.29-.926.692-.808 1.095C9.5 11.5 12 14 13.23 14.711c.466.269.804-.44 1.092-.804.21-.28.726-.447 1.234-.171.759.442 1.474.956 2.135 1.534.33.276.408.684.179 1.115-.403.76-1.569 1.76-2.415 1.557C13.976 17.587 8 15.27 6.08 8.558c-.108-.318-.08-.438-.066-.552Z"/><path fill="currentColor" fill-rule="evenodd" d="M12 23c-1.224 0-1.9-.131-3-.5l-2.106 1.053A2 2 0 0 1 4 21.763V19.5c-2.153-2.008-3-4.323-3-7.5C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11Zm-6-4.37-.636-.593C3.691 16.477 3 14.733 3 12a9 9 0 1 1 9 9c-.986 0-1.448-.089-2.364-.396l-.788-.264L6 21.764V18.63Z" clip-rule="evenodd"/></svg>{% endcapture %}
+  {% include enlace-contacto.html canal="whatsapp" clase="flotante__boton flotante__boton--whatsapp" texto=site.data.contacto.es.flotante icono=icono_flotante location="flotante" %}
+{%- endif %}
+</div>

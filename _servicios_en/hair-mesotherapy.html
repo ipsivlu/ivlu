@@ -12,7 +12,7 @@ dateModified: "2025-03-12"
 precios: "Each session: $400.000"
 tiempo_aplicacion: "60 minutes<br><small>Requires anesthesia</small>"
 ---
-<header class="wrapper two_columns">
+<header data-hero class="wrapper two_columns">
   <div class="flow">
     <h1>Hair Mesotherapy in Bogotá</h1>
     <p>Advanced treatment to stop hair loss and stimulate growth.</p>
@@ -23,7 +23,7 @@ tiempo_aplicacion: "60 minutes<br><small>Requires anesthesia</small>"
       {% endif %}
     </div>
     <div class="hero-cta-group">
-      {% include button.html %}
+      {% include button.html location="hair-mesotherapy-boton-1" %}
       <a href="#precios-heading" class="buttons btn-secondary">View prices</a>
     </div>
   </div>
@@ -38,7 +38,7 @@ tiempo_aplicacion: "60 minutes<br><small>Requires anesthesia</small>"
   <div class="flow">
     <h2 class="content-title">Hair mesotherapy: direct nutrition to the follicle</h2>
     <p>Hair mesotherapy is a non-surgical treatment that consists of infiltrating vitamins, amino acids, and growth factors directly into the scalp. Its objective is to stimulate hair growth, improve its health, and prevent hair loss.</p>
-    <a href="#" id="lead_whatsapp" rel="nofollow noopener noreferrer" target="_blank" title="WhatsApp IVLU" class="buttons btn-secondary">Request detailed information</a>
+    {% include enlace-contacto.html canal="email" clase="buttons btn-secondary" texto="Request detailed information" location="hair-mesotherapy-cta-1" %}
   </div>
 </section>
 
@@ -133,6 +133,6 @@ tiempo_aplicacion: "60 minutes<br><small>Requires anesthesia</small>"
     <p class="mediforma-final-label">Hair strengthening · Bogotá</p>
     <h2 id="cta-final-heading">Activate hair growth</h2>
     <p class="mediforma-final-sub">Advanced mesotherapy · Hair recovery · Visible results</p>
-    {% include button.html %}
+    {% include button.html location="hair-mesotherapy-boton-2" %}
   </div>
 </section>

@@ -11,7 +11,7 @@ dateModified: "2025-03-14"
 tiempo_aplicacion: "Cada sesión dura entre 45 y 90 minutos. Se recomiendan de 4 a 6 sesiones, según el objetivo terapéutico y respuesta del paciente."
 precios: "Desde $250.000"
 ---
-<header class="wrapper two_columns">
+<header data-hero class="wrapper two_columns">
   <div class="flow">
     <h1>Nutrición celular avanzada con cócteles personalizados de vitaminas, minerales y aminoácidos</h1>
     <p>Sueroterapia Intravenosa Premium en Bogotá</p>
@@ -22,7 +22,7 @@ precios: "Desde $250.000"
       {% endif %}
     </div>
     <div class="hero-cta-group">
-      {% include button.html %}
+      {% include button.html location="sueroterapia-boton-1" %}
       <a href="#precios-heading" class="buttons btn-secondary">Ver precios</a>
     </div>
   </div>
@@ -40,7 +40,7 @@ precios: "Desde $250.000"
     <p>La sueroterapia es un tratamiento intravenoso que administra medicamentos homeopáticos directamente en la sangre. En medicina biorreguladora, ayuda a restablecer el equilibrio del organismo, desintoxicar, fortalecer el sistema inmune y estimular la regeneración celular.</p>
     <p>Son Fabricados por el Laboratorio Alemán Heel con respaldo científico, calidad farmacéutica y registro INVIMA vigente para uso en Colombia.</p>
 
-    <a href="#" id="lead_whatsapp" rel="nofollow noopener noreferrer" target="_blank" title="WhatsApp IVLU" class="buttons btn-secondary">Solicita información detallada</a>
+    {% include enlace-contacto.html canal="whatsapp" clase="buttons btn-secondary" texto="Solicita información detallada" location="sueroterapia-cta-1" %}
   </div>
 </section>
 
@@ -163,6 +163,6 @@ precios: "Desde $250.000"
     <p class="mediforma-final-label">Nutrición celular · Bogotá</p>
     <h2 id="cta-final-heading">Revitaliza tu organismo hoy</h2>
     <p class="mediforma-final-sub">Vitaminas personalizadas · Energía inmediata · Sistema inmune fortalecido</p>
-    {% include button.html %}
+    {% include button.html location="sueroterapia-boton-2" %}
   </div>
 </section>

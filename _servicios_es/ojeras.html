@@ -39,7 +39,7 @@ casos_exito:
     after_image: "/assets/images/ojeras-geneticas-despues.avif"
 ---
 
-<header class="wrapper two_columns">
+<header data-hero class="wrapper two_columns">
   <div class="flow">
     <h1>Tratamiento de Ojeras en Bogotá</h1>
     <p>Recupera una mirada fresca y descansada con soluciones personalizadas para ojeras y bolsas bajo los ojos</p>
@@ -50,7 +50,7 @@ casos_exito:
       {% endif %}
     </div>
     <div class="hero-cta-group">
-      {% include button.html %}
+      {% include button.html location="ojeras-boton-1" %}
       <a href="#precios-heading" class="buttons btn-secondary">Ver precios</a>
     </div>
   </div>
@@ -67,7 +67,7 @@ casos_exito:
     <p>El tratamiento con ácido hialurónico está indicado para pacientes con pérdida de volumen en la zona de las ojeras. Este procedimiento mejora la tonalidad, elasticidad y suaviza el área del párpado inferior, devolviendo una expresión más juvenil y descansada. Los resultados son inmediatos y duran entre 8 y 12 meses. Además, ayuda a reducir las bolsas y manchas que pueden afectar la apariencia del rostro.</p>
     <p>En IVLU realizamos un diagnóstico personalizado para determinar el tipo específico de ojeras y diseñar un protocolo que combine técnicas avanzadas, como rellenos de ácido hialurónico, peelings despigmentantes y tratamientos vasculares. Nuestro enfoque integral garantiza resultados naturales y duraderos, devolviendo frescura y luminosidad a tu mirada.</p>
 
-    <a href="#" id="lead_whatsapp" rel="nofollow noopener noreferrer" target="_blank" title="WhatsApp IVLU" class="buttons btn-secondary">Solicita información detallada</a>
+    {% include enlace-contacto.html canal="whatsapp" clase="buttons btn-secondary" texto="Solicita información detallada" location="ojeras-cta-1" %}
   </div>
 </section>
 
@@ -144,6 +144,6 @@ casos_exito:
     <p class="mediforma-final-label">Ojeras rejuvenecidas · Bogotá</p>
     <h2 id="cta-final-heading">Despiértate con mirada fresca</h2>
     <p class="mediforma-final-sub">Ácido hialurónico · Efecto inmediato · Recuperación rápida</p>
-    {% include button.html %}
+    {% include button.html location="ojeras-boton-2" %}
   </div>
 </section>

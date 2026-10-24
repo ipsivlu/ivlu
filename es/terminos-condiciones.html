@@ -9,7 +9,7 @@ datePublished: "2023-01-01"
 dateModified: "2025-03-07"
 ---
 
-<header class="wrapper flow">
+<header data-hero class="wrapper flow">
   <div class="text_center">
     <h1>Términos y Condiciones</h1>
     <p>Vigentes desde: 1 de enero de 2023</p>
@@ -136,8 +136,8 @@ dateModified: "2025-03-07"
     <h2>12. Contacto</h2>
     <p>12.1. Para cualquier consulta relacionada con estos Términos y Condiciones, puede contactarnos a través de:</p>
     <ul>
-      <li>Correo electrónico: {{site.email}}</li>
-      <li>Teléfono: +57{{site.telefono}}</li>
+      <li>Correo electrónico: {{ site.contact.email }}</li>
+      <li>Teléfono: {{ site.contact.phone_display }}</li>
       <li>Dirección: {% include direccion.html %}</li>
     </ul>
   </div>

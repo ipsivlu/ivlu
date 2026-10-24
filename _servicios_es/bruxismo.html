@@ -12,7 +12,7 @@ dateModified: "2025-03-18"
 precios: "$960.000 - $1'500.000"
 tiempo_aplicacion: "15 - 30 minutos"
 ---
-<header class="wrapper two_columns">
+<header data-hero class="wrapper two_columns">
   <div class="flow">
     <h1>Tratamiento para Bruxismo en Bogotá</h1>
     <p>Elimina el dolor y protege tu dentadura con terapias avanzadas para el rechinamiento dental y la tensión mandibular</p>
@@ -23,7 +23,7 @@ tiempo_aplicacion: "15 - 30 minutos"
       {% endif %}
     </div>
     <div class="hero-cta-group">
-      {% include button.html %}
+      {% include button.html location="bruxismo-boton-1" %}
       <a href="#precios-heading" class="buttons btn-secondary">Ver precios</a>
     </div>
   </div>
@@ -40,7 +40,7 @@ tiempo_aplicacion: "15 - 30 minutos"
     <p>El bruxismo o rechinamiento dental nocturno es un trastorno cada vez más común que puede provocar desgaste dental severo, dolor muscular facial, cefaleas crónicas y trastornos en la articulación temporomandibular (ATM).</p>
     <p>En IVLU, abordamos el bruxismo con un enfoque médico integral, utilizando la aplicación precisa de toxina botulínica (Dysport/Xeomin) en los músculos maseteros y temporales para relajar la musculatura hiperactiva. Este tratamiento puede ofrecer excelentes resultados y, al combinarlo con terapias complementarias, se pueden lograr beneficios adicionales para reducir el daño dental y aliviar el dolor crónico.</p>
 
-    <a href="#" id="lead_whatsapp" rel="nofollow noopener noreferrer" target="_blank" title="WhatsApp IVLU" class="buttons btn-secondary">Solicita información detallada</a>
+    {% include enlace-contacto.html canal="whatsapp" clase="buttons btn-secondary" texto="Solicita información detallada" location="bruxismo-cta-1" %}
   </div>
 </section>
 
@@ -151,6 +151,6 @@ tiempo_aplicacion: "15 - 30 minutos"
     <p class="mediforma-final-label">Tratamiento integral · Bogotá</p>
     <h2 id="cta-final-heading">Elimina el bruxismo esta semana</h2>
     <p class="mediforma-final-sub">Consulta desde <strong>$960.000</strong> · 15-30 minutos · Toxina botulínica y terapia integral</p>
-    {% include button.html %}
+    {% include button.html location="bruxismo-boton-2" %}
   </div>
 </section>
