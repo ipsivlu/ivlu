@@ -12,19 +12,23 @@
     include.poster  — ruta a imagen de miniatura (opcional, recomendado)
     include.width   — ancho nativo del video, default 800
     include.height  — alto nativo del video, default 450
-    include.max_width — ancho máximo del reproductor en pantalla, default 440 (usar para filas de 3+ videos)
+    include.angosto — "si" limita el reproductor a 376px (filas de 3+ videos); por defecto 440px
+  Un video más alto que ancho (height > width) toma la proporción vertical 9:16 desde CSS.
 {% endcomment %}
 
 {% assign _lang    = page.lang | default: site.default_lang | default: "es" %}
 {% assign _label   = include.title | default: "Reproducir video" %}
 {% assign _width   = include.width  | default: 800 %}
 {% assign _height  = include.height | default: 450 %}
-{% assign _max_width = include.max_width | default: 440 %}
+{% assign _clase = 'video-embed' %}
+{% if include.angosto == 'si' %}{% assign _clase = _clase | append: ' video-embed--angosto' %}{% endif %}
+{% assign _w = _width | plus: 0 %}{% assign _h = _height | plus: 0 %}
+{% if _h > _w %}{% assign _clase = _clase | append: ' video-embed--vertical' %}{% endif %}
 {% assign _no_html5 = "Tu navegador no admite vídeo HTML5." %}
 {% if _lang == "en" %}{% assign _no_html5 = "Your browser does not support HTML5 video." %}{% endif %}
 
-<details class="video-embed" style="width: min(100%, {{ _max_width }}px);">
-  <summary class="video-embed__trigger" aria-label="{{ _label }}" style="aspect-ratio: {{ _width }} / {{ _height }};">
+<details class="{{ _clase }}">
+  <summary class="video-embed__trigger" aria-label="{{ _label }}">
 
     {% if include.poster %}
       <img

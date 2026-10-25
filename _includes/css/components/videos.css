@@ -41,6 +41,16 @@
   aspect-ratio: 16 / 9;
 }
 
+/* Filas de 3+ videos */
+.video-embed--angosto {
+  width: min(100%, 376px);
+}
+
+/* Video vertical (height > width en el include) */
+.video-embed--vertical .video-embed__trigger {
+  aspect-ratio: 9 / 16;
+}
+
 /* Eliminar marcadores nativos del navegador */
 .video-embed__trigger::-webkit-details-marker {
   display: none;

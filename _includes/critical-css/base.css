@@ -593,6 +593,20 @@ img {
   margin-top: 1.5em;
 }
 
+/* Bloque separado del anterior */
+.separado {
+  margin-top: 2em;
+}
+
+iframe {
+  border: 0;
+}
+
+.gtm-noscript-frame {
+  display: none;
+  visibility: hidden;
+}
+
 /* Two Columns Layout */
 .two_columns {
   display: flex;
@@ -635,6 +649,14 @@ img {
     place-items: center;
     overflow: hidden;
   }
+}
+
+.three_columns--compacto {
+  padding-top: 2em;
+}
+
+.three_columns--ajustado {
+  padding-block: 2em;
 }
 
 /* Flotante de contacto (_includes/contacto-flotante.html).

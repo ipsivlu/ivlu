@@ -27,7 +27,7 @@ layout: compress
 <body class="lang-{{ current_lang }}" data-wa-phone="{{ site.contact.whatsapp }}" data-wa-message="{{ site.data.contacto[current_lang].wa_mensaje | escape }}"{% if page.title %} data-wa-context="{{ page.title | escape }}"{% endif %}>
   <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KTP9DWNR"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  height="0" width="0" class="gtm-noscript-frame"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   {% include nav.html data=site.data.includes.menu.menu %}
 
