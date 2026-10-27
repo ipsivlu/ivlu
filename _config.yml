@@ -17,7 +17,7 @@ contact:
   whatsapp: "573228351465"           # solo dígitos, para wa.me
   phone: "+573228351465"             # E.164, para tel: y schema
   phone_display: "+57 322 835 1465"
-  sms: ""                            # número +1 con SMS bidireccional; vacío = sin "Text us"
+  sms: "+573228351465"               # celular de WhatsApp: "Text us" en /en (SMS internacional desde EE. UU.)
   email: &email centromedicoivlu@gmail.com
 
 # Formulario EN (Apps Script + Turnstile). Con endpoint vacío, /en usa correo como botón principal.

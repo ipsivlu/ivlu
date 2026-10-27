@@ -1,18 +1,19 @@
 {%- comment -%}
 Canales secundarios (enlaces con flecha), plantilla contacto-us de metodo-web.
 Parámetro: location (obligatorio, prefijo de data-location).
-"Text us" solo existe si hay número +1 en site.contact.sms.
+"Text us" sale con site.contact.sms, que es el celular de WhatsApp (SMS internacional
+desde EE. UU.). Orden: Text us, Email, WhatsApp, Call.
 {%- endcomment -%}
 {%- assign cn_ubic = include.location | default: 'sin-ubicacion' -%}
 <ul class="canales">
-  {%- assign cn_loc = cn_ubic | append: '-email' %}
-  <li>{% include enlace-contacto.html canal="email" location=cn_loc flecha="si" %}</li>
   {%- if site.contact.sms.size > 0 %}
   {%- assign cn_loc = cn_ubic | append: '-sms' %}
   <li>{% include enlace-contacto.html canal="sms" location=cn_loc flecha="si" %}</li>
   {%- endif %}
-  {%- assign cn_loc = cn_ubic | append: '-tel' %}
-  <li>{% include enlace-contacto.html canal="tel" location=cn_loc flecha="si" %}</li>
+  {%- assign cn_loc = cn_ubic | append: '-email' %}
+  <li>{% include enlace-contacto.html canal="email" location=cn_loc flecha="si" %}</li>
   {%- assign cn_loc = cn_ubic | append: '-whatsapp' %}
   <li>{% include enlace-contacto.html canal="whatsapp" location=cn_loc flecha="si" %}</li>
+  {%- assign cn_loc = cn_ubic | append: '-tel' %}
+  <li>{% include enlace-contacto.html canal="tel" location=cn_loc flecha="si" %}</li>
 </ul>

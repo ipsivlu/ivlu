@@ -349,7 +349,11 @@
   function ubicacionDe(enlace) {
     var d = enlace.dataset;
     var propia = d.location || d.waLocation || d.wa || d.buttonType;
-    if (propia) return propia;
+    if (propia) {
+      var menu = enlace.closest("#flotante-canales");
+      if (menu && menu.dataset.origen) return propia.replace(/^flotante/, menu.dataset.origen);
+      return propia;
+    }
     var zona = enlace.closest("header,nav,footer,aside,main,section,article");
     if (zona) {
       if (zona.tagName === "HEADER") return "cabecera";
@@ -428,6 +432,34 @@
     window.open(destino, "_blank", "noopener");
   }
 
+  // ==========================================================================
+  // SELECTOR DE CANALES (EN)
+  // Los botones sólidos [data-canales] abren el mismo popover que el flotante.
+  // Sin popover o sin JS, el enlace lleva a la página de contacto. Los canales
+  // del menú heredan la ubicación del botón que lo abrió (hero → hero-email).
+  // ==========================================================================
+
+  var menuCanales = document.getElementById("flotante-canales");
+  if (menuCanales && menuCanales.showPopover) {
+    document.addEventListener("click", function (e) {
+      var abre = e.target.closest("[data-canales], [popovertarget='flotante-canales']");
+      if (abre) {
+        menuCanales.dataset.origen = abre.getAttribute("data-location") || "flotante";
+        if (abre.hasAttribute("data-canales")) {
+          e.preventDefault();
+          menuCanales.dataset.desde = "boton";
+          menuCanales.showPopover();
+        } else {
+          delete menuCanales.dataset.desde;
+        }
+        return;
+      }
+      if (e.target.closest("#flotante-canales a[href]")) {
+        setTimeout(function () { menuCanales.hidePopover(); }, 0);
+      }
+    });
+  }
+
   // Captura: se mide antes de que cualquier otro manejador cancele el clic.
   document.addEventListener("click", alHacerClic, true);
   Recuperacion.vigilar(mostrarCuadro);
@@ -444,9 +476,10 @@
       var visible = entradas[0].isIntersecting;
       flotante.toggleAttribute("data-oculto", visible);
       flotante.inert = visible;
+      // El menú vive fuera del flotante; solo se cierra si lo abrió el flotante.
       if (visible) {
-        var menu = flotante.querySelector("[popover]");
-        if (menu && menu.matches(":popover-open")) menu.hidePopover();
+        var menu = document.getElementById("flotante-canales");
+        if (menu && menu.showPopover && !menu.dataset.desde && menu.matches(":popover-open")) menu.hidePopover();
       }
     }, { threshold: 0.05 }).observe(hero);
   })();

@@ -718,6 +718,18 @@ iframe {
   box-shadow: var(--shadow);
 }
 
+/* Abierto desde un botón sólido de /en: centrado, con fondo velado */
+.flotante__menu[data-desde="boton"] {
+  inset: 0;
+  margin: auto;
+  block-size: fit-content;
+  inline-size: min(22rem, calc(100vw - 24px));
+}
+
+.flotante__menu[data-desde="boton"]::backdrop {
+  background: rgb(0 0 0 / 0.4);
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .flotante__menu {
     opacity: 0;
