@@ -1,12 +1,21 @@
 /**
  * canales.js — medición de todos los canales de contacto, igual en todos los sitios
- * Versión 3.0 (evolución de lead-whatsapp.js 2.2; lo reemplaza, no conviven)
+ * Versión 3.1 (evolución de lead-whatsapp.js 2.2; lo reemplaza, no conviven)
  *
  * QUÉ HACE
- *   1. WhatsApp: lo mismo que 2.2. Mensaje prellenado, evento de siempre
- *      (data-wa-event, por defecto "whatsapp_click") y recuperación del lead si
- *      el usuario vuelve enseguida sin haber escrito. Los tags de GTM que ya
+ *   1. WhatsApp: mensaje prellenado, evento de siempre (data-wa-event, por
+ *      defecto "whatsapp_click", uno por clic) y recuperación del lead si el
+ *      usuario vuelve enseguida sin haber escrito. Los tags de GTM que ya
  *      existen siguen funcionando sin tocarlos.
+ *      - Móvil (también iPad): wa.me en la misma pestaña; el sistema abre la app.
+ *      - Computador: ningún navegador deja saber si la app está instalada ni si
+ *        hay sesión en WhatsApp Web (la detección por blur de 2.0 fallaba con el
+ *        aviso de Chrome). Por eso el primer clic pregunta "App o WhatsApp Web",
+ *        se guarda en localStorage (wa_preferencia) y los siguientes van directo
+ *        a whatsapp://send o a web.whatsapp.com/send, sin la página intermedia
+ *        de wa.me. Tras abrir la app queda 8 s un aviso "¿No se abrió? Usar
+ *        WhatsApp Web"; si vuelve rápido de la web (QR), el cuadro ofrece la app.
+ *      - Sin JS el href sigue siendo wa.me, que funciona en todo dispositivo.
  *   2. Teléfono, SMS, correo y agenda: un evento "contact_click" con
  *      contact_method = phone | sms | email | booking. Antes no se medían.
  *   3. Guarda la atribución del primer toque de la sesión (utm_*, gclid, gbraid,
@@ -31,7 +40,7 @@
 (function () {
   "use strict";
 
-  var VERSION = "3.0";
+  var VERSION = "3.1";
   var body = document.body;
   if (!body) return;
 
@@ -82,9 +91,18 @@
     ".whatsapp-float"
   ].join(", ");
 
-  var esMovil = /iPhone|Android|iPad|iPod|Windows Phone|webOS|BlackBerry|Opera Mini|IEMobile|Mobile/i.test(
-    navigator.userAgent
-  );
+  // iPadOS 13+ se presenta como Mac: se reconoce por la pantalla táctil.
+  var esMovil =
+    /iPhone|Android|iPad|iPod|Windows Phone|webOS|BlackBerry|Opera Mini|IEMobile|Mobile/i.test(navigator.userAgent) ||
+    (/Macintosh/.test(navigator.userAgent) && navigator.maxTouchPoints > 1);
+
+  // Cómo abre WhatsApp este computador ("app" | "web"). localStorage para que
+  // dure entre visitas; lanza en modo privado o con el almacenamiento bloqueado.
+  var K_PREF = "wa_preferencia";
+  function preferencia() {
+    try { var v = localStorage.getItem(K_PREF); return v === "app" || v === "web" ? v : ""; } catch (e) { return ""; }
+  }
+  function guardarPreferencia(v) { try { localStorage.setItem(K_PREF, v); } catch (e) {} }
 
   // ==========================================================================
   // ATRIBUCIÓN (primer toque de la sesión)
@@ -113,7 +131,9 @@
     push: function (datos) {
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push(datos);
-      if (!window.google_tag_manager && typeof window.gtag === "function") {
+      // gtag.js solo también crea google_tag_manager (con la clave G-…): hay contenedor solo si hay una clave GTM-.
+      var hayGtm = Object.keys(window.google_tag_manager || {}).some(function (k) { return /^GTM-/.test(k); });
+      if (!hayGtm && typeof window.gtag === "function") {
         window.gtag("event", datos.event, datos);
       }
     },
@@ -154,9 +174,10 @@
   };
 
   // ==========================================================================
-  // RECUPERACIÓN DE LEAD DE WHATSAPP (sin cambios de comportamiento desde 2.2)
-  // Hace falta una salida real (la página se oculta tras el clic) y un regreso
-  // rápido. Una sola aparición por sesión.
+  // RECUPERACIÓN DE LEAD DE WHATSAPP
+  // Hace falta una salida real (la página se oculta tras abrir WhatsApp) y un
+  // regreso rápido. Una sola aparición por sesión. En computador solo se arma al
+  // abrir la web (la app no oculta la página: la cubre el aviso de 8 s).
   // ==========================================================================
 
   var Recuperacion = {
@@ -175,8 +196,8 @@
       escribir(this.K_PENDIENTE, "1");
       escribir(this.K_CLIC, String(Date.now()));
       borrar(this.K_SALIDA);
-      if (numero) escribir(this.K_NUMERO, numero);
-      if (mensaje) escribir(this.K_MENSAJE, mensaje);
+      if (numero) escribir(this.K_NUMERO, numero); else borrar(this.K_NUMERO);
+      if (mensaje) escribir(this.K_MENSAJE, mensaje); else borrar(this.K_MENSAJE);
     },
     marcarSalida: function () {
       if (!leer(this.K_PENDIENTE) || leer(this.K_SALIDA)) return;
@@ -223,6 +244,12 @@
 
   var TEXTOS = {
     es: {
+      elegir: "¿Cómo abres WhatsApp en este computador?",
+      elegirSub: "Lo recordamos para la próxima vez.",
+      app: "App de WhatsApp",
+      web: "WhatsApp Web",
+      abriendo: "Abriendo la app de WhatsApp…",
+      noAbrio: "¿No se abrió? Usar WhatsApp Web",
       titulo: "¿Seguimos por WhatsApp?",
       subtitulo: "Si no llegaste a enviar el mensaje, retómalo desde aquí.",
       principal: "Abrir WhatsApp",
@@ -231,6 +258,12 @@
       cerrar: "Cerrar"
     },
     en: {
+      elegir: "How do you use WhatsApp on this computer?",
+      elegirSub: "We’ll remember it next time.",
+      app: "WhatsApp app",
+      web: "WhatsApp Web",
+      abriendo: "Opening the WhatsApp app…",
+      noAbrio: "Didn’t open? Use WhatsApp Web",
       titulo: "Continue on WhatsApp?",
       subtitulo: "If you didn’t get to send your message, pick it up here.",
       principal: "Open WhatsApp",
@@ -239,13 +272,14 @@
       cerrar: "Close"
     }
   };
+  function textos() { return TEXTOS[CONFIG.lang] || TEXTOS.es; }
 
-  // El cuadro se inyecta con su propio CSS para funcionar en cualquier sitio.
+  // Los cuadros se inyectan con su propio CSS para funcionar en cualquier sitio.
   // data-wa-styles="off" lo apaga cuando el sitio trae el suyo en @layer.
   function inyectarEstilos() {
     if (!CONFIG.estilos || document.getElementById("lead-wa-estilos")) return;
     var css =
-      ".lead-wa-modal,.lead-wa-modal *{box-sizing:border-box}" +
+      ".lead-wa-modal,.lead-wa-modal *,.lead-wa-aviso,.lead-wa-aviso *{box-sizing:border-box}" +
       ".lead-wa-modal{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:99999;display:flex;" +
       "align-items:center;justify-content:center;padding:20px;opacity:0;visibility:hidden;" +
       "transition:opacity .2s ease-out,visibility 0s linear .2s}" +
@@ -261,6 +295,11 @@
       ".lead-wa-btn--wa{background:#25d366;color:#fff}.lead-wa-btn--sec{background:#f1f1f1;color:#333}" +
       ".lead-wa-cerrar{position:absolute;top:4px;right:4px;min-width:44px;min-height:44px;background:none;" +
       "border:none;font-size:1.5rem;color:#666;cursor:pointer}" +
+      ".lead-wa-aviso{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);z-index:99999;display:flex;" +
+      "align-items:center;gap:.75rem;max-width:calc(100vw - 32px);padding:.75rem 1rem;background:#1a1a1a;color:#fff;" +
+      "font-family:inherit;font-size:.9rem;box-shadow:0 6px 24px rgba(0,0,0,.25)}" +
+      ".lead-wa-aviso button{min-height:44px;padding:0 .75rem;border:none;background:#25d366;color:#fff;font:inherit;" +
+      "font-weight:600;cursor:pointer}" +
       "@media (prefers-reduced-motion:reduce){.lead-wa-modal,.lead-wa-card{transition:none;transform:none}}";
     var s = document.createElement("style");
     s.id = "lead-wa-estilos";
@@ -268,28 +307,47 @@
     document.head.appendChild(s);
   }
 
-  function mostrarCuadro() {
-    if (document.querySelector(".lead-wa-modal")) return;
+  // Cuadro genérico: título, subtítulo y botones { texto, clase, accion }.
+  // Todo son <button>: sus clics nunca pasan por alHacerClic ni suman leads.
+  function abrirCuadro(titulo, subtitulo, botones) {
+    var previo = document.querySelector(".lead-wa-modal");
+    if (previo) previo.remove();
     inyectarEstilos();
-    var t = TEXTOS[CONFIG.lang] || TEXTOS.es;
-    var numero = leer(Recuperacion.K_NUMERO) || CONFIG.phone;
-    var texto = leer(Recuperacion.K_MENSAJE) || construirMensaje(null);
-    var href = destinoDe(numero, texto);
-
-    Analytics.simple("lead_recovery_shown");
-
+    var t = textos();
     var modal = document.createElement("div");
     modal.className = "lead-wa-modal";
     modal.setAttribute("role", "dialog");
     modal.setAttribute("aria-modal", "true");
-    modal.setAttribute("aria-label", t.titulo);
-    modal.innerHTML =
-      '<div class="lead-wa-card"><h3>' + t.titulo + '</h3><p class="lead-wa-sub">' + t.subtitulo + "</p>" +
-      '<div class="lead-wa-acciones"><a class="lead-wa-btn lead-wa-btn--wa' +
-      (CONFIG.claseBoton ? " " + CONFIG.claseBoton : "") + '" href="' + href +
-      '" target="_blank" rel="nofollow noopener noreferrer">' + t.principal + "</a>" +
-      '<button type="button" class="lead-wa-btn lead-wa-btn--sec">' + t.copiar + "</button></div>" +
-      '<button type="button" class="lead-wa-cerrar" aria-label="' + t.cerrar + '">&times;</button></div>';
+    modal.setAttribute("aria-label", titulo);
+    var tarjeta = document.createElement("div");
+    tarjeta.className = "lead-wa-card";
+    var h = document.createElement("h3");
+    h.textContent = titulo;
+    tarjeta.appendChild(h);
+    if (subtitulo) {
+      var p = document.createElement("p");
+      p.className = "lead-wa-sub";
+      p.textContent = subtitulo;
+      tarjeta.appendChild(p);
+    }
+    var acciones = document.createElement("div");
+    acciones.className = "lead-wa-acciones";
+    botones.forEach(function (b) {
+      var boton = document.createElement("button");
+      boton.type = "button";
+      boton.className = "lead-wa-btn " + b.clase + (b.clase === "lead-wa-btn--wa" && CONFIG.claseBoton ? " " + CONFIG.claseBoton : "");
+      boton.textContent = b.texto;
+      boton.addEventListener("click", function () { b.accion(boton, cerrar); });
+      acciones.appendChild(boton);
+    });
+    tarjeta.appendChild(acciones);
+    var x = document.createElement("button");
+    x.type = "button";
+    x.className = "lead-wa-cerrar";
+    x.setAttribute("aria-label", t.cerrar);
+    x.textContent = "×";
+    tarjeta.appendChild(x);
+    modal.appendChild(tarjeta);
     document.body.appendChild(modal);
     // Reflow síncrono: rAF no corre en pestañas ocultas y el cuadro aparece justo al volver.
     void modal.offsetWidth;
@@ -302,22 +360,108 @@
       setTimeout(function () { modal.remove(); }, 250);
     }
     modal.addEventListener("click", function (e) { if (e.target === modal) cerrar(); });
-    modal.querySelector(".lead-wa-cerrar").addEventListener("click", cerrar);
-    modal.querySelector(".lead-wa-btn--wa").addEventListener("click", function () {
-      Analytics.simple("lead_recovery_click");
-      cerrar();
-    });
-    modal.querySelector(".lead-wa-btn--sec").addEventListener("click", function (e) {
-      var boton = e.currentTarget;
-      var original = boton.textContent;
-      var copia = navigator.clipboard ? navigator.clipboard.writeText(numero) : Promise.reject();
-      copia
-        .then(function () { boton.textContent = t.copiado; })
-        .catch(function () { boton.textContent = numero; })
-        .then(function () { setTimeout(function () { boton.textContent = original; }, 2000); });
-    });
+    x.addEventListener("click", cerrar);
     document.addEventListener("keydown", alPulsarTecla);
-    modal.querySelector(".lead-wa-btn--wa").focus();
+    acciones.firstChild.focus();
+    return modal;
+  }
+
+  function botonCopiar(numero) {
+    return {
+      texto: textos().copiar,
+      clase: "lead-wa-btn--sec",
+      accion: function (boton) {
+        var t = textos();
+        var copia = navigator.clipboard ? navigator.clipboard.writeText(numero) : Promise.reject();
+        copia
+          .then(function () { boton.textContent = t.copiado; })
+          .catch(function () { boton.textContent = numero; })
+          .then(function () { setTimeout(function () { boton.textContent = t.copiar; }, 2000); });
+      }
+    };
+  }
+
+  // Abre WhatsApp por la vía elegida y la recuerda. "app" usa el protocolo, que
+  // no navega la página; "web" abre pestaña nueva dentro del clic del usuario
+  // (sin bloqueo de ventanas emergentes) y arma la recuperación.
+  function abrirVia(via, numero, mensaje) {
+    guardarPreferencia(via);
+    var url = destinoDe(numero, mensaje, via);
+    if (via === "app") {
+      window.location.href = url;
+      avisoApp(numero, mensaje);
+    } else {
+      Recuperacion.armar(numero, mensaje);
+      window.open(url, "_blank", "noopener");
+    }
+  }
+
+  // Tras abrir la app: 8 s para cambiar a la web si no había app instalada.
+  var temporizadorAviso = null;
+  function avisoApp(numero, mensaje) {
+    inyectarEstilos();
+    var previo = document.querySelector(".lead-wa-aviso");
+    if (previo) previo.remove();
+    var t = textos();
+    var aviso = document.createElement("div");
+    aviso.className = "lead-wa-aviso";
+    aviso.setAttribute("role", "status");
+    var texto = document.createElement("span");
+    texto.textContent = t.abriendo;
+    var boton = document.createElement("button");
+    boton.type = "button";
+    boton.textContent = t.noAbrio;
+    boton.addEventListener("click", function () {
+      aviso.remove();
+      Analytics.simple("whatsapp_web_fallback");
+      abrirVia("web", numero, mensaje);
+    });
+    aviso.appendChild(texto);
+    aviso.appendChild(boton);
+    document.body.appendChild(aviso);
+    // El diálogo de Chrome "¿Abrir WhatsApp?" quita el foco y bloquea la página
+    // mientras está abierto: los 8 s cuentan de nuevo cuando la ventana lo recupera.
+    var programar = function () {
+      clearTimeout(temporizadorAviso);
+      temporizadorAviso = setTimeout(function () { aviso.remove(); }, 8000);
+    };
+    programar();
+    window.addEventListener("focus", programar, { once: true });
+  }
+
+  // Primer clic en computador: el visitante elige y se recuerda.
+  function elegirVia(numero, mensaje) {
+    var t = textos();
+    abrirCuadro(t.elegir, t.elegirSub, [
+      { texto: t.app, clase: "lead-wa-btn--wa", accion: function (b, cerrar) { cerrar(); abrirVia("app", numero, mensaje); } },
+      { texto: t.web, clase: "lead-wa-btn--wa", accion: function (b, cerrar) { cerrar(); abrirVia("web", numero, mensaje); } },
+      botonCopiar(numero)
+    ]);
+  }
+
+  function mostrarCuadro() {
+    var t = textos();
+    var numero = leer(Recuperacion.K_NUMERO) || CONFIG.phone;
+    var mensaje = leer(Recuperacion.K_MENSAJE) || construirMensaje(null);
+    borrar(Recuperacion.K_NUMERO);
+    borrar(Recuperacion.K_MENSAJE);
+    Analytics.simple("lead_recovery_shown");
+    var recuperar = function (via) {
+      return function (b, cerrar) {
+        Analytics.simple("lead_recovery_click");
+        cerrar();
+        if (via === "movil") window.location.href = destinoDe(numero, mensaje);
+        else abrirVia(via, numero, mensaje);
+      };
+    };
+    var botones = esMovil
+      ? [{ texto: t.principal, clase: "lead-wa-btn--wa", accion: recuperar("movil") }]
+      : [
+          { texto: t.app, clase: "lead-wa-btn--wa", accion: recuperar("app") },
+          { texto: t.web, clase: "lead-wa-btn--wa", accion: recuperar("web") }
+        ];
+    botones.push(botonCopiar(numero));
+    abrirCuadro(t.titulo, t.subtitulo, botones);
   }
 
   // ==========================================================================
@@ -364,9 +508,12 @@
     return "sin-ubicacion";
   }
 
-  // Siempre wa.me, nunca whatsapp://: el protocolo no oculta la página (rompe la
-  // recuperación) y el diálogo de Chrome dejaba el clic sin efecto visible.
-  function destinoDe(numero, mensaje) {
+  // via "app" y "web" solo en computador y por elección del visitante (las mismas
+  // URLs que ofrece la página intermedia de wa.me). Sin via: wa.me (móvil).
+  function destinoDe(numero, mensaje, via) {
+    var q = "phone=" + numero + (mensaje ? "&text=" + mensaje : "");
+    if (via === "app") return "whatsapp://send?" + q;
+    if (via === "web") return "https://web.whatsapp.com/send?" + q;
     return "https://wa.me/" + numero + (mensaje ? "?text=" + mensaje : "");
   }
 
@@ -407,30 +554,29 @@
 
     var numero = numeroDe(enlace);
     var mensaje = construirMensaje(enlace);
-    var destino = destinoDe(numero, mensaje);
     var esA = enlace.tagName === "A" && enlace.hasAttribute("href");
 
     Analytics.whatsapp(ubicacionDe(enlace), enlace);
-    Recuperacion.armar(numero, mensaje);
 
+    // Ctrl/Cmd/Shift/rueda: el navegador abre wa.me donde el usuario pidió.
     if (e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1) {
-      if (esA) enlace.setAttribute("href", destino);
-      return;
-    }
-    if (esMovil) {
-      e.preventDefault();
-      window.location.href = destino;
-      return;
-    }
-    if (esA) {
-      enlace.setAttribute("href", destino);
-      enlace.setAttribute("target", "_blank");
-      enlace.setAttribute("rel", "nofollow noopener noreferrer");
+      if (esA) enlace.setAttribute("href", destinoDe(numero, mensaje));
       return;
     }
     e.preventDefault();
-    window.open(destino, "_blank", "noopener");
+    if (esMovil) {
+      Recuperacion.armar(numero, mensaje);
+      window.location.href = destinoDe(numero, mensaje);
+      return;
+    }
+    var via = preferencia();
+    if (via) abrirVia(via, numero, mensaje);
+    else elegirVia(numero, mensaje);
   }
+
+  // Captura: se mide antes de que cualquier otro manejador cancele el clic.
+  document.addEventListener("click", alHacerClic, true);
+  Recuperacion.vigilar(mostrarCuadro);
 
   // ==========================================================================
   // SELECTOR DE CANALES (EN)
@@ -438,7 +584,6 @@
   // Sin popover o sin JS, el enlace lleva a la página de contacto. Los canales
   // del menú heredan la ubicación del botón que lo abrió (hero → hero-email).
   // ==========================================================================
-
   var menuCanales = document.getElementById("flotante-canales");
   if (menuCanales && menuCanales.showPopover) {
     document.addEventListener("click", function (e) {
@@ -454,15 +599,11 @@
         }
         return;
       }
-      if (e.target.closest("#flotante-canales a[href]")) {
+      if (e.target.closest("#flotante-canales a[href]") && menuCanales.matches(":popover-open")) {
         setTimeout(function () { menuCanales.hidePopover(); }, 0);
       }
     });
   }
-
-  // Captura: se mide antes de que cualquier otro manejador cancele el clic.
-  document.addEventListener("click", alHacerClic, true);
-  Recuperacion.vigilar(mostrarCuadro);
 
   // ==========================================================================
   // FLOTANTE: oculto mientras se ve el hero
@@ -476,7 +617,8 @@
       var visible = entradas[0].isIntersecting;
       flotante.toggleAttribute("data-oculto", visible);
       flotante.inert = visible;
-      // El menú vive fuera del flotante; solo se cierra si lo abrió el flotante.
+      // El menú abierto desde el flotante se cierra con él; el abierto desde un
+      // botón sólido [data-canales] (p. ej. el del hero) se queda.
       if (visible) {
         var menu = document.getElementById("flotante-canales");
         if (menu && menu.showPopover && !menu.dataset.desde && menu.matches(":popover-open")) menu.hidePopover();
@@ -490,6 +632,8 @@
     atribucion: atribucion,
     push: function (d) { Analytics.push(d); },
     probarCuadro: mostrarCuadro,
+    probarEleccion: function () { elegirVia(CONFIG.phone, construirMensaje(null)); },
+    olvidarPreferencia: function () { try { localStorage.removeItem(K_PREF); } catch (e) {} },
     diagnostico: function () {
       var wa = document.querySelectorAll(SELECTOR_WA);
       var otros = { phone: 0, sms: 0, email: 0, booking: 0 };
@@ -501,6 +645,8 @@
         version: VERSION,
         numeroDelSitio: CONFIG.phone || "(FALTA data-wa-phone)",
         eventoWhatsApp: CONFIG.evento,
+        dispositivo: esMovil ? "móvil (wa.me)" : "computador",
+        preferenciaWhatsApp: preferencia() || "(sin elegir: pregunta en el primer clic)",
         mide: CONFIG.medir,
         enlacesWhatsApp: wa.length,
         otrosCanales: otros,
