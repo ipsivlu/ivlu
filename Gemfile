@@ -1,6 +1,5 @@
 source "https://rubygems.org"
-gem "jekyll"
-gem 'github-pages'
+gem "jekyll", "~> 4.4"
 gem "webrick", "~> 1.8"
 
 # Performance optimization for Windows
