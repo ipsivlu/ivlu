@@ -267,6 +267,37 @@ body {
   color: var(--primary);
 }
 
+/* Sección activa: página exacta (aria-current="page") o su sección (aria-current="true", también en los
+   títulos sin enlace). Dorado oscuro de marca en texto y subrayado de 2px (5:1 sobre blanco; el dorado claro
+   no llega a 3:1). La especificidad supera a .site-header:not(.scrolled) .nav-link del bloque móvil. */
+.navegacion .nav-links :is(.nav-link, a)[aria-current] {
+  color: var(--accion);
+  text-decoration: underline 2px var(--accion);
+  text-underline-offset: 0.3em;
+}
+
+/* En el menú móvil (lista vertical) la marca es una barra lateral de 2px en el margen izquierdo:
+   el subrayado alcanzaría también a la flecha ▼ de los títulos desplegables. */
+@media screen and (max-width: 1120px) {
+  .navegacion .nav-links :is(.nav-link, a)[aria-current] {
+    position: relative;
+    text-decoration: none;
+  }
+
+  .navegacion .nav-links :is(.nav-link, a)[aria-current]::before {
+    content: "";
+    position: absolute;
+    inset-block: 0;
+    inset-inline-start: -10px;
+    inline-size: 2px;
+    background: var(--accion);
+  }
+
+  .navegacion .nav-links .nav-link[aria-current]::before {
+    inset-block: 15px;
+  }
+}
+
 /* Selector de idioma */
 .language-switcher {
   margin-left: 0.75rem;
@@ -507,6 +538,7 @@ h5{
   line-height: var(--line-height);
   text-transform: none;
   max-width: 600px;
+  overflow-wrap: break-word; /* correos y URLs largas en títulos legales a 320 px */
 }
 
 h1 {
@@ -547,6 +579,7 @@ li {
 
 ol li {
   margin-left: 3em;
+  width: min(100% - 3em, 600px);
   list-style: decimal;
 }
 

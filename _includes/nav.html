@@ -1,4 +1,26 @@
 {% assign current_lang = page.lang | default: site.default_lang | default: "es" %}
+{%- comment -%}
+  Sección activa del menú. El enlace a la página exacta recibe aria-current="page" con replace_first sobre el
+  HTML capturado de .nav-links (si el mismo destino sale dos veces, solo se marca el primero). La sección se marca
+  con aria-current="true": Servicios (colecciones de servicios y tecnologías y sus páginas índice), Nosotros & Contacto
+  e Información (sus páginas hijas) y Blog (los posts).
+{%- endcomment -%}
+{%- assign nav_href_actual = 'href="' | append: page.url | append: '"' -%}
+{%- assign nav_href_marcado = nav_href_actual | append: ' aria-current="page"' -%}
+{%- assign nav_seccion = "" -%}
+{%- assign nav_indices_servicios = "/es/servicios/ /es/tecnologias/ /en/aesthetic-services/ /en/technologies/" | split: " " -%}
+{%- assign nav_nosotros = "/es/sobre-nosotros/ /es/doctora-ivonne/ /es/doctora-luisa/ /es/contacto/ /en/about/ /en/dr-ivonne/ /en/dr-luisa/ /en/contact/" | split: " " -%}
+{%- assign nav_informacion = "/es/preguntas-frecuentes/ /es/informacion-paciente/ /es/casos-de-exito/ /en/faqs/ /en/patient-information/ /en/success-stories/" | split: " " -%}
+{%- assign nav_blog = "/" | append: current_lang | append: "/blog/" -%}
+{%- if page.collection == "servicios_es" or page.collection == "servicios_en" or page.collection == "tecnologia_es" or page.collection == "tecnologia_en" or nav_indices_servicios contains page.url -%}
+  {%- assign nav_seccion = "servicios" -%}
+{%- elsif nav_nosotros contains page.url -%}
+  {%- assign nav_seccion = "nosotros" -%}
+{%- elsif nav_informacion contains page.url -%}
+  {%- assign nav_seccion = "informacion" -%}
+{%- elsif page.collection == "posts" and page.url != nav_blog -%}
+  {%- assign nav_seccion = "blog" -%}
+{%- endif -%}
 
 <section class="site-header" id="header">
   <div class="banner_nav">
@@ -61,10 +83,11 @@
     </button>
 
     <!-- Navegación Principal -->
+    {%- capture nav_enlaces %}
     <div class="nav-links">
       <!-- Servicios Dropdown -->
       <div class="dropdown" id="services-dropdown">
-        <span class="nav-link">{% if current_lang == 'en' %}Services{% else %}Servicios{% endif %}</span>
+        <span class="nav-link"{% if nav_seccion == "servicios" %} aria-current="true"{% endif %}>{% if current_lang == 'en' %}Services{% else %}Servicios{% endif %}</span>
       </div>
 
       <!-- Megamenú separado para Servicios -->
@@ -257,7 +280,7 @@
 
       <!-- Nosotros Dropdown -->
       <div class="dropdown">
-        <span class="nav-link">{% if current_lang == 'en' %}About & Contact{% else %}Nosotros & Contacto{% endif
+        <span class="nav-link"{% if nav_seccion == "nosotros" %} aria-current="true"{% endif %}>{% if current_lang == 'en' %}About & Contact{% else %}Nosotros & Contacto{% endif
           %}</span>
         <div class="dropdown-content">
           <a href="/{{ current_lang }}/{% if current_lang == 'en' %}about/{% else %}sobre-nosotros/{% endif %}">
@@ -276,13 +299,13 @@
       </div>
 
       <!-- Blog Link -->
-      <a href="/{{ current_lang }}/blog/" class="nav-link">
+      <a href="/{{ current_lang }}/blog/" class="nav-link"{% if nav_seccion == "blog" %} aria-current="true"{% endif %}>
         <span>Blog</span>
       </a>
 
       <!-- Información Dropdown -->
       <div class="dropdown">
-        <span class="nav-link">{% if current_lang == 'en' %}Information{% else %}Información{% endif %}</span>
+        <span class="nav-link"{% if nav_seccion == "informacion" %} aria-current="true"{% endif %}>{% if current_lang == 'en' %}Information{% else %}Información{% endif %}</span>
         <div class="dropdown-content">
           <a href="/{{ current_lang }}/{% if current_lang == 'en' %}faqs/{% else %}preguntas-frecuentes/{% endif %}">
             {% if current_lang == 'en' %}FAQs{% else %}Preguntas Frecuentes{% endif %}
@@ -302,5 +325,7 @@
         {% include language-switcher.html %}
       </div>
     </div>
+    {%- endcapture %}
+    {{ nav_enlaces | replace_first: nav_href_actual, nav_href_marcado }}
   </nav>
 </section>
