@@ -7,7 +7,13 @@ sitemap: false
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">{% assign pages = site.html_pages | where_exp: "page", "page.sitemap != false" %}{% for page in pages %}{% unless page.url contains "404" or page.url contains "gracias" or page.url contains "thanks" or page.url contains ".xml" %}
 <url>
 <loc>{{ site.url }}{{ page.url | remove: "index.html" | xml_escape }}</loc>
-<lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+{%- comment %} lastmod solo con fecha real (dateModified): site.time le decía a Google que todo cambió en cada build {% endcomment %}
+{%- assign lm = page.dateModified | default: page.last_modified_at %}{% assign fx = page.date | date: '%s' %}{% assign build_s = site.time | date: '%s' %}
+{%- if lm %}
+<lastmod>{{ lm | date_to_xmlschema }}</lastmod>
+{%- elsif page.date and fx != build_s %}
+<lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
+{%- endif %}
 {%- if page.ref -%}
   {%- assign par = site.html_pages | where: "ref", page.ref | where_exp: "d", "d.url != page.url" | first -%}
   {%- if par -%}

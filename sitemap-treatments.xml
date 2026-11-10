@@ -16,7 +16,13 @@ sitemap: false
 {%- for treatment in treatments -%}
   <url>
     <loc>{{ site.url }}{{ treatment.url | xml_escape }}</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    {%- comment %} lastmod solo con fecha real (dateModified); la date de un documento sin fecha es la hora del build {% endcomment %}
+    {%- assign lm = treatment.dateModified | default: treatment.last_modified_at %}{% assign fx = treatment.date | date: '%s' %}{% assign build_s = site.time | date: '%s' %}
+    {%- if lm %}
+    <lastmod>{{ lm | date_to_xmlschema }}</lastmod>
+    {%- elsif treatment.date and fx != build_s %}
+    <lastmod>{{ treatment.date | date_to_xmlschema }}</lastmod>
+    {%- endif %}
     {%- if treatment.ref -%}
       {%- assign par = treatments | where: "ref", treatment.ref | where_exp: "d", "d.url != treatment.url" | first -%}
       {%- if par -%}
