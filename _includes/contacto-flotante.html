@@ -17,7 +17,8 @@ también lo abren los botones sólidos [data-canales] de /en (_includes/button.h
 {%- endif %}
 </div>
 {%- if lang == 'en' %}
-<div class="flotante__menu" id="flotante-canales" popover>
+<div class="flotante__menu" id="flotante-canales" popover tabindex="-1">
+  <button class="flotante__cerrar" type="button" popovertarget="flotante-canales" popovertargetaction="hide" aria-label="{{ site.data.contacto.en.cerrar }}"><span aria-hidden="true">&times;</span></button>
   {% include canales.html location="flotante" %}
 </div>
 {%- endif %}

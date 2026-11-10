@@ -44,6 +44,6 @@ un include se filtran a quien lo llama.
 <a href="{{ ec_href }}"{% if include.id %} id="{{ include.id }}"{% endif %}{% if ec_clase and ec_clase != '' %} class="{{ ec_clase }}"{% endif %}{% if ec_rel %} target="_blank" rel="{{ ec_rel }}"{% endif %}{% if include.itemprop %} itemprop="{{ include.itemprop }}"{% endif %} data-location="{{ include.location | default: 'sin-ubicacion' }}">
   {%- if include.icono %}{{ include.icono }}{% endif -%}
   {%- if include.icono %}<span>{{ ec_texto }}</span>{% else %}{{ ec_texto }}{% endif -%}
-  {%- if ec_rel %}<span class="sr-only"> {{ ec_tc.nueva_pestana }}</span>{% endif -%}
+  {%- if ec_rel %}<span class="sr-only"> {{ ec_tc.abre_whatsapp }}</span>{% endif -%}
   {%- if include.flecha %} <span class="flecha" aria-hidden="true">→</span>{% endif -%}
 </a>

@@ -586,14 +586,32 @@
   // ==========================================================================
   var menuCanales = document.getElementById("flotante-canales");
   if (menuCanales && menuCanales.showPopover) {
+    // Safari no enfoca un enlace ni un botón al tocarlo: al cerrar el menú el foco
+    // caería en <body>. Se devuelve al botón que lo abrió.
+    var disparador = null;
+    menuCanales.addEventListener("toggle", function (e) {
+      if (e.newState !== "closed" || !disparador) return;
+      var activo = document.activeElement;
+      // Vuelve si el foco quedó en el menú, en <body> o en un ancestro enfocable del
+      // botón (medipro: <main tabindex="-1">, que Safari enfoca al tocar dentro).
+      if ((!activo || menuCanales.contains(activo) || activo.contains(disparador)) && disparador.isConnected) {
+        disparador.focus({ preventScroll: true, focusVisible: false });
+      }
+      disparador = null;
+    });
     document.addEventListener("click", function (e) {
-      var abre = e.target.closest("[data-canales], [popovertarget='flotante-canales']");
+      var abre = e.target.closest("[data-canales], [popovertarget='flotante-canales']:not([popovertargetaction='hide'])");
       if (abre) {
         menuCanales.dataset.origen = abre.getAttribute("data-location") || "flotante";
+        disparador = abre;
         if (abre.hasAttribute("data-canales")) {
           e.preventDefault();
           menuCanales.dataset.desde = "boton";
           menuCanales.showPopover();
+          // Foco al menú (tabindex="-1"): VoiceOver y el teclado no se quedan detrás del
+          // fondo. Al menú y no al primer canal, para que tras un toque no aparezca un
+          // anillo de foco en "Text us". Al cerrar, el foco vuelve al botón (toggle).
+          menuCanales.focus({ preventScroll: true });
         } else {
           delete menuCanales.dataset.desde;
         }

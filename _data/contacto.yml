@@ -5,8 +5,9 @@ en:
   canal_llamar: "Call"
   canal_whatsapp: "Prefer WhatsApp?"
   canal_sms: "Text us"
-  nueva_pestana: "(opens in a new tab)"
+  abre_whatsapp: "(opens WhatsApp)"           # lector de pantalla: en móvil WhatsApp abre en la misma pestaña
   flotante: "Contact us"
+  cerrar: "Close"                   # botón que cierra el menú de canales (iOS 17-18.2 no lo cierra al tocar fuera)
   boton: "Request your appointment"
   email_asunto: "Appointment request – IVLU Bogotá"
   email_cuerpo: "Hello, I would like to request an appointment and more information about your treatments."
@@ -18,7 +19,7 @@ es:
   canal_llamar: "Llámanos al"
   canal_whatsapp: "WhatsApp"
   canal_sms: "Envíanos un SMS"
-  nueva_pestana: "(se abre en una pestaña nueva)"
+  abre_whatsapp: "(abre WhatsApp)"
   flotante: "WhatsApp IVLU"
   boton: "Agenda tu cita"
   email_asunto: "Solicitud de cita – IVLU Bogotá"
